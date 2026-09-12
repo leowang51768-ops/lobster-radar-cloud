@@ -2,6 +2,11 @@ name: Lobster Daily Price Update
 
 on:
   workflow_dispatch:
+    inputs:
+      trade_date:
+        description: "Optional trade date YYYY-MM-DD for manual testing"
+        required: false
+        type: string
   schedule:
     # 台北時間週一至週五 18:30
     # GitHub cron 使用 UTC，所以 18:30 台北 = 10:30 UTC
@@ -30,9 +35,14 @@ jobs:
       - name: Install signal dependencies
         run: pip install pandas
 
-      - name: Get Taipei trade date
+      - name: Get trade date
+        shell: bash
         run: |
-          echo "TRADE_DATE=$(TZ=Asia/Taipei date +%F)" >> "$GITHUB_ENV"
+          if [ -n "${{ github.event.inputs.trade_date }}" ]; then
+            echo "TRADE_DATE=${{ github.event.inputs.trade_date }}" >> "$GITHUB_ENV"
+          else
+            echo "TRADE_DATE=$(TZ=Asia/Taipei date +%F)" >> "$GITHUB_ENV"
+          fi
 
       - name: Update official TWSE and TPEx prices
         run: |
@@ -56,13 +66,17 @@ jobs:
               "SELECT COUNT(*) FROM prices WHERE date=?",
               (os.environ["TRADE_DATE"],)
           ).fetchone()[0]
+          cols = [r[1] for r in con.execute("PRAGMA table_info(prices)").fetchall()]
           con.close()
 
           print("latest_trade_date =", latest[0] if latest else None)
           print("rows for trade date =", count)
+          print("prices columns =", cols)
 
           assert latest and latest[0] == os.environ["TRADE_DATE"]
           assert count > 0
+          required = {"date","market","code","name","open","high","low","close","volume","turnover"}
+          assert required.issubset(set(cols)), f"Unexpected prices schema: {cols}"
           PY
 
       - name: Evaluate Lobster buy points and send LINE alerts
