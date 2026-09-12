@@ -87,7 +87,7 @@ jobs:
           print("prices columns =", cols)
 
           assert count > 0, f"No rows for requested trade date {os.environ['TRADE_DATE']}"
-          required = {"date","market","code","name","open","high","low","close","volume","turnover"}
+          required = {"date","market","stock_id","stock_name","open","high","low","close","volume","turnover"}
           assert required.issubset(set(cols)), f"Unexpected prices schema: {cols}"
           PY
 
