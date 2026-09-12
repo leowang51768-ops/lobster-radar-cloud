@@ -49,6 +49,7 @@ STRONG_20MA_LOOKBACK = 3
 VOL_RATIO_MIN = 1.20
 VOL_RATIO_MAX = 3.00
 MAX_30MA_EXTENSION = 0.08
+MAX_20MA_EXTENSION = 0.08
 MIN_VOLUME_LOTS = 1000
 MIN_TURNOVER = 30_000_000
 
@@ -279,10 +280,10 @@ def detect_strong20_buy(code: str, x: pd.DataFrame, state: dict, l1: dict, funda
         key_high = float(s["strong20_key_high"])
         key_low = float(s["strong20_key_low"])
         volume_ok, lots, _turnover, vol_ratio = volume_gate(t)
-        if close > key_high and volume_ok and strong_now and dif_turning_up and fundamental_ok and s.get("strong20_last_trigger_date") != date:
+        ext20 = close / ma20 - 1.0 if ma20 else 999.0
+        if close > key_high and volume_ok and strong_now and dif_turning_up and fundamental_ok and ext20 <= MAX_20MA_EXTENSION and s.get("strong20_last_trigger_date") != date:
             s["strong20_stage"] = "正式試單"
             s["strong20_last_trigger_date"] = date
-            ext20 = close / ma20 - 1.0 if ma20 else 999.0
             return s, {
                 "date": date,
                 "code": code,
