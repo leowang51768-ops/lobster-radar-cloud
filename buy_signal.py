@@ -10,12 +10,15 @@ Formal buy routes
 A) 30MA pullback -> reclaim -> key candle -> later breakout with qualified volume.
 B) Strong 20MA continuation -> DIF recovery key candle -> later breakout with qualified volume.
 
-Tracking invalidation (3 trading days)
+Tracking invalidation
 - after the first close below 20MA, allow the next 3 trading sessions to reclaim 20MA;
   invalidate only if all 3 grace sessions also close below 20MA;
-- DIF weakens for 3 consecutive day-over-day steps;
-- after a key candle, no breakout within 3 subsequent trading sessions.
-When invalidated, the stock is removed from the tracked pool and must re-enter through Layer 1.
+- DIF weakens for 3 consecutive day-over-day steps.
+
+Key-candle policy
+- notify LINE immediately when a 30MA or strong-20MA key candle is formed;
+- do not auto-invalidate merely because a key candle has not broken out within 3 days;
+- formal breakout rules remain as a separate confirmation signal.
 """
 from __future__ import annotations
 
@@ -43,7 +46,6 @@ CANDIDATES = BASE / "candidate_status.csv"
 PULLBACK_TOL = 0.01
 STRONG_20MA_TOUCH_TOL = 0.01
 STRONG_20MA_LOOKBACK = 3
-INVALID_DAYS = 3
 VOL_RATIO_MIN = 1.20
 VOL_RATIO_MAX = 3.00
 MAX_30MA_EXTENSION = 0.08
@@ -163,34 +165,17 @@ def volume_gate(t: pd.Series) -> tuple[bool, float, float, float]:
     return ok, lots, turnover, vol_ratio
 
 
-def trading_days_since(x: pd.DataFrame, date_text: str) -> int | None:
-    if not date_text:
-        return None
-    matches = x.index[x["date"].dt.strftime("%Y-%m-%d") == date_text].tolist()
-    if not matches:
-        return None
-    return (len(x) - 1) - matches[-1]
-
-
 def invalid_reason(x: pd.DataFrame, state: dict) -> str:
-    # 20MA規則：跌破當天不算在3天修復期內；再給後續3個交易日站回20MA。
-    # 因此只有「跌破當天 + 後續3天」共4個交易日全部收在20MA下方才淘汰。
-    # 只要其中任何一天收盤重新站回20MA，修復期即視為成功並重新起算。
     if len(x) >= 4:
         q = x.iloc[-4:]
         if q["ma20"].notna().all() and bool((q["close"] < q["ma20"]).all()):
             return "跌破20MA後3個交易日仍未站回"
 
-    # 3個連續「日對日」DIF下降，需要觀察4個DIF點。
     if len(x) >= 4:
         d = x.iloc[-4:]["dif"].tolist()
         if all(pd.notna(v) for v in d) and d[1] < d[0] and d[2] < d[1] and d[3] < d[2]:
             return "DIF連續轉弱3日"
 
-    for key, label in [("key_date", "30MA關鍵K等待突破超過3日"), ("strong20_key_date", "20MA關鍵K等待突破超過3日")]:
-        days = trading_days_since(x, str(state.get(key) or ""))
-        if days is not None and days > INVALID_DAYS:
-            return label
     return ""
 
 
@@ -396,6 +381,7 @@ def main() -> int:
 
     candidate_rows = []
     triggers = []
+    key_notices = []
     current_layer1_count = 0
     invalidated = []
 
@@ -417,7 +403,6 @@ def main() -> int:
         if len(x) < 31:
             continue
 
-        # 已進候選池的股票先做3日淘汰檢查。淘汰後當天不立刻重進，下一交易日需重新通過第一層。
         if was_candidate or strong20_tracking:
             reason = invalid_reason(x, previous_state)
             if reason:
@@ -437,6 +422,36 @@ def main() -> int:
             code, x, previous_state, allow_trigger=bool(l1.get("standard_ok"))
         )
         new_state, trigger20 = detect_strong20_buy(code, x, state_after_30, l1, fundamental_ok)
+
+        if new_state.get("key_date") and new_state.get("key_date") != previous_state.get("key_date"):
+            key_notices.append({
+                "code": code,
+                "name": name,
+                "trend": l1.get("trend", previous_state.get("trend", "其他")),
+                "route": "30MA回踩",
+                "key_date": new_state.get("key_date"),
+                "key_high": new_state.get("key_high"),
+                "key_low": new_state.get("key_low"),
+                "close": round(float(t.close), 2),
+                "ma20": round(float(t.ma20), 2),
+                "ma30": round(float(t.ma30), 2),
+                "dif": round(float(t.dif), 4),
+            })
+
+        if new_state.get("strong20_key_date") and new_state.get("strong20_key_date") != previous_state.get("strong20_key_date"):
+            key_notices.append({
+                "code": code,
+                "name": name,
+                "trend": l1.get("trend", previous_state.get("trend", "其他")),
+                "route": "強勢20MA續強",
+                "key_date": new_state.get("strong20_key_date"),
+                "key_high": new_state.get("strong20_key_high"),
+                "key_low": new_state.get("strong20_key_low"),
+                "close": round(float(t.close), 2),
+                "ma20": round(float(t.ma20), 2),
+                "ma30": round(float(t.ma30), 2),
+                "dif": round(float(t.dif), 4),
+            })
 
         new_state["candidate_since"] = previous_state.get("candidate_since", latest_date)
         new_state["name"] = name
@@ -475,7 +490,6 @@ def main() -> int:
             "fundamental_reason": f.get("reason", "") if isinstance(f, dict) else "",
         })
 
-        # 同一檔同一天最多一個正式訊號；若兩路徑同時成立，優先標示20MA強勢續強。
         trigger = trigger20 or trigger30
         if trigger:
             trigger.update({"name": name, "trend": new_state["trend"], "baseline_entry": trigger["key_high"]})
@@ -500,6 +514,7 @@ def main() -> int:
     state["tracked_candidate_count"] = len(candidate_rows)
     state["invalidated_count"] = len(invalidated)
     state["last_invalidated"] = invalidated
+    state["key_notice_count"] = len(key_notices)
     state["layer1_route_counts"] = dict(Counter(r["layer1_route"] for r in candidate_rows if r.get("layer1_route")))
     state["stage_counts"] = dict(Counter(r["stage"] for r in candidate_rows))
     state["trend_counts"] = dict(Counter(r["trend"] for r in candidate_rows))
@@ -510,12 +525,28 @@ def main() -> int:
         "layer1_candidates": current_layer1_count,
         "tracked_candidates": len(candidate_rows),
         "invalidated": len(invalidated),
+        "key_candle_notices": len(key_notices),
         "formal_buy_signals": len(triggers),
         "layer1_route_counts": dict(Counter(r["layer1_route"] for r in candidate_rows if r.get("layer1_route"))),
         "trend_counts": dict(Counter(r["trend"] for r in candidate_rows)),
         "stage_counts": dict(Counter(r["stage"] for r in candidate_rows)),
     }
     print(json.dumps(summary, ensure_ascii=False))
+
+    if key_notices:
+        lines = [f"🦞 關鍵K形成通知｜{latest_date}", "⚠️ 觀察通知，是否進場由你自行判斷"]
+        for r in key_notices:
+            lines += [
+                "",
+                f"🟠 {r['code']} {r['name']}｜{r['trend']}",
+                f"型態：{r['route']}",
+                f"關鍵K日期：{r['key_date']}",
+                f"關鍵K高：{r['key_high']}｜低：{r['key_low']}",
+                f"收盤：{r['close']}",
+                f"20MA：{r['ma20']}｜30MA：{r['ma30']}",
+                f"DIF：{r['dif']}",
+            ]
+        send_line("\n".join(lines))
 
     if triggers:
         lines = [f"🦞 龍蝦雷達正式買點｜{latest_date}"]
