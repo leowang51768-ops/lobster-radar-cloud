@@ -30,7 +30,6 @@ import sqlite3
 import sys
 import urllib.error
 import urllib.request
-from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -42,13 +41,12 @@ FUNDAMENTALS = BASE / "fundamental_support.json"
 STATE_FILE = BASE / "signal_state.json"
 RECOMMENDATIONS = BASE / "formal_recommendations.csv"
 
-# Configurable thresholds. Keep logic stable; tune these values later if desired.
-PULLBACK_TOL = 0.01          # within 1% of prior 3-candle low zone
-VOL_RATIO_MIN = 1.20         # breakout volume >= 1.2x 20-day average lots
-VOL_RATIO_MAX = 3.00         # avoid extreme one-day blow-off volume
-MAX_30MA_EXTENSION = 0.08    # close no more than 8% above 30MA at trigger
-MIN_VOLUME_LOTS = 1000       # existing liquidity rule
-MIN_TURNOVER = 30_000_000    # existing liquidity rule, TWD
+PULLBACK_TOL = 0.01
+VOL_RATIO_MIN = 1.20
+VOL_RATIO_MAX = 3.00
+MAX_30MA_EXTENSION = 0.08
+MIN_VOLUME_LOTS = 1000
+MIN_TURNOVER = 30_000_000
 
 
 def load_json(path: Path, default):
@@ -84,7 +82,7 @@ def read_market() -> pd.DataFrame:
     con = sqlite3.connect(DB)
     try:
         df = pd.read_sql_query(
-            "SELECT date, market, code, name, open, high, low, close, volume, turnover FROM prices ORDER BY code, date",
+            "SELECT date, market, stock_id AS code, stock_name AS name, open, high, low, close, volume, turnover FROM prices ORDER BY stock_id, date",
             con,
         )
     finally:
@@ -92,7 +90,6 @@ def read_market() -> pd.DataFrame:
     for c in ["open", "high", "low", "close", "volume", "turnover"]:
         df[c] = pd.to_numeric(df[c], errors="coerce")
     df["date"] = pd.to_datetime(df["date"])
-    # IMPORTANT: DB stores shares, strategy works in lots.
     df["volume_lots"] = df["volume"] / 1000.0
     return df.dropna(subset=["close"])
 
@@ -127,17 +124,14 @@ def layer1(g: pd.DataFrame, fundamental_ok: bool) -> dict:
 
 
 def detect_layer2(code: str, x: pd.DataFrame, state: dict) -> tuple[dict, dict | None]:
-    """Advance deterministic state machine and return (new_state, trigger_or_none)."""
     s = dict(state or {})
     if len(x) < 35:
         return s, None
-
     i = len(x) - 1
     t = x.iloc[i]
     date = t.date.strftime("%Y-%m-%d")
     close, low, high, ma30 = map(float, [t.close, t.low, t.high, t.ma30])
 
-    # Seed: any recent 3 consecutive closes above 30MA.
     if not s.get("three_above30_date"):
         for j in range(max(2, i - 15), i + 1):
             q = x.iloc[j-2:j+1]
@@ -145,15 +139,12 @@ def detect_layer2(code: str, x: pd.DataFrame, state: dict) -> tuple[dict, dict |
                 s["three_above30_date"] = x.iloc[j].date.strftime("%Y-%m-%d")
                 s["stage"] = "等待回踩"
 
-    # Pullback: low reaches prior three-candle low zone (+1% tolerance).
     if s.get("three_above30_date") and not s.get("pullback_date") and i >= 3:
         prior3_low = float(x.iloc[i-3:i]["low"].min())
         if low <= prior3_low * (1 + PULLBACK_TOL):
             s["pullback_date"] = date
-            s["pullback_index_date"] = date
             s["stage"] = "等待3K內站回30MA"
 
-    # Reclaim within max 3 candles from pullback (inclusive day count via row positions).
     if s.get("pullback_date") and not s.get("key_date"):
         pb_matches = x.index[x["date"].dt.strftime("%Y-%m-%d") == s["pullback_date"]].tolist()
         if pb_matches:
@@ -165,11 +156,8 @@ def detect_layer2(code: str, x: pd.DataFrame, state: dict) -> tuple[dict, dict |
                 s["key_low"] = low
                 s["stage"] = "等待突破關鍵K"
             elif elapsed > 2:
-                # Pattern failed; reset but retain audit marker.
-                s = {"stage": "重新等待", "last_failed_reclaim": date}
-                return s, None
+                return {"stage": "重新等待", "last_failed_reclaim": date}, None
 
-    # Formal breakout must occur after key candle, not on the same day.
     if s.get("key_date") and date > s["key_date"]:
         key_high = float(s["key_high"])
         avg20 = float(t.avg20_lots) if pd.notna(t.avg20_lots) else math.nan
@@ -183,7 +171,7 @@ def detect_layer2(code: str, x: pd.DataFrame, state: dict) -> tuple[dict, dict |
         if breakout and volume_ok and extension_ok and s.get("last_trigger_date") != date:
             s["stage"] = "正式試單"
             s["last_trigger_date"] = date
-            trigger = {
+            return s, {
                 "date": date,
                 "code": code,
                 "close": round(close, 2),
@@ -194,8 +182,6 @@ def detect_layer2(code: str, x: pd.DataFrame, state: dict) -> tuple[dict, dict |
                 "volume_ratio": round(vol_ratio, 2),
                 "extension_30ma_pct": round(extension * 100, 2),
             }
-            return s, trigger
-
     return s, None
 
 
@@ -246,18 +232,19 @@ def main() -> int:
     layer1_candidates = []
     triggers = []
     for code, g in df.groupby("code", sort=False):
+        code = str(code)
         name = str(g.iloc[-1]["name"])
-        f = fundamentals.get(str(code), {})
+        f = fundamentals.get(code, {})
         fundamental_ok = bool(f.get("supported", False)) if isinstance(f, dict) else bool(f)
         l1 = layer1(g, fundamental_ok)
         if not l1.get("ok"):
             continue
-        layer1_candidates.append({"code": str(code), "name": name, "trend": l1["trend"]})
-        new_state, trigger = detect_layer2(str(code), l1["df"], stocks_state.get(str(code), {}))
+        layer1_candidates.append({"code": code, "name": name, "trend": l1["trend"]})
+        new_state, trigger = detect_layer2(code, l1["df"], stocks_state.get(code, {}))
         new_state["name"] = name
         new_state["trend"] = l1["trend"]
         new_state["layer1_checks"] = l1.get("checks", {})
-        stocks_state[str(code)] = new_state
+        stocks_state[code] = new_state
         if trigger:
             trigger.update({"name": name, "trend": l1["trend"], "baseline_entry": trigger["key_high"]})
             append_recommendation(trigger)
