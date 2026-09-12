@@ -1,0 +1,4 @@
+{
+  "stocks": {},
+  "note": "Only stocks explicitly marked supported=true may pass Layer 1 fundamental support. Example: \"2330\": {\"supported\": true, \"reason\": \"monthly revenue / industry trend verified\", \"verified_date\": \"2026-09-12\"}"
+}
