@@ -1,10 +1,17 @@
 #!/usr/bin/env python3
-"""Append one official TWSE + TPEx trade date to lobster_tw_6m_prices.sqlite."""
-import datetime as dt, json, re, sqlite3, subprocess, sys, tempfile
+"""Append one official TWSE + TPEx trade date and keep a rolling six-month price window."""
+import calendar, datetime as dt, json, re, sqlite3, subprocess, sys, tempfile
 from pathlib import Path
 
 DB=Path(__file__).with_name('lobster_tw_6m_prices.sqlite')
 day=dt.date.fromisoformat(sys.argv[1]) if len(sys.argv)>1 else dt.date.today()
+
+def six_months_before(d):
+    year=d.year
+    month=d.month-6
+    while month<=0:
+        month+=12; year-=1
+    return dt.date(year,month,min(d.day,calendar.monthrange(year,month)[1]))
 
 def get(url):
     with tempfile.NamedTemporaryFile(suffix='.json') as f:
@@ -39,10 +46,19 @@ ymd=day.strftime('%Y%m%d')
 tw=parse(get(f'https://www.twse.com.tw/rwd/zh/afterTrading/MI_INDEX?date={ymd}&type=ALLBUT0999&response=json'),'上市')
 otc=parse(get(f"https://www.tpex.org.tw/www/zh-tw/afterTrading/dailyQuotes?date={day.strftime('%Y/%m/%d')}&id=&response=json"),'上櫃')
 if not tw or not otc: raise SystemExit(f'Not committed: official data incomplete for {day}; TWSE={len(tw)}, TPEx={len(otc)}')
+
+cutoff=six_months_before(day).isoformat()
 con=sqlite3.connect(DB)
-con.executemany('INSERT OR REPLACE INTO prices VALUES (?,?,?,?,?,?,?,?,?,?)',tw+otc)
-con.execute("INSERT OR REPLACE INTO metadata VALUES ('latest_trade_date',?)",(day.isoformat(),))
-con.execute("CREATE TABLE IF NOT EXISTS incremental_log(date TEXT PRIMARY KEY,twse_rows INTEGER,tpex_rows INTEGER,updated_at_utc TEXT)")
-con.execute("INSERT OR REPLACE INTO incremental_log VALUES (?,?,?,?)",(day.isoformat(),len(tw),len(otc),dt.datetime.now(dt.timezone.utc).isoformat()))
-con.commit(); con.close()
-print(json.dumps({'date':day.isoformat(),'twse_rows':len(tw),'tpex_rows':len(otc),'mode':'one-day incremental only'},ensure_ascii=False))
+try:
+    con.execute("CREATE TABLE IF NOT EXISTS incremental_log(date TEXT PRIMARY KEY,twse_rows INTEGER,tpex_rows INTEGER,updated_at_utc TEXT)")
+    con.execute('BEGIN IMMEDIATE')
+    deleted=con.execute('DELETE FROM prices WHERE date < ?',(cutoff,)).rowcount
+    con.execute('DELETE FROM incremental_log WHERE date < ?',(cutoff,))
+    con.executemany('INSERT OR REPLACE INTO prices VALUES (?,?,?,?,?,?,?,?,?,?)',tw+otc)
+    con.execute("INSERT OR REPLACE INTO metadata VALUES ('latest_trade_date',?)",(day.isoformat(),))
+    con.execute("INSERT OR REPLACE INTO incremental_log VALUES (?,?,?,?)",(day.isoformat(),len(tw),len(otc),dt.datetime.now(dt.timezone.utc).isoformat()))
+    con.commit()
+finally:
+    con.close()
+
+print(json.dumps({'date':day.isoformat(),'twse_rows':len(tw),'tpex_rows':len(otc),'retention_cutoff':cutoff,'deleted_old_rows':deleted,'mode':'one-day incremental + rolling six-month retention'},ensure_ascii=False))
