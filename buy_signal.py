@@ -1,24 +1,21 @@
 #!/usr/bin/env python3
 """Lobster Radar buy-point engine.
 
-Rules:
-Layer 1 candidate qualification
+Layer 1 (candidate qualification)
   1) 20MA rising
   2) close > 20MA
   3) DIF(6,13) today >= yesterday
-  4) fundamental support explicitly approved in fundamental_support.json
+  4) fundamental support approved in fundamental_support.json
 
-Layer 2 buy point
+Layer 2 (buy point)
   1) previously closed above 30MA for 3 consecutive sessions
   2) pullback tests the prior 3-candle low zone
   3) closes back above 30MA within at most 3 candles
-  4) that reclaim candle becomes the key candle
+  4) reclaim candle becomes the key candle
   5) later close breaks above key-candle high
   6) volume expands reasonably and price extension is not excessive
-  7) institution/broker flow is bonus only (not required here)
 
-Database volume is stored as official '成交股數' (shares). This engine converts
-volume to lots by dividing by 1000 before applying all volume rules.
+Database volume is stored as shares; strategy displays and evaluates lots (張).
 """
 from __future__ import annotations
 
@@ -30,6 +27,7 @@ import sqlite3
 import sys
 import urllib.error
 import urllib.request
+from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -40,6 +38,7 @@ DB = BASE / "lobster_tw_6m_prices.sqlite"
 FUNDAMENTALS = BASE / "fundamental_support.json"
 STATE_FILE = BASE / "signal_state.json"
 RECOMMENDATIONS = BASE / "formal_recommendations.csv"
+CANDIDATES = BASE / "candidate_status.csv"
 
 PULLBACK_TOL = 0.01
 VOL_RATIO_MIN = 1.20
@@ -67,12 +66,13 @@ def ema(series: pd.Series, span: int) -> pd.Series:
 
 
 def classify_trend(close: float, ma20: float, ma30: float, prev20: float, prev30: float) -> str:
+    # 轉強優先辨識，避免剛上穿30MA當天被直接歸入A級。
+    if (prev20 <= prev30 and ma20 > ma30) or abs(ma20 - ma30) / max(ma30, 1e-9) <= 0.005:
+        return "轉強"
     if close > ma20 > ma30:
         return "A級"
     if close > ma20 and ma20 < ma30 and ma20 > prev20:
         return "B級"
-    if (prev20 <= prev30 and ma20 > ma30) or abs(ma20 - ma30) / max(ma30, 1e-9) <= 0.005:
-        return "轉強"
     return "其他"
 
 
@@ -82,7 +82,8 @@ def read_market() -> pd.DataFrame:
     con = sqlite3.connect(DB)
     try:
         df = pd.read_sql_query(
-            "SELECT date, market, stock_id AS code, stock_name AS name, open, high, low, close, volume, turnover FROM prices ORDER BY stock_id, date",
+            "SELECT date, market, stock_id AS code, stock_name AS name, open, high, low, close, volume, turnover "
+            "FROM prices ORDER BY stock_id, date",
             con,
         )
     finally:
@@ -114,11 +115,10 @@ def layer1(g: pd.DataFrame, fundamental_ok: bool) -> dict:
     c2 = bool(t.close > t.ma20)
     c3 = bool(t.dif >= y.dif)
     c4 = bool(fundamental_ok)
-    trend = classify_trend(float(t.close), float(t.ma20), float(t.ma30), float(y.ma20), float(y.ma30))
     return {
         "ok": c1 and c2 and c3 and c4,
         "checks": {"20MA向上": c1, "收盤站上20MA": c2, "DIF今日>=昨日": c3, "基本面支撐": c4},
-        "trend": trend,
+        "trend": classify_trend(float(t.close), float(t.ma20), float(t.ma30), float(y.ma20), float(y.ma30)),
         "df": x,
     }
 
@@ -126,7 +126,9 @@ def layer1(g: pd.DataFrame, fundamental_ok: bool) -> dict:
 def detect_layer2(code: str, x: pd.DataFrame, state: dict) -> tuple[dict, dict | None]:
     s = dict(state or {})
     if len(x) < 35:
+        s.setdefault("stage", "等待30MA結構")
         return s, None
+
     i = len(x) - 1
     t = x.iloc[i]
     date = t.date.strftime("%Y-%m-%d")
@@ -138,6 +140,9 @@ def detect_layer2(code: str, x: pd.DataFrame, state: dict) -> tuple[dict, dict |
             if q["ma30"].notna().all() and bool((q["close"] > q["ma30"]).all()):
                 s["three_above30_date"] = x.iloc[j].date.strftime("%Y-%m-%d")
                 s["stage"] = "等待回踩"
+                break
+        if not s.get("three_above30_date"):
+            s["stage"] = "等待30MA結構"
 
     if s.get("three_above30_date") and not s.get("pullback_date") and i >= 3:
         prior3_low = float(x.iloc[i-3:i]["low"].min())
@@ -156,6 +161,7 @@ def detect_layer2(code: str, x: pd.DataFrame, state: dict) -> tuple[dict, dict |
                 s["key_low"] = low
                 s["stage"] = "等待突破關鍵K"
             elif elapsed > 2:
+                # 這輪型態失敗，重新等待新的30MA結構。
                 return {"stage": "重新等待", "last_failed_reclaim": date}, None
 
     if s.get("key_date") and date > s["key_date"]:
@@ -199,6 +205,20 @@ def append_recommendation(row: dict) -> None:
         w.writerow({k: row.get(k, "") for k in fields})
 
 
+def write_candidate_status(rows: list[dict]) -> None:
+    fields = [
+        "date", "code", "name", "trend", "stage", "close", "ma20", "ma30", "dif",
+        "volume_lots", "avg20_volume_lots", "volume_ratio", "turnover",
+        "three_above30_date", "pullback_date", "key_date", "key_high", "key_low",
+        "fundamental_reason",
+    ]
+    with CANDIDATES.open("w", encoding="utf-8-sig", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=fields)
+        w.writeheader()
+        for row in rows:
+            w.writerow({k: row.get(k, "") for k in fields})
+
+
 def send_line(text: str) -> bool:
     token = os.environ.get("LINE_CHANNEL_ACCESS_TOKEN", "").strip()
     if not token:
@@ -229,8 +249,9 @@ def main() -> int:
     stocks_state = state.setdefault("stocks", {})
     latest_date = df["date"].max().strftime("%Y-%m-%d")
 
-    layer1_candidates = []
+    candidate_rows = []
     triggers = []
+
     for code, g in df.groupby("code", sort=False):
         code = str(code)
         name = str(g.iloc[-1]["name"])
@@ -239,23 +260,74 @@ def main() -> int:
         l1 = layer1(g, fundamental_ok)
         if not l1.get("ok"):
             continue
-        layer1_candidates.append({"code": code, "name": name, "trend": l1["trend"]})
-        new_state, trigger = detect_layer2(code, l1["df"], stocks_state.get(code, {}))
+
+        x = l1["df"]
+        t = x.iloc[-1]
+        avg20 = float(t.avg20_lots) if pd.notna(t.avg20_lots) else 0.0
+        lots = float(t.volume_lots) if pd.notna(t.volume_lots) else 0.0
+        vol_ratio = lots / avg20 if avg20 else 0.0
+
+        new_state, trigger = detect_layer2(code, x, stocks_state.get(code, {}))
         new_state["name"] = name
         new_state["trend"] = l1["trend"]
         new_state["layer1_checks"] = l1.get("checks", {})
         stocks_state[code] = new_state
+
+        candidate_rows.append({
+            "date": latest_date,
+            "code": code,
+            "name": name,
+            "trend": l1["trend"],
+            "stage": new_state.get("stage", "等待30MA結構"),
+            "close": round(float(t.close), 2),
+            "ma20": round(float(t.ma20), 2),
+            "ma30": round(float(t.ma30), 2),
+            "dif": round(float(t.dif), 4),
+            "volume_lots": round(lots, 0),
+            "avg20_volume_lots": round(avg20, 0),
+            "volume_ratio": round(vol_ratio, 2),
+            "turnover": round(float(t.turnover), 0) if pd.notna(t.turnover) else 0,
+            "three_above30_date": new_state.get("three_above30_date", ""),
+            "pullback_date": new_state.get("pullback_date", ""),
+            "key_date": new_state.get("key_date", ""),
+            "key_high": new_state.get("key_high", ""),
+            "key_low": new_state.get("key_low", ""),
+            "fundamental_reason": f.get("reason", "") if isinstance(f, dict) else "",
+        })
+
         if trigger:
             trigger.update({"name": name, "trend": l1["trend"], "baseline_entry": trigger["key_high"]})
             append_recommendation(trigger)
             triggers.append(trigger)
 
+    # 讓最接近買點的股票排在前面，方便人工查看。
+    stage_order = {
+        "正式試單": 0,
+        "等待突破關鍵K": 1,
+        "等待3K內站回30MA": 2,
+        "等待回踩": 3,
+        "等待30MA結構": 4,
+        "重新等待": 5,
+    }
+    trend_order = {"轉強": 0, "B級": 1, "A級": 2, "其他": 3}
+    candidate_rows.sort(key=lambda r: (stage_order.get(r["stage"], 9), trend_order.get(r["trend"], 9), r["code"]))
+    write_candidate_status(candidate_rows)
+
     state["updated_at"] = datetime.now(timezone.utc).isoformat()
     state["latest_trade_date"] = latest_date
-    state["layer1_candidate_count"] = len(layer1_candidates)
+    state["layer1_candidate_count"] = len(candidate_rows)
+    state["stage_counts"] = dict(Counter(r["stage"] for r in candidate_rows))
+    state["trend_counts"] = dict(Counter(r["trend"] for r in candidate_rows))
     save_json(STATE_FILE, state)
 
-    print(json.dumps({"latest_trade_date": latest_date, "layer1_candidates": len(layer1_candidates), "formal_buy_signals": len(triggers)}, ensure_ascii=False))
+    summary = {
+        "latest_trade_date": latest_date,
+        "layer1_candidates": len(candidate_rows),
+        "formal_buy_signals": len(triggers),
+        "trend_counts": dict(Counter(r["trend"] for r in candidate_rows)),
+        "stage_counts": dict(Counter(r["stage"] for r in candidate_rows)),
+    }
+    print(json.dumps(summary, ensure_ascii=False))
 
     if triggers:
         lines = [f"🦞 龍蝦雷達正式買點｜{latest_date}"]
