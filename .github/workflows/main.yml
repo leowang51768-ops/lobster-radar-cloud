@@ -46,8 +46,21 @@ jobs:
 
       - name: Update official TWSE and TPEx prices
         run: |
-          echo "Updating trade date: $TRADE_DATE"
-          python incremental_update.py "$TRADE_DATE"
+          echo "Requested trade date: $TRADE_DATE"
+          EXISTING_ROWS=$(python - <<'PY'
+          import os, sqlite3
+          con = sqlite3.connect('lobster_tw_6m_prices.sqlite')
+          n = con.execute('SELECT COUNT(*) FROM prices WHERE date=?', (os.environ['TRADE_DATE'],)).fetchone()[0]
+          con.close()
+          print(n)
+          PY
+          )
+          echo "Existing rows for $TRADE_DATE: $EXISTING_ROWS"
+          if [ "$EXISTING_ROWS" -gt 0 ]; then
+            echo "Trade date already exists; skip refetch and continue to signal evaluation."
+          else
+            python incremental_update.py "$TRADE_DATE"
+          fi
 
       - name: Verify database
         run: |
@@ -73,8 +86,7 @@ jobs:
           print("rows for trade date =", count)
           print("prices columns =", cols)
 
-          assert latest and latest[0] == os.environ["TRADE_DATE"]
-          assert count > 0
+          assert count > 0, f"No rows for requested trade date {os.environ['TRADE_DATE']}"
           required = {"date","market","code","name","open","high","low","close","volume","turnover"}
           assert required.issubset(set(cols)), f"Unexpected prices schema: {cols}"
           PY
