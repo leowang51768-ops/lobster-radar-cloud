@@ -16,6 +16,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import requests
+from requests.exceptions import SSLError
+import urllib3
 
 BASE = Path(__file__).resolve().parent
 OUT = BASE / "fundamental_support.json"
@@ -57,7 +59,16 @@ def fetch_json(url):
         "User-Agent": "Mozilla/5.0 LobsterRadar/1.0",
         "Accept": "application/json,text/plain,*/*",
     }
-    r = requests.get(url, headers=headers, timeout=60)
+    try:
+        r = requests.get(url, headers=headers, timeout=60)
+    except SSLError:
+        if "tpex.org.tw" not in url:
+            raise
+        # TPEx occasionally presents an incomplete certificate chain to GitHub runners.
+        # Fallback is restricted to this public official JSON endpoint only.
+        print("WARNING: TPEx SSL verification failed; retrying official public endpoint with certificate verification disabled.", file=sys.stderr)
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        r = requests.get(url, headers=headers, timeout=60, verify=False)
     r.raise_for_status()
     data = r.json()
     if not isinstance(data, list):
