@@ -104,7 +104,11 @@ jobs:
           git config user.name "lobster-radar-cloud"
           git config user.email "actions@github.com"
 
-          git add lobster_tw_6m_prices.sqlite fundamental_support.json signal_state.json candidate_status.csv formal_recommendations.csv 2>/dev/null || true
+          for f in lobster_tw_6m_prices.sqlite fundamental_support.json signal_state.json candidate_status.csv formal_recommendations.csv; do
+            if [ -e "$f" ]; then
+              git add "$f"
+            fi
+          done
 
           if git diff --cached --quiet; then
             echo "No database, fundamentals, candidate-status, or signal-state changes to commit."
