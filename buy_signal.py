@@ -13,7 +13,15 @@ B) Strong 20MA continuation -> DIF recovery key candle -> later breakout with qu
 Tracking invalidation
 - after the first close below 20MA, allow the next 3 trading sessions to reclaim 20MA;
   invalidate only if all 3 grace sessions also close below 20MA;
-- DIF weakens for 3 consecutive day-over-day steps.
+- DIF weakens for 3 consecutive day-over-day steps;
+- once a key candle has created a structural support zone, an effective CLOSE below
+  the lower edge (with 0.5% tolerance) invalidates that setup immediately.
+
+Support-zone policy
+- 30MA route: support zone combines the pullback/key-candle structural low with 30MA;
+- strong-20MA route: support zone combines the 20MA-touch/key-candle structural low with 20MA;
+- intraday piercing does not invalidate; the close is used;
+- support lower/upper/source/status are persisted in candidate state and output.
 
 Key-candle policy
 - notify LINE immediately when a 30MA or strong-20MA key candle is formed;
@@ -52,6 +60,7 @@ MAX_30MA_EXTENSION = 0.08
 MAX_20MA_EXTENSION = 0.08
 MIN_VOLUME_LOTS = 1000
 MIN_TURNOVER = 30_000_000
+SUPPORT_BREAK_TOL = 0.005
 
 
 def load_json(path: Path, default):
@@ -166,7 +175,33 @@ def volume_gate(t: pd.Series) -> tuple[bool, float, float, float]:
     return ok, lots, turnover, vol_ratio
 
 
+def row_for_date(x: pd.DataFrame, date_text: str):
+    if not date_text:
+        return None
+    q = x[x["date"].dt.strftime("%Y-%m-%d") == date_text]
+    return None if q.empty else q.iloc[-1]
+
+
+def set_support_zone(state: dict, lower: float, upper: float, source: str, route: str) -> None:
+    lo = float(min(lower, upper))
+    hi = float(max(lower, upper))
+    state["support_lower"] = round(lo, 2)
+    state["support_upper"] = round(hi, 2)
+    state["support_source"] = source
+    state["support_route"] = route
+    state["support_status"] = "有效"
+
+
 def invalid_reason(x: pd.DataFrame, state: dict) -> str:
+    # 已形成關鍵K後，先檢查其專屬價格結構支撐區。
+    # 只看正式收盤；容許0.5%誤差，避免極小幅度跌破就誤判失效。
+    if state.get("support_lower") is not None and len(x):
+        close = float(x.iloc[-1]["close"])
+        lower = float(state["support_lower"])
+        if close < lower * (1.0 - SUPPORT_BREAK_TOL):
+            return f"收盤有效跌破支撐區下緣 {lower:.2f}"
+
+    # 20MA跌破日不算第1天，後續再給完整3個交易日修復。
     if len(x) >= 4:
         q = x.iloc[-4:]
         if q["ma20"].notna().all() and bool((q["close"] < q["ma20"]).all()):
@@ -217,10 +252,21 @@ def detect_layer2(code: str, x: pd.DataFrame, state: dict, allow_trigger: bool =
                 s["key_high"] = high
                 s["key_low"] = low
                 s["stage"] = "等待突破關鍵K"
+                pullback_low = float(x.iloc[pb_i:i+1]["low"].min())
+                set_support_zone(
+                    s,
+                    pullback_low,
+                    ma30,
+                    "30MA回踩低點＋30MA重疊支撐",
+                    "30MA回踩",
+                )
             elif elapsed > 2:
                 s["stage"] = "重新等待"
                 s["last_failed_reclaim"] = date
-                for k in ["three_above30_date", "pullback_date", "key_date", "key_high", "key_low"]:
+                for k in [
+                    "three_above30_date", "pullback_date", "key_date", "key_high", "key_low",
+                    "support_lower", "support_upper", "support_source", "support_route", "support_status",
+                ]:
                     s.pop(k, None)
                 return s, None
 
@@ -243,6 +289,9 @@ def detect_layer2(code: str, x: pd.DataFrame, state: dict, allow_trigger: bool =
                 "volume_ratio": round(vol_ratio, 2),
                 "extension_30ma_pct": round(extension * 100, 2),
                 "extension_20ma_pct": "",
+                "support_lower": s.get("support_lower", ""),
+                "support_upper": s.get("support_upper", ""),
+                "support_source": s.get("support_source", ""),
             }
     return s, None
 
@@ -270,6 +319,16 @@ def detect_strong20_buy(code: str, x: pd.DataFrame, state: dict, l1: dict, funda
             s["strong20_key_high"] = high
             s["strong20_key_low"] = low
             s["strong20_stage"] = "等待突破20MA關鍵K"
+            touch_row = row_for_date(x, touch_date)
+            touch_low = float(touch_row.low) if touch_row is not None else low
+            structural_low = min(touch_low, low)
+            set_support_zone(
+                s,
+                structural_low,
+                ma20,
+                "20MA回踩低點＋20MA重疊支撐",
+                "強勢20MA續強",
+            )
 
     key_date = str(s.get("strong20_key_date") or "")
     if not key_date:
@@ -296,6 +355,9 @@ def detect_strong20_buy(code: str, x: pd.DataFrame, state: dict, l1: dict, funda
                 "volume_ratio": round(vol_ratio, 2),
                 "extension_30ma_pct": "",
                 "extension_20ma_pct": round(ext20 * 100, 2),
+                "support_lower": s.get("support_lower", ""),
+                "support_upper": s.get("support_upper", ""),
+                "support_source": s.get("support_source", ""),
             }
     return s, None
 
@@ -305,6 +367,7 @@ def recommendation_fields() -> list[str]:
         "date", "code", "name", "trend", "signal_route", "baseline_entry",
         "key_date", "key_high", "key_low", "volume_lots", "volume_ratio",
         "extension_30ma_pct", "extension_20ma_pct",
+        "support_lower", "support_upper", "support_source",
     ]
 
 
@@ -341,7 +404,9 @@ def write_candidate_status(rows: list[dict]) -> None:
         "layer1_current", "layer1_route", "strong20_touch_date", "strong20_key_date",
         "strong20_key_high", "strong20_key_low", "close", "ma20", "ma30", "dif",
         "volume_lots", "avg20_volume_lots", "volume_ratio", "turnover",
-        "three_above30_date", "pullback_date", "key_date", "key_high", "key_low", "fundamental_reason",
+        "three_above30_date", "pullback_date", "key_date", "key_high", "key_low",
+        "support_lower", "support_upper", "support_source", "support_status",
+        "fundamental_reason",
     ]
     with CANDIDATES.open("w", encoding="utf-8-sig", newline="") as f:
         w = csv.DictWriter(f, fieldnames=fields)
@@ -437,6 +502,9 @@ def main() -> int:
                 "ma20": round(float(t.ma20), 2),
                 "ma30": round(float(t.ma30), 2),
                 "dif": round(float(t.dif), 4),
+                "support_lower": new_state.get("support_lower", ""),
+                "support_upper": new_state.get("support_upper", ""),
+                "support_source": new_state.get("support_source", ""),
             })
 
         if new_state.get("strong20_key_date") and new_state.get("strong20_key_date") != previous_state.get("strong20_key_date"):
@@ -452,6 +520,9 @@ def main() -> int:
                 "ma20": round(float(t.ma20), 2),
                 "ma30": round(float(t.ma30), 2),
                 "dif": round(float(t.dif), 4),
+                "support_lower": new_state.get("support_lower", ""),
+                "support_upper": new_state.get("support_upper", ""),
+                "support_source": new_state.get("support_source", ""),
             })
 
         new_state["candidate_since"] = previous_state.get("candidate_since", latest_date)
@@ -460,6 +531,8 @@ def main() -> int:
         new_state["layer1_current"] = l1_ok
         new_state["layer1_route"] = l1.get("route", "") if l1_ok else previous_state.get("layer1_route", "")
         new_state["layer1_checks"] = l1.get("checks", {})
+        if new_state.get("support_lower") is not None:
+            new_state["support_status"] = "有效"
         stocks_state[code] = new_state
 
         candidate_rows.append({
@@ -488,6 +561,10 @@ def main() -> int:
             "key_date": new_state.get("key_date", ""),
             "key_high": new_state.get("key_high", ""),
             "key_low": new_state.get("key_low", ""),
+            "support_lower": new_state.get("support_lower", ""),
+            "support_upper": new_state.get("support_upper", ""),
+            "support_source": new_state.get("support_source", ""),
+            "support_status": new_state.get("support_status", ""),
             "fundamental_reason": f.get("reason", "") if isinstance(f, dict) else "",
         })
 
@@ -543,9 +620,12 @@ def main() -> int:
                 f"型態：{r['route']}",
                 f"關鍵K日期：{r['key_date']}",
                 f"關鍵K高：{r['key_high']}｜低：{r['key_low']}",
+                f"支撐區：{r['support_lower']}～{r['support_upper']}",
+                f"支撐來源：{r['support_source']}",
                 f"收盤：{r['close']}",
                 f"20MA：{r['ma20']}｜30MA：{r['ma30']}",
                 f"DIF：{r['dif']}",
+                f"失效：收盤有效跌破支撐下緣 {r['support_lower']}（容許0.5%誤差）",
             ]
         send_line("\n".join(lines))
 
@@ -558,10 +638,11 @@ def main() -> int:
                 f"買點路徑：{r['signal_route']}",
                 f"關鍵K：{r['key_date']}",
                 f"關鍵K高：{r['key_high']}",
+                f"支撐區：{r.get('support_lower', '')}～{r.get('support_upper', '')}",
                 f"收盤：{r['close']}",
                 f"成交量：{int(r['volume_lots'])}張｜量比：{r['volume_ratio']}x",
                 f"績效基準試單價：{r['baseline_entry']}",
-                f"初始失效參考：關鍵K低點 {r['key_low']}",
+                f"初始失效參考：支撐區下緣 {r.get('support_lower', r['key_low'])}",
             ]
         send_line("\n".join(lines))
     return 0
