@@ -15,6 +15,10 @@ Layer 2 (buy point)
   5) later close breaks above key-candle high
   6) volume expands reasonably and price extension is not excessive
 
+Once a stock has entered the candidate pool, Layer 2 keeps tracking its pullback /
+reclaim structure even if Layer 1 temporarily weakens. A formal buy signal still
+requires Layer 1 to be 4/4 on the trigger day.
+
 Database volume is stored as shares; strategy displays and evaluates lots (張).
 """
 from __future__ import annotations
@@ -123,7 +127,7 @@ def layer1(g: pd.DataFrame, fundamental_ok: bool) -> dict:
     }
 
 
-def detect_layer2(code: str, x: pd.DataFrame, state: dict) -> tuple[dict, dict | None]:
+def detect_layer2(code: str, x: pd.DataFrame, state: dict, allow_trigger: bool = True) -> tuple[dict, dict | None]:
     s = dict(state or {})
     if len(x) < 35:
         s.setdefault("stage", "等待30MA結構")
@@ -174,7 +178,7 @@ def detect_layer2(code: str, x: pd.DataFrame, state: dict) -> tuple[dict, dict |
         breakout = close > key_high
         volume_ok = VOL_RATIO_MIN <= vol_ratio <= VOL_RATIO_MAX and lots >= MIN_VOLUME_LOTS and turnover >= MIN_TURNOVER
         extension_ok = extension <= MAX_30MA_EXTENSION
-        if breakout and volume_ok and extension_ok and s.get("last_trigger_date") != date:
+        if allow_trigger and breakout and volume_ok and extension_ok and s.get("last_trigger_date") != date:
             s["stage"] = "正式試單"
             s["last_trigger_date"] = date
             return s, {
@@ -207,7 +211,7 @@ def append_recommendation(row: dict) -> None:
 
 def write_candidate_status(rows: list[dict]) -> None:
     fields = [
-        "date", "code", "name", "trend", "stage", "close", "ma20", "ma30", "dif",
+        "date", "code", "name", "trend", "stage", "layer1_current", "close", "ma20", "ma30", "dif",
         "volume_lots", "avg20_volume_lots", "volume_ratio", "turnover",
         "three_above30_date", "pullback_date", "key_date", "key_high", "key_low",
         "fundamental_reason",
@@ -251,6 +255,7 @@ def main() -> int:
 
     candidate_rows = []
     triggers = []
+    current_layer1_count = 0
 
     for code, g in df.groupby("code", sort=False):
         code = str(code)
@@ -258,18 +263,30 @@ def main() -> int:
         f = fundamentals.get(code, {})
         fundamental_ok = bool(f.get("supported", False)) if isinstance(f, dict) else bool(f)
         l1 = layer1(g, fundamental_ok)
-        if not l1.get("ok"):
+        l1_ok = bool(l1.get("ok"))
+        previous_state = stocks_state.get(code, {})
+
+        # 舊版本的候選狀態已有 layer1_checks；新版本則額外記 candidate_since。
+        # 一旦進入候選池，即使當日 Layer 1 暫時轉弱，也繼續追蹤 Layer 2。
+        was_candidate = bool(previous_state.get("candidate_since") or previous_state.get("layer1_checks"))
+        if not l1_ok and not was_candidate:
             continue
+        if l1_ok:
+            current_layer1_count += 1
 
         x = l1["df"]
+        if len(x) < 31:
+            continue
         t = x.iloc[-1]
         avg20 = float(t.avg20_lots) if pd.notna(t.avg20_lots) else 0.0
         lots = float(t.volume_lots) if pd.notna(t.volume_lots) else 0.0
         vol_ratio = lots / avg20 if avg20 else 0.0
 
-        new_state, trigger = detect_layer2(code, x, stocks_state.get(code, {}))
+        new_state, trigger = detect_layer2(code, x, previous_state, allow_trigger=l1_ok)
+        new_state["candidate_since"] = previous_state.get("candidate_since", latest_date)
         new_state["name"] = name
-        new_state["trend"] = l1["trend"]
+        new_state["trend"] = l1.get("trend", previous_state.get("trend", "其他"))
+        new_state["layer1_current"] = l1_ok
         new_state["layer1_checks"] = l1.get("checks", {})
         stocks_state[code] = new_state
 
@@ -277,8 +294,9 @@ def main() -> int:
             "date": latest_date,
             "code": code,
             "name": name,
-            "trend": l1["trend"],
+            "trend": new_state["trend"],
             "stage": new_state.get("stage", "等待30MA結構"),
+            "layer1_current": "4/4" if l1_ok else "追蹤中",
             "close": round(float(t.close), 2),
             "ma20": round(float(t.ma20), 2),
             "ma30": round(float(t.ma30), 2),
@@ -296,7 +314,7 @@ def main() -> int:
         })
 
         if trigger:
-            trigger.update({"name": name, "trend": l1["trend"], "baseline_entry": trigger["key_high"]})
+            trigger.update({"name": name, "trend": new_state["trend"], "baseline_entry": trigger["key_high"]})
             append_recommendation(trigger)
             triggers.append(trigger)
 
@@ -315,14 +333,16 @@ def main() -> int:
 
     state["updated_at"] = datetime.now(timezone.utc).isoformat()
     state["latest_trade_date"] = latest_date
-    state["layer1_candidate_count"] = len(candidate_rows)
+    state["layer1_candidate_count"] = current_layer1_count
+    state["tracked_candidate_count"] = len(candidate_rows)
     state["stage_counts"] = dict(Counter(r["stage"] for r in candidate_rows))
     state["trend_counts"] = dict(Counter(r["trend"] for r in candidate_rows))
     save_json(STATE_FILE, state)
 
     summary = {
         "latest_trade_date": latest_date,
-        "layer1_candidates": len(candidate_rows),
+        "layer1_candidates": current_layer1_count,
+        "tracked_candidates": len(candidate_rows),
         "formal_buy_signals": len(triggers),
         "trend_counts": dict(Counter(r["trend"] for r in candidate_rows)),
         "stage_counts": dict(Counter(r["stage"] for r in candidate_rows)),
