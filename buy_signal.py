@@ -11,7 +11,8 @@ A) 30MA pullback -> reclaim -> key candle -> later breakout with qualified volum
 B) Strong 20MA continuation -> DIF recovery key candle -> later breakout with qualified volume.
 
 Tracking invalidation (3 trading days)
-- close stays below 20MA for 3 consecutive sessions;
+- after the first close below 20MA, allow the next 3 trading sessions to reclaim 20MA;
+  invalidate only if all 3 grace sessions also close below 20MA;
 - DIF weakens for 3 consecutive day-over-day steps;
 - after a key candle, no breakout within 3 subsequent trading sessions.
 When invalidated, the stock is removed from the tracked pool and must re-enter through Layer 1.
@@ -172,10 +173,13 @@ def trading_days_since(x: pd.DataFrame, date_text: str) -> int | None:
 
 
 def invalid_reason(x: pd.DataFrame, state: dict) -> str:
-    if len(x) >= 3:
-        q = x.iloc[-3:]
+    # 20MA規則：跌破當天不算在3天修復期內；再給後續3個交易日站回20MA。
+    # 因此只有「跌破當天 + 後續3天」共4個交易日全部收在20MA下方才淘汰。
+    # 只要其中任何一天收盤重新站回20MA，修復期即視為成功並重新起算。
+    if len(x) >= 4:
+        q = x.iloc[-4:]
         if q["ma20"].notna().all() and bool((q["close"] < q["ma20"]).all()):
-            return "連續3日收盤跌破20MA"
+            return "跌破20MA後3個交易日仍未站回"
 
     # 3個連續「日對日」DIF下降，需要觀察4個DIF點。
     if len(x) >= 4:
