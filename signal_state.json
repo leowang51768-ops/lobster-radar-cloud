@@ -1,0 +1,2087 @@
+{
+  "stocks": {
+    "1233": {
+      "stage": "等待30MA結構",
+      "name": "天仁",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "1309": {
+      "three_above30_date": "2026-09-02",
+      "stage": "等待回踩",
+      "name": "台達化",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "1315": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待突破關鍵K",
+      "pullback_date": "2026-09-11",
+      "key_date": "2026-09-11",
+      "key_high": 66.5,
+      "key_low": 65.7,
+      "name": "達新",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "1323": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待回踩",
+      "name": "永裕",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "1340": {
+      "three_above30_date": "2026-08-27",
+      "stage": "等待突破關鍵K",
+      "pullback_date": "2026-09-11",
+      "key_date": "2026-09-11",
+      "key_high": 5.25,
+      "key_low": 5.16,
+      "name": "勝悅-KY",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "1456": {
+      "three_above30_date": "2026-09-02",
+      "stage": "等待突破關鍵K",
+      "pullback_date": "2026-09-11",
+      "key_date": "2026-09-11",
+      "key_high": 14.8,
+      "key_low": 13.55,
+      "name": "怡華",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "1457": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待突破關鍵K",
+      "pullback_date": "2026-09-11",
+      "key_date": "2026-09-11",
+      "key_high": 14.5,
+      "key_low": 14.25,
+      "name": "宜進",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "1528": {
+      "three_above30_date": "2026-08-28",
+      "stage": "等待回踩",
+      "name": "恩德",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "1558": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待回踩",
+      "name": "伸興",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "1560": {
+      "three_above30_date": "2026-08-28",
+      "stage": "等待回踩",
+      "name": "中砂",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "1591": {
+      "three_above30_date": "2026-09-10",
+      "stage": "等待突破關鍵K",
+      "pullback_date": "2026-09-11",
+      "key_date": "2026-09-11",
+      "key_high": 37.95,
+      "key_low": 35.9,
+      "name": "駿吉-KY",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "1599": {
+      "stage": "等待30MA結構",
+      "name": "宏佳騰",
+      "trend": "B級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "1709": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待回踩",
+      "name": "和益",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "1776": {
+      "three_above30_date": "2026-08-31",
+      "stage": "等待突破關鍵K",
+      "pullback_date": "2026-09-11",
+      "key_date": "2026-09-11",
+      "key_high": 17.6,
+      "key_low": 17.2,
+      "name": "展宇",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "1817": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待突破關鍵K",
+      "pullback_date": "2026-09-11",
+      "key_date": "2026-09-11",
+      "key_high": 40.5,
+      "key_low": 40.25,
+      "name": "凱撒衛",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "2006": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待突破關鍵K",
+      "pullback_date": "2026-09-11",
+      "key_date": "2026-09-11",
+      "key_high": 82.5,
+      "key_low": 80.6,
+      "name": "東和鋼鐵",
+      "trend": "B級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "2033": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待回踩",
+      "name": "佳大",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "2069": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待回踩",
+      "name": "運錩",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "2243": {
+      "three_above30_date": "2026-09-03",
+      "stage": "等待回踩",
+      "name": "宏旭-KY",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "2305": {
+      "three_above30_date": "2026-09-02",
+      "stage": "等待回踩",
+      "name": "全友",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "2321": {
+      "three_above30_date": "2026-08-14",
+      "stage": "等待回踩",
+      "name": "東訊",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "2354": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待突破關鍵K",
+      "pullback_date": "2026-09-11",
+      "key_date": "2026-09-11",
+      "key_high": 66.7,
+      "key_low": 63.9,
+      "name": "鴻準",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "2412": {
+      "three_above30_date": "2026-09-04",
+      "stage": "等待回踩",
+      "name": "中華電",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "2413": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待回踩",
+      "name": "環科",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "2444": {
+      "three_above30_date": "2026-09-09",
+      "stage": "等待回踩",
+      "name": "兆勁",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "2453": {
+      "three_above30_date": "2026-08-26",
+      "stage": "等待突破關鍵K",
+      "pullback_date": "2026-09-11",
+      "key_date": "2026-09-11",
+      "key_high": 53.2,
+      "key_low": 52.1,
+      "name": "凌群",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "2460": {
+      "three_above30_date": "2026-09-11",
+      "stage": "等待回踩",
+      "name": "建通",
+      "trend": "B級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "2466": {
+      "three_above30_date": "2026-08-25",
+      "stage": "等待回踩",
+      "name": "冠西電",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "2477": {
+      "three_above30_date": "2026-09-02",
+      "stage": "等待回踩",
+      "name": "美隆電",
+      "trend": "B級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "2506": {
+      "three_above30_date": "2026-09-11",
+      "stage": "等待突破關鍵K",
+      "pullback_date": "2026-09-11",
+      "key_date": "2026-09-11",
+      "key_high": 8.71,
+      "key_low": 8.52,
+      "name": "太設",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "2540": {
+      "stage": "等待30MA結構",
+      "name": "愛山林",
+      "trend": "B級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "2548": {
+      "stage": "等待30MA結構",
+      "name": "華固",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "2596": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待回踩",
+      "name": "綠意",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "2608": {
+      "stage": "等待30MA結構",
+      "name": "嘉里大榮",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "2609": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待回踩",
+      "name": "陽明",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "2610": {
+      "stage": "等待30MA結構",
+      "name": "華航",
+      "trend": "B級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "2617": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待回踩",
+      "name": "台航",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "2618": {
+      "three_above30_date": "2026-08-24",
+      "stage": "等待3K內站回30MA",
+      "pullback_date": "2026-09-11",
+      "name": "長榮航",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "2636": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待回踩",
+      "name": "台驊控股",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "2801": {
+      "three_above30_date": "2026-08-31",
+      "stage": "等待突破關鍵K",
+      "pullback_date": "2026-09-11",
+      "key_date": "2026-09-11",
+      "key_high": 27.95,
+      "key_low": 26.55,
+      "name": "彰銀",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "2812": {
+      "three_above30_date": "2026-09-04",
+      "stage": "等待突破關鍵K",
+      "pullback_date": "2026-09-11",
+      "key_date": "2026-09-11",
+      "key_high": 19.55,
+      "key_low": 19.05,
+      "name": "台中銀",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "2820": {
+      "three_above30_date": "2026-08-28",
+      "stage": "等待回踩",
+      "name": "華票",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "2834": {
+      "three_above30_date": "2026-09-03",
+      "stage": "等待回踩",
+      "name": "臺企銀",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "2836": {
+      "three_above30_date": "2026-09-04",
+      "stage": "等待突破關鍵K",
+      "pullback_date": "2026-09-11",
+      "key_date": "2026-09-11",
+      "key_high": 12.3,
+      "key_low": 12.15,
+      "name": "高雄銀",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "2845": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待突破關鍵K",
+      "pullback_date": "2026-09-11",
+      "key_date": "2026-09-11",
+      "key_high": 13.7,
+      "key_low": 13.35,
+      "name": "遠東銀",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "2884": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待回踩",
+      "name": "玉山金",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "2889": {
+      "three_above30_date": "2026-08-24",
+      "stage": "等待突破關鍵K",
+      "pullback_date": "2026-09-11",
+      "key_date": "2026-09-11",
+      "key_high": 16.75,
+      "key_low": 16.25,
+      "name": "國票金",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "2890": {
+      "three_above30_date": "2026-09-01",
+      "stage": "等待回踩",
+      "name": "永豐金",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "2897": {
+      "three_above30_date": "2026-08-28",
+      "stage": "等待突破關鍵K",
+      "pullback_date": "2026-09-11",
+      "key_date": "2026-09-11",
+      "key_high": 11.0,
+      "key_low": 10.75,
+      "name": "王道銀行",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "2906": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待回踩",
+      "name": "高林",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "3016": {
+      "three_above30_date": "2026-08-28",
+      "stage": "等待回踩",
+      "name": "嘉晶",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "3029": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待回踩",
+      "name": "零壹",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "3034": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待回踩",
+      "name": "聯詠",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "3044": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待回踩",
+      "name": "健鼎",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "3045": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待回踩",
+      "name": "台灣大",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "3158": {
+      "three_above30_date": "2026-08-28",
+      "stage": "等待突破關鍵K",
+      "pullback_date": "2026-09-11",
+      "key_date": "2026-09-11",
+      "key_high": 84.6,
+      "key_low": 84.0,
+      "name": "嘉實",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "3176": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待回踩",
+      "name": "基亞",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "3229": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待回踩",
+      "name": "晟鈦",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "3296": {
+      "three_above30_date": "2026-08-28",
+      "stage": "等待回踩",
+      "name": "勝德",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "3306": {
+      "three_above30_date": "2026-08-24",
+      "stage": "等待突破關鍵K",
+      "pullback_date": "2026-09-11",
+      "key_date": "2026-09-11",
+      "key_high": 46.45,
+      "key_low": 44.75,
+      "name": "鼎天",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "3311": {
+      "stage": "等待30MA結構",
+      "name": "閎暉",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "3354": {
+      "three_above30_date": "2026-08-28",
+      "stage": "等待回踩",
+      "name": "律勝",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "3380": {
+      "three_above30_date": "2026-09-02",
+      "stage": "等待回踩",
+      "name": "明泰",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "3441": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待回踩",
+      "name": "聯一光",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "3467": {
+      "three_above30_date": "2026-08-28",
+      "stage": "等待回踩",
+      "name": "台灣精材",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "3479": {
+      "stage": "等待30MA結構",
+      "name": "安勤",
+      "trend": "B級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "3522": {
+      "three_above30_date": "2026-09-08",
+      "stage": "等待回踩",
+      "name": "御嵿",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "3532": {
+      "three_above30_date": "2026-08-26",
+      "stage": "等待回踩",
+      "name": "台勝科",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "3570": {
+      "three_above30_date": "2026-08-31",
+      "stage": "等待回踩",
+      "name": "大塚",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "3623": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待回踩",
+      "name": "富晶通",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "3624": {
+      "three_above30_date": "2026-08-25",
+      "stage": "等待回踩",
+      "name": "光頡",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "3628": {
+      "three_above30_date": "2026-08-27",
+      "stage": "等待回踩",
+      "name": "盈正",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "3646": {
+      "three_above30_date": "2026-08-24",
+      "stage": "等待回踩",
+      "name": "艾恩特",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "4104": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待回踩",
+      "name": "佳醫",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "4105": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待突破關鍵K",
+      "pullback_date": "2026-09-11",
+      "key_date": "2026-09-11",
+      "key_high": 77.5,
+      "key_low": 76.6,
+      "name": "東洋",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "4119": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待回踩",
+      "name": "旭富",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "4138": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待突破關鍵K",
+      "pullback_date": "2026-09-11",
+      "key_date": "2026-09-11",
+      "key_high": 53.6,
+      "key_low": 52.8,
+      "name": "曜亞",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "4148": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待回踩",
+      "name": "全宇生技-KY",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "4154": {
+      "three_above30_date": "2026-08-13",
+      "stage": "等待回踩",
+      "name": "樂威科-KY",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "4155": {
+      "stage": "等待30MA結構",
+      "name": "訊映",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "4417": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待回踩",
+      "name": "金洲",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "4442": {
+      "stage": "等待30MA結構",
+      "name": "竣邦-KY",
+      "trend": "B級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "4556": {
+      "stage": "等待30MA結構",
+      "name": "旭然",
+      "trend": "B級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "4572": {
+      "three_above30_date": "2026-09-02",
+      "stage": "等待突破關鍵K",
+      "pullback_date": "2026-09-11",
+      "key_date": "2026-09-11",
+      "key_high": 145.5,
+      "key_low": 140.5,
+      "name": "駐龍",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "4714": {
+      "three_above30_date": "2026-08-25",
+      "stage": "等待回踩",
+      "name": "永捷",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "4904": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待回踩",
+      "name": "遠傳",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "4915": {
+      "three_above30_date": "2026-09-11",
+      "stage": "等待回踩",
+      "name": "致伸",
+      "trend": "B級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "4951": {
+      "three_above30_date": "2026-09-08",
+      "stage": "等待回踩",
+      "name": "精拓科",
+      "trend": "B級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "4967": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待突破關鍵K",
+      "pullback_date": "2026-09-11",
+      "key_date": "2026-09-11",
+      "key_high": 283.5,
+      "key_low": 270.5,
+      "name": "十銓",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "5013": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待回踩",
+      "name": "強新",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "5201": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待回踩",
+      "name": "凱衛",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "5209": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待回踩",
+      "name": "新鼎",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "5251": {
+      "three_above30_date": "2026-09-01",
+      "stage": "等待回踩",
+      "name": "天鉞電",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "5324": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待突破關鍵K",
+      "pullback_date": "2026-09-11",
+      "key_date": "2026-09-11",
+      "key_high": 12.3,
+      "key_low": 12.15,
+      "name": "士開",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "5340": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待回踩",
+      "name": "建榮",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "5355": {
+      "three_above30_date": "2026-08-27",
+      "stage": "等待突破關鍵K",
+      "pullback_date": "2026-09-11",
+      "key_date": "2026-09-11",
+      "key_high": 5.89,
+      "key_low": 5.71,
+      "name": "佳總",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "5386": {
+      "three_above30_date": "2026-09-01",
+      "stage": "等待回踩",
+      "name": "青雲",
+      "trend": "B級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "5460": {
+      "three_above30_date": "2026-09-07",
+      "stage": "等待回踩",
+      "name": "同協",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "5464": {
+      "three_above30_date": "2026-08-28",
+      "stage": "等待回踩",
+      "name": "霖宏",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "5487": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待回踩",
+      "name": "通泰",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "5514": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待突破關鍵K",
+      "pullback_date": "2026-09-11",
+      "key_date": "2026-09-11",
+      "key_high": 15.2,
+      "key_low": 14.55,
+      "name": "三豐",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "5543": {
+      "three_above30_date": "2026-08-31",
+      "stage": "等待回踩",
+      "name": "桓鼎-KY",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "5547": {
+      "three_above30_date": "2026-09-10",
+      "stage": "等待突破關鍵K",
+      "pullback_date": "2026-09-11",
+      "key_date": "2026-09-11",
+      "key_high": 20.0,
+      "key_low": 19.75,
+      "name": "久舜",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "5601": {
+      "three_above30_date": "2026-08-28",
+      "stage": "等待回踩",
+      "name": "台聯櫃",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "5609": {
+      "three_above30_date": "2026-08-25",
+      "stage": "等待突破關鍵K",
+      "pullback_date": "2026-09-11",
+      "key_date": "2026-09-11",
+      "key_high": 79.4,
+      "key_low": 78.7,
+      "name": "中菲行",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "5876": {
+      "three_above30_date": "2026-09-03",
+      "stage": "等待回踩",
+      "name": "上海商銀",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "6021": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待回踩",
+      "name": "美好證",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "6023": {
+      "three_above30_date": "2026-09-02",
+      "stage": "等待回踩",
+      "name": "元大期",
+      "trend": "B級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "6133": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待突破關鍵K",
+      "pullback_date": "2026-09-11",
+      "key_date": "2026-09-11",
+      "key_high": 23.75,
+      "key_low": 21.8,
+      "name": "金橋",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "6148": {
+      "three_above30_date": "2026-08-28",
+      "stage": "等待回踩",
+      "name": "驊宏資",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "6152": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待回踩",
+      "name": "百一",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "6210": {
+      "stage": "等待30MA結構",
+      "name": "慶生",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "6221": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待回踩",
+      "name": "晉泰",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "6225": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待回踩",
+      "name": "天瀚",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "6227": {
+      "three_above30_date": "2026-08-24",
+      "stage": "等待回踩",
+      "name": "茂綸",
+      "trend": "B級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "6416": {
+      "three_above30_date": "2026-08-24",
+      "stage": "等待回踩",
+      "name": "瑞祺電通",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "6441": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待回踩",
+      "name": "廣錠",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "6496": {
+      "three_above30_date": "2026-08-19",
+      "stage": "等待回踩",
+      "name": "科懋",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "6538": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待回踩",
+      "name": "倉和",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "6556": {
+      "stage": "等待30MA結構",
+      "name": "勝品",
+      "trend": "B級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "6581": {
+      "three_above30_date": "2026-08-24",
+      "stage": "等待突破關鍵K",
+      "pullback_date": "2026-09-11",
+      "key_date": "2026-09-11",
+      "key_high": 111.5,
+      "key_low": 109.0,
+      "name": "鋼聯",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "6655": {
+      "three_above30_date": "2026-09-08",
+      "stage": "等待回踩",
+      "name": "科定",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "6680": {
+      "stage": "等待30MA結構",
+      "name": "鑫創電子",
+      "trend": "B級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "6689": {
+      "three_above30_date": "2026-08-26",
+      "stage": "等待突破關鍵K",
+      "pullback_date": "2026-09-11",
+      "key_date": "2026-09-11",
+      "key_high": 65.0,
+      "key_low": 60.1,
+      "name": "伊雲谷",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "6690": {
+      "three_above30_date": "2026-08-25",
+      "stage": "等待回踩",
+      "name": "安碁資訊",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "6706": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待突破關鍵K",
+      "pullback_date": "2026-09-11",
+      "key_date": "2026-09-11",
+      "key_high": 137.5,
+      "key_low": 122.5,
+      "name": "惠特",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "6739": {
+      "three_above30_date": "2026-08-31",
+      "stage": "等待回踩",
+      "name": "竹陞科技",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "6794": {
+      "three_above30_date": "2026-08-26",
+      "stage": "等待回踩",
+      "name": "向榮生技",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "6834": {
+      "three_above30_date": "2026-09-08",
+      "stage": "等待回踩",
+      "name": "天二科技",
+      "trend": "B級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "6870": {
+      "three_above30_date": "2026-09-03",
+      "stage": "等待回踩",
+      "name": "騰雲",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "6885": {
+      "three_above30_date": "2026-08-26",
+      "stage": "等待回踩",
+      "name": "全福生技",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "6894": {
+      "three_above30_date": "2026-09-01",
+      "stage": "等待回踩",
+      "name": "衛司特",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "6909": {
+      "three_above30_date": "2026-08-31",
+      "stage": "等待回踩",
+      "name": "創控",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "6924": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待回踩",
+      "name": "榮惠-KY創",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "6957": {
+      "three_above30_date": "2026-09-11",
+      "stage": "等待回踩",
+      "name": "裕慶-KY",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "7584": {
+      "three_above30_date": "2026-09-04",
+      "stage": "等待回踩",
+      "name": "樂意",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "7713": {
+      "three_above30_date": "2026-08-18",
+      "stage": "等待回踩",
+      "name": "威力德生醫",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "7714": {
+      "three_above30_date": "2026-08-24",
+      "stage": "等待突破關鍵K",
+      "pullback_date": "2026-09-11",
+      "key_date": "2026-09-11",
+      "key_high": 173.5,
+      "key_low": 154.5,
+      "name": "創泓科技",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "7717": {
+      "three_above30_date": "2026-08-28",
+      "stage": "等待回踩",
+      "name": "萊德光電-KY",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "7743": {
+      "three_above30_date": "2026-08-31",
+      "stage": "等待回踩",
+      "name": "金利食安",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "7767": {
+      "stage": "等待30MA結構",
+      "name": "仁大資訊",
+      "trend": "B級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "7772": {
+      "three_above30_date": "2026-09-03",
+      "stage": "等待突破關鍵K",
+      "pullback_date": "2026-09-11",
+      "key_date": "2026-09-11",
+      "key_high": 132.0,
+      "key_low": 115.0,
+      "name": "耀穎",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "8047": {
+      "three_above30_date": "2026-08-20",
+      "stage": "等待回踩",
+      "name": "星雲",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "8089": {
+      "three_above30_date": "2026-09-11",
+      "stage": "等待回踩",
+      "name": "康全電訊",
+      "trend": "B級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "8162": {
+      "three_above30_date": "2026-08-25",
+      "stage": "等待突破關鍵K",
+      "pullback_date": "2026-09-11",
+      "key_date": "2026-09-11",
+      "key_high": 61.7,
+      "key_low": 59.3,
+      "name": "微矽電子-創",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "8201": {
+      "three_above30_date": "2026-08-31",
+      "stage": "等待回踩",
+      "name": "無敵",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "8227": {
+      "three_above30_date": "2026-08-25",
+      "stage": "等待回踩",
+      "name": "巨有科技",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "8284": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待回踩",
+      "name": "三竹",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "8411": {
+      "three_above30_date": "2026-09-11",
+      "stage": "等待突破關鍵K",
+      "pullback_date": "2026-09-11",
+      "key_date": "2026-09-11",
+      "key_high": 13.0,
+      "key_low": 12.8,
+      "name": "福貞-KY",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "8416": {
+      "three_above30_date": "2026-09-02",
+      "stage": "等待突破關鍵K",
+      "pullback_date": "2026-09-11",
+      "key_date": "2026-09-11",
+      "key_high": 170.0,
+      "key_low": 170.0,
+      "name": "實威",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "8423": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待回踩",
+      "name": "保綠-KY",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "8446": {
+      "three_above30_date": "2026-09-07",
+      "stage": "等待突破關鍵K",
+      "pullback_date": "2026-09-11",
+      "key_date": "2026-09-11",
+      "key_high": 86.1,
+      "key_low": 85.0,
+      "name": "華研",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "8472": {
+      "three_above30_date": "2026-09-08",
+      "stage": "等待回踩",
+      "name": "夠麻吉",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "8917": {
+      "three_above30_date": "2026-08-17",
+      "stage": "等待回踩",
+      "name": "欣泰",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "8931": {
+      "three_above30_date": "2026-09-02",
+      "stage": "等待突破關鍵K",
+      "pullback_date": "2026-09-11",
+      "key_date": "2026-09-11",
+      "key_high": 41.45,
+      "key_low": 40.55,
+      "name": "大汽電",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "8941": {
+      "three_above30_date": "2026-08-19",
+      "stage": "等待回踩",
+      "name": "關中",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "8996": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待回踩",
+      "name": "高力",
+      "trend": "A級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "9927": {
+      "three_above30_date": "2026-09-02",
+      "stage": "等待突破關鍵K",
+      "pullback_date": "2026-09-11",
+      "key_date": "2026-09-11",
+      "key_high": 69.9,
+      "key_low": 69.5,
+      "name": "泰銘",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "9931": {
+      "three_above30_date": "2026-08-21",
+      "stage": "等待突破關鍵K",
+      "pullback_date": "2026-09-11",
+      "key_date": "2026-09-11",
+      "key_high": 34.2,
+      "key_low": 34.1,
+      "name": "欣高",
+      "trend": "轉強",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    },
+    "9960": {
+      "stage": "等待30MA結構",
+      "name": "邁達康",
+      "trend": "B級",
+      "layer1_checks": {
+        "20MA向上": true,
+        "收盤站上20MA": true,
+        "DIF今日>=昨日": true,
+        "基本面支撐": true
+      }
+    }
+  },
+  "updated_at": "2026-09-12T15:59:02.960044+00:00",
+  "latest_trade_date": "2026-09-11",
+  "layer1_candidate_count": 160,
+  "stage_counts": {
+    "等待突破關鍵K": 41,
+    "等待3K內站回30MA": 1,
+    "等待回踩": 102,
+    "等待30MA結構": 16
+  },
+  "trend_counts": {
+    "轉強": 60,
+    "B級": 20,
+    "A級": 80
+  }
+}
