@@ -27,6 +27,9 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Install signal dependencies
+        run: pip install pandas
+
       - name: Get Taipei trade date
         run: |
           echo "TRADE_DATE=$(TZ=Asia/Taipei date +%F)" >> "$GITHUB_ENV"
@@ -62,17 +65,22 @@ jobs:
           assert count > 0
           PY
 
-      - name: Commit updated database
+      - name: Evaluate Lobster buy points and send LINE alerts
+        env:
+          LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
+        run: python buy_signal.py
+
+      - name: Commit updated database and signal state
         run: |
           git config user.name "lobster-radar-cloud"
           git config user.email "actions@github.com"
 
-          git add lobster_tw_6m_prices.sqlite
+          git add lobster_tw_6m_prices.sqlite signal_state.json formal_recommendations.csv 2>/dev/null || true
 
           if git diff --cached --quiet; then
-            echo "No database changes to commit."
+            echo "No database or signal-state changes to commit."
             exit 0
           fi
 
-          git commit -m "Update official prices ${TRADE_DATE}"
+          git commit -m "Update official prices and buy signals ${TRADE_DATE}"
           git push
