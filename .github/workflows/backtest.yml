@@ -1,0 +1,41 @@
+name: Lobster Current Rules Backtest
+
+on:
+  push:
+    paths:
+      - 'backtest_current_rules.py'
+      - '.github/workflows/backtest.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install pandas
+
+      - name: Run backtest
+        run: python backtest_current_rules.py
+
+      - name: Commit backtest results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add backtest_results.json backtest_trades.csv
+          if git diff --cached --quiet; then
+            echo "No backtest result changes"
+          else
+            git commit -m "Update current-rules backtest results"
+            git push
+          fi
