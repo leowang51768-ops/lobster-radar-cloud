@@ -1,0 +1,40 @@
+{
+  "data_start": "2026-03-09",
+  "data_end": "2026-09-11",
+  "stocks_in_db": 1972,
+  "fundamental_supported_now": 1601,
+  "signals": 400,
+  "win_rate_5d_pct": 57.39,
+  "win_rate_10d_pct": 55.14,
+  "win_rate_20d_pct": 48.37,
+  "avg_ret_5d_pct": 1.78,
+  "avg_ret_10d_pct": 2.3,
+  "avg_ret_20d_pct": 2.94,
+  "avg_mfe_20d_pct": 14.37,
+  "avg_mae_20d_pct": -6.71,
+  "by_route": {
+    "30MA回踩": {
+      "signals": 230,
+      "win_rate_5d_pct": 59.39,
+      "win_rate_10d_pct": 55.46,
+      "win_rate_20d_pct": 47.6,
+      "avg_ret_5d_pct": 1.56,
+      "avg_ret_10d_pct": 1.74,
+      "avg_ret_20d_pct": 1.93,
+      "avg_mfe_20d_pct": 12.71,
+      "avg_mae_20d_pct": -6.2
+    },
+    "強勢20MA續強": {
+      "signals": 170,
+      "win_rate_5d_pct": 54.71,
+      "win_rate_10d_pct": 54.71,
+      "win_rate_20d_pct": 49.41,
+      "avg_ret_5d_pct": 2.08,
+      "avg_ret_10d_pct": 3.05,
+      "avg_ret_20d_pct": 4.3,
+      "avg_mfe_20d_pct": 16.61,
+      "avg_mae_20d_pct": -7.4
+    }
+  },
+  "method_note": "Uses current fundamental_support.json as a fixed eligibility proxy for the whole historical window because point-in-time monthly-revenue snapshots are not stored. Technical rules are replayed chronologically. One formal signal per key candle is counted."
+}
