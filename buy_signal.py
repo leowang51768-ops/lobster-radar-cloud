@@ -2,10 +2,16 @@
 """Lobster Radar buy-point engine.
 
 Layer 1 (candidate qualification)
-  1) 20MA rising
-  2) close > 20MA
-  3) DIF(6,13) today >= yesterday
-  4) fundamental support approved in fundamental_support.json
+  Route A: original four-point rule
+    1) 20MA rising
+    2) close > 20MA
+    3) DIF(6,13) today >= yesterday
+    4) fundamental support approved in fundamental_support.json
+  Route B: strong 20MA continuation
+    - strong trend stays above 20MA/30MA
+    - a recent pullback tests 20MA but closes without breaking it
+    - DIF turns stronger afterwards
+    - fundamental support remains required
 
 Layer 2 (buy point)
   1) previously closed above 30MA for 3 consecutive sessions
@@ -17,7 +23,7 @@ Layer 2 (buy point)
 
 Once a stock has entered the candidate pool, Layer 2 keeps tracking its pullback /
 reclaim structure even if Layer 1 temporarily weakens. A formal buy signal still
-requires Layer 1 to be 4/4 on the trigger day.
+requires Layer 1 to be valid on the trigger day.
 
 Database volume is stored as shares; strategy displays and evaluates lots (張).
 """
@@ -45,6 +51,8 @@ RECOMMENDATIONS = BASE / "formal_recommendations.csv"
 CANDIDATES = BASE / "candidate_status.csv"
 
 PULLBACK_TOL = 0.01
+STRONG_20MA_TOUCH_TOL = 0.01
+STRONG_20MA_LOOKBACK = 3
 VOL_RATIO_MIN = 1.20
 VOL_RATIO_MAX = 3.00
 MAX_30MA_EXTENSION = 0.08
@@ -113,15 +121,47 @@ def layer1(g: pd.DataFrame, fundamental_ok: bool) -> dict:
     x["dif"] = x["ema6"] - x["ema13"]
     x["avg20_lots"] = x["volume_lots"].rolling(20).mean()
     if len(x) < 31:
-        return {"ok": False, "df": x}
+        return {"ok": False, "standard_ok": False, "strong20_ok": False, "route": "", "df": x}
+
     t, y = x.iloc[-1], x.iloc[-2]
     c1 = bool(t.ma20 > y.ma20)
     c2 = bool(t.close > t.ma20)
     c3 = bool(t.dif >= y.dif)
     c4 = bool(fundamental_ok)
+    standard_ok = c1 and c2 and c3 and c4
+
+    # 強勢20MA續強：只把它當作第一層另一個入口，不取代原四要點。
+    # 回測必須發生在「之前」1~3個交易日；回測日收盤不能跌破20MA。
+    # 當天仍要站在20MA之上、20MA高於30MA，而且DIF已重新走強。
+    strong20_touch_date = ""
+    strong20_ok = False
+    if len(x) >= 34 and c2 and c3 and c4 and bool(t.ma20 > t.ma30):
+        for back in range(1, STRONG_20MA_LOOKBACK + 1):
+            p = x.iloc[-1 - back]
+            if pd.isna(p.ma20) or pd.isna(p.ma30):
+                continue
+            strong_structure = bool(p.ma20 > p.ma30)
+            touched_20ma = bool(float(p.low) <= float(p.ma20) * (1 + STRONG_20MA_TOUCH_TOL))
+            held_20ma_close = bool(float(p.close) >= float(p.ma20))
+            if strong_structure and touched_20ma and held_20ma_close:
+                strong20_touch_date = p.date.strftime("%Y-%m-%d")
+                strong20_ok = True
+                break
+
+    route = "四要點" if standard_ok else ("強勢20MA續強" if strong20_ok else "")
     return {
-        "ok": c1 and c2 and c3 and c4,
-        "checks": {"20MA向上": c1, "收盤站上20MA": c2, "DIF今日>=昨日": c3, "基本面支撐": c4},
+        "ok": standard_ok or strong20_ok,
+        "standard_ok": standard_ok,
+        "strong20_ok": strong20_ok,
+        "route": route,
+        "strong20_touch_date": strong20_touch_date,
+        "checks": {
+            "20MA向上": c1,
+            "收盤站上20MA": c2,
+            "DIF今日>=昨日": c3,
+            "基本面支撐": c4,
+            "強勢20MA回測守住": strong20_ok,
+        },
         "trend": classify_trend(float(t.close), float(t.ma20), float(t.ma30), float(y.ma20), float(y.ma30)),
         "df": x,
     }
@@ -165,7 +205,6 @@ def detect_layer2(code: str, x: pd.DataFrame, state: dict, allow_trigger: bool =
                 s["key_low"] = low
                 s["stage"] = "等待突破關鍵K"
             elif elapsed > 2:
-                # 這輪型態失敗，重新等待新的30MA結構。
                 return {"stage": "重新等待", "last_failed_reclaim": date}, None
 
     if s.get("key_date") and date > s["key_date"]:
@@ -211,10 +250,9 @@ def append_recommendation(row: dict) -> None:
 
 def write_candidate_status(rows: list[dict]) -> None:
     fields = [
-        "date", "code", "name", "trend", "stage", "layer1_current", "close", "ma20", "ma30", "dif",
-        "volume_lots", "avg20_volume_lots", "volume_ratio", "turnover",
-        "three_above30_date", "pullback_date", "key_date", "key_high", "key_low",
-        "fundamental_reason",
+        "date", "code", "name", "trend", "stage", "layer1_current", "layer1_route", "strong20_touch_date",
+        "close", "ma20", "ma30", "dif", "volume_lots", "avg20_volume_lots", "volume_ratio", "turnover",
+        "three_above30_date", "pullback_date", "key_date", "key_high", "key_low", "fundamental_reason",
     ]
     with CANDIDATES.open("w", encoding="utf-8-sig", newline="") as f:
         w = csv.DictWriter(f, fieldnames=fields)
@@ -266,8 +304,6 @@ def main() -> int:
         l1_ok = bool(l1.get("ok"))
         previous_state = stocks_state.get(code, {})
 
-        # 舊版本的候選狀態已有 layer1_checks；新版本則額外記 candidate_since。
-        # 一旦進入候選池，即使當日 Layer 1 暫時轉弱，也繼續追蹤 Layer 2。
         was_candidate = bool(previous_state.get("candidate_since") or previous_state.get("layer1_checks"))
         if not l1_ok and not was_candidate:
             continue
@@ -287,6 +323,8 @@ def main() -> int:
         new_state["name"] = name
         new_state["trend"] = l1.get("trend", previous_state.get("trend", "其他"))
         new_state["layer1_current"] = l1_ok
+        new_state["layer1_route"] = l1.get("route", "")
+        new_state["strong20_touch_date"] = l1.get("strong20_touch_date", "")
         new_state["layer1_checks"] = l1.get("checks", {})
         stocks_state[code] = new_state
 
@@ -296,7 +334,9 @@ def main() -> int:
             "name": name,
             "trend": new_state["trend"],
             "stage": new_state.get("stage", "等待30MA結構"),
-            "layer1_current": "4/4" if l1_ok else "追蹤中",
+            "layer1_current": "符合" if l1_ok else "追蹤中",
+            "layer1_route": l1.get("route", previous_state.get("layer1_route", "")) if l1_ok else previous_state.get("layer1_route", ""),
+            "strong20_touch_date": l1.get("strong20_touch_date", previous_state.get("strong20_touch_date", "")) if l1_ok else previous_state.get("strong20_touch_date", ""),
             "close": round(float(t.close), 2),
             "ma20": round(float(t.ma20), 2),
             "ma30": round(float(t.ma30), 2),
@@ -318,7 +358,6 @@ def main() -> int:
             append_recommendation(trigger)
             triggers.append(trigger)
 
-    # 讓最接近買點的股票排在前面，方便人工查看。
     stage_order = {
         "正式試單": 0,
         "等待突破關鍵K": 1,
@@ -335,6 +374,7 @@ def main() -> int:
     state["latest_trade_date"] = latest_date
     state["layer1_candidate_count"] = current_layer1_count
     state["tracked_candidate_count"] = len(candidate_rows)
+    state["layer1_route_counts"] = dict(Counter(r["layer1_route"] for r in candidate_rows if r.get("layer1_route")))
     state["stage_counts"] = dict(Counter(r["stage"] for r in candidate_rows))
     state["trend_counts"] = dict(Counter(r["trend"] for r in candidate_rows))
     save_json(STATE_FILE, state)
@@ -344,6 +384,7 @@ def main() -> int:
         "layer1_candidates": current_layer1_count,
         "tracked_candidates": len(candidate_rows),
         "formal_buy_signals": len(triggers),
+        "layer1_route_counts": dict(Counter(r["layer1_route"] for r in candidate_rows if r.get("layer1_route"))),
         "trend_counts": dict(Counter(r["trend"] for r in candidate_rows)),
         "stage_counts": dict(Counter(r["stage"] for r in candidate_rows)),
     }
@@ -355,7 +396,7 @@ def main() -> int:
             lines += [
                 "",
                 f"🔴 {r['code']} {r['name']}｜{r['trend']}",
-                "第一層：4/4通過",
+                "第一層：當日符合",
                 f"關鍵K：{r['key_date']}",
                 f"關鍵K高：{r['key_high']}",
                 f"收盤：{r['close']}",
