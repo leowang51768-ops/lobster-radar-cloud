@@ -110,21 +110,6 @@ jobs:
           assert required.issubset(set(cols)), f"Unexpected prices schema: {cols}"
           PY
 
-      - name: Backfill missing structural support zones with retry
-        shell: bash
-        run: |
-          echo "FAIL_STAGE=支撐區補齊" >> "$GITHUB_ENV"
-          for attempt in 1 2; do
-            echo "Support-zone backfill attempt $attempt/2"
-            if python backfill_support_zones.py; then
-              exit 0
-            fi
-            if [ "$attempt" -lt 2 ]; then
-              sleep 10
-            fi
-          done
-          exit 1
-
       - name: Evaluate Lobster buy points and send LINE alerts with retry
         shell: bash
         env:
