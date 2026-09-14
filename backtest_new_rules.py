@@ -143,7 +143,7 @@ def result_set(signals: list[dict]) -> tuple[dict, list[dict]]:
                 horizon_rows.append(row)
                 evaluated.append(row)
         summary[str(horizon)] = {"全部": summarize(horizon_rows)}
-        for route in ("破底翻", "真突破"):
+        for route in ("破底翻", "突破後站穩", "突破回踩不破"):
             summary[str(horizon)][route] = summarize(
                 [row for row in horizon_rows if row["route"] == route]
             )
@@ -184,7 +184,7 @@ def main() -> None:
     end_date = market["date"].max().strftime("%Y-%m-%d")
     result = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
-        "strategy": "破底翻+真突破-v1",
+        "strategy": "破底翻+突破確認-v2",
         "data_start": start_date,
         "data_end": end_date,
         "entry": "訊號隔日開盤",
@@ -200,7 +200,7 @@ def main() -> None:
     OUT_JSON.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
 
     lines = [
-        "# 破底翻＋真突破｜六個月走勢回測",
+        "# 破底翻＋突破後站穩／回踩不破｜六個月走勢回測",
         "",
         f"- 官方資料區間：{start_date}～{end_date}",
         "- 進場：訊號隔一交易日開盤（避免使用收盤後才知道的資訊）",
