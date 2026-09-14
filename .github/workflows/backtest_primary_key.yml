@@ -1,0 +1,41 @@
+name: Lobster Primary Key Backtest
+
+on:
+  push:
+    paths:
+      - 'backtest_primary_key.py'
+      - '.github/workflows/backtest_primary_key.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  backtest-primary-key:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install pandas
+
+      - name: Run primary-key backtest
+        run: python backtest_primary_key.py
+
+      - name: Commit primary-key backtest results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add backtest_primary_key_results.json backtest_primary_key_trades.csv
+          if git diff --cached --quiet; then
+            echo "No primary-key backtest result changes"
+          else
+            git commit -m "Update primary-key backtest results"
+            git push
+          fi
