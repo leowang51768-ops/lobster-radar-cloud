@@ -91,9 +91,6 @@ jobs:
           assert required.issubset(set(cols)), f"Unexpected prices schema: {cols}"
           PY
 
-      - name: Update official fundamental support
-        run: python fundamental_update.py
-
       - name: Evaluate Lobster buy points and send LINE alerts
         env:
           LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
@@ -111,9 +108,9 @@ jobs:
           done
 
           if git diff --cached --quiet; then
-            echo "No database, fundamentals, candidate-status, or signal-state changes to commit."
+            echo "No database, candidate-status, or signal-state changes to commit."
             exit 0
           fi
 
-          git commit -m "Update official prices fundamentals candidates and buy signals ${TRADE_DATE}"
+          git commit -m "Update official prices candidates and buy signals ${TRADE_DATE}"
           git push
