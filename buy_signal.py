@@ -11,8 +11,8 @@ Formal buy routes
      and closes in the upper 35% of its daily range.
 2. 突破後確認:
    - the breakout day only creates a setup and never triggers an immediate buy;
-   - within the next five sessions, either price confirms it can hold above the
-     platform or it pulls back to the platform and closes back above support;
+   - standing confirmation must occur within three sessions;
+   - a successful platform retest may occur within five sessions;
    - only the confirmation/retest session can create a formal buy signal.
 
 Both routes retain the existing liquidity gate, breakout-volume confirmation,
@@ -45,7 +45,9 @@ LOOKBACK = 20
 FALSE_BREAK_MIN = 0.005
 FALSE_BREAK_RECOVERY_DAYS = 3
 BREAKOUT_MIN = 0.003
-BREAKOUT_CONFIRM_DAYS = 5
+BREAKOUT_STAND_DAYS = 3
+BREAKOUT_RETEST_DAYS = 5
+BREAKOUT_CONFIRM_DAYS = max(BREAKOUT_STAND_DAYS, BREAKOUT_RETEST_DAYS)
 BREAKOUT_HOLD_TOL = 0.005
 BREAKOUT_RETEST_TOL = 0.01
 PLATFORM_TOUCH_TOL = 0.03
@@ -287,8 +289,10 @@ def detect_true_breakout(code: str, x: pd.DataFrame) -> tuple[dict, dict | None]
     liquid_today = lots >= MIN_VOLUME_LOTS and turnover >= MIN_TURNOVER
 
     retested = float(t.low) <= platform_high * (1.0 + BREAKOUT_RETEST_TOL)
+    elapsed = i - break_i
     retest_hold = (
-        held_structure
+        elapsed <= BREAKOUT_RETEST_DAYS
+        and held_structure
         and retested
         and close >= platform_high
         and location >= 0.50
@@ -296,7 +300,8 @@ def detect_true_breakout(code: str, x: pd.DataFrame) -> tuple[dict, dict | None]
         and extension <= MAX_STRUCTURE_EXTENSION
     )
     stand_confirmed = (
-        held_structure
+        elapsed <= BREAKOUT_STAND_DAYS
+        and held_structure
         and close >= platform_high * (1.0 + BREAKOUT_MIN)
         and close > float(t.open)
         and location >= CLOSE_LOCATION_MIN
@@ -488,8 +493,8 @@ def candidate_row(latest_date: str, code: str, name: str, x: pd.DataFrame, setup
 def main() -> int:
     market = read_market()
     state = load_json(STATE_FILE, {"stocks": {}})
-    if state.get("strategy_version") != "破底翻+突破確認-v2":
-        state = {"stocks": {}, "strategy_version": "破底翻+突破確認-v2"}
+    if state.get("strategy_version") != "破底翻+混合確認-v3":
+        state = {"stocks": {}, "strategy_version": "破底翻+混合確認-v3"}
     stocks_state = state.setdefault("stocks", {})
     latest_date = market["date"].max().strftime("%Y-%m-%d")
 
@@ -558,7 +563,7 @@ def main() -> int:
 
     state["updated_at"] = datetime.now(timezone.utc).isoformat()
     state["latest_trade_date"] = latest_date
-    state["strategy_version"] = "破底翻+突破確認-v2"
+    state["strategy_version"] = "破底翻+混合確認-v3"
     state["four_point_rule"] = "已取消"
     state["candidate_count"] = len(candidate_rows)
     state["formal_buy_signal_count"] = len(triggers)
