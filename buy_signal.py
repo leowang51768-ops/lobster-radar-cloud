@@ -9,8 +9,12 @@ Core design
      initial 3-closes-above-30MA structure;
   2) pullback entry key (回踩進場關鍵K): the existing reclaim candle used for formal
      breakout/entry confirmation.
-- The primary key is context only. It does NOT replace the existing formal entry key,
-  so buy logic, volume gates, 8% anti-chase rule and support invalidation stay unchanged.
+- Signal priority after historical validation:
+  1) 🟢 primary-structure key breakout = highest priority;
+  2) 🟢 strong-20MA continuation = high-profit-potential route;
+  3) 🟡 secondary 30MA pullback-key breakout = confirmation route;
+  4) 🔵 key-candle formation = observation only.
+- Existing volume gates, 8% anti-chase rules and support invalidation remain unchanged.
 """
 from __future__ import annotations
 
@@ -239,6 +243,59 @@ def invalid_reason(x: pd.DataFrame, state: dict) -> str:
     return ""
 
 
+def detect_primary_breakout(code: str, x: pd.DataFrame, state: dict, allow_trigger: bool = True) -> tuple[dict, dict | None]:
+    """Formal green-light signal from a confirmed primary structure key.
+
+    Mirrors the validated primary-key backtest: first later close above the confirmed
+    primary-key high while the standard four-point route is still valid, volume/liquidity
+    pass and the close is no more than 8% above 30MA.
+    """
+    s = dict(state or {})
+    if len(x) < 35 or s.get("primary_key_status") != "確認":
+        return s, None
+    key_date = str(s.get("primary_key_date") or "")
+    if not key_date or s.get("primary_key_high") is None:
+        return s, None
+
+    t = x.iloc[-1]
+    date = t.date.strftime("%Y-%m-%d")
+    if date <= key_date:
+        return s, None
+
+    close = float(t.close)
+    ma30 = float(t.ma30)
+    key_high = float(s["primary_key_high"])
+    key_low = float(s.get("primary_key_low", key_high))
+    volume_ok, lots, _turnover, vol_ratio = volume_gate(t)
+    extension = close / ma30 - 1.0 if ma30 else 999.0
+    already = str(s.get("primary_last_trigger_key") or "") == key_date
+
+    if allow_trigger and close > key_high and volume_ok and extension <= MAX_30MA_EXTENSION and not already:
+        s["primary_last_trigger_key"] = key_date
+        s["primary_last_trigger_date"] = date
+        return s, {
+            "date": date,
+            "code": code,
+            "signal_route": "主結構關鍵K突破",
+            "signal_light": "🟢綠燈",
+            "close": round(close, 2),
+            "key_date": key_date,
+            "key_high": round(key_high, 2),
+            "key_low": round(key_low, 2),
+            "primary_key_date": key_date,
+            "primary_key_high": round(key_high, 2),
+            "primary_key_low": round(key_low, 2),
+            "volume_lots": round(lots, 0),
+            "volume_ratio": round(vol_ratio, 2),
+            "extension_30ma_pct": round(extension * 100, 2),
+            "extension_20ma_pct": "",
+            "support_lower": round(key_low, 2),
+            "support_upper": round(key_low, 2),
+            "support_source": "主結構關鍵K低點（初始失效參考）",
+        }
+    return s, None
+
+
 def detect_layer2(code: str, x: pd.DataFrame, state: dict, allow_trigger: bool = True) -> tuple[dict, dict | None]:
     s = dict(state or {})
     if len(x) < 35:
@@ -307,6 +364,7 @@ def detect_layer2(code: str, x: pd.DataFrame, state: dict, allow_trigger: bool =
                 "date": date,
                 "code": code,
                 "signal_route": "30MA回踩",
+                "signal_light": "🟡黃燈",
                 "close": round(close, 2),
                 "key_date": s["key_date"],
                 "key_high": round(key_high, 2),
@@ -370,6 +428,7 @@ def detect_strong20_buy(code: str, x: pd.DataFrame, state: dict, l1: dict, funda
                 "date": date,
                 "code": code,
                 "signal_route": "強勢20MA續強",
+                "signal_light": "🟢綠燈",
                 "close": round(close, 2),
                 "key_date": key_date,
                 "key_high": round(key_high, 2),
@@ -390,7 +449,7 @@ def detect_strong20_buy(code: str, x: pd.DataFrame, state: dict, l1: dict, funda
 
 def recommendation_fields() -> list[str]:
     return [
-        "date", "code", "name", "trend", "signal_route", "baseline_entry",
+        "date", "code", "name", "trend", "signal_route", "signal_light", "baseline_entry",
         "primary_key_date", "primary_key_high", "primary_key_low",
         "key_date", "key_high", "key_low", "volume_lots", "volume_ratio",
         "extension_30ma_pct", "extension_20ma_pct",
@@ -512,7 +571,10 @@ def main() -> int:
         vol_ratio = lots / avg20 if avg20 else 0.0
 
         state_after_30, trigger30 = detect_layer2(code, x, previous_state, allow_trigger=bool(l1.get("standard_ok")))
-        new_state, trigger20 = detect_strong20_buy(code, x, state_after_30, l1, fundamental_ok)
+        state_after_primary, trigger_primary = detect_primary_breakout(
+            code, x, state_after_30, allow_trigger=bool(l1.get("standard_ok"))
+        )
+        new_state, trigger20 = detect_strong20_buy(code, x, state_after_primary, l1, fundamental_ok)
 
         if new_state.get("key_date") and new_state.get("key_date") != previous_state.get("key_date"):
             key_notices.append({
@@ -590,7 +652,7 @@ def main() -> int:
             "fundamental_reason": f.get("reason", "") if isinstance(f, dict) else "",
         })
 
-        trigger = trigger20 or trigger30
+        trigger = trigger_primary or trigger20 or trigger30
         if trigger:
             trigger.update({"name": name, "trend": new_state["trend"], "baseline_entry": trigger["key_high"]})
             append_recommendation(trigger)
@@ -624,7 +686,7 @@ def main() -> int:
     print(json.dumps(summary, ensure_ascii=False))
 
     if key_notices:
-        lines = [f"🦞 關鍵K形成通知｜{latest_date}", "⚠️ 觀察通知，是否進場由你自行判斷"]
+        lines = [f"🦞 🔵藍燈｜關鍵K形成通知｜{latest_date}", "⚠️ 觀察中，尚未形成正式突破買點"]
         for r in key_notices:
             lines += ["", f"🟠 {r['code']} {r['name']}｜{r['trend']}", f"型態：{r['route']}"]
             if r.get("primary_key_date"):
@@ -645,7 +707,8 @@ def main() -> int:
     if triggers:
         lines = [f"🦞 龍蝦雷達正式買點｜{latest_date}"]
         for r in triggers:
-            lines += ["", f"🔴 {r['code']} {r['name']}｜{r['trend']}", f"買點路徑：{r['signal_route']}"]
+            light = r.get("signal_light", "🟡黃燈")
+            lines += ["", f"{light} {r['code']} {r['name']}｜{r['trend']}", f"買點路徑：{r['signal_route']}"]
             if r.get("primary_key_date"):
                 lines += [f"主結構關鍵K：{r['primary_key_date']}｜高：{r['primary_key_high']}"]
             lines += [
