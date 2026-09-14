@@ -91,6 +91,9 @@ jobs:
           assert required.issubset(set(cols)), f"Unexpected prices schema: {cols}"
           PY
 
+      - name: Backfill missing structural support zones
+        run: python backfill_support_zones.py
+
       - name: Evaluate Lobster buy points and send LINE alerts
         env:
           LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
