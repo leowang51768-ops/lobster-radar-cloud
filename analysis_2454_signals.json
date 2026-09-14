@@ -1,0 +1,13 @@
+{
+  "code": "2454",
+  "name": "聯發科",
+  "primary_key_signals": [],
+  "strong20_signals": [],
+  "secondary_30ma_signals": [],
+  "counts": {
+    "primary_key": 0,
+    "strong20": 0,
+    "secondary_30ma": 0,
+    "total": 0
+  }
+}
