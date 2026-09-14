@@ -9,13 +9,13 @@ Formal buy routes
    - the breakdown is recovered within three sessions;
    - the trigger close is back above that old swing low, is a bullish recovery
      and closes in the upper 35% of its daily range.
-2. 真突破:
-   - the preceding 20 sessions form a platform with at least two highs within
-     3% of the platform ceiling;
-   - the trigger closes at least 0.3% above that ceiling;
-   - it is a bullish candle and closes in the upper 35% of its daily range.
+2. 突破後確認:
+   - the breakout day only creates a setup and never triggers an immediate buy;
+   - within the next five sessions, either price confirms it can hold above the
+     platform or it pulls back to the platform and closes back above support;
+   - only the confirmation/retest session can create a formal buy signal.
 
-Both routes retain the existing liquidity gate, 1.2x-3.0x volume confirmation,
+Both routes retain the existing liquidity gate, breakout-volume confirmation,
 8% anti-chase limit and structure-support invalidation. 20MA, DIF and
 fundamentals remain informational only and are not entry prerequisites.
 """
@@ -45,6 +45,9 @@ LOOKBACK = 20
 FALSE_BREAK_MIN = 0.005
 FALSE_BREAK_RECOVERY_DAYS = 3
 BREAKOUT_MIN = 0.003
+BREAKOUT_CONFIRM_DAYS = 5
+BREAKOUT_HOLD_TOL = 0.005
+BREAKOUT_RETEST_TOL = 0.01
 PLATFORM_TOUCH_TOL = 0.03
 MIN_PLATFORM_TOUCHES = 2
 CLOSE_LOCATION_MIN = 0.65
@@ -204,54 +207,145 @@ def detect_false_break_reversal(code: str, x: pd.DataFrame) -> tuple[dict, dict 
 
 
 def detect_true_breakout(code: str, x: pd.DataFrame) -> tuple[dict, dict | None]:
-    """Detect 真突破: close through a repeatedly tested 20-session platform."""
-    if len(x) < LOOKBACK + 1:
+    """Require post-breakout holding confirmation or a successful platform retest."""
+    if len(x) < LOOKBACK + 2:
         return {}, None
 
-    t = x.iloc[-1]
-    prior = x.iloc[-1 - LOOKBACK:-1]
-    platform_high = float(prior["high"].max())
-    touch_floor = platform_high * (1.0 - PLATFORM_TOUCH_TOL)
-    touches = int((prior["high"] >= touch_floor).sum())
+    i = len(x) - 1
+    t = x.iloc[i]
     close = float(t.close)
-    breakout = close > platform_high * (1.0 + BREAKOUT_MIN)
-    bullish = close > float(t.open)
-    location = close_location(t)
-    volume_ok, lots, turnover, ratio = volume_gate(t)
+    selected = None
+
+    # The breakout itself is only a setup. Search the previous five sessions
+    # for the most recent valid, volume-confirmed platform breakout.
+    for break_i in range(i - 1, max(LOOKBACK - 1, i - BREAKOUT_CONFIRM_DAYS - 1), -1):
+        prior = x.iloc[break_i - LOOKBACK:break_i]
+        if len(prior) < LOOKBACK:
+            continue
+        breakout_row = x.iloc[break_i]
+        platform_high = float(prior["high"].max())
+        touch_floor = platform_high * (1.0 - PLATFORM_TOUCH_TOL)
+        touches = int((prior["high"] >= touch_floor).sum())
+        breakout_close = float(breakout_row.close)
+        volume_ok, breakout_lots, _turnover, breakout_ratio = volume_gate(breakout_row)
+        extension = breakout_close / platform_high - 1.0
+        valid_breakout = (
+            touches >= MIN_PLATFORM_TOUCHES
+            and breakout_close > platform_high * (1.0 + BREAKOUT_MIN)
+            and breakout_close > float(breakout_row.open)
+            and close_location(breakout_row) >= CLOSE_LOCATION_MIN
+            and volume_ok
+            and extension <= MAX_STRUCTURE_EXTENSION
+        )
+        if valid_breakout:
+            selected = {
+                "break_i": break_i,
+                "platform_high": platform_high,
+                "touches": touches,
+                "breakout_lots": breakout_lots,
+                "breakout_ratio": breakout_ratio,
+                "extension": extension,
+            }
+            break
+
+    # With no completed breakout yet, retain only a near-platform observation.
+    if selected is None:
+        prior = x.iloc[-1 - LOOKBACK:-1]
+        platform_high = float(prior["high"].max())
+        touches = int((prior["high"] >= platform_high * (1.0 - PLATFORM_TOUCH_TOL)).sum())
+        extension = close / platform_high - 1.0
+        setup = {
+            "pattern": "突破後確認",
+            "setup_date": "",
+            "breakout_date": "",
+            "confirmation_mode": "等待有效突破",
+            "trigger_level": round(platform_high, 2),
+            "support_lower": round(platform_high * (1.0 - 0.01), 2),
+            "support_upper": round(platform_high, 2),
+            "support_source": "20日整理平台上緣轉支撐",
+            "platform_touches": touches,
+            "structure_extension_pct": round(extension * 100, 2),
+            "close_location": round(close_location(t), 2),
+            "volume_ok": False,
+        }
+        return setup, None
+
+    break_i = int(selected["break_i"])
+    platform_high = float(selected["platform_high"])
+    breakout_date = x.iloc[break_i].date.strftime("%Y-%m-%d")
+    post = x.iloc[break_i + 1:i + 1]
+    held_structure = bool(
+        len(post) >= 1
+        and (post["close"] >= platform_high * (1.0 - BREAKOUT_HOLD_TOL)).all()
+    )
     extension = close / platform_high - 1.0
+    location = close_location(t)
+    lots = float(t.volume_lots) if pd.notna(t.volume_lots) else 0.0
+    turnover = float(t.turnover) if pd.notna(t.turnover) else 0.0
+    avg20 = float(t.avg20_lots) if pd.notna(t.avg20_lots) else 0.0
+    ratio = lots / avg20 if avg20 else 0.0
+    liquid_today = lots >= MIN_VOLUME_LOTS and turnover >= MIN_TURNOVER
+
+    retested = float(t.low) <= platform_high * (1.0 + BREAKOUT_RETEST_TOL)
+    retest_hold = (
+        held_structure
+        and retested
+        and close >= platform_high
+        and location >= 0.50
+        and liquid_today
+        and extension <= MAX_STRUCTURE_EXTENSION
+    )
+    stand_confirmed = (
+        held_structure
+        and close >= platform_high * (1.0 + BREAKOUT_MIN)
+        and close > float(t.open)
+        and location >= CLOSE_LOCATION_MIN
+        and liquid_today
+        and extension <= MAX_STRUCTURE_EXTENSION
+    )
+
+    mode = "等待站穩／回踩確認"
+    route = ""
+    if retest_hold:
+        mode = "回踩平台不破"
+        route = "突破回踩不破"
+    elif stand_confirmed:
+        mode = "突破後站穩"
+        route = "突破後站穩"
 
     setup = {
-        "pattern": "真突破",
-        "setup_date": prior.iloc[-1].date.strftime("%Y-%m-%d"),
+        "pattern": "突破後確認",
+        "setup_date": breakout_date,
+        "breakout_date": breakout_date,
+        "confirmation_mode": mode,
         "trigger_level": round(platform_high, 2),
         "support_lower": round(platform_high * (1.0 - 0.01), 2),
         "support_upper": round(platform_high, 2),
-        "support_source": "20日整理平台上緣轉支撐",
-        "platform_touches": touches,
+        "support_source": "突破平台上緣轉支撐",
+        "platform_touches": int(selected["touches"]),
         "structure_extension_pct": round(extension * 100, 2),
         "close_location": round(location, 2),
-        "volume_ok": volume_ok,
+        "volume_ok": True,
     }
-    confirmed = (
-        touches >= MIN_PLATFORM_TOUCHES
-        and breakout
-        and bullish
-        and location >= CLOSE_LOCATION_MIN
-        and volume_ok
-        and extension <= MAX_STRUCTURE_EXTENSION
-    )
-    if not confirmed:
+    if not route:
         return setup, None
 
     date = t.date.strftime("%Y-%m-%d")
-    pattern_key = f"真突破:{date}:{platform_high:.2f}"
+    baseline = (
+        platform_high
+        if route == "突破回踩不破"
+        else platform_high * (1.0 + BREAKOUT_MIN)
+    )
+    pattern_key = f"{route}:{breakout_date}:{platform_high:.2f}"
     signal = {
         "date": date,
         "code": code,
-        "signal_route": "真突破",
+        "signal_route": route,
         "signal_light": "🟢綠燈",
         "close": round(close, 2),
-        "baseline_entry": round(platform_high * (1.0 + BREAKOUT_MIN), 2),
+        "baseline_entry": round(baseline, 2),
+        "breakout_date": breakout_date,
+        "confirmation_mode": mode,
         "key_date": date,
         "key_high": round(platform_high, 2),
         "key_low": round(float(t.low), 2),
@@ -266,7 +360,6 @@ def detect_true_breakout(code: str, x: pd.DataFrame) -> tuple[dict, dict | None]
     }
     return setup, signal
 
-
 def recommendation_fields() -> list[str]:
     return [
         "date", "code", "name", "trend", "signal_route", "signal_light",
@@ -274,7 +367,7 @@ def recommendation_fields() -> list[str]:
         "key_date", "key_high", "key_low", "volume_lots", "volume_ratio",
         "extension_30ma_pct", "extension_20ma_pct",
         "support_lower", "support_upper", "support_source",
-        "pattern_key", "structure_extension_pct",
+        "pattern_key", "structure_extension_pct", "breakout_date", "confirmation_mode",
     ]
 
 
@@ -313,7 +406,7 @@ def append_recommendation(row: dict) -> None:
 def write_candidate_status(rows: list[dict]) -> None:
     fields = [
         "date", "code", "name", "pattern", "status", "setup_date",
-        "trigger_level", "close", "ma20", "ma30", "dif",
+        "breakout_date", "confirmation_mode", "trigger_level", "close", "ma20", "ma30", "dif",
         "volume_lots", "avg20_volume_lots", "volume_ratio", "turnover",
         "platform_touches", "close_location", "structure_extension_pct",
         "support_lower", "support_upper", "support_source", "support_status",
@@ -371,6 +464,8 @@ def candidate_row(latest_date: str, code: str, name: str, x: pd.DataFrame, setup
         "pattern": setup.get("pattern", ""),
         "status": status,
         "setup_date": setup.get("setup_date", ""),
+        "breakout_date": setup.get("breakout_date", ""),
+        "confirmation_mode": setup.get("confirmation_mode", ""),
         "trigger_level": setup.get("trigger_level", ""),
         "close": round(close, 2),
         "ma20": round(float(t.ma20), 2) if pd.notna(t.ma20) else "",
@@ -393,8 +488,8 @@ def candidate_row(latest_date: str, code: str, name: str, x: pd.DataFrame, setup
 def main() -> int:
     market = read_market()
     state = load_json(STATE_FILE, {"stocks": {}})
-    if state.get("strategy_version") != "破底翻+真突破-v1":
-        state = {"stocks": {}, "strategy_version": "破底翻+真突破-v1"}
+    if state.get("strategy_version") != "破底翻+突破確認-v2":
+        state = {"stocks": {}, "strategy_version": "破底翻+突破確認-v2"}
     stocks_state = state.setdefault("stocks", {})
     latest_date = market["date"].max().strftime("%Y-%m-%d")
 
@@ -463,7 +558,7 @@ def main() -> int:
 
     state["updated_at"] = datetime.now(timezone.utc).isoformat()
     state["latest_trade_date"] = latest_date
-    state["strategy_version"] = "破底翻+真突破-v1"
+    state["strategy_version"] = "破底翻+突破確認-v2"
     state["four_point_rule"] = "已取消"
     state["candidate_count"] = len(candidate_rows)
     state["formal_buy_signal_count"] = len(triggers)
@@ -472,7 +567,7 @@ def main() -> int:
 
     summary = {
         "latest_trade_date": latest_date,
-        "strategy": "破底翻+真突破",
+        "strategy": "破底翻+突破確認",
         "four_point_rule": "retired",
         "candidates": len(candidate_rows),
         "formal_buy_signals": len(triggers),
@@ -481,7 +576,7 @@ def main() -> int:
     print(json.dumps(summary, ensure_ascii=False))
 
     if triggers:
-        lines = [f"🦞 龍蝦雷達正式買點｜{latest_date}", "新制：破底翻＋真突破"]
+        lines = [f"🦞 龍蝦雷達正式買點｜{latest_date}", "新制：破底翻＋突破後站穩／回踩不破"]
         for row in triggers:
             lines += [
                 "",
