@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
 """Append one official TWSE + TPEx trade date and keep a rolling six-month price window."""
-import calendar, datetime as dt, json, re, sqlite3, subprocess, sys, tempfile
+import calendar, datetime as dt, json, re, sqlite3, sys
 from pathlib import Path
+
+import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
 DB=Path(__file__).with_name('lobster_tw_6m_prices.sqlite')
 day=dt.date.fromisoformat(sys.argv[1]) if len(sys.argv)>1 else dt.date.today()
@@ -14,16 +18,34 @@ def six_months_before(d):
     return dt.date(year,month,min(d.day,calendar.monthrange(year,month)[1]))
 
 def get(url):
-    with tempfile.NamedTemporaryFile(suffix='.json') as f:
-        subprocess.run(['curl','-L','--compressed','--retry','6','--retry-all-errors','--max-time','90','-sS',url,'-o',f.name],check=True)
-        return json.load(open(f.name,encoding='utf-8'))
+    retry = Retry(
+        total=6,
+        connect=6,
+        read=6,
+        backoff_factor=1.5,
+        status_forcelist=(429, 500, 502, 503, 504),
+        allowed_methods=frozenset(['GET']),
+        raise_on_status=False,
+    )
+    with requests.Session() as session:
+        session.mount('https://', HTTPAdapter(max_retries=retry))
+        session.headers.update({
+            'User-Agent': 'Mozilla/5.0 (compatible; lobster-radar-cloud/1.0)',
+            'Accept': 'application/json,text/plain,*/*',
+        })
+        response = session.get(url, timeout=90)
+        response.raise_for_status()
+        return response.json()
+
 def n(v,integer=False):
     s=re.sub(r'[,\s]','',str(v or '')).replace('X','')
     if s in {'','--','---','-','N/A'}: return None
     try: x=float(s); return int(round(x)) if integer else x
     except ValueError: return None
+
 def ordinary(c,name):
     return bool(re.fullmatch(r'\d{4}',c)) and not c.startswith(('0','91')) and not any(x in name.upper() for x in ('特別股','存託','DR','ETF','ETN','權證','受益'))
+
 def parse(data,market):
     if str(data.get('stat','')).lower()!='ok': return []
     for t in data.get('tables',[]):
