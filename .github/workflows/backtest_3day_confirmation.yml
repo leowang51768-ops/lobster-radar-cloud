@@ -1,0 +1,43 @@
+name: Backtest 3-Day Confirmation
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/backtest_3day_confirmation.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install pandas
+
+      - name: Compile scripts
+        run: python -m py_compile buy_signal.py backtest_new_rules.py backtest_3day_confirmation.py
+
+      - name: Run 3-day confirmation backtest
+        run: python backtest_3day_confirmation.py
+
+      - name: Commit comparison results
+        run: |
+          git config user.name "lobster-radar-cloud"
+          git config user.email "actions@github.com"
+          git add backtest_3day_confirmation_results.json backtest_3day_confirmation_report.md
+          if git diff --cached --quiet; then
+            echo "No comparison changes."
+            exit 0
+          fi
+          git commit -m "Backtest three-session breakout confirmation"
+          git push
