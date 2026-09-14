@@ -43,9 +43,12 @@ jobs:
           else
             echo "TRADE_DATE=$(TZ=Asia/Taipei date +%F)" >> "$GITHUB_ENV"
           fi
+          echo "FAIL_STAGE=初始化" >> "$GITHUB_ENV"
 
-      - name: Update official TWSE and TPEx prices
+      - name: Update official TWSE and TPEx prices with auto retry
+        shell: bash
         run: |
+          echo "FAIL_STAGE=官方股價更新" >> "$GITHUB_ENV"
           echo "Requested trade date: $TRADE_DATE"
           EXISTING_ROWS=$(python - <<'PY'
           import os, sqlite3
@@ -59,11 +62,27 @@ jobs:
           if [ "$EXISTING_ROWS" -gt 0 ]; then
             echo "Trade date already exists; skip refetch and continue to signal evaluation."
           else
-            python incremental_update.py "$TRADE_DATE"
+            success=0
+            for attempt in 1 2 3; do
+              echo "Price update attempt $attempt/3"
+              if python incremental_update.py "$TRADE_DATE"; then
+                success=1
+                break
+              fi
+              if [ "$attempt" -lt 3 ]; then
+                echo "Update failed; wait 20 seconds and retry."
+                sleep 20
+              fi
+            done
+            if [ "$success" -ne 1 ]; then
+              echo "Official price update failed after 3 attempts."
+              exit 1
+            fi
           fi
 
-      - name: Verify database
+      - name: Verify database health
         run: |
+          echo "FAIL_STAGE=資料庫驗證" >> "$GITHUB_ENV"
           python - <<'PY'
           import os
           import sqlite3
@@ -91,16 +110,75 @@ jobs:
           assert required.issubset(set(cols)), f"Unexpected prices schema: {cols}"
           PY
 
-      - name: Backfill missing structural support zones
-        run: python backfill_support_zones.py
+      - name: Backfill missing structural support zones with retry
+        shell: bash
+        run: |
+          echo "FAIL_STAGE=支撐區補齊" >> "$GITHUB_ENV"
+          for attempt in 1 2; do
+            echo "Support-zone backfill attempt $attempt/2"
+            if python backfill_support_zones.py; then
+              exit 0
+            fi
+            if [ "$attempt" -lt 2 ]; then
+              sleep 10
+            fi
+          done
+          exit 1
 
-      - name: Evaluate Lobster buy points and send LINE alerts
+      - name: Evaluate Lobster buy points and send LINE alerts with retry
+        shell: bash
         env:
           LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
-        run: python buy_signal.py
+        run: |
+          echo "FAIL_STAGE=買點判斷與LINE通知" >> "$GITHUB_ENV"
+          for attempt in 1 2; do
+            echo "Signal evaluation attempt $attempt/2"
+            if python buy_signal.py; then
+              exit 0
+            fi
+            if [ "$attempt" -lt 2 ]; then
+              echo "Signal evaluation failed; wait 10 seconds and retry once."
+              sleep 10
+            fi
+          done
+          exit 1
+
+      - name: Final health check
+        run: |
+          echo "FAIL_STAGE=最終健康檢查" >> "$GITHUB_ENV"
+          python - <<'PY'
+          import csv
+          import json
+          import os
+          import sqlite3
+          from pathlib import Path
+
+          trade_date = os.environ["TRADE_DATE"]
+          db = Path("lobster_tw_6m_prices.sqlite")
+          assert db.exists(), "Database missing at final health check"
+
+          con = sqlite3.connect(db)
+          rows = con.execute("SELECT COUNT(*) FROM prices WHERE date=?", (trade_date,)).fetchone()[0]
+          con.close()
+          assert rows > 0, f"No official price rows for {trade_date}"
+
+          state = Path("signal_state.json")
+          assert state.exists(), "signal_state.json missing"
+          json.loads(state.read_text(encoding="utf-8"))
+
+          candidates = Path("candidate_status.csv")
+          assert candidates.exists(), "candidate_status.csv missing"
+          with candidates.open("r", encoding="utf-8-sig", newline="") as f:
+            reader = csv.reader(f)
+            header = next(reader, None)
+          assert header and "date" in header and "code" in header, "candidate_status.csv schema invalid"
+
+          print(f"HEALTH_OK trade_date={trade_date} rows={rows}")
+          PY
 
       - name: Commit updated database and signal state
         run: |
+          echo "FAIL_STAGE=結果寫回GitHub" >> "$GITHUB_ENV"
           git config user.name "lobster-radar-cloud"
           git config user.email "actions@github.com"
 
@@ -117,3 +195,47 @@ jobs:
 
           git commit -m "Update official prices candidates and buy signals ${TRADE_DATE}"
           git push
+
+      - name: LINE alert when daily workflow still fails
+        if: ${{ failure() }}
+        env:
+          LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import urllib.request
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+
+          token = os.environ.get("LINE_CHANNEL_ACCESS_TOKEN", "").strip()
+          if not token:
+              print("LINE token missing; cannot send failure alert")
+              raise SystemExit(0)
+
+          trade_date = os.environ.get("TRADE_DATE", "unknown")
+          stage = os.environ.get("FAIL_STAGE", "unknown")
+          now = datetime.now(ZoneInfo("Asia/Taipei")).strftime("%Y-%m-%d %H:%M")
+          text = (
+              "🚨 龍蝦系統執行失敗\n"
+              f"交易日：{trade_date}\n"
+              f"失敗階段：{stage}\n"
+              f"時間：{now}\n"
+              "系統已完成內建重試，但仍未恢復。請檢查 GitHub Actions。"
+          )
+          payload = json.dumps({"messages": [{"type": "text", "text": text}]}, ensure_ascii=False).encode("utf-8")
+          req = urllib.request.Request(
+              "https://api.line.me/v2/bot/message/broadcast",
+              data=payload,
+              headers={
+                  "Authorization": f"Bearer {token}",
+                  "Content-Type": "application/json; charset=UTF-8",
+              },
+              method="POST",
+          )
+          try:
+              with urllib.request.urlopen(req, timeout=20) as resp:
+                  print("Failure alert LINE status:", resp.status)
+          except Exception as e:
+              print("Failure alert itself failed:", repr(e))
+          PY
