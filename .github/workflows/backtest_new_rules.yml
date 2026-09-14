@@ -5,6 +5,8 @@ on:
   push:
     paths:
       - ".github/workflows/backtest_new_rules.yml"
+      - "buy_signal.py"
+      - "backtest_new_rules.py"
 
 permissions:
   contents: write
@@ -39,5 +41,5 @@ jobs:
             echo "No backtest result changes."
             exit 0
           fi
-          git commit -m "Backtest false-break reversal and true breakout rules"
+          git commit -m "Backtest false-break reversal and confirmed breakout rules"
           git push
