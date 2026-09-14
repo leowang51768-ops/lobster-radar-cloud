@@ -1,32 +1,16 @@
 #!/usr/bin/env python3
 """Lobster Radar buy-point engine.
 
-Candidate routes
-A) Original four-point rule.
-B) Strong 20MA continuation: pullback tests 20MA without closing below it,
-   then DIF turns stronger while the strong structure remains intact.
-
-Formal buy routes
-A) 30MA pullback -> reclaim -> key candle -> later breakout with qualified volume.
-B) Strong 20MA continuation -> DIF recovery key candle -> later breakout with qualified volume.
-
-Tracking invalidation
-- after the first close below 20MA, allow the next 3 trading sessions to reclaim 20MA;
-  invalidate only if all 3 grace sessions also close below 20MA;
-- DIF weakens for 3 consecutive day-over-day steps;
-- once a key candle has created a structural support zone, an effective CLOSE below
-  the lower edge (with 0.5% tolerance) invalidates that setup immediately.
-
-Support-zone policy
-- 30MA route: support zone combines the pullback/key-candle structural low with 30MA;
-- strong-20MA route: support zone combines the 20MA-touch/key-candle structural low with 20MA;
-- intraday piercing does not invalidate; the close is used;
-- support lower/upper/source/status are persisted in candidate state and output.
-
-Key-candle policy
-- notify LINE immediately when a 30MA or strong-20MA key candle is formed;
-- do not auto-invalidate merely because a key candle has not broken out within 3 days;
-- formal breakout rules remain as a separate confirmation signal.
+Core design
+- Layer 1: four-point rule plus strong-20MA continuation candidate route.
+- Formal routes: 30MA pullback and strong-20MA continuation.
+- Key candles are split into two concepts:
+  1) primary structure key (主結構關鍵K): the first momentum-expansion candle after the
+     initial 3-closes-above-30MA structure;
+  2) pullback entry key (回踩進場關鍵K): the existing reclaim candle used for formal
+     breakout/entry confirmation.
+- The primary key is context only. It does NOT replace the existing formal entry key,
+  so buy logic, volume gates, 8% anti-chase rule and support invalidation stay unchanged.
 """
 from __future__ import annotations
 
@@ -54,6 +38,7 @@ CANDIDATES = BASE / "candidate_status.csv"
 PULLBACK_TOL = 0.01
 STRONG_20MA_TOUCH_TOL = 0.01
 STRONG_20MA_LOOKBACK = 3
+PRIMARY_KEY_LOOKAHEAD = 3
 VOL_RATIO_MIN = 1.20
 VOL_RATIO_MAX = 3.00
 MAX_30MA_EXTENSION = 0.08
@@ -192,16 +177,55 @@ def set_support_zone(state: dict, lower: float, upper: float, source: str, route
     state["support_status"] = "有效"
 
 
+def detect_primary_structure_key(x: pd.DataFrame, three_above30_date: str) -> dict:
+    """Find the first structural momentum candle after the initial 30MA confirmation.
+
+    Rule: from the 3-closes-above-30MA confirmation day through the next 3 sessions,
+    choose the first candle that closes above the prior 3-session high, stays above 30MA,
+    and has non-weakening DIF. If none qualifies yet, use the confirmation candle as a
+    provisional primary key. This is structural context only, not the formal entry trigger.
+    """
+    matches = x.index[x["date"].dt.strftime("%Y-%m-%d") == str(three_above30_date)].tolist()
+    if not matches:
+        return {}
+    start = matches[-1]
+    end = min(len(x) - 1, start + PRIMARY_KEY_LOOKAHEAD)
+    provisional = x.iloc[start]
+
+    for j in range(start, end + 1):
+        if j < 3:
+            continue
+        r = x.iloc[j]
+        if pd.isna(r.ma30) or pd.isna(r.dif):
+            continue
+        prev3_high = float(x.iloc[j-3:j]["high"].max())
+        prev_dif = float(x.iloc[j-1]["dif"]) if pd.notna(x.iloc[j-1]["dif"]) else float("nan")
+        breakout = float(r.close) > prev3_high
+        above30 = float(r.close) > float(r.ma30)
+        dif_ok = pd.notna(prev_dif) and float(r.dif) >= prev_dif
+        if breakout and above30 and dif_ok:
+            return {
+                "primary_key_date": r.date.strftime("%Y-%m-%d"),
+                "primary_key_high": round(float(r.high), 2),
+                "primary_key_low": round(float(r.low), 2),
+                "primary_key_status": "確認",
+            }
+
+    return {
+        "primary_key_date": provisional.date.strftime("%Y-%m-%d"),
+        "primary_key_high": round(float(provisional.high), 2),
+        "primary_key_low": round(float(provisional.low), 2),
+        "primary_key_status": "暫定",
+    }
+
+
 def invalid_reason(x: pd.DataFrame, state: dict) -> str:
-    # 已形成關鍵K後，先檢查其專屬價格結構支撐區。
-    # 只看正式收盤；容許0.5%誤差，避免極小幅度跌破就誤判失效。
     if state.get("support_lower") is not None and len(x):
         close = float(x.iloc[-1]["close"])
         lower = float(state["support_lower"])
         if close < lower * (1.0 - SUPPORT_BREAK_TOL):
             return f"收盤有效跌破支撐區下緣 {lower:.2f}"
 
-    # 20MA跌破日不算第1天，後續再給完整3個交易日修復。
     if len(x) >= 4:
         q = x.iloc[-4:]
         if q["ma20"].notna().all() and bool((q["close"] < q["ma20"]).all()):
@@ -236,6 +260,13 @@ def detect_layer2(code: str, x: pd.DataFrame, state: dict, allow_trigger: bool =
         if not s.get("three_above30_date"):
             s["stage"] = "等待30MA結構"
 
+    if s.get("three_above30_date"):
+        primary = detect_primary_structure_key(x, s["three_above30_date"])
+        if primary:
+            old_status = s.get("primary_key_status")
+            if not s.get("primary_key_date") or old_status != "確認":
+                s.update(primary)
+
     if s.get("three_above30_date") and not s.get("pullback_date") and i >= 3:
         prior3_low = float(x.iloc[i-3:i]["low"].min())
         if low <= prior3_low * (1 + PULLBACK_TOL):
@@ -253,18 +284,13 @@ def detect_layer2(code: str, x: pd.DataFrame, state: dict, allow_trigger: bool =
                 s["key_low"] = low
                 s["stage"] = "等待突破關鍵K"
                 pullback_low = float(x.iloc[pb_i:i+1]["low"].min())
-                set_support_zone(
-                    s,
-                    pullback_low,
-                    ma30,
-                    "30MA回踩低點＋30MA重疊支撐",
-                    "30MA回踩",
-                )
+                set_support_zone(s, pullback_low, ma30, "30MA回踩低點＋30MA重疊支撐", "30MA回踩")
             elif elapsed > 2:
                 s["stage"] = "重新等待"
                 s["last_failed_reclaim"] = date
                 for k in [
                     "three_above30_date", "pullback_date", "key_date", "key_high", "key_low",
+                    "primary_key_date", "primary_key_high", "primary_key_low", "primary_key_status",
                     "support_lower", "support_upper", "support_source", "support_route", "support_status",
                 ]:
                     s.pop(k, None)
@@ -285,6 +311,9 @@ def detect_layer2(code: str, x: pd.DataFrame, state: dict, allow_trigger: bool =
                 "key_date": s["key_date"],
                 "key_high": round(key_high, 2),
                 "key_low": round(float(s["key_low"]), 2),
+                "primary_key_date": s.get("primary_key_date", ""),
+                "primary_key_high": s.get("primary_key_high", ""),
+                "primary_key_low": s.get("primary_key_low", ""),
                 "volume_lots": round(lots, 0),
                 "volume_ratio": round(vol_ratio, 2),
                 "extension_30ma_pct": round(extension * 100, 2),
@@ -322,13 +351,7 @@ def detect_strong20_buy(code: str, x: pd.DataFrame, state: dict, l1: dict, funda
             touch_row = row_for_date(x, touch_date)
             touch_low = float(touch_row.low) if touch_row is not None else low
             structural_low = min(touch_low, low)
-            set_support_zone(
-                s,
-                structural_low,
-                ma20,
-                "20MA回踩低點＋20MA重疊支撐",
-                "強勢20MA續強",
-            )
+            set_support_zone(s, structural_low, ma20, "20MA回踩低點＋20MA重疊支撐", "強勢20MA續強")
 
     key_date = str(s.get("strong20_key_date") or "")
     if not key_date:
@@ -351,6 +374,9 @@ def detect_strong20_buy(code: str, x: pd.DataFrame, state: dict, l1: dict, funda
                 "key_date": key_date,
                 "key_high": round(key_high, 2),
                 "key_low": round(key_low, 2),
+                "primary_key_date": s.get("primary_key_date", ""),
+                "primary_key_high": s.get("primary_key_high", ""),
+                "primary_key_low": s.get("primary_key_low", ""),
                 "volume_lots": round(lots, 0),
                 "volume_ratio": round(vol_ratio, 2),
                 "extension_30ma_pct": "",
@@ -365,6 +391,7 @@ def detect_strong20_buy(code: str, x: pd.DataFrame, state: dict, l1: dict, funda
 def recommendation_fields() -> list[str]:
     return [
         "date", "code", "name", "trend", "signal_route", "baseline_entry",
+        "primary_key_date", "primary_key_high", "primary_key_low",
         "key_date", "key_high", "key_low", "volume_lots", "volume_ratio",
         "extension_30ma_pct", "extension_20ma_pct",
         "support_lower", "support_upper", "support_source",
@@ -404,9 +431,9 @@ def write_candidate_status(rows: list[dict]) -> None:
         "layer1_current", "layer1_route", "strong20_touch_date", "strong20_key_date",
         "strong20_key_high", "strong20_key_low", "close", "ma20", "ma30", "dif",
         "volume_lots", "avg20_volume_lots", "volume_ratio", "turnover",
-        "three_above30_date", "pullback_date", "key_date", "key_high", "key_low",
-        "support_lower", "support_upper", "support_source", "support_status",
-        "fundamental_reason",
+        "three_above30_date", "primary_key_date", "primary_key_high", "primary_key_low", "primary_key_status",
+        "pullback_date", "key_date", "key_high", "key_low",
+        "support_lower", "support_upper", "support_source", "support_status", "fundamental_reason",
     ]
     with CANDIDATES.open("w", encoding="utf-8-sig", newline="") as f:
         w = csv.DictWriter(f, fieldnames=fields)
@@ -484,24 +511,22 @@ def main() -> int:
         lots = float(t.volume_lots) if pd.notna(t.volume_lots) else 0.0
         vol_ratio = lots / avg20 if avg20 else 0.0
 
-        state_after_30, trigger30 = detect_layer2(
-            code, x, previous_state, allow_trigger=bool(l1.get("standard_ok"))
-        )
+        state_after_30, trigger30 = detect_layer2(code, x, previous_state, allow_trigger=bool(l1.get("standard_ok")))
         new_state, trigger20 = detect_strong20_buy(code, x, state_after_30, l1, fundamental_ok)
 
         if new_state.get("key_date") and new_state.get("key_date") != previous_state.get("key_date"):
             key_notices.append({
-                "code": code,
-                "name": name,
+                "code": code, "name": name,
                 "trend": l1.get("trend", previous_state.get("trend", "其他")),
                 "route": "30MA回踩",
+                "primary_key_date": new_state.get("primary_key_date", ""),
+                "primary_key_high": new_state.get("primary_key_high", ""),
+                "primary_key_low": new_state.get("primary_key_low", ""),
                 "key_date": new_state.get("key_date"),
                 "key_high": new_state.get("key_high"),
                 "key_low": new_state.get("key_low"),
-                "close": round(float(t.close), 2),
-                "ma20": round(float(t.ma20), 2),
-                "ma30": round(float(t.ma30), 2),
-                "dif": round(float(t.dif), 4),
+                "close": round(float(t.close), 2), "ma20": round(float(t.ma20), 2),
+                "ma30": round(float(t.ma30), 2), "dif": round(float(t.dif), 4),
                 "support_lower": new_state.get("support_lower", ""),
                 "support_upper": new_state.get("support_upper", ""),
                 "support_source": new_state.get("support_source", ""),
@@ -509,17 +534,17 @@ def main() -> int:
 
         if new_state.get("strong20_key_date") and new_state.get("strong20_key_date") != previous_state.get("strong20_key_date"):
             key_notices.append({
-                "code": code,
-                "name": name,
+                "code": code, "name": name,
                 "trend": l1.get("trend", previous_state.get("trend", "其他")),
                 "route": "強勢20MA續強",
+                "primary_key_date": new_state.get("primary_key_date", ""),
+                "primary_key_high": new_state.get("primary_key_high", ""),
+                "primary_key_low": new_state.get("primary_key_low", ""),
                 "key_date": new_state.get("strong20_key_date"),
                 "key_high": new_state.get("strong20_key_high"),
                 "key_low": new_state.get("strong20_key_low"),
-                "close": round(float(t.close), 2),
-                "ma20": round(float(t.ma20), 2),
-                "ma30": round(float(t.ma30), 2),
-                "dif": round(float(t.dif), 4),
+                "close": round(float(t.close), 2), "ma20": round(float(t.ma20), 2),
+                "ma30": round(float(t.ma30), 2), "dif": round(float(t.dif), 4),
                 "support_lower": new_state.get("support_lower", ""),
                 "support_upper": new_state.get("support_upper", ""),
                 "support_source": new_state.get("support_source", ""),
@@ -536,10 +561,7 @@ def main() -> int:
         stocks_state[code] = new_state
 
         candidate_rows.append({
-            "date": latest_date,
-            "code": code,
-            "name": name,
-            "trend": new_state["trend"],
+            "date": latest_date, "code": code, "name": name, "trend": new_state["trend"],
             "stage": new_state.get("stage", "等待30MA結構"),
             "strong20_stage": new_state.get("strong20_stage", "等待20MA回測"),
             "layer1_current": "符合" if l1_ok else "追蹤中",
@@ -548,18 +570,18 @@ def main() -> int:
             "strong20_key_date": new_state.get("strong20_key_date", ""),
             "strong20_key_high": new_state.get("strong20_key_high", ""),
             "strong20_key_low": new_state.get("strong20_key_low", ""),
-            "close": round(float(t.close), 2),
-            "ma20": round(float(t.ma20), 2),
-            "ma30": round(float(t.ma30), 2),
-            "dif": round(float(t.dif), 4),
-            "volume_lots": round(lots, 0),
-            "avg20_volume_lots": round(avg20, 0),
+            "close": round(float(t.close), 2), "ma20": round(float(t.ma20), 2),
+            "ma30": round(float(t.ma30), 2), "dif": round(float(t.dif), 4),
+            "volume_lots": round(lots, 0), "avg20_volume_lots": round(avg20, 0),
             "volume_ratio": round(vol_ratio, 2),
             "turnover": round(float(t.turnover), 0) if pd.notna(t.turnover) else 0,
             "three_above30_date": new_state.get("three_above30_date", ""),
+            "primary_key_date": new_state.get("primary_key_date", ""),
+            "primary_key_high": new_state.get("primary_key_high", ""),
+            "primary_key_low": new_state.get("primary_key_low", ""),
+            "primary_key_status": new_state.get("primary_key_status", ""),
             "pullback_date": new_state.get("pullback_date", ""),
-            "key_date": new_state.get("key_date", ""),
-            "key_high": new_state.get("key_high", ""),
+            "key_date": new_state.get("key_date", ""), "key_high": new_state.get("key_high", ""),
             "key_low": new_state.get("key_low", ""),
             "support_lower": new_state.get("support_lower", ""),
             "support_upper": new_state.get("support_upper", ""),
@@ -574,14 +596,7 @@ def main() -> int:
             append_recommendation(trigger)
             triggers.append(trigger)
 
-    stage_order = {
-        "正式試單": 0,
-        "等待突破關鍵K": 1,
-        "等待3K內站回30MA": 2,
-        "等待回踩": 3,
-        "等待30MA結構": 4,
-        "重新等待": 5,
-    }
+    stage_order = {"正式試單": 0, "等待突破關鍵K": 1, "等待3K內站回30MA": 2, "等待回踩": 3, "等待30MA結構": 4, "重新等待": 5}
     trend_order = {"轉強": 0, "B級": 1, "A級": 2, "其他": 3}
     candidate_rows.sort(key=lambda r: (stage_order.get(r["stage"], 9), trend_order.get(r["trend"], 9), r["code"]))
     write_candidate_status(candidate_rows)
@@ -599,12 +614,9 @@ def main() -> int:
     save_json(STATE_FILE, state)
 
     summary = {
-        "latest_trade_date": latest_date,
-        "layer1_candidates": current_layer1_count,
-        "tracked_candidates": len(candidate_rows),
-        "invalidated": len(invalidated),
-        "key_candle_notices": len(key_notices),
-        "formal_buy_signals": len(triggers),
+        "latest_trade_date": latest_date, "layer1_candidates": current_layer1_count,
+        "tracked_candidates": len(candidate_rows), "invalidated": len(invalidated),
+        "key_candle_notices": len(key_notices), "formal_buy_signals": len(triggers),
         "layer1_route_counts": dict(Counter(r["layer1_route"] for r in candidate_rows if r.get("layer1_route"))),
         "trend_counts": dict(Counter(r["trend"] for r in candidate_rows)),
         "stage_counts": dict(Counter(r["stage"] for r in candidate_rows)),
@@ -614,17 +626,18 @@ def main() -> int:
     if key_notices:
         lines = [f"🦞 關鍵K形成通知｜{latest_date}", "⚠️ 觀察通知，是否進場由你自行判斷"]
         for r in key_notices:
+            lines += ["", f"🟠 {r['code']} {r['name']}｜{r['trend']}", f"型態：{r['route']}"]
+            if r.get("primary_key_date"):
+                lines += [
+                    f"主結構關鍵K：{r['primary_key_date']}",
+                    f"主K高：{r['primary_key_high']}｜低：{r['primary_key_low']}",
+                ]
             lines += [
-                "",
-                f"🟠 {r['code']} {r['name']}｜{r['trend']}",
-                f"型態：{r['route']}",
-                f"關鍵K日期：{r['key_date']}",
-                f"關鍵K高：{r['key_high']}｜低：{r['key_low']}",
+                f"回踩進場關鍵K：{r['key_date']}",
+                f"進場K高：{r['key_high']}｜低：{r['key_low']}",
                 f"支撐區：{r['support_lower']}～{r['support_upper']}",
                 f"支撐來源：{r['support_source']}",
-                f"收盤：{r['close']}",
-                f"20MA：{r['ma20']}｜30MA：{r['ma30']}",
-                f"DIF：{r['dif']}",
+                f"收盤：{r['close']}", f"20MA：{r['ma20']}｜30MA：{r['ma30']}", f"DIF：{r['dif']}",
                 f"失效：收盤有效跌破支撐下緣 {r['support_lower']}（容許0.5%誤差）",
             ]
         send_line("\n".join(lines))
@@ -632,15 +645,13 @@ def main() -> int:
     if triggers:
         lines = [f"🦞 龍蝦雷達正式買點｜{latest_date}"]
         for r in triggers:
+            lines += ["", f"🔴 {r['code']} {r['name']}｜{r['trend']}", f"買點路徑：{r['signal_route']}"]
+            if r.get("primary_key_date"):
+                lines += [f"主結構關鍵K：{r['primary_key_date']}｜高：{r['primary_key_high']}"]
             lines += [
-                "",
-                f"🔴 {r['code']} {r['name']}｜{r['trend']}",
-                f"買點路徑：{r['signal_route']}",
-                f"關鍵K：{r['key_date']}",
-                f"關鍵K高：{r['key_high']}",
+                f"回踩進場關鍵K：{r['key_date']}", f"進場K高：{r['key_high']}",
                 f"支撐區：{r.get('support_lower', '')}～{r.get('support_upper', '')}",
-                f"收盤：{r['close']}",
-                f"成交量：{int(r['volume_lots'])}張｜量比：{r['volume_ratio']}x",
+                f"收盤：{r['close']}", f"成交量：{int(r['volume_lots'])}張｜量比：{r['volume_ratio']}x",
                 f"績效基準試單價：{r['baseline_entry']}",
                 f"初始失效參考：支撐區下緣 {r.get('support_lower', r['key_low'])}",
             ]
