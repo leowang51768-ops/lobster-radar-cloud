@@ -61,7 +61,12 @@
       "strong20_stage": "等待20MA回測",
       "candidate_since": "2026-09-14",
       "layer1_current": false,
-      "layer1_route": ""
+      "layer1_route": "",
+      "support_lower": 65.3,
+      "support_upper": 65.7,
+      "support_source": "30MA回踩低點＋30MA重疊支撐",
+      "support_route": "30MA回踩",
+      "support_status": "有效"
     },
     "1323": {
       "three_above30_date": "2026-08-21",
@@ -108,7 +113,12 @@
       "strong20_stage": "等待20MA回測",
       "candidate_since": "2026-09-14",
       "layer1_current": false,
-      "layer1_route": ""
+      "layer1_route": "",
+      "support_lower": 5.16,
+      "support_upper": 5.17,
+      "support_source": "30MA回踩低點＋30MA重疊支撐",
+      "support_route": "30MA回踩",
+      "support_status": "有效"
     },
     "1456": {
       "three_above30_date": "2026-09-02",
@@ -129,7 +139,12 @@
       "strong20_stage": "等待20MA回測",
       "candidate_since": "2026-09-14",
       "layer1_current": true,
-      "layer1_route": "四要點"
+      "layer1_route": "四要點",
+      "support_lower": 13.55,
+      "support_upper": 13.95,
+      "support_source": "30MA回踩低點＋30MA重疊支撐",
+      "support_route": "30MA回踩",
+      "support_status": "有效"
     },
     "1457": {
       "three_above30_date": "2026-08-21",
@@ -150,7 +165,12 @@
       "strong20_stage": "等待20MA回測",
       "candidate_since": "2026-09-14",
       "layer1_current": false,
-      "layer1_route": ""
+      "layer1_route": "",
+      "support_lower": 14.25,
+      "support_upper": 14.36,
+      "support_source": "30MA回踩低點＋30MA重疊支撐",
+      "support_route": "30MA回踩",
+      "support_status": "有效"
     },
     "1528": {
       "three_above30_date": "2026-08-28",
@@ -231,7 +251,12 @@
       "strong20_stage": "等待20MA回測",
       "candidate_since": "2026-09-14",
       "layer1_current": true,
-      "layer1_route": "四要點"
+      "layer1_route": "四要點",
+      "support_lower": 35.9,
+      "support_upper": 36.24,
+      "support_source": "30MA回踩低點＋30MA重疊支撐",
+      "support_route": "30MA回踩",
+      "support_status": "有效"
     },
     "1599": {
       "stage": "等待30MA結構",
@@ -324,7 +349,12 @@
       "strong20_stage": "等待20MA回測",
       "candidate_since": "2026-09-14",
       "layer1_current": false,
-      "layer1_route": ""
+      "layer1_route": "",
+      "support_lower": 39.65,
+      "support_upper": 40.25,
+      "support_source": "30MA回踩低點＋30MA重疊支撐",
+      "support_route": "30MA回踩",
+      "support_status": "有效"
     },
     "2006": {
       "three_above30_date": "2026-08-21",
@@ -345,7 +375,12 @@
       "strong20_stage": "等待20MA回測",
       "candidate_since": "2026-09-14",
       "layer1_current": true,
-      "layer1_route": "四要點"
+      "layer1_route": "四要點",
+      "support_lower": 80.6,
+      "support_upper": 82.29,
+      "support_source": "30MA回踩低點＋30MA重疊支撐",
+      "support_route": "30MA回踩",
+      "support_status": "有效"
     },
     "2033": {
       "three_above30_date": "2026-08-21",
@@ -451,7 +486,12 @@
       "strong20_stage": "等待20MA回測",
       "candidate_since": "2026-09-14",
       "layer1_current": false,
-      "layer1_route": ""
+      "layer1_route": "",
+      "support_lower": 62.33,
+      "support_upper": 63.9,
+      "support_source": "30MA回踩低點＋30MA重疊支撐",
+      "support_route": "30MA回踩",
+      "support_status": "有效"
     },
     "2412": {
       "three_above30_date": "2026-09-04",
@@ -532,7 +572,12 @@
       "strong20_stage": "等待20MA回測",
       "candidate_since": "2026-09-14",
       "layer1_current": true,
-      "layer1_route": "四要點"
+      "layer1_route": "四要點",
+      "support_lower": 52.1,
+      "support_upper": 52.2,
+      "support_source": "30MA回踩低點＋30MA重疊支撐",
+      "support_route": "30MA回踩",
+      "support_status": "有效"
     },
     "2460": {
       "three_above30_date": "2026-09-11",
@@ -613,7 +658,12 @@
       "strong20_stage": "等待20MA回測",
       "candidate_since": "2026-09-14",
       "layer1_current": false,
-      "layer1_route": ""
+      "layer1_route": "",
+      "support_lower": 8.52,
+      "support_upper": 8.59,
+      "support_source": "30MA回踩低點＋30MA重疊支撐",
+      "support_route": "30MA回踩",
+      "support_status": "有效"
     },
     "2540": {
       "stage": "等待30MA結構",
@@ -812,7 +862,12 @@
       "strong20_stage": "等待20MA回測",
       "candidate_since": "2026-09-14",
       "layer1_current": true,
-      "layer1_route": "四要點"
+      "layer1_route": "四要點",
+      "support_lower": 24.76,
+      "support_upper": 26.55,
+      "support_source": "30MA回踩低點＋30MA重疊支撐",
+      "support_route": "30MA回踩",
+      "support_status": "有效"
     },
     "2812": {
       "three_above30_date": "2026-09-04",
@@ -897,7 +952,12 @@
       "strong20_stage": "等待20MA回測",
       "candidate_since": "2026-09-14",
       "layer1_current": false,
-      "layer1_route": ""
+      "layer1_route": "",
+      "support_lower": 12.03,
+      "support_upper": 12.15,
+      "support_source": "30MA回踩低點＋30MA重疊支撐",
+      "support_route": "30MA回踩",
+      "support_status": "有效"
     },
     "2845": {
       "three_above30_date": "2026-08-21",
@@ -965,7 +1025,12 @@
       "strong20_stage": "等待20MA回測",
       "candidate_since": "2026-09-14",
       "layer1_current": true,
-      "layer1_route": "四要點"
+      "layer1_route": "四要點",
+      "support_lower": 15.83,
+      "support_upper": 16.25,
+      "support_source": "30MA回踩低點＋30MA重疊支撐",
+      "support_route": "30MA回踩",
+      "support_status": "有效"
     },
     "2890": {
       "three_above30_date": "2026-09-01",
@@ -1004,7 +1069,12 @@
       "strong20_stage": "等待20MA回測",
       "candidate_since": "2026-09-14",
       "layer1_current": true,
-      "layer1_route": "四要點"
+      "layer1_route": "四要點",
+      "support_lower": 10.39,
+      "support_upper": 10.75,
+      "support_source": "30MA回踩低點＋30MA重疊支撐",
+      "support_route": "30MA回踩",
+      "support_status": "有效"
     },
     "2906": {
       "three_above30_date": "2026-08-21",
@@ -1606,7 +1676,12 @@
       "strong20_stage": "等待20MA回測",
       "candidate_since": "2026-09-14",
       "layer1_current": true,
-      "layer1_route": "四要點"
+      "layer1_route": "四要點",
+      "support_lower": 51.79,
+      "support_upper": 52.8,
+      "support_source": "30MA回踩低點＋30MA重疊支撐",
+      "support_route": "30MA回踩",
+      "support_status": "有效"
     },
     "4148": {
       "three_above30_date": "2026-08-21",
@@ -1864,7 +1939,12 @@
       "strong20_stage": "等待20MA回測",
       "candidate_since": "2026-09-14",
       "layer1_current": false,
-      "layer1_route": ""
+      "layer1_route": "",
+      "support_lower": 270.5,
+      "support_upper": 272.55,
+      "support_source": "30MA回踩低點＋30MA重疊支撐",
+      "support_route": "30MA回踩",
+      "support_status": "有效"
     },
     "5013": {
       "three_above30_date": "2026-08-21",
@@ -1953,7 +2033,12 @@
       "strong20_stage": "等待20MA回測",
       "candidate_since": "2026-09-14",
       "layer1_current": false,
-      "layer1_route": ""
+      "layer1_route": "",
+      "support_lower": 12.15,
+      "support_upper": 12.27,
+      "support_source": "30MA回踩低點＋30MA重疊支撐",
+      "support_route": "30MA回踩",
+      "support_status": "有效"
     },
     "5340": {
       "three_above30_date": "2026-08-21",
@@ -2172,7 +2257,12 @@
       "strong20_stage": "等待20MA回測",
       "candidate_since": "2026-09-14",
       "layer1_current": false,
-      "layer1_route": ""
+      "layer1_route": "",
+      "support_lower": 19.75,
+      "support_upper": 19.82,
+      "support_source": "30MA回踩低點＋30MA重疊支撐",
+      "support_route": "30MA回踩",
+      "support_status": "有效"
     },
     "5601": {
       "three_above30_date": "2026-08-28",
@@ -2210,7 +2300,12 @@
       "strong20_stage": "等待20MA回測",
       "candidate_since": "2026-09-14",
       "layer1_current": true,
-      "layer1_route": "四要點"
+      "layer1_route": "四要點",
+      "support_lower": 78.34,
+      "support_upper": 78.7,
+      "support_source": "30MA回踩低點＋30MA重疊支撐",
+      "support_route": "30MA回踩",
+      "support_status": "有效"
     },
     "5876": {
       "three_above30_date": "2026-09-03",
@@ -2282,7 +2377,12 @@
       "strong20_stage": "等待20MA回測",
       "candidate_since": "2026-09-14",
       "layer1_current": false,
-      "layer1_route": ""
+      "layer1_route": "",
+      "support_lower": 21.8,
+      "support_upper": 22.54,
+      "support_source": "30MA回踩低點＋30MA重疊支撐",
+      "support_route": "30MA回踩",
+      "support_status": "有效"
     },
     "6148": {
       "three_above30_date": "2026-08-28",
@@ -2507,7 +2607,12 @@
       "strong20_stage": "等待20MA回測",
       "candidate_since": "2026-09-14",
       "layer1_current": false,
-      "layer1_route": ""
+      "layer1_route": "",
+      "support_lower": 108.77,
+      "support_upper": 109.0,
+      "support_source": "30MA回踩低點＋30MA重疊支撐",
+      "support_route": "30MA回踩",
+      "support_status": "有效"
     },
     "6655": {
       "three_above30_date": "2026-09-08",
@@ -2561,7 +2666,12 @@
       "strong20_stage": "等待20MA回測",
       "candidate_since": "2026-09-14",
       "layer1_current": true,
-      "layer1_route": "四要點"
+      "layer1_route": "四要點",
+      "support_lower": 60.1,
+      "support_upper": 61.7,
+      "support_source": "30MA回踩低點＋30MA重疊支撐",
+      "support_route": "30MA回踩",
+      "support_status": "有效"
     },
     "6690": {
       "three_above30_date": "2026-08-25",
@@ -2936,7 +3046,12 @@
       "strong20_stage": "等待20MA回測",
       "candidate_since": "2026-09-14",
       "layer1_current": false,
-      "layer1_route": ""
+      "layer1_route": "",
+      "support_lower": 97.27,
+      "support_upper": 115.0,
+      "support_source": "30MA回踩低點＋30MA重疊支撐",
+      "support_route": "30MA回踩",
+      "support_status": "有效"
     },
     "8047": {
       "three_above30_date": "2026-08-20",
@@ -2991,7 +3106,12 @@
       "strong20_stage": "等待20MA回測",
       "candidate_since": "2026-09-14",
       "layer1_current": false,
-      "layer1_route": ""
+      "layer1_route": "",
+      "support_lower": 59.05,
+      "support_upper": 59.3,
+      "support_source": "30MA回踩低點＋30MA重疊支撐",
+      "support_route": "30MA回踩",
+      "support_status": "有效"
     },
     "8201": {
       "three_above30_date": "2026-08-31",
@@ -3052,27 +3172,6 @@
       "candidate_since": "2026-09-14",
       "layer1_current": true,
       "layer1_route": "四要點"
-    },
-    "8411": {
-      "three_above30_date": "2026-09-11",
-      "stage": "等待突破關鍵K",
-      "pullback_date": "2026-09-11",
-      "key_date": "2026-09-11",
-      "key_high": 13.0,
-      "key_low": 12.8,
-      "name": "福貞-KY",
-      "trend": "轉強",
-      "layer1_checks": {
-        "20MA向上": false,
-        "收盤站上20MA": false,
-        "DIF今日>=昨日": false,
-        "基本面支撐": true,
-        "強勢20MA回測守住": false
-      },
-      "strong20_stage": "等待20MA回測",
-      "candidate_since": "2026-09-14",
-      "layer1_current": false,
-      "layer1_route": ""
     },
     "8416": {
       "three_above30_date": "2026-09-02",
@@ -3141,7 +3240,12 @@
       "strong20_stage": "等待20MA回測",
       "candidate_since": "2026-09-14",
       "layer1_current": false,
-      "layer1_route": ""
+      "layer1_route": "",
+      "support_lower": 85.0,
+      "support_upper": 85.4,
+      "support_source": "30MA回踩低點＋30MA重疊支撐",
+      "support_route": "30MA回踩",
+      "support_status": "有效"
     },
     "8472": {
       "three_above30_date": "2026-09-08",
@@ -3283,7 +3387,12 @@
       "strong20_stage": "等待20MA回測",
       "candidate_since": "2026-09-14",
       "layer1_current": false,
-      "layer1_route": ""
+      "layer1_route": "",
+      "support_lower": 69.36,
+      "support_upper": 69.5,
+      "support_source": "30MA回踩低點＋30MA重疊支撐",
+      "support_route": "30MA回踩",
+      "support_status": "有效"
     },
     "9931": {
       "three_above30_date": "2026-08-21",
@@ -3304,7 +3413,12 @@
       "strong20_stage": "等待20MA回測",
       "candidate_since": "2026-09-14",
       "layer1_current": false,
-      "layer1_route": ""
+      "layer1_route": "",
+      "support_lower": 33.94,
+      "support_upper": 34.1,
+      "support_source": "30MA回踩低點＋30MA重疊支撐",
+      "support_route": "30MA回踩",
+      "support_status": "有效"
     },
     "9960": {
       "stage": "等待30MA結構",
@@ -5492,26 +5606,32 @@
       }
     }
   },
-  "updated_at": "2026-09-14T12:43:02.055743+00:00",
+  "updated_at": "2026-09-14T12:49:19.318259+00:00",
   "latest_trade_date": "2026-09-14",
   "layer1_candidate_count": 187,
   "stage_counts": {
     "正式試單": 1,
-    "等待突破關鍵K": 98,
+    "等待突破關鍵K": 97,
     "等待3K內站回30MA": 5,
     "等待回踩": 123,
     "等待30MA結構": 26
   },
   "trend_counts": {
     "A級": 128,
-    "轉強": 82,
+    "轉強": 81,
     "B級": 34,
     "其他": 9
   },
-  "tracked_candidate_count": 253,
-  "invalidated_count": 0,
-  "last_invalidated": [],
-  "key_notice_count": 129,
+  "tracked_candidate_count": 252,
+  "invalidated_count": 1,
+  "last_invalidated": [
+    {
+      "code": "8411",
+      "name": "福貞-KY",
+      "reason": "收盤有效跌破支撐區下緣 12.80"
+    }
+  ],
+  "key_notice_count": 0,
   "layer1_route_counts": {
     "四要點": 178,
     "強勢20MA續強": 9

@@ -1,2 +1,2 @@
 ﻿date,code,name,trend,signal_route,baseline_entry,key_date,key_high,key_low,volume_lots,volume_ratio,extension_30ma_pct,extension_20ma_pct,support_lower,support_upper,support_source
-2026-09-14,2897,王道銀行,A級,30MA回踩,11.0,2026-09-11,11.0,10.75,13430.0,2.44,7.91,,,,
+2026-09-14,2897,王道銀行,A級,30MA回踩,11.0,2026-09-11,11.0,10.75,13430.0,2.44,7.91,,10.39,10.75,30MA回踩低點＋30MA重疊支撐
