@@ -1,20 +1,23 @@
 #!/usr/bin/env python3
 """Lobster Radar buy-point engine.
 
-Core design
-- Layer 1: four-point rule plus strong-20MA continuation candidate route.
-- Formal routes: 30MA pullback and strong-20MA continuation.
-- Key candles are split into two concepts:
-  1) primary structure key (主結構關鍵K): the first momentum-expansion candle after the
-     initial 3-closes-above-30MA structure;
-  2) pullback entry key (回踩進場關鍵K): the existing reclaim candle used for formal
-     breakout/entry confirmation.
-- Signal priority after historical validation:
-  1) 🟢 primary-structure key breakout = highest priority;
-  2) 🟢 strong-20MA continuation = high-profit-potential route;
-  3) 🟡 secondary 30MA pullback-key breakout = confirmation route;
-  4) 🔵 key-candle formation = observation only.
-- Existing volume gates, 8% anti-chase rules and support invalidation remain unchanged.
+The former four-point screen has been retired.
+
+Formal buy routes
+1. 破底翻:
+   - a session breaks the preceding 20-session swing low by at least 0.5%;
+   - the breakdown is recovered within three sessions;
+   - the trigger close is back above that old swing low, is a bullish recovery
+     and closes in the upper 35% of its daily range.
+2. 真突破:
+   - the preceding 20 sessions form a platform with at least two highs within
+     3% of the platform ceiling;
+   - the trigger closes at least 0.3% above that ceiling;
+   - it is a bullish candle and closes in the upper 35% of its daily range.
+
+Both routes retain the existing liquidity gate, 1.2x-3.0x volume confirmation,
+8% anti-chase limit and structure-support invalidation. 20MA, DIF and
+fundamentals remain informational only and are not entry prerequisites.
 """
 from __future__ import annotations
 
@@ -34,19 +37,20 @@ import pandas as pd
 
 BASE = Path(__file__).resolve().parent
 DB = BASE / "lobster_tw_6m_prices.sqlite"
-FUNDAMENTALS = BASE / "fundamental_support.json"
 STATE_FILE = BASE / "signal_state.json"
 RECOMMENDATIONS = BASE / "formal_recommendations.csv"
 CANDIDATES = BASE / "candidate_status.csv"
 
-PULLBACK_TOL = 0.01
-STRONG_20MA_TOUCH_TOL = 0.01
-STRONG_20MA_LOOKBACK = 3
-PRIMARY_KEY_LOOKAHEAD = 3
+LOOKBACK = 20
+FALSE_BREAK_MIN = 0.005
+FALSE_BREAK_RECOVERY_DAYS = 3
+BREAKOUT_MIN = 0.003
+PLATFORM_TOUCH_TOL = 0.03
+MIN_PLATFORM_TOUCHES = 2
+CLOSE_LOCATION_MIN = 0.65
 VOL_RATIO_MIN = 1.20
 VOL_RATIO_MAX = 3.00
-MAX_30MA_EXTENSION = 0.08
-MAX_20MA_EXTENSION = 0.08
+MAX_STRUCTURE_EXTENSION = 0.08
 MIN_VOLUME_LOTS = 1000
 MIN_TURNOVER = 30_000_000
 SUPPORT_BREAK_TOL = 0.005
@@ -69,41 +73,27 @@ def ema(series: pd.Series, span: int) -> pd.Series:
     return series.ewm(span=span, adjust=False).mean()
 
 
-def classify_trend(close: float, ma20: float, ma30: float, prev20: float, prev30: float) -> str:
-    if (prev20 <= prev30 and ma20 > ma30) or abs(ma20 - ma30) / max(ma30, 1e-9) <= 0.005:
-        return "轉強"
-    if close > ma20 > ma30:
-        return "A級"
-    if close > ma20 and ma20 < ma30 and ma20 > prev20:
-        return "B級"
-    return "其他"
-
-
 def read_market() -> pd.DataFrame:
     if not DB.exists():
         raise SystemExit(f"Database missing: {DB}")
     con = sqlite3.connect(DB)
     try:
         df = pd.read_sql_query(
-            "SELECT date, market, stock_id AS code, stock_name AS name, open, high, low, close, volume, turnover "
+            "SELECT date, market, stock_id AS code, stock_name AS name, "
+            "open, high, low, close, volume, turnover "
             "FROM prices ORDER BY stock_id, date",
             con,
         )
     finally:
         con.close()
-    for c in ["open", "high", "low", "close", "volume", "turnover"]:
-        df[c] = pd.to_numeric(df[c], errors="coerce")
+    for col in ["open", "high", "low", "close", "volume", "turnover"]:
+        df[col] = pd.to_numeric(df[col], errors="coerce")
     df["date"] = pd.to_datetime(df["date"])
     df["volume_lots"] = df["volume"] / 1000.0
-    return df.dropna(subset=["close"])
+    return df.dropna(subset=["open", "high", "low", "close"])
 
 
-def approved_fundamentals() -> dict:
-    raw = load_json(FUNDAMENTALS, {"stocks": {}})
-    return raw.get("stocks", {}) if isinstance(raw, dict) else {}
-
-
-def layer1(g: pd.DataFrame, fundamental_ok: bool) -> dict:
+def prepare(g: pd.DataFrame) -> pd.DataFrame:
     x = g.copy().sort_values("date").reset_index(drop=True)
     x["ma20"] = x["close"].rolling(20).mean()
     x["ma30"] = x["close"].rolling(30).mean()
@@ -111,349 +101,178 @@ def layer1(g: pd.DataFrame, fundamental_ok: bool) -> dict:
     x["ema13"] = ema(x["close"], 13)
     x["dif"] = x["ema6"] - x["ema13"]
     x["avg20_lots"] = x["volume_lots"].rolling(20).mean()
-    if len(x) < 31:
-        return {"ok": False, "standard_ok": False, "strong20_ok": False, "route": "", "df": x}
-
-    t, y = x.iloc[-1], x.iloc[-2]
-    c1 = bool(t.ma20 > y.ma20)
-    c2 = bool(t.close > t.ma20)
-    c3 = bool(t.dif >= y.dif)
-    c4 = bool(fundamental_ok)
-    standard_ok = c1 and c2 and c3 and c4
-
-    strong20_touch_date = ""
-    strong20_ok = False
-    if len(x) >= 34 and c2 and c3 and c4 and bool(t.ma20 > t.ma30):
-        for back in range(1, STRONG_20MA_LOOKBACK + 1):
-            p = x.iloc[-1 - back]
-            if pd.isna(p.ma20) or pd.isna(p.ma30):
-                continue
-            strong_structure = bool(p.ma20 > p.ma30)
-            touched_20ma = bool(float(p.low) <= float(p.ma20) * (1 + STRONG_20MA_TOUCH_TOL))
-            held_20ma_close = bool(float(p.close) >= float(p.ma20))
-            if strong_structure and touched_20ma and held_20ma_close:
-                strong20_touch_date = p.date.strftime("%Y-%m-%d")
-                strong20_ok = True
-                break
-
-    route = "四要點" if standard_ok else ("強勢20MA續強" if strong20_ok else "")
-    return {
-        "ok": standard_ok or strong20_ok,
-        "standard_ok": standard_ok,
-        "strong20_ok": strong20_ok,
-        "route": route,
-        "strong20_touch_date": strong20_touch_date,
-        "checks": {
-            "20MA向上": c1,
-            "收盤站上20MA": c2,
-            "DIF今日>=昨日": c3,
-            "基本面支撐": c4,
-            "強勢20MA回測守住": strong20_ok,
-        },
-        "trend": classify_trend(float(t.close), float(t.ma20), float(t.ma30), float(y.ma20), float(y.ma30)),
-        "df": x,
-    }
+    return x
 
 
 def volume_gate(t: pd.Series) -> tuple[bool, float, float, float]:
     avg20 = float(t.avg20_lots) if pd.notna(t.avg20_lots) else math.nan
     lots = float(t.volume_lots) if pd.notna(t.volume_lots) else 0.0
     turnover = float(t.turnover) if pd.notna(t.turnover) else 0.0
-    vol_ratio = lots / avg20 if avg20 and not math.isnan(avg20) else 0.0
-    ok = VOL_RATIO_MIN <= vol_ratio <= VOL_RATIO_MAX and lots >= MIN_VOLUME_LOTS and turnover >= MIN_TURNOVER
-    return ok, lots, turnover, vol_ratio
+    ratio = lots / avg20 if avg20 and not math.isnan(avg20) else 0.0
+    ok = (
+        VOL_RATIO_MIN <= ratio <= VOL_RATIO_MAX
+        and lots >= MIN_VOLUME_LOTS
+        and turnover >= MIN_TURNOVER
+    )
+    return ok, lots, turnover, ratio
 
 
-def row_for_date(x: pd.DataFrame, date_text: str):
-    if not date_text:
-        return None
-    q = x[x["date"].dt.strftime("%Y-%m-%d") == date_text]
-    return None if q.empty else q.iloc[-1]
+def close_location(t: pd.Series) -> float:
+    spread = float(t.high) - float(t.low)
+    return (float(t.close) - float(t.low)) / spread if spread > 0 else 1.0
 
 
-def set_support_zone(state: dict, lower: float, upper: float, source: str, route: str) -> None:
-    lo = float(min(lower, upper))
-    hi = float(max(lower, upper))
-    state["support_lower"] = round(lo, 2)
-    state["support_upper"] = round(hi, 2)
-    state["support_source"] = source
-    state["support_route"] = route
-    state["support_status"] = "有效"
-
-
-def detect_primary_structure_key(x: pd.DataFrame, three_above30_date: str) -> dict:
-    """Find the first structural momentum candle after the initial 30MA confirmation.
-
-    Rule: from the 3-closes-above-30MA confirmation day through the next 3 sessions,
-    choose the first candle that closes above the prior 3-session high, stays above 30MA,
-    and has non-weakening DIF. If none qualifies yet, use the confirmation candle as a
-    provisional primary key. This is structural context only, not the formal entry trigger.
-    """
-    matches = x.index[x["date"].dt.strftime("%Y-%m-%d") == str(three_above30_date)].tolist()
-    if not matches:
-        return {}
-    start = matches[-1]
-    end = min(len(x) - 1, start + PRIMARY_KEY_LOOKAHEAD)
-    provisional = x.iloc[start]
-
-    for j in range(start, end + 1):
-        if j < 3:
-            continue
-        r = x.iloc[j]
-        if pd.isna(r.ma30) or pd.isna(r.dif):
-            continue
-        prev3_high = float(x.iloc[j-3:j]["high"].max())
-        prev_dif = float(x.iloc[j-1]["dif"]) if pd.notna(x.iloc[j-1]["dif"]) else float("nan")
-        breakout = float(r.close) > prev3_high
-        above30 = float(r.close) > float(r.ma30)
-        dif_ok = pd.notna(prev_dif) and float(r.dif) >= prev_dif
-        if breakout and above30 and dif_ok:
-            return {
-                "primary_key_date": r.date.strftime("%Y-%m-%d"),
-                "primary_key_high": round(float(r.high), 2),
-                "primary_key_low": round(float(r.low), 2),
-                "primary_key_status": "確認",
-            }
-
-    return {
-        "primary_key_date": provisional.date.strftime("%Y-%m-%d"),
-        "primary_key_high": round(float(provisional.high), 2),
-        "primary_key_low": round(float(provisional.low), 2),
-        "primary_key_status": "暫定",
-    }
-
-
-def invalid_reason(x: pd.DataFrame, state: dict) -> str:
-    if state.get("support_lower") is not None and len(x):
-        close = float(x.iloc[-1]["close"])
-        lower = float(state["support_lower"])
-        if close < lower * (1.0 - SUPPORT_BREAK_TOL):
-            return f"收盤有效跌破支撐區下緣 {lower:.2f}"
-
-    if len(x) >= 4:
-        q = x.iloc[-4:]
-        if q["ma20"].notna().all() and bool((q["close"] < q["ma20"]).all()):
-            return "跌破20MA後3個交易日仍未站回"
-
-    if len(x) >= 4:
-        d = x.iloc[-4:]["dif"].tolist()
-        if all(pd.notna(v) for v in d) and d[1] < d[0] and d[2] < d[1] and d[3] < d[2]:
-            return "DIF連續轉弱3日"
-
-    return ""
-
-
-def detect_primary_breakout(code: str, x: pd.DataFrame, state: dict, allow_trigger: bool = True) -> tuple[dict, dict | None]:
-    """Formal green-light signal from a confirmed primary structure key.
-
-    Mirrors the validated primary-key backtest: first later close above the confirmed
-    primary-key high while the standard four-point route is still valid, volume/liquidity
-    pass and the close is no more than 8% above 30MA.
-    """
-    s = dict(state or {})
-    if len(x) < 35 or s.get("primary_key_status") != "確認":
-        return s, None
-    key_date = str(s.get("primary_key_date") or "")
-    if not key_date or s.get("primary_key_high") is None:
-        return s, None
-
-    t = x.iloc[-1]
-    date = t.date.strftime("%Y-%m-%d")
-    if date <= key_date:
-        return s, None
-
-    close = float(t.close)
-    ma30 = float(t.ma30)
-    key_high = float(s["primary_key_high"])
-    key_low = float(s.get("primary_key_low", key_high))
-    volume_ok, lots, _turnover, vol_ratio = volume_gate(t)
-    extension = close / ma30 - 1.0 if ma30 else 999.0
-    already = str(s.get("primary_last_trigger_key") or "") == key_date
-
-    if allow_trigger and close > key_high and volume_ok and extension <= MAX_30MA_EXTENSION and not already:
-        s["primary_last_trigger_key"] = key_date
-        s["primary_last_trigger_date"] = date
-        return s, {
-            "date": date,
-            "code": code,
-            "signal_route": "主結構關鍵K突破",
-            "signal_light": "🟢綠燈",
-            "close": round(close, 2),
-            "key_date": key_date,
-            "key_high": round(key_high, 2),
-            "key_low": round(key_low, 2),
-            "primary_key_date": key_date,
-            "primary_key_high": round(key_high, 2),
-            "primary_key_low": round(key_low, 2),
-            "volume_lots": round(lots, 0),
-            "volume_ratio": round(vol_ratio, 2),
-            "extension_30ma_pct": round(extension * 100, 2),
-            "extension_20ma_pct": "",
-            "support_lower": round(key_low, 2),
-            "support_upper": round(key_low, 2),
-            "support_source": "主結構關鍵K低點（初始失效參考）",
-        }
-    return s, None
-
-
-def detect_layer2(code: str, x: pd.DataFrame, state: dict, allow_trigger: bool = True) -> tuple[dict, dict | None]:
-    s = dict(state or {})
-    if len(x) < 35:
-        s.setdefault("stage", "等待30MA結構")
-        return s, None
+def detect_false_break_reversal(code: str, x: pd.DataFrame) -> tuple[dict, dict | None]:
+    """Detect 破底翻: break a prior swing low, then reclaim it within 3 sessions."""
+    if len(x) < LOOKBACK + FALSE_BREAK_RECOVERY_DAYS:
+        return {}, None
 
     i = len(x) - 1
     t = x.iloc[i]
-    date = t.date.strftime("%Y-%m-%d")
-    close, low, high, ma30 = map(float, [t.close, t.low, t.high, t.ma30])
+    close = float(t.close)
+    best = None
 
-    if not s.get("three_above30_date"):
-        for j in range(max(2, i - 15), i + 1):
-            q = x.iloc[j-2:j+1]
-            if q["ma30"].notna().all() and bool((q["close"] > q["ma30"]).all()):
-                s["three_above30_date"] = x.iloc[j].date.strftime("%Y-%m-%d")
-                s["stage"] = "等待回踩"
-                break
-        if not s.get("three_above30_date"):
-            s["stage"] = "等待30MA結構"
-
-    if s.get("three_above30_date"):
-        primary = detect_primary_structure_key(x, s["three_above30_date"])
-        if primary:
-            old_status = s.get("primary_key_status")
-            if not s.get("primary_key_date") or old_status != "確認":
-                s.update(primary)
-
-    if s.get("three_above30_date") and not s.get("pullback_date") and i >= 3:
-        prior3_low = float(x.iloc[i-3:i]["low"].min())
-        if low <= prior3_low * (1 + PULLBACK_TOL):
-            s["pullback_date"] = date
-            s["stage"] = "等待3K內站回30MA"
-
-    if s.get("pullback_date") and not s.get("key_date"):
-        pb_matches = x.index[x["date"].dt.strftime("%Y-%m-%d") == s["pullback_date"]].tolist()
-        if pb_matches:
-            pb_i = pb_matches[-1]
-            elapsed = i - pb_i
-            if 0 <= elapsed <= 2 and close > ma30:
-                s["key_date"] = date
-                s["key_high"] = high
-                s["key_low"] = low
-                s["stage"] = "等待突破關鍵K"
-                pullback_low = float(x.iloc[pb_i:i+1]["low"].min())
-                set_support_zone(s, pullback_low, ma30, "30MA回踩低點＋30MA重疊支撐", "30MA回踩")
-            elif elapsed > 2:
-                s["stage"] = "重新等待"
-                s["last_failed_reclaim"] = date
-                for k in [
-                    "three_above30_date", "pullback_date", "key_date", "key_high", "key_low",
-                    "primary_key_date", "primary_key_high", "primary_key_low", "primary_key_status",
-                    "support_lower", "support_upper", "support_source", "support_route", "support_status",
-                ]:
-                    s.pop(k, None)
-                return s, None
-
-    if s.get("key_date") and date > s["key_date"]:
-        key_high = float(s["key_high"])
-        volume_ok, lots, _turnover, vol_ratio = volume_gate(t)
-        extension = (close / ma30 - 1.0) if ma30 else 999.0
-        if allow_trigger and close > key_high and volume_ok and extension <= MAX_30MA_EXTENSION and s.get("last_trigger_date") != date:
-            s["stage"] = "正式試單"
-            s["last_trigger_date"] = date
-            return s, {
-                "date": date,
-                "code": code,
-                "signal_route": "30MA回踩",
-                "signal_light": "🟡黃燈",
-                "close": round(close, 2),
-                "key_date": s["key_date"],
-                "key_high": round(key_high, 2),
-                "key_low": round(float(s["key_low"]), 2),
-                "primary_key_date": s.get("primary_key_date", ""),
-                "primary_key_high": s.get("primary_key_high", ""),
-                "primary_key_low": s.get("primary_key_low", ""),
-                "volume_lots": round(lots, 0),
-                "volume_ratio": round(vol_ratio, 2),
-                "extension_30ma_pct": round(extension * 100, 2),
-                "extension_20ma_pct": "",
-                "support_lower": s.get("support_lower", ""),
-                "support_upper": s.get("support_upper", ""),
-                "support_source": s.get("support_source", ""),
+    for break_i in range(max(LOOKBACK, i - FALSE_BREAK_RECOVERY_DAYS + 1), i + 1):
+        reference = x.iloc[break_i - LOOKBACK:break_i]
+        prior_low = float(reference["low"].min())
+        break_row = x.iloc[break_i]
+        break_low = float(break_row.low)
+        broke_floor = break_low < prior_low * (1.0 - FALSE_BREAK_MIN)
+        recovered = close > prior_low
+        if not (broke_floor and recovered):
+            continue
+        depth = break_low / prior_low - 1.0
+        if best is None or depth < best["depth"]:
+            best = {
+                "break_i": break_i,
+                "prior_low": prior_low,
+                "break_low": break_low,
+                "depth": depth,
             }
-    return s, None
 
+    if best is None:
+        return {}, None
 
-def detect_strong20_buy(code: str, x: pd.DataFrame, state: dict, l1: dict, fundamental_ok: bool) -> tuple[dict, dict | None]:
-    s = dict(state or {})
-    if len(x) < 34:
-        return s, None
+    bullish = close > float(t.open)
+    recovery_strength = close > float(x.iloc[i - 1].close)
+    location = close_location(t)
+    volume_ok, lots, turnover, ratio = volume_gate(t)
+    extension = close / best["prior_low"] - 1.0
+    setup = {
+        "pattern": "破底翻",
+        "setup_date": x.iloc[best["break_i"]].date.strftime("%Y-%m-%d"),
+        "trigger_level": round(best["prior_low"], 2),
+        "support_lower": round(best["break_low"], 2),
+        "support_upper": round(best["prior_low"], 2),
+        "support_source": "破底低點至收復之前波低點",
+        "structure_extension_pct": round(extension * 100, 2),
+        "close_location": round(location, 2),
+        "volume_ok": volume_ok,
+    }
+    confirmed = (
+        bullish
+        and recovery_strength
+        and location >= CLOSE_LOCATION_MIN
+        and volume_ok
+        and extension <= MAX_STRUCTURE_EXTENSION
+    )
+    if not confirmed:
+        return setup, None
 
-    i = len(x) - 1
-    t, y = x.iloc[i], x.iloc[i - 1]
     date = t.date.strftime("%Y-%m-%d")
-    close, high, low = float(t.close), float(t.high), float(t.low)
-    ma20, ma30 = float(t.ma20), float(t.ma30)
-    dif_turning_up = bool(t.dif >= y.dif)
-    strong_now = bool(close > ma20 > ma30)
-    touch_date = str(l1.get("strong20_touch_date") or "")
+    pattern_key = f"破底翻:{setup['setup_date']}:{setup['trigger_level']}"
+    signal = {
+        "date": date,
+        "code": code,
+        "signal_route": "破底翻",
+        "signal_light": "🟢綠燈",
+        "baseline_entry": round(best["prior_low"], 2),
+        "key_date": setup["setup_date"],
+        "key_high": round(best["prior_low"], 2),
+        "key_low": round(best["break_low"], 2),
+        "volume_lots": round(lots, 0),
+        "volume_ratio": round(ratio, 2),
+        "turnover": round(turnover, 0),
+        "support_lower": setup["support_lower"],
+        "support_upper": setup["support_upper"],
+        "support_source": setup["support_source"],
+        "pattern_key": pattern_key,
+        "structure_extension_pct": setup["structure_extension_pct"],
+    }
+    return setup, signal
 
-    if bool(l1.get("strong20_ok")) and touch_date:
-        old_touch = str(s.get("strong20_touch_date") or "")
-        old_key = str(s.get("strong20_key_date") or "")
-        if not old_key or (old_touch and touch_date > old_touch):
-            s["strong20_touch_date"] = touch_date
-            s["strong20_key_date"] = date
-            s["strong20_key_high"] = high
-            s["strong20_key_low"] = low
-            s["strong20_stage"] = "等待突破20MA關鍵K"
-            touch_row = row_for_date(x, touch_date)
-            touch_low = float(touch_row.low) if touch_row is not None else low
-            structural_low = min(touch_low, low)
-            set_support_zone(s, structural_low, ma20, "20MA回踩低點＋20MA重疊支撐", "強勢20MA續強")
 
-    key_date = str(s.get("strong20_key_date") or "")
-    if not key_date:
-        s.setdefault("strong20_stage", "等待20MA回測")
-        return s, None
+def detect_true_breakout(code: str, x: pd.DataFrame) -> tuple[dict, dict | None]:
+    """Detect 真突破: close through a repeatedly tested 20-session platform."""
+    if len(x) < LOOKBACK + 1:
+        return {}, None
 
-    if date > key_date and s.get("strong20_key_high") is not None:
-        key_high = float(s["strong20_key_high"])
-        key_low = float(s["strong20_key_low"])
-        volume_ok, lots, _turnover, vol_ratio = volume_gate(t)
-        ext20 = close / ma20 - 1.0 if ma20 else 999.0
-        if close > key_high and volume_ok and strong_now and dif_turning_up and fundamental_ok and ext20 <= MAX_20MA_EXTENSION and s.get("strong20_last_trigger_date") != date:
-            s["strong20_stage"] = "正式試單"
-            s["strong20_last_trigger_date"] = date
-            return s, {
-                "date": date,
-                "code": code,
-                "signal_route": "強勢20MA續強",
-                "signal_light": "🟢綠燈",
-                "close": round(close, 2),
-                "key_date": key_date,
-                "key_high": round(key_high, 2),
-                "key_low": round(key_low, 2),
-                "primary_key_date": s.get("primary_key_date", ""),
-                "primary_key_high": s.get("primary_key_high", ""),
-                "primary_key_low": s.get("primary_key_low", ""),
-                "volume_lots": round(lots, 0),
-                "volume_ratio": round(vol_ratio, 2),
-                "extension_30ma_pct": "",
-                "extension_20ma_pct": round(ext20 * 100, 2),
-                "support_lower": s.get("support_lower", ""),
-                "support_upper": s.get("support_upper", ""),
-                "support_source": s.get("support_source", ""),
-            }
-    return s, None
+    t = x.iloc[-1]
+    prior = x.iloc[-1 - LOOKBACK:-1]
+    platform_high = float(prior["high"].max())
+    touch_floor = platform_high * (1.0 - PLATFORM_TOUCH_TOL)
+    touches = int((prior["high"] >= touch_floor).sum())
+    close = float(t.close)
+    breakout = close > platform_high * (1.0 + BREAKOUT_MIN)
+    bullish = close > float(t.open)
+    location = close_location(t)
+    volume_ok, lots, turnover, ratio = volume_gate(t)
+    extension = close / platform_high - 1.0
+
+    setup = {
+        "pattern": "真突破",
+        "setup_date": prior.iloc[-1].date.strftime("%Y-%m-%d"),
+        "trigger_level": round(platform_high, 2),
+        "support_lower": round(platform_high * (1.0 - 0.01), 2),
+        "support_upper": round(platform_high, 2),
+        "support_source": "20日整理平台上緣轉支撐",
+        "platform_touches": touches,
+        "structure_extension_pct": round(extension * 100, 2),
+        "close_location": round(location, 2),
+        "volume_ok": volume_ok,
+    }
+    confirmed = (
+        touches >= MIN_PLATFORM_TOUCHES
+        and breakout
+        and bullish
+        and location >= CLOSE_LOCATION_MIN
+        and volume_ok
+        and extension <= MAX_STRUCTURE_EXTENSION
+    )
+    if not confirmed:
+        return setup, None
+
+    date = t.date.strftime("%Y-%m-%d")
+    pattern_key = f"真突破:{date}:{platform_high:.2f}"
+    signal = {
+        "date": date,
+        "code": code,
+        "signal_route": "真突破",
+        "signal_light": "🟢綠燈",
+        "baseline_entry": round(platform_high * (1.0 + BREAKOUT_MIN), 2),
+        "key_date": date,
+        "key_high": round(platform_high, 2),
+        "key_low": round(float(t.low), 2),
+        "volume_lots": round(lots, 0),
+        "volume_ratio": round(ratio, 2),
+        "turnover": round(turnover, 0),
+        "support_lower": setup["support_lower"],
+        "support_upper": setup["support_upper"],
+        "support_source": setup["support_source"],
+        "pattern_key": pattern_key,
+        "structure_extension_pct": setup["structure_extension_pct"],
+    }
+    return setup, signal
 
 
 def recommendation_fields() -> list[str]:
     return [
-        "date", "code", "name", "trend", "signal_route", "signal_light", "baseline_entry",
-        "primary_key_date", "primary_key_high", "primary_key_low",
+        "date", "code", "name", "trend", "signal_route", "signal_light",
+        "baseline_entry", "primary_key_date", "primary_key_high", "primary_key_low",
         "key_date", "key_high", "key_low", "volume_lots", "volume_ratio",
         "extension_30ma_pct", "extension_20ma_pct",
         "support_lower", "support_upper", "support_source",
+        "pattern_key", "structure_extension_pct",
     ]
 
 
@@ -462,43 +281,46 @@ def append_recommendation(row: dict) -> None:
     existing_rows = []
     old_fields = []
     if RECOMMENDATIONS.exists():
-        with RECOMMENDATIONS.open("r", encoding="utf-8-sig", newline="") as f:
-            reader = csv.DictReader(f)
+        with RECOMMENDATIONS.open("r", encoding="utf-8-sig", newline="") as handle:
+            reader = csv.DictReader(handle)
             old_fields = reader.fieldnames or []
             existing_rows = list(reader)
-        if any(r.get("date") == row["date"] and r.get("code") == row["code"] for r in existing_rows):
+        if any(
+            old.get("date") == row["date"]
+            and old.get("code") == row["code"]
+            and old.get("signal_route") == row["signal_route"]
+            for old in existing_rows
+        ):
             return
 
     if existing_rows and old_fields != fields:
-        with RECOMMENDATIONS.open("w", encoding="utf-8-sig", newline="") as f:
-            w = csv.DictWriter(f, fieldnames=fields)
-            w.writeheader()
+        with RECOMMENDATIONS.open("w", encoding="utf-8-sig", newline="") as handle:
+            writer = csv.DictWriter(handle, fieldnames=fields)
+            writer.writeheader()
             for old in existing_rows:
-                w.writerow({k: old.get(k, "") for k in fields})
+                writer.writerow({key: old.get(key, "") for key in fields})
 
     exists = RECOMMENDATIONS.exists() and RECOMMENDATIONS.stat().st_size > 0
-    with RECOMMENDATIONS.open("a", encoding="utf-8-sig", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=fields)
+    with RECOMMENDATIONS.open("a", encoding="utf-8-sig", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=fields)
         if not exists:
-            w.writeheader()
-        w.writerow({k: row.get(k, "") for k in fields})
+            writer.writeheader()
+        writer.writerow({key: row.get(key, "") for key in fields})
 
 
 def write_candidate_status(rows: list[dict]) -> None:
     fields = [
-        "date", "code", "name", "trend", "stage", "strong20_stage",
-        "layer1_current", "layer1_route", "strong20_touch_date", "strong20_key_date",
-        "strong20_key_high", "strong20_key_low", "close", "ma20", "ma30", "dif",
+        "date", "code", "name", "pattern", "status", "setup_date",
+        "trigger_level", "close", "ma20", "ma30", "dif",
         "volume_lots", "avg20_volume_lots", "volume_ratio", "turnover",
-        "three_above30_date", "primary_key_date", "primary_key_high", "primary_key_low", "primary_key_status",
-        "pullback_date", "key_date", "key_high", "key_low",
-        "support_lower", "support_upper", "support_source", "support_status", "fundamental_reason",
+        "platform_touches", "close_location", "structure_extension_pct",
+        "support_lower", "support_upper", "support_source", "support_status",
     ]
-    with CANDIDATES.open("w", encoding="utf-8-sig", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=fields)
-        w.writeheader()
+    with CANDIDATES.open("w", encoding="utf-8-sig", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=fields)
+        writer.writeheader()
         for row in rows:
-            w.writerow({k: row.get(k, "") for k in fields})
+            writer.writerow({key: row.get(key, "") for key in fields})
 
 
 def send_line(text: str) -> bool:
@@ -506,217 +328,168 @@ def send_line(text: str) -> bool:
     if not token:
         print("LINE_CHANNEL_ACCESS_TOKEN missing; signal recorded but not pushed")
         return False
-    payload = json.dumps({"messages": [{"type": "text", "text": text}]}, ensure_ascii=False).encode("utf-8")
-    req = urllib.request.Request(
+    payload = json.dumps(
+        {"messages": [{"type": "text", "text": text}]},
+        ensure_ascii=False,
+    ).encode("utf-8")
+    request = urllib.request.Request(
         "https://api.line.me/v2/bot/message/broadcast",
         data=payload,
-        headers={"Authorization": f"Bearer {token}", "Content-Type": "application/json; charset=UTF-8"},
+        headers={
+            "Authorization": f"Bearer {token}",
+            "Content-Type": "application/json; charset=UTF-8",
+        },
         method="POST",
     )
     try:
-        with urllib.request.urlopen(req, timeout=30) as resp:
-            print("LINE status", resp.status)
-            return 200 <= resp.status < 300
-    except urllib.error.HTTPError as e:
-        print("LINE HTTP error", e.code, e.read().decode("utf-8", errors="replace"))
-    except Exception as e:
-        print("LINE error", repr(e))
+        with urllib.request.urlopen(request, timeout=30) as response:
+            print("LINE status", response.status)
+            return 200 <= response.status < 300
+    except urllib.error.HTTPError as error:
+        print("LINE HTTP error", error.code, error.read().decode("utf-8", errors="replace"))
+    except Exception as error:
+        print("LINE error", repr(error))
     return False
 
 
+def candidate_row(latest_date: str, code: str, name: str, x: pd.DataFrame, setup: dict, status: str) -> dict:
+    t = x.iloc[-1]
+    avg20 = float(t.avg20_lots) if pd.notna(t.avg20_lots) else 0.0
+    lots = float(t.volume_lots) if pd.notna(t.volume_lots) else 0.0
+    ratio = lots / avg20 if avg20 else 0.0
+    close = float(t.close)
+    lower = setup.get("support_lower", "")
+    support_status = ""
+    if lower != "":
+        support_status = "失效" if close < float(lower) * (1.0 - SUPPORT_BREAK_TOL) else "有效"
+    return {
+        "date": latest_date,
+        "code": code,
+        "name": name,
+        "pattern": setup.get("pattern", ""),
+        "status": status,
+        "setup_date": setup.get("setup_date", ""),
+        "trigger_level": setup.get("trigger_level", ""),
+        "close": round(close, 2),
+        "ma20": round(float(t.ma20), 2) if pd.notna(t.ma20) else "",
+        "ma30": round(float(t.ma30), 2) if pd.notna(t.ma30) else "",
+        "dif": round(float(t.dif), 4) if pd.notna(t.dif) else "",
+        "volume_lots": round(lots, 0),
+        "avg20_volume_lots": round(avg20, 0),
+        "volume_ratio": round(ratio, 2),
+        "turnover": round(float(t.turnover), 0) if pd.notna(t.turnover) else 0,
+        "platform_touches": setup.get("platform_touches", ""),
+        "close_location": setup.get("close_location", ""),
+        "structure_extension_pct": setup.get("structure_extension_pct", ""),
+        "support_lower": lower,
+        "support_upper": setup.get("support_upper", ""),
+        "support_source": setup.get("support_source", ""),
+        "support_status": support_status,
+    }
+
+
 def main() -> int:
-    df = read_market()
-    fundamentals = approved_fundamentals()
-    state = load_json(STATE_FILE, {"stocks": {}, "updated_at": None})
+    market = read_market()
+    state = load_json(STATE_FILE, {"stocks": {}})
+    if state.get("strategy_version") != "破底翻+真突破-v1":
+        state = {"stocks": {}, "strategy_version": "破底翻+真突破-v1"}
     stocks_state = state.setdefault("stocks", {})
-    latest_date = df["date"].max().strftime("%Y-%m-%d")
+    latest_date = market["date"].max().strftime("%Y-%m-%d")
 
     candidate_rows = []
     triggers = []
-    key_notices = []
-    current_layer1_count = 0
-    invalidated = []
+    route_counts = Counter()
 
-    for code, g in df.groupby("code", sort=False):
-        code = str(code)
-        name = str(g.iloc[-1]["name"])
-        f = fundamentals.get(code, {})
-        fundamental_ok = bool(f.get("supported", False)) if isinstance(f, dict) else bool(f)
-        l1 = layer1(g, fundamental_ok)
-        l1_ok = bool(l1.get("ok"))
-        previous_state = stocks_state.get(code, {})
-
-        was_candidate = bool(previous_state.get("candidate_since") or previous_state.get("layer1_checks"))
-        strong20_tracking = bool(previous_state.get("strong20_key_date"))
-        if not l1_ok and not was_candidate and not strong20_tracking:
+    for raw_code, group in market.groupby("code", sort=False):
+        code = str(raw_code)
+        name = str(group.iloc[-1]["name"])
+        x = prepare(group)
+        if len(x) < LOOKBACK + FALSE_BREAK_RECOVERY_DAYS:
             continue
 
-        x = l1["df"]
-        if len(x) < 31:
-            continue
+        false_setup, false_signal = detect_false_break_reversal(code, x)
+        breakout_setup, breakout_signal = detect_true_breakout(code, x)
+        setups = [(false_setup, false_signal), (breakout_setup, breakout_signal)]
 
-        if was_candidate or strong20_tracking:
-            reason = invalid_reason(x, previous_state)
-            if reason:
-                invalidated.append({"code": code, "name": name, "reason": reason})
-                stocks_state.pop(code, None)
+        for setup, signal in setups:
+            if not setup:
+                continue
+            close = float(x.iloc[-1].close)
+            level = float(setup.get("trigger_level") or 0.0)
+            near_setup = (
+                setup["pattern"] == "破底翻"
+                or (level > 0 and close >= level * 0.97)
+            )
+            if not near_setup and signal is None:
                 continue
 
-        if l1_ok:
-            current_layer1_count += 1
+            status = "正式買點" if signal else "型態觀察"
+            candidate_rows.append(candidate_row(latest_date, code, name, x, setup, status))
+            route_counts[setup["pattern"]] += 1
 
-        t = x.iloc[-1]
-        avg20 = float(t.avg20_lots) if pd.notna(t.avg20_lots) else 0.0
-        lots = float(t.volume_lots) if pd.notna(t.volume_lots) else 0.0
-        vol_ratio = lots / avg20 if avg20 else 0.0
+            if signal is None:
+                continue
+            previous_key = str(stocks_state.get(code, {}).get(signal["signal_route"], ""))
+            if previous_key == signal["pattern_key"]:
+                continue
 
-        state_after_30, trigger30 = detect_layer2(code, x, previous_state, allow_trigger=bool(l1.get("standard_ok")))
-        state_after_primary, trigger_primary = detect_primary_breakout(
-            code, x, state_after_30, allow_trigger=bool(l1.get("standard_ok"))
+            signal.update({
+                "name": name,
+                "trend": signal["signal_route"],
+                "primary_key_date": "",
+                "primary_key_high": "",
+                "primary_key_low": "",
+                "extension_30ma_pct": "",
+                "extension_20ma_pct": "",
+            })
+            append_recommendation(signal)
+            triggers.append(signal)
+            stocks_state.setdefault(code, {})[signal["signal_route"]] = signal["pattern_key"]
+            stocks_state[code]["name"] = name
+            stocks_state[code]["support_lower"] = signal["support_lower"]
+            stocks_state[code]["support_upper"] = signal["support_upper"]
+            stocks_state[code]["support_source"] = signal["support_source"]
+
+    candidate_rows.sort(
+        key=lambda row: (
+            0 if row["status"] == "正式買點" else 1,
+            0 if row["pattern"] == "破底翻" else 1,
+            row["code"],
         )
-        new_state, trigger20 = detect_strong20_buy(code, x, state_after_primary, l1, fundamental_ok)
-
-        if new_state.get("key_date") and new_state.get("key_date") != previous_state.get("key_date"):
-            key_notices.append({
-                "code": code, "name": name,
-                "trend": l1.get("trend", previous_state.get("trend", "其他")),
-                "route": "30MA回踩",
-                "primary_key_date": new_state.get("primary_key_date", ""),
-                "primary_key_high": new_state.get("primary_key_high", ""),
-                "primary_key_low": new_state.get("primary_key_low", ""),
-                "key_date": new_state.get("key_date"),
-                "key_high": new_state.get("key_high"),
-                "key_low": new_state.get("key_low"),
-                "close": round(float(t.close), 2), "ma20": round(float(t.ma20), 2),
-                "ma30": round(float(t.ma30), 2), "dif": round(float(t.dif), 4),
-                "support_lower": new_state.get("support_lower", ""),
-                "support_upper": new_state.get("support_upper", ""),
-                "support_source": new_state.get("support_source", ""),
-            })
-
-        if new_state.get("strong20_key_date") and new_state.get("strong20_key_date") != previous_state.get("strong20_key_date"):
-            key_notices.append({
-                "code": code, "name": name,
-                "trend": l1.get("trend", previous_state.get("trend", "其他")),
-                "route": "強勢20MA續強",
-                "primary_key_date": new_state.get("primary_key_date", ""),
-                "primary_key_high": new_state.get("primary_key_high", ""),
-                "primary_key_low": new_state.get("primary_key_low", ""),
-                "key_date": new_state.get("strong20_key_date"),
-                "key_high": new_state.get("strong20_key_high"),
-                "key_low": new_state.get("strong20_key_low"),
-                "close": round(float(t.close), 2), "ma20": round(float(t.ma20), 2),
-                "ma30": round(float(t.ma30), 2), "dif": round(float(t.dif), 4),
-                "support_lower": new_state.get("support_lower", ""),
-                "support_upper": new_state.get("support_upper", ""),
-                "support_source": new_state.get("support_source", ""),
-            })
-
-        new_state["candidate_since"] = previous_state.get("candidate_since", latest_date)
-        new_state["name"] = name
-        new_state["trend"] = l1.get("trend", previous_state.get("trend", "其他"))
-        new_state["layer1_current"] = l1_ok
-        new_state["layer1_route"] = l1.get("route", "") if l1_ok else previous_state.get("layer1_route", "")
-        new_state["layer1_checks"] = l1.get("checks", {})
-        if new_state.get("support_lower") is not None:
-            new_state["support_status"] = "有效"
-        stocks_state[code] = new_state
-
-        candidate_rows.append({
-            "date": latest_date, "code": code, "name": name, "trend": new_state["trend"],
-            "stage": new_state.get("stage", "等待30MA結構"),
-            "strong20_stage": new_state.get("strong20_stage", "等待20MA回測"),
-            "layer1_current": "符合" if l1_ok else "追蹤中",
-            "layer1_route": new_state.get("layer1_route", ""),
-            "strong20_touch_date": new_state.get("strong20_touch_date", ""),
-            "strong20_key_date": new_state.get("strong20_key_date", ""),
-            "strong20_key_high": new_state.get("strong20_key_high", ""),
-            "strong20_key_low": new_state.get("strong20_key_low", ""),
-            "close": round(float(t.close), 2), "ma20": round(float(t.ma20), 2),
-            "ma30": round(float(t.ma30), 2), "dif": round(float(t.dif), 4),
-            "volume_lots": round(lots, 0), "avg20_volume_lots": round(avg20, 0),
-            "volume_ratio": round(vol_ratio, 2),
-            "turnover": round(float(t.turnover), 0) if pd.notna(t.turnover) else 0,
-            "three_above30_date": new_state.get("three_above30_date", ""),
-            "primary_key_date": new_state.get("primary_key_date", ""),
-            "primary_key_high": new_state.get("primary_key_high", ""),
-            "primary_key_low": new_state.get("primary_key_low", ""),
-            "primary_key_status": new_state.get("primary_key_status", ""),
-            "pullback_date": new_state.get("pullback_date", ""),
-            "key_date": new_state.get("key_date", ""), "key_high": new_state.get("key_high", ""),
-            "key_low": new_state.get("key_low", ""),
-            "support_lower": new_state.get("support_lower", ""),
-            "support_upper": new_state.get("support_upper", ""),
-            "support_source": new_state.get("support_source", ""),
-            "support_status": new_state.get("support_status", ""),
-            "fundamental_reason": f.get("reason", "") if isinstance(f, dict) else "",
-        })
-
-        trigger = trigger_primary or trigger20 or trigger30
-        if trigger:
-            trigger.update({"name": name, "trend": new_state["trend"], "baseline_entry": trigger["key_high"]})
-            append_recommendation(trigger)
-            triggers.append(trigger)
-
-    stage_order = {"正式試單": 0, "等待突破關鍵K": 1, "等待3K內站回30MA": 2, "等待回踩": 3, "等待30MA結構": 4, "重新等待": 5}
-    trend_order = {"轉強": 0, "B級": 1, "A級": 2, "其他": 3}
-    candidate_rows.sort(key=lambda r: (stage_order.get(r["stage"], 9), trend_order.get(r["trend"], 9), r["code"]))
+    )
     write_candidate_status(candidate_rows)
 
     state["updated_at"] = datetime.now(timezone.utc).isoformat()
     state["latest_trade_date"] = latest_date
-    state["layer1_candidate_count"] = current_layer1_count
-    state["tracked_candidate_count"] = len(candidate_rows)
-    state["invalidated_count"] = len(invalidated)
-    state["last_invalidated"] = invalidated
-    state["key_notice_count"] = len(key_notices)
-    state["layer1_route_counts"] = dict(Counter(r["layer1_route"] for r in candidate_rows if r.get("layer1_route")))
-    state["stage_counts"] = dict(Counter(r["stage"] for r in candidate_rows))
-    state["trend_counts"] = dict(Counter(r["trend"] for r in candidate_rows))
+    state["strategy_version"] = "破底翻+真突破-v1"
+    state["four_point_rule"] = "已取消"
+    state["candidate_count"] = len(candidate_rows)
+    state["formal_buy_signal_count"] = len(triggers)
+    state["route_counts"] = dict(route_counts)
     save_json(STATE_FILE, state)
 
     summary = {
-        "latest_trade_date": latest_date, "layer1_candidates": current_layer1_count,
-        "tracked_candidates": len(candidate_rows), "invalidated": len(invalidated),
-        "key_candle_notices": len(key_notices), "formal_buy_signals": len(triggers),
-        "layer1_route_counts": dict(Counter(r["layer1_route"] for r in candidate_rows if r.get("layer1_route"))),
-        "trend_counts": dict(Counter(r["trend"] for r in candidate_rows)),
-        "stage_counts": dict(Counter(r["stage"] for r in candidate_rows)),
+        "latest_trade_date": latest_date,
+        "strategy": "破底翻+真突破",
+        "four_point_rule": "retired",
+        "candidates": len(candidate_rows),
+        "formal_buy_signals": len(triggers),
+        "route_counts": dict(route_counts),
     }
     print(json.dumps(summary, ensure_ascii=False))
 
-    if key_notices:
-        lines = [f"🦞 🔵藍燈｜關鍵K形成通知｜{latest_date}", "⚠️ 觀察中，尚未形成正式突破買點"]
-        for r in key_notices:
-            lines += ["", f"🟠 {r['code']} {r['name']}｜{r['trend']}", f"型態：{r['route']}"]
-            if r.get("primary_key_date"):
-                lines += [
-                    f"主結構關鍵K：{r['primary_key_date']}",
-                    f"主K高：{r['primary_key_high']}｜低：{r['primary_key_low']}",
-                ]
-            lines += [
-                f"回踩進場關鍵K：{r['key_date']}",
-                f"進場K高：{r['key_high']}｜低：{r['key_low']}",
-                f"支撐區：{r['support_lower']}～{r['support_upper']}",
-                f"支撐來源：{r['support_source']}",
-                f"收盤：{r['close']}", f"20MA：{r['ma20']}｜30MA：{r['ma30']}", f"DIF：{r['dif']}",
-                f"失效：收盤有效跌破支撐下緣 {r['support_lower']}（容許0.5%誤差）",
-            ]
-        send_line("\n".join(lines))
-
     if triggers:
-        lines = [f"🦞 龍蝦雷達正式買點｜{latest_date}"]
-        for r in triggers:
-            light = r.get("signal_light", "🟡黃燈")
-            lines += ["", f"{light} {r['code']} {r['name']}｜{r['trend']}", f"買點路徑：{r['signal_route']}"]
-            if r.get("primary_key_date"):
-                lines += [f"主結構關鍵K：{r['primary_key_date']}｜高：{r['primary_key_high']}"]
+        lines = [f"🦞 龍蝦雷達正式買點｜{latest_date}", "新制：破底翻＋真突破"]
+        for row in triggers:
             lines += [
-                f"回踩進場關鍵K：{r['key_date']}", f"進場K高：{r['key_high']}",
-                f"支撐區：{r.get('support_lower', '')}～{r.get('support_upper', '')}",
-                f"收盤：{r['close']}", f"成交量：{int(r['volume_lots'])}張｜量比：{r['volume_ratio']}x",
-                f"績效基準試單價：{r['baseline_entry']}",
-                f"初始失效參考：支撐區下緣 {r.get('support_lower', r['key_low'])}",
+                "",
+                f"🟢 {row['code']} {row['name']}｜{row['signal_route']}",
+                f"觸發價：{row['key_high']}｜收盤：{row.get('close', '')}",
+                f"支撐區：{row['support_lower']}～{row['support_upper']}",
+                f"支撐來源：{row['support_source']}",
+                f"成交量：{int(row['volume_lots'])}張｜量比：{row['volume_ratio']}x",
+                f"績效基準試單價：{row['baseline_entry']}",
+                f"失效：收盤有效跌破 {row['support_lower']}（容許0.5%誤差）",
             ]
         send_line("\n".join(lines))
     return 0
