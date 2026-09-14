@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Walk-forward backtest for the live 破底翻＋真突破 rules."""
+"""Walk-forward backtest for the live 破底翻＋突破確認 rules."""
 from __future__ import annotations
 
 import json
@@ -162,7 +162,7 @@ def render_table(summary: dict, title: str) -> list[str]:
         "|---:|---|---:|---:|---:|---:|---:|",
     ]
     for horizon in HORIZONS:
-        for route in ("全部", "破底翻", "真突破"):
+        for route in ("全部", "破底翻", "突破後站穩", "突破回踩不破"):
             row = summary[str(horizon)][route]
             lines.append(
                 f"| {horizon}日 | {route} | {row['samples']} | "
