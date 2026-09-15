@@ -1,28 +1,6 @@
 {
   "total_scanned": 70,
-  "buy_signals": [
-    {
-      "code": "6669",
-      "close": 2315.0,
-      "key_k_high": 2315.0,
-      "stop_loss": 2240.0,
-      "ma30": 2247.79
-    },
-    {
-      "code": "6669",
-      "close": 2315.0,
-      "key_k_high": 2315.0,
-      "stop_loss": 2240.0,
-      "ma30": 2247.79
-    },
-    {
-      "code": "6669",
-      "close": 2315.0,
-      "key_k_high": 2315.0,
-      "stop_loss": 2240.0,
-      "ma30": 2247.79
-    }
-  ],
+  "buy_signals": [],
   "exit_signals": [
     {
       "code": "3711",
