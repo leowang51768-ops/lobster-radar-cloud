@@ -43,4 +43,6 @@ jobs:
             exit 0
           fi
           git commit -m "Backtest false-break reversal and confirmed breakout rules"
+          git fetch origin main
+          git rebase origin/main
           git push
