@@ -13,6 +13,8 @@ Formal buy routes
    - the breakout day only creates a setup and never triggers an immediate buy;
    - standing confirmation must occur within three sessions;
    - a successful platform retest may occur within five sessions;
+   - a retest must contract below both breakout-day volume and the prior
+     five-session average volume;
    - only the confirmation/retest session can create a formal buy signal.
 
 Both routes retain the existing liquidity gate, breakout-volume confirmation,
@@ -287,6 +289,11 @@ def detect_true_breakout(code: str, x: pd.DataFrame) -> tuple[dict, dict | None]
     avg20 = float(t.avg20_lots) if pd.notna(t.avg20_lots) else 0.0
     ratio = lots / avg20 if avg20 else 0.0
     liquid_today = lots >= MIN_VOLUME_LOTS and turnover >= MIN_TURNOVER
+    prev5_avg_lots = float(x.iloc[i - 5:i]["volume_lots"].mean())
+    retest_volume_contracted = (
+        lots < float(selected["breakout_lots"])
+        and lots < prev5_avg_lots
+    )
 
     retested = float(t.low) <= platform_high * (1.0 + BREAKOUT_RETEST_TOL)
     elapsed = i - break_i
@@ -294,6 +301,7 @@ def detect_true_breakout(code: str, x: pd.DataFrame) -> tuple[dict, dict | None]
         elapsed <= BREAKOUT_RETEST_DAYS
         and held_structure
         and retested
+        and retest_volume_contracted
         and close >= platform_high
         and location >= 0.50
         and liquid_today
@@ -331,6 +339,9 @@ def detect_true_breakout(code: str, x: pd.DataFrame) -> tuple[dict, dict | None]
         "structure_extension_pct": round(extension * 100, 2),
         "close_location": round(location, 2),
         "volume_ok": True,
+        "breakout_volume_lots": round(float(selected["breakout_lots"]), 0),
+        "prev5_avg_volume_lots": round(prev5_avg_lots, 0),
+        "retest_volume_contracted": retest_volume_contracted,
     }
     if not route:
         return setup, None
@@ -493,8 +504,10 @@ def candidate_row(latest_date: str, code: str, name: str, x: pd.DataFrame, setup
 def main() -> int:
     market = read_market()
     state = load_json(STATE_FILE, {"stocks": {}})
-    if state.get("strategy_version") != "破底翻+混合確認-v3":
-        state = {"stocks": {}, "strategy_version": "破底翻+混合確認-v3"}
+    if not isinstance(state, dict):
+        state = {"stocks": {}}
+    # Preserve prior signal keys during the v4 rule migration to avoid duplicate alerts.
+    state["strategy_version"] = "破底翻+混合確認-v4量縮回踩"
     stocks_state = state.setdefault("stocks", {})
     latest_date = market["date"].max().strftime("%Y-%m-%d")
 
@@ -563,7 +576,7 @@ def main() -> int:
 
     state["updated_at"] = datetime.now(timezone.utc).isoformat()
     state["latest_trade_date"] = latest_date
-    state["strategy_version"] = "破底翻+混合確認-v3"
+    state["strategy_version"] = "破底翻+混合確認-v4量縮回踩"
     state["four_point_rule"] = "已取消"
     state["candidate_count"] = len(candidate_rows)
     state["formal_buy_signal_count"] = len(triggers)
@@ -581,7 +594,7 @@ def main() -> int:
     print(json.dumps(summary, ensure_ascii=False))
 
     if triggers:
-        lines = [f"🦞 龍蝦雷達正式買點｜{latest_date}", "新制：破底翻＋突破後站穩／回踩不破"]
+        lines = [f"🦞 龍蝦雷達正式買點｜{latest_date}", "新制：破底翻＋突破後站穩／量縮回踩不破"]
         for row in triggers:
             lines += [
                 "",
