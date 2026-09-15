@@ -2,7 +2,7 @@ name: Lobster Daily Price Update
 
 on:
   schedule:
-    - cron: '30 6 * * 1-5'  # 台灣時間每個交易日 14:30 自動執行
+    - cron: '30 8 * * 1-5'  # 台灣時間每個交易日 16:30 自動執行
   workflow_dispatch:        # 支援手動觸發執行
 
 jobs:
@@ -40,7 +40,7 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add -A
           if git diff --staged --quiet; then
-            echo "沒有資料變更，跳過 Commit"
+            echo "No changes to commit"
           else
             git commit -m "auto: update price database and strategy signals"
             git pull --rebase origin main
