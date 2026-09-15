@@ -29,11 +29,7 @@ def collect_signals(market: pd.DataFrame) -> list[dict]:
         seen_keys = set()
         for i in range(engine.LOOKBACK + engine.FALSE_BREAK_RECOVERY_DAYS - 1, len(x) - 1):
             hist = x.iloc[: i + 1]
-            for detector in (
-                engine.detect_false_break_reversal,
-                engine.detect_vcp_true_breakout,
-                engine.detect_true_breakout,
-            ):
+            for detector in (engine.detect_false_break_reversal, engine.detect_true_breakout):
                 _setup, signal = detector(code, hist)
                 if signal is None:
                     continue
@@ -91,12 +87,9 @@ def evaluate(signal: dict, horizon: int) -> dict | None:
             stopped = True
             break
         elapsed = j - signal_i
-        if (
-            elapsed <= engine.EXIT_WARNING_DAYS
-            and signal["signal_route"] in {
-                "真突破VCP", "突破後站穩", "突破回踩不破"
-            }
-        ):
+        if elapsed <= engine.EXIT_WARNING_DAYS and signal["signal_route"] in {
+            "突破後站穩", "突破回踩不破"
+        }:
             trigger = float(signal.get("support_upper") or signal.get("key_high") or 0.0)
             start = max(0, j - 5)
             prior_volume = sum(signal["volumes"][start:j]) / max(1, j - start)
@@ -169,7 +162,7 @@ def result_set(signals: list[dict]) -> tuple[dict, list[dict]]:
                 horizon_rows.append(row)
                 evaluated.append(row)
         summary[str(horizon)] = {"全部": summarize(horizon_rows)}
-        for route in ("真突破VCP", "破底翻", "突破後站穩", "突破回踩不破"):
+        for route in ("破底翻", "突破後站穩", "突破回踩不破"):
             summary[str(horizon)][route] = summarize(
                 [row for row in horizon_rows if row["route"] == route]
             )
@@ -188,7 +181,7 @@ def render_table(summary: dict, title: str) -> list[str]:
         "|---:|---|---:|---:|---:|---:|---:|",
     ]
     for horizon in HORIZONS:
-        for route in ("全部", "真突破VCP", "破底翻", "突破後站穩", "突破回踩不破"):
+        for route in ("全部", "破底翻", "突破後站穩", "突破回踩不破"):
             row = summary[str(horizon)][route]
             lines.append(
                 f"| {horizon}日 | {route} | {row['samples']} | "
@@ -215,7 +208,7 @@ def main() -> None:
         "data_end": end_date,
         "entry": "訊號隔日開盤",
         "round_trip_cost_pct": ROUND_TRIP_COST * 100,
-        "stop": "型態結構停損；突破後1至2日假突破/走不開提前出場；核心型態風報比至少1.5",
+        "stop": "收盤跌破支撐下緣0.5%；突破後1至2日假突破/走不開警示出場",
         "raw_signal_count": len(raw_signals),
         "independent_signal_count": len(independent_signals),
         "independent_cooldown_sessions": COOLDOWN_SESSIONS,
