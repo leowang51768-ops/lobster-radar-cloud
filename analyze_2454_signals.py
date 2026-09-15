@@ -23,11 +23,11 @@ STOCK_LIST = [
     "5269.TW", "6415.TW", "5274.TWO", "8454.TW", "9910.TW", "2204.TW", "2201.TW"
 ]
 
-trade_signals = []
+buy_signals = []
 exit_signals = []
 scanned_count = 0
 
-print(f"開始掃描 {len(STOCK_LIST)} 檔股票（執行連 3K 站上 30MA + 關鍵 K 洗盤進出場策略）...")
+print(f"開始掃描 {len(STOCK_LIST)} 檔股票（打底 < 30MA + 連3K站上30MA突破最高點買入）...")
 
 for symbol in STOCK_LIST:
     try:
@@ -43,7 +43,7 @@ for symbol in STOCK_LIST:
         code = symbol.replace('.TW', '').replace('.TWO', '')
 
         # -------------------------------------------------------------
-        # 條件 A：檢查持股出場訊號（連續 3 根 K 棒最低價低於 30MA）
+        # 出場條件：連續 3 根 K 棒最低價低於 30MA
         # -------------------------------------------------------------
         if len(df) >= 3:
             exit_c1 = df['Low'].iloc[-3] < df['MA30'].iloc[-3]
@@ -57,36 +57,30 @@ for symbol in STOCK_LIST:
                 })
 
         # -------------------------------------------------------------
-        # 條件 B：進場訊號掃描（連 3 根站上 30MA -> 尋找觸發價與關鍵 K -> 今日突破高點進場）
+        # 買入條件判定：
+        # 1. 前置：突破前收盤價在 30MA 下方 (< 30MA)
+        # 2. 突破：連續 3 根 K 棒收盤價 > 30MA
+        # 3. 觸發：當日收盤價突破這 3 根 K 棒的最高價 (High)
         # -------------------------------------------------------------
-        # 往前回溯尋找近期是否有符合結構的形態
-        for i in range(30, len(df) - 1):
-            # 1. 出現連續三根 K 棒收盤價站上 30MA
-            c1 = df['Close'].iloc[i-2] > df['MA30'].iloc[i-2]
-            c2 = df['Close'].iloc[i-1] > df['MA30'].iloc[i-1]
-            c3 = df['Close'].iloc[i] > df['MA30'].iloc[i]
-
-            if c1 and c2 and c3:
-                # 確定觸發價：三根 K 棒的最低價
-                trigger_price = min(df['Low'].iloc[i-2], df['Low'].iloc[i-1], df['Low'].iloc[i])
-                
-                # 2. 尋找後續觸及/洗刷該觸發價的「關鍵 K」
-                for j in range(i + 1, len(df)):
-                    key_k_low = df['Low'].iloc[j]
-                    key_k_high = df['High'].iloc[j]
-
-                    if key_k_low <= trigger_price:
-                        # 3. 若該關鍵 K 為當日前一根或最新一根，且最新收盤價突破關鍵 K 高點 -> 觸發進場
-                        latest_close = df['Close'].iloc[-1]
-                        if latest_close >= key_k_high and (j == len(df) - 1 or j == len(df) - 2):
-                            trade_signals.append({
-                                "code": code,
-                                "close": round(float(latest_close), 2),
-                                "key_k_high": round(float(key_k_high), 2),
-                                "stop_loss": round(float(key_k_low), 2),
-                                "ma30": round(float(df['MA30'].iloc[-1]), 2)
-                            })
-                        break
+        if len(df) >= 4:
+            base_under_ma = df['Close'].iloc[-4] < df['MA30'].iloc[-4]
+            
+            c1_above = df['Close'].iloc[-3] > df['MA30'].iloc[-3]
+            c2_above = df['Close'].iloc[-2] > df['MA30'].iloc[-2]
+            c3_above = df['Close'].iloc[-1] > df['MA30'].iloc[-1]
+            
+            # 連 3 根的最高價
+            three_k_high = max(df['High'].iloc[-3], df['High'].iloc[-2], df['High'].iloc[-1])
+            latest_close = df['Close'].iloc[-1]
+            
+            # 判斷是否符合打底後連 3 根突破最高點買入
+            if base_under_ma and c1_above and c2_above and c3_above and (latest_close >= three_k_high):
+                buy_signals.append({
+                    "code": code,
+                    "close": round(float(latest_close), 2),
+                    "target_high": round(float(three_k_high), 2),
+                    "ma30": round(float(df['MA30'].iloc[-1]), 2)
+                })
 
     except Exception as e:
         print(f"處理 {symbol} 時發生錯誤: {e}")
@@ -94,7 +88,7 @@ for symbol in STOCK_LIST:
 # 寫回 JSON 存檔
 out = {
     "total_scanned": scanned_count,
-    "buy_signals": trade_signals,
+    "buy_signals": buy_signals,
     "exit_signals": exit_signals
 }
 
@@ -109,19 +103,18 @@ if token and user_id:
     token = token.strip()
     user_id = user_id.strip()
 
-    msg_lines = ["🚨 【30MA 連 3K 關鍵防守策略日報】"]
+    msg_lines = ["🚨 【30MA 連3K突破高點買入策略】"]
     msg_lines.append(f"📊 成功掃描標的：{scanned_count} / {len(STOCK_LIST)} 檔\n")
     
-    # 1. 多單進場訊號區
-    if trade_signals:
-        msg_lines.append(f"🎯 【進場訊號】共 {len(trade_signals)} 檔符合突破關鍵K高點：")
-        for item in trade_signals[:10]:
-            msg_lines.append(f"• {item['code']} | 收盤: {item['close']}")
-            msg_lines.append(f"  └ 關鍵K高點: {item['key_k_high']} | 停損位(低點): {item['stop_loss']}")
+    # 買入訊號區
+    if buy_signals:
+        msg_lines.append(f"📈 【買入訊號】共 {len(buy_signals)} 檔符合打底後連3K突破高點：")
+        for item in buy_signals[:10]:
+            msg_lines.append(f"• {item['code']} | 收盤: {item['close']} | 突破高點: {item['target_high']} (30MA: {item['ma30']})")
     else:
-        msg_lines.append("🎯 【進場訊號】：今日無標的符合突破關鍵 K 進場條件。")
+        msg_lines.append("📈 【買入訊號】：今日無標的符合打底後連3K突破高點條件。")
 
-    # 2. 持股平倉/出場警告區
+    # 出場警告區
     if exit_signals:
         msg_lines.append(f"\n⚠️ 【出場警告】共 {len(exit_signals)} 檔連3K低於30MA：")
         for item in exit_signals[:10]:
