@@ -2,7 +2,7 @@ name: Run Strategy Radar & LINE Notification
 
 on:
   workflow_run:
-    workflows: ["Update SQLite DB"]  # ⚠️ 請確保這裡填入 GPT 更新資料庫的 Workflow 名稱
+    workflows: ["Lobster Daily Price Update"]  # ⚠️ 請確保這裡填入 GPT 更新資料庫的 Workflow 名稱
     types:
       - completed
 
