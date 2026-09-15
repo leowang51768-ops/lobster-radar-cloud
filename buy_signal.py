@@ -62,6 +62,22 @@ MIN_VOLUME_LOTS = 1000
 MIN_TURNOVER = 30_000_000
 SUPPORT_BREAK_TOL = 0.005
 
+# Four-layer price-action evidence.  These thresholds translate the visual
+# language (tight approach, efficient breakout and structural risk) into
+# reproducible end-of-day rules.
+VCP_DAYS = 5
+ATR_SHORT_DAYS = 3
+ATR_BASE_DAYS = 10
+ATR_COMPRESSION_MAX = 0.80
+PREBREAK_VOLUME_MAX = 0.85
+BREAKOUT_VOLUME_5D_MIN = 1.50
+BREAKOUT_BODY_EFFICIENCY_MIN = 0.70
+BREAKOUT_CLOSE_LOCATION_MIN = 0.75
+MIN_RISK_REWARD = 1.50
+EXIT_WARNING_DAYS = 2
+STALLED_BOUNDARY_TOL = 0.01
+EXIT_VOLUME_5D_MIN = 1.20
+
 # Existing 70-stock 30MA key-candle route, now evaluated from the same
 # official TWSE/TPEx SQLite database as the core Lobster routes.
 MA30_KEY_WATCHLIST = {
@@ -77,12 +93,13 @@ MA30_KEY_WATCHLIST = {
 }
 MA30_RETEST_LOOKAHEAD = 15
 MA30_RECLAIM_DAYS = 3
-STRATEGY_VERSION = "破底翻+混合確認-v4量縮回踩+30MA關鍵K"
+STRATEGY_VERSION = "龍蝦四層證據-v5+30MA關鍵K"
 ROUTE_PRIORITY = {
-    "突破回踩不破": 1,
-    "破底翻": 2,
-    "突破後站穩": 3,
-    "30MA關鍵K": 4,
+    "真突破VCP": 1,
+    "突破回踩不破": 2,
+    "破底翻": 3,
+    "突破後站穩": 4,
+    "30MA關鍵K": 5,
 }
 
 
@@ -131,6 +148,18 @@ def prepare(g: pd.DataFrame) -> pd.DataFrame:
     x["ema13"] = ema(x["close"], 13)
     x["dif"] = x["ema6"] - x["ema13"]
     x["avg20_lots"] = x["volume_lots"].rolling(20).mean()
+    x["avg5_lots"] = x["volume_lots"].rolling(5).mean()
+    previous_close = x["close"].shift(1)
+    x["true_range"] = pd.concat(
+        [
+            x["high"] - x["low"],
+            (x["high"] - previous_close).abs(),
+            (x["low"] - previous_close).abs(),
+        ],
+        axis=1,
+    ).max(axis=1)
+    x["atr3"] = x["true_range"].rolling(ATR_SHORT_DAYS).mean()
+    x["atr10"] = x["true_range"].rolling(ATR_BASE_DAYS).mean()
     return x
 
 
@@ -150,6 +179,82 @@ def volume_gate(t: pd.Series) -> tuple[bool, float, float, float]:
 def close_location(t: pd.Series) -> float:
     spread = float(t.high) - float(t.low)
     return (float(t.close) - float(t.low)) / spread if spread > 0 else 1.0
+
+
+def body_efficiency(t: pd.Series) -> float:
+    """Bullish real-body displacement divided by the full daily range."""
+    spread = float(t.high) - float(t.low)
+    return max(0.0, float(t.close) - float(t.open)) / spread if spread > 0 else 0.0
+
+
+def bullish_engulfing(x: pd.DataFrame, i: int) -> bool:
+    if i < 1:
+        return False
+    previous = x.iloc[i - 1]
+    current = x.iloc[i]
+    return bool(
+        float(previous.close) < float(previous.open)
+        and float(current.close) > float(current.open)
+        and float(current.open) <= float(previous.close)
+        and float(current.close) >= float(previous.open)
+    )
+
+
+def long_lower_shadow(t: pd.Series) -> bool:
+    spread = float(t.high) - float(t.low)
+    if spread <= 0:
+        return False
+    lower_shadow = min(float(t.open), float(t.close)) - float(t.low)
+    return lower_shadow / spread >= 0.50
+
+
+def next_resistance_target(
+    x: pd.DataFrame,
+    signal_i: int,
+    entry: float,
+    support: float,
+    structure_high: float,
+) -> tuple[float, str]:
+    """Use the nearest older overhead high; otherwise use a measured move."""
+    older = x.iloc[max(0, signal_i - 120):max(0, signal_i - LOOKBACK)]
+    overhead = sorted(
+        {float(v) for v in older["high"].dropna() if float(v) > entry * 1.005}
+    )
+    if overhead:
+        return overhead[0], "前方歷史壓力"
+    width = max(structure_high - support, entry * 0.01)
+    return structure_high + width, "整理區等幅量測"
+
+
+def attach_risk_plan(
+    signal: dict,
+    setup: dict,
+    x: pd.DataFrame,
+    signal_i: int,
+    structure_high: float,
+) -> bool:
+    entry = float(signal["baseline_entry"])
+    support = float(signal["support_lower"])
+    stop = support * (1.0 - SUPPORT_BREAK_TOL)
+    risk = entry - stop
+    target, target_source = next_resistance_target(
+        x, signal_i, entry, support, structure_high
+    )
+    reward = target - entry
+    rr = reward / risk if risk > 0 else 0.0
+    signal.update({
+        "stop_price": round(stop, 2),
+        "target_price": round(target, 2),
+        "target_source": target_source,
+        "risk_reward": round(rr, 2),
+    })
+    setup.update({
+        "stop_price": signal["stop_price"],
+        "target_price": signal["target_price"],
+        "target_source": target_source,
+        "risk_reward": signal["risk_reward"],
+    })
+    return rr >= MIN_RISK_REWARD
 
 
 def detect_false_break_reversal(code: str, x: pd.DataFrame) -> tuple[dict, dict | None]:
@@ -188,6 +293,25 @@ def detect_false_break_reversal(code: str, x: pd.DataFrame) -> tuple[dict, dict 
     location = close_location(t)
     volume_ok, lots, turnover, ratio = volume_gate(t)
     extension = close / best["prior_low"] - 1.0
+    break_i = int(best["break_i"])
+    range_contracting = False
+    volume_expanding = False
+    if break_i >= 2:
+        ranges = (
+            x.iloc[break_i - 2:break_i + 1]["high"]
+            - x.iloc[break_i - 2:break_i + 1]["low"]
+        ).astype(float).tolist()
+        volumes = x.iloc[break_i - 2:break_i + 1]["volume_lots"].astype(float).tolist()
+        range_contracting = ranges[2] < ranges[1] < ranges[0]
+        volume_expanding = volumes[2] > volumes[1] > volumes[0]
+    volume_price_divergence = range_contracting and volume_expanding
+    accelerated_reclaim = (
+        best["depth"] <= -0.015
+        and i - break_i <= 2
+    )
+    engulfing = bullish_engulfing(x, i)
+    lower_shadow = long_lower_shadow(t)
+    reversal_candle = engulfing or lower_shadow
     setup = {
         "pattern": "破底翻",
         "setup_date": x.iloc[best["break_i"]].date.strftime("%Y-%m-%d"),
@@ -198,6 +322,16 @@ def detect_false_break_reversal(code: str, x: pd.DataFrame) -> tuple[dict, dict 
         "structure_extension_pct": round(extension * 100, 2),
         "close_location": round(location, 2),
         "volume_ok": volume_ok,
+        "volume_price_divergence": volume_price_divergence,
+        "accelerated_reclaim": accelerated_reclaim,
+        "bullish_engulfing": engulfing,
+        "long_lower_shadow": lower_shadow,
+        "evidence_count": sum([
+            True,
+            volume_price_divergence or accelerated_reclaim,
+            reversal_candle,
+            volume_ok,
+        ]),
     }
     confirmed = (
         bullish
@@ -205,6 +339,8 @@ def detect_false_break_reversal(code: str, x: pd.DataFrame) -> tuple[dict, dict 
         and location >= CLOSE_LOCATION_MIN
         and volume_ok
         and extension <= MAX_STRUCTURE_EXTENSION
+        and (volume_price_divergence or accelerated_reclaim)
+        and reversal_candle
     )
     if not confirmed:
         return setup, None
@@ -229,7 +365,116 @@ def detect_false_break_reversal(code: str, x: pd.DataFrame) -> tuple[dict, dict 
         "support_source": setup["support_source"],
         "pattern_key": pattern_key,
         "structure_extension_pct": setup["structure_extension_pct"],
+        "evidence_count": setup["evidence_count"],
+        "evidence_notes": "收復支撐＋量價背離/加速掃低＋吞噬/長下影＋流動性",
+        "breakout_efficiency": "",
+        "atr_compression_ratio": "",
     }
+    if not attach_risk_plan(signal, setup, x, i, best["prior_low"]):
+        setup["confirmation_mode"] = "風報比不足"
+        return setup, None
+    return setup, signal
+
+
+def detect_vcp_true_breakout(code: str, x: pd.DataFrame) -> tuple[dict, dict | None]:
+    """Four-layer VCP/price-efficiency breakout evaluated after the close."""
+    minimum = max(LOOKBACK + 1, ATR_BASE_DAYS + VCP_DAYS + 1)
+    if len(x) < minimum:
+        return {}, None
+
+    i = len(x) - 1
+    t = x.iloc[i]
+    prior = x.iloc[i - LOOKBACK:i]
+    compression = x.iloc[i - VCP_DAYS:i]
+    earlier = x.iloc[i - VCP_DAYS - ATR_BASE_DAYS:i - VCP_DAYS]
+    platform_high = float(prior["high"].max())
+    consolidation_low = float(compression["low"].min())
+    touches = int((prior["high"] >= platform_high * (1.0 - PLATFORM_TOUCH_TOL)).sum())
+
+    atr_short = float(compression.tail(ATR_SHORT_DAYS)["true_range"].mean())
+    atr_base = float(earlier["true_range"].mean())
+    atr_ratio = atr_short / atr_base if atr_base > 0 else math.inf
+    recent_volume = float(compression.tail(3)["volume_lots"].mean())
+    base_volume = float(earlier["volume_lots"].mean())
+    prebreak_volume_ratio = recent_volume / base_volume if base_volume > 0 else math.inf
+    breakout_lots = float(t.volume_lots) if pd.notna(t.volume_lots) else 0.0
+    prior5_volume = float(x.iloc[i - 5:i]["volume_lots"].mean())
+    breakout_volume_ratio = breakout_lots / prior5_volume if prior5_volume > 0 else 0.0
+    location = close_location(t)
+    efficiency = body_efficiency(t)
+    close = float(t.close)
+    trend_ok = bool(
+        pd.notna(t.ma20)
+        and pd.notna(x.iloc[i - 1].ma20)
+        and close > float(t.ma20)
+        and float(t.ma20) >= float(x.iloc[i - 1].ma20)
+    )
+    liquidity_ok = (
+        breakout_lots >= MIN_VOLUME_LOTS
+        and float(t.turnover) >= MIN_TURNOVER
+    )
+    extension = close / platform_high - 1.0
+    setup = {
+        "pattern": "真突破VCP",
+        "setup_date": t.date.strftime("%Y-%m-%d"),
+        "breakout_date": t.date.strftime("%Y-%m-%d"),
+        "confirmation_mode": "收盤確認，次交易日試單",
+        "trigger_level": round(platform_high, 2),
+        "support_lower": round(consolidation_low, 2),
+        "support_upper": round(platform_high, 2),
+        "support_source": "突破前5日窄幅整理區",
+        "platform_touches": touches,
+        "structure_extension_pct": round(extension * 100, 2),
+        "close_location": round(location, 2),
+        "breakout_efficiency": round(efficiency, 2),
+        "atr_compression_ratio": round(atr_ratio, 2),
+        "prebreak_volume_ratio": round(prebreak_volume_ratio, 2),
+        "breakout_volume_5d_ratio": round(breakout_volume_ratio, 2),
+        "volume_ok": liquidity_ok,
+    }
+    four_layers = {
+        "trend_and_approach": trend_ok and atr_ratio <= ATR_COMPRESSION_MAX
+            and prebreak_volume_ratio <= PREBREAK_VOLUME_MAX,
+        "price_breakout": touches >= MIN_PLATFORM_TOUCHES
+            and close > platform_high * (1.0 + BREAKOUT_MIN),
+        "volume_price_efficiency": breakout_volume_ratio >= BREAKOUT_VOLUME_5D_MIN
+            and efficiency >= BREAKOUT_BODY_EFFICIENCY_MIN
+            and location >= BREAKOUT_CLOSE_LOCATION_MIN,
+        "liquidity_and_extension": liquidity_ok
+            and extension <= MAX_STRUCTURE_EXTENSION,
+    }
+    setup["evidence_count"] = sum(four_layers.values())
+    if not all(four_layers.values()):
+        return setup, None
+
+    signal = {
+        "date": t.date.strftime("%Y-%m-%d"),
+        "code": code,
+        "signal_route": "真突破VCP",
+        "signal_light": "🟢綠燈",
+        "close": round(close, 2),
+        "baseline_entry": round(platform_high, 2),
+        "breakout_date": t.date.strftime("%Y-%m-%d"),
+        "confirmation_mode": setup["confirmation_mode"],
+        "key_date": t.date.strftime("%Y-%m-%d"),
+        "key_high": round(platform_high, 2),
+        "key_low": round(consolidation_low, 2),
+        "volume_lots": round(breakout_lots, 0),
+        "volume_ratio": round(breakout_volume_ratio, 2),
+        "turnover": round(float(t.turnover), 0),
+        "support_lower": setup["support_lower"],
+        "support_upper": setup["support_upper"],
+        "support_source": setup["support_source"],
+        "pattern_key": f"真突破VCP:{t.date.strftime('%Y-%m-%d')}:{platform_high:.2f}",
+        "structure_extension_pct": setup["structure_extension_pct"],
+        "evidence_count": 4,
+        "evidence_notes": "20MA趨勢＋ATR/量縮靠近＋1.5倍量高效率突破＋結構風報比",
+        "breakout_efficiency": setup["breakout_efficiency"],
+        "atr_compression_ratio": setup["atr_compression_ratio"],
+    }
+    if not attach_risk_plan(signal, setup, x, i, platform_high):
+        setup["confirmation_mode"] = "風報比不足"
+        return setup, None
     return setup, signal
 
 
@@ -272,6 +517,7 @@ def detect_true_breakout(code: str, x: pd.DataFrame) -> tuple[dict, dict | None]
                 "breakout_lots": breakout_lots,
                 "breakout_ratio": breakout_ratio,
                 "extension": extension,
+                "consolidation_low": float(prior.tail(VCP_DAYS)["low"].min()),
             }
             break
 
@@ -349,15 +595,30 @@ def detect_true_breakout(code: str, x: pd.DataFrame) -> tuple[dict, dict | None]
         mode = "突破後站穩"
         route = "突破後站穩"
 
+    structure_support = (
+        float(t.low)
+        if route == "突破回踩不破"
+        else float(selected["consolidation_low"])
+    )
+    atr_compression_ratio = ""
+    if break_i >= 13:
+        short_atr = float(x.iloc[break_i - 3:break_i]["true_range"].mean())
+        base_atr = float(x.iloc[break_i - 13:break_i - 3]["true_range"].mean())
+        if base_atr > 0:
+            atr_compression_ratio = round(short_atr / base_atr, 2)
+
     setup = {
         "pattern": "突破後確認",
         "setup_date": breakout_date,
         "breakout_date": breakout_date,
         "confirmation_mode": mode,
         "trigger_level": round(platform_high, 2),
-        "support_lower": round(platform_high * (1.0 - 0.01), 2),
+        "support_lower": round(structure_support, 2),
         "support_upper": round(platform_high, 2),
-        "support_source": "突破平台上緣轉支撐",
+        "support_source": (
+            "回撤測試低點" if route == "突破回踩不破"
+            else "突破前5日窄幅整理區低點"
+        ),
         "platform_touches": int(selected["touches"]),
         "structure_extension_pct": round(extension * 100, 2),
         "close_location": round(location, 2),
@@ -365,6 +626,9 @@ def detect_true_breakout(code: str, x: pd.DataFrame) -> tuple[dict, dict | None]
         "breakout_volume_lots": round(float(selected["breakout_lots"]), 0),
         "prev5_avg_volume_lots": round(prev5_avg_lots, 0),
         "retest_volume_contracted": retest_volume_contracted,
+        "breakout_efficiency": round(body_efficiency(x.iloc[break_i]), 2),
+        "atr_compression_ratio": atr_compression_ratio,
+        "evidence_count": 3,
     }
     if not route:
         return setup, None
@@ -396,7 +660,14 @@ def detect_true_breakout(code: str, x: pd.DataFrame) -> tuple[dict, dict | None]
         "support_source": setup["support_source"],
         "pattern_key": pattern_key,
         "structure_extension_pct": setup["structure_extension_pct"],
+        "evidence_count": setup["evidence_count"],
+        "evidence_notes": "平台突破＋站穩/量縮回踩＋結構停損與風報比",
+        "breakout_efficiency": setup["breakout_efficiency"],
+        "atr_compression_ratio": setup["atr_compression_ratio"],
     }
+    if not attach_risk_plan(signal, setup, x, i, platform_high):
+        setup["confirmation_mode"] = "風報比不足"
+        return setup, None
     return setup, signal
 
 def detect_ma30_key_retest(code: str, x: pd.DataFrame) -> tuple[dict, dict | None]:
@@ -488,6 +759,14 @@ def detect_ma30_key_retest(code: str, x: pd.DataFrame) -> tuple[dict, dict | Non
         "pattern_key": f"30MA關鍵K:{key_date}:{float(best['key_high']):.2f}",
         "structure_extension_pct": setup["structure_extension_pct"],
         "confirmation_mode": setup["confirmation_mode"],
+        "stop_price": round(support_lower * (1.0 - SUPPORT_BREAK_TOL), 2),
+        "target_price": "",
+        "target_source": "",
+        "risk_reward": "",
+        "evidence_count": 2,
+        "evidence_notes": "30MA回測＋關鍵K突破（獨立舊規則）",
+        "breakout_efficiency": "",
+        "atr_compression_ratio": "",
     }
     return setup, signal
 
@@ -500,6 +779,8 @@ def recommendation_fields() -> list[str]:
         "extension_30ma_pct", "extension_20ma_pct",
         "support_lower", "support_upper", "support_source",
         "pattern_key", "structure_extension_pct", "breakout_date", "confirmation_mode",
+        "stop_price", "target_price", "target_source", "risk_reward",
+        "evidence_count", "evidence_notes", "breakout_efficiency", "atr_compression_ratio",
     ]
 
 
@@ -550,6 +831,8 @@ def write_candidate_status(rows: list[dict]) -> None:
         "volume_lots", "avg20_volume_lots", "volume_ratio", "turnover",
         "platform_touches", "close_location", "structure_extension_pct",
         "support_lower", "support_upper", "support_source", "support_status",
+        "stop_price", "target_price", "target_source", "risk_reward",
+        "evidence_count", "breakout_efficiency", "atr_compression_ratio",
     ]
     with CANDIDATES.open("w", encoding="utf-8-sig", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=fields)
@@ -622,7 +905,90 @@ def candidate_row(latest_date: str, code: str, name: str, x: pd.DataFrame, setup
         "support_upper": setup.get("support_upper", ""),
         "support_source": setup.get("support_source", ""),
         "support_status": support_status,
+        "stop_price": setup.get("stop_price", ""),
+        "target_price": setup.get("target_price", ""),
+        "target_source": setup.get("target_source", ""),
+        "risk_reward": setup.get("risk_reward", ""),
+        "evidence_count": setup.get("evidence_count", ""),
+        "breakout_efficiency": setup.get("breakout_efficiency", ""),
+        "atr_compression_ratio": setup.get("atr_compression_ratio", ""),
     }
+
+
+def detect_exit_warnings(market: pd.DataFrame, latest_date: str, state: dict) -> list[dict]:
+    """Monitor immutable formal recommendations for structural/early failure."""
+    if not RECOMMENDATIONS.exists():
+        return []
+    with RECOMMENDATIONS.open("r", encoding="utf-8-sig", newline="") as handle:
+        recommendations = list(csv.DictReader(handle))
+
+    prepared = {
+        str(code): prepare(group)
+        for code, group in market.groupby("code", sort=False)
+    }
+    sent = state.setdefault("exit_warning_keys", {})
+    warnings = []
+    for rec in recommendations:
+        code = str(rec.get("code", ""))
+        route = str(rec.get("signal_route", ""))
+        rec_date = str(rec.get("date", ""))
+        if not code or not rec_date or code not in prepared or rec_date >= latest_date:
+            continue
+        x = prepared[code]
+        dates = x["date"].dt.strftime("%Y-%m-%d")
+        earlier_indexes = x.index[dates == rec_date].tolist()
+        if not earlier_indexes:
+            continue
+        signal_i = int(earlier_indexes[-1])
+        latest_i = len(x) - 1
+        elapsed = latest_i - signal_i
+        if elapsed <= 0:
+            continue
+
+        t = x.iloc[latest_i]
+        close = float(t.close)
+        trigger = float(rec.get("support_upper") or rec.get("key_high") or 0.0)
+        support = float(rec.get("support_lower") or 0.0)
+        stop_text = rec.get("stop_price", "")
+        stop = float(stop_text) if stop_text not in (None, "") else support * (1.0 - SUPPORT_BREAK_TOL)
+        previous_volume = float(x.iloc[max(0, latest_i - 5):latest_i]["volume_lots"].mean())
+        volume_ratio_5d = float(t.volume_lots) / previous_volume if previous_volume > 0 else 0.0
+
+        warning_type = ""
+        reason = ""
+        if stop > 0 and close < stop:
+            warning_type = "結構失效"
+            reason = f"收盤{close:.2f}跌破結構停損{stop:.2f}"
+        elif elapsed <= EXIT_WARNING_DAYS and route in {
+            "真突破VCP", "突破後站穩", "突破回踩不破"
+        }:
+            if trigger > 0 and close < trigger and volume_ratio_5d >= EXIT_VOLUME_5D_MIN:
+                warning_type = "假突破"
+                reason = f"{elapsed}日內放量跌回突破區，量比{volume_ratio_5d:.2f}x"
+            elif (
+                trigger > 0
+                and close <= trigger * (1.0 + STALLED_BOUNDARY_TOL)
+                and volume_ratio_5d >= EXIT_VOLUME_5D_MIN
+            ):
+                warning_type = "走不開"
+                reason = f"{elapsed}日內放量仍黏在突破邊界，量比{volume_ratio_5d:.2f}x"
+
+        if not warning_type:
+            continue
+        pattern_key = rec.get("pattern_key") or f"{rec_date}:{code}:{route}"
+        event_key = f"{pattern_key}:{warning_type}"
+        if sent.get(event_key):
+            continue
+        sent[event_key] = latest_date
+        warnings.append({
+            "code": code,
+            "name": rec.get("name", ""),
+            "route": route,
+            "warning_type": warning_type,
+            "reason": reason,
+            "close": round(close, 2),
+        })
+    return warnings
 
 
 def main() -> int:
@@ -647,9 +1013,11 @@ def main() -> int:
             continue
 
         false_setup, false_signal = detect_false_break_reversal(code, x)
+        vcp_setup, vcp_signal = detect_vcp_true_breakout(code, x)
         breakout_setup, breakout_signal = detect_true_breakout(code, x)
         ma30_setup, ma30_signal = detect_ma30_key_retest(code, x)
         setups = [
+            (vcp_setup, vcp_signal),
             (false_setup, false_signal),
             (breakout_setup, breakout_signal),
             (ma30_setup, ma30_signal),
@@ -701,7 +1069,8 @@ def main() -> int:
                 "trend": signal["signal_route"],
                 "strategy_source": (
                     "龍蝦30MA關鍵K" if signal["signal_route"] == "30MA關鍵K"
-                    else "龍蝦核心"
+                    else "龍蝦四層證據" if signal["signal_route"] == "真突破VCP"
+                    else "龍蝦核心補強"
                 ),
                 "primary_key_date": "",
                 "primary_key_high": "",
@@ -725,6 +1094,8 @@ def main() -> int:
     )
     write_candidate_status(candidate_rows)
 
+    exit_warnings = detect_exit_warnings(market, latest_date, state)
+
     state["updated_at"] = datetime.now(timezone.utc).isoformat()
     state["latest_trade_date"] = latest_date
     state["strategy_version"] = STRATEGY_VERSION
@@ -740,14 +1111,15 @@ def main() -> int:
         "four_point_rule": "retired",
         "candidates": len(candidate_rows),
         "formal_buy_signals": len(triggers),
+        "exit_warnings": len(exit_warnings),
         "route_counts": dict(route_counts),
     }
     print(json.dumps(summary, ensure_ascii=False))
 
-    if triggers:
+    if triggers or exit_warnings:
         lines = [
             f"🦞 龍蝦雷達買點建議｜{latest_date}",
-            "整合版：破底翻＋突破後站穩＋量縮回踩不破＋30MA關鍵K",
+            "四層證據版：真突破VCP＋破底翻＋站穩/量縮回踩＋30MA關鍵K",
         ]
         for row in triggers:
             lines += [
@@ -759,7 +1131,17 @@ def main() -> int:
                 f"支撐來源：{row['support_source']}",
                 f"成交量：{int(row['volume_lots'])}張｜量比：{row['volume_ratio']}x",
                 f"績效基準試單價：{row['baseline_entry']}",
-                f"失效：收盤有效跌破 {row['support_lower']}（容許0.5%誤差）",
+                f"結構停損：{row.get('stop_price') or round(float(row['support_lower']) * (1.0 - SUPPORT_BREAK_TOL), 2)}",
+                f"目標壓力：{row.get('target_price') or '待觀察'}｜風報比：{row.get('risk_reward') or '未計算'}",
+                f"四層證據：{row.get('evidence_count', '')}/4",
+            ]
+        for row in exit_warnings:
+            lines += [
+                "",
+                f"⚠️ {row['code']} {row['name']}｜{row['warning_type']}",
+                f"原買點：{row['route']}｜今日收盤：{row['close']}",
+                f"原因：{row['reason']}",
+                "處置：屬出場／避險警示；是否實際賣出仍以持股狀態確認。",
             ]
         send_line("\n".join(lines))
     return 0
