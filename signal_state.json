@@ -914,7 +914,11 @@
       "strong20_stage": "等待20MA回測",
       "candidate_since": "2026-09-14",
       "layer1_current": true,
-      "layer1_route": "四要點"
+      "layer1_route": "四要點",
+      "突破回踩不破": "突破回踩不破:2026-09-11:17.30",
+      "support_lower": 17.13,
+      "support_upper": 17.3,
+      "support_source": "突破平台上緣轉支撐"
     },
     "2834": {
       "three_above30_date": "2026-09-03",
@@ -3835,9 +3839,9 @@
       "key_date": "2026-09-14",
       "key_high": 21.65,
       "key_low": 21.0,
-      "support_lower": 20.45,
-      "support_upper": 21.0,
-      "support_source": "30MA回踩低點＋30MA重疊支撐",
+      "support_lower": 21.14,
+      "support_upper": 21.35,
+      "support_source": "突破平台上緣轉支撐",
       "support_route": "30MA回踩",
       "support_status": "有效",
       "strong20_stage": "等待20MA回測",
@@ -3852,7 +3856,8 @@
         "DIF今日>=昨日": true,
         "基本面支撐": true,
         "強勢20MA回測守住": false
-      }
+      },
+      "突破回踩不破": "突破回踩不破:2026-09-14:21.35"
     },
     "2849": {
       "three_above30_date": "2026-09-08",
@@ -4936,7 +4941,11 @@
         "DIF今日>=昨日": true,
         "基本面支撐": true,
         "強勢20MA回測守住": false
-      }
+      },
+      "突破後站穩": "突破後站穩:2026-09-14:99.80",
+      "support_lower": 98.8,
+      "support_upper": 99.8,
+      "support_source": "突破平台上緣轉支撐"
     },
     "6204": {
       "three_above30_date": "2026-08-24",
@@ -5604,10 +5613,17 @@
         "基本面支撐": true,
         "強勢20MA回測守住": true
       }
+    },
+    "2308": {
+      "破底翻": "破底翻:2026-09-11:1655.0",
+      "name": "台達電",
+      "support_lower": 1595.0,
+      "support_upper": 1655.0,
+      "support_source": "破底低點至收復之前波低點"
     }
   },
-  "updated_at": "2026-09-14T12:49:19.318259+00:00",
-  "latest_trade_date": "2026-09-14",
+  "updated_at": "2026-09-15T08:43:39.978921+00:00",
+  "latest_trade_date": "2026-09-15",
   "layer1_candidate_count": 187,
   "stage_counts": {
     "正式試單": 1,
@@ -5635,5 +5651,13 @@
   "layer1_route_counts": {
     "四要點": 178,
     "強勢20MA續強": 9
+  },
+  "strategy_version": "破底翻+混合確認-v4量縮回踩",
+  "four_point_rule": "已取消",
+  "candidate_count": 505,
+  "formal_buy_signal_count": 4,
+  "route_counts": {
+    "突破後確認": 291,
+    "破底翻": 214
   }
 }
