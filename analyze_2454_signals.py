@@ -4,7 +4,7 @@ import urllib.request
 import pandas as pd
 import yfinance as yf
 
-# 1. 修正上市/上櫃代號（上櫃股票改為 .TWO）
+# 1. 完整 70 檔上市/上櫃監控清單
 STOCK_LIST = [
     # 半導體與代工 / 封測 / CoWoS
     "2330.TW", "2454.TW", "2303.TW", "3711.TW", "3131.TWO", "6187.TWO", "3583.TW", "6223.TWO",
@@ -23,60 +23,85 @@ STOCK_LIST = [
     "5269.TW", "6415.TW", "5274.TWO", "8454.TW", "9910.TW", "2204.TW", "2201.TW"
 ]
 
-ma30_signals = []
+trade_signals = []
+exit_signals = []
 scanned_count = 0
 
-print(f"開始掃描 {len(STOCK_LIST)} 檔股票數據...")
+print(f"開始掃描 {len(STOCK_LIST)} 檔股票（執行連 3K 站上 30MA + 關鍵 K 洗盤進出場策略）...")
 
 for symbol in STOCK_LIST:
     try:
-        df = yf.download(symbol, period="60d", progress=False)
-        if df.empty or len(df) < 30:
-            print(f"⚠️ {symbol} 抓取資料為空或長度不足")
+        df = yf.download(symbol, period="120d", progress=False)
+        if df.empty or len(df) < 40:
             continue
         
         scanned_count += 1
-
         if isinstance(df.columns, pd.MultiIndex):
             df.columns = df.columns.get_level_values(0)
 
         df['MA30'] = df['Close'].rolling(window=30).mean()
-
-        latest = df.iloc[-1]
-        prev = df.iloc[-2]
-
-        close_price = float(latest['Close'])
-        ma30_price = float(latest['MA30'])
-        prev_close = float(prev['Close'])
-        prev_ma30 = float(prev['MA30'])
-
         code = symbol.replace('.TW', '').replace('.TWO', '')
 
-        # 訊號判斷：突破 30MA 或 回踩 30MA（寬限容忍度 2.5%）
-        is_breakthrough = (prev_close < prev_ma30) and (close_price >= ma30_price)
-        is_retest_support = (close_price >= ma30_price) and (abs(close_price - ma30_price) / ma30_price <= 0.025)
+        # -------------------------------------------------------------
+        # 條件 A：檢查持股出場訊號（連續 3 根 K 棒最低價低於 30MA）
+        # -------------------------------------------------------------
+        if len(df) >= 3:
+            exit_c1 = df['Low'].iloc[-3] < df['MA30'].iloc[-3]
+            exit_c2 = df['Low'].iloc[-2] < df['MA30'].iloc[-2]
+            exit_c3 = df['Low'].iloc[-1] < df['MA30'].iloc[-1]
+            if exit_c1 and exit_c2 and exit_c3:
+                exit_signals.append({
+                    "code": code,
+                    "close": round(float(df['Close'].iloc[-1]), 2),
+                    "ma30": round(float(df['MA30'].iloc[-1]), 2)
+                })
 
-        if is_breakthrough or is_retest_support:
-            signal_type = "突破30MA" if is_breakthrough else "回踩30MA"
-            ma30_signals.append({
-                "code": code,
-                "type": signal_type,
-                "close": round(close_price, 2),
-                "ma30": round(ma30_price, 2)
-            })
+        # -------------------------------------------------------------
+        # 條件 B：進場訊號掃描（連 3 根站上 30MA -> 尋找觸發價與關鍵 K -> 今日突破高點進場）
+        # -------------------------------------------------------------
+        # 往前回溯尋找近期是否有符合結構的形態
+        for i in range(30, len(df) - 1):
+            # 1. 出現連續三根 K 棒收盤價站上 30MA
+            c1 = df['Close'].iloc[i-2] > df['MA30'].iloc[i-2]
+            c2 = df['Close'].iloc[i-1] > df['MA30'].iloc[i-1]
+            c3 = df['Close'].iloc[i] > df['MA30'].iloc[i]
+
+            if c1 and c2 and c3:
+                # 確定觸發價：三根 K 棒的最低價
+                trigger_price = min(df['Low'].iloc[i-2], df['Low'].iloc[i-1], df['Low'].iloc[i])
+                
+                # 2. 尋找後續觸及/洗刷該觸發價的「關鍵 K」
+                for j in range(i + 1, len(df)):
+                    key_k_low = df['Low'].iloc[j]
+                    key_k_high = df['High'].iloc[j]
+
+                    if key_k_low <= trigger_price:
+                        # 3. 若該關鍵 K 為當日前一根或最新一根，且最新收盤價突破關鍵 K 高點 -> 觸發進場
+                        latest_close = df['Close'].iloc[-1]
+                        if latest_close >= key_k_high and (j == len(df) - 1 or j == len(df) - 2):
+                            trade_signals.append({
+                                "code": code,
+                                "close": round(float(latest_close), 2),
+                                "key_k_high": round(float(key_k_high), 2),
+                                "stop_loss": round(float(key_k_low), 2),
+                                "ma30": round(float(df['MA30'].iloc[-1]), 2)
+                            })
+                        break
+
     except Exception as e:
         print(f"處理 {symbol} 時發生錯誤: {e}")
 
-# 寫回 JSON
+# 寫回 JSON 存檔
 out = {
     "total_scanned": scanned_count,
-    "secondary_30ma_signals": ma30_signals
+    "buy_signals": trade_signals,
+    "exit_signals": exit_signals
 }
 
 with open('analysis_2454_signals.json', 'w', encoding='utf-8') as f:
     json.dump(out, f, ensure_ascii=False, indent=2)
 
-# 發送 LINE 推播
+# 發送 LINE 推播訊息
 token = os.environ.get("LINE_CHANNEL_ACCESS_TOKEN")
 user_id = os.environ.get("LINE_USER_ID")
 
@@ -84,17 +109,23 @@ if token and user_id:
     token = token.strip()
     user_id = user_id.strip()
 
-    msg_lines = ["🚨 【龍蝦雷達與 30MA 訊號日報】"]
+    msg_lines = ["🚨 【30MA 連 3K 關鍵防守策略日報】"]
     msg_lines.append(f"📊 成功掃描標的：{scanned_count} / {len(STOCK_LIST)} 檔\n")
     
-    if ma30_signals:
-        msg_lines.append(f"📈 【今日觸發 30MA 訊號共 {len(ma30_signals)} 檔】")
-        for item in ma30_signals[:15]:
-            msg_lines.append(f"• {item['code']} | {item['type']} | 收盤: {item['close']} (30MA: {item['ma30']})")
-        if len(ma30_signals) > 15:
-            msg_lines.append(f"\n*(其餘 {len(ma30_signals) - 15} 檔請至 GitHub JSON 查閱)*")
+    # 1. 多單進場訊號區
+    if trade_signals:
+        msg_lines.append(f"🎯 【進場訊號】共 {len(trade_signals)} 檔符合突破關鍵K高點：")
+        for item in trade_signals[:10]:
+            msg_lines.append(f"• {item['code']} | 收盤: {item['close']}")
+            msg_lines.append(f"  └ 關鍵K高點: {item['key_k_high']} | 停損位(低點): {item['stop_loss']}")
     else:
-        msg_lines.append("📈 【30MA 訊號】：今日 70 檔監控標的均無接近或觸發 30MA 訊號。")
+        msg_lines.append("🎯 【進場訊號】：今日無標的符合突破關鍵 K 進場條件。")
+
+    # 2. 持股平倉/出場警告區
+    if exit_signals:
+        msg_lines.append(f"\n⚠️ 【出場警告】共 {len(exit_signals)} 檔連3K低於30MA：")
+        for item in exit_signals[:10]:
+            msg_lines.append(f"• {item['code']} | 收盤: {item['close']} (30MA: {item['ma30']})")
 
     text_payload = "\n".join(msg_lines)
 
