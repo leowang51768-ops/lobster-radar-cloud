@@ -1,4 +1,5 @@
 name: Backtest Retest Volume Contraction
+# Formal v4 verification
 
 on:
   workflow_dispatch:
