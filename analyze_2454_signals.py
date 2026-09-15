@@ -50,7 +50,7 @@ for symbol in STOCK_LIST:
 
         code = symbol.replace('.TW', '').replace('.TWO', '')
 
-        # 放寬判定容忍度至 2.5%
+        # 判定條件：突破 30MA 或 回踩 30MA 容忍度 2.5% 內
         is_breakthrough = (prev_close < prev_ma30) and (close_price >= ma30_price)
         is_retest_support = (close_price >= ma30_price) and (abs(close_price - ma30_price) / ma30_price <= 0.025)
 
