@@ -7,28 +7,36 @@ on:
       - '.github/workflows/analyze_2454.yml'
   workflow_dispatch:
 
-permissions:
-  contents: write
-
 jobs:
   analyze:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-      - run: pip install pandas
-      - name: Analyze 2454
-        run: python analyze_2454_signals.py
-      - name: Commit result
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add analysis_2454_signals.json
-          if git diff --cached --quiet; then
-            echo "No changes"
-          else
-            git commit -m "Analyze 2454 buy signals"
-            git push
-          fi
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: pip install pandas
+
+    - name: Analyze 2454
+      env:
+        LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
+        LINE_USER_ID: ${{ secrets.LINE_USER_ID }}
+      run: python analyze_2454_signals.py
+
+    - name: Commit result
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git add analysis_2454_signals.json
+        if git diff --cached --quiet; then
+          echo "No changes"
+        else
+          git commit -m "Analyze 2454 buy signals"
+          git push
+        fi
