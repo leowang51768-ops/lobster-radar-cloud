@@ -1,5 +1,5 @@
 {
-  "total_scanned": 71,
+  "total_scanned": 66,
   "secondary_30ma_signals": [
     {
       "code": "2449",
@@ -36,6 +36,12 @@
       "type": "回踩30MA",
       "close": 333.0,
       "ma30": 328.53
+    },
+    {
+      "code": "2201",
+      "type": "回踩30MA",
+      "close": 29.65,
+      "ma30": 29.04
     }
   ]
 }
