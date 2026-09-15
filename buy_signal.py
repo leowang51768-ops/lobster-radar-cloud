@@ -834,10 +834,10 @@ def detect_exit_warnings(market: pd.DataFrame, latest_date: str, state: dict) ->
             reason = f"收盤{close:.2f}跌破結構停損{stop:.2f}"
         elif elapsed <= EXIT_WARNING_DAYS and route in {"突破後站穩", "突破回踩不破"}:
             if trigger > 0 and close < trigger and volume_ratio >= EXIT_VOLUME_5D_MIN:
-                warning_type = "假突破"
+                warning_type = "假突破觀察"
                 reason = f"{elapsed}日內放量跌回突破區，5日量比{volume_ratio:.2f}x"
             elif trigger > 0 and close <= trigger * (1.0 + STALLED_BOUNDARY_TOL) and volume_ratio >= EXIT_VOLUME_5D_MIN:
-                warning_type = "走不開"
+                warning_type = "走不開觀察"
                 reason = f"{elapsed}日內放量仍黏在突破邊界，5日量比{volume_ratio:.2f}x"
         if not warning_type:
             continue
@@ -1000,7 +1000,7 @@ def main() -> int:
                 f"⚠️ {row['code']} {row['name']}｜{row['warning_type']}",
                 f"原買點：{row['route']}｜今日收盤：{row['close']}",
                 f"原因：{row['reason']}",
-                "處置：屬出場／避險警示；是否實際賣出仍以持股狀態確認。",
+                "處置：先提高警覺；回測不支持單憑此訊號賣出，仍以結構停損為準。",
             ]
         send_line("\n".join(lines))
     return 0

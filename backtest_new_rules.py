@@ -46,7 +46,6 @@ def collect_signals(market: pd.DataFrame) -> list[dict]:
                     "highs": x["high"].astype(float).tolist(),
                     "lows": x["low"].astype(float).tolist(),
                     "closes": x["close"].astype(float).tolist(),
-                    "volumes": x["volume_lots"].astype(float).tolist(),
                 })
     return signals
 
@@ -80,28 +79,11 @@ def evaluate(signal: dict, horizon: int) -> dict | None:
     stop_line = support * (1.0 - engine.SUPPORT_BREAK_TOL)
     exit_i = target_i
     stopped = False
-    early_exit = ""
     for j in range(entry_i, target_i + 1):
         if float(signal["closes"][j]) < stop_line:
             exit_i = j
             stopped = True
             break
-        elapsed = j - signal_i
-        if elapsed <= engine.EXIT_WARNING_DAYS and signal["signal_route"] in {
-            "突破後站穩", "突破回踩不破"
-        }:
-            trigger = float(signal.get("support_upper") or signal.get("key_high") or 0.0)
-            start = max(0, j - 5)
-            prior_volume = sum(signal["volumes"][start:j]) / max(1, j - start)
-            volume_ratio = signal["volumes"][j] / prior_volume if prior_volume > 0 else 0.0
-            if trigger > 0 and float(signal["closes"][j]) < trigger and volume_ratio >= engine.EXIT_VOLUME_5D_MIN:
-                exit_i = j
-                early_exit = "假突破"
-                break
-            if trigger > 0 and float(signal["closes"][j]) <= trigger * (1.0 + engine.STALLED_BOUNDARY_TOL) and volume_ratio >= engine.EXIT_VOLUME_5D_MIN:
-                exit_i = j
-                early_exit = "走不開"
-                break
 
     exit_price = float(signal["closes"][exit_i])
     gross = exit_price / entry - 1.0
@@ -119,7 +101,6 @@ def evaluate(signal: dict, horizon: int) -> dict | None:
         "exit_date": signal["dates"][exit_i].strftime("%Y-%m-%d"),
         "exit_price": round(exit_price, 4),
         "stopped": stopped,
-        "early_exit": early_exit,
         "gross_return": gross,
         "net_return": net,
         "win_gross": gross > 0,
@@ -203,12 +184,12 @@ def main() -> None:
     end_date = market["date"].max().strftime("%Y-%m-%d")
     result = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
-        "strategy": engine.STRATEGY_VERSION,
+        "strategy": "破底翻+突破確認-v2",
         "data_start": start_date,
         "data_end": end_date,
         "entry": "訊號隔日開盤",
         "round_trip_cost_pct": ROUND_TRIP_COST * 100,
-        "stop": "收盤跌破支撐下緣0.5%；突破後1至2日假突破/走不開警示出場",
+        "stop": "收盤跌破支撐下緣0.5%",
         "raw_signal_count": len(raw_signals),
         "independent_signal_count": len(independent_signals),
         "independent_cooldown_sessions": COOLDOWN_SESSIONS,
@@ -250,3 +231,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
