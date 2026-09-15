@@ -62,6 +62,29 @@ MIN_VOLUME_LOTS = 1000
 MIN_TURNOVER = 30_000_000
 SUPPORT_BREAK_TOL = 0.005
 
+# Existing 70-stock 30MA key-candle route, now evaluated from the same
+# official TWSE/TPEx SQLite database as the core Lobster routes.
+MA30_KEY_WATCHLIST = {
+    "2330", "2454", "2303", "3711", "3131", "6187", "3583", "6223",
+    "6257", "2449", "3264", "3034", "2379", "3035", "3661", "3443",
+    "3653", "3017", "2421", "3324", "6230", "2317", "2382", "3231",
+    "2356", "6669", "2376", "2357", "3706", "2383", "6213", "8358",
+    "3037", "3189", "8046", "2368", "3044", "4958", "2313", "6153",
+    "2327", "2456", "2308", "6282", "2408", "3006", "2451", "3260",
+    "1519", "1503", "1513", "1514", "2359", "4562", "2354", "2059",
+    "6176", "3376", "2404", "6414", "3533", "6409", "3081", "3529",
+    "5269", "6415", "5274", "8454", "9910", "2204", "2201",
+}
+MA30_RETEST_LOOKAHEAD = 15
+MA30_RECLAIM_DAYS = 3
+STRATEGY_VERSION = "破底翻+混合確認-v4量縮回踩+30MA關鍵K"
+ROUTE_PRIORITY = {
+    "突破回踩不破": 1,
+    "破底翻": 2,
+    "突破後站穩": 3,
+    "30MA關鍵K": 4,
+}
+
 
 def load_json(path: Path, default):
     if not path.exists():
@@ -376,9 +399,102 @@ def detect_true_breakout(code: str, x: pd.DataFrame) -> tuple[dict, dict | None]
     }
     return setup, signal
 
+def detect_ma30_key_retest(code: str, x: pd.DataFrame) -> tuple[dict, dict | None]:
+    """Detect the existing 30MA retest/key-candle route on the official database.
+
+    A setup first records three consecutive closes above 30MA. Within the next
+    15 sessions price must retest the lowest low of those three sessions
+    (1 percent tolerance). A key candle must reclaim 30MA within three
+    sessions of that retest. The formal trigger is the following session
+    closing above the key-candle high.
+    """
+    if code not in MA30_KEY_WATCHLIST or len(x) < 35:
+        return {}, None
+
+    latest_i = len(x) - 1
+    latest = x.iloc[latest_i]
+    latest_close = float(latest.close)
+    best = None
+
+    for stand_i in range(30, latest_i):
+        stand = x.iloc[stand_i - 2:stand_i + 1]
+        if len(stand) != 3 or not (stand["close"] > stand["ma30"]).all():
+            continue
+        base_low = float(stand["low"].min())
+
+        for retest_i in range(stand_i + 1, min(stand_i + MA30_RETEST_LOOKAHEAD, latest_i)):
+            if float(x.iloc[retest_i].low) > base_low * 1.01:
+                continue
+            for key_i in range(retest_i, min(retest_i + MA30_RECLAIM_DAYS, latest_i)):
+                key = x.iloc[key_i]
+                if float(key.close) <= float(key.ma30):
+                    continue
+                if key_i == latest_i - 1 and latest_close > float(key.high):
+                    candidate = {
+                        "stand_i": stand_i,
+                        "retest_i": retest_i,
+                        "key_i": key_i,
+                        "base_low": base_low,
+                        "key_high": float(key.high),
+                        "key_low": float(key.low),
+                    }
+                    if best is None or candidate["key_i"] > best["key_i"]:
+                        best = candidate
+                break
+            break
+
+    if best is None:
+        return {}, None
+
+    key = x.iloc[int(best["key_i"])]
+    key_date = key.date.strftime("%Y-%m-%d")
+    ma30 = float(latest.ma30)
+    lots = float(latest.volume_lots) if pd.notna(latest.volume_lots) else 0.0
+    turnover = float(latest.turnover) if pd.notna(latest.turnover) else 0.0
+    avg20 = float(latest.avg20_lots) if pd.notna(latest.avg20_lots) else 0.0
+    ratio = lots / avg20 if avg20 else 0.0
+    support_lower = float(best["key_low"])
+    support_upper = max(support_lower, min(ma30, float(best["key_high"])))
+    extension = latest_close / float(best["key_high"]) - 1.0
+
+    setup = {
+        "pattern": "30MA關鍵K",
+        "setup_date": x.iloc[int(best["stand_i"])].date.strftime("%Y-%m-%d"),
+        "confirmation_mode": "回測後突破關鍵K",
+        "trigger_level": round(float(best["key_high"]), 2),
+        "support_lower": round(support_lower, 2),
+        "support_upper": round(support_upper, 2),
+        "support_source": "30MA回測關鍵K低點＋30MA",
+        "structure_extension_pct": round(extension * 100, 2),
+        "close_location": round(close_location(latest), 2),
+        "volume_ok": lots >= MIN_VOLUME_LOTS and turnover >= MIN_TURNOVER,
+    }
+    signal = {
+        "date": latest.date.strftime("%Y-%m-%d"),
+        "code": code,
+        "signal_route": "30MA關鍵K",
+        "signal_light": "🟢綠燈",
+        "close": round(latest_close, 2),
+        "baseline_entry": round(float(best["key_high"]), 2),
+        "key_date": key_date,
+        "key_high": round(float(best["key_high"]), 2),
+        "key_low": round(float(best["key_low"]), 2),
+        "volume_lots": round(lots, 0),
+        "volume_ratio": round(ratio, 2),
+        "turnover": round(turnover, 0),
+        "support_lower": setup["support_lower"],
+        "support_upper": setup["support_upper"],
+        "support_source": setup["support_source"],
+        "pattern_key": f"30MA關鍵K:{key_date}:{float(best['key_high']):.2f}",
+        "structure_extension_pct": setup["structure_extension_pct"],
+        "confirmation_mode": setup["confirmation_mode"],
+    }
+    return setup, signal
+
+
 def recommendation_fields() -> list[str]:
     return [
-        "date", "code", "name", "trend", "signal_route", "signal_light",
+        "date", "code", "name", "trend", "strategy_source", "signal_route", "signal_light",
         "baseline_entry", "primary_key_date", "primary_key_high", "primary_key_low",
         "key_date", "key_high", "key_low", "volume_lots", "volume_ratio",
         "extension_30ma_pct", "extension_20ma_pct",
@@ -409,7 +525,15 @@ def append_recommendation(row: dict) -> None:
             writer = csv.DictWriter(handle, fieldnames=fields)
             writer.writeheader()
             for old in existing_rows:
-                writer.writerow({key: old.get(key, "") for key in fields})
+                migrated = {key: old.get(key, "") for key in fields}
+                if not migrated.get("strategy_source"):
+                    route = old.get("signal_route", "")
+                    migrated["strategy_source"] = (
+                        "龍蝦核心" if route in {"破底翻", "突破回踩不破", "突破後站穩"}
+                        else "龍蝦舊版30MA" if route == "30MA回踩"
+                        else ""
+                    )
+                writer.writerow(migrated)
 
     exists = RECOMMENDATIONS.exists() and RECOMMENDATIONS.stat().st_size > 0
     with RECOMMENDATIONS.open("a", encoding="utf-8-sig", newline="") as handle:
@@ -507,7 +631,7 @@ def main() -> int:
     if not isinstance(state, dict):
         state = {"stocks": {}}
     # Preserve prior signal keys during the v4 rule migration to avoid duplicate alerts.
-    state["strategy_version"] = "破底翻+混合確認-v4量縮回踩"
+    state["strategy_version"] = STRATEGY_VERSION
     stocks_state = state.setdefault("stocks", {})
     latest_date = market["date"].max().strftime("%Y-%m-%d")
 
@@ -524,7 +648,25 @@ def main() -> int:
 
         false_setup, false_signal = detect_false_break_reversal(code, x)
         breakout_setup, breakout_signal = detect_true_breakout(code, x)
-        setups = [(false_setup, false_signal), (breakout_setup, breakout_signal)]
+        ma30_setup, ma30_signal = detect_ma30_key_retest(code, x)
+        setups = [
+            (false_setup, false_signal),
+            (breakout_setup, breakout_signal),
+            (ma30_setup, ma30_signal),
+        ]
+
+        fresh_signals = []
+        for _setup, signal in setups:
+            if signal is None:
+                continue
+            previous_key = str(stocks_state.get(code, {}).get(signal["signal_route"], ""))
+            if previous_key != signal["pattern_key"]:
+                fresh_signals.append(signal)
+
+        selected_signal = (
+            min(fresh_signals, key=lambda item: ROUTE_PRIORITY.get(item["signal_route"], 99))
+            if fresh_signals else None
+        )
 
         for setup, signal in setups:
             if not setup:
@@ -532,25 +674,35 @@ def main() -> int:
             close = float(x.iloc[-1].close)
             level = float(setup.get("trigger_level") or 0.0)
             near_setup = (
-                setup["pattern"] == "破底翻"
+                setup["pattern"] in {"破底翻", "30MA關鍵K"}
                 or (level > 0 and close >= level * 0.97)
             )
             if not near_setup and signal is None:
                 continue
 
-            status = "正式買點" if signal else "型態觀察"
+            if signal is selected_signal:
+                status = "正式買點"
+            elif signal is not None:
+                status = "同日重複訊號"
+            else:
+                status = "型態觀察"
             candidate_rows.append(candidate_row(latest_date, code, name, x, setup, status))
             route_counts[setup["pattern"]] += 1
 
-            if signal is None:
-                continue
-            previous_key = str(stocks_state.get(code, {}).get(signal["signal_route"], ""))
-            if previous_key == signal["pattern_key"]:
-                continue
+        # Mark every fresh route as seen, but create only one formal sample and
+        # one LINE item per stock per day. This prevents duplicate recommendations.
+        for signal in fresh_signals:
+            stocks_state.setdefault(code, {})[signal["signal_route"]] = signal["pattern_key"]
 
+        if selected_signal is not None:
+            signal = selected_signal
             signal.update({
                 "name": name,
                 "trend": signal["signal_route"],
+                "strategy_source": (
+                    "龍蝦30MA關鍵K" if signal["signal_route"] == "30MA關鍵K"
+                    else "龍蝦核心"
+                ),
                 "primary_key_date": "",
                 "primary_key_high": "",
                 "primary_key_low": "",
@@ -559,8 +711,7 @@ def main() -> int:
             })
             append_recommendation(signal)
             triggers.append(signal)
-            stocks_state.setdefault(code, {})[signal["signal_route"]] = signal["pattern_key"]
-            stocks_state[code]["name"] = name
+            stocks_state.setdefault(code, {})["name"] = name
             stocks_state[code]["support_lower"] = signal["support_lower"]
             stocks_state[code]["support_upper"] = signal["support_upper"]
             stocks_state[code]["support_source"] = signal["support_source"]
@@ -576,7 +727,7 @@ def main() -> int:
 
     state["updated_at"] = datetime.now(timezone.utc).isoformat()
     state["latest_trade_date"] = latest_date
-    state["strategy_version"] = "破底翻+混合確認-v4量縮回踩"
+    state["strategy_version"] = STRATEGY_VERSION
     state["four_point_rule"] = "已取消"
     state["candidate_count"] = len(candidate_rows)
     state["formal_buy_signal_count"] = len(triggers)
@@ -585,7 +736,7 @@ def main() -> int:
 
     summary = {
         "latest_trade_date": latest_date,
-        "strategy": "破底翻+突破確認",
+        "strategy": STRATEGY_VERSION,
         "four_point_rule": "retired",
         "candidates": len(candidate_rows),
         "formal_buy_signals": len(triggers),
@@ -594,11 +745,15 @@ def main() -> int:
     print(json.dumps(summary, ensure_ascii=False))
 
     if triggers:
-        lines = [f"🦞 龍蝦雷達正式買點｜{latest_date}", "新制：破底翻＋突破後站穩／量縮回踩不破"]
+        lines = [
+            f"🦞 龍蝦雷達買點建議｜{latest_date}",
+            "整合版：破底翻＋突破後站穩＋量縮回踩不破＋30MA關鍵K",
+        ]
         for row in triggers:
             lines += [
                 "",
                 f"🟢 {row['code']} {row['name']}｜{row['signal_route']}",
+                f"策略來源：{row['strategy_source']}",
                 f"觸發價：{row['key_high']}｜收盤：{row.get('close', '')}",
                 f"支撐區：{row['support_lower']}～{row['support_upper']}",
                 f"支撐來源：{row['support_source']}",
