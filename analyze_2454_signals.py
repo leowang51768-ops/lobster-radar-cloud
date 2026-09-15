@@ -4,15 +4,16 @@ import urllib.request
 import pandas as pd
 import yfinance as yf
 
+# 1. 修正上市/上櫃代號（上櫃股票改為 .TWO）
 STOCK_LIST = [
     # 半導體與代工 / 封測 / CoWoS
-    "2330.TW", "2454.TW", "2303.TW", "3711.TW", "3131.TW", "6187.TW", "3583.TW", "6223.TW",
+    "2330.TW", "2454.TW", "2303.TW", "3711.TW", "3131.TWO", "6187.TWO", "3583.TW", "6223.TWO",
     "6257.TW", "2449.TW", "3264.TWO", "3034.TW", "2379.TW", "3035.TW", "3661.TW", "3443.TW",
     # 散熱模組 / 機殼 / 伺服器組裝
     "3653.TW", "3017.TW", "2421.TW", "3324.TWO", "6230.TW", "2317.TW", "2382.TW", "3231.TW",
     "2356.TW", "6669.TW", "2376.TW", "2357.TW", "3706.TW",
     # CCL 銅箔基板 / PCB / 軟板
-    "2383.TW", "6213.TW", "8358.TW", "3037.TW", "3189.TW", "8046.TW", "2368.TW", "3044.TW",
+    "2383.TW", "6213.TW", "8358.TWO", "3037.TW", "3189.TW", "8046.TW", "2368.TW", "3044.TW",
     "4958.TW", "2313.TW", "6153.TW",
     # 被動元件 / 電源 / 記憶體 / 被動組件
     "2327.TW", "2456.TW", "2308.TW", "6282.TW", "2408.TW", "3006.TW", "2451.TW", "3260.TWO",
@@ -31,6 +32,7 @@ for symbol in STOCK_LIST:
     try:
         df = yf.download(symbol, period="60d", progress=False)
         if df.empty or len(df) < 30:
+            print(f"⚠️ {symbol} 抓取資料為空或長度不足")
             continue
         
         scanned_count += 1
@@ -50,7 +52,7 @@ for symbol in STOCK_LIST:
 
         code = symbol.replace('.TW', '').replace('.TWO', '')
 
-        # 判定條件：突破 30MA 或 回踩 30MA 容忍度 2.5% 內
+        # 訊號判斷：突破 30MA 或 回踩 30MA（寬限容忍度 2.5%）
         is_breakthrough = (prev_close < prev_ma30) and (close_price >= ma30_price)
         is_retest_support = (close_price >= ma30_price) and (abs(close_price - ma30_price) / ma30_price <= 0.025)
 
