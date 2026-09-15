@@ -1,13 +1,41 @@
 {
-  "code": "2454",
-  "name": "聯發科",
-  "primary_key_signals": [],
-  "strong20_signals": [],
-  "secondary_30ma_signals": [],
-  "counts": {
-    "primary_key": 0,
-    "strong20": 0,
-    "secondary_30ma": 0,
-    "total": 0
-  }
+  "total_scanned": 71,
+  "secondary_30ma_signals": [
+    {
+      "code": "2449",
+      "type": "回踩30MA",
+      "close": 257.0,
+      "ma30": 253.75
+    },
+    {
+      "code": "3264O",
+      "type": "回踩30MA",
+      "close": 221.0,
+      "ma30": 220.98
+    },
+    {
+      "code": "3034",
+      "type": "回踩30MA",
+      "close": 541.0,
+      "ma30": 538.27
+    },
+    {
+      "code": "3653",
+      "type": "回踩30MA",
+      "close": 5310.0,
+      "ma30": 5285.83
+    },
+    {
+      "code": "2421",
+      "type": "回踩30MA",
+      "close": 158.0,
+      "ma30": 156.83
+    },
+    {
+      "code": "2382",
+      "type": "回踩30MA",
+      "close": 333.0,
+      "ma30": 328.53
+    }
+  ]
 }
