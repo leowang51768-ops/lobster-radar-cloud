@@ -487,11 +487,12 @@
       "candidate_since": "2026-09-14",
       "layer1_current": false,
       "layer1_route": "",
-      "support_lower": 62.33,
+      "support_lower": 63.9,
       "support_upper": 63.9,
-      "support_source": "30MA回踩低點＋30MA重疊支撐",
+      "support_source": "30MA回測關鍵K低點＋30MA",
       "support_route": "30MA回踩",
-      "support_status": "有效"
+      "support_status": "有效",
+      "30MA關鍵K": "30MA關鍵K:2026-09-15:65.10"
     },
     "2412": {
       "three_above30_date": "2026-09-04",
@@ -863,11 +864,12 @@
       "candidate_since": "2026-09-14",
       "layer1_current": true,
       "layer1_route": "四要點",
-      "support_lower": 24.76,
-      "support_upper": 26.55,
-      "support_source": "30MA回踩低點＋30MA重疊支撐",
+      "support_lower": 27.67,
+      "support_upper": 27.95,
+      "support_source": "突破平台上緣轉支撐",
       "support_route": "30MA回踩",
-      "support_status": "有效"
+      "support_status": "有效",
+      "突破後站穩": "突破後站穩:2026-09-14:27.95"
     },
     "2812": {
       "three_above30_date": "2026-09-04",
@@ -1051,7 +1053,11 @@
       "strong20_stage": "等待20MA回測",
       "candidate_since": "2026-09-14",
       "layer1_current": true,
-      "layer1_route": "四要點"
+      "layer1_route": "四要點",
+      "突破後站穩": "突破後站穩:2026-09-14:44.10",
+      "support_lower": 43.66,
+      "support_upper": 44.1,
+      "support_source": "突破平台上緣轉支撐"
     },
     "2897": {
       "three_above30_date": "2026-08-28",
@@ -4942,9 +4948,9 @@
         "基本面支撐": true,
         "強勢20MA回測守住": false
       },
-      "突破後站穩": "突破後站穩:2026-09-14:99.80",
-      "support_lower": 98.8,
-      "support_upper": 99.8,
+      "突破後站穩": "突破後站穩:2026-09-15:101.00",
+      "support_lower": 99.99,
+      "support_upper": 101.0,
       "support_source": "突破平台上緣轉支撐"
     },
     "6204": {
@@ -5620,10 +5626,52 @@
       "support_lower": 1595.0,
       "support_upper": 1655.0,
       "support_source": "破底低點至收復之前波低點"
+    },
+    "2103": {
+      "破底翻": "破底翻:2026-09-14:25.3",
+      "name": "台橡",
+      "support_lower": 25.15,
+      "support_upper": 25.3,
+      "support_source": "破底低點至收復之前波低點"
+    },
+    "2382": {
+      "30MA關鍵K": "30MA關鍵K:2026-09-15:338.00",
+      "name": "廣達",
+      "support_lower": 330.5,
+      "support_upper": 330.5,
+      "support_source": "30MA回測關鍵K低點＋30MA"
+    },
+    "2542": {
+      "破底翻": "破底翻:2026-09-14:45.8",
+      "name": "興富發",
+      "support_lower": 45.25,
+      "support_upper": 45.8,
+      "support_source": "破底低點至收復之前波低點"
+    },
+    "3707": {
+      "破底翻": "破底翻:2026-09-14:58.4",
+      "name": "漢磊",
+      "support_lower": 57.7,
+      "support_upper": 58.4,
+      "support_source": "破底低點至收復之前波低點"
+    },
+    "5880": {
+      "突破回踩不破": "突破回踩不破:2026-09-11:26.85",
+      "name": "合庫金",
+      "support_lower": 26.58,
+      "support_upper": 26.85,
+      "support_source": "突破平台上緣轉支撐"
+    },
+    "6443": {
+      "破底翻": "破底翻:2026-09-14:23.2",
+      "name": "元晶",
+      "support_lower": 22.85,
+      "support_upper": 23.2,
+      "support_source": "破底低點至收復之前波低點"
     }
   },
-  "updated_at": "2026-09-15T08:43:39.978921+00:00",
-  "latest_trade_date": "2026-09-15",
+  "updated_at": "2026-09-16T10:40:23.288950+00:00",
+  "latest_trade_date": "2026-09-16",
   "layer1_candidate_count": 187,
   "stage_counts": {
     "正式試單": 1,
@@ -5652,12 +5700,14 @@
     "四要點": 178,
     "強勢20MA續強": 9
   },
-  "strategy_version": "破底翻+混合確認-v4量縮回踩",
+  "strategy_version": "破底翻+混合確認-v4量縮回踩+30MA關鍵K+四層證據風控",
   "four_point_rule": "已取消",
-  "candidate_count": 505,
-  "formal_buy_signal_count": 4,
+  "candidate_count": 710,
+  "formal_buy_signal_count": 10,
   "route_counts": {
-    "突破後確認": 291,
-    "破底翻": 214
-  }
+    "突破後確認": 340,
+    "破底翻": 368,
+    "30MA關鍵K": 2
+  },
+  "exit_warning_keys": {}
 }
