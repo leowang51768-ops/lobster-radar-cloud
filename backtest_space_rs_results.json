@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-17T14:26:53.490706+00:00",
+  "generated_at": "2026-09-17T14:38:04.379411+00:00",
   "data_start": "2026-03-17",
   "data_end": "2026-09-17",
   "entry": "訊號隔日開盤",
   "cost_pct": 0.585,
-  "new_plan": "上方空間>=8%、20日相對市場中位報酬>=3%、20MA向上且收盤在20MA上、30MA未明顯轉弱",
+  "new_plan": "上方空間>=8%、20日相對市場中位報酬>=3%；比較20MA+30MA保護與只保留20MA",
   "results": {
     "基準型態": {
       "3": {
@@ -60,7 +60,7 @@
         "stop_rate": 53.78
       }
     },
-    "新版空間強度": {
+    "目前版_20MA加30MA": {
       "3": {
         "samples": 263,
         "win_rate": 42.97,
@@ -112,6 +112,60 @@
         "max_trade_mae": -19.85,
         "sequence_max_drawdown": -99.39,
         "stop_rate": 57.14
+      }
+    },
+    "測試版_保留20MA取消30MA": {
+      "3": {
+        "samples": 294,
+        "win_rate": 40.82,
+        "avg_net": -0.55,
+        "median_net": -1.09,
+        "avg_win": 5.03,
+        "avg_loss": -4.39,
+        "payoff_ratio": 1.15,
+        "expectancy": -0.55,
+        "max_trade_mae": -16.2,
+        "sequence_max_drawdown": -89.12,
+        "stop_rate": 22.79
+      },
+      "5": {
+        "samples": 288,
+        "win_rate": 42.71,
+        "avg_net": -0.07,
+        "median_net": -1.61,
+        "avg_win": 7.31,
+        "avg_loss": -5.57,
+        "payoff_ratio": 1.31,
+        "expectancy": -0.07,
+        "max_trade_mae": -27.66,
+        "sequence_max_drawdown": -79.26,
+        "stop_rate": 31.25
+      },
+      "10": {
+        "samples": 280,
+        "win_rate": 42.86,
+        "avg_net": 0.69,
+        "median_net": -1.76,
+        "avg_win": 10.3,
+        "avg_loss": -6.52,
+        "payoff_ratio": 1.58,
+        "expectancy": 0.69,
+        "max_trade_mae": -27.66,
+        "sequence_max_drawdown": -92.95,
+        "stop_rate": 43.21
+      },
+      "20": {
+        "samples": 248,
+        "win_rate": 35.08,
+        "avg_net": 0.92,
+        "median_net": -4.36,
+        "avg_win": 16.28,
+        "avg_loss": -7.38,
+        "payoff_ratio": 2.21,
+        "expectancy": 0.92,
+        "max_trade_mae": -19.85,
+        "sequence_max_drawdown": -99.4,
+        "stop_rate": 58.06
       }
     }
   }
