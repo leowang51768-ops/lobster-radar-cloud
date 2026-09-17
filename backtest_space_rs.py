@@ -45,19 +45,25 @@ def collect(market):
                 prev_ma20=float(x.iloc[i-1].ma20) if i and pd.notna(x.iloc[i-1].ma20) else math.nan
                 ma30=float(x.iloc[i].ma30) if pd.notna(x.iloc[i].ma30) else math.nan
                 prev_ma30=float(x.iloc[i-1].ma30) if i and pd.notna(x.iloc[i-1].ma30) else math.nan
+                ma60=float(x.iloc[i-59:i+1].close.mean()) if i>=59 else math.nan
+                prev_ma60=float(x.iloc[i-60:i].close.mean()) if i>=60 else math.nan
                 ma20_ok=(math.isfinite(ma20) and math.isfinite(prev_ma20)
                          and close>ma20 and ma20>=prev_ma20)
                 ma30_ok=(math.isfinite(ma30) and math.isfinite(prev_ma30)
                          and close>=ma30*0.98 and ma30>=prev_ma30*0.995)
+                ma60_ok=(math.isfinite(ma60) and math.isfinite(prev_ma60)
+                         and close>=ma60*0.98 and ma60>=prev_ma60*0.995)
                 space_ok=upside>=MIN_UPSIDE_ROOM
                 rs_ok=math.isfinite(rs20) and rs20>=MIN_RS20
                 out.append({**sig,"name":name,"signal_i":i,
                     "dates":x.date.tolist(),"opens":x.open.astype(float).tolist(),
                     "highs":x.high.astype(float).tolist(),"lows":x.low.astype(float).tolist(),
                     "closes":x.close.astype(float).tolist(),
-                    "upside_room":upside,"rs20":rs20,"ma20_ok":ma20_ok,"ma30_ok":ma30_ok,
+                    "upside_room":upside,"rs20":rs20,"ma20_ok":ma20_ok,
+                    "ma30_ok":ma30_ok,"ma60_ok":ma60_ok,
                     "new_plan_ok":bool(space_ok and rs_ok and ma20_ok and ma30_ok),
-                    "no_ma30_ok":bool(space_ok and rs_ok and ma20_ok)})
+                    "no_ma30_ok":bool(space_ok and rs_ok and ma20_ok),
+                    "ma60_plan_ok":bool(space_ok and rs_ok and ma20_ok and ma60_ok)})
     return out
 
 def cooldown(signals):
@@ -104,11 +110,12 @@ def main():
       "基準型態":signals,
       "目前版_20MA加30MA":[s for s in signals if s["new_plan_ok"]],
       "測試版_保留20MA取消30MA":[s for s in signals if s["no_ma30_ok"]],
+      "測試版_20MA加60MA":[s for s in signals if s["ma60_plan_ok"]],
     }
     result={"generated_at":datetime.now(timezone.utc).isoformat(),
       "data_start":market.date.min().strftime("%Y-%m-%d"),"data_end":market.date.max().strftime("%Y-%m-%d"),
       "entry":"訊號隔日開盤","cost_pct":COST*100,
-      "new_plan":f"上方空間>={MIN_UPSIDE_ROOM:.0%}、20日相對市場中位報酬>={MIN_RS20:.0%}；比較20MA+30MA保護與只保留20MA",
+      "new_plan":f"上方空間>={MIN_UPSIDE_ROOM:.0%}、20日相對市場中位報酬>={MIN_RS20:.0%}；比較20MA+30MA、只留20MA、20MA+60MA",
       "results":{}}
     for name,sigs in variants.items():
         result["results"][name]={}
@@ -116,7 +123,7 @@ def main():
             rows=[r for s in sigs if (r:=evaluate(s,h)) is not None]
             result["results"][name][str(h)]=summary(rows)
     OUT_JSON.write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding="utf-8")
-    lines=["# 上方空間＋相對強度｜20MA／30MA保護獨立比較","",f"- 官方資料：{result['data_start']}～{result['data_end']}",
+    lines=["# 上方空間＋相對強度｜20MA／30MA／60MA保護獨立比較","",f"- 官方資料：{result['data_start']}～{result['data_end']}",
       "- 進場：訊號隔日開盤；成本0.585%；收盤跌破結構支撐停損",
       f"- 新版條件：{result['new_plan']}","",
       "|版本|期間|樣本|勝率|平均淨報酬|平均獲利|平均虧損|賺賠比|期望值|序列最大回撤|",
