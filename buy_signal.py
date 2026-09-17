@@ -62,6 +62,8 @@ MIN_VOLUME_LOTS = 1000
 MIN_TURNOVER = 30_000_000
 SUPPORT_BREAK_TOL = 0.005
 MIN_RISK_REWARD = 1.50
+MIN_UPSIDE_ROOM = 0.08
+MIN_RELATIVE_STRENGTH_20D = 0.03
 EXIT_WARNING_DAYS = 2
 STALLED_BOUNDARY_TOL = 0.01
 EXIT_VOLUME_5D_MIN = 1.20
@@ -81,7 +83,7 @@ MA30_KEY_WATCHLIST = {
 }
 MA30_RETEST_LOOKAHEAD = 15
 MA30_RECLAIM_DAYS = 3
-STRATEGY_VERSION = "破底翻+混合確認-v4量縮回踩+30MA關鍵K+四層證據風控"
+STRATEGY_VERSION = "破底翻+突破確認-v5上方空間+相對強度+均線保護"
 ROUTE_PRIORITY = {
     "突破回踩不破": 1,
     "破底翻": 2,
@@ -853,6 +855,49 @@ def detect_exit_warnings(market: pd.DataFrame, latest_date: str, state: dict) ->
     return warnings
 
 
+def latest_market_median_return20(market: pd.DataFrame) -> float:
+    returns = []
+    for _code, group in market.groupby("code", sort=False):
+        x = group.sort_values("date")
+        if len(x) >= 21:
+            old = float(x.iloc[-21].close)
+            new = float(x.iloc[-1].close)
+            if old > 0:
+                returns.append(new / old - 1.0)
+    return float(pd.Series(returns).median()) if returns else 0.0
+
+
+def apply_new_plan_gate(signal: dict | None, setup: dict, x: pd.DataFrame, market_return20: float) -> dict | None:
+    """Hard gate formal buys by upside room, relative strength and MA protection."""
+    if signal is None:
+        return None
+    i = len(x) - 1
+    close = float(x.iloc[i].close)
+    stock_return20 = close / float(x.iloc[i - 20].close) - 1.0 if i >= 20 else math.nan
+    rs20 = stock_return20 - market_return20 if math.isfinite(stock_return20) else math.nan
+    older = x.iloc[max(0, i - 120):max(0, i - 20)]
+    prior_high = float(older["high"].max()) if len(older) else math.nan
+    upside_room = math.inf if not math.isfinite(prior_high) or close >= prior_high else prior_high / close - 1.0
+    t = x.iloc[i]
+    prev = x.iloc[i - 1]
+    trend_ok = bool(
+        pd.notna(t.ma20) and pd.notna(prev.ma20)
+        and close > float(t.ma20) and float(t.ma20) >= float(prev.ma20)
+        and pd.notna(t.ma30) and pd.notna(prev.ma30)
+        and close >= float(t.ma30) * 0.98
+        and float(t.ma30) >= float(prev.ma30) * 0.995
+    )
+    passed = bool(upside_room >= MIN_UPSIDE_ROOM and rs20 >= MIN_RELATIVE_STRENGTH_20D and trend_ok)
+    details = {
+        "upside_room_pct": 999.0 if math.isinf(upside_room) else round(upside_room * 100, 2),
+        "relative_strength_20d_pct": round(rs20 * 100, 2) if math.isfinite(rs20) else "",
+        "new_plan_gate": "通過" if passed else "未通過",
+    }
+    signal.update(details)
+    setup.update(details)
+    return signal if passed else None
+
+
 def main() -> int:
     market = read_market()
     state = load_json(STATE_FILE, {"stocks": {}})
@@ -862,6 +907,7 @@ def main() -> int:
     state["strategy_version"] = STRATEGY_VERSION
     stocks_state = state.setdefault("stocks", {})
     latest_date = market["date"].max().strftime("%Y-%m-%d")
+    market_return20 = latest_market_median_return20(market)
 
     candidate_rows = []
     triggers = []
@@ -876,7 +922,11 @@ def main() -> int:
 
         false_setup, false_signal = detect_false_break_reversal(code, x)
         breakout_setup, breakout_signal = detect_true_breakout(code, x)
-        ma30_setup, ma30_signal = detect_ma30_key_retest(code, x)
+        ma30_setup, _ma30_signal = detect_ma30_key_retest(code, x)
+        false_signal = apply_new_plan_gate(false_signal, false_setup, x, market_return20)
+        breakout_signal = apply_new_plan_gate(breakout_signal, breakout_setup, x, market_return20)
+        # 30MA is now support/trend protection only, not a standalone formal buy route.
+        ma30_signal = None
         setups = [
             (false_setup, false_signal),
             (breakout_setup, breakout_signal),
@@ -978,7 +1028,7 @@ def main() -> int:
     if triggers or exit_warnings:
         lines = [
             f"🦞 龍蝦雷達買點建議｜{latest_date}",
-            "整合版：破底翻＋突破後站穩＋量縮回踩不破＋30MA關鍵K",
+            "新版：破底翻／突破確認＋上方空間＋相對強度；20MA／30MA只作保護",
         ]
         for row in triggers:
             lines += [
