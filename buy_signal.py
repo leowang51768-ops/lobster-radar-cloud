@@ -18,8 +18,9 @@ Formal buy routes
    - only the confirmation/retest session can create a formal buy signal.
 
 Both routes retain the existing liquidity gate, breakout-volume confirmation,
-8% anti-chase limit and structure-support invalidation. 20MA, DIF and
-fundamentals remain informational only and are not entry prerequisites.
+8% anti-chase limit and structure-support invalidation. 60MA is the sole
+large-trend protection gate; 20MA, 30MA, DIF and fundamentals remain
+informational only and are not entry prerequisites.
 """
 from __future__ import annotations
 
@@ -64,6 +65,8 @@ SUPPORT_BREAK_TOL = 0.005
 MIN_RISK_REWARD = 1.50
 MIN_UPSIDE_ROOM = 0.08
 MIN_RELATIVE_STRENGTH_20D = 0.03
+MA60_MAX_BELOW = 0.05
+MA60_MAX_5D_DECLINE = 0.02
 EXIT_WARNING_DAYS = 2
 STALLED_BOUNDARY_TOL = 0.01
 EXIT_VOLUME_5D_MIN = 1.20
@@ -83,7 +86,7 @@ MA30_KEY_WATCHLIST = {
 }
 MA30_RETEST_LOOKAHEAD = 15
 MA30_RECLAIM_DAYS = 3
-STRATEGY_VERSION = "破底翻+突破確認-v5上方空間+相對強度+均線保護"
+STRATEGY_VERSION = "破底翻+突破確認-v6上方空間+相對強度+60MA保護"
 ROUTE_PRIORITY = {
     "突破回踩不破": 1,
     "破底翻": 2,
@@ -133,6 +136,7 @@ def prepare(g: pd.DataFrame) -> pd.DataFrame:
     x = g.copy().sort_values("date").reset_index(drop=True)
     x["ma20"] = x["close"].rolling(20).mean()
     x["ma30"] = x["close"].rolling(30).mean()
+    x["ma60"] = x["close"].rolling(60).mean()
     x["ema6"] = ema(x["close"], 6)
     x["ema13"] = ema(x["close"], 13)
     x["dif"] = x["ema6"] - x["ema13"]
@@ -868,7 +872,7 @@ def latest_market_median_return20(market: pd.DataFrame) -> float:
 
 
 def apply_new_plan_gate(signal: dict | None, setup: dict, x: pd.DataFrame, market_return20: float) -> dict | None:
-    """Hard gate formal buys by upside room, relative strength and MA protection."""
+    """Hard gate formal buys by upside room, relative strength and 60MA protection."""
     if signal is None:
         return None
     i = len(x) - 1
@@ -878,19 +882,35 @@ def apply_new_plan_gate(signal: dict | None, setup: dict, x: pd.DataFrame, marke
     older = x.iloc[max(0, i - 120):max(0, i - 20)]
     prior_high = float(older["high"].max()) if len(older) else math.nan
     upside_room = math.inf if not math.isfinite(prior_high) or close >= prior_high else prior_high / close - 1.0
+
+    # 60MA is a broad anti-downtrend guard, not a requirement to hug or remain
+    # above the average. A valid reversal may sit up to 5% below 60MA, provided
+    # the 60MA itself has not fallen more than 2% during the latest five sessions.
     t = x.iloc[i]
-    prev = x.iloc[i - 1]
-    trend_ok = bool(
-        pd.notna(t.ma20) and pd.notna(prev.ma20)
-        and close > float(t.ma20) and float(t.ma20) >= float(prev.ma20)
-        and pd.notna(t.ma30) and pd.notna(prev.ma30)
-        and close >= float(t.ma30) * 0.98
-        and float(t.ma30) >= float(prev.ma30) * 0.995
+    ma60_now = float(t.ma60) if pd.notna(t.ma60) else math.nan
+    ma60_5d = float(x.iloc[i - 5].ma60) if i >= 5 and pd.notna(x.iloc[i - 5].ma60) else math.nan
+    ma60_price_ok = math.isfinite(ma60_now) and close >= ma60_now * (1.0 - MA60_MAX_BELOW)
+    ma60_slope_ok = (
+        math.isfinite(ma60_now)
+        and math.isfinite(ma60_5d)
+        and ma60_now >= ma60_5d * (1.0 - MA60_MAX_5D_DECLINE)
     )
-    passed = bool(upside_room >= MIN_UPSIDE_ROOM and rs20 >= MIN_RELATIVE_STRENGTH_20D and trend_ok)
+    trend_ok = bool(ma60_price_ok and ma60_slope_ok)
+    passed = bool(
+        upside_room >= MIN_UPSIDE_ROOM
+        and rs20 >= MIN_RELATIVE_STRENGTH_20D
+        and trend_ok
+    )
     details = {
         "upside_room_pct": 999.0 if math.isinf(upside_room) else round(upside_room * 100, 2),
         "relative_strength_20d_pct": round(rs20 * 100, 2) if math.isfinite(rs20) else "",
+        "ma60": round(ma60_now, 2) if math.isfinite(ma60_now) else "",
+        "ma60_5d_change_pct": (
+            round((ma60_now / ma60_5d - 1.0) * 100, 2)
+            if math.isfinite(ma60_now) and math.isfinite(ma60_5d) and ma60_5d > 0
+            else ""
+        ),
+        "ma60_protection": "通過" if trend_ok else "未通過",
         "new_plan_gate": "通過" if passed else "未通過",
     }
     signal.update(details)
@@ -925,7 +945,7 @@ def main() -> int:
         ma30_setup, _ma30_signal = detect_ma30_key_retest(code, x)
         false_signal = apply_new_plan_gate(false_signal, false_setup, x, market_return20)
         breakout_signal = apply_new_plan_gate(breakout_signal, breakout_setup, x, market_return20)
-        # 30MA is now support/trend protection only, not a standalone formal buy route.
+        # Legacy 30MA route remains observation-only and cannot create a formal buy.
         ma30_signal = None
         setups = [
             (false_setup, false_signal),
