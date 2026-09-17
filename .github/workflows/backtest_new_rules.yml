@@ -1,5 +1,4 @@
 name: Backtest New Buy Rules
-# Serialize v4 verification after volume-contraction regression
 
 on:
   workflow_dispatch:
@@ -7,7 +6,7 @@ on:
     paths:
       - ".github/workflows/backtest_new_rules.yml"
       - "buy_signal.py"
-      - "backtest_new_rules.py"
+      - "backtest_space_rs.py"
 
 permissions:
   contents: write
@@ -18,31 +17,26 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-
       - name: Install dependencies
         run: pip install pandas
-
-      - name: Compile strategy and backtest scripts
-        run: python -m py_compile buy_signal.py backtest_new_rules.py
-
-      - name: Run six-month walk-forward backtest
-        run: python backtest_new_rules.py
-
+      - name: Compile strategy and backtest
+        run: python -m py_compile buy_signal.py backtest_space_rs.py
+      - name: Run walk-forward A/B backtest
+        run: python backtest_space_rs.py
       - name: Commit backtest results
         run: |
           git config user.name "lobster-radar-cloud"
           git config user.email "actions@github.com"
-          git add backtest_new_rules_results.json backtest_new_rules_report.md
+          git add backtest_space_rs_results.json backtest_space_rs_report.md
           if git diff --cached --quiet; then
             echo "No backtest result changes."
             exit 0
           fi
-          git commit -m "Backtest false-break reversal and confirmed breakout rules"
+          git commit -m "Backtest upside space and relative strength plan"
           git fetch origin main
           git rebase origin/main
           git push
