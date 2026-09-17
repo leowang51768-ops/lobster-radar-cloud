@@ -509,7 +509,11 @@
       "strong20_stage": "等待20MA回測",
       "candidate_since": "2026-09-14",
       "layer1_current": true,
-      "layer1_route": "四要點"
+      "layer1_route": "四要點",
+      "突破後站穩": "突破後站穩:2026-09-14:140.50",
+      "support_lower": 139.09,
+      "support_upper": 140.5,
+      "support_source": "突破平台上緣轉支撐"
     },
     "2413": {
       "three_above30_date": "2026-08-21",
@@ -864,12 +868,12 @@
       "candidate_since": "2026-09-14",
       "layer1_current": true,
       "layer1_route": "四要點",
-      "support_lower": 27.67,
-      "support_upper": 27.95,
+      "support_lower": 28.36,
+      "support_upper": 28.65,
       "support_source": "突破平台上緣轉支撐",
       "support_route": "30MA回踩",
       "support_status": "有效",
-      "突破後站穩": "突破後站穩:2026-09-14:27.95"
+      "突破後站穩": "突破後站穩:2026-09-16:28.65"
     },
     "2812": {
       "three_above30_date": "2026-09-04",
@@ -1080,11 +1084,12 @@
       "candidate_since": "2026-09-14",
       "layer1_current": true,
       "layer1_route": "四要點",
-      "support_lower": 10.39,
-      "support_upper": 10.75,
-      "support_source": "30MA回踩低點＋30MA重疊支撐",
+      "support_lower": 10.89,
+      "support_upper": 11.0,
+      "support_source": "突破平台上緣轉支撐",
       "support_route": "30MA回踩",
-      "support_status": "有效"
+      "support_status": "有效",
+      "突破回踩不破": "突破回踩不破:2026-09-14:11.00"
     },
     "2906": {
       "three_above30_date": "2026-08-21",
@@ -3863,7 +3868,8 @@
         "基本面支撐": true,
         "強勢20MA回測守住": false
       },
-      "突破回踩不破": "突破回踩不破:2026-09-14:21.35"
+      "突破回踩不破": "突破回踩不破:2026-09-14:21.35",
+      "突破後站穩": "突破後站穩:2026-09-14:21.35"
     },
     "2849": {
       "three_above30_date": "2026-09-08",
@@ -5642,10 +5648,10 @@
       "support_source": "30MA回測關鍵K低點＋30MA"
     },
     "2542": {
-      "破底翻": "破底翻:2026-09-14:45.8",
+      "破底翻": "破底翻:2026-09-15:45.25",
       "name": "興富發",
-      "support_lower": 45.25,
-      "support_upper": 45.8,
+      "support_lower": 44.85,
+      "support_upper": 45.25,
       "support_source": "破底低點至收復之前波低點"
     },
     "3707": {
@@ -5668,10 +5674,52 @@
       "support_lower": 22.85,
       "support_upper": 23.2,
       "support_source": "破底低點至收復之前波低點"
+    },
+    "1708": {
+      "破底翻": "破底翻:2026-09-15:47.75",
+      "name": "東鹼",
+      "support_lower": 47.4,
+      "support_upper": 47.75,
+      "support_source": "破底低點至收復之前波低點"
+    },
+    "2201": {
+      "30MA關鍵K": "30MA關鍵K:2026-09-16:30.05",
+      "name": "裕隆",
+      "support_lower": 29.65,
+      "support_upper": 29.65,
+      "support_source": "30MA回測關鍵K低點＋30MA"
+    },
+    "2421": {
+      "30MA關鍵K": "30MA關鍵K:2026-09-16:161.50",
+      "name": "建準",
+      "support_lower": 158.0,
+      "support_upper": 158.0,
+      "support_source": "30MA回測關鍵K低點＋30MA"
+    },
+    "2501": {
+      "破底翻": "破底翻:2026-09-17:21.15",
+      "name": "國建",
+      "support_lower": 20.85,
+      "support_upper": 21.15,
+      "support_source": "破底低點至收復之前波低點"
+    },
+    "2891": {
+      "突破後站穩": "突破後站穩:2026-09-16:69.90",
+      "name": "中信金",
+      "support_lower": 69.2,
+      "support_upper": 69.9,
+      "support_source": "突破平台上緣轉支撐"
+    },
+    "3264": {
+      "30MA關鍵K": "30MA關鍵K:2026-09-16:225.50",
+      "name": "欣銓",
+      "support_lower": 220.0,
+      "support_upper": 222.78,
+      "support_source": "30MA回測關鍵K低點＋30MA"
     }
   },
-  "updated_at": "2026-09-16T10:40:23.288950+00:00",
-  "latest_trade_date": "2026-09-16",
+  "updated_at": "2026-09-17T10:40:21.956375+00:00",
+  "latest_trade_date": "2026-09-17",
   "layer1_candidate_count": 187,
   "stage_counts": {
     "正式試單": 1,
@@ -5702,12 +5750,12 @@
   },
   "strategy_version": "破底翻+混合確認-v4量縮回踩+30MA關鍵K+四層證據風控",
   "four_point_rule": "已取消",
-  "candidate_count": 710,
-  "formal_buy_signal_count": 10,
+  "candidate_count": 701,
+  "formal_buy_signal_count": 11,
   "route_counts": {
-    "突破後確認": 340,
-    "破底翻": 368,
-    "30MA關鍵K": 2
+    "突破後確認": 441,
+    "破底翻": 257,
+    "30MA關鍵K": 3
   },
   "exit_warning_keys": {}
 }
