@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-17T14:38:04.379411+00:00",
+  "generated_at": "2026-09-17T14:54:19.390536+00:00",
   "data_start": "2026-03-17",
   "data_end": "2026-09-17",
   "entry": "訊號隔日開盤",
   "cost_pct": 0.585,
-  "new_plan": "上方空間>=8%、20日相對市場中位報酬>=3%；比較20MA+30MA保護與只保留20MA",
+  "new_plan": "上方空間>=8%、20日相對市場中位報酬>=3%；比較20MA+30MA、只留20MA、20MA+60MA",
   "results": {
     "基準型態": {
       "3": {
@@ -166,6 +166,60 @@
         "max_trade_mae": -19.85,
         "sequence_max_drawdown": -99.4,
         "stop_rate": 58.06
+      }
+    },
+    "測試版_20MA加60MA": {
+      "3": {
+        "samples": 120,
+        "win_rate": 36.67,
+        "avg_net": -0.82,
+        "median_net": -1.71,
+        "avg_win": 4.67,
+        "avg_loss": -4.01,
+        "payoff_ratio": 1.17,
+        "expectancy": -0.82,
+        "max_trade_mae": -14.51,
+        "sequence_max_drawdown": -77.37,
+        "stop_rate": 23.33
+      },
+      "5": {
+        "samples": 115,
+        "win_rate": 40.87,
+        "avg_net": -0.65,
+        "median_net": -1.95,
+        "avg_win": 6.11,
+        "avg_loss": -5.33,
+        "payoff_ratio": 1.15,
+        "expectancy": -0.65,
+        "max_trade_mae": -27.66,
+        "sequence_max_drawdown": -74.34,
+        "stop_rate": 33.04
+      },
+      "10": {
+        "samples": 107,
+        "win_rate": 31.78,
+        "avg_net": -1.14,
+        "median_net": -3.17,
+        "avg_win": 9.24,
+        "avg_loss": -5.98,
+        "payoff_ratio": 1.55,
+        "expectancy": -1.14,
+        "max_trade_mae": -27.66,
+        "sequence_max_drawdown": -87.1,
+        "stop_rate": 49.53
+      },
+      "20": {
+        "samples": 81,
+        "win_rate": 17.28,
+        "avg_net": -3.88,
+        "median_net": -5.62,
+        "avg_win": 8.86,
+        "avg_loss": -6.54,
+        "payoff_ratio": 1.35,
+        "expectancy": -3.88,
+        "max_trade_mae": -19.13,
+        "sequence_max_drawdown": -96.61,
+        "stop_rate": 70.37
       }
     }
   }
