@@ -102,7 +102,7 @@ MA30_KEY_WATCHLIST = {
 }
 MA30_RETEST_LOOKAHEAD = 15
 MA30_RECLAIM_DAYS = 3
-STRATEGY_VERSION = "破底翻+高品質突破量縮回踩-v9"
+STRATEGY_VERSION = "破底翻+高品質突破量縮回踩-v10收縮加分"
 ROUTE_PRIORITY = {
     "突破回踩不破": 1,
     "破底翻": 2,
@@ -550,7 +550,6 @@ def detect_true_breakout(code: str, x: pd.DataFrame) -> tuple[dict, dict | None]
             and volume_ok
             and extension <= BREAKOUT_MAX_ENTRY_EXTENSION
             and efficient_breakout
-            and compressed_approach
         )
         if valid_breakout:
             selected = {
