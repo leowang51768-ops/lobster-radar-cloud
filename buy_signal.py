@@ -102,7 +102,7 @@ MA30_KEY_WATCHLIST = {
 }
 MA30_RETEST_LOOKAHEAD = 15
 MA30_RECLAIM_DAYS = 3
-STRATEGY_VERSION = "破底翻+高品質突破量縮回踩-v10收縮加分"
+STRATEGY_VERSION = "破底翻正式買點-v11突破僅觀察"
 ROUTE_PRIORITY = {
     "突破回踩不破": 1,
     "破底翻": 2,
@@ -1095,7 +1095,9 @@ def main() -> int:
         breakout_setup, breakout_signal = detect_true_breakout(code, x)
         ma30_setup, _ma30_signal = detect_ma30_key_retest(code, x)
         false_signal = apply_new_plan_gate(false_signal, false_setup, x, market_return20)
-        breakout_signal = apply_new_plan_gate(breakout_signal, breakout_setup, x, market_return20)
+        # Backtest failed the minimum sample/win/return gates. Keep breakout
+        # candidates visible for research, but never emit a formal buy signal.
+        breakout_signal = None
         # Legacy 30MA route remains observation-only and cannot create a formal buy.
         ma30_signal = None
         setups = [
@@ -1199,7 +1201,7 @@ def main() -> int:
     if triggers or exit_warnings:
         lines = [
             f"🦞 龍蝦雷達買點建議｜{latest_date}",
-            "新版：破底翻／突破確認＋上方空間＋相對強度；60MA作大趨勢保護",
+            "新版：僅破底翻可正式試單；突破回踩與30MA只列觀察",
         ]
         for row in triggers:
             lines += [
