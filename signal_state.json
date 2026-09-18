@@ -4597,9 +4597,9 @@
       "key_date": "2026-09-14",
       "key_high": 88.5,
       "key_low": 79.5,
-      "support_lower": 79.5,
-      "support_upper": 82.59,
-      "support_source": "20MA回踩低點＋20MA重疊支撐",
+      "support_lower": 74.4,
+      "support_upper": 75.89,
+      "support_source": "假摔後收復的原整理支撐",
       "support_route": "強勢20MA續強",
       "support_status": "有效",
       "strong20_touch_date": "2026-09-11",
@@ -4618,7 +4618,8 @@
         "DIF今日>=昨日": true,
         "基本面支撐": true,
         "強勢20MA回測守住": true
-      }
+      },
+      "假摔收復確認": "假摔收復確認:2026-09-14:90.30"
     },
     "5403": {
       "three_above30_date": "2026-09-02",
@@ -5716,10 +5717,38 @@
       "support_lower": 220.0,
       "support_upper": 222.78,
       "support_source": "30MA回測關鍵K低點＋30MA"
+    },
+    "2441": {
+      "假摔收復確認": "假摔收復確認:2026-09-14:122.50",
+      "name": "超豐",
+      "support_lower": 110.0,
+      "support_upper": 112.2,
+      "support_source": "假摔後收復的原整理支撐"
+    },
+    "5347": {
+      "假摔收復確認": "假摔收復確認:2026-08-25:168.00",
+      "name": "世界",
+      "support_lower": 131.0,
+      "support_upper": 133.62,
+      "support_source": "假摔後收復的原整理支撐"
+    },
+    "6532": {
+      "假摔收復確認": "假摔收復確認:2026-08-03:94.50",
+      "name": "瑞耘",
+      "support_lower": 58.7,
+      "support_upper": 59.87,
+      "support_source": "假摔後收復的原整理支撐"
+    },
+    "6840": {
+      "突破後站穩": "突破後站穩:2026-09-17:101.00",
+      "name": "東研信超",
+      "support_lower": 99.99,
+      "support_upper": 101.0,
+      "support_source": "突破平台上緣轉支撐"
     }
   },
-  "updated_at": "2026-09-17T10:40:21.956375+00:00",
-  "latest_trade_date": "2026-09-17",
+  "updated_at": "2026-09-18T10:40:24.565054+00:00",
+  "latest_trade_date": "2026-09-18",
   "layer1_candidate_count": 187,
   "stage_counts": {
     "正式試單": 1,
@@ -5748,14 +5777,17 @@
     "四要點": 178,
     "強勢20MA續強": 9
   },
-  "strategy_version": "破底翻+混合確認-v4量縮回踩+30MA關鍵K+四層證據風控",
+  "strategy_version": "破底翻+突破確認+假摔-v7上方空間+相對強度+60MA保護",
   "four_point_rule": "已取消",
-  "candidate_count": 701,
-  "formal_buy_signal_count": 11,
+  "candidate_count": 2091,
+  "formal_buy_signal_count": 5,
   "route_counts": {
-    "突破後確認": 441,
-    "破底翻": 257,
-    "30MA關鍵K": 3
+    "假摔收復確認": 1423,
+    "突破後確認": 556,
+    "破底翻": 111,
+    "30MA關鍵K": 1
   },
-  "exit_warning_keys": {}
+  "exit_warning_keys": {
+    "突破後站穩:2026-09-16:69.90:假突破觀察": "2026-09-18"
+  }
 }
