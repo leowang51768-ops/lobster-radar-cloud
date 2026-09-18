@@ -16,13 +16,7 @@ Formal buy routes
    - a retest must contract below both breakout-day volume and the prior
      five-session average volume;
    - only the confirmation/retest session can create a formal buy signal.
-3. 假摔收復確認:
-   - price first makes an acute washout below prior support or a key average;
-   - support must be reclaimed within three to ten sessions;
-   - the washout low must hold afterwards;
-   - only a fresh breakout above the pre-washout range creates a formal buy.
-
-All routes retain the existing liquidity gate, breakout-volume confirmation,
+Both routes retain the existing liquidity gate, breakout-volume confirmation,
 8% anti-chase limit and structure-support invalidation. 60MA is the sole
 large-trend protection gate; 20MA, 30MA, DIF and fundamentals remain
 informational only and are not entry prerequisites.
@@ -101,13 +95,12 @@ MA30_KEY_WATCHLIST = {
 }
 MA30_RETEST_LOOKAHEAD = 15
 MA30_RECLAIM_DAYS = 3
-STRATEGY_VERSION = "破底翻+突破確認+假摔-v7上方空間+相對強度+60MA保護"
+STRATEGY_VERSION = "破底翻+突破確認-v8移除假摔+上方空間+相對強度+60MA保護"
 ROUTE_PRIORITY = {
     "突破回踩不破": 1,
-    "假摔收復確認": 2,
-    "破底翻": 3,
-    "突破後站穩": 4,
-    "30MA關鍵K": 5,
+    "破底翻": 2,
+    "突破後站穩": 3,
+    "30MA關鍵K": 4,
 }
 
 
@@ -853,7 +846,7 @@ def append_recommendation(row: dict) -> None:
                 if not migrated.get("strategy_source"):
                     route = old.get("signal_route", "")
                     migrated["strategy_source"] = (
-                        "龍蝦核心" if route in {"破底翻", "突破回踩不破", "突破後站穩", "假摔收復確認"}
+                        "龍蝦核心" if route in {"破底翻", "突破回踩不破", "突破後站穩"}
                         else "龍蝦舊版30MA" if route == "30MA回踩"
                         else ""
                     )
@@ -1099,17 +1092,14 @@ def main() -> int:
             continue
 
         false_setup, false_signal = detect_false_break_reversal(code, x)
-        fakeout_setup, fakeout_signal = detect_fakeout_recovery(code, x)
         breakout_setup, breakout_signal = detect_true_breakout(code, x)
         ma30_setup, _ma30_signal = detect_ma30_key_retest(code, x)
         false_signal = apply_new_plan_gate(false_signal, false_setup, x, market_return20)
-        fakeout_signal = apply_new_plan_gate(fakeout_signal, fakeout_setup, x, market_return20)
         breakout_signal = apply_new_plan_gate(breakout_signal, breakout_setup, x, market_return20)
         # Legacy 30MA route remains observation-only and cannot create a formal buy.
         ma30_signal = None
         setups = [
             (false_setup, false_signal),
-            (fakeout_setup, fakeout_signal),
             (breakout_setup, breakout_signal),
             (ma30_setup, ma30_signal),
         ]
@@ -1133,7 +1123,7 @@ def main() -> int:
             close = float(x.iloc[-1].close)
             level = float(setup.get("trigger_level") or 0.0)
             near_setup = (
-                setup["pattern"] in {"破底翻", "假摔收復確認", "30MA關鍵K"}
+                setup["pattern"] in {"破底翻", "30MA關鍵K"}
                 or (level > 0 and close >= level * 0.97)
             )
             if not near_setup and signal is None:
@@ -1178,7 +1168,7 @@ def main() -> int:
     candidate_rows.sort(
         key=lambda row: (
             0 if row["status"] == "正式買點" else 1,
-            0 if row["pattern"] == "假摔收復確認" else 1 if row["pattern"] == "破底翻" else 2,
+            0 if row["pattern"] == "破底翻" else 1,
             row["code"],
         )
     )
@@ -1209,7 +1199,7 @@ def main() -> int:
     if triggers or exit_warnings:
         lines = [
             f"🦞 龍蝦雷達買點建議｜{latest_date}",
-            "新版：破底翻／突破確認／假摔收復確認＋上方空間＋相對強度；60MA作大趨勢保護",
+            "新版：破底翻／突破確認＋上方空間＋相對強度；60MA作大趨勢保護",
         ]
         for row in triggers:
             lines += [
