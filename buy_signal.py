@@ -16,8 +16,13 @@ Formal buy routes
    - a retest must contract below both breakout-day volume and the prior
      five-session average volume;
    - only the confirmation/retest session can create a formal buy signal.
+3. 假摔收復確認:
+   - price first makes an acute washout below prior support or a key average;
+   - support must be reclaimed within three to ten sessions;
+   - the washout low must hold afterwards;
+   - only a fresh breakout above the pre-washout range creates a formal buy.
 
-Both routes retain the existing liquidity gate, breakout-volume confirmation,
+All routes retain the existing liquidity gate, breakout-volume confirmation,
 8% anti-chase limit and structure-support invalidation. 60MA is the sole
 large-trend protection gate; 20MA, 30MA, DIF and fundamentals remain
 informational only and are not entry prerequisites.
@@ -47,6 +52,14 @@ CANDIDATES = BASE / "candidate_status.csv"
 LOOKBACK = 20
 FALSE_BREAK_MIN = 0.005
 FALSE_BREAK_RECOVERY_DAYS = 3
+FAKEOUT_EVENT_LOOKBACK = 45
+FAKEOUT_PRE_WINDOW = 20
+FAKEOUT_RECOVERY_MIN_DAYS = 1
+FAKEOUT_RECOVERY_MAX_DAYS = 10
+FAKEOUT_SUPPORT_BREAK_MIN = 0.01
+FAKEOUT_ACUTE_DROP_MIN = 0.08
+FAKEOUT_NEW_LOW_TOL = 0.005
+FAKEOUT_BREAKOUT_MIN = 0.003
 BREAKOUT_MIN = 0.003
 BREAKOUT_STAND_DAYS = 3
 BREAKOUT_RETEST_DAYS = 5
@@ -86,12 +99,13 @@ MA30_KEY_WATCHLIST = {
 }
 MA30_RETEST_LOOKAHEAD = 15
 MA30_RECLAIM_DAYS = 3
-STRATEGY_VERSION = "破底翻+突破確認-v6上方空間+相對強度+60MA保護"
+STRATEGY_VERSION = "破底翻+突破確認+假摔-v7上方空間+相對強度+60MA保護"
 ROUTE_PRIORITY = {
     "突破回踩不破": 1,
-    "破底翻": 2,
-    "突破後站穩": 3,
-    "30MA關鍵K": 4,
+    "假摔收復確認": 2,
+    "破底翻": 3,
+    "突破後站穩": 4,
+    "30MA關鍵K": 5,
 }
 
 
@@ -336,6 +350,146 @@ def detect_false_break_reversal(code: str, x: pd.DataFrame) -> tuple[dict, dict 
     signal["evidence_notes"] = "、".join(evidence)
     setup["evidence_count"] = signal["evidence_count"]
     setup["evidence_notes"] = signal["evidence_notes"]
+    return setup, signal
+
+
+def detect_fakeout_recovery(code: str, x: pd.DataFrame) -> tuple[dict, dict | None]:
+    """Detect an acute washout, fast reclaim and fresh range breakout.
+
+    A moving-average breach alone is never enough. The route requires all four
+    structural stages: washout, 3-10 session reclaim, no lower low, and a new
+    breakout above the pre-washout range.
+    """
+    if len(x) < FAKEOUT_PRE_WINDOW + FAKEOUT_RECOVERY_MAX_DAYS + 2:
+        return {}, None
+
+    i = len(x) - 1
+    t = x.iloc[i]
+    close = float(t.close)
+    selected = None
+    first_break = max(FAKEOUT_PRE_WINDOW, i - FAKEOUT_EVENT_LOOKBACK)
+
+    for break_i in range(first_break, i - 1):
+        prior = x.iloc[break_i - FAKEOUT_PRE_WINDOW:break_i]
+        if len(prior) < FAKEOUT_PRE_WINDOW:
+            continue
+        break_row = x.iloc[break_i]
+        prior_support = float(prior["low"].min())
+        prior_resistance = float(prior["high"].max())
+        recent_peak = float(prior.tail(10)["high"].max())
+        break_low = float(break_row.low)
+        ma30_at_break = (
+            float(break_row.ma30) if pd.notna(break_row.ma30) else math.nan
+        )
+        broke_support = break_low < prior_support * (1.0 - FAKEOUT_SUPPORT_BREAK_MIN)
+        broke_key_average = (
+            math.isfinite(ma30_at_break)
+            and break_low < ma30_at_break * (1.0 - FAKEOUT_SUPPORT_BREAK_MIN)
+        )
+        acute_drop = break_low <= recent_peak * (1.0 - FAKEOUT_ACUTE_DROP_MIN)
+        if not (acute_drop and (broke_support or broke_key_average)):
+            continue
+
+        reclaim_i = None
+        reclaim_end = min(i, break_i + FAKEOUT_RECOVERY_MAX_DAYS)
+        for j in range(break_i + FAKEOUT_RECOVERY_MIN_DAYS, reclaim_end + 1):
+            if float(x.iloc[j].close) >= prior_support:
+                reclaim_i = j
+                break
+        if reclaim_i is None:
+            continue
+
+        post_washout = x.iloc[break_i:i + 1]
+        no_lower_low = float(post_washout["low"].min()) >= break_low * (
+            1.0 - FAKEOUT_NEW_LOW_TOL
+        )
+        if not no_lower_low:
+            continue
+
+        candidate = {
+            "break_i": break_i,
+            "reclaim_i": reclaim_i,
+            "prior_support": prior_support,
+            "prior_resistance": prior_resistance,
+            "break_low": break_low,
+            "washout_pct": break_low / recent_peak - 1.0,
+        }
+        if selected is None or reclaim_i > selected["reclaim_i"]:
+            selected = candidate
+
+    if selected is None:
+        return {}, None
+
+    break_i = int(selected["break_i"])
+    reclaim_i = int(selected["reclaim_i"])
+    support = float(selected["prior_support"])
+    resistance = float(selected["prior_resistance"])
+    break_low = float(selected["break_low"])
+    location = close_location(t)
+    volume_ok, lots, turnover, ratio = volume_gate(t)
+    extension = close / resistance - 1.0
+    previous_close = float(x.iloc[i - 1].close)
+    fresh_breakout = (
+        close > resistance * (1.0 + FAKEOUT_BREAKOUT_MIN)
+        and previous_close <= resistance * (1.0 + FAKEOUT_BREAKOUT_MIN)
+    )
+    setup = {
+        "pattern": "假摔收復確認",
+        "setup_date": x.iloc[break_i].date.strftime("%Y-%m-%d"),
+        "breakout_date": t.date.strftime("%Y-%m-%d") if fresh_breakout else "",
+        "confirmation_mode": "突破原整理壓力" if fresh_breakout else "等待突破原整理壓力",
+        "trigger_level": round(resistance, 2),
+        "support_lower": round(support, 2),
+        "support_upper": round(support * 1.02, 2),
+        "support_source": "假摔後收復的原整理支撐",
+        "structure_extension_pct": round(extension * 100, 2),
+        "close_location": round(location, 2),
+        "volume_ok": volume_ok,
+        "washout_low": round(break_low, 2),
+        "washout_pct": round(float(selected["washout_pct"]) * 100, 2),
+        "reclaim_date": x.iloc[reclaim_i].date.strftime("%Y-%m-%d"),
+        "recovery_days": reclaim_i - break_i,
+    }
+    confirmed = (
+        fresh_breakout
+        and close > float(t.open)
+        and location >= CLOSE_LOCATION_MIN
+        and volume_ok
+        and extension <= MAX_STRUCTURE_EXTENSION
+    )
+    if not confirmed:
+        return setup, None
+
+    date = t.date.strftime("%Y-%m-%d")
+    signal = {
+        "date": date,
+        "code": code,
+        "signal_route": "假摔收復確認",
+        "signal_light": "🟢綠燈",
+        "close": round(close, 2),
+        "baseline_entry": round(resistance * (1.0 + FAKEOUT_BREAKOUT_MIN), 2),
+        "breakout_date": date,
+        "confirmation_mode": "突破原整理壓力",
+        "key_date": date,
+        "key_high": round(resistance, 2),
+        "key_low": round(break_low, 2),
+        "volume_lots": round(lots, 0),
+        "volume_ratio": round(ratio, 2),
+        "turnover": round(turnover, 0),
+        "support_lower": setup["support_lower"],
+        "support_upper": setup["support_upper"],
+        "support_source": setup["support_source"],
+        "pattern_key": (
+            f"假摔收復確認:{setup['setup_date']}:{resistance:.2f}"
+        ),
+        "structure_extension_pct": setup["structure_extension_pct"],
+    }
+    add_four_layer_evidence(signal, setup, x, i, [
+        ("急跌洗盤", True),
+        ("10日內收復", True),
+        ("未再破低", True),
+        ("突破原壓力", True),
+    ])
     return setup, signal
 
 
@@ -695,7 +849,7 @@ def append_recommendation(row: dict) -> None:
                 if not migrated.get("strategy_source"):
                     route = old.get("signal_route", "")
                     migrated["strategy_source"] = (
-                        "龍蝦核心" if route in {"破底翻", "突破回踩不破", "突破後站穩"}
+                        "龍蝦核心" if route in {"破底翻", "突破回踩不破", "突破後站穩", "假摔收復確認"}
                         else "龍蝦舊版30MA" if route == "30MA回踩"
                         else ""
                     )
@@ -941,14 +1095,17 @@ def main() -> int:
             continue
 
         false_setup, false_signal = detect_false_break_reversal(code, x)
+        fakeout_setup, fakeout_signal = detect_fakeout_recovery(code, x)
         breakout_setup, breakout_signal = detect_true_breakout(code, x)
         ma30_setup, _ma30_signal = detect_ma30_key_retest(code, x)
         false_signal = apply_new_plan_gate(false_signal, false_setup, x, market_return20)
+        fakeout_signal = apply_new_plan_gate(fakeout_signal, fakeout_setup, x, market_return20)
         breakout_signal = apply_new_plan_gate(breakout_signal, breakout_setup, x, market_return20)
         # Legacy 30MA route remains observation-only and cannot create a formal buy.
         ma30_signal = None
         setups = [
             (false_setup, false_signal),
+            (fakeout_setup, fakeout_signal),
             (breakout_setup, breakout_signal),
             (ma30_setup, ma30_signal),
         ]
@@ -972,7 +1129,7 @@ def main() -> int:
             close = float(x.iloc[-1].close)
             level = float(setup.get("trigger_level") or 0.0)
             near_setup = (
-                setup["pattern"] in {"破底翻", "30MA關鍵K"}
+                setup["pattern"] in {"破底翻", "假摔收復確認", "30MA關鍵K"}
                 or (level > 0 and close >= level * 0.97)
             )
             if not near_setup and signal is None:
@@ -1017,7 +1174,7 @@ def main() -> int:
     candidate_rows.sort(
         key=lambda row: (
             0 if row["status"] == "正式買點" else 1,
-            0 if row["pattern"] == "破底翻" else 1,
+            0 if row["pattern"] == "假摔收復確認" else 1 if row["pattern"] == "破底翻" else 2,
             row["code"],
         )
     )
@@ -1048,7 +1205,7 @@ def main() -> int:
     if triggers or exit_warnings:
         lines = [
             f"🦞 龍蝦雷達買點建議｜{latest_date}",
-            "新版：破底翻／突破確認＋上方空間＋相對強度；20MA／30MA只作保護",
+            "新版：破底翻／突破確認／假摔收復確認＋上方空間＋相對強度；60MA作大趨勢保護",
         ]
         for row in triggers:
             lines += [
