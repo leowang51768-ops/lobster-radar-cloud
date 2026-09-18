@@ -59,6 +59,13 @@ FAKEOUT_BREAKOUT_MIN = 0.003
 BREAKOUT_MIN = 0.003
 BREAKOUT_STAND_DAYS = 3
 BREAKOUT_RETEST_DAYS = 5
+BREAKOUT_MIN_RETEST_DAYS = 2
+BREAKOUT_MAX_ENTRY_EXTENSION = 0.03
+BREAKOUT_MIN_VOLUME_5D_RATIO = 1.50
+BREAKOUT_MIN_BODY_EFFICIENCY = 0.70
+BREAKOUT_MIN_CLOSE_LOCATION = 0.75
+BREAKOUT_MAX_ATR_COMPRESSION = 0.80
+BREAKOUT_MAX_PREBREAK_VOLUME_RATIO = 0.85
 BREAKOUT_CONFIRM_DAYS = max(BREAKOUT_STAND_DAYS, BREAKOUT_RETEST_DAYS)
 BREAKOUT_HOLD_TOL = 0.005
 BREAKOUT_RETEST_TOL = 0.01
@@ -95,12 +102,11 @@ MA30_KEY_WATCHLIST = {
 }
 MA30_RETEST_LOOKAHEAD = 15
 MA30_RECLAIM_DAYS = 3
-STRATEGY_VERSION = "破底翻+突破確認-v8移除假摔+上方空間+相對強度+60MA保護"
+STRATEGY_VERSION = "破底翻+高品質突破量縮回踩-v9"
 ROUTE_PRIORITY = {
     "突破回踩不破": 1,
     "破底翻": 2,
-    "突破後站穩": 3,
-    "30MA關鍵K": 4,
+    "30MA關鍵K": 3,
 }
 
 
@@ -513,13 +519,38 @@ def detect_true_breakout(code: str, x: pd.DataFrame) -> tuple[dict, dict | None]
         breakout_close = float(breakout_row.close)
         volume_ok, breakout_lots, _turnover, breakout_ratio = volume_gate(breakout_row)
         extension = breakout_close / platform_high - 1.0
+        prior5_volume = float(x.iloc[max(0, break_i - 5):break_i]["volume_lots"].mean())
+        volume_5d_ratio = (
+            float(breakout_row.volume_lots) / prior5_volume
+            if prior5_volume > 0 else 0.0
+        )
+        approach = x.iloc[max(0, break_i - 13):break_i]
+        atr_ratio = math.inf
+        prebreak_volume_ratio = math.inf
+        if len(approach) >= 13:
+            atr_short = float(approach.tail(3)["true_range"].mean())
+            atr_base = float(approach.head(10)["true_range"].mean())
+            recent_vol = float(approach.tail(3)["volume_lots"].mean())
+            base_vol = float(approach.head(10)["volume_lots"].mean())
+            atr_ratio = atr_short / atr_base if atr_base > 0 else math.inf
+            prebreak_volume_ratio = recent_vol / base_vol if base_vol > 0 else math.inf
+        efficient_breakout = (
+            volume_5d_ratio >= BREAKOUT_MIN_VOLUME_5D_RATIO
+            and body_efficiency(breakout_row) >= BREAKOUT_MIN_BODY_EFFICIENCY
+            and close_location(breakout_row) >= BREAKOUT_MIN_CLOSE_LOCATION
+        )
+        compressed_approach = (
+            atr_ratio <= BREAKOUT_MAX_ATR_COMPRESSION
+            and prebreak_volume_ratio <= BREAKOUT_MAX_PREBREAK_VOLUME_RATIO
+        )
         valid_breakout = (
             touches >= MIN_PLATFORM_TOUCHES
             and breakout_close > platform_high * (1.0 + BREAKOUT_MIN)
             and breakout_close > float(breakout_row.open)
-            and close_location(breakout_row) >= CLOSE_LOCATION_MIN
             and volume_ok
-            and extension <= MAX_STRUCTURE_EXTENSION
+            and extension <= BREAKOUT_MAX_ENTRY_EXTENSION
+            and efficient_breakout
+            and compressed_approach
         )
         if valid_breakout:
             selected = {
@@ -529,6 +560,10 @@ def detect_true_breakout(code: str, x: pd.DataFrame) -> tuple[dict, dict | None]
                 "breakout_lots": breakout_lots,
                 "breakout_ratio": breakout_ratio,
                 "extension": extension,
+                "volume_5d_ratio": volume_5d_ratio,
+                "atr_ratio": atr_ratio,
+                "prebreak_volume_ratio": prebreak_volume_ratio,
+                "body_efficiency": body_efficiency(breakout_row),
             }
             break
 
@@ -577,34 +612,24 @@ def detect_true_breakout(code: str, x: pd.DataFrame) -> tuple[dict, dict | None]
 
     retested = float(t.low) <= platform_high * (1.0 + BREAKOUT_RETEST_TOL)
     elapsed = i - break_i
+    reversal_confirmation = close > float(t.open) or long_lower_shadow(t)
     retest_hold = (
-        elapsed <= BREAKOUT_RETEST_DAYS
+        BREAKOUT_MIN_RETEST_DAYS <= elapsed <= BREAKOUT_RETEST_DAYS
         and held_structure
         and retested
         and retest_volume_contracted
         and close >= platform_high
         and location >= 0.50
+        and reversal_confirmation
         and liquid_today
-        and extension <= MAX_STRUCTURE_EXTENSION
-    )
-    stand_confirmed = (
-        elapsed <= BREAKOUT_STAND_DAYS
-        and held_structure
-        and close >= platform_high * (1.0 + BREAKOUT_MIN)
-        and close > float(t.open)
-        and location >= CLOSE_LOCATION_MIN
-        and liquid_today
-        and extension <= MAX_STRUCTURE_EXTENSION
+        and extension <= BREAKOUT_MAX_ENTRY_EXTENSION
     )
 
-    mode = "等待站穩／回踩確認"
+    mode = "等待高品質突破後量縮回踩"
     route = ""
     if retest_hold:
-        mode = "回踩平台不破"
+        mode = "高品質突破後量縮回踩不破"
         route = "突破回踩不破"
-    elif stand_confirmed:
-        mode = "突破後站穩"
-        route = "突破後站穩"
 
     setup = {
         "pattern": "突破後確認",
@@ -627,11 +652,7 @@ def detect_true_breakout(code: str, x: pd.DataFrame) -> tuple[dict, dict | None]
         return setup, None
 
     date = t.date.strftime("%Y-%m-%d")
-    baseline = (
-        platform_high
-        if route == "突破回踩不破"
-        else platform_high * (1.0 + BREAKOUT_MIN)
-    )
+    baseline = platform_high
     pattern_key = f"{route}:{breakout_date}:{platform_high:.2f}"
     signal = {
         "date": date,
@@ -655,44 +676,24 @@ def detect_true_breakout(code: str, x: pd.DataFrame) -> tuple[dict, dict | None]
         "structure_extension_pct": setup["structure_extension_pct"],
     }
     breakout_row = x.iloc[break_i]
-    approach = x.iloc[max(0, break_i - 13):break_i]
-    atr_ratio = math.inf
-    prebreak_volume_ratio = math.inf
-    if len(approach) >= 13:
-        atr_short = float(approach.tail(3)["true_range"].mean())
-        atr_base = float(approach.head(10)["true_range"].mean())
-        recent_vol = float(approach.tail(3)["volume_lots"].mean())
-        base_vol = float(approach.head(10)["volume_lots"].mean())
-        atr_ratio = atr_short / atr_base if atr_base > 0 else math.inf
-        prebreak_volume_ratio = recent_vol / base_vol if base_vol > 0 else math.inf
-    trend_ok = bool(
-        pd.notna(breakout_row.ma20)
-        and break_i >= 1
-        and pd.notna(x.iloc[break_i - 1].ma20)
-        and float(breakout_row.close) > float(breakout_row.ma20)
-        and float(breakout_row.ma20) >= float(x.iloc[break_i - 1].ma20)
-    )
-    prior5_volume = float(x.iloc[max(0, break_i - 5):break_i]["volume_lots"].mean())
-    volume_5d_ratio = float(breakout_row.volume_lots) / prior5_volume if prior5_volume > 0 else 0.0
-    efficient_breakout = (
-        volume_5d_ratio >= 1.50
-        and body_efficiency(breakout_row) >= 0.70
-        and close_location(breakout_row) >= 0.75
-    )
-    tight_approach = trend_ok and atr_ratio <= 0.80 and prebreak_volume_ratio <= 0.85
+    atr_ratio = float(selected["atr_ratio"])
+    prebreak_volume_ratio = float(selected["prebreak_volume_ratio"])
+    volume_5d_ratio = float(selected["volume_5d_ratio"])
+    efficient_breakout = True
+    tight_approach = True
     add_four_layer_evidence(signal, setup, x, i, [
-        ("20MA向上＋ATR/量縮靠近", tight_approach),
+        ("ATR與量能收縮靠近", tight_approach),
         ("1.5倍量高效率突破", efficient_breakout),
-        ("站穩/量縮回踩確認", True),
+        ("量縮回踩確認", True),
         ("風報比≥1.5", True),
     ])
     rr_ok = float(signal["risk_reward"]) >= MIN_RISK_REWARD
     evidence = []
     if tight_approach:
-        evidence.append("20MA向上＋ATR/量縮靠近")
+        evidence.append("ATR與量能收縮靠近")
     if efficient_breakout:
         evidence.append("1.5倍量高效率突破")
-    evidence.append("站穩/量縮回踩確認")
+    evidence.append("量縮回踩確認")
     if rr_ok:
         evidence.append("風報比≥1.5")
     signal["evidence_count"] = len(evidence)
@@ -846,7 +847,7 @@ def append_recommendation(row: dict) -> None:
                 if not migrated.get("strategy_source"):
                     route = old.get("signal_route", "")
                     migrated["strategy_source"] = (
-                        "龍蝦核心" if route in {"破底翻", "突破回踩不破", "突破後站穩"}
+                        "龍蝦核心" if route in {"破底翻", "突破回踩不破"}
                         else "龍蝦舊版30MA" if route == "30MA回踩"
                         else ""
                     )
