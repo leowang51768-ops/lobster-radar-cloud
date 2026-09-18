@@ -6,7 +6,7 @@ on:
     paths:
       - ".github/workflows/backtest_new_rules.yml"
       - "buy_signal.py"
-      - "backtest_fakeout_fast.py"
+      - "backtest_fakeout_ab.py"
 
 permissions:
   contents: write
@@ -24,19 +24,19 @@ jobs:
       - name: Install dependencies
         run: pip install pandas
       - name: Compile strategy and backtest
-        run: python -m py_compile buy_signal.py backtest_fakeout_fast.py
+        run: python -m py_compile buy_signal.py backtest_fakeout_ab.py
       - name: Run walk-forward A/B backtest
-        run: python backtest_fakeout_fast.py
+        run: python backtest_fakeout_ab.py
       - name: Commit backtest results
         run: |
           git config user.name "lobster-radar-cloud"
           git config user.email "actions@github.com"
-          git add backtest_fakeout_fast_results.json
+          git add backtest_fakeout_ab_results.json backtest_fakeout_ab_report.md
           if git diff --cached --quiet; then
             echo "No backtest result changes."
             exit 0
           fi
-          git commit -m "Backtest structural fakeout results"
+          git commit -m "Backtest v9 high-quality breakout retest"
           git fetch origin main
           git rebase origin/main
           git push
