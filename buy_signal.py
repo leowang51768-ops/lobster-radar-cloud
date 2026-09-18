@@ -54,6 +54,8 @@ FALSE_BREAK_MIN = 0.005
 FALSE_BREAK_RECOVERY_DAYS = 3
 FAKEOUT_EVENT_LOOKBACK = 45
 FAKEOUT_PRE_WINDOW = 20
+FAKEOUT_SUPPORT_BAND = 0.03
+FAKEOUT_MIN_SUPPORT_TOUCHES = 2
 FAKEOUT_RECOVERY_MIN_DAYS = 3
 FAKEOUT_RECOVERY_MAX_DAYS = 10
 FAKEOUT_SUPPORT_BREAK_MIN = 0.01
@@ -378,16 +380,16 @@ def detect_fakeout_recovery(code: str, x: pd.DataFrame) -> tuple[dict, dict | No
         prior_resistance = float(prior["high"].max())
         recent_peak = float(prior.tail(10)["high"].max())
         break_low = float(break_row.low)
-        ma30_at_break = (
-            float(break_row.ma30) if pd.notna(break_row.ma30) else math.nan
+        support_touches = int(
+            (prior["low"] <= prior_support * (1.0 + FAKEOUT_SUPPORT_BAND)).sum()
         )
         broke_support = break_low < prior_support * (1.0 - FAKEOUT_SUPPORT_BREAK_MIN)
-        broke_key_average = (
-            math.isfinite(ma30_at_break)
-            and break_low < ma30_at_break * (1.0 - FAKEOUT_SUPPORT_BREAK_MIN)
-        )
         acute_drop = break_low <= recent_peak * (1.0 - FAKEOUT_ACUTE_DROP_MIN)
-        if not (acute_drop and (broke_support or broke_key_average)):
+        if not (
+            acute_drop
+            and broke_support
+            and support_touches >= FAKEOUT_MIN_SUPPORT_TOUCHES
+        ):
             continue
 
         reclaim_i = None
@@ -413,6 +415,7 @@ def detect_fakeout_recovery(code: str, x: pd.DataFrame) -> tuple[dict, dict | No
             "prior_resistance": prior_resistance,
             "break_low": break_low,
             "washout_pct": break_low / recent_peak - 1.0,
+            "support_touches": support_touches,
         }
         if selected is None or reclaim_i > selected["reclaim_i"]:
             selected = candidate
@@ -449,6 +452,7 @@ def detect_fakeout_recovery(code: str, x: pd.DataFrame) -> tuple[dict, dict | No
         "washout_pct": round(float(selected["washout_pct"]) * 100, 2),
         "reclaim_date": x.iloc[reclaim_i].date.strftime("%Y-%m-%d"),
         "recovery_days": reclaim_i - break_i,
+        "support_touches": int(selected["support_touches"]),
     }
     confirmed = (
         fresh_breakout
