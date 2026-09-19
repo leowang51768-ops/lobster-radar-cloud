@@ -34,6 +34,7 @@ MIN_VOLUME_LOTS = 1000
 MIN_AVG_TURNOVER = 30_000_000
 NEAR_PIVOT_PCT = 0.05
 BREAKOUT_BUFFER = 0.003
+PIVOT_STOP_BUFFER = 0.01
 BREAKOUT_VOLUME_RATIO = 1.50
 RETEST_MIN_DAYS = 2
 RETEST_MAX_DAYS = 5
@@ -297,7 +298,7 @@ def make_row(x: pd.DataFrame, i: int, profile: dict, stage: str,
     if support_zone is None:
         return None
     support_lower, support_upper = support_zone
-    stop_price = stop_reference_90d(x, i)
+    stop_price = pivot * (1.0 - PIVOT_STOP_BUFFER)
     ma60 = float(row.ma60)
     ma60_old = float(x.iloc[i - 5].ma60)
     ma_change = ma60 / ma60_old - 1.0 if ma60_old > 0 else 0.0
@@ -333,7 +334,7 @@ def make_row(x: pd.DataFrame, i: int, profile: dict, stage: str,
         "avg20_turnover": round(float(row.avg20_turnover), 0),
         "ma60": round(ma60, 2), "ma60_5d_change_pct": round(ma_change * 100, 2),
         "quality_score": quality, "action": action,
-        "invalidation": f"收盤跌破90日最低價{stop_price:.2f}即失效",
+        "invalidation": f"收盤跌破樞紐下方1%（{stop_price:.2f}）即失效",
     }
 
 
@@ -414,7 +415,7 @@ def send_line_summary(rows: list[dict], trade_date: str) -> None:
             lines += [
                 f"{row['code']} {row['name']}｜收{row['close']}｜突破樞紐{row['pivot']}",
                 f"收縮{row['contraction_count']}次({row['contraction_depths_pct']}%)｜品質{row['quality_score']}分",
-                f"支撐區{row['support_lower']}～{row['support_upper']}｜90日最低停損{row['stop_price']}",
+                f"支撐區{row['support_lower']}～{row['support_upper']}｜停損{row['stop_price']}（樞紐下方1%）",
                 f"行動：{row['action']}",
             ]
         if len(selected) > 5:
