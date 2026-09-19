@@ -440,7 +440,7 @@ def classify_latest(group: pd.DataFrame) -> dict | None:
 
 
 def send_line_summary(rows: list[dict], trade_date: str) -> None:
-    """Send the top 10 VCP candidates per stage, splitting long LINE messages."""
+    """Send the overall top 10 VCP candidates ranked by reward-risk."""
     force_notify = os.environ.get("VCP_FORCE_NOTIFY", "").strip() == "1"
     if not rows and not force_notify:
         print("No VCP candidates; LINE notification skipped")
@@ -450,26 +450,16 @@ def send_line_summary(rows: list[dict], trade_date: str) -> None:
         print("LINE token missing; VCP results were written to CSV only")
         return
 
-    labels = {
-        "突破後回踩": "🟢 VCP突破後回踩｜高優先觀察",
-        "當日突破": "🟡 VCP當日突破｜等待回踩，不追價",
-        "接近突破": "⚪ VCP接近突破｜僅觀察，尚非買點",
-    }
     blocks = [
         f"🦞 VCP三階段雷達｜{trade_date}\n"
-        "本訊息是型態觀察，不寫入正式推薦績效。"
+        "全部階段合併，依風報比排序；本訊息不寫入正式推薦績效。"
     ]
     if not rows:
         blocks.append("✅ LINE測試成功｜目前資料庫無VCP候選")
-
-    for stage in ("突破後回踩", "當日突破", "接近突破"):
-        selected = [row for row in rows if row["vcp_stage"] == stage]
-        shown = min(len(selected), 10)
-        blocks.append(f"{labels[stage]}（顯示{shown}檔／共{len(selected)}檔）")
-        if not selected:
-            blocks.append("無")
-            continue
-        for row in selected[:10]:
+    else:
+        shown = min(len(rows), 10)
+        blocks.append(f"📊 風報比總榜（顯示{shown}檔／共{len(rows)}檔）")
+        for rank, row in enumerate(rows[:10], start=1):
             if row["upper_pivot"] != "":
                 upside_line = (
                     f"上方樞紐{row['upper_pivot']}｜上方空間{row['upside_to_upper_pivot_pct']}%"
@@ -478,8 +468,8 @@ def send_line_summary(rows: list[dict], trade_date: str) -> None:
             else:
                 upside_line = "60日內無明確上方樞紐｜風報比暫無法估算"
             blocks.append(
-                f"{row['code']} {row['name']}｜收{row['close']}｜突破樞紐{row['pivot']}\n"
-                f"收縮{row['contraction_count']}次({row['contraction_depths_pct']}%)｜品質{row['quality_score']}分\n"
+                f"{rank}. {row['code']} {row['name']}｜{row['vcp_stage']}\n"
+                f"收{row['close']}｜突破樞紐{row['pivot']}｜品質{row['quality_score']}分\n"
                 f"{upside_line}\n"
                 f"支撐區{row['support_lower']}～{row['support_upper']}｜停損{row['stop_price']}（樞紐下方1%）\n"
                 f"行動：{row['action']}"
@@ -544,9 +534,7 @@ def main() -> int:
         result = classify_latest(group)
         if result:
             rows.append(result)
-    priority = {"突破後回踩": 0, "當日突破": 1, "接近突破": 2}
     rows.sort(key=lambda r: (
-        priority[r["vcp_stage"]],
         r["reward_risk_ratio"] == "",
         -float(r["reward_risk_ratio"]) if r["reward_risk_ratio"] != "" else 0.0,
         -r["quality_score"],
