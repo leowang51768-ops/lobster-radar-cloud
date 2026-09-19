@@ -128,7 +128,13 @@ jobs:
           done
           exit 1
 
-      - name: Scan VCP stages (observation only)\n        shell: bash\n        run: |\n          echo "FAIL_STAGE=VCP三階段掃描" >> "$GITHUB_ENV"\n          python vcp_scan.py\n\n      - name: Final health check
+      - name: Scan VCP stages (observation only)
+        shell: bash
+        run: |
+          echo "FAIL_STAGE=VCP三階段掃描" >> "$GITHUB_ENV"
+          python vcp_scan.py
+
+      - name: Final health check
         run: |
           echo "FAIL_STAGE=最終健康檢查" >> "$GITHUB_ENV"
           python - <<'PY'
