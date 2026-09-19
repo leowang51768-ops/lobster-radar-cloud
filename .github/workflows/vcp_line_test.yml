@@ -1,0 +1,24 @@
+name: VCP LINE Test Once
+
+on:
+  push:
+    paths:
+      - ".github/workflows/vcp_line_test.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  test-vcp-line:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install pandas
+      - name: Scan current database and send VCP LINE test
+        env:
+          LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
+          VCP_FORCE_NOTIFY: "1"
+        run: python vcp_scan.py
