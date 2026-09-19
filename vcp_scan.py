@@ -45,7 +45,8 @@ MA60_MAX_5D_DECLINE = 0.02
 
 FIELDS = [
     "date", "code", "name", "market", "vcp_stage", "stage_explanation",
-    "close", "pivot", "distance_to_pivot_pct", "support_lower",
+    "close", "pivot", "distance_to_pivot_pct", "upper_pivot",
+    "upside_to_upper_pivot_pct", "reward_risk_ratio", "support_lower",
     "support_upper", "stop_price", "contraction_count",
     "contraction_depths_pct", "volume_dry_ratio", "volume_ratio",
     "avg20_volume_lots", "avg20_turnover", "ma60", "ma60_5d_change_pct",
@@ -212,6 +213,51 @@ def pivot_before(x: pd.DataFrame, i: int) -> float | None:
     return float(winner["center"])
 
 
+def upper_pivot_before(x: pd.DataFrame, i: int, pivot: float, close: float) -> float | None:
+    """Return the nearest repeated resistance cluster above both price and pivot."""
+    start = max(0, i - PIVOT_LOOKBACK)
+    window = x.iloc[start:i]
+    if len(window) < 5:
+        return None
+
+    peaks: list[tuple[int, float]] = []
+    for pos in range(2, len(window) - 2):
+        price = float(window.iloc[pos].high)
+        local = window.iloc[pos - 2:pos + 3]["high"]
+        if price >= float(local.max()):
+            absolute_i = start + pos
+            if not peaks or absolute_i - peaks[-1][0] >= PIVOT_MIN_GAP_DAYS:
+                peaks.append((absolute_i, price))
+            elif price > peaks[-1][1]:
+                peaks[-1] = (absolute_i, price)
+
+    clusters: list[dict] = []
+    for peak_i, price in peaks:
+        matching = [
+            cluster for cluster in clusters
+            if abs(price / float(cluster["center"]) - 1.0) <= PIVOT_CLUSTER_TOL
+        ]
+        if matching:
+            cluster = min(
+                matching,
+                key=lambda item: abs(price / float(item["center"]) - 1.0),
+            )
+            cluster["touches"].append((peak_i, price))
+            cluster["center"] = float(
+                pd.Series([p for _, p in cluster["touches"]]).median()
+            )
+        else:
+            clusters.append({"center": price, "touches": [(peak_i, price)]})
+
+    floor = max(pivot * (1.0 + PIVOT_CLUSTER_TOL), close)
+    valid = [
+        float(cluster["center"]) for cluster in clusters
+        if len(cluster["touches"]) >= PIVOT_MIN_TOUCHES
+        and float(cluster["center"]) > floor
+    ]
+    return min(valid) if valid else None
+
+
 def support_zone_before(x: pd.DataFrame, i: int) -> tuple[float, float] | None:
     """Return the most frequently retested support band in the prior 60 sessions."""
     start = max(0, i - PIVOT_LOOKBACK + 1)
@@ -294,6 +340,18 @@ def make_row(x: pd.DataFrame, i: int, profile: dict, stage: str,
         return None
     support_lower, support_upper = support_zone
     stop_price = pivot * (1.0 - PIVOT_STOP_BUFFER)
+    upper_pivot = upper_pivot_before(x, i, pivot, close)
+    upside_pct = None
+    reward_risk = None
+    if upper_pivot is not None:
+        risk = close - stop_price
+        reward = upper_pivot - close
+        if risk <= 0 or reward <= 0:
+            return None
+        upside_pct = reward / close * 100.0
+        reward_risk = reward / risk
+        if reward_risk < 1.5:
+            return None
     ma60 = float(row.ma60)
     ma60_old = float(x.iloc[i - 5].ma60)
     ma_change = ma60 / ma60_old - 1.0 if ma60_old > 0 else 0.0
@@ -318,6 +376,9 @@ def make_row(x: pd.DataFrame, i: int, profile: dict, stage: str,
         "vcp_stage": stage, "stage_explanation": explanation,
         "close": round(close, 2), "pivot": round(pivot, 2),
         "distance_to_pivot_pct": round(distance * 100, 2),
+        "upper_pivot": round(upper_pivot, 2) if upper_pivot is not None else "",
+        "upside_to_upper_pivot_pct": round(upside_pct, 2) if upside_pct is not None else "",
+        "reward_risk_ratio": round(reward_risk, 2) if reward_risk is not None else "",
         "support_lower": round(support_lower, 2),
         "support_upper": round(support_upper, 2),
         "stop_price": round(stop_price, 2),
@@ -379,7 +440,7 @@ def classify_latest(group: pd.DataFrame) -> dict | None:
 
 
 def send_line_summary(rows: list[dict], trade_date: str) -> None:
-    """Send every VCP candidate, splitting complete stock blocks across LINE messages."""
+    """Send the top 10 VCP candidates per stage, splitting long LINE messages."""
     force_notify = os.environ.get("VCP_FORCE_NOTIFY", "").strip() == "1"
     if not rows and not force_notify:
         print("No VCP candidates; LINE notification skipped")
@@ -403,14 +464,23 @@ def send_line_summary(rows: list[dict], trade_date: str) -> None:
 
     for stage in ("突破後回踩", "當日突破", "接近突破"):
         selected = [row for row in rows if row["vcp_stage"] == stage]
-        blocks.append(f"{labels[stage]}（{len(selected)}檔）")
+        shown = min(len(selected), 10)
+        blocks.append(f"{labels[stage]}（顯示{shown}檔／共{len(selected)}檔）")
         if not selected:
             blocks.append("無")
             continue
         for row in selected[:10]:
+            if row["upper_pivot"] != "":
+                upside_line = (
+                    f"上方樞紐{row['upper_pivot']}｜上方空間{row['upside_to_upper_pivot_pct']}%"
+                    f"｜風報比{row['reward_risk_ratio']}"
+                )
+            else:
+                upside_line = "60日內無明確上方樞紐｜風報比暫無法估算"
             blocks.append(
                 f"{row['code']} {row['name']}｜收{row['close']}｜突破樞紐{row['pivot']}\n"
                 f"收縮{row['contraction_count']}次({row['contraction_depths_pct']}%)｜品質{row['quality_score']}分\n"
+                f"{upside_line}\n"
                 f"支撐區{row['support_lower']}～{row['support_upper']}｜停損{row['stop_price']}（樞紐下方1%）\n"
                 f"行動：{row['action']}"
             )
@@ -475,7 +545,13 @@ def main() -> int:
         if result:
             rows.append(result)
     priority = {"突破後回踩": 0, "當日突破": 1, "接近突破": 2}
-    rows.sort(key=lambda r: (priority[r["vcp_stage"]], -r["quality_score"], r["code"]))
+    rows.sort(key=lambda r: (
+        priority[r["vcp_stage"]],
+        r["reward_risk_ratio"] == "",
+        -float(r["reward_risk_ratio"]) if r["reward_risk_ratio"] != "" else 0.0,
+        -r["quality_score"],
+        r["code"],
+    ))
     with OUTPUT.open("w", encoding="utf-8-sig", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=FIELDS)
         writer.writeheader()
