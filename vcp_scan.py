@@ -29,7 +29,7 @@ BASE_LOOKBACK = 60
 PIVOT_LOOKBACK = 60
 PIVOT_CLUSTER_TOL = 0.01
 PIVOT_MIN_TOUCHES = 2
-PIVOT_MIN_GAP_DAYS = 3
+PIVOT_MIN_GAP_DAYS = 1
 MIN_VOLUME_LOTS = 300
 MIN_AVG_TURNOVER = 30_000_000
 NEAR_PIVOT_PCT = 0.05
@@ -158,7 +158,7 @@ def pivot_before(x: pd.DataFrame, i: int) -> float | None:
     """Return the most frequently retested resistance price in the prior 60 sessions.
 
     Only local swing highs are counted. Highs within 1% form one price cluster,
-    and touches must be at least three sessions apart. A single isolated high
+    and touches must be at least one session apart. A single isolated high
     is never used as a VCP pivot.
     """
     start = max(0, i - PIVOT_LOOKBACK)
