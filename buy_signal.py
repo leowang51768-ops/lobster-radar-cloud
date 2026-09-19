@@ -37,7 +37,10 @@ RECOMMENDATIONS = BASE / "formal_recommendations.csv"
 CANDIDATES = BASE / "candidate_status.csv"
 
 LOOKBACK = 20
-FALSE_BREAK_MIN = 0.005
+FALSE_BREAK_SUPPORT_LOOKBACK = 60
+FALSE_BREAK_SUPPORT_TOL = 0.01
+FALSE_BREAK_MIN_TOUCHES = 2
+FALSE_BREAK_MIN_GAP_DAYS = 1
 FALSE_BREAK_RECOVERY_DAYS = 3
 FAKEOUT_EVENT_LOOKBACK = 45
 FAKEOUT_PRE_WINDOW = 20
@@ -236,9 +239,82 @@ def add_four_layer_evidence(
     )})
 
 
+def tw_stock_tick(price: float) -> float:
+    """Return the TW stock tick size for a positive reference price."""
+    if price < 10:
+        return 0.01
+    if price < 50:
+        return 0.05
+    if price < 100:
+        return 0.10
+    if price < 500:
+        return 0.50
+    if price < 1000:
+        return 1.00
+    return 5.00
+
+
+def false_break_support_zone(x: pd.DataFrame, break_i: int) -> tuple[float, float, int] | None:
+    """Build the strongest repeated-close support zone before the breakdown."""
+    start = max(0, break_i - FALSE_BREAK_SUPPORT_LOOKBACK)
+    window = x.iloc[start:break_i]
+    if len(window) < 5:
+        return None
+
+    touches: list[tuple[int, float]] = []
+    for pos in range(2, len(window) - 2):
+        row = window.iloc[pos]
+        if float(row.low) <= float(window.iloc[pos - 2:pos + 3]["low"].min()):
+            absolute_i = start + pos
+            close_price = float(row.close)
+            if not touches or absolute_i - touches[-1][0] >= FALSE_BREAK_MIN_GAP_DAYS:
+                touches.append((absolute_i, close_price))
+            elif close_price < touches[-1][1]:
+                touches[-1] = (absolute_i, close_price)
+
+    clusters: list[dict] = []
+    for touch_i, price in touches:
+        matching = [
+            cluster for cluster in clusters
+            if abs(price / float(cluster["center"]) - 1.0) <= FALSE_BREAK_SUPPORT_TOL
+        ]
+        if matching:
+            cluster = min(
+                matching,
+                key=lambda item: abs(price / float(item["center"]) - 1.0),
+            )
+            cluster["touches"].append((touch_i, price))
+            cluster["center"] = float(
+                pd.Series([p for _, p in cluster["touches"]]).median()
+            )
+        else:
+            clusters.append({"center": price, "touches": [(touch_i, price)]})
+
+    pre_break_close = float(x.iloc[break_i - 1].close)
+    repeated = [
+        cluster for cluster in clusters
+        if len(cluster["touches"]) >= FALSE_BREAK_MIN_TOUCHES
+        and float(cluster["center"]) < pre_break_close
+    ]
+    if not repeated:
+        return None
+
+    # Most touches wins; ties choose the nearest support below pre-break price.
+    winner = max(
+        repeated,
+        key=lambda cluster: (
+            len(cluster["touches"]),
+            float(cluster["center"]),
+        ),
+    )
+    prices = [price for _, price in winner["touches"]]
+    return float(min(prices)), float(max(prices)), len(prices)
+
+
 def detect_false_break_reversal(code: str, x: pd.DataFrame) -> tuple[dict, dict | None]:
-    """Detect 破底翻: break a prior swing low, then reclaim it within 3 sessions."""
-    if len(x) < LOOKBACK + FALSE_BREAK_RECOVERY_DAYS:
+    """Detect a break of 60-day repeated-close support and reclaim within 3 sessions."""
+    minimum = FALSE_BREAK_SUPPORT_LOOKBACK + FALSE_BREAK_RECOVERY_DAYS
+    if len(x) < minimum:
         return {}, None
 
     i = len(x) - 1
@@ -246,23 +322,30 @@ def detect_false_break_reversal(code: str, x: pd.DataFrame) -> tuple[dict, dict 
     close = float(t.close)
     best = None
 
-    for break_i in range(max(LOOKBACK, i - FALSE_BREAK_RECOVERY_DAYS + 1), i + 1):
-        reference = x.iloc[break_i - LOOKBACK:break_i]
-        prior_low = float(reference["low"].min())
+    first_break = max(FALSE_BREAK_SUPPORT_LOOKBACK, i - FALSE_BREAK_RECOVERY_DAYS)
+    for break_i in range(first_break, i + 1):
+        zone = false_break_support_zone(x, break_i)
+        if zone is None:
+            continue
+        support_lower, support_upper, support_touches = zone
+        tick = tw_stock_tick(support_lower)
         break_row = x.iloc[break_i]
         break_low = float(break_row.low)
-        broke_floor = break_low < prior_low * (1.0 - FALSE_BREAK_MIN)
-        recovered = close > prior_low
+        broke_floor = break_low <= support_lower - tick + 1e-9
+        recovered = close >= support_upper + tw_stock_tick(support_upper) - 1e-9
         if not (broke_floor and recovered):
             continue
-        depth = break_low / prior_low - 1.0
+        depth = break_low / support_lower - 1.0
+        candidate = {
+            "break_i": break_i,
+            "support_lower": support_lower,
+            "support_upper": support_upper,
+            "support_touches": support_touches,
+            "break_low": break_low,
+            "depth": depth,
+        }
         if best is None or depth < best["depth"]:
-            best = {
-                "break_i": break_i,
-                "prior_low": prior_low,
-                "break_low": break_low,
-                "depth": depth,
-            }
+            best = candidate
 
     if best is None:
         return {}, None
@@ -271,7 +354,8 @@ def detect_false_break_reversal(code: str, x: pd.DataFrame) -> tuple[dict, dict 
     recovery_strength = close > float(x.iloc[i - 1].close)
     location = close_location(t)
     volume_ok, lots, turnover, ratio = volume_gate(t)
-    extension = close / best["prior_low"] - 1.0
+    trigger_level = best["support_upper"] + tw_stock_tick(best["support_upper"])
+    extension = close / trigger_level - 1.0
     break_i = int(best["break_i"])
     exhaustion = False
     if break_i >= 2:
@@ -279,15 +363,16 @@ def detect_false_break_reversal(code: str, x: pd.DataFrame) -> tuple[dict, dict 
         ranges = (recent["high"] - recent["low"]).astype(float).tolist()
         volumes = recent["volume_lots"].astype(float).tolist()
         exhaustion = ranges[2] < ranges[1] < ranges[0] and volumes[2] > volumes[1] > volumes[0]
-    accelerated_reclaim = best["depth"] <= -0.015 and i - break_i <= 2
+    accelerated_reclaim = i - break_i <= 2
     reversal_candle = bullish_engulfing(x, i) or long_lower_shadow(t)
     setup = {
         "pattern": "破底翻",
-        "setup_date": x.iloc[best["break_i"]].date.strftime("%Y-%m-%d"),
-        "trigger_level": round(best["prior_low"], 2),
-        "support_lower": round(best["break_low"], 2),
-        "support_upper": round(best["prior_low"], 2),
-        "support_source": "破底低點至收復之前波低點",
+        "setup_date": x.iloc[break_i].date.strftime("%Y-%m-%d"),
+        "trigger_level": round(trigger_level, 2),
+        "support_lower": round(best["support_lower"], 2),
+        "support_upper": round(best["support_upper"], 2),
+        "support_source": "破底前60日重複收盤價支撐區",
+        "support_touches": int(best["support_touches"]),
         "structure_extension_pct": round(extension * 100, 2),
         "close_location": round(location, 2),
         "volume_ok": volume_ok,
@@ -303,16 +388,19 @@ def detect_false_break_reversal(code: str, x: pd.DataFrame) -> tuple[dict, dict 
         return setup, None
 
     date = t.date.strftime("%Y-%m-%d")
-    pattern_key = f"破底翻:{setup['setup_date']}:{setup['trigger_level']}"
+    pattern_key = (
+        f"破底翻:{setup['setup_date']}:"
+        f"{setup['support_lower']}-{setup['support_upper']}"
+    )
     signal = {
         "date": date,
         "code": code,
         "signal_route": "破底翻",
         "signal_light": "🟢綠燈",
         "close": round(close, 2),
-        "baseline_entry": round(best["prior_low"], 2),
+        "baseline_entry": round(trigger_level, 2),
         "key_date": setup["setup_date"],
-        "key_high": round(best["prior_low"], 2),
+        "key_high": round(best["support_upper"], 2),
         "key_low": round(best["break_low"], 2),
         "volume_lots": round(lots, 0),
         "volume_ratio": round(ratio, 2),
@@ -320,20 +408,20 @@ def detect_false_break_reversal(code: str, x: pd.DataFrame) -> tuple[dict, dict 
         "support_lower": setup["support_lower"],
         "support_upper": setup["support_upper"],
         "support_source": setup["support_source"],
+        "support_touches": setup["support_touches"],
         "pattern_key": pattern_key,
         "structure_extension_pct": setup["structure_extension_pct"],
     }
     add_four_layer_evidence(signal, setup, x, i, [
-        ("收復前低", recovered),
-        ("放量減速/加速掃低", exhaustion or accelerated_reclaim),
+        ("收復60日支撐區", True),
+        ("破底後3日內收復", i - break_i <= FALSE_BREAK_RECOVERY_DAYS),
         ("吞噬/長下影", reversal_candle),
-        ("風報比≥1.5", True),  # recalculated below; status field is authoritative
+        ("風報比≥1.5", True),
     ])
-    # Correct the fourth evidence after the risk plan has been calculated.
     rr_ok = float(signal["risk_reward"]) >= MIN_RISK_REWARD
-    evidence = ["收復前低"]
+    evidence = ["收復60日支撐區", "破底後3日內收復"]
     if exhaustion or accelerated_reclaim:
-        evidence.append("放量減速/加速掃低")
+        evidence.append("快速掃低收復")
     if reversal_candle:
         evidence.append("吞噬/長下影")
     if rr_ok:
@@ -343,7 +431,6 @@ def detect_false_break_reversal(code: str, x: pd.DataFrame) -> tuple[dict, dict 
     setup["evidence_count"] = signal["evidence_count"]
     setup["evidence_notes"] = signal["evidence_notes"]
     return setup, signal
-
 
 def detect_fakeout_recovery(code: str, x: pd.DataFrame) -> tuple[dict, dict | None]:
     """Detect an acute washout, fast reclaim and fresh range breakout.
