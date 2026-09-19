@@ -1,5 +1,5 @@
 name: VCP LINE Test Once
-# manual test: 2026-09-19 pivot-minus-1pct-stop
+# manual test: 2026-09-19 lookback-60-v2
 
 on:
   push:
