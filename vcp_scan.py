@@ -12,7 +12,10 @@ from __future__ import annotations
 import csv
 import json
 import math
+import os
 import sqlite3
+import urllib.error
+import urllib.request
 from pathlib import Path
 
 import pandas as pd
@@ -252,6 +255,66 @@ def classify_latest(group: pd.DataFrame) -> dict | None:
     return None
 
 
+def send_line_summary(rows: list[dict], trade_date: str) -> None:
+    """Send one compact VCP message; never label an observation as a formal buy."""
+    if not rows:
+        print("No VCP candidates; LINE notification skipped")
+        return
+    token = os.environ.get("LINE_CHANNEL_ACCESS_TOKEN", "").strip()
+    if not token:
+        print("LINE token missing; VCP results were written to CSV only")
+        return
+
+    labels = {
+        "突破後回踩": "🟢 VCP突破後回踩｜高優先觀察",
+        "當日突破": "🟡 VCP當日突破｜等待回踩，不追價",
+        "接近突破": "⚪ VCP接近突破｜僅觀察，尚非買點",
+    }
+    lines = [
+        f"🦞 VCP三階段雷達｜{trade_date}",
+        "本訊息是型態觀察，不寫入正式推薦績效。",
+    ]
+    for stage in ("突破後回踩", "當日突破", "接近突破"):
+        selected = [row for row in rows if row["vcp_stage"] == stage]
+        lines += ["", f"{labels[stage]}（{len(selected)}檔）"]
+        if not selected:
+            lines.append("無")
+            continue
+        for row in selected[:5]:
+            lines += [
+                f"{row['code']} {row['name']}｜收{row['close']}｜樞紐{row['pivot']}",
+                f"收縮{row['contraction_count']}次({row['contraction_depths_pct']}%)｜品質{row['quality_score']}分",
+                f"支撐{row['support_lower']}～{row['support_upper']}｜停損參考{row['stop_price']}",
+                f"行動：{row['action']}",
+            ]
+        if len(selected) > 5:
+            lines.append(f"其餘{len(selected) - 5}檔請見 vcp_candidates.csv")
+
+    text = "\n".join(lines)
+    # LINE text-message limit is 5,000 characters; keep safety margin.
+    if len(text) > 4800:
+        text = text[:4750] + "\n其餘標的請見 vcp_candidates.csv"
+    payload = json.dumps(
+        {"messages": [{"type": "text", "text": text}]},
+        ensure_ascii=False,
+    ).encode("utf-8")
+    request = urllib.request.Request(
+        "https://api.line.me/v2/bot/message/broadcast",
+        data=payload,
+        headers={
+            "Authorization": f"Bearer {token}",
+            "Content-Type": "application/json; charset=UTF-8",
+        },
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(request, timeout=20) as response:
+            print("VCP LINE status:", response.status)
+    except urllib.error.HTTPError as exc:
+        detail = exc.read().decode("utf-8", errors="replace")
+        raise RuntimeError(f"VCP LINE failed: {exc.code} {detail}") from exc
+
+
 def main() -> int:
     if not DB.exists():
         raise SystemExit(f"Database missing: {DB}")
@@ -275,6 +338,7 @@ def main() -> int:
         "formal_recommendations_changed": False,
     }
     print(json.dumps(summary, ensure_ascii=False))
+    send_line_summary(rows, summary["latest_trade_date"])
     return 0
 
 
