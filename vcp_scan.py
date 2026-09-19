@@ -1,0 +1,282 @@
+#!/usr/bin/env python3
+"""Scan the official TWSE/TPEx database for VCP stages.
+
+This module is observation-only.  It writes vcp_candidates.csv and never
+changes formal_recommendations.csv.  States are mutually exclusive:
+1. 接近突破: valid contraction, 0-5% below pivot, volume drying up.
+2. 當日突破: closes >0.3% above pivot with efficient price/volume expansion.
+3. 突破後回踩: 2-5 sessions after breakout, volume contracts and pivot holds.
+"""
+from __future__ import annotations
+
+import csv
+import json
+import math
+import sqlite3
+from pathlib import Path
+
+import pandas as pd
+
+BASE = Path(__file__).resolve().parent
+DB = BASE / "lobster_tw_6m_prices.sqlite"
+OUTPUT = BASE / "vcp_candidates.csv"
+
+MIN_HISTORY = 70
+BASE_LOOKBACK = 60
+PIVOT_LOOKBACK = 20
+MIN_VOLUME_LOTS = 1000
+MIN_AVG_TURNOVER = 30_000_000
+NEAR_PIVOT_PCT = 0.05
+BREAKOUT_BUFFER = 0.003
+BREAKOUT_VOLUME_RATIO = 1.50
+RETEST_MIN_DAYS = 2
+RETEST_MAX_DAYS = 5
+RETEST_LOW_TOL = 0.01
+RETEST_CLOSE_TOL = 0.005
+MA60_MAX_BELOW = 0.05
+MA60_MAX_5D_DECLINE = 0.02
+
+FIELDS = [
+    "date", "code", "name", "market", "vcp_stage", "stage_explanation",
+    "close", "pivot", "distance_to_pivot_pct", "support_lower",
+    "support_upper", "stop_price", "contraction_count",
+    "contraction_depths_pct", "volume_dry_ratio", "volume_ratio",
+    "avg20_volume_lots", "avg20_turnover", "ma60", "ma60_5d_change_pct",
+    "quality_score", "action", "invalidation",
+]
+
+
+def read_market() -> pd.DataFrame:
+    con = sqlite3.connect(DB)
+    try:
+        df = pd.read_sql_query(
+            "SELECT date, market, stock_id AS code, stock_name AS name, "
+            "open, high, low, close, volume, turnover "
+            "FROM prices ORDER BY stock_id, date", con
+        )
+    finally:
+        con.close()
+    for col in ("open", "high", "low", "close", "volume", "turnover"):
+        df[col] = pd.to_numeric(df[col], errors="coerce")
+    df["date"] = pd.to_datetime(df["date"])
+    return df.dropna(subset=["open", "high", "low", "close"])
+
+
+def prepare(group: pd.DataFrame) -> pd.DataFrame:
+    x = group.sort_values("date").reset_index(drop=True).copy()
+    x["volume_lots"] = x["volume"] / 1000.0
+    x["avg5_lots"] = x["volume_lots"].rolling(5).mean()
+    x["avg20_lots"] = x["volume_lots"].rolling(20).mean()
+    x["avg20_turnover"] = x["turnover"].rolling(20).mean()
+    x["ma60"] = x["close"].rolling(60).mean()
+    return x
+
+
+def trend_and_liquidity_ok(x: pd.DataFrame, i: int) -> bool:
+    if i < 64:
+        return False
+    row = x.iloc[i]
+    ma60 = float(row.ma60)
+    old_ma60 = float(x.iloc[i - 5].ma60)
+    ma_change = ma60 / old_ma60 - 1.0 if old_ma60 > 0 else -1.0
+    return bool(
+        math.isfinite(ma60)
+        and float(row.close) >= ma60 * (1.0 - MA60_MAX_BELOW)
+        and ma_change >= -MA60_MAX_5D_DECLINE
+        and float(row.avg20_lots) >= MIN_VOLUME_LOTS
+        and float(row.avg20_turnover) >= MIN_AVG_TURNOVER
+    )
+
+
+def contraction_profile(x: pd.DataFrame, end_i: int) -> dict | None:
+    """Return 2-4 successive high-to-low contractions ending at end_i."""
+    start = max(0, end_i - BASE_LOOKBACK + 1)
+    base = x.iloc[start:end_i + 1].reset_index(drop=True)
+    if len(base) < 35:
+        return None
+
+    highs, lows = [], []
+    for j in range(2, len(base) - 2):
+        if float(base.iloc[j].high) >= float(base.iloc[j - 2:j + 3].high.max()):
+            highs.append(j)
+        if float(base.iloc[j].low) <= float(base.iloc[j - 2:j + 3].low.min()):
+            lows.append(j)
+
+    legs = []
+    for hi in highs:
+        next_lows = [lo for lo in lows if hi < lo <= hi + 15]
+        if not next_lows:
+            continue
+        lo = next_lows[0]
+        peak, trough = float(base.iloc[hi].high), float(base.iloc[lo].low)
+        depth = (peak - trough) / peak if peak > 0 else 0.0
+        if 0.025 <= depth <= 0.40:
+            legs.append((hi, lo, depth, peak, trough))
+
+    # Remove overlapping legs and retain the latest 2-4 contractions.
+    clean = []
+    for leg in legs:
+        if clean and leg[0] <= clean[-1][1]:
+            if leg[2] < clean[-1][2]:
+                clean[-1] = leg
+            continue
+        clean.append(leg)
+    clean = clean[-4:]
+    if len(clean) < 2:
+        return None
+
+    depths = [leg[2] for leg in clean]
+    decreasing = all(b <= a * 1.15 for a, b in zip(depths, depths[1:]))
+    materially_tighter = depths[-1] <= depths[0] * 0.80
+    if not (decreasing and materially_tighter and depths[-1] <= 0.15):
+        return None
+
+    recent5 = float(base.iloc[-5:].volume_lots.mean())
+    prior20 = float(base.iloc[-20:].volume_lots.mean())
+    dry_ratio = recent5 / prior20 if prior20 > 0 else math.inf
+    if dry_ratio > 0.85:
+        return None
+
+    last_trough = clean[-1][4]
+    return {
+        "count": len(clean),
+        "depths": depths,
+        "dry_ratio": dry_ratio,
+        "support": last_trough,
+    }
+
+
+def pivot_before(x: pd.DataFrame, i: int) -> float:
+    return float(x.iloc[max(0, i - PIVOT_LOOKBACK):i].high.max())
+
+
+def breakout_quality(x: pd.DataFrame, i: int, pivot: float) -> tuple[bool, float]:
+    if i < 5:
+        return False, 0.0
+    row = x.iloc[i]
+    spread = float(row.high) - float(row.low)
+    location = (float(row.close) - float(row.low)) / spread if spread > 0 else 1.0
+    body = max(0.0, float(row.close) - float(row.open)) / spread if spread > 0 else 0.0
+    prior5 = float(x.iloc[i - 5:i].volume_lots.mean())
+    ratio = float(row.volume_lots) / prior5 if prior5 > 0 else 0.0
+    crossed = (
+        float(row.close) > pivot * (1.0 + BREAKOUT_BUFFER)
+        and float(x.iloc[i - 1].close) <= pivot * (1.0 + BREAKOUT_BUFFER)
+    )
+    return bool(crossed and ratio >= BREAKOUT_VOLUME_RATIO and location >= 0.75 and body >= 0.70), ratio
+
+
+def make_row(x: pd.DataFrame, i: int, profile: dict, stage: str,
+             pivot: float, volume_ratio: float, breakout_i: int | None = None) -> dict:
+    row = x.iloc[i]
+    close = float(row.close)
+    support = min(float(profile["support"]), pivot)
+    ma60 = float(row.ma60)
+    ma60_old = float(x.iloc[i - 5].ma60)
+    ma_change = ma60 / ma60_old - 1.0 if ma60_old > 0 else 0.0
+    distance = close / pivot - 1.0
+    if stage == "接近突破":
+        explanation = "VCP波動逐次收縮且末端量縮，收盤距樞紐價0～5%，尚未突破"
+        action = "列入觀察；不得提前追價，等待帶量突破或突破後回踩"
+    elif stage == "當日突破":
+        explanation = "今日收盤有效突破樞紐價，量能≥前5日均量1.5倍且K棒效率合格"
+        action = "確認為突破日；先觀察，不直接列正式試單，等待2～5日量縮回踩"
+    else:
+        explanation = f"突破後第{i - int(breakout_i)}日量縮回踩，收盤守住樞紐支撐"
+        action = "VCP回踩確認；列高優先觀察，正式採用前仍須完成獨立回測"
+    quality = min(100, int(
+        35 + profile["count"] * 10
+        + max(0.0, 0.85 - profile["dry_ratio"]) * 50
+        + (10 if stage == "突破後回踩" else 5 if stage == "當日突破" else 0)
+    ))
+    return {
+        "date": row.date.strftime("%Y-%m-%d"),
+        "code": str(row.code), "name": str(row["name"]), "market": str(row.market),
+        "vcp_stage": stage, "stage_explanation": explanation,
+        "close": round(close, 2), "pivot": round(pivot, 2),
+        "distance_to_pivot_pct": round(distance * 100, 2),
+        "support_lower": round(support, 2), "support_upper": round(pivot, 2),
+        "stop_price": round(support * 0.995, 2),
+        "contraction_count": profile["count"],
+        "contraction_depths_pct": "/".join(f"{d * 100:.1f}" for d in profile["depths"]),
+        "volume_dry_ratio": round(profile["dry_ratio"], 2),
+        "volume_ratio": round(volume_ratio, 2),
+        "avg20_volume_lots": round(float(row.avg20_lots), 0),
+        "avg20_turnover": round(float(row.avg20_turnover), 0),
+        "ma60": round(ma60, 2), "ma60_5d_change_pct": round(ma_change * 100, 2),
+        "quality_score": quality, "action": action,
+        "invalidation": f"收盤跌破{support:.2f}（容許0.5%誤差）即失效",
+    }
+
+
+def classify_latest(group: pd.DataFrame) -> dict | None:
+    x = prepare(group)
+    i = len(x) - 1
+    if len(x) < MIN_HISTORY or not trend_and_liquidity_ok(x, i):
+        return None
+
+    # Highest priority: a valid 2-5 day post-breakout contraction retest.
+    for break_i in range(i - RETEST_MIN_DAYS, i - RETEST_MAX_DAYS - 1, -1):
+        if break_i < 20:
+            continue
+        pivot = pivot_before(x, break_i)
+        profile = contraction_profile(x, break_i - 1)
+        broke, break_ratio = breakout_quality(x, break_i, pivot)
+        if not (profile and broke):
+            continue
+        row = x.iloc[i]
+        pre5 = float(x.iloc[break_i - 5:break_i].volume_lots.mean())
+        volume_contracts = (
+            float(row.volume_lots) < float(x.iloc[break_i].volume_lots)
+            and float(row.volume_lots) < pre5
+        )
+        touched = float(row.low) <= pivot * 1.03 and float(row.low) >= pivot * (1.0 - RETEST_LOW_TOL)
+        held = float(row.close) >= pivot * (1.0 - RETEST_CLOSE_TOL)
+        turned_up = float(row.close) > float(row.open) or float(row.close) > float(x.iloc[i - 1].close)
+        if volume_contracts and touched and held and turned_up:
+            return make_row(x, i, profile, "突破後回踩", pivot, break_ratio, break_i)
+
+    pivot = pivot_before(x, i)
+    profile = contraction_profile(x, i - 1)
+    if not profile:
+        return None
+    broke, ratio = breakout_quality(x, i, pivot)
+    if broke:
+        return make_row(x, i, profile, "當日突破", pivot, ratio)
+
+    distance = float(x.iloc[i].close) / pivot - 1.0
+    if -NEAR_PIVOT_PCT <= distance <= 0.0 and float(x.iloc[i].close) >= float(x.iloc[i].open) * 0.98:
+        prior5 = float(x.iloc[i - 5:i].volume_lots.mean())
+        ratio = float(x.iloc[i].volume_lots) / prior5 if prior5 > 0 else 0.0
+        return make_row(x, i, profile, "接近突破", pivot, ratio)
+    return None
+
+
+def main() -> int:
+    if not DB.exists():
+        raise SystemExit(f"Database missing: {DB}")
+    market = read_market()
+    rows = []
+    for _, group in market.groupby("code", sort=False):
+        result = classify_latest(group)
+        if result:
+            rows.append(result)
+    priority = {"突破後回踩": 0, "當日突破": 1, "接近突破": 2}
+    rows.sort(key=lambda r: (priority[r["vcp_stage"]], -r["quality_score"], r["code"]))
+    with OUTPUT.open("w", encoding="utf-8-sig", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=FIELDS)
+        writer.writeheader()
+        writer.writerows(rows)
+    summary = {
+        "latest_trade_date": market.date.max().strftime("%Y-%m-%d"),
+        "total": len(rows),
+        "stages": {stage: sum(r["vcp_stage"] == stage for r in rows)
+                   for stage in ("接近突破", "當日突破", "突破後回踩")},
+        "formal_recommendations_changed": False,
+    }
+    print(json.dumps(summary, ensure_ascii=False))
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
