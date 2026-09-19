@@ -3,23 +3,16 @@
 
 The former four-point screen has been retired.
 
-Formal buy routes
+Formal buy route
 1. 破底翻:
    - a session breaks the preceding 20-session swing low by at least 0.5%;
    - the breakdown is recovered within three sessions;
    - the trigger close is back above that old swing low, is a bullish recovery
      and closes in the upper 35% of its daily range.
-2. 突破後確認:
-   - the breakout day only creates a setup and never triggers an immediate buy;
-   - standing confirmation must occur within three sessions;
-   - a successful platform retest may occur within five sessions;
-   - a retest must contract below both breakout-day volume and the prior
-     five-session average volume;
-   - only the confirmation/retest session can create a formal buy signal.
-Both routes retain the existing liquidity gate, breakout-volume confirmation,
-8% anti-chase limit and structure-support invalidation. 60MA is the sole
-large-trend protection gate; 20MA, 30MA, DIF and fundamentals remain
-informational only and are not entry prerequisites.
+Only 破底翻 can create a formal recommendation or enter performance tracking.
+Generic breakout-retest and 30MA routes are disabled. VCP remains a separate
+observation-only scanner. 60MA is retained solely as a broad risk guard; it is
+not a buy pattern or entry trigger.
 """
 from __future__ import annotations
 
@@ -81,7 +74,7 @@ SUPPORT_BREAK_TOL = 0.005
 MIN_RISK_REWARD = 1.50
 MIN_UPSIDE_ROOM = 0.08
 MIN_RELATIVE_STRENGTH_20D = 0.03
-MA60_MAX_BELOW = 0.05
+MA60_MAX_BELOW = 0.10
 MA60_MAX_5D_DECLINE = 0.02
 EXIT_WARNING_DAYS = 2
 STALLED_BOUNDARY_TOL = 0.01
@@ -102,11 +95,9 @@ MA30_KEY_WATCHLIST = {
 }
 MA30_RETEST_LOOKAHEAD = 15
 MA30_RECLAIM_DAYS = 3
-STRATEGY_VERSION = "破底翻正式買點-v11突破僅觀察"
+STRATEGY_VERSION = "破底翻唯一正式買點-v12取消突破回踩與30MA"
 ROUTE_PRIORITY = {
-    "突破回踩不破": 1,
-    "破底翻": 2,
-    "30MA關鍵K": 3,
+    "破底翻": 1,
 }
 
 
@@ -1035,7 +1026,7 @@ def apply_new_plan_gate(signal: dict | None, setup: dict, x: pd.DataFrame, marke
     upside_room = math.inf if not math.isfinite(prior_high) or close >= prior_high else prior_high / close - 1.0
 
     # 60MA is a broad anti-downtrend guard, not a requirement to hug or remain
-    # above the average. A valid reversal may sit up to 5% below 60MA, provided
+    # above the average. A valid reversal may sit up to 10% below 60MA, provided
     # the 60MA itself has not fallen more than 2% during the latest five sessions.
     t = x.iloc[i]
     ma60_now = float(t.ma60) if pd.notna(t.ma60) else math.nan
@@ -1092,18 +1083,9 @@ def main() -> int:
             continue
 
         false_setup, false_signal = detect_false_break_reversal(code, x)
-        breakout_setup, breakout_signal = detect_true_breakout(code, x)
-        ma30_setup, _ma30_signal = detect_ma30_key_retest(code, x)
         false_signal = apply_new_plan_gate(false_signal, false_setup, x, market_return20)
-        # Backtest failed the minimum sample/win/return gates. Keep breakout
-        # candidates visible for research, but never emit a formal buy signal.
-        breakout_signal = None
-        # Legacy 30MA route remains observation-only and cannot create a formal buy.
-        ma30_signal = None
         setups = [
             (false_setup, false_signal),
-            (breakout_setup, breakout_signal),
-            (ma30_setup, ma30_signal),
         ]
 
         fresh_signals = []
@@ -1125,7 +1107,7 @@ def main() -> int:
             close = float(x.iloc[-1].close)
             level = float(setup.get("trigger_level") or 0.0)
             near_setup = (
-                setup["pattern"] in {"破底翻", "30MA關鍵K"}
+                setup["pattern"] == "破底翻"
                 or (level > 0 and close >= level * 0.97)
             )
             if not near_setup and signal is None:
