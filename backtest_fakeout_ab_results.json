@@ -1,26 +1,26 @@
 {
-  "generated_at": "2026-09-19T14:58:57.050802+00:00",
+  "generated_at": "2026-09-19T16:36:23.744081+00:00",
   "data_start": "2026-03-18",
   "data_end": "2026-09-18",
   "entry": "訊號隔日開盤",
   "round_trip_cost_pct": 0.585,
-  "core_signal_count": 17,
-  "fakeout_signal_count": 58,
+  "core_signal_count": 12,
+  "fakeout_signal_count": 0,
   "core": {
     "5": {
       "全部": {
-        "samples": 16,
-        "win_rate": 43.75,
-        "avg_net": 0.7,
-        "stop_rate": 25.0,
-        "worst_mae": -10.62
+        "samples": 11,
+        "win_rate": 27.27,
+        "avg_net": -1.33,
+        "stop_rate": 27.27,
+        "worst_mae": -13.71
       },
       "破底翻": {
         "samples": 10,
-        "win_rate": 50.0,
-        "avg_net": 2.68,
-        "stop_rate": 20.0,
-        "worst_mae": -10.62
+        "win_rate": 30.0,
+        "avg_net": -1.35,
+        "stop_rate": 30.0,
+        "worst_mae": -13.71
       },
       "突破後站穩": {
         "samples": 0,
@@ -30,11 +30,11 @@
         "worst_mae": null
       },
       "突破回踩不破": {
-        "samples": 6,
-        "win_rate": 33.33,
-        "avg_net": -2.62,
-        "stop_rate": 33.33,
-        "worst_mae": -10.34
+        "samples": 1,
+        "win_rate": 0.0,
+        "avg_net": -1.07,
+        "stop_rate": 0.0,
+        "worst_mae": -2.45
       },
       "假摔收復確認": {
         "samples": 0,
@@ -46,18 +46,18 @@
     },
     "10": {
       "全部": {
-        "samples": 15,
-        "win_rate": 46.67,
-        "avg_net": 2.24,
-        "stop_rate": 33.33,
-        "worst_mae": -10.62
+        "samples": 10,
+        "win_rate": 40.0,
+        "avg_net": -3.46,
+        "stop_rate": 40.0,
+        "worst_mae": -13.71
       },
       "破底翻": {
         "samples": 9,
-        "win_rate": 55.56,
-        "avg_net": 4.67,
-        "stop_rate": 22.22,
-        "worst_mae": -10.62
+        "win_rate": 44.44,
+        "avg_net": -2.63,
+        "stop_rate": 33.33,
+        "worst_mae": -13.71
       },
       "突破後站穩": {
         "samples": 0,
@@ -67,11 +67,11 @@
         "worst_mae": null
       },
       "突破回踩不破": {
-        "samples": 6,
-        "win_rate": 33.33,
-        "avg_net": -1.4,
-        "stop_rate": 50.0,
-        "worst_mae": -10.34
+        "samples": 1,
+        "win_rate": 0.0,
+        "avg_net": -10.86,
+        "stop_rate": 100.0,
+        "worst_mae": -10.28
       },
       "假摔收復確認": {
         "samples": 0,
@@ -83,18 +83,18 @@
     },
     "20": {
       "全部": {
-        "samples": 12,
-        "win_rate": 58.33,
-        "avg_net": 1.47,
-        "stop_rate": 41.67,
-        "worst_mae": -10.62
+        "samples": 8,
+        "win_rate": 37.5,
+        "avg_net": -3.86,
+        "stop_rate": 50.0,
+        "worst_mae": -13.71
       },
       "破底翻": {
         "samples": 8,
-        "win_rate": 75.0,
-        "avg_net": 3.08,
-        "stop_rate": 25.0,
-        "worst_mae": -10.62
+        "win_rate": 37.5,
+        "avg_net": -3.86,
+        "stop_rate": 50.0,
+        "worst_mae": -13.71
       },
       "突破後站穩": {
         "samples": 0,
@@ -104,11 +104,11 @@
         "worst_mae": null
       },
       "突破回踩不破": {
-        "samples": 4,
-        "win_rate": 25.0,
-        "avg_net": -1.77,
-        "stop_rate": 75.0,
-        "worst_mae": -10.34
+        "samples": 0,
+        "win_rate": null,
+        "avg_net": null,
+        "stop_rate": null,
+        "worst_mae": null
       },
       "假摔收復確認": {
         "samples": 0,
@@ -122,11 +122,11 @@
   "fakeout_only": {
     "5": {
       "全部": {
-        "samples": 54,
-        "win_rate": 29.63,
-        "avg_net": -2.68,
-        "stop_rate": 5.56,
-        "worst_mae": -27.66
+        "samples": 0,
+        "win_rate": null,
+        "avg_net": null,
+        "stop_rate": null,
+        "worst_mae": null
       },
       "破底翻": {
         "samples": 0,
@@ -150,20 +150,20 @@
         "worst_mae": null
       },
       "假摔收復確認": {
-        "samples": 54,
-        "win_rate": 29.63,
-        "avg_net": -2.68,
-        "stop_rate": 5.56,
-        "worst_mae": -27.66
+        "samples": 0,
+        "win_rate": null,
+        "avg_net": null,
+        "stop_rate": null,
+        "worst_mae": null
       }
     },
     "10": {
       "全部": {
-        "samples": 54,
-        "win_rate": 27.78,
-        "avg_net": -5.38,
-        "stop_rate": 14.81,
-        "worst_mae": -32.8
+        "samples": 0,
+        "win_rate": null,
+        "avg_net": null,
+        "stop_rate": null,
+        "worst_mae": null
       },
       "破底翻": {
         "samples": 0,
@@ -187,20 +187,20 @@
         "worst_mae": null
       },
       "假摔收復確認": {
-        "samples": 54,
-        "win_rate": 27.78,
-        "avg_net": -5.38,
-        "stop_rate": 14.81,
-        "worst_mae": -32.8
+        "samples": 0,
+        "win_rate": null,
+        "avg_net": null,
+        "stop_rate": null,
+        "worst_mae": null
       }
     },
     "20": {
       "全部": {
-        "samples": 44,
-        "win_rate": 29.55,
-        "avg_net": -5.54,
-        "stop_rate": 29.55,
-        "worst_mae": -32.8
+        "samples": 0,
+        "win_rate": null,
+        "avg_net": null,
+        "stop_rate": null,
+        "worst_mae": null
       },
       "破底翻": {
         "samples": 0,
@@ -224,29 +224,29 @@
         "worst_mae": null
       },
       "假摔收復確認": {
-        "samples": 44,
-        "win_rate": 29.55,
-        "avg_net": -5.54,
-        "stop_rate": 29.55,
-        "worst_mae": -32.8
+        "samples": 0,
+        "win_rate": null,
+        "avg_net": null,
+        "stop_rate": null,
+        "worst_mae": null
       }
     }
   },
   "core_plus_fakeout": {
     "5": {
       "全部": {
-        "samples": 70,
-        "win_rate": 32.86,
-        "avg_net": -1.9,
-        "stop_rate": 10.0,
-        "worst_mae": -27.66
+        "samples": 11,
+        "win_rate": 27.27,
+        "avg_net": -1.33,
+        "stop_rate": 27.27,
+        "worst_mae": -13.71
       },
       "破底翻": {
         "samples": 10,
-        "win_rate": 50.0,
-        "avg_net": 2.68,
-        "stop_rate": 20.0,
-        "worst_mae": -10.62
+        "win_rate": 30.0,
+        "avg_net": -1.35,
+        "stop_rate": 30.0,
+        "worst_mae": -13.71
       },
       "突破後站穩": {
         "samples": 0,
@@ -256,34 +256,34 @@
         "worst_mae": null
       },
       "突破回踩不破": {
-        "samples": 6,
-        "win_rate": 33.33,
-        "avg_net": -2.62,
-        "stop_rate": 33.33,
-        "worst_mae": -10.34
+        "samples": 1,
+        "win_rate": 0.0,
+        "avg_net": -1.07,
+        "stop_rate": 0.0,
+        "worst_mae": -2.45
       },
       "假摔收復確認": {
-        "samples": 54,
-        "win_rate": 29.63,
-        "avg_net": -2.68,
-        "stop_rate": 5.56,
-        "worst_mae": -27.66
+        "samples": 0,
+        "win_rate": null,
+        "avg_net": null,
+        "stop_rate": null,
+        "worst_mae": null
       }
     },
     "10": {
       "全部": {
-        "samples": 69,
-        "win_rate": 31.88,
-        "avg_net": -3.72,
-        "stop_rate": 18.84,
-        "worst_mae": -32.8
+        "samples": 10,
+        "win_rate": 40.0,
+        "avg_net": -3.46,
+        "stop_rate": 40.0,
+        "worst_mae": -13.71
       },
       "破底翻": {
         "samples": 9,
-        "win_rate": 55.56,
-        "avg_net": 4.67,
-        "stop_rate": 22.22,
-        "worst_mae": -10.62
+        "win_rate": 44.44,
+        "avg_net": -2.63,
+        "stop_rate": 33.33,
+        "worst_mae": -13.71
       },
       "突破後站穩": {
         "samples": 0,
@@ -293,34 +293,34 @@
         "worst_mae": null
       },
       "突破回踩不破": {
-        "samples": 6,
-        "win_rate": 33.33,
-        "avg_net": -1.4,
-        "stop_rate": 50.0,
-        "worst_mae": -10.34
+        "samples": 1,
+        "win_rate": 0.0,
+        "avg_net": -10.86,
+        "stop_rate": 100.0,
+        "worst_mae": -10.28
       },
       "假摔收復確認": {
-        "samples": 54,
-        "win_rate": 27.78,
-        "avg_net": -5.38,
-        "stop_rate": 14.81,
-        "worst_mae": -32.8
+        "samples": 0,
+        "win_rate": null,
+        "avg_net": null,
+        "stop_rate": null,
+        "worst_mae": null
       }
     },
     "20": {
       "全部": {
-        "samples": 56,
-        "win_rate": 35.71,
-        "avg_net": -4.04,
-        "stop_rate": 32.14,
-        "worst_mae": -32.8
+        "samples": 8,
+        "win_rate": 37.5,
+        "avg_net": -3.86,
+        "stop_rate": 50.0,
+        "worst_mae": -13.71
       },
       "破底翻": {
         "samples": 8,
-        "win_rate": 75.0,
-        "avg_net": 3.08,
-        "stop_rate": 25.0,
-        "worst_mae": -10.62
+        "win_rate": 37.5,
+        "avg_net": -3.86,
+        "stop_rate": 50.0,
+        "worst_mae": -13.71
       },
       "突破後站穩": {
         "samples": 0,
@@ -330,18 +330,18 @@
         "worst_mae": null
       },
       "突破回踩不破": {
-        "samples": 4,
-        "win_rate": 25.0,
-        "avg_net": -1.77,
-        "stop_rate": 75.0,
-        "worst_mae": -10.34
+        "samples": 0,
+        "win_rate": null,
+        "avg_net": null,
+        "stop_rate": null,
+        "worst_mae": null
       },
       "假摔收復確認": {
-        "samples": 44,
-        "win_rate": 29.55,
-        "avg_net": -5.54,
-        "stop_rate": 29.55,
-        "worst_mae": -32.8
+        "samples": 0,
+        "win_rate": null,
+        "avg_net": null,
+        "stop_rate": null,
+        "worst_mae": null
       }
     }
   }
