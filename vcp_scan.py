@@ -24,9 +24,12 @@ BASE = Path(__file__).resolve().parent
 DB = BASE / "lobster_tw_6m_prices.sqlite"
 OUTPUT = BASE / "vcp_candidates.csv"
 
-MIN_HISTORY = 70
+MIN_HISTORY = 95
 BASE_LOOKBACK = 60
-PIVOT_LOOKBACK = 20
+PIVOT_LOOKBACK = 90
+PIVOT_CLUSTER_TOL = 0.01
+PIVOT_MIN_TOUCHES = 2
+PIVOT_MIN_GAP_DAYS = 3
 MIN_VOLUME_LOTS = 1000
 MIN_AVG_TURNOVER = 30_000_000
 NEAR_PIVOT_PCT = 0.05
@@ -149,8 +152,63 @@ def contraction_profile(x: pd.DataFrame, end_i: int) -> dict | None:
     }
 
 
-def pivot_before(x: pd.DataFrame, i: int) -> float:
-    return float(x.iloc[max(0, i - PIVOT_LOOKBACK):i].high.max())
+def pivot_before(x: pd.DataFrame, i: int) -> float | None:
+    """Return the most frequently retested resistance price in the prior 90 sessions.
+
+    Only local swing highs are counted. Highs within 1% form one price cluster,
+    and touches must be at least three sessions apart. A single isolated high
+    is never used as a VCP pivot.
+    """
+    start = max(0, i - PIVOT_LOOKBACK)
+    window = x.iloc[start:i]
+    if len(window) < 5:
+        return None
+
+    peaks: list[tuple[int, float]] = []
+    for pos in range(2, len(window) - 2):
+        price = float(window.iloc[pos].high)
+        local = window.iloc[pos - 2:pos + 3]["high"]
+        if price >= float(local.max()):
+            absolute_i = start + pos
+            if not peaks or absolute_i - peaks[-1][0] >= PIVOT_MIN_GAP_DAYS:
+                peaks.append((absolute_i, price))
+            elif price > peaks[-1][1]:
+                peaks[-1] = (absolute_i, price)
+
+    clusters: list[dict] = []
+    for peak_i, price in peaks:
+        matching = [
+            cluster for cluster in clusters
+            if abs(price / float(cluster["center"]) - 1.0) <= PIVOT_CLUSTER_TOL
+        ]
+        if matching:
+            cluster = min(
+                matching,
+                key=lambda item: abs(price / float(item["center"]) - 1.0),
+            )
+            cluster["touches"].append((peak_i, price))
+            cluster["center"] = float(
+                pd.Series([p for _, p in cluster["touches"]]).median()
+            )
+        else:
+            clusters.append({"center": price, "touches": [(peak_i, price)]})
+
+    repeated = [
+        cluster for cluster in clusters
+        if len(cluster["touches"]) >= PIVOT_MIN_TOUCHES
+    ]
+    if not repeated:
+        return None
+
+    # Most touches wins; ties prefer the cluster touched most recently.
+    winner = max(
+        repeated,
+        key=lambda cluster: (
+            len(cluster["touches"]),
+            max(idx for idx, _ in cluster["touches"]),
+        ),
+    )
+    return float(winner["center"])
 
 
 def breakout_quality(x: pd.DataFrame, i: int, pivot: float) -> tuple[bool, float]:
@@ -198,7 +256,7 @@ def make_row(x: pd.DataFrame, i: int, profile: dict, stage: str,
         "vcp_stage": stage, "stage_explanation": explanation,
         "close": round(close, 2), "pivot": round(pivot, 2),
         "distance_to_pivot_pct": round(distance * 100, 2),
-        "support_lower": round(support, 2), "support_upper": round(pivot, 2),
+        "support_lower": round(support, 2), "support_upper": round(support, 2),
         "stop_price": round(support * 0.995, 2),
         "contraction_count": profile["count"],
         "contraction_depths_pct": "/".join(f"{d * 100:.1f}" for d in profile["depths"]),
@@ -224,8 +282,10 @@ def classify_latest(group: pd.DataFrame) -> dict | None:
             continue
         pivot = pivot_before(x, break_i)
         profile = contraction_profile(x, break_i - 1)
+        if pivot is None or profile is None:
+            continue
         broke, break_ratio = breakout_quality(x, break_i, pivot)
-        if not (profile and broke):
+        if not broke:
             continue
         row = x.iloc[i]
         pre5 = float(x.iloc[break_i - 5:break_i].volume_lots.mean())
@@ -241,7 +301,7 @@ def classify_latest(group: pd.DataFrame) -> dict | None:
 
     pivot = pivot_before(x, i)
     profile = contraction_profile(x, i - 1)
-    if not profile:
+    if pivot is None or profile is None:
         return None
     broke, ratio = breakout_quality(x, i, pivot)
     if broke:
@@ -285,9 +345,9 @@ def send_line_summary(rows: list[dict], trade_date: str) -> None:
             continue
         for row in selected[:5]:
             lines += [
-                f"{row['code']} {row['name']}｜收{row['close']}｜樞紐{row['pivot']}",
+                f"{row['code']} {row['name']}｜收{row['close']}｜突破樞紐{row['pivot']}",
                 f"收縮{row['contraction_count']}次({row['contraction_depths_pct']}%)｜品質{row['quality_score']}分",
-                f"支撐{row['support_lower']}～{row['support_upper']}｜停損參考{row['stop_price']}",
+                f"支撐{row['support_lower']}附近｜停損參考{row['stop_price']}",
                 f"行動：{row['action']}",
             ]
         if len(selected) > 5:
