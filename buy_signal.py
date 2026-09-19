@@ -39,6 +39,7 @@ CANDIDATES = BASE / "candidate_status.csv"
 LOOKBACK = 20
 FALSE_BREAK_SUPPORT_LOOKBACK = 60
 FALSE_BREAK_SUPPORT_TOL = 0.01
+FALSE_BREAK_MIN_DEPTH = 0.03
 FALSE_BREAK_MIN_TOUCHES = 2
 FALSE_BREAK_MIN_GAP_DAYS = 1
 FALSE_BREAK_RECOVERY_DAYS = 3
@@ -334,12 +335,12 @@ def detect_false_break_reversal(code: str, x: pd.DataFrame) -> tuple[dict, dict 
         if zone is None:
             continue
         support_lower, support_upper, support_touches = zone
-        tick = tw_stock_tick(support_lower)
         break_row = x.iloc[break_i]
         break_low = float(break_row.low)
-        broke_floor = break_low <= support_lower - tick + 1e-9
+        broke_floor = break_low <= support_lower * (1.0 - FALSE_BREAK_MIN_DEPTH)
+        break_long_lower_shadow = long_lower_shadow(break_row)
         recovered = close >= support_upper + tw_stock_tick(support_upper) - 1e-9
-        if not (broke_floor and recovered):
+        if not (broke_floor and break_long_lower_shadow and recovered):
             continue
         depth = break_low / support_lower - 1.0
         candidate = {
@@ -348,6 +349,7 @@ def detect_false_break_reversal(code: str, x: pd.DataFrame) -> tuple[dict, dict 
             "support_upper": support_upper,
             "support_touches": support_touches,
             "break_low": break_low,
+            "break_long_lower_shadow": break_long_lower_shadow,
             "depth": depth,
         }
         if best is None or depth < best["depth"]:
@@ -419,13 +421,18 @@ def detect_false_break_reversal(code: str, x: pd.DataFrame) -> tuple[dict, dict 
         "structure_extension_pct": setup["structure_extension_pct"],
     }
     add_four_layer_evidence(signal, setup, x, i, [
-        ("收復60日支撐區", True),
+        ("跌破支撐下緣≥3%", True),
+        ("破底日長下影", bool(best["break_long_lower_shadow"])),
         ("破底後3日內收復", i - break_i <= FALSE_BREAK_RECOVERY_DAYS),
-        ("吞噬/長下影", reversal_candle),
         ("風報比≥1.5", True),
     ])
     rr_ok = float(signal["risk_reward"]) >= MIN_RISK_REWARD
-    evidence = ["收復60日支撐區", "破底後3日內收復"]
+    evidence = [
+        "跌破支撐下緣≥3%",
+        "破底日長下影",
+        "收復60日支撐區",
+        "破底後3日內收復",
+    ]
     if exhaustion or accelerated_reclaim:
         evidence.append("快速掃低收復")
     if reversal_candle:
