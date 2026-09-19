@@ -1,5 +1,5 @@
 name: VCP LINE Test Once
-# manual test: 2026-09-19 rr-first-no-missing-priority-v2
+# manual test: 2026-09-19 ma60-10pct-v3
 
 on:
   push:
