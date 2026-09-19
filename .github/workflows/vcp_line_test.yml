@@ -1,5 +1,5 @@
 name: VCP LINE Test Once
-# manual test: 2026-09-19 lookback-60-v2
+# manual test: 2026-09-19 top-10-v1
 
 on:
   push:
