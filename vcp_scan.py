@@ -407,7 +407,7 @@ def send_line_summary(rows: list[dict], trade_date: str) -> None:
         if not selected:
             blocks.append("無")
             continue
-        for row in selected:
+        for row in selected[:10]:
             blocks.append(
                 f"{row['code']} {row['name']}｜收{row['close']}｜突破樞紐{row['pivot']}\n"
                 f"收縮{row['contraction_count']}次({row['contraction_depths_pct']}%)｜品質{row['quality_score']}分\n"
