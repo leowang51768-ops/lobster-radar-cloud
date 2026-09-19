@@ -476,7 +476,7 @@ def send_line_summary(rows: list[dict], trade_date: str) -> None:
                     f"｜風報比{row['reward_risk_ratio']}"
                 )
             else:
-                upside_line = "60日內無明確上方樞紐｜上方壓力較少，優先排序"
+                upside_line = "60日內無明確上方樞紐｜風報比暫無法估算"
             blocks.append(
                 f"{row['code']} {row['name']}｜收{row['close']}｜突破樞紐{row['pivot']}\n"
                 f"收縮{row['contraction_count']}次({row['contraction_depths_pct']}%)｜品質{row['quality_score']}分\n"
@@ -547,7 +547,7 @@ def main() -> int:
     priority = {"突破後回踩": 0, "當日突破": 1, "接近突破": 2}
     rows.sort(key=lambda r: (
         priority[r["vcp_stage"]],
-        r["reward_risk_ratio"] != "",
+        r["reward_risk_ratio"] == "",
         -float(r["reward_risk_ratio"]) if r["reward_risk_ratio"] != "" else 0.0,
         -r["quality_score"],
         r["code"],
