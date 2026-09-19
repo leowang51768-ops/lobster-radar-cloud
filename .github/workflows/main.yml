@@ -128,8 +128,10 @@ jobs:
           done
           exit 1
 
-      - name: Scan VCP stages (observation only)
+      - name: Scan VCP stages and send one LINE summary
         shell: bash
+        env:
+          LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
         run: |
           echo "FAIL_STAGE=VCP三階段掃描" >> "$GITHUB_ENV"
           python vcp_scan.py
