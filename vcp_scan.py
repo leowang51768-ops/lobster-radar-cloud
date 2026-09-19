@@ -24,9 +24,9 @@ BASE = Path(__file__).resolve().parent
 DB = BASE / "lobster_tw_6m_prices.sqlite"
 OUTPUT = BASE / "vcp_candidates.csv"
 
-MIN_HISTORY = 95
+MIN_HISTORY = 70
 BASE_LOOKBACK = 60
-PIVOT_LOOKBACK = 90
+PIVOT_LOOKBACK = 60
 PIVOT_CLUSTER_TOL = 0.01
 PIVOT_MIN_TOUCHES = 2
 PIVOT_MIN_GAP_DAYS = 3
@@ -154,7 +154,7 @@ def contraction_profile(x: pd.DataFrame, end_i: int) -> dict | None:
 
 
 def pivot_before(x: pd.DataFrame, i: int) -> float | None:
-    """Return the most frequently retested resistance price in the prior 90 sessions.
+    """Return the most frequently retested resistance price in the prior 60 sessions.
 
     Only local swing highs are counted. Highs within 1% form one price cluster,
     and touches must be at least three sessions apart. A single isolated high
@@ -213,7 +213,7 @@ def pivot_before(x: pd.DataFrame, i: int) -> float | None:
 
 
 def support_zone_before(x: pd.DataFrame, i: int) -> tuple[float, float] | None:
-    """Return the most frequently retested support band in the prior 90 sessions."""
+    """Return the most frequently retested support band in the prior 60 sessions."""
     start = max(0, i - PIVOT_LOOKBACK + 1)
     window = x.iloc[start:i + 1]
     if len(window) < 5:
