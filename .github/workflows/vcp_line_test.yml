@@ -1,5 +1,5 @@
 name: VCP LINE Test Once
-# manual test: 2026-09-19 top-10-v1
+# manual test: 2026-09-19 liquidity-rr-ranking-v1
 
 on:
   push:
