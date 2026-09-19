@@ -150,6 +150,7 @@ def prepare(g: pd.DataFrame) -> pd.DataFrame:
     x["ema13"] = ema(x["close"], 13)
     x["dif"] = x["ema6"] - x["ema13"]
     x["avg20_lots"] = x["volume_lots"].rolling(20).mean()
+    x["avg20_turnover"] = x["turnover"].rolling(20).mean()
     x["avg5_lots"] = x["volume_lots"].rolling(5).mean()
     previous_close = x["close"].shift(1)
     x["true_range"] = pd.concat([
@@ -164,11 +165,16 @@ def volume_gate(t: pd.Series) -> tuple[bool, float, float, float]:
     avg20 = float(t.avg20_lots) if pd.notna(t.avg20_lots) else math.nan
     lots = float(t.volume_lots) if pd.notna(t.volume_lots) else 0.0
     turnover = float(t.turnover) if pd.notna(t.turnover) else 0.0
+    avg20_turnover = (
+        float(t.avg20_turnover) if pd.notna(t.avg20_turnover) else math.nan
+    )
     ratio = lots / avg20 if avg20 and not math.isnan(avg20) else 0.0
     ok = (
         VOL_RATIO_MIN <= ratio <= VOL_RATIO_MAX
-        and lots >= MIN_VOLUME_LOTS
-        and turnover >= MIN_TURNOVER
+        and math.isfinite(avg20)
+        and avg20 >= MIN_VOLUME_LOTS
+        and math.isfinite(avg20_turnover)
+        and avg20_turnover >= MIN_TURNOVER
     )
     return ok, lots, turnover, ratio
 
@@ -1125,9 +1131,11 @@ def apply_new_plan_gate(signal: dict | None, setup: dict, x: pd.DataFrame, marke
         and ma60_now >= ma60_5d * (1.0 - MA60_MAX_5D_DECLINE)
     )
     trend_ok = bool(ma60_price_ok and ma60_slope_ok)
+    risk_reward = float(signal.get("risk_reward") or 0.0)
     passed = bool(
         upside_room >= MIN_UPSIDE_ROOM
         and rs20 >= MIN_RELATIVE_STRENGTH_20D
+        and risk_reward >= MIN_RISK_REWARD
         and trend_ok
     )
     details = {
