@@ -1283,11 +1283,14 @@ def main() -> int:
     }
     print(json.dumps(summary, ensure_ascii=False))
 
-    if triggers or exit_warnings:
+    force_notify = os.environ.get("BUY_FORCE_NOTIFY", "").strip() == "1"
+    if triggers or exit_warnings or force_notify:
         lines = [
-            f"🦞 龍蝦雷達買點建議｜{latest_date}",
-            "新版：僅破底翻可正式試單；突破回踩與30MA只列觀察",
+            f"🦞 龍蝦雷達正式破底翻｜{latest_date}",
+            "僅破底翻可建立正式推薦與績效；VCP由獨立觀察雷達通知。",
         ]
+        if not triggers and not exit_warnings:
+            lines.append("✅ LINE測試成功｜目前無正式破底翻候選")
         for row in triggers:
             lines += [
                 "",
