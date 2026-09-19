@@ -1,5 +1,5 @@
-name: VCP LINE Test Once
-# manual test: 2026-09-19 global-rr-top10-v4
+name: Formal + VCP LINE Test Once
+# manual test: 2026-09-19 false-break-plus-vcp-v5
 
 on:
   push:
@@ -18,6 +18,11 @@ jobs:
         with:
           python-version: "3.11"
       - run: pip install pandas
+      - name: Scan current database and send formal false-break LINE test
+        env:
+          LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
+          BUY_FORCE_NOTIFY: "1"
+        run: python buy_signal.py
       - name: Scan current database and send VCP LINE test
         env:
           LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
