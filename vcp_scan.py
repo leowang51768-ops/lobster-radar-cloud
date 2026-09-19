@@ -269,11 +269,6 @@ def support_zone_before(x: pd.DataFrame, i: int) -> tuple[float, float] | None:
     return float(min(prices)), float(max(prices))
 
 
-def stop_reference_90d(x: pd.DataFrame, i: int) -> float:
-    start = max(0, i - PIVOT_LOOKBACK + 1)
-    return float(x.iloc[start:i + 1]["low"].min())
-
-
 def breakout_quality(x: pd.DataFrame, i: int, pivot: float) -> tuple[bool, float]:
     if i < 5:
         return False, 0.0
