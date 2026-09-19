@@ -1,25 +1,25 @@
 {
-  "generated_at": "2026-09-18T15:42:13.013931+00:00",
+  "generated_at": "2026-09-19T14:58:57.050802+00:00",
   "data_start": "2026-03-18",
   "data_end": "2026-09-18",
   "entry": "訊號隔日開盤",
   "round_trip_cost_pct": 0.585,
-  "core_signal_count": 16,
+  "core_signal_count": 17,
   "fakeout_signal_count": 58,
   "core": {
     "5": {
       "全部": {
-        "samples": 15,
-        "win_rate": 46.67,
-        "avg_net": 0.99,
-        "stop_rate": 26.67,
+        "samples": 16,
+        "win_rate": 43.75,
+        "avg_net": 0.7,
+        "stop_rate": 25.0,
         "worst_mae": -10.62
       },
       "破底翻": {
-        "samples": 9,
-        "win_rate": 55.56,
-        "avg_net": 3.4,
-        "stop_rate": 22.22,
+        "samples": 10,
+        "win_rate": 50.0,
+        "avg_net": 2.68,
+        "stop_rate": 20.0,
         "worst_mae": -10.62
       },
       "突破後站穩": {
@@ -46,17 +46,17 @@
     },
     "10": {
       "全部": {
-        "samples": 14,
-        "win_rate": 42.86,
-        "avg_net": 1.34,
-        "stop_rate": 35.71,
+        "samples": 15,
+        "win_rate": 46.67,
+        "avg_net": 2.24,
+        "stop_rate": 33.33,
         "worst_mae": -10.62
       },
       "破底翻": {
-        "samples": 8,
-        "win_rate": 50.0,
-        "avg_net": 3.39,
-        "stop_rate": 25.0,
+        "samples": 9,
+        "win_rate": 55.56,
+        "avg_net": 4.67,
+        "stop_rate": 22.22,
         "worst_mae": -10.62
       },
       "突破後站穩": {
@@ -83,17 +83,17 @@
     },
     "20": {
       "全部": {
-        "samples": 11,
-        "win_rate": 54.55,
-        "avg_net": 1.1,
-        "stop_rate": 45.45,
+        "samples": 12,
+        "win_rate": 58.33,
+        "avg_net": 1.47,
+        "stop_rate": 41.67,
         "worst_mae": -10.62
       },
       "破底翻": {
-        "samples": 7,
-        "win_rate": 71.43,
-        "avg_net": 2.73,
-        "stop_rate": 28.57,
+        "samples": 8,
+        "win_rate": 75.0,
+        "avg_net": 3.08,
+        "stop_rate": 25.0,
         "worst_mae": -10.62
       },
       "突破後站穩": {
@@ -235,17 +235,17 @@
   "core_plus_fakeout": {
     "5": {
       "全部": {
-        "samples": 69,
-        "win_rate": 33.33,
-        "avg_net": -1.88,
-        "stop_rate": 10.14,
+        "samples": 70,
+        "win_rate": 32.86,
+        "avg_net": -1.9,
+        "stop_rate": 10.0,
         "worst_mae": -27.66
       },
       "破底翻": {
-        "samples": 9,
-        "win_rate": 55.56,
-        "avg_net": 3.4,
-        "stop_rate": 22.22,
+        "samples": 10,
+        "win_rate": 50.0,
+        "avg_net": 2.68,
+        "stop_rate": 20.0,
         "worst_mae": -10.62
       },
       "突破後站穩": {
@@ -272,17 +272,17 @@
     },
     "10": {
       "全部": {
-        "samples": 68,
-        "win_rate": 30.88,
-        "avg_net": -3.99,
-        "stop_rate": 19.12,
+        "samples": 69,
+        "win_rate": 31.88,
+        "avg_net": -3.72,
+        "stop_rate": 18.84,
         "worst_mae": -32.8
       },
       "破底翻": {
-        "samples": 8,
-        "win_rate": 50.0,
-        "avg_net": 3.39,
-        "stop_rate": 25.0,
+        "samples": 9,
+        "win_rate": 55.56,
+        "avg_net": 4.67,
+        "stop_rate": 22.22,
         "worst_mae": -10.62
       },
       "突破後站穩": {
@@ -309,17 +309,17 @@
     },
     "20": {
       "全部": {
-        "samples": 55,
-        "win_rate": 34.55,
-        "avg_net": -4.21,
-        "stop_rate": 32.73,
+        "samples": 56,
+        "win_rate": 35.71,
+        "avg_net": -4.04,
+        "stop_rate": 32.14,
         "worst_mae": -32.8
       },
       "破底翻": {
-        "samples": 7,
-        "win_rate": 71.43,
-        "avg_net": 2.73,
-        "stop_rate": 28.57,
+        "samples": 8,
+        "win_rate": 75.0,
+        "avg_net": 3.08,
+        "stop_rate": 25.0,
         "worst_mae": -10.62
       },
       "突破後站穩": {
