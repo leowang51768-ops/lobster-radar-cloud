@@ -1,4 +1,5 @@
 name: VCP LINE Test Once
+# manual test: 2026-09-19 support-zone-90d-stop
 
 on:
   push:
