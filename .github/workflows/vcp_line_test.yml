@@ -1,5 +1,5 @@
 name: VCP LINE Test Once
-# manual test: 2026-09-19 ma60-10pct-v3
+# manual test: 2026-09-19 global-rr-top10-v4
 
 on:
   push:
