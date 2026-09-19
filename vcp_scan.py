@@ -211,6 +211,68 @@ def pivot_before(x: pd.DataFrame, i: int) -> float | None:
     return float(winner["center"])
 
 
+def support_zone_before(x: pd.DataFrame, i: int) -> tuple[float, float] | None:
+    """Return the most frequently retested support band in the prior 90 sessions."""
+    start = max(0, i - PIVOT_LOOKBACK + 1)
+    window = x.iloc[start:i + 1]
+    if len(window) < 5:
+        return None
+
+    troughs: list[tuple[int, float]] = []
+    for pos in range(2, len(window) - 2):
+        price = float(window.iloc[pos].low)
+        local = window.iloc[pos - 2:pos + 3]["low"]
+        if price <= float(local.min()):
+            absolute_i = start + pos
+            if not troughs or absolute_i - troughs[-1][0] >= PIVOT_MIN_GAP_DAYS:
+                troughs.append((absolute_i, price))
+            elif price < troughs[-1][1]:
+                troughs[-1] = (absolute_i, price)
+
+    clusters: list[dict] = []
+    for trough_i, price in troughs:
+        matching = [
+            cluster for cluster in clusters
+            if abs(price / float(cluster["center"]) - 1.0) <= PIVOT_CLUSTER_TOL
+        ]
+        if matching:
+            cluster = min(
+                matching,
+                key=lambda item: abs(price / float(item["center"]) - 1.0),
+            )
+            cluster["touches"].append((trough_i, price))
+            cluster["center"] = float(
+                pd.Series([p for _, p in cluster["touches"]]).median()
+            )
+        else:
+            clusters.append({"center": price, "touches": [(trough_i, price)]})
+
+    close = float(x.iloc[i].close)
+    repeated = [
+        cluster for cluster in clusters
+        if len(cluster["touches"]) >= PIVOT_MIN_TOUCHES
+        and float(cluster["center"]) < close
+    ]
+    if not repeated:
+        return None
+
+    # Most touches wins; ties choose the nearest valid support below the close.
+    winner = max(
+        repeated,
+        key=lambda cluster: (
+            len(cluster["touches"]),
+            float(cluster["center"]),
+        ),
+    )
+    prices = [price for _, price in winner["touches"]]
+    return float(min(prices)), float(max(prices))
+
+
+def stop_reference_90d(x: pd.DataFrame, i: int) -> float:
+    start = max(0, i - PIVOT_LOOKBACK + 1)
+    return float(x.iloc[start:i + 1]["low"].min())
+
+
 def breakout_quality(x: pd.DataFrame, i: int, pivot: float) -> tuple[bool, float]:
     if i < 5:
         return False, 0.0
@@ -228,10 +290,14 @@ def breakout_quality(x: pd.DataFrame, i: int, pivot: float) -> tuple[bool, float
 
 
 def make_row(x: pd.DataFrame, i: int, profile: dict, stage: str,
-             pivot: float, volume_ratio: float, breakout_i: int | None = None) -> dict:
+             pivot: float, volume_ratio: float, breakout_i: int | None = None) -> dict | None:
     row = x.iloc[i]
     close = float(row.close)
-    support = min(float(profile["support"]), pivot)
+    support_zone = support_zone_before(x, i)
+    if support_zone is None:
+        return None
+    support_lower, support_upper = support_zone
+    stop_price = stop_reference_90d(x, i)
     ma60 = float(row.ma60)
     ma60_old = float(x.iloc[i - 5].ma60)
     ma_change = ma60 / ma60_old - 1.0 if ma60_old > 0 else 0.0
@@ -256,8 +322,9 @@ def make_row(x: pd.DataFrame, i: int, profile: dict, stage: str,
         "vcp_stage": stage, "stage_explanation": explanation,
         "close": round(close, 2), "pivot": round(pivot, 2),
         "distance_to_pivot_pct": round(distance * 100, 2),
-        "support_lower": round(support, 2), "support_upper": round(support, 2),
-        "stop_price": round(support * 0.995, 2),
+        "support_lower": round(support_lower, 2),
+        "support_upper": round(support_upper, 2),
+        "stop_price": round(stop_price, 2),
         "contraction_count": profile["count"],
         "contraction_depths_pct": "/".join(f"{d * 100:.1f}" for d in profile["depths"]),
         "volume_dry_ratio": round(profile["dry_ratio"], 2),
@@ -266,7 +333,7 @@ def make_row(x: pd.DataFrame, i: int, profile: dict, stage: str,
         "avg20_turnover": round(float(row.avg20_turnover), 0),
         "ma60": round(ma60, 2), "ma60_5d_change_pct": round(ma_change * 100, 2),
         "quality_score": quality, "action": action,
-        "invalidation": f"收盤跌破{support:.2f}（容許0.5%誤差）即失效",
+        "invalidation": f"收盤跌破90日最低價{stop_price:.2f}即失效",
     }
 
 
@@ -347,7 +414,7 @@ def send_line_summary(rows: list[dict], trade_date: str) -> None:
             lines += [
                 f"{row['code']} {row['name']}｜收{row['close']}｜突破樞紐{row['pivot']}",
                 f"收縮{row['contraction_count']}次({row['contraction_depths_pct']}%)｜品質{row['quality_score']}分",
-                f"支撐{row['support_lower']}附近｜停損參考{row['stop_price']}",
+                f"支撐區{row['support_lower']}～{row['support_upper']}｜90日最低停損{row['stop_price']}",
                 f"行動：{row['action']}",
             ]
         if len(selected) > 5:
