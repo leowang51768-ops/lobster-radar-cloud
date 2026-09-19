@@ -128,7 +128,7 @@ jobs:
           done
           exit 1
 
-      - name: Final health check
+      - name: Scan VCP stages (observation only)\n        shell: bash\n        run: |\n          echo "FAIL_STAGE=VCP三階段掃描" >> "$GITHUB_ENV"\n          python vcp_scan.py\n\n      - name: Final health check
         run: |
           echo "FAIL_STAGE=最終健康檢查" >> "$GITHUB_ENV"
           python - <<'PY'
@@ -167,7 +167,7 @@ jobs:
           git config user.name "lobster-radar-cloud"
           git config user.email "actions@github.com"
 
-          for f in lobster_tw_6m_prices.sqlite fundamental_support.json signal_state.json candidate_status.csv formal_recommendations.csv; do
+          for f in lobster_tw_6m_prices.sqlite fundamental_support.json signal_state.json candidate_status.csv vcp_candidates.csv formal_recommendations.csv; do
             if [ -e "$f" ]; then
               git add "$f"
             fi
