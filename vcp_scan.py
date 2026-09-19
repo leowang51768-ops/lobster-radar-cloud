@@ -379,7 +379,7 @@ def classify_latest(group: pd.DataFrame) -> dict | None:
 
 
 def send_line_summary(rows: list[dict], trade_date: str) -> None:
-    """Send one compact VCP message; never label an observation as a formal buy."""
+    """Send every VCP candidate, splitting complete stock blocks across LINE messages."""
     force_notify = os.environ.get("VCP_FORCE_NOTIFY", "").strip() == "1"
     if not rows and not force_notify:
         print("No VCP candidates; LINE notification skipped")
@@ -394,51 +394,75 @@ def send_line_summary(rows: list[dict], trade_date: str) -> None:
         "當日突破": "🟡 VCP當日突破｜等待回踩，不追價",
         "接近突破": "⚪ VCP接近突破｜僅觀察，尚非買點",
     }
-    lines = [
-        f"🦞 VCP三階段雷達｜{trade_date}",
-        "本訊息是型態觀察，不寫入正式推薦績效。",
+    blocks = [
+        f"🦞 VCP三階段雷達｜{trade_date}\n"
+        "本訊息是型態觀察，不寫入正式推薦績效。"
     ]
     if not rows:
-        lines += ["", "✅ LINE測試成功｜目前資料庫無VCP候選"]
+        blocks.append("✅ LINE測試成功｜目前資料庫無VCP候選")
+
     for stage in ("突破後回踩", "當日突破", "接近突破"):
         selected = [row for row in rows if row["vcp_stage"] == stage]
-        lines += ["", f"{labels[stage]}（{len(selected)}檔）"]
+        blocks.append(f"{labels[stage]}（{len(selected)}檔）")
         if not selected:
-            lines.append("無")
+            blocks.append("無")
             continue
-        for row in selected[:5]:
-            lines += [
-                f"{row['code']} {row['name']}｜收{row['close']}｜突破樞紐{row['pivot']}",
-                f"收縮{row['contraction_count']}次({row['contraction_depths_pct']}%)｜品質{row['quality_score']}分",
-                f"支撐區{row['support_lower']}～{row['support_upper']}｜停損{row['stop_price']}（樞紐下方1%）",
-                f"行動：{row['action']}",
-            ]
-        if len(selected) > 5:
-            lines.append(f"其餘{len(selected) - 5}檔請見 vcp_candidates.csv")
+        for row in selected:
+            blocks.append(
+                f"{row['code']} {row['name']}｜收{row['close']}｜突破樞紐{row['pivot']}\n"
+                f"收縮{row['contraction_count']}次({row['contraction_depths_pct']}%)｜品質{row['quality_score']}分\n"
+                f"支撐區{row['support_lower']}～{row['support_upper']}｜停損{row['stop_price']}（樞紐下方1%）\n"
+                f"行動：{row['action']}"
+            )
 
-    text = "\n".join(lines)
-    # LINE text-message limit is 5,000 characters; keep safety margin.
-    if len(text) > 4800:
-        text = text[:4750] + "\n其餘標的請見 vcp_candidates.csv"
-    payload = json.dumps(
-        {"messages": [{"type": "text", "text": text}]},
-        ensure_ascii=False,
-    ).encode("utf-8")
-    request = urllib.request.Request(
-        "https://api.line.me/v2/bot/message/broadcast",
-        data=payload,
-        headers={
-            "Authorization": f"Bearer {token}",
-            "Content-Type": "application/json; charset=UTF-8",
-        },
-        method="POST",
-    )
-    try:
-        with urllib.request.urlopen(request, timeout=20) as response:
-            print("VCP LINE status:", response.status)
-    except urllib.error.HTTPError as exc:
-        detail = exc.read().decode("utf-8", errors="replace")
-        raise RuntimeError(f"VCP LINE failed: {exc.code} {detail}") from exc
+    # Keep every stock block intact and stay below LINE's 5,000-character limit.
+    messages: list[str] = []
+    current = ""
+    for block in blocks:
+        candidate = block if not current else current + "\n\n" + block
+        if len(candidate) <= 4800:
+            current = candidate
+        else:
+            if current:
+                messages.append(current)
+            current = block
+    if current:
+        messages.append(current)
+
+    total = len(messages)
+    if total > 1:
+        messages = [
+            f"第{index}/{total}則\n{text}"
+            for index, text in enumerate(messages, start=1)
+        ]
+
+    # LINE accepts at most five message objects per broadcast request.
+    for offset in range(0, len(messages), 5):
+        batch = messages[offset:offset + 5]
+        payload = json.dumps(
+            {"messages": [{"type": "text", "text": text} for text in batch]},
+            ensure_ascii=False,
+        ).encode("utf-8")
+        request = urllib.request.Request(
+            "https://api.line.me/v2/bot/message/broadcast",
+            data=payload,
+            headers={
+                "Authorization": f"Bearer {token}",
+                "Content-Type": "application/json; charset=UTF-8",
+            },
+            method="POST",
+        )
+        try:
+            with urllib.request.urlopen(request, timeout=20) as response:
+                print(
+                    "VCP LINE status:",
+                    response.status,
+                    f"batch={offset // 5 + 1}",
+                    f"messages={len(batch)}",
+                )
+        except urllib.error.HTTPError as exc:
+            detail = exc.read().decode("utf-8", errors="replace")
+            raise RuntimeError(f"VCP LINE failed: {exc.code} {detail}") from exc
 
 
 def main() -> int:
