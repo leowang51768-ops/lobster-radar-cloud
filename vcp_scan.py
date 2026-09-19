@@ -257,7 +257,8 @@ def classify_latest(group: pd.DataFrame) -> dict | None:
 
 def send_line_summary(rows: list[dict], trade_date: str) -> None:
     """Send one compact VCP message; never label an observation as a formal buy."""
-    if not rows:
+    force_notify = os.environ.get("VCP_FORCE_NOTIFY", "").strip() == "1"
+    if not rows and not force_notify:
         print("No VCP candidates; LINE notification skipped")
         return
     token = os.environ.get("LINE_CHANNEL_ACCESS_TOKEN", "").strip()
@@ -274,6 +275,8 @@ def send_line_summary(rows: list[dict], trade_date: str) -> None:
         f"🦞 VCP三階段雷達｜{trade_date}",
         "本訊息是型態觀察，不寫入正式推薦績效。",
     ]
+    if not rows:
+        lines += ["", "✅ LINE測試成功｜目前資料庫無VCP候選"]
     for stage in ("突破後回踩", "當日突破", "接近突破"):
         selected = [row for row in rows if row["vcp_stage"] == stage]
         lines += ["", f"{labels[stage]}（{len(selected)}檔）"]
