@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Observation-only breakout support-retest scanner.
 
-This route never creates formal recommendations and never enters performance
+Scanner version 1.0.\n\nThis route never creates formal recommendations and never enters performance
 tracking. It watches for:
 1) a prior 60-session resistance pivot with at least two touches;
 2) a close breaking above that pivot 3-20 sessions ago;
