@@ -6,6 +6,9 @@ on:
     paths:
       - "support_retest_watch.py"
 
+permissions:
+  contents: write
+
 jobs:
   support-retest-line-test:
     runs-on: ubuntu-latest
@@ -23,3 +26,10 @@ jobs:
           LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
           SUPPORT_RETEST_FORCE_NOTIFY: "1"
         run: python support_retest_watch.py
+      - name: Save prospective high-quality observations
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add support_retest_high_quality_history.csv
+          git diff --cached --quiet || git commit -m "Track high-quality support retest observations"
+          git push
