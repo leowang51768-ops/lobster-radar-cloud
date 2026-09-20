@@ -2,6 +2,11 @@ name: Backtest support confluence
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - "support_retest_watch.py"
+      - "backtest_support_confluence.py"
+      - ".github/workflows/backtest_support_confluence.yml"
 
 permissions:
   contents: write
