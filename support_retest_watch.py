@@ -29,6 +29,7 @@ import pandas as pd
 BASE = Path(__file__).resolve().parent
 DB = BASE / "lobster_tw_6m_prices.sqlite"
 OUTPUT = BASE / "support_retest_watch.csv"
+EXPERIMENT_OUTPUT = BASE / "support_retest_high_quality_history.csv"
 
 PIVOT_LOOKBACK = 60
 PIVOT_TOUCH_BAND = 0.03
@@ -264,6 +265,10 @@ def classify_latest(group: pd.DataFrame) -> dict | None:
 
         precision = abs(low / pivot - 1.0)
         confluence = support_confluence(x, break_i, i, pivot)
+        elapsed = i - break_i
+        high_quality = bool(
+            confluence["confluence"] and precision <= 0.005 and elapsed <= 7
+        )
         candidate = {
             "date": today.date.strftime("%Y-%m-%d"),
             "code": str(today.code),
@@ -289,6 +294,9 @@ def classify_latest(group: pd.DataFrame) -> dict | None:
             "ma60": round(float(today.ma60), 2),
             "close_extension_pct": round(extension * 100, 2),
             "retest_precision_pct": round(precision * 100, 2),
+            "days_since_breakout": elapsed,
+            "high_quality_confluence": high_quality,
+            "quality_label": "高品質共振觀察" if high_quality else "一般突破回踩觀察",
             "status": "僅觀察，不是買進通知",
             "invalidation": f"收盤跌破樞紐下方1%（{pivot * (1.0 - STOP_BUFFER):.2f}）失效",
         }
@@ -321,10 +329,11 @@ def send_line(rows: list[dict], trade_date: str) -> None:
     for rank, row in enumerate(rows[:10], 1):
         lines += [
             "",
-            f"{rank}. {row['code']} {row['name']}｜{row['stage']}｜{row['confluence_label']}",
+            f"{rank}. {row['code']} {row['name']}｜{row['stage']}｜{row['quality_label']}",
             f"收盤{row['close']}｜回踩低點{row['retest_low']}｜原突破樞紐{row['pivot']}",
             f"支撐區{row['support_lower']}～{row['support_upper']}｜防守價{row['stop_price']}",
             f"共振區{row['confluence_lower']}～{row['confluence_upper']}｜證據{row['confluence_evidence']}",
+            f"回踩誤差{row['retest_precision_pct']}%｜突破後第{row['days_since_breakout']}日",
             f"突破量{int(row['breakout_volume_lots'])}張｜今日量{int(row['today_volume_lots'])}張｜縮量比{row['volume_contraction_ratio']}",
             f"判定：守住並收復支撐，等待後續量價轉強；{row['status']}",
             f"失效：{row['invalidation']}",
@@ -374,6 +383,7 @@ def main() -> int:
         "ma20", "ma60", "close_extension_pct", "retest_precision_pct",
         "confluence", "confluence_label", "confluence_categories",
         "confluence_evidence", "confluence_lower", "confluence_upper", "poc_method",
+        "days_since_breakout", "high_quality_confluence", "quality_label",
         "status", "invalidation",
     ]
     with OUTPUT.open("w", encoding="utf-8-sig", newline="") as handle:
@@ -381,11 +391,40 @@ def main() -> int:
         writer.writeheader()
         writer.writerows(rows)
 
+    # Prospective, immutable experiment log.  One record per breakout pattern;
+    # later daily scans cannot inflate the sample count.
+    experiment_fields = [
+        "date", "code", "name", "market", "breakout_date", "pivot", "close",
+        "retest_low", "retest_precision_pct", "days_since_breakout",
+        "confluence_categories", "confluence_evidence", "stop_price", "quality_label",
+    ]
+    existing = []
+    if EXPERIMENT_OUTPUT.exists():
+        with EXPERIMENT_OUTPUT.open("r", encoding="utf-8-sig", newline="") as handle:
+            existing = list(csv.DictReader(handle))
+    seen = {
+        (str(r.get("code")), str(r.get("breakout_date")), str(r.get("pivot")))
+        for r in existing
+    }
+    for row in rows:
+        if not row["high_quality_confluence"]:
+            continue
+        key = (str(row["code"]), str(row["breakout_date"]), str(row["pivot"]))
+        if key not in seen:
+            existing.append({field: row.get(field, "") for field in experiment_fields})
+            seen.add(key)
+    with EXPERIMENT_OUTPUT.open("w", encoding="utf-8-sig", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=experiment_fields)
+        writer.writeheader()
+        writer.writerows(existing)
+
     trade_date = market.date.max().strftime("%Y-%m-%d")
     print(json.dumps({
         "latest_trade_date": trade_date,
         "support_retest_observations": len(rows),
         "confluence_observations": sum(bool(r["confluence"]) for r in rows),
+        "high_quality_confluence_observations": sum(bool(r["high_quality_confluence"]) for r in rows),
+        "high_quality_history_count": len(existing),
         "formal_recommendations_changed": False,
     }, ensure_ascii=False))
     send_line(rows, trade_date)
