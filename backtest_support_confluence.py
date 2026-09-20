@@ -20,12 +20,27 @@ SELL_TAX = 0.003
 SLIPPAGE = 0.001
 
 
-def simulate(group: pd.DataFrame, signal_i: int, days: int, stop: float) -> dict | None:
+def simulate(
+    group: pd.DataFrame,
+    signal_i: int,
+    days: int,
+    stop: float,
+    pivot: float,
+    entry_cap_pct: float | None = None,
+) -> dict | None:
     entry_i = signal_i + 1
     exit_i = entry_i + days - 1
     if exit_i >= len(group):
         return None
-    entry = float(group.iloc[entry_i].open) * (1.0 + SLIPPAGE)
+    raw_open = float(group.iloc[entry_i].open)
+    # A confirmed retest is invalid at the next open if it gaps back below the
+    # pivot.  Optional caps test whether waiting for a realistic observation
+    # zone avoids chasing an already extended opening price.
+    if raw_open < pivot:
+        return None
+    if entry_cap_pct is not None and raw_open > pivot * (1.0 + entry_cap_pct):
+        return None
+    entry = raw_open * (1.0 + SLIPPAGE)
     exit_price = float(group.iloc[exit_i].close) * (1.0 - SLIPPAGE)
     exit_reason = f"持有{days}日"
     for j in range(entry_i, exit_i + 1):
@@ -74,55 +89,68 @@ def metrics(frame: pd.DataFrame, days: int) -> dict:
 def main() -> int:
     market = read_market()
     trades = []
+    seen_patterns = set()
     for raw_code, raw_group in market.groupby("code", sort=False):
         group = raw_group.sort_values("date").reset_index(drop=True)
         for i in range(WARMUP, len(group) - 1):
             signal = classify_latest(group.iloc[: i + 1])
             if signal is None:
                 continue
+            pattern_key = (
+                str(raw_code), signal["breakout_date"], round(float(signal["pivot"]), 4)
+            )
+            if pattern_key in seen_patterns:
+                continue
+            seen_patterns.add(pattern_key)
             stop = float(signal["stop_price"])
+            pivot = float(signal["pivot"])
             row = {
                 "signal_date": signal["date"],
                 "code": str(raw_code),
                 "name": signal["name"],
+                "breakout_date": signal["breakout_date"],
+                "pattern_key": "|".join(map(str, pattern_key)),
                 "group": "B" if signal["confluence"] else "C",
                 "confluence": bool(signal["confluence"]),
                 "confluence_categories": int(signal["confluence_categories"]),
                 "confluence_evidence": signal["confluence_evidence"],
-                "pivot": signal["pivot"],
+                "pivot": pivot,
                 "stop_price": stop,
             }
-            for days in (3, 5):
-                outcome = simulate(group, i, days, stop)
-                if outcome:
-                    row.update(outcome)
+            for label, cap in (("unrestricted", None), ("cap_1pct", 0.01), ("cap_2pct", 0.02), ("cap_5pct", 0.05)):
+                for days in (3, 5):
+                    outcome = simulate(group, i, days, stop, pivot, cap)
+                    if outcome:
+                        row.update({f"{key}_{label}": value for key, value in outcome.items()})
             trades.append(row)
 
     frame = pd.DataFrame(trades)
     if frame.empty:
         frame = pd.DataFrame(columns=[
-            "signal_date", "code", "name", "group", "confluence",
+            "signal_date", "code", "name", "breakout_date", "pattern_key", "group", "confluence",
             "confluence_categories", "confluence_evidence", "pivot", "stop_price",
-            "return_3d", "return_5d",
+            "return_3d_unrestricted", "return_5d_unrestricted",
         ])
     frame.to_csv(TRADES, index=False, encoding="utf-8-sig")
-    groups = {
-        "A_all_breakout_retests": frame,
-        "B_with_confluence": frame[frame["group"] == "B"],
-        "C_without_confluence": frame[frame["group"] == "C"],
-    }
+    groups = {"A_all_breakout_retests": frame, "B_with_confluence": frame[frame["group"] == "B"], "C_without_confluence": frame[frame["group"] == "C"]}
     report = {
         "method": {
-            "entry": "訊號次一交易日開盤，加0.1%滑價",
+            "entry": "同一突破僅取首次訊號；次一交易日開盤不得低於樞紐，並比較不設上限及樞紐上方1%/2%/5%進場上限；加0.1%滑價",
             "stop": "原突破樞紐下緣1%；跳空越過時按較差開盤價",
             "costs": {"buy_fee": BUY_FEE, "sell_fee": SELL_FEE, "sell_tax": SELL_TAX},
             "lookahead_bias": "每一訊號僅傳入當日以前資料；POC亦只使用突破日前資料",
             "D_reversal": "破底翻維持獨立既有回測，不與A/B/C重複合併",
         },
-        "signal_count": int(len(frame)),
+        "signal_count_after_same_breakout_dedup": int(len(frame)),
         "confluence_share_pct": round(float(frame["confluence"].mean() * 100), 2) if len(frame) else None,
         "groups": {
-            name: {"3_day": metrics(data, 3), "5_day": metrics(data, 5)}
+            name: {
+                label: {
+                    "3_day": metrics(data.rename(columns={f"return_3d_{label}": "return_3d"}), 3),
+                    "5_day": metrics(data.rename(columns={f"return_5d_{label}": "return_5d"}), 5),
+                }
+                for label in ("unrestricted", "cap_1pct", "cap_2pct", "cap_5pct")
+            }
             for name, data in groups.items()
         },
     }
