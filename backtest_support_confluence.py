@@ -104,6 +104,11 @@ def main() -> int:
             seen_patterns.add(pattern_key)
             stop = float(signal["stop_price"])
             pivot = float(signal["pivot"])
+            breakout_i = int(group.index[group["date"] == pd.Timestamp(signal["breakout_date"])][0])
+            today = group.iloc[i]
+            breakout = group.iloc[breakout_i]
+            prior5_volume = float(group.iloc[max(0, breakout_i - 5):breakout_i]["volume_lots"].mean())
+            spread = float(today.high) - float(today.low)
             row = {
                 "signal_date": signal["date"],
                 "code": str(raw_code),
@@ -116,6 +121,14 @@ def main() -> int:
                 "confluence_evidence": signal["confluence_evidence"],
                 "pivot": pivot,
                 "stop_price": stop,
+                "days_since_breakout": i - breakout_i,
+                "pivot_touches": int(signal["pivot_touches"]),
+                "breakout_volume_ratio_5d": float(breakout.volume_lots) / prior5_volume if prior5_volume > 0 else None,
+                "retest_volume_ratio_to_breakout": float(signal["volume_contraction_ratio"]),
+                "retest_precision_pct": float(signal["retest_precision_pct"]),
+                "close_extension_pct": float(signal["close_extension_pct"]),
+                "retest_close_location": (float(today.close) - float(today.low)) / spread if spread > 0 else 1.0,
+                "retest_body_pct": (float(today.close) / float(today.open) - 1.0) * 100.0,
             }
             for label, cap in (("unrestricted", None), ("cap_1pct", 0.01), ("cap_2pct", 0.02), ("cap_5pct", 0.05)):
                 for days in (3, 5):
