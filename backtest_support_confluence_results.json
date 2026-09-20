@@ -1,0 +1,71 @@
+{
+  "method": {
+    "entry": "訊號次一交易日開盤，加0.1%滑價",
+    "stop": "原突破樞紐下緣1%；跳空越過時按較差開盤價",
+    "costs": {
+      "buy_fee": 0.001425,
+      "sell_fee": 0.001425,
+      "sell_tax": 0.003
+    },
+    "lookahead_bias": "每一訊號僅傳入當日以前資料；POC亦只使用突破日前資料",
+    "D_reversal": "破底翻維持獨立既有回測，不與A/B/C重複合併"
+  },
+  "signal_count": 118,
+  "confluence_share_pct": 88.14,
+  "groups": {
+    "A_all_breakout_retests": {
+      "3_day": {
+        "samples": 111,
+        "win_rate_pct": 32.43,
+        "average_return_pct": -1.193,
+        "profit_loss_ratio": 1.004,
+        "max_drawdown_pct": -81.743,
+        "expectancy_pct": -1.193
+      },
+      "5_day": {
+        "samples": 104,
+        "win_rate_pct": 27.88,
+        "average_return_pct": -1.917,
+        "profit_loss_ratio": 1.029,
+        "max_drawdown_pct": -92.463,
+        "expectancy_pct": -1.917
+      }
+    },
+    "B_with_confluence": {
+      "3_day": {
+        "samples": 99,
+        "win_rate_pct": 35.35,
+        "average_return_pct": -0.867,
+        "profit_loss_ratio": 1.075,
+        "max_drawdown_pct": -71.314,
+        "expectancy_pct": -0.867
+      },
+      "5_day": {
+        "samples": 93,
+        "win_rate_pct": 30.11,
+        "average_return_pct": -1.63,
+        "profit_loss_ratio": 1.075,
+        "max_drawdown_pct": -87.611,
+        "expectancy_pct": -1.63
+      }
+    },
+    "C_without_confluence": {
+      "3_day": {
+        "samples": 12,
+        "win_rate_pct": 8.33,
+        "average_return_pct": -3.881,
+        "profit_loss_ratio": 0.149,
+        "max_drawdown_pct": -38.377,
+        "expectancy_pct": -3.881
+      },
+      "5_day": {
+        "samples": 11,
+        "win_rate_pct": 9.09,
+        "average_return_pct": -4.349,
+        "profit_loss_ratio": 0.195,
+        "max_drawdown_pct": -39.164,
+        "expectancy_pct": -4.349
+      }
+    }
+  }
+}
