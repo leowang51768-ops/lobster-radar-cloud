@@ -1,5 +1,5 @@
 name: Break Bottom LINE Test Once
-# one-time format test: 2026-09-21 article-standard A/B/C/neckline
+# one-time format test: 2026-09-21 article-standard A/B/C/neckline trigger-2
 
 on:
   push:
