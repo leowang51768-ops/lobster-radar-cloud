@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Observation-only breakout support-retest scanner.
 
-Scanner version 1.1.0.\n\nThis route never creates formal recommendations and never enters performance
+Scanner version 1.2.0.\n\nThis route never creates formal recommendations and never enters performance
 tracking. It watches for:
 1) a prior 60-session resistance pivot with at least two touches;
 2) a close breaking above that pivot 3-20 sessions ago;
@@ -37,9 +37,9 @@ MIN_PIVOT_TOUCHES = 2
 BREAKOUT_MIN_DAYS = 3
 BREAKOUT_MAX_DAYS = 20
 BREAKOUT_BUFFER = 0.003
-BREAKOUT_MIN_VOLUME_RATIO = 1.20
-RETEST_LOW_BELOW = 0.01
-RETEST_LOW_ABOVE = 0.02
+BREAKOUT_MIN_VOLUME_RATIO = 1.10
+RETEST_LOW_BELOW = 0.02
+RETEST_LOW_ABOVE = 0.03
 MAX_CLOSE_EXTENSION = 0.10
 STOP_BUFFER = 0.01
 MIN_AVG20_VOLUME_LOTS = 300
