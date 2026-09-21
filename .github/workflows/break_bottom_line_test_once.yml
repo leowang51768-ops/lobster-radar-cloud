@@ -1,0 +1,22 @@
+name: Break Bottom LINE Test Once
+# one-time format test: 2026-09-21 article-standard A/B/C/neckline
+
+on:
+  push:
+    paths:
+      - ".github/workflows/break_bottom_line_test_once.yml"
+
+jobs:
+  send-break-bottom-format-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Send revised break-bottom LINE preview
+        env:
+          LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
+        run: python break_bottom_line_test.py
