@@ -6,6 +6,7 @@ on:
       - experiment/c-group-quality-20260921
     paths:
       - c_group_scan.py
+      - c_group_backtest.py
       - test_c_group_scan.py
       - support_retest_watch.py
       - .github/workflows/c_group_test.yml
@@ -25,3 +26,4 @@ jobs:
       - run: pip install -r requirements.txt
       - run: python -m unittest -v test_c_group_scan.py
       - run: python c_group_scan.py --out-dir /tmp/c_group_output
+      - run: python c_group_backtest.py --sessions 12 --output /tmp/c_group_backtest_results.json
