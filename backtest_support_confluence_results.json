@@ -10,174 +10,174 @@
     "lookahead_bias": "每一訊號僅傳入當日以前資料；POC亦只使用突破日前資料",
     "D_reversal": "破底翻維持獨立既有回測，不與A/B/C重複合併"
   },
-  "signal_count_after_same_breakout_dedup": 74,
-  "confluence_share_pct": 83.78,
+  "signal_count_after_same_breakout_dedup": 92,
+  "confluence_share_pct": 84.78,
   "groups": {
     "A_all_breakout_retests": {
       "unrestricted": {
         "3_day": {
-          "samples": 67,
-          "win_rate_pct": 34.33,
-          "average_return_pct": -1.342,
-          "profit_loss_ratio": 0.876,
-          "max_drawdown_pct": -66.286,
-          "expectancy_pct": -1.342
+          "samples": 84,
+          "win_rate_pct": 30.95,
+          "average_return_pct": -1.352,
+          "profit_loss_ratio": 1.02,
+          "max_drawdown_pct": -72.415,
+          "expectancy_pct": -1.352
         },
         "5_day": {
-          "samples": 64,
-          "win_rate_pct": 26.56,
-          "average_return_pct": -2.818,
-          "profit_loss_ratio": 0.575,
-          "max_drawdown_pct": -84.886,
-          "expectancy_pct": -2.818
+          "samples": 79,
+          "win_rate_pct": 25.32,
+          "average_return_pct": -2.704,
+          "profit_loss_ratio": 0.645,
+          "max_drawdown_pct": -89.314,
+          "expectancy_pct": -2.704
         }
       },
       "cap_1pct": {
         "3_day": {
-          "samples": 8,
-          "win_rate_pct": 25.0,
-          "average_return_pct": -0.803,
-          "profit_loss_ratio": 1.31,
-          "max_drawdown_pct": -8.858,
-          "expectancy_pct": -0.803
+          "samples": 9,
+          "win_rate_pct": 22.22,
+          "average_return_pct": -0.844,
+          "profit_loss_ratio": 1.385,
+          "max_drawdown_pct": -9.935,
+          "expectancy_pct": -0.844
         },
         "5_day": {
-          "samples": 8,
-          "win_rate_pct": 12.5,
-          "average_return_pct": -1.635,
-          "profit_loss_ratio": 2.158,
-          "max_drawdown_pct": -12.685,
-          "expectancy_pct": -1.635
+          "samples": 9,
+          "win_rate_pct": 11.11,
+          "average_return_pct": -1.518,
+          "profit_loss_ratio": 2.393,
+          "max_drawdown_pct": -13.203,
+          "expectancy_pct": -1.518
         }
       },
       "cap_2pct": {
         "3_day": {
-          "samples": 18,
-          "win_rate_pct": 22.22,
-          "average_return_pct": -1.592,
-          "profit_loss_ratio": 0.823,
-          "max_drawdown_pct": -28.12,
-          "expectancy_pct": -1.592
+          "samples": 24,
+          "win_rate_pct": 20.83,
+          "average_return_pct": -1.164,
+          "profit_loss_ratio": 1.579,
+          "max_drawdown_pct": -29.832,
+          "expectancy_pct": -1.164
         },
         "5_day": {
-          "samples": 18,
-          "win_rate_pct": 16.67,
-          "average_return_pct": -2.453,
-          "profit_loss_ratio": 1.041,
-          "max_drawdown_pct": -38.822,
-          "expectancy_pct": -2.453
+          "samples": 22,
+          "win_rate_pct": 18.18,
+          "average_return_pct": -2.269,
+          "profit_loss_ratio": 0.903,
+          "max_drawdown_pct": -40.503,
+          "expectancy_pct": -2.269
         }
       },
       "cap_5pct": {
         "3_day": {
-          "samples": 49,
-          "win_rate_pct": 30.61,
-          "average_return_pct": -1.04,
-          "profit_loss_ratio": 1.085,
-          "max_drawdown_pct": -47.008,
-          "expectancy_pct": -1.04
+          "samples": 65,
+          "win_rate_pct": 26.15,
+          "average_return_pct": -1.191,
+          "profit_loss_ratio": 1.275,
+          "max_drawdown_pct": -59.644,
+          "expectancy_pct": -1.191
         },
         "5_day": {
-          "samples": 46,
-          "win_rate_pct": 26.09,
-          "average_return_pct": -2.316,
-          "profit_loss_ratio": 0.559,
-          "max_drawdown_pct": -66.796,
-          "expectancy_pct": -2.316
+          "samples": 60,
+          "win_rate_pct": 23.33,
+          "average_return_pct": -2.445,
+          "profit_loss_ratio": 0.584,
+          "max_drawdown_pct": -78.043,
+          "expectancy_pct": -2.445
         }
       }
     },
     "B_with_confluence": {
       "unrestricted": {
         "3_day": {
-          "samples": 57,
-          "win_rate_pct": 38.6,
-          "average_return_pct": -0.843,
-          "profit_loss_ratio": 0.971,
-          "max_drawdown_pct": -51.736,
-          "expectancy_pct": -0.843
+          "samples": 72,
+          "win_rate_pct": 33.33,
+          "average_return_pct": -1.001,
+          "profit_loss_ratio": 1.106,
+          "max_drawdown_pct": -60.328,
+          "expectancy_pct": -1.001
         },
         "5_day": {
-          "samples": 55,
-          "win_rate_pct": 30.91,
-          "average_return_pct": -2.478,
-          "profit_loss_ratio": 0.577,
-          "max_drawdown_pct": -76.093,
-          "expectancy_pct": -2.478
+          "samples": 68,
+          "win_rate_pct": 27.94,
+          "average_return_pct": -2.479,
+          "profit_loss_ratio": 0.637,
+          "max_drawdown_pct": -82.893,
+          "expectancy_pct": -2.479
         }
       },
       "cap_1pct": {
         "3_day": {
-          "samples": 7,
-          "win_rate_pct": 28.57,
-          "average_return_pct": -0.664,
-          "profit_loss_ratio": 1.293,
-          "max_drawdown_pct": -7.211,
-          "expectancy_pct": -0.664
+          "samples": 8,
+          "win_rate_pct": 25.0,
+          "average_return_pct": -0.727,
+          "profit_loss_ratio": 1.383,
+          "max_drawdown_pct": -8.307,
+          "expectancy_pct": -0.727
         },
         "5_day": {
-          "samples": 7,
-          "win_rate_pct": 14.29,
-          "average_return_pct": -1.615,
-          "profit_loss_ratio": 2.042,
-          "max_drawdown_pct": -11.107,
-          "expectancy_pct": -1.615
+          "samples": 8,
+          "win_rate_pct": 12.5,
+          "average_return_pct": -1.486,
+          "profit_loss_ratio": 2.304,
+          "max_drawdown_pct": -11.634,
+          "expectancy_pct": -1.486
         }
       },
       "cap_2pct": {
         "3_day": {
-          "samples": 16,
-          "win_rate_pct": 25.0,
-          "average_return_pct": -1.477,
-          "profit_loss_ratio": 0.815,
-          "max_drawdown_pct": -24.362,
-          "expectancy_pct": -1.477
+          "samples": 22,
+          "win_rate_pct": 22.73,
+          "average_return_pct": -1.041,
+          "profit_loss_ratio": 1.579,
+          "max_drawdown_pct": -26.164,
+          "expectancy_pct": -1.041
         },
         "5_day": {
-          "samples": 16,
-          "win_rate_pct": 18.75,
-          "average_return_pct": -2.445,
-          "profit_loss_ratio": 0.992,
-          "max_drawdown_pct": -35.624,
-          "expectancy_pct": -2.445
+          "samples": 20,
+          "win_rate_pct": 20.0,
+          "average_return_pct": -2.245,
+          "profit_loss_ratio": 0.873,
+          "max_drawdown_pct": -37.392,
+          "expectancy_pct": -2.245
         }
       },
       "cap_5pct": {
         "3_day": {
-          "samples": 41,
-          "win_rate_pct": 34.15,
-          "average_return_pct": -0.57,
-          "profit_loss_ratio": 1.281,
-          "max_drawdown_pct": -30.364,
-          "expectancy_pct": -0.57
+          "samples": 55,
+          "win_rate_pct": 27.27,
+          "average_return_pct": -0.912,
+          "profit_loss_ratio": 1.421,
+          "max_drawdown_pct": -43.365,
+          "expectancy_pct": -0.912
         },
         "5_day": {
-          "samples": 39,
-          "win_rate_pct": 30.77,
-          "average_return_pct": -2.009,
-          "profit_loss_ratio": 0.564,
-          "max_drawdown_pct": -55.693,
-          "expectancy_pct": -2.009
+          "samples": 51,
+          "win_rate_pct": 25.49,
+          "average_return_pct": -2.305,
+          "profit_loss_ratio": 0.548,
+          "max_drawdown_pct": -70.349,
+          "expectancy_pct": -2.305
         }
       }
     },
     "C_without_confluence": {
       "unrestricted": {
         "3_day": {
-          "samples": 10,
-          "win_rate_pct": 10.0,
-          "average_return_pct": -4.187,
-          "profit_loss_ratio": 0.136,
-          "max_drawdown_pct": -35.337,
-          "expectancy_pct": -4.187
+          "samples": 12,
+          "win_rate_pct": 16.67,
+          "average_return_pct": -3.459,
+          "profit_loss_ratio": 0.678,
+          "max_drawdown_pct": -38.908,
+          "expectancy_pct": -3.459
         },
         "5_day": {
-          "samples": 9,
-          "win_rate_pct": 0.0,
-          "average_return_pct": -4.901,
-          "profit_loss_ratio": 0.0,
-          "max_drawdown_pct": -36.781,
-          "expectancy_pct": -4.901
+          "samples": 11,
+          "win_rate_pct": 9.09,
+          "average_return_pct": -4.095,
+          "profit_loss_ratio": 0.924,
+          "max_drawdown_pct": -40.272,
+          "expectancy_pct": -4.095
         }
       },
       "cap_1pct": {
@@ -218,20 +218,20 @@
       },
       "cap_5pct": {
         "3_day": {
-          "samples": 8,
-          "win_rate_pct": 12.5,
-          "average_return_pct": -3.447,
-          "profit_loss_ratio": 0.159,
-          "max_drawdown_pct": -24.579,
-          "expectancy_pct": -3.447
+          "samples": 10,
+          "win_rate_pct": 20.0,
+          "average_return_pct": -2.722,
+          "profit_loss_ratio": 0.772,
+          "max_drawdown_pct": -28.743,
+          "expectancy_pct": -2.722
         },
         "5_day": {
-          "samples": 7,
-          "win_rate_pct": 0.0,
-          "average_return_pct": -4.031,
-          "profit_loss_ratio": 0.0,
-          "max_drawdown_pct": -25.059,
-          "expectancy_pct": -4.031
+          "samples": 9,
+          "win_rate_pct": 11.11,
+          "average_return_pct": -3.239,
+          "profit_loss_ratio": 1.087,
+          "max_drawdown_pct": -29.197,
+          "expectancy_pct": -3.239
         }
       }
     }
