@@ -25,7 +25,7 @@ DB = BASE / "lobster_tw_6m_prices.sqlite"
 OUTPUT = BASE / "vcp_candidates.csv"
 
 MIN_HISTORY = 70
-BASE_LOOKBACK = 65
+BASE_LOOKBACK = 325
 PIVOT_LOOKBACK = 60
 MIN_CONTRACTIONS = 2
 MAX_CONTRACTIONS = 6
@@ -56,7 +56,7 @@ FIELDS = [
     "date", "code", "name", "market", "vcp_stage", "stage_explanation",
     "close", "pivot", "distance_to_pivot_pct", "upper_pivot",
     "upside_to_upper_pivot_pct", "reward_risk_ratio", "support_lower",
-    "support_upper", "stop_price", "contraction_count",
+    "support_upper", "stop_price", "contraction_count", "base_sessions",
     "contraction_depths_pct", "volume_dry_ratio", "volume_ratio",
     "avg20_volume_lots", "avg20_turnover", "ma60", "ma60_5d_change_pct",
     "quality_score", "action", "invalidation",
@@ -145,7 +145,7 @@ def contraction_profile(x: pd.DataFrame, end_i: int, pivot: float) -> dict | Non
     """
     start = max(0, end_i - BASE_LOOKBACK + 1)
     base = x.iloc[start:end_i + 1].reset_index(drop=True)
-    if len(base) < 35 or pivot is None or pivot <= 0:
+    if len(base) < 15 or pivot is None or pivot <= 0:
         return None
 
     highs, lows = [], []
@@ -194,6 +194,10 @@ def contraction_profile(x: pd.DataFrame, end_i: int, pivot: float) -> dict | Non
         return None
     clean = chosen
     depths = [leg[2] for leg in clean]
+    # The article defines a healthy base as roughly 3-65 weeks.
+    base_sessions = len(base) - clean[0][0]
+    if not (15 <= base_sessions <= 325):
+        return None
     last_trough_age = len(base) - 1 - clean[-1][1]
     if last_trough_age > VCP_MAX_LAST_TROUGH_AGE:
         return None
@@ -251,6 +255,7 @@ def contraction_profile(x: pd.DataFrame, end_i: int, pivot: float) -> dict | Non
         "last_trough_age": last_trough_age,
         "final_peak_distance": peak_distances[-1],
         "last_leg_volume_ratio": last_leg_volume_ratio,
+        "base_sessions": base_sessions,
     }
 
 def pivot_before(x: pd.DataFrame, i: int) -> float | None:
@@ -434,11 +439,15 @@ def make_row(x: pd.DataFrame, i: int, profile: dict, stage: str,
              pivot: float, volume_ratio: float, breakout_i: int | None = None) -> dict | None:
     row = x.iloc[i]
     close = float(row.close)
-    support_zone = support_zone_before(x, i)
-    if support_zone is None:
+    # Article risk control is anchored to the final contraction's lower edge,
+    # not an arbitrary one percent below the breakout pivot.
+    contraction_floor = float(profile["support"])
+    support_lower = contraction_floor
+    support_upper = contraction_floor
+    stop_price = contraction_floor * (1.0 - PIVOT_STOP_BUFFER)
+    stop_distance = close / stop_price - 1.0 if stop_price > 0 else math.inf
+    if stop_distance > 0.10:
         return None
-    support_lower, support_upper = support_zone
-    stop_price = pivot * (1.0 - PIVOT_STOP_BUFFER)
     upper_pivot = upper_pivot_before(x, i, pivot, close)
     upside_pct = None
     reward_risk = None
@@ -488,6 +497,7 @@ def make_row(x: pd.DataFrame, i: int, profile: dict, stage: str,
         "support_upper": round(support_upper, 2),
         "stop_price": round(stop_price, 2),
         "contraction_count": profile["count"],
+        "base_sessions": profile["base_sessions"],
         "contraction_depths_pct": "/".join(f"{d * 100:.1f}" for d in profile["depths"]),
         "volume_dry_ratio": round(profile["dry_ratio"], 2),
         "volume_ratio": round(volume_ratio, 2),
@@ -495,7 +505,7 @@ def make_row(x: pd.DataFrame, i: int, profile: dict, stage: str,
         "avg20_turnover": round(float(row.avg20_turnover), 0),
         "ma60": round(ma60, 2), "ma60_5d_change_pct": round(ma_change * 100, 2),
         "quality_score": quality, "action": action,
-        "invalidation": f"收盤跌破樞紐下方1%（{stop_price:.2f}）即失效",
+        "invalidation": f"收盤跌破最後收縮下緣（{stop_price:.2f}）即失效",
     }
 
 
@@ -576,7 +586,7 @@ def send_line_summary(rows: list[dict], trade_date: str) -> None:
                 f"{rank}. {row['code']} {row['name']}｜{row['vcp_stage']}\n"
                 f"收{row['close']}｜突破樞紐{row['pivot']}｜品質{row['quality_score']}分\n"
                 f"{upside_line}\n"
-                f"支撐區{row['support_lower']}～{row['support_upper']}｜停損{row['stop_price']}（樞紐下方1%）\n"
+                f"最後收縮下緣{row['support_lower']}｜停損{row['stop_price']}\n"
                 f"行動：{row['action']}"
             )
 
