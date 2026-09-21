@@ -1,18 +1,19 @@
 #!/usr/bin/env python3
-"""Lobster Radar buy-point engine.
+"""Lobster Radar formal buy-point engine.
 
-The former four-point screen has been retired.
-
-Formal buy route
-1. 破底翻:
-   - a session breaks the preceding 20-session swing low by at least 0.5%;
-   - the breakdown is recovered within three sessions;
-   - the trigger close is back above that old swing low, is a bullish recovery
-     and closes in the upper 35% of its daily range.
 Only 破底翻 can create a formal recommendation or enter performance tracking.
-Generic breakout-retest and 30MA routes are disabled. VCP remains a separate
-observation-only scanner. 60MA is retained solely as a broad risk guard; it is
-not a buy pattern or entry trigger.
+The support zone is built from repeated closes around local lows during the 60
+completed sessions before the breakdown. Prices within 1% form one cluster;
+the selected zone needs at least two touches separated by at least one session.
+A valid event trades at least one TW stock tick below the zone, then closes at
+least one tick above the zone on the breakdown day or within the next three
+sessions. The recovery candle must be bullish, close above the prior close and
+finish at or above the 55th percentile of its daily range.
+
+A break of at least 3% and a long lower shadow are quality evidence only, not
+hard entry gates. Liquidity, 60MA protection, upside room, relative strength
+and reward-risk remain hard risk gates. Generic breakout-retest and 30MA routes
+are disabled; VCP remains a separate observation-only scanner.
 """
 from __future__ import annotations
 
@@ -1302,7 +1303,7 @@ def main() -> int:
                 f"成交量：{int(row['volume_lots'])}張｜量比：{row['volume_ratio']}x",
                 f"績效基準試單價：{row['baseline_entry']}",
                 f"失效：收盤有效跌破 {row['support_lower']}（容許0.5%誤差）",
-                f"四層證據：{row.get('evidence_count', '')}/4｜{row.get('evidence_notes', '')}",
+                f"型態證據：{row.get('evidence_count', '')}項｜{row.get('evidence_notes', '')}",
                 f"風報比：{row.get('risk_reward') or '未計算'}｜{row.get('risk_reward_status', '')}",
             ]
         for row in exit_warnings:
