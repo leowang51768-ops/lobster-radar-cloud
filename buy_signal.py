@@ -44,6 +44,9 @@ FALSE_BREAK_MIN_DEPTH = 0.03
 FALSE_BREAK_MIN_TOUCHES = 2
 FALSE_BREAK_MIN_GAP_DAYS = 1
 FALSE_BREAK_RECOVERY_DAYS = 3
+FALSE_BREAK_NECKLINE_LOOKBACK = 20
+FALSE_BREAK_CONFIRM_LOOKBACK = 12
+FALSE_BREAK_HIGHER_LOW_TOL = 0.005
 FAKEOUT_EVENT_LOOKBACK = 45
 FAKEOUT_PRE_WINDOW = 20
 FAKEOUT_SUPPORT_BAND = 0.03
@@ -100,7 +103,7 @@ MA30_KEY_WATCHLIST = {
 }
 MA30_RETEST_LOOKAHEAD = 15
 MA30_RECLAIM_DAYS = 3
-STRATEGY_VERSION = "破底翻唯一正式買點-v12取消突破回踩與30MA"
+STRATEGY_VERSION = "破底翻-v13-文章標準ABC頸線版"
 ROUTE_PRIORITY = {
     "破底翻": 1,
 }
@@ -221,7 +224,11 @@ def add_four_layer_evidence(
     """Add evidence and risk planning without turning them into extra hard gates."""
     entry = float(signal["baseline_entry"])
     support = float(signal["support_lower"])
-    stop = support * (1.0 - SUPPORT_BREAK_TOL)
+    if signal.get("signal_route", "").startswith("破底翻") and signal.get("b_point"):
+        b_point = float(signal["b_point"])
+        stop = max(0.0, b_point - tw_stock_tick(b_point))
+    else:
+        stop = support * (1.0 - SUPPORT_BREAK_TOL)
     older = x.iloc[max(0, signal_i - 120):max(0, signal_i - LOOKBACK)]
     overhead = sorted({
         float(v) for v in older["high"].dropna() if float(v) > entry * 1.005
@@ -321,6 +328,22 @@ def false_break_support_zone(x: pd.DataFrame, break_i: int) -> tuple[float, floa
     return float(min(prices)), float(max(prices)), len(prices)
 
 
+def prior_neckline(x: pd.DataFrame, break_i: int) -> tuple[float, str]:
+    """Find the most recent pre-break swing high used as the neckline."""
+    start = max(0, break_i - FALSE_BREAK_NECKLINE_LOOKBACK)
+    window = x.iloc[start:break_i]
+    if window.empty:
+        return math.nan, ""
+    swings = []
+    for pos in range(2, len(window) - 2):
+        high = float(window.iloc[pos].high)
+        if high >= float(window.iloc[pos - 2:pos + 3]["high"].max()):
+            swings.append(pos)
+    pos = swings[-1] if swings else int(window["high"].astype(float).argmax())
+    row = window.iloc[pos]
+    return float(row.high), row.date.strftime("%Y-%m-%d")
+
+
 def detect_false_break_reversal(code: str, x: pd.DataFrame) -> tuple[dict, dict | None]:
     """Detect a break of 60-day repeated-close support and reclaim within 3 sessions."""
     minimum = FALSE_BREAK_SUPPORT_LOOKBACK + FALSE_BREAK_RECOVERY_DAYS
@@ -339,16 +362,21 @@ def detect_false_break_reversal(code: str, x: pd.DataFrame) -> tuple[dict, dict 
             continue
         support_lower, support_upper, support_touches = zone
         break_row = x.iloc[break_i]
-        break_low = float(break_row.low)
+        event = x.iloc[break_i:i + 1]
+        b_i = int(event["low"].astype(float).idxmin())
+        b_row = x.iloc[b_i]
+        break_low = float(b_row.low)
         broke_floor = break_low <= support_lower - tw_stock_tick(support_lower) + 1e-9
         break_depth_3pct = break_low <= support_lower * (1.0 - FALSE_BREAK_MIN_DEPTH)
-        break_long_lower_shadow = long_lower_shadow(break_row)
+        break_long_lower_shadow = long_lower_shadow(b_row)
         recovered = close >= support_upper + tw_stock_tick(support_upper) - 1e-9
         if not (broke_floor and recovered):
             continue
         depth = break_low / support_lower - 1.0
         candidate = {
             "break_i": break_i,
+            "b_i": b_i,
+            "b_date": b_row.date.strftime("%Y-%m-%d"),
             "support_lower": support_lower,
             "support_upper": support_upper,
             "support_touches": support_touches,
@@ -378,6 +406,12 @@ def detect_false_break_reversal(code: str, x: pd.DataFrame) -> tuple[dict, dict 
         exhaustion = ranges[2] < ranges[1] < ranges[0] and volumes[2] > volumes[1] > volumes[0]
     accelerated_reclaim = i - break_i <= 2
     reversal_candle = bullish_engulfing(x, i) or long_lower_shadow(t)
+    dif_converging = (
+        i >= 1 and pd.notna(t.dif) and pd.notna(x.iloc[i - 1].dif)
+        and float(t.dif) >= float(x.iloc[i - 1].dif)
+    )
+    neckline, neckline_date = prior_neckline(x, break_i)
+    neckline_broken = math.isfinite(neckline) and close >= neckline + tw_stock_tick(neckline) - 1e-9
     setup = {
         "pattern": "破底翻",
         "setup_date": x.iloc[break_i].date.strftime("%Y-%m-%d"),
@@ -386,6 +420,17 @@ def detect_false_break_reversal(code: str, x: pd.DataFrame) -> tuple[dict, dict 
         "support_upper": round(best["support_upper"], 2),
         "support_source": "破底前60日重複收盤價支撐區",
         "support_touches": int(best["support_touches"]),
+        "a_point_lower": round(best["support_lower"], 2),
+        "a_point_upper": round(best["support_upper"], 2),
+        "b_point": round(best["break_low"], 2),
+        "b_point_date": best["b_date"],
+        "neckline": round(neckline, 2) if math.isfinite(neckline) else "",
+        "neckline_date": neckline_date,
+        "neckline_status": "已突破" if neckline_broken else "尚未突破",
+        "higher_low_status": "等待回檔確認",
+        "entry_stage": "C點站回｜早期試單",
+        "dif_converging": dif_converging,
+        "failure_level": round(max(0.0, best["break_low"] - tw_stock_tick(best["break_low"])), 2),
         "structure_extension_pct": round(extension * 100, 2),
         "close_location": round(location, 2),
         "volume_ok": volume_ok,
@@ -399,6 +444,7 @@ def detect_false_break_reversal(code: str, x: pd.DataFrame) -> tuple[dict, dict 
         bullish
         and recovery_strength
         and location >= CLOSE_LOCATION_MIN
+        and dif_converging
         and volume_ok
         and extension <= MAX_STRUCTURE_EXTENSION
     )
@@ -420,6 +466,17 @@ def detect_false_break_reversal(code: str, x: pd.DataFrame) -> tuple[dict, dict 
         "key_date": setup["setup_date"],
         "key_high": round(best["support_upper"], 2),
         "key_low": round(best["break_low"], 2),
+        "a_point_lower": setup["a_point_lower"],
+        "a_point_upper": setup["a_point_upper"],
+        "b_point": setup["b_point"],
+        "b_point_date": setup["b_point_date"],
+        "neckline": setup["neckline"],
+        "neckline_date": setup["neckline_date"],
+        "neckline_status": setup["neckline_status"],
+        "higher_low_status": setup["higher_low_status"],
+        "entry_stage": setup["entry_stage"],
+        "dif_converging": setup["dif_converging"],
+        "failure_level": setup["failure_level"],
         "volume_lots": round(lots, 0),
         "volume_ratio": round(ratio, 2),
         "volume_quality": setup["volume_quality"],
@@ -435,10 +492,11 @@ def detect_false_break_reversal(code: str, x: pd.DataFrame) -> tuple[dict, dict 
         ("跌破支撐下緣≥3%", bool(best["break_depth_3pct"])),
         ("破底日長下影", bool(best["break_long_lower_shadow"])),
         ("破底後3日內收復", i - break_i <= FALSE_BREAK_RECOVERY_DAYS),
+        ("MACD DIF收斂", dif_converging),
         ("風報比≥1.5", True),
     ])
     rr_ok = float(signal["risk_reward"]) >= MIN_RISK_REWARD
-    evidence = ["收復60日支撐區", "破底後3日內收復"]
+    evidence = ["收復60日支撐區", "破底後3日內收復", "MACD DIF收斂"]
     if best["break_depth_3pct"]:
         evidence.append("跌破支撐下緣≥3%")
     if best["break_long_lower_shadow"]:
@@ -916,7 +974,11 @@ def recommendation_fields() -> list[str]:
     return [
         "date", "code", "name", "trend", "strategy_source", "signal_route", "signal_light",
         "baseline_entry", "primary_key_date", "primary_key_high", "primary_key_low",
-        "key_date", "key_high", "key_low", "volume_lots", "volume_ratio",
+        "key_date", "key_high", "key_low",
+        "a_point_lower", "a_point_upper", "b_point", "b_point_date",
+        "neckline", "neckline_date", "neckline_status", "higher_low_status",
+        "entry_stage", "dif_converging", "failure_level",
+        "volume_lots", "volume_ratio",
         "extension_30ma_pct", "extension_20ma_pct",
         "support_lower", "support_upper", "support_source",
         "pattern_key", "structure_extension_pct", "breakout_date", "confirmation_mode",
@@ -972,6 +1034,9 @@ def write_candidate_status(rows: list[dict]) -> None:
         "volume_lots", "avg20_volume_lots", "volume_ratio", "turnover",
         "platform_touches", "close_location", "structure_extension_pct",
         "support_lower", "support_upper", "support_source", "support_status",
+        "a_point_lower", "a_point_upper", "b_point", "b_point_date",
+        "neckline", "neckline_date", "neckline_status", "higher_low_status",
+        "entry_stage", "dif_converging", "failure_level",
         "stop_price", "target_price", "target_source", "risk_reward", "risk_reward_status",
         "evidence_count", "evidence_notes", "breakout_efficiency", "atr_compression_ratio",
     ]
@@ -1046,6 +1111,17 @@ def candidate_row(latest_date: str, code: str, name: str, x: pd.DataFrame, setup
         "support_upper": setup.get("support_upper", ""),
         "support_source": setup.get("support_source", ""),
         "support_status": support_status,
+        "a_point_lower": setup.get("a_point_lower", ""),
+        "a_point_upper": setup.get("a_point_upper", ""),
+        "b_point": setup.get("b_point", ""),
+        "b_point_date": setup.get("b_point_date", ""),
+        "neckline": setup.get("neckline", ""),
+        "neckline_date": setup.get("neckline_date", ""),
+        "neckline_status": setup.get("neckline_status", ""),
+        "higher_low_status": setup.get("higher_low_status", ""),
+        "entry_stage": setup.get("entry_stage", ""),
+        "dif_converging": setup.get("dif_converging", ""),
+        "failure_level": setup.get("failure_level", ""),
         "stop_price": setup.get("stop_price", ""),
         "target_price": setup.get("target_price", ""),
         "target_source": setup.get("target_source", ""),
@@ -1309,12 +1385,15 @@ def main() -> int:
                 "",
                 f"🟢 {row['code']} {row['name']}｜{row['signal_route']}",
                 f"策略來源：{row['strategy_source']}",
-                f"觸發價：{row['key_high']}｜收盤：{row.get('close', '')}",
-                f"支撐區：{row['support_lower']}～{row['support_upper']}",
+                f"階段：{row.get('entry_stage', 'C點站回｜早期試單')}｜收盤：{row.get('close', '')}",
+                f"A點支撐：{row.get('a_point_lower', row['support_lower'])}～{row.get('a_point_upper', row['support_upper'])}",
+                f"B點低點：{row.get('b_point', row['key_low'])}（{row.get('b_point_date', row['key_date'])}）",
+                f"頸線：{row.get('neckline') or '未形成'}｜{row.get('neckline_status', '')}",
+                f"底底高：{row.get('higher_low_status', '等待確認')}｜DIF收斂：{'是' if row.get('dif_converging') else '否'}",
                 f"支撐來源：{row['support_source']}",
                 f"成交量：{int(row['volume_lots'])}張｜量比：{row['volume_ratio']}x",
                 f"績效基準試單價：{row['baseline_entry']}",
-                f"失效：收盤有效跌破 {row['support_lower']}（容許0.5%誤差）",
+                f"失效／停損：再破B點，價格低於 {row.get('failure_level', row.get('stop_price'))}",
                 f"型態證據：{row.get('evidence_count', '')}項｜{row.get('evidence_notes', '')}",
                 f"風報比：{row.get('risk_reward') or '未計算'}｜{row.get('risk_reward_status', '')}",
             ]
