@@ -18,6 +18,7 @@ permissions:
 jobs:
   test:
     runs-on: ubuntu-latest
+    timeout-minutes: 180
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -26,4 +27,11 @@ jobs:
       - run: pip install -r requirements.txt
       - run: python -m unittest -v test_c_group_scan.py
       - run: python c_group_scan.py --out-dir /tmp/c_group_output
-      - run: python c_group_backtest.py --sessions 12 --output /tmp/c_group_backtest_results.json
+      - run: python c_group_backtest.py --sessions 0 --output /tmp/c_group_backtest_results.json
+      - name: Archive complete historical C-group results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: c-group-complete-history
+          path: /tmp/c_group_backtest_results.json
+          if-no-files-found: warn
