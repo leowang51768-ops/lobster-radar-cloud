@@ -1,5 +1,5 @@
-name: Break Bottom LINE Test Once
-# one-time format test: 2026-09-21 article-standard A/B/C/neckline trigger-2
+name: Break Bottom Actual Scan LINE Test
+# actual database scan: 2026-09-21 trigger-1
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
       - ".github/workflows/break_bottom_line_test_once.yml"
 
 jobs:
-  send-break-bottom-format-test:
+  run-actual-break-bottom-scan:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -16,7 +16,10 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - name: Send revised break-bottom LINE preview
+      - name: Install dependencies
+        run: pip install pandas
+      - name: Read official database and send actual break-bottom result
         env:
           LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
-        run: python break_bottom_line_test.py
+          BUY_FORCE_NOTIFY: "1"
+        run: python buy_signal.py
