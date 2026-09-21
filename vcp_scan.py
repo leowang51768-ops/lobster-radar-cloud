@@ -81,6 +81,7 @@ def prepare(group: pd.DataFrame) -> pd.DataFrame:
     x["avg5_lots"] = x["volume_lots"].rolling(5).mean()
     x["avg20_lots"] = x["volume_lots"].rolling(20).mean()
     x["avg20_turnover"] = x["turnover"].rolling(20).mean()
+    x["ma20"] = x["close"].rolling(20).mean()
     x["ma60"] = x["close"].rolling(60).mean()
     return x
 
