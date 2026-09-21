@@ -83,7 +83,11 @@ def build_candidates(market: pd.DataFrame) -> tuple[list[dict], list[dict], dict
         x = core.prepare(raw)
         rev_setup, reversal = core.detect_false_break_reversal(code, x)
         reversal = core.apply_new_plan_gate(reversal, rev_setup, x, market_ret20)
-        if reversal is not None:
+        # DIF(EMA6-EMA13) must be converging/rising for the recovery route.
+        dif_ok = (len(x) >= 2 and pd.notna(x.iloc[-1].dif)
+                  and pd.notna(x.iloc[-2].dif)
+                  and float(x.iloc[-1].dif) >= float(x.iloc[-2].dif))
+        if reversal is not None and dif_ok:
             reversal = dict(reversal)
             reversal["signal_route"] = "破底翻"
             options.append(("破底翻", reversal))
