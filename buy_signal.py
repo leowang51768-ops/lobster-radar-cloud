@@ -1201,6 +1201,10 @@ def detect_exit_warnings(market: pd.DataFrame, latest_date: str, state: dict) ->
         prior_volume = float(x.iloc[max(0, len(x) - 6):-1]["volume_lots"].mean())
         volume_ratio = float(t.volume_lots) / prior_volume if prior_volume > 0 else 0.0
         route = str(rec.get("signal_route", ""))
+        # Historical 30MA/breakout recommendations are retired. Never surface
+        # their exits inside the article-standard break-bottom notification.
+        if not route.startswith("破底翻"):
+            continue
 
         warning_type = ""
         reason = ""
