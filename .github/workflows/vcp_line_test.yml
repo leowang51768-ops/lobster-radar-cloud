@@ -1,5 +1,5 @@
 name: Formal + VCP + Support Retest LINE Test Once
-# manual test: 2026-09-21 strict-continuous-vcp-v1
+# manual test: 2026-09-21 strict-continuous-vcp-v2
 
 on:
   push:
