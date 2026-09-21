@@ -408,12 +408,19 @@ def detect_false_break_reversal(code: str, x: pd.DataFrame) -> tuple[dict, dict 
         neckline + tw_stock_tick(neckline) if math.isfinite(neckline) else math.nan
     )
     is_early_entry = i == reclaim_i
-    post_reclaim = x.iloc[reclaim_i + 1:i]
-    higher_low = (
-        len(post_reclaim) >= 2
-        and float(post_reclaim["low"].min())
-        > float(best["break_low"]) * (1.0 + FALSE_BREAK_HIGHER_LOW_TOL)
-    )
+    # Article structure: "底底高" must be an actual later swing low, not
+    # merely two arbitrary sessions whose lows happen to remain above B.
+    higher_low_i = None
+    for j in range(reclaim_i + 2, i - 1):
+        local = x.iloc[j - 2:j + 3]["low"].astype(float)
+        if (
+            len(local) == 5
+            and float(x.iloc[j].low) <= float(local.min())
+            and float(x.iloc[j].low)
+            > float(best["break_low"]) * (1.0 + FALSE_BREAK_HIGHER_LOW_TOL)
+        ):
+            higher_low_i = j
+    higher_low = higher_low_i is not None
     neckline_broken = math.isfinite(neckline_trigger) and close >= neckline_trigger - 1e-9
     neckline_fresh = (
         neckline_broken
@@ -455,6 +462,14 @@ def detect_false_break_reversal(code: str, x: pd.DataFrame) -> tuple[dict, dict 
         "neckline_date": best["neckline_date"],
         "neckline_status": "當日有效突破" if neckline_fresh else "尚未有效突破",
         "higher_low_status": "已確認" if higher_low else "等待回檔確認",
+        "higher_low_date": (
+            x.iloc[higher_low_i].date.strftime("%Y-%m-%d")
+            if higher_low_i is not None else ""
+        ),
+        "higher_low_price": (
+            round(float(x.iloc[higher_low_i].low), 2)
+            if higher_low_i is not None else ""
+        ),
         "entry_stage": entry_stage,
         "dif_converging": dif_converging,
         "failure_level": round(
@@ -473,15 +488,13 @@ def detect_false_break_reversal(code: str, x: pd.DataFrame) -> tuple[dict, dict 
     if is_early_entry:
         confirmed = (
             bullish and recovery_strength and location >= CLOSE_LOCATION_MIN
-            and dif_converging and volume_ok
-            and extension <= MAX_STRUCTURE_EXTENSION
+            and volume_ok and extension <= MAX_STRUCTURE_EXTENSION
         )
         signal_route = "破底翻"
     else:
         confirmed = (
             higher_low and neckline_fresh and bullish
-            and dif_converging and volume_ok
-            and extension <= MAX_STRUCTURE_EXTENSION
+            and volume_ok and extension <= MAX_STRUCTURE_EXTENSION
         )
         signal_route = "破底翻確認"
 
@@ -526,7 +539,7 @@ def detect_false_break_reversal(code: str, x: pd.DataFrame) -> tuple[dict, dict 
         "pattern_key": pattern_key,
         "structure_extension_pct": setup["structure_extension_pct"],
     }
-    evidence = ["假跌破B點", "3日內收復A點", "MACD DIF收斂"]
+    evidence = ["假跌破B點", "3日內收復A點"]
     if is_early_entry:
         evidence.append("C點收紅且收盤位置≥55%")
     else:
@@ -1195,12 +1208,22 @@ def detect_exit_warnings(market: pd.DataFrame, latest_date: str, state: dict) ->
         close = float(t.close)
         support = float(rec.get("support_lower") or 0.0)
         trigger = float(rec.get("support_upper") or rec.get("key_high") or 0.0)
-        stop = float(rec.get("stop_price") or 0.0)
-        if stop <= 0:
-            stop = support * (1.0 - SUPPORT_BREAK_TOL)
+        route = str(rec.get("signal_route", ""))
+        if route.startswith("破底翻"):
+            # B is the article's invalidation reference.  Prefer the stored
+            # failure level; fall back to the recorded B/key low for old rows.
+            stop = float(
+                rec.get("failure_level") or rec.get("b_point")
+                or rec.get("key_low") or 0.0
+            )
+            if stop > 0 and not rec.get("failure_level"):
+                stop = max(0.0, stop - tw_stock_tick(stop))
+        else:
+            stop = float(rec.get("stop_price") or 0.0)
+            if stop <= 0:
+                stop = support * (1.0 - SUPPORT_BREAK_TOL)
         prior_volume = float(x.iloc[max(0, len(x) - 6):-1]["volume_lots"].mean())
         volume_ratio = float(t.volume_lots) / prior_volume if prior_volume > 0 else 0.0
-        route = str(rec.get("signal_route", ""))
         # Historical 30MA/breakout recommendations are retired. Never surface
         # their exits inside the article-standard break-bottom notification.
         if not route.startswith("破底翻"):
@@ -1433,7 +1456,7 @@ def main() -> int:
                 f"A點支撐：{row.get('a_point_lower', row['support_lower'])}～{row.get('a_point_upper', row['support_upper'])}",
                 f"B點低點：{row.get('b_point', row['key_low'])}（{row.get('b_point_date', row['key_date'])}）",
                 f"頸線：{row.get('neckline') or '未形成'}｜{row.get('neckline_status', '')}",
-                f"底底高：{row.get('higher_low_status', '等待確認')}｜DIF收斂：{'是' if row.get('dif_converging') else '否'}",
+                f"底底高：{row.get('higher_low_status', '等待確認')}",
                 f"支撐來源：{row['support_source']}",
                 f"成交量：{int(row['volume_lots'])}張｜量比：{row['volume_ratio']}x",
                 f"績效基準試單價：{row['baseline_entry']}",
