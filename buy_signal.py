@@ -171,9 +171,11 @@ def volume_gate(t: pd.Series) -> tuple[bool, float, float, float]:
         float(t.avg20_turnover) if pd.notna(t.avg20_turnover) else math.nan
     )
     ratio = lots / avg20 if avg20 and not math.isnan(avg20) else 0.0
+    # Liquidity is the hard gate.  A false-break recovery does not always
+    # expand volume immediately, so the 1.2x-3.0x ratio is quality evidence
+    # rather than a reason to discard an otherwise valid reversal.
     ok = (
-        VOL_RATIO_MIN <= ratio <= VOL_RATIO_MAX
-        and math.isfinite(avg20)
+        math.isfinite(avg20)
         and avg20 >= MIN_VOLUME_LOTS
         and math.isfinite(avg20_turnover)
         and avg20_turnover >= MIN_TURNOVER
@@ -387,6 +389,11 @@ def detect_false_break_reversal(code: str, x: pd.DataFrame) -> tuple[dict, dict 
         "structure_extension_pct": round(extension * 100, 2),
         "close_location": round(location, 2),
         "volume_ok": volume_ok,
+        "volume_quality": (
+            "放量加分" if VOL_RATIO_MIN <= ratio <= VOL_RATIO_MAX
+            else "爆量過熱提示" if ratio > VOL_RATIO_MAX
+            else "未放量，不扣除資格"
+        ),
     }
     confirmed = (
         bullish
@@ -415,6 +422,7 @@ def detect_false_break_reversal(code: str, x: pd.DataFrame) -> tuple[dict, dict 
         "key_low": round(best["break_low"], 2),
         "volume_lots": round(lots, 0),
         "volume_ratio": round(ratio, 2),
+        "volume_quality": setup["volume_quality"],
         "turnover": round(turnover, 0),
         "support_lower": setup["support_lower"],
         "support_upper": setup["support_upper"],
@@ -435,6 +443,10 @@ def detect_false_break_reversal(code: str, x: pd.DataFrame) -> tuple[dict, dict 
         evidence.append("跌破支撐下緣≥3%")
     if best["break_long_lower_shadow"]:
         evidence.append("破底日長下影")
+    if VOL_RATIO_MIN <= ratio <= VOL_RATIO_MAX:
+        evidence.append("成交量達20日均量1.2倍")
+    elif ratio > VOL_RATIO_MAX:
+        evidence.append("成交量超過20日均量3倍，注意過熱")
     if exhaustion or accelerated_reclaim:
         evidence.append("快速掃低收復")
     if reversal_candle:
