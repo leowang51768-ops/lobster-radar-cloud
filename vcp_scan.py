@@ -111,7 +111,7 @@ def contraction_profile(x: pd.DataFrame, end_i: int, pivot: float) -> dict | Non
     """
     start = max(0, end_i - BASE_LOOKBACK + 1)
     base = x.iloc[start:end_i + 1].reset_index(drop=True)
-    if len(base) < 35 or pivot <= 0:
+    if len(base) < 35 or pivot is None or pivot <= 0:
         return None
 
     highs, lows = [], []
