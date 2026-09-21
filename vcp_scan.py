@@ -25,8 +25,12 @@ DB = BASE / "lobster_tw_6m_prices.sqlite"
 OUTPUT = BASE / "vcp_candidates.csv"
 
 MIN_HISTORY = 70
-BASE_LOOKBACK = 60
+BASE_LOOKBACK = 65
 PIVOT_LOOKBACK = 60
+MIN_CONTRACTIONS = 2
+MAX_CONTRACTIONS = 6
+DEPTH_RATIO_MIN = 0.35
+DEPTH_RATIO_MAX = 0.70
 PIVOT_CLUSTER_TOL = 0.01
 PIVOT_MIN_TOUCHES = 2
 PIVOT_MIN_GAP_DAYS = 1
@@ -35,7 +39,7 @@ MIN_AVG_TURNOVER = 30_000_000
 NEAR_PIVOT_PCT = 0.05
 BREAKOUT_BUFFER = 0.003
 PIVOT_STOP_BUFFER = 0.01
-BREAKOUT_VOLUME_RATIO = 1.50
+BREAKOUT_VOLUME_RATIO = 1.20
 RETEST_MIN_DAYS = 2
 RETEST_MAX_DAYS = 5
 RETEST_LOW_TOL = 0.01
@@ -82,28 +86,57 @@ def prepare(group: pd.DataFrame) -> pd.DataFrame:
     x["avg20_lots"] = x["volume_lots"].rolling(20).mean()
     x["avg20_turnover"] = x["turnover"].rolling(20).mean()
     x["ma20"] = x["close"].rolling(20).mean()
+    x["ma50"] = x["close"].rolling(50).mean()
     x["ma60"] = x["close"].rolling(60).mean()
+    x["ma150"] = x["close"].rolling(150).mean()
+    x["ma200"] = x["close"].rolling(200).mean()
     return x
 
 
 def trend_and_liquidity_ok(x: pd.DataFrame, i: int) -> bool:
+    """Require the article's SEPA stage-2 trend before accepting a VCP."""
     if i < 64:
         return False
     row = x.iloc[i]
-    ma60 = float(row.ma60)
-    old_ma60 = float(x.iloc[i - 5].ma60)
-    ma_change = ma60 / old_ma60 - 1.0 if old_ma60 > 0 else -1.0
-    return bool(
-        math.isfinite(ma60)
-        and float(row.close) >= ma60 * (1.0 - MA60_MAX_BELOW)
-        and ma_change >= -MA60_MAX_5D_DECLINE
+    liquid = bool(
+        math.isfinite(float(row.avg20_lots))
         and float(row.avg20_lots) >= MIN_VOLUME_LOTS
+        and math.isfinite(float(row.avg20_turnover))
         and float(row.avg20_turnover) >= MIN_AVG_TURNOVER
+    )
+    if not liquid:
+        return False
+
+    # Use the complete SEPA test when at least 200 sessions are available.
+    if i >= 204 and pd.notna(row.ma200) and pd.notna(row.ma150):
+        old_ma200 = float(x.iloc[i - 20].ma200)
+        return bool(
+            float(row.close) > float(row.ma200)
+            and float(row.ma200) > old_ma200
+            and float(row.ma150) > float(row.ma200)
+            and float(row.ma50) > float(row.ma150)
+        )
+
+    # The official six-month database cannot produce a genuine 200MA.  Use a
+    # conservative, explicit proxy rather than silently treating 60MA as 200MA.
+    old_ma60 = float(x.iloc[i - 20].ma60)
+    recent = x.iloc[max(0, i - 40):i + 1]
+    first, last = recent.iloc[:20], recent.iloc[-20:]
+    higher_structure = bool(
+        float(last.high.max()) >= float(first.high.max())
+        and float(last.low.min()) >= float(first.low.min()) * 0.98
+    )
+    return bool(
+        pd.notna(row.ma20) and pd.notna(row.ma50) and pd.notna(row.ma60)
+        and float(row.close) > float(row.ma60)
+        and float(row.ma20) > float(row.ma50) > float(row.ma60)
+        and float(row.ma60) > old_ma60
+        and higher_structure
     )
 
 
 def contraction_profile(x: pd.DataFrame, end_i: int, pivot: float) -> dict | None:
-    """Return a recent, continuous 2-4 leg VCP converging on one pivot.
+    """Return a recent, continuous 2-6 leg VCP converging on one pivot.
 
     The former implementation could combine unrelated swings scattered across
     the 60-session window.  This version requires consecutive legs, a fresh
@@ -140,23 +173,29 @@ def contraction_profile(x: pd.DataFrame, end_i: int, pivot: float) -> dict | Non
                 clean[-1] = leg
             continue
         clean.append(leg)
-    clean = clean[-4:]
-    if len(clean) < 2:
+    # A 65-session base can contain older unrelated swings. Select the longest
+    # valid ending sequence. Each pullback must contract to roughly 35%-70% of
+    # the preceding pullback, matching the article's "about half" principle.
+    chosen = None
+    for count in range(min(MAX_CONTRACTIONS, len(clean)), MIN_CONTRACTIONS - 1, -1):
+        candidate = clean[-count:]
+        gaps = [b[0] - a[1] for a, b in zip(candidate, candidate[1:])]
+        depths = [leg[2] for leg in candidate]
+        ratios = [b / a for a, b in zip(depths, depths[1:]) if a > 0]
+        if (
+            ratios
+            and all(1 <= gap <= VCP_MAX_LEG_GAP_DAYS for gap in gaps)
+            and all(DEPTH_RATIO_MIN <= ratio <= DEPTH_RATIO_MAX for ratio in ratios)
+            and depths[-1] <= 0.15
+        ):
+            chosen = candidate
+            break
+    if chosen is None:
         return None
-
-    # Every contraction must belong to one continuous base rather than being
-    # assembled from unrelated swings elsewhere in the 60-session window.
-    gaps = [b[0] - a[1] for a, b in zip(clean, clean[1:])]
-    if any(gap < 1 or gap > VCP_MAX_LEG_GAP_DAYS for gap in gaps):
-        return None
+    clean = chosen
+    depths = [leg[2] for leg in clean]
     last_trough_age = len(base) - 1 - clean[-1][1]
     if last_trough_age > VCP_MAX_LAST_TROUGH_AGE:
-        return None
-
-    depths = [leg[2] for leg in clean]
-    decreasing = all(b <= a * 1.15 for a, b in zip(depths, depths[1:]))
-    materially_tighter = depths[-1] <= depths[0] * 0.80
-    if not (decreasing and materially_tighter and depths[-1] <= 0.15):
         return None
 
     # A VCP is a continuation base beneath one ceiling.  If a contraction
@@ -417,10 +456,10 @@ def make_row(x: pd.DataFrame, i: int, profile: dict, stage: str,
     ma_change = ma60 / ma60_old - 1.0 if ma60_old > 0 else 0.0
     distance = close / pivot - 1.0
     if stage == "接近突破":
-        explanation = "VCP波動逐次收縮且末端量縮，收盤距樞紐價0～5%，尚未突破"
+        explanation = "符合第二階段上升趨勢，VCP回檔約逐次減半且末端量縮，收盤距樞紐價0～5%，尚未突破"
         action = "列入觀察；不得提前追價，等待帶量突破或突破後回踩"
     elif stage == "當日突破":
-        explanation = "今日收盤有效突破樞紐價，量能≥前5日均量1.5倍且K棒效率合格"
+        explanation = "今日收盤有效突破樞紐價，量能≥前5日均量1.2倍且K棒效率合格"
         action = "確認為突破日；先觀察，不直接列正式試單，等待2～5日量縮回踩"
     else:
         explanation = f"突破後第{i - int(breakout_i)}日量縮回踩，收盤守住樞紐支撐"
@@ -517,8 +556,8 @@ def send_line_summary(rows: list[dict], trade_date: str) -> None:
         return
 
     blocks = [
-        f"🦞 VCP三階段雷達｜{trade_date}\n"
-        "全部階段合併，依風報比排序；本訊息不寫入正式推薦績效。"
+        f"🦞 VCP三階段雷達（市場先生文章版）｜{trade_date}\n"
+        "條件：第二階段上升趨勢＋2～6次價量收縮＋樞紐點；依風報比排序。"
     ]
     if not rows:
         blocks.append("✅ LINE測試成功｜目前資料庫無VCP候選")
