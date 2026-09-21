@@ -136,12 +136,12 @@ jobs:
           echo "FAIL_STAGE=VCP三階段掃描" >> "$GITHUB_ENV"
           python vcp_scan.py
 
-      - name: Scan breakout support-retest observations and send one LINE summary
+      - name: Scan N-bottom observations and send one LINE summary
         shell: bash
         env:
           LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
         run: |
-          echo "FAIL_STAGE=上漲回踩支撐觀察掃描" >> "$GITHUB_ENV"
+          echo "FAIL_STAGE=N字底觀察掃描" >> "$GITHUB_ENV"
           python support_retest_watch.py
 
       - name: Final health check
@@ -183,7 +183,7 @@ jobs:
           git config user.name "lobster-radar-cloud"
           git config user.email "actions@github.com"
 
-          for f in lobster_tw_6m_prices.sqlite fundamental_support.json signal_state.json candidate_status.csv vcp_candidates.csv support_retest_watch.csv formal_recommendations.csv; do
+          for f in lobster_tw_6m_prices.sqlite fundamental_support.json signal_state.json candidate_status.csv vcp_candidates.csv n_bottom_watch.csv formal_recommendations.csv; do
             if [ -e "$f" ]; then
               git add "$f"
             fi
