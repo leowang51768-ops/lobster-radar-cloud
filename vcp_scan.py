@@ -42,6 +42,11 @@ RETEST_LOW_TOL = 0.01
 RETEST_CLOSE_TOL = 0.005
 MA60_MAX_BELOW = 0.10
 MA60_MAX_5D_DECLINE = 0.02
+VCP_MAX_LEG_GAP_DAYS = 10
+VCP_MAX_LAST_TROUGH_AGE = 10
+VCP_MAX_FINAL_PEAK_DISTANCE = 0.05
+VCP_MAX_PEAK_DISTANCE_WORSENING = 0.015
+VCP_MAX_LAST_LEG_VOLUME_RATIO = 0.90
 
 FIELDS = [
     "date", "code", "name", "market", "vcp_stage", "stage_explanation",
@@ -96,11 +101,17 @@ def trend_and_liquidity_ok(x: pd.DataFrame, i: int) -> bool:
     )
 
 
-def contraction_profile(x: pd.DataFrame, end_i: int) -> dict | None:
-    """Return 2-4 successive high-to-low contractions ending at end_i."""
+def contraction_profile(x: pd.DataFrame, end_i: int, pivot: float) -> dict | None:
+    """Return a recent, continuous 2-4 leg VCP converging on one pivot.
+
+    The former implementation could combine unrelated swings scattered across
+    the 60-session window.  This version requires consecutive legs, a fresh
+    final contraction, progressive convergence toward the selected pivot, and
+    independent volume contraction inside the final leg.
+    """
     start = max(0, end_i - BASE_LOOKBACK + 1)
     base = x.iloc[start:end_i + 1].reset_index(drop=True)
-    if len(base) < 35:
+    if len(base) < 35 or pivot <= 0:
         return None
 
     highs, lows = [], []
@@ -121,7 +132,6 @@ def contraction_profile(x: pd.DataFrame, end_i: int) -> dict | None:
         if 0.025 <= depth <= 0.40:
             legs.append((hi, lo, depth, peak, trough))
 
-    # Remove overlapping legs and retain the latest 2-4 contractions.
     clean = []
     for leg in legs:
         if clean and leg[0] <= clean[-1][1]:
@@ -133,10 +143,29 @@ def contraction_profile(x: pd.DataFrame, end_i: int) -> dict | None:
     if len(clean) < 2:
         return None
 
+    # Every contraction must belong to one continuous base rather than being
+    # assembled from unrelated swings elsewhere in the 60-session window.
+    gaps = [b[0] - a[1] for a, b in zip(clean, clean[1:])]
+    if any(gap < 1 or gap > VCP_MAX_LEG_GAP_DAYS for gap in gaps):
+        return None
+    last_trough_age = len(base) - 1 - clean[-1][1]
+    if last_trough_age > VCP_MAX_LAST_TROUGH_AGE:
+        return None
+
     depths = [leg[2] for leg in clean]
     decreasing = all(b <= a * 1.15 for a, b in zip(depths, depths[1:]))
     materially_tighter = depths[-1] <= depths[0] * 0.80
     if not (decreasing and materially_tighter and depths[-1] <= 0.15):
+        return None
+
+    # Contraction highs must progressively converge on the same breakout pivot.
+    peak_distances = [abs(leg[3] / pivot - 1.0) for leg in clean]
+    if peak_distances[-1] > VCP_MAX_FINAL_PEAK_DISTANCE:
+        return None
+    if any(
+        later > earlier + VCP_MAX_PEAK_DISTANCE_WORSENING
+        for earlier, later in zip(peak_distances, peak_distances[1:])
+    ):
         return None
 
     recent5 = float(base.iloc[-5:].volume_lots.mean())
@@ -145,14 +174,25 @@ def contraction_profile(x: pd.DataFrame, end_i: int) -> dict | None:
     if dry_ratio > 0.85:
         return None
 
-    last_trough = clean[-1][4]
+    last_hi, last_lo = clean[-1][0], clean[-1][1]
+    prior_start = max(0, last_hi - 20)
+    prior_leg_volume = float(base.iloc[prior_start:last_hi].volume_lots.mean())
+    last_leg_volume = float(base.iloc[last_hi:last_lo + 1].volume_lots.mean())
+    last_leg_volume_ratio = (
+        last_leg_volume / prior_leg_volume if prior_leg_volume > 0 else math.inf
+    )
+    if last_leg_volume_ratio > VCP_MAX_LAST_LEG_VOLUME_RATIO:
+        return None
+
     return {
         "count": len(clean),
         "depths": depths,
         "dry_ratio": dry_ratio,
-        "support": last_trough,
+        "support": clean[-1][4],
+        "last_trough_age": last_trough_age,
+        "final_peak_distance": peak_distances[-1],
+        "last_leg_volume_ratio": last_leg_volume_ratio,
     }
-
 
 def pivot_before(x: pd.DataFrame, i: int) -> float | None:
     """Return the most frequently retested resistance price in the prior 60 sessions.
@@ -365,9 +405,15 @@ def make_row(x: pd.DataFrame, i: int, profile: dict, stage: str,
     else:
         explanation = f"突破後第{i - int(breakout_i)}日量縮回踩，收盤守住樞紐支撐"
         action = "VCP回踩確認；列高優先觀察，正式採用前仍須完成獨立回測"
+    # Quality now rewards verified structural completeness, not merely the
+    # number of contractions.  A 100 score therefore requires continuity,
+    # pivot convergence and final-leg volume contraction to all be strong.
     quality = min(100, int(
-        35 + profile["count"] * 10
-        + max(0.0, 0.85 - profile["dry_ratio"]) * 50
+        25 + profile["count"] * 8
+        + max(0.0, 0.85 - profile["dry_ratio"]) * 35
+        + max(0.0, 0.90 - profile["last_leg_volume_ratio"]) * 30
+        + max(0.0, 0.05 - profile["final_peak_distance"]) * 200
+        + max(0, VCP_MAX_LAST_TROUGH_AGE - profile["last_trough_age"])
         + (10 if stage == "突破後回踩" else 5 if stage == "當日突破" else 0)
     ))
     return {
@@ -405,7 +451,7 @@ def classify_latest(group: pd.DataFrame) -> dict | None:
         if break_i < 20:
             continue
         pivot = pivot_before(x, break_i)
-        profile = contraction_profile(x, break_i - 1)
+        profile = contraction_profile(x, break_i - 1, pivot)
         if pivot is None or profile is None:
             continue
         broke, break_ratio = breakout_quality(x, break_i, pivot)
@@ -424,7 +470,7 @@ def classify_latest(group: pd.DataFrame) -> dict | None:
             return make_row(x, i, profile, "突破後回踩", pivot, break_ratio, break_i)
 
     pivot = pivot_before(x, i)
-    profile = contraction_profile(x, i - 1)
+    profile = contraction_profile(x, i - 1, pivot)
     if pivot is None or profile is None:
         return None
     broke, ratio = breakout_quality(x, i, pivot)
