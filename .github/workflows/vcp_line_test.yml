@@ -10,7 +10,7 @@ permissions:
   contents: read
 
 jobs:
-  test-vcp-line:
+  test-formal-and-vcp-line:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
