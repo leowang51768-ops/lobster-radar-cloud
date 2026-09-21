@@ -39,7 +39,7 @@ class CGroupTests(unittest.TestCase):
                 rows.append({"date": date, "code": str(code), "name": str(code),
                              "open": 10., "high": 11., "low": 9., "close": 10.,
                              "volume": 301000, "volume_lots": 301.,
-                             "turnover": 30_000_000., "market": "TWSE"})
+                             "turnover": 30_000_000., "market": "TWSE", "dif": 0.0})
         market = pd.DataFrame(rows)
         def fake_rev(code, x):
             return {}, {"signal_route": "破底翻", "pattern_key": str(code),
