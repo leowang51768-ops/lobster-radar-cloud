@@ -158,6 +158,25 @@ def contraction_profile(x: pd.DataFrame, end_i: int, pivot: float) -> dict | Non
     if not (decreasing and materially_tighter and depths[-1] <= 0.15):
         return None
 
+    # A VCP is a continuation base beneath one ceiling.  If a contraction
+    # high already cleared that ceiling, the selected level is merely an
+    # internal price cluster rather than the true VCP pivot.
+    if any(leg[3] > pivot * (1.0 + PIVOT_CLUSTER_TOL) for leg in clean):
+        return None
+
+    # Unlike the reversal scanner, VCP must form in an established rising
+    # structure: price above 60MA and 20MA not below 60MA at the setup end.
+    setup_row = x.iloc[end_i]
+    setup_ma20 = float(setup_row.ma20)
+    setup_ma60 = float(setup_row.ma60)
+    if not (
+        math.isfinite(setup_ma20)
+        and math.isfinite(setup_ma60)
+        and float(setup_row.close) >= setup_ma60
+        and setup_ma20 >= setup_ma60
+    ):
+        return None
+
     # Contraction highs must progressively converge on the same breakout pivot.
     peak_distances = [abs(leg[3] / pivot - 1.0) for leg in clean]
     if peak_distances[-1] > VCP_MAX_FINAL_PEAK_DISTANCE:
