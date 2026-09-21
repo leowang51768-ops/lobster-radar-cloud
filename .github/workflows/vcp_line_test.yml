@@ -1,5 +1,5 @@
 name: Formal + VCP + Support Retest LINE Test Once
-# manual test: 2026-09-21 relaxed-false-break-volume-v1
+# manual test: 2026-09-21 article-aligned-break-bottom-vcp-final
 
 on:
   push:
