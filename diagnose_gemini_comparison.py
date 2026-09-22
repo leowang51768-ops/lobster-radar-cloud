@@ -37,10 +37,12 @@ def trace_none(fn, *args):
     """
     code = fn.__code__
     hits = []
+    captured = {}
     def tracer(frame, event, arg):
         if frame.f_code is code:
             if event == "return" and arg is None:
                 hits.append(frame.f_lineno)
+                captured.update(frame.f_locals)
             return tracer
         return tracer if event == "call" else None
     old = sys.gettrace()
@@ -50,7 +52,7 @@ def trace_none(fn, *args):
     finally:
         sys.settrace(old)
     line = hits[-1] if hits else None
-    return result, line
+    return result, line, captured
 
 
 def site(fn, number):
@@ -74,7 +76,7 @@ def diagnose_buy(code, market):
     x = buy.prepare(market)
     if len(x) < buy.FALSE_BREAK_SUPPORT_LOOKBACK + buy.FALSE_BREAK_RECOVERY_DAYS:
         return {"status": "未過歷史長度", "reason": f"歷史 {len(x)} 日，不足 63 日"}
-    (setup, signal), line = trace_none(buy.detect_false_break_reversal, code, x)
+    (setup, signal), line, _ = trace_none(buy.detect_false_break_reversal, code, x)
     if not setup:
         return {"status": "無完整ABC候選", "reason": "60日支撐、跌破與3日內收復的組合未成立",
                 "source": site(buy.detect_false_break_reversal, line)}
@@ -114,6 +116,31 @@ def diagnose_vcp(market):
     detail = {"trend_ok": trend, "avg20_lots": round(avg_lots, 1),
               "avg20_turnover": round(avg_turnover), "ma20": round(float(row.ma20), 2),
               "ma50": round(float(row.ma50), 2), "ma60": round(float(row.ma60), 2)}
+    ma20, ma50, ma60 = (float(row.ma20), float(row.ma50), float(row.ma60))
+    old_ma60 = float(x.iloc[i - 20].ma60)
+    detail.update({
+        "liquidity_lots_pass": avg_lots >= vcp.MIN_VOLUME_LOTS,
+        "liquidity_turnover_pass": avg_turnover >= vcp.MIN_AVG_TURNOVER,
+        "close_above_ma60": float(row.close) > ma60,
+        "ma20_above_ma50": ma20 > ma50,
+        "ma50_above_ma60": ma50 > ma60,
+        "ma60_rising_20d": ma60 > old_ma60,
+        "ma60_20d_ago": round(old_ma60, 2),
+    })
+    if i >= 204 and pd.notna(row.ma200) and pd.notna(row.ma150):
+        old_ma200 = float(x.iloc[i - 20].ma200)
+        detail.update(trend_mode="200MA完整條件", ma150=round(float(row.ma150), 2),
+                      ma200=round(float(row.ma200), 2),
+                      close_above_ma200=float(row.close)>float(row.ma200),
+                      ma200_rising_20d=float(row.ma200)>old_ma200,
+                      ma150_above_ma200=float(row.ma150)>float(row.ma200),
+                      ma50_above_ma150=ma50>float(row.ma150))
+    else:
+        recent = x.iloc[max(0, i - 40):i + 1]
+        first, last = recent.iloc[:20], recent.iloc[-20:]
+        detail.update(trend_mode="不足200日替代條件",
+                      recent_higher_high=float(last.high.max()) >= float(first.high.max()),
+                      recent_higher_low=float(last.low.min()) >= float(first.low.min()) * .98)
     if not trend:
         liquidity = avg_lots >= vcp.MIN_VOLUME_LOTS and avg_turnover >= vcp.MIN_AVG_TURNOVER
         return {**detail, "status": "前置篩選排除",
@@ -122,10 +149,23 @@ def diagnose_vcp(market):
     detail["pivot"] = round(pivot, 2) if pivot else ""
     if pivot is None:
         return {**detail, "status": "樞紐未成立", "reason": "前60日缺少至少兩次測試的局部壓力樞紐"}
-    profile, line = trace_none(vcp.contraction_profile, x, i - 1, pivot)
+    profile, line, detail_locals = trace_none(vcp.contraction_profile, x, i - 1, pivot)
     if profile is None:
+        # These values are from the original scanner at its exact return site.
+        # An early return may not yet have computed later metrics.
+        for field, key in (("base_sessions", "base_sessions"),
+                           ("last_trough_age", "last_trough_age"),
+                           ("peak_distances", "peak_distances"),
+                           ("dry_ratio", "dry_ratio"),
+                           ("last_leg_volume_ratio", "last_leg_volume_ratio"),
+                           ("gaps", "gaps"), ("depths", "depths")):
+            value = detail_locals.get(key)
+            if isinstance(value, (int, float)):
+                detail[field] = round(float(value), 4)
+            elif isinstance(value, list):
+                detail[field] = "/".join(str(round(float(z), 4)) for z in value)
         return {**detail, "status": "收縮結構未通過",
-                "reason": "收縮段連續性/深度/新鮮度/趨勢或量縮檢查未通過",
+                "reason": "原始VCP函式在所列原始碼位置拒絕；查看 source 及已計算量化值",
                 "source": site(vcp.contraction_profile, line)}
     detail.update({"contractions": profile["count"], "depths_pct": "/".join(
         f"{d * 100:.2f}" for d in profile["depths"]),
@@ -139,7 +179,7 @@ def diagnose_vcp(market):
     distance = close / pivot - 1
     detail["distance_to_pivot_pct"] = round(distance * 100, 2)
     if -vcp.NEAR_PIVOT_PCT <= distance <= 0 and close >= float(row.open) * .98:
-        generated, line = trace_none(vcp.make_row, x, i, profile, "接近突破", pivot, 0.)
+        generated, line, _ = trace_none(vcp.make_row, x, i, profile, "接近突破", pivot, 0.)
         if generated is None:
             return {**detail, "status": "風險條件排除",
                     "reason": "停損距離或上方樞紐風報比未達門檻",
