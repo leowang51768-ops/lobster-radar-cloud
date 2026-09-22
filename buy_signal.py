@@ -11,10 +11,11 @@ sessions. The recovery candle must be bullish, close above the prior close and
 finish at or above the 55th percentile of its daily range.
 
 A break of at least 3% and a long lower shadow are quality evidence only, not
-hard entry gates. Liquidity, 60MA protection, upside room, relative strength
-and reward-risk remain hard risk gates. Retired 30MA, generic breakout-retest
-and fakeout-reclaim strategies have been removed. VCP remains a separate
-observation-only scanner.
+hard entry gates. Liquidity, upside room and reward-risk remain hard risk
+gates. The former 60MA distance/slope and 20-day relative-strength gates have
+been removed. Retired 30MA, generic breakout-retest and fakeout-reclaim
+strategies have also been removed. VCP remains a separate observation-only
+scanner.
 """
 from __future__ import annotations
 
@@ -56,9 +57,6 @@ MIN_TURNOVER = 30_000_000
 SUPPORT_BREAK_TOL = 0.005
 MIN_RISK_REWARD = 1.50
 MIN_UPSIDE_ROOM = 0.08
-MIN_RELATIVE_STRENGTH_20D = 0.03
-MA60_MAX_BELOW = 0.10
-MA60_MAX_5D_DECLINE = 0.02
 STRATEGY_VERSION = "破底翻-v13-文章標準ABC頸線版"
 ROUTE_PRIORITY = {
     "破底翻": 1,
@@ -734,66 +732,39 @@ def detect_exit_warnings(market: pd.DataFrame, latest_date: str, state: dict) ->
     return warnings
 
 
-def latest_market_median_return20(market: pd.DataFrame) -> float:
-    returns = []
-    for _code, group in market.groupby("code", sort=False):
-        x = group.sort_values("date")
-        if len(x) >= 21:
-            old = float(x.iloc[-21].close)
-            new = float(x.iloc[-1].close)
-            if old > 0:
-                returns.append(new / old - 1.0)
-    return float(pd.Series(returns).median()) if returns else 0.0
+def apply_new_plan_gate(signal: dict | None, setup: dict, x: pd.DataFrame) -> dict | None:
+    """Hard-gate formal buys only by upside room and reward-risk.
 
-
-def apply_new_plan_gate(signal: dict | None, setup: dict, x: pd.DataFrame, market_return20: float) -> dict | None:
-    """Hard gate formal buys by upside room, relative strength and 60MA protection."""
+    The former 60MA distance/slope and 20-day relative-strength requirements
+    are intentionally removed so an early reversal is not rejected merely
+    because lagging trend measures still look weak.
+    """
     if signal is None:
         return None
     i = len(x) - 1
     close = float(x.iloc[i].close)
-    stock_return20 = close / float(x.iloc[i - 20].close) - 1.0 if i >= 20 else math.nan
-    rs20 = stock_return20 - market_return20 if math.isfinite(stock_return20) else math.nan
     older = x.iloc[max(0, i - 120):max(0, i - 20)]
     prior_high = float(older["high"].max()) if len(older) else math.nan
-    upside_room = math.inf if not math.isfinite(prior_high) or close >= prior_high else prior_high / close - 1.0
-
-    # 60MA is a broad anti-downtrend guard, not a requirement to hug or remain
-    # above the average. A valid reversal may sit up to 10% below 60MA, provided
-    # the 60MA itself has not fallen more than 2% during the latest five sessions.
-    t = x.iloc[i]
-    ma60_now = float(t.ma60) if pd.notna(t.ma60) else math.nan
-    ma60_5d = float(x.iloc[i - 5].ma60) if i >= 5 and pd.notna(x.iloc[i - 5].ma60) else math.nan
-    ma60_price_ok = math.isfinite(ma60_now) and close >= ma60_now * (1.0 - MA60_MAX_BELOW)
-    ma60_slope_ok = (
-        math.isfinite(ma60_now)
-        and math.isfinite(ma60_5d)
-        and ma60_now >= ma60_5d * (1.0 - MA60_MAX_5D_DECLINE)
+    upside_room = (
+        math.inf
+        if not math.isfinite(prior_high) or close >= prior_high
+        else prior_high / close - 1.0
     )
-    trend_ok = bool(ma60_price_ok and ma60_slope_ok)
     risk_reward = float(signal.get("risk_reward") or 0.0)
     passed = bool(
         upside_room >= MIN_UPSIDE_ROOM
-        and rs20 >= MIN_RELATIVE_STRENGTH_20D
         and risk_reward >= MIN_RISK_REWARD
-        and trend_ok
     )
     details = {
-        "upside_room_pct": 999.0 if math.isinf(upside_room) else round(upside_room * 100, 2),
-        "relative_strength_20d_pct": round(rs20 * 100, 2) if math.isfinite(rs20) else "",
-        "ma60": round(ma60_now, 2) if math.isfinite(ma60_now) else "",
-        "ma60_5d_change_pct": (
-            round((ma60_now / ma60_5d - 1.0) * 100, 2)
-            if math.isfinite(ma60_now) and math.isfinite(ma60_5d) and ma60_5d > 0
-            else ""
+        "upside_room_pct": (
+            999.0 if math.isinf(upside_room)
+            else round(upside_room * 100, 2)
         ),
-        "ma60_protection": "通過" if trend_ok else "未通過",
         "new_plan_gate": "通過" if passed else "未通過",
     }
     signal.update(details)
     setup.update(details)
     return signal if passed else None
-
 
 def main() -> int:
     market = read_market()
@@ -804,7 +775,6 @@ def main() -> int:
     state["strategy_version"] = STRATEGY_VERSION
     stocks_state = state.setdefault("stocks", {})
     latest_date = market["date"].max().strftime("%Y-%m-%d")
-    market_return20 = latest_market_median_return20(market)
 
     candidate_rows = []
     triggers = []
@@ -818,7 +788,7 @@ def main() -> int:
             continue
 
         false_setup, false_signal = detect_false_break_reversal(code, x)
-        false_signal = apply_new_plan_gate(false_signal, false_setup, x, market_return20)
+        false_signal = apply_new_plan_gate(false_signal, false_setup, x)
         setups = [
             (false_setup, false_signal),
         ]
