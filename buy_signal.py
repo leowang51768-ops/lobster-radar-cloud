@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 """Lobster Radar formal buy-point engine.
 
-Only 破底翻 can create a formal recommendation or enter performance tracking.
+破底翻 and Price Action triggers can create formal recommendations and enter
+performance tracking. Price Action requires a 5-day moving-average reclaim,
+a meaningful bullish body and a 1.3x volume expansion, followed by either a
+bullish engulfing candle or a 20-day spring.
 The support zone is built from repeated closes around local lows during the 60
 completed sessions before the breakdown. Prices within 1% form one cluster;
 the selected zone needs at least two touches separated by at least one session.
@@ -54,16 +57,22 @@ FALSE_BREAK_CONFIRM_LOOKBACK = 12
 FALSE_BREAK_HIGHER_LOW_TOL = 0.005
 VOL_RATIO_MIN = 1.20
 VOL_RATIO_MAX = 3.00
+PRICE_ACTION_VOLUME_RATIO_MIN = 1.30
+PRICE_ACTION_BODY_MIN = 0.01
+PRICE_ACTION_ENGULF_GAIN_MIN = 0.02
+PRICE_ACTION_SPRING_GAIN_MIN = 0.025
+PRICE_ACTION_LOOKBACK = 40
 MAX_STRUCTURE_EXTENSION = 0.08
 MIN_VOLUME_LOTS = 300
 MIN_TURNOVER = 30_000_000
 SUPPORT_BREAK_TOL = 0.005
 MIN_RISK_REWARD = 1.50
 MIN_UPSIDE_ROOM = 0.08
-STRATEGY_VERSION = "破底翻-v13-文章標準ABC頸線版"
+STRATEGY_VERSION = "龍蝦買點-v14-破底翻+PriceAction"
 ROUTE_PRIORITY = {
     "破底翻": 1,
     "破底翻確認": 2,
+    "Price Action": 3,
 }
 
 
@@ -107,6 +116,7 @@ def read_market() -> pd.DataFrame:
 
 def prepare(g: pd.DataFrame) -> pd.DataFrame:
     x = g.copy().sort_values("date").reset_index(drop=True)
+    x["ma5"] = x["close"].rolling(5).mean()
     x["ma20"] = x["close"].rolling(20).mean()
     x["ma30"] = x["close"].rolling(30).mean()
     x["ma60"] = x["close"].rolling(60).mean()
@@ -506,6 +516,141 @@ def detect_false_break_reversal(code: str, x: pd.DataFrame) -> tuple[dict, dict 
     setup["evidence_notes"] = signal["evidence_notes"]
     return setup, signal
 
+
+def detect_price_action_trigger(code: str, x: pd.DataFrame) -> tuple[dict, dict | None]:
+    """Detect the imported 1-5 day Price Action buy trigger."""
+    if len(x) < PRICE_ACTION_LOOKBACK:
+        return {}, None
+
+    i = len(x) - 1
+    t = x.iloc[i]
+    prev = x.iloc[i - 1]
+    close = float(t.close)
+    open_price = float(t.open)
+    previous_close = float(prev.close)
+    previous_open = float(prev.open)
+    current_lots = float(t.volume_lots)
+    avg5_lots = float(t.avg5_lots) if pd.notna(t.avg5_lots) else 0.0
+    volume_ratio_5d = current_lots / avg5_lots if avg5_lots > 0 else 0.0
+    day_gain = close / previous_close - 1.0 if previous_close > 0 else 0.0
+    body_gain = close / open_price - 1.0 if open_price > 0 else 0.0
+    liquidity_ok, _, turnover, _ = volume_gate(t)
+
+    volume_trigger = (
+        liquidity_ok
+        and current_lots >= MIN_VOLUME_LOTS
+        and volume_ratio_5d >= PRICE_ACTION_VOLUME_RATIO_MIN
+    )
+    above_ma5 = pd.notna(t.ma5) and close > float(t.ma5)
+    bullish_body = body_gain >= PRICE_ACTION_BODY_MIN
+    bullish_engulfing = (
+        bullish_body
+        and previous_close < previous_open
+        and close >= previous_open
+        and open_price <= previous_close
+        and day_gain >= PRICE_ACTION_ENGULF_GAIN_MIN
+    )
+
+    recent5 = x.iloc[-5:]
+    recent20 = x.iloc[-20:]
+    recent5_low = float(recent5["low"].min())
+    low20 = float(recent20["low"].min())
+    spring = (
+        bullish_body
+        and close > float(prev.high)
+        and day_gain >= PRICE_ACTION_SPRING_GAIN_MIN
+        and math.isclose(recent5_low, low20, rel_tol=1e-9, abs_tol=1e-9)
+    )
+
+    triggers = []
+    if bullish_engulfing:
+        triggers.append("看漲吞噬")
+    if spring:
+        triggers.append("20日破底翻強攻")
+
+    if not (above_ma5 and bullish_body and volume_trigger):
+        return {}, None
+
+    setup_date = t.date.strftime("%Y-%m-%d")
+    tags = []
+    part1 = x.iloc[-40:-15]
+    part2 = x.iloc[-15:-1]
+    range1 = (
+        (float(part1["high"].max()) - float(part1["low"].min()))
+        / float(part1["low"].min())
+    )
+    range2 = (
+        (float(part2["high"].max()) - float(part2["low"].min()))
+        / float(part2["low"].min())
+    )
+    if range2 < range1 * 0.70 and range1 < 0.35:
+        tags.append("VCP波動收縮")
+    base = x.iloc[-40:-5]
+    box_range = (
+        (float(base["high"].max()) - float(base["low"].min()))
+        / float(base["low"].min())
+    )
+    if box_range < 0.15:
+        tags.append("箱型沉澱")
+    if not tags:
+        tags.append("短線量價轉強")
+
+    stop = max(0.0, recent5_low - tw_stock_tick(recent5_low))
+    setup = {
+        "pattern": "Price Action",
+        "setup_date": setup_date,
+        "confirmation_mode": "/".join(triggers) if triggers else "等待量價觸發",
+        "trigger_level": round(close, 2),
+        "support_lower": round(recent5_low, 2),
+        "support_upper": round(recent5_low, 2),
+        "support_source": "近5日低點",
+        "failure_level": round(stop, 2),
+        "entry_stage": "1～5日量價扣板機",
+        "close_location": round(close_location(t), 2),
+        "structure_extension_pct": round((close / float(t.ma5) - 1.0) * 100, 2),
+        "volume_quality": f"5日量比{volume_ratio_5d:.2f}x",
+        "price_action_tags": "、".join(tags),
+    }
+    if not triggers:
+        return setup, None
+
+    signal = {
+        "date": setup_date,
+        "code": code,
+        "signal_route": "Price Action",
+        "signal_light": "🟢綠燈",
+        "close": round(close, 2),
+        "baseline_entry": round(close, 2),
+        "key_date": setup_date,
+        "key_high": round(max(float(t.high), float(prev.high)), 2),
+        "key_low": round(recent5_low, 2),
+        "failure_level": round(stop, 2),
+        "volume_lots": round(current_lots, 0),
+        "volume_ratio": round(volume_ratio_5d, 2),
+        "volume_quality": setup["volume_quality"],
+        "turnover": round(turnover, 0),
+        "support_lower": setup["support_lower"],
+        "support_upper": setup["support_upper"],
+        "support_source": setup["support_source"],
+        "pattern_key": f"PriceAction:{setup_date}:{'/'.join(triggers)}",
+        "structure_extension_pct": setup["structure_extension_pct"],
+        "entry_stage": setup["entry_stage"],
+        "confirmation_mode": setup["confirmation_mode"],
+        "price_action_tags": setup["price_action_tags"],
+    }
+    evidence = [
+        ("站上5MA", above_ma5),
+        ("紅K實體≥1%", bullish_body),
+        ("成交量≥300張", current_lots >= MIN_VOLUME_LOTS),
+        ("5日量比≥1.3x", volume_ratio_5d >= PRICE_ACTION_VOLUME_RATIO_MIN),
+        ("看漲吞噬", bullish_engulfing),
+        ("20日破底翻強攻", spring),
+        ("VCP/箱型加分", any(tag != "短線量價轉強" for tag in tags)),
+    ]
+    add_four_layer_evidence(signal, setup, x, i, evidence)
+    return setup, signal
+
+
 def recommendation_fields() -> list[str]:
     return [
         "date", "code", "name", "trend", "strategy_source", "signal_route", "signal_light",
@@ -520,6 +665,7 @@ def recommendation_fields() -> list[str]:
         "pattern_key", "structure_extension_pct", "breakout_date", "confirmation_mode",
         "stop_price", "target_price", "target_source", "risk_reward", "risk_reward_status",
         "evidence_count", "evidence_notes", "breakout_efficiency", "atr_compression_ratio",
+        "price_action_tags",
     ]
 
 
@@ -573,6 +719,7 @@ def write_candidate_status(rows: list[dict]) -> None:
         "entry_stage", "dif_converging", "failure_level",
         "stop_price", "target_price", "target_source", "risk_reward", "risk_reward_status",
         "evidence_count", "evidence_notes", "breakout_efficiency", "atr_compression_ratio",
+        "price_action_tags",
     ]
     with CANDIDATES.open("w", encoding="utf-8-sig", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=fields)
@@ -665,6 +812,7 @@ def candidate_row(latest_date: str, code: str, name: str, x: pd.DataFrame, setup
         "evidence_notes": setup.get("evidence_notes", ""),
         "breakout_efficiency": setup.get("breakout_efficiency", ""),
         "atr_compression_ratio": setup.get("atr_compression_ratio", ""),
+        "price_action_tags": setup.get("price_action_tags", ""),
     }
 
 
@@ -793,8 +941,10 @@ def main() -> int:
 
         false_setup, false_signal = detect_false_break_reversal(code, x)
         false_signal = apply_new_plan_gate(false_signal, false_setup, x)
+        price_action_setup, price_action_signal = detect_price_action_trigger(code, x)
         setups = [
             (false_setup, false_signal),
+            (price_action_setup, price_action_signal),
         ]
 
         fresh_signals = []
@@ -841,7 +991,11 @@ def main() -> int:
             signal.update({
                 "name": name,
                 "trend": signal["signal_route"],
-                "strategy_source": "龍蝦核心",
+                "strategy_source": (
+                    "外部Price Action邏輯"
+                    if signal["signal_route"] == "Price Action"
+                    else "龍蝦核心"
+                ),
                 "primary_key_date": "",
                 "primary_key_high": "",
                 "primary_key_low": "",
@@ -889,25 +1043,39 @@ def main() -> int:
     force_notify = os.environ.get("BUY_FORCE_NOTIFY", "").strip() == "1"
     if triggers or exit_warnings or force_notify:
         lines = [
-            f"🦞 龍蝦雷達正式破底翻｜{latest_date}",
-            "僅破底翻可建立正式推薦與績效；VCP由獨立觀察雷達通知。",
+            f"🦞 龍蝦雷達正式買點｜{latest_date}",
+            "正式路線：A/B/C破底翻＋Price Action；VCP仍由獨立觀察雷達通知。",
         ]
         if not triggers and not exit_warnings:
-            lines.append("✅ LINE測試成功｜目前無正式破底翻候選")
+            lines.append("✅ LINE測試成功｜目前無正式買點候選")
         for row in triggers:
             lines += [
                 "",
                 f"🟢 {row['code']} {row['name']}｜{row['signal_route']}",
                 f"策略來源：{row['strategy_source']}",
                 f"階段：{row.get('entry_stage', 'C點站回｜早期試單')}｜收盤：{row.get('close', '')}",
-                f"A點支撐：{row.get('a_point_lower', row['support_lower'])}～{row.get('a_point_upper', row['support_upper'])}",
-                f"B點低點：{row.get('b_point', row['key_low'])}（{row.get('b_point_date', row['key_date'])}）",
-                f"頸線：{row.get('neckline') or '未形成'}｜{row.get('neckline_status', '')}",
-                f"底底高：{row.get('higher_low_status', '等待確認')}",
-                f"支撐來源：{row['support_source']}",
-                f"成交量：{int(row['volume_lots'])}張｜量比：{row['volume_ratio']}x",
-                f"績效基準試單價：{row['baseline_entry']}",
-                f"失效／停損：再破B點，價格低於 {row.get('failure_level', row.get('stop_price'))}",
+            ]
+            if row["signal_route"] == "Price Action":
+                lines += [
+                    f"觸發：{row.get('confirmation_mode', '')}",
+                    f"結構標籤：{row.get('price_action_tags', '')}",
+                    f"近5日低點：{row.get('support_lower', '')}",
+                    f"成交量：{int(row['volume_lots'])}張｜5日量比：{row['volume_ratio']}x",
+                    f"績效基準試單價：{row['baseline_entry']}",
+                    f"失效／停損：低於 {row.get('failure_level', row.get('stop_price'))}",
+                ]
+            else:
+                lines += [
+                    f"A點支撐：{row.get('a_point_lower', row['support_lower'])}～{row.get('a_point_upper', row['support_upper'])}",
+                    f"B點低點：{row.get('b_point', row['key_low'])}（{row.get('b_point_date', row['key_date'])}）",
+                    f"頸線：{row.get('neckline') or '未形成'}｜{row.get('neckline_status', '')}",
+                    f"底底高：{row.get('higher_low_status', '等待確認')}",
+                    f"支撐來源：{row['support_source']}",
+                    f"成交量：{int(row['volume_lots'])}張｜量比：{row['volume_ratio']}x",
+                    f"績效基準試單價：{row['baseline_entry']}",
+                    f"失效／停損：再破B點，價格低於 {row.get('failure_level', row.get('stop_price'))}",
+                ]
+            lines += [
                 f"型態證據：{row.get('evidence_count', '')}項｜{row.get('evidence_notes', '')}",
                 f"風報比：{row.get('risk_reward') or '未計算'}｜{row.get('risk_reward_status', '')}",
             ]
