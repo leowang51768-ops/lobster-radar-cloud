@@ -69,6 +69,8 @@ def site(fn, number):
 def diagnose_buy(code, market):
     if market.empty:
         return {"status": "資料缺失", "reason": "當日或歷史價格不足"}
+    market = market.copy()
+    market["volume_lots"] = market["volume"] / 1000.0
     x = buy.prepare(market)
     if len(x) < buy.FALSE_BREAK_SUPPORT_LOOKBACK + buy.FALSE_BREAK_RECOVERY_DAYS:
         return {"status": "未過歷史長度", "reason": f"歷史 {len(x)} 日，不足 63 日"}
@@ -226,8 +228,11 @@ def main():
     print(json.dumps({"status_counts": {str(s): sum(r["status"] == s for r in result)
                                       for s in sorted(set(r["status"] for r in result))},
                       "snapshot": snapshot}, ensure_ascii=False))
-    if any(r["status"] == "診斷錯誤" for r in result):
-        raise SystemExit("Some diagnostics failed; see diagnostic CSV")
+    errors = [r for r in result if r["status"] == "診斷錯誤"]
+    for r in errors:
+        print(f"DIAGNOSTIC_ERROR {r['strategy']} {r['code']} {r['reason']}")
+    if errors:
+        raise SystemExit(f"{len(errors)} diagnostics failed; see diagnostic CSV")
 
 
 if __name__ == "__main__":
