@@ -5747,8 +5747,8 @@
       "support_source": "突破平台上緣轉支撐"
     }
   },
-  "updated_at": "2026-09-21T10:37:29.619442+00:00",
-  "latest_trade_date": "2026-09-21",
+  "updated_at": "2026-09-22T11:22:07.276457+00:00",
+  "latest_trade_date": "2026-09-22",
   "layer1_candidate_count": 187,
   "stage_counts": {
     "正式試單": 1,
@@ -5777,12 +5777,12 @@
     "四要點": 178,
     "強勢20MA續強": 9
   },
-  "strategy_version": "破底翻唯一正式買點-v12取消突破回踩與30MA",
+  "strategy_version": "破底翻-v13-文章標準ABC頸線版",
   "four_point_rule": "已取消",
-  "candidate_count": 157,
+  "candidate_count": 595,
   "formal_buy_signal_count": 0,
   "route_counts": {
-    "破底翻": 157
+    "破底翻": 595
   },
   "exit_warning_keys": {
     "突破後站穩:2026-09-16:69.90:假突破觀察": "2026-09-18",
