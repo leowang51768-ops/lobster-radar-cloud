@@ -819,7 +819,7 @@ def main() -> int:
             if not near_setup and signal is None:
                 continue
 
-            if signal is selected_signal:
+            if signal is not None and signal is selected_signal:
                 status = "正式買點"
             elif signal is not None:
                 status = "同日重複訊號"
