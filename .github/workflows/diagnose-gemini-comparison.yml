@@ -1,0 +1,38 @@
+name: Lobster 28-Stock Diagnosis
+
+on:
+  workflow_dispatch:
+    inputs:
+      trade_date:
+        description: "Use an existing database trade date (YYYY-MM-DD)"
+        required: true
+        default: "2026-09-22"
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout database and diagnostic script
+        uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install diagnostic dependency
+        run: pip install pandas
+      - name: Check database date and run read-only diagnosis
+        env:
+          TARGET_DATE: ${{ inputs.trade_date }}
+        run: python diagnose_gemini_comparison.py --date "$TARGET_DATE"
+      - name: Upload per-stock reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lobster-diagnosis-${{ inputs.trade_date }}
+          path: diagnostics/
+          if-no-files-found: warn
+          retention-days: 7
