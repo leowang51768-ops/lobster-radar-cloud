@@ -12,8 +12,9 @@ finish at or above the 55th percentile of its daily range.
 
 A break of at least 3% and a long lower shadow are quality evidence only, not
 hard entry gates. Liquidity, 60MA protection, upside room, relative strength
-and reward-risk remain hard risk gates. Generic breakout-retest and 30MA routes
-are disabled; VCP remains a separate observation-only scanner.
+and reward-risk remain hard risk gates. Retired 30MA, generic breakout-retest
+and fakeout-reclaim strategies have been removed. VCP remains a separate
+observation-only scanner.
 """
 from __future__ import annotations
 
@@ -47,32 +48,7 @@ FALSE_BREAK_RECOVERY_DAYS = 3
 FALSE_BREAK_NECKLINE_LOOKBACK = 20
 FALSE_BREAK_CONFIRM_LOOKBACK = 12
 FALSE_BREAK_HIGHER_LOW_TOL = 0.005
-FAKEOUT_EVENT_LOOKBACK = 45
-FAKEOUT_PRE_WINDOW = 20
-FAKEOUT_SUPPORT_BAND = 0.03
-FAKEOUT_MIN_SUPPORT_TOUCHES = 2
-FAKEOUT_RECOVERY_MIN_DAYS = 3
-FAKEOUT_RECOVERY_MAX_DAYS = 10
-FAKEOUT_SUPPORT_BREAK_MIN = 0.01
-FAKEOUT_ACUTE_DROP_MIN = 0.08
-FAKEOUT_NEW_LOW_TOL = 0.005
-FAKEOUT_BREAKOUT_MIN = 0.003
-BREAKOUT_MIN = 0.003
-BREAKOUT_STAND_DAYS = 3
-BREAKOUT_RETEST_DAYS = 5
-BREAKOUT_MIN_RETEST_DAYS = 2
-BREAKOUT_MAX_ENTRY_EXTENSION = 0.03
-BREAKOUT_MIN_VOLUME_5D_RATIO = 1.50
-BREAKOUT_MIN_BODY_EFFICIENCY = 0.70
-BREAKOUT_MIN_CLOSE_LOCATION = 0.75
-BREAKOUT_MAX_ATR_COMPRESSION = 0.80
-BREAKOUT_MAX_PREBREAK_VOLUME_RATIO = 0.85
-BREAKOUT_CONFIRM_DAYS = max(BREAKOUT_STAND_DAYS, BREAKOUT_RETEST_DAYS)
-BREAKOUT_HOLD_TOL = 0.005
-BREAKOUT_RETEST_TOL = 0.01
-PLATFORM_TOUCH_TOL = 0.03
-MIN_PLATFORM_TOUCHES = 2
-CLOSE_LOCATION_MIN = 0.55
+FAKEOUT_CLOSE_LOCATION_MIN = 0.55
 VOL_RATIO_MIN = 1.20
 VOL_RATIO_MAX = 3.00
 MAX_STRUCTURE_EXTENSION = 0.08
@@ -87,22 +63,6 @@ MA60_MAX_5D_DECLINE = 0.02
 EXIT_WARNING_DAYS = 2
 STALLED_BOUNDARY_TOL = 0.01
 EXIT_VOLUME_5D_MIN = 1.20
-
-# Existing 70-stock 30MA key-candle route, now evaluated from the same
-# official TWSE/TPEx SQLite database as the core Lobster routes.
-MA30_KEY_WATCHLIST = {
-    "2330", "2454", "2303", "3711", "3131", "6187", "3583", "6223",
-    "6257", "2449", "3264", "3034", "2379", "3035", "3661", "3443",
-    "3653", "3017", "2421", "3324", "6230", "2317", "2382", "3231",
-    "2356", "6669", "2376", "2357", "3706", "2383", "6213", "8358",
-    "3037", "3189", "8046", "2368", "3044", "4958", "2313", "6153",
-    "2327", "2456", "2308", "6282", "2408", "3006", "2451", "3260",
-    "1519", "1503", "1513", "1514", "2359", "4562", "2354", "2059",
-    "6176", "3376", "2404", "6414", "3533", "6409", "3081", "3529",
-    "5269", "6415", "5274", "8454", "9910", "2204", "2201",
-}
-MA30_RETEST_LOOKAHEAD = 15
-MA30_RECLAIM_DAYS = 3
 STRATEGY_VERSION = "破底翻-v13-文章標準ABC頸線版"
 ROUTE_PRIORITY = {
     "破底翻": 1,
@@ -190,23 +150,6 @@ def volume_gate(t: pd.Series) -> tuple[bool, float, float, float]:
 def close_location(t: pd.Series) -> float:
     spread = float(t.high) - float(t.low)
     return (float(t.close) - float(t.low)) / spread if spread > 0 else 1.0
-
-
-def body_efficiency(t: pd.Series) -> float:
-    spread = float(t.high) - float(t.low)
-    return max(0.0, float(t.close) - float(t.open)) / spread if spread > 0 else 0.0
-
-
-def bullish_engulfing(x: pd.DataFrame, i: int) -> bool:
-    if i < 1:
-        return False
-    p, t = x.iloc[i - 1], x.iloc[i]
-    return bool(
-        float(p.close) < float(p.open)
-        and float(t.close) > float(t.open)
-        and float(t.open) <= float(p.close)
-        and float(t.close) >= float(p.open)
-    )
 
 
 def long_lower_shadow(t: pd.Series) -> bool:
@@ -565,459 +508,6 @@ def detect_false_break_reversal(code: str, x: pd.DataFrame) -> tuple[dict, dict 
     setup["evidence_notes"] = signal["evidence_notes"]
     return setup, signal
 
-def detect_fakeout_recovery(code: str, x: pd.DataFrame) -> tuple[dict, dict | None]:
-    """Detect an acute washout, fast reclaim and fresh range breakout.
-
-    A moving-average breach alone is never enough. The route requires all four
-    structural stages: washout, 3-10 session reclaim, no lower low, and a new
-    breakout above the pre-washout range.
-    """
-    if len(x) < FAKEOUT_PRE_WINDOW + FAKEOUT_RECOVERY_MAX_DAYS + 2:
-        return {}, None
-
-    i = len(x) - 1
-    t = x.iloc[i]
-    close = float(t.close)
-    selected = None
-    first_break = max(FAKEOUT_PRE_WINDOW, i - FAKEOUT_EVENT_LOOKBACK)
-
-    for break_i in range(first_break, i - 1):
-        prior = x.iloc[break_i - FAKEOUT_PRE_WINDOW:break_i]
-        if len(prior) < FAKEOUT_PRE_WINDOW:
-            continue
-        break_row = x.iloc[break_i]
-        prior_support = float(prior["low"].min())
-        prior_resistance = float(prior["high"].max())
-        recent_peak = float(prior.tail(10)["high"].max())
-        break_low = float(break_row.low)
-        support_touches = int(
-            (prior["low"] <= prior_support * (1.0 + FAKEOUT_SUPPORT_BAND)).sum()
-        )
-        broke_support = break_low < prior_support * (1.0 - FAKEOUT_SUPPORT_BREAK_MIN)
-        acute_drop = break_low <= recent_peak * (1.0 - FAKEOUT_ACUTE_DROP_MIN)
-        if not (
-            acute_drop
-            and broke_support
-            and support_touches >= FAKEOUT_MIN_SUPPORT_TOUCHES
-        ):
-            continue
-
-        reclaim_i = None
-        reclaim_end = min(i, break_i + FAKEOUT_RECOVERY_MAX_DAYS)
-        for j in range(break_i + FAKEOUT_RECOVERY_MIN_DAYS, reclaim_end + 1):
-            if float(x.iloc[j].close) >= prior_support:
-                reclaim_i = j
-                break
-        if reclaim_i is None:
-            continue
-
-        post_washout = x.iloc[break_i:i + 1]
-        no_lower_low = float(post_washout["low"].min()) >= break_low * (
-            1.0 - FAKEOUT_NEW_LOW_TOL
-        )
-        if not no_lower_low:
-            continue
-
-        candidate = {
-            "break_i": break_i,
-            "reclaim_i": reclaim_i,
-            "prior_support": prior_support,
-            "prior_resistance": prior_resistance,
-            "break_low": break_low,
-            "washout_pct": break_low / recent_peak - 1.0,
-            "support_touches": support_touches,
-        }
-        if selected is None or reclaim_i > selected["reclaim_i"]:
-            selected = candidate
-
-    if selected is None:
-        return {}, None
-
-    break_i = int(selected["break_i"])
-    reclaim_i = int(selected["reclaim_i"])
-    support = float(selected["prior_support"])
-    resistance = float(selected["prior_resistance"])
-    break_low = float(selected["break_low"])
-    location = close_location(t)
-    volume_ok, lots, turnover, ratio = volume_gate(t)
-    extension = close / resistance - 1.0
-    previous_close = float(x.iloc[i - 1].close)
-    fresh_breakout = (
-        close > resistance * (1.0 + FAKEOUT_BREAKOUT_MIN)
-        and previous_close <= resistance * (1.0 + FAKEOUT_BREAKOUT_MIN)
-    )
-    setup = {
-        "pattern": "假摔收復確認",
-        "setup_date": x.iloc[break_i].date.strftime("%Y-%m-%d"),
-        "breakout_date": t.date.strftime("%Y-%m-%d") if fresh_breakout else "",
-        "confirmation_mode": "突破原整理壓力" if fresh_breakout else "等待突破原整理壓力",
-        "trigger_level": round(resistance, 2),
-        "support_lower": round(support, 2),
-        "support_upper": round(support * 1.02, 2),
-        "support_source": "假摔後收復的原整理支撐",
-        "structure_extension_pct": round(extension * 100, 2),
-        "close_location": round(location, 2),
-        "volume_ok": volume_ok,
-        "washout_low": round(break_low, 2),
-        "washout_pct": round(float(selected["washout_pct"]) * 100, 2),
-        "reclaim_date": x.iloc[reclaim_i].date.strftime("%Y-%m-%d"),
-        "recovery_days": reclaim_i - break_i,
-        "support_touches": int(selected["support_touches"]),
-    }
-    confirmed = (
-        fresh_breakout
-        and close > float(t.open)
-        and location >= CLOSE_LOCATION_MIN
-        and volume_ok
-        and extension <= MAX_STRUCTURE_EXTENSION
-    )
-    if not confirmed:
-        return setup, None
-
-    date = t.date.strftime("%Y-%m-%d")
-    signal = {
-        "date": date,
-        "code": code,
-        "signal_route": "假摔收復確認",
-        "signal_light": "🟢綠燈",
-        "close": round(close, 2),
-        "baseline_entry": round(resistance * (1.0 + FAKEOUT_BREAKOUT_MIN), 2),
-        "breakout_date": date,
-        "confirmation_mode": "突破原整理壓力",
-        "key_date": date,
-        "key_high": round(resistance, 2),
-        "key_low": round(break_low, 2),
-        "volume_lots": round(lots, 0),
-        "volume_ratio": round(ratio, 2),
-        "turnover": round(turnover, 0),
-        "support_lower": setup["support_lower"],
-        "support_upper": setup["support_upper"],
-        "support_source": setup["support_source"],
-        "pattern_key": (
-            f"假摔收復確認:{setup['setup_date']}:{resistance:.2f}"
-        ),
-        "structure_extension_pct": setup["structure_extension_pct"],
-    }
-    add_four_layer_evidence(signal, setup, x, i, [
-        ("急跌洗盤", True),
-        ("10日內收復", True),
-        ("未再破低", True),
-        ("突破原壓力", True),
-    ])
-    return setup, signal
-
-
-def detect_true_breakout(code: str, x: pd.DataFrame) -> tuple[dict, dict | None]:
-    """Require post-breakout holding confirmation or a successful platform retest."""
-    if len(x) < LOOKBACK + 2:
-        return {}, None
-
-    i = len(x) - 1
-    t = x.iloc[i]
-    close = float(t.close)
-    selected = None
-
-    # The breakout itself is only a setup. Search the previous five sessions
-    # for the most recent valid, volume-confirmed platform breakout.
-    for break_i in range(i - 1, max(LOOKBACK - 1, i - BREAKOUT_CONFIRM_DAYS - 1), -1):
-        prior = x.iloc[break_i - LOOKBACK:break_i]
-        if len(prior) < LOOKBACK:
-            continue
-        breakout_row = x.iloc[break_i]
-        platform_high = float(prior["high"].max())
-        touch_floor = platform_high * (1.0 - PLATFORM_TOUCH_TOL)
-        touches = int((prior["high"] >= touch_floor).sum())
-        breakout_close = float(breakout_row.close)
-        volume_ok, breakout_lots, _turnover, breakout_ratio = volume_gate(breakout_row)
-        extension = breakout_close / platform_high - 1.0
-        prior5_volume = float(x.iloc[max(0, break_i - 5):break_i]["volume_lots"].mean())
-        volume_5d_ratio = (
-            float(breakout_row.volume_lots) / prior5_volume
-            if prior5_volume > 0 else 0.0
-        )
-        approach = x.iloc[max(0, break_i - 13):break_i]
-        atr_ratio = math.inf
-        prebreak_volume_ratio = math.inf
-        if len(approach) >= 13:
-            atr_short = float(approach.tail(3)["true_range"].mean())
-            atr_base = float(approach.head(10)["true_range"].mean())
-            recent_vol = float(approach.tail(3)["volume_lots"].mean())
-            base_vol = float(approach.head(10)["volume_lots"].mean())
-            atr_ratio = atr_short / atr_base if atr_base > 0 else math.inf
-            prebreak_volume_ratio = recent_vol / base_vol if base_vol > 0 else math.inf
-        efficient_breakout = (
-            volume_5d_ratio >= BREAKOUT_MIN_VOLUME_5D_RATIO
-            and body_efficiency(breakout_row) >= BREAKOUT_MIN_BODY_EFFICIENCY
-            and close_location(breakout_row) >= BREAKOUT_MIN_CLOSE_LOCATION
-        )
-        compressed_approach = (
-            atr_ratio <= BREAKOUT_MAX_ATR_COMPRESSION
-            and prebreak_volume_ratio <= BREAKOUT_MAX_PREBREAK_VOLUME_RATIO
-        )
-        valid_breakout = (
-            touches >= MIN_PLATFORM_TOUCHES
-            and breakout_close > platform_high * (1.0 + BREAKOUT_MIN)
-            and breakout_close > float(breakout_row.open)
-            and volume_ok
-            and extension <= BREAKOUT_MAX_ENTRY_EXTENSION
-            and efficient_breakout
-        )
-        if valid_breakout:
-            selected = {
-                "break_i": break_i,
-                "platform_high": platform_high,
-                "touches": touches,
-                "breakout_lots": breakout_lots,
-                "breakout_ratio": breakout_ratio,
-                "extension": extension,
-                "volume_5d_ratio": volume_5d_ratio,
-                "atr_ratio": atr_ratio,
-                "prebreak_volume_ratio": prebreak_volume_ratio,
-                "body_efficiency": body_efficiency(breakout_row),
-            }
-            break
-
-    # With no completed breakout yet, retain only a near-platform observation.
-    if selected is None:
-        prior = x.iloc[-1 - LOOKBACK:-1]
-        platform_high = float(prior["high"].max())
-        touches = int((prior["high"] >= platform_high * (1.0 - PLATFORM_TOUCH_TOL)).sum())
-        extension = close / platform_high - 1.0
-        setup = {
-            "pattern": "突破後確認",
-            "setup_date": "",
-            "breakout_date": "",
-            "confirmation_mode": "等待有效突破",
-            "trigger_level": round(platform_high, 2),
-            "support_lower": round(platform_high * (1.0 - 0.01), 2),
-            "support_upper": round(platform_high, 2),
-            "support_source": "20日整理平台上緣轉支撐",
-            "platform_touches": touches,
-            "structure_extension_pct": round(extension * 100, 2),
-            "close_location": round(close_location(t), 2),
-            "volume_ok": False,
-        }
-        return setup, None
-
-    break_i = int(selected["break_i"])
-    platform_high = float(selected["platform_high"])
-    breakout_date = x.iloc[break_i].date.strftime("%Y-%m-%d")
-    post = x.iloc[break_i + 1:i + 1]
-    held_structure = bool(
-        len(post) >= 1
-        and (post["close"] >= platform_high * (1.0 - BREAKOUT_HOLD_TOL)).all()
-    )
-    extension = close / platform_high - 1.0
-    location = close_location(t)
-    lots = float(t.volume_lots) if pd.notna(t.volume_lots) else 0.0
-    turnover = float(t.turnover) if pd.notna(t.turnover) else 0.0
-    avg20 = float(t.avg20_lots) if pd.notna(t.avg20_lots) else 0.0
-    ratio = lots / avg20 if avg20 else 0.0
-    liquid_today = lots >= MIN_VOLUME_LOTS and turnover >= MIN_TURNOVER
-    prev5_avg_lots = float(x.iloc[i - 5:i]["volume_lots"].mean())
-    retest_volume_contracted = (
-        lots < float(selected["breakout_lots"])
-        and lots < prev5_avg_lots
-    )
-
-    retested = float(t.low) <= platform_high * (1.0 + BREAKOUT_RETEST_TOL)
-    elapsed = i - break_i
-    reversal_confirmation = close > float(t.open) or long_lower_shadow(t)
-    retest_hold = (
-        BREAKOUT_MIN_RETEST_DAYS <= elapsed <= BREAKOUT_RETEST_DAYS
-        and held_structure
-        and retested
-        and retest_volume_contracted
-        and close >= platform_high
-        and location >= 0.50
-        and reversal_confirmation
-        and liquid_today
-        and extension <= BREAKOUT_MAX_ENTRY_EXTENSION
-    )
-
-    mode = "等待高品質突破後量縮回踩"
-    route = ""
-    if retest_hold:
-        mode = "高品質突破後量縮回踩不破"
-        route = "突破回踩不破"
-
-    setup = {
-        "pattern": "突破後確認",
-        "setup_date": breakout_date,
-        "breakout_date": breakout_date,
-        "confirmation_mode": mode,
-        "trigger_level": round(platform_high, 2),
-        "support_lower": round(platform_high * (1.0 - 0.01), 2),
-        "support_upper": round(platform_high, 2),
-        "support_source": "突破平台上緣轉支撐",
-        "platform_touches": int(selected["touches"]),
-        "structure_extension_pct": round(extension * 100, 2),
-        "close_location": round(location, 2),
-        "volume_ok": True,
-        "breakout_volume_lots": round(float(selected["breakout_lots"]), 0),
-        "prev5_avg_volume_lots": round(prev5_avg_lots, 0),
-        "retest_volume_contracted": retest_volume_contracted,
-    }
-    if not route:
-        return setup, None
-
-    date = t.date.strftime("%Y-%m-%d")
-    baseline = platform_high
-    pattern_key = f"{route}:{breakout_date}:{platform_high:.2f}"
-    signal = {
-        "date": date,
-        "code": code,
-        "signal_route": route,
-        "signal_light": "🟢綠燈",
-        "close": round(close, 2),
-        "baseline_entry": round(baseline, 2),
-        "breakout_date": breakout_date,
-        "confirmation_mode": mode,
-        "key_date": date,
-        "key_high": round(platform_high, 2),
-        "key_low": round(float(t.low), 2),
-        "volume_lots": round(lots, 0),
-        "volume_ratio": round(ratio, 2),
-        "turnover": round(turnover, 0),
-        "support_lower": setup["support_lower"],
-        "support_upper": setup["support_upper"],
-        "support_source": setup["support_source"],
-        "pattern_key": pattern_key,
-        "structure_extension_pct": setup["structure_extension_pct"],
-    }
-    breakout_row = x.iloc[break_i]
-    atr_ratio = float(selected["atr_ratio"])
-    prebreak_volume_ratio = float(selected["prebreak_volume_ratio"])
-    volume_5d_ratio = float(selected["volume_5d_ratio"])
-    efficient_breakout = True
-    tight_approach = True
-    add_four_layer_evidence(signal, setup, x, i, [
-        ("ATR與量能收縮靠近", tight_approach),
-        ("1.5倍量高效率突破", efficient_breakout),
-        ("量縮回踩確認", True),
-        ("風報比≥1.5", True),
-    ])
-    rr_ok = float(signal["risk_reward"]) >= MIN_RISK_REWARD
-    evidence = []
-    if tight_approach:
-        evidence.append("ATR與量能收縮靠近")
-    if efficient_breakout:
-        evidence.append("1.5倍量高效率突破")
-    evidence.append("量縮回踩確認")
-    if rr_ok:
-        evidence.append("風報比≥1.5")
-    signal["evidence_count"] = len(evidence)
-    signal["evidence_notes"] = "、".join(evidence)
-    signal["breakout_efficiency"] = round(body_efficiency(breakout_row), 2)
-    signal["atr_compression_ratio"] = round(atr_ratio, 2) if math.isfinite(atr_ratio) else ""
-    setup["evidence_count"] = signal["evidence_count"]
-    setup["evidence_notes"] = signal["evidence_notes"]
-    setup["breakout_efficiency"] = signal["breakout_efficiency"]
-    setup["atr_compression_ratio"] = signal["atr_compression_ratio"]
-    return setup, signal
-
-def detect_ma30_key_retest(code: str, x: pd.DataFrame) -> tuple[dict, dict | None]:
-    """Detect the existing 30MA retest/key-candle route on the official database.
-
-    A setup first records three consecutive closes above 30MA. Within the next
-    15 sessions price must retest the lowest low of those three sessions
-    (1 percent tolerance). A key candle must reclaim 30MA within three
-    sessions of that retest. The formal trigger is the following session
-    closing above the key-candle high.
-    """
-    if code not in MA30_KEY_WATCHLIST or len(x) < 35:
-        return {}, None
-
-    latest_i = len(x) - 1
-    latest = x.iloc[latest_i]
-    latest_close = float(latest.close)
-    best = None
-
-    for stand_i in range(30, latest_i):
-        stand = x.iloc[stand_i - 2:stand_i + 1]
-        if len(stand) != 3 or not (stand["close"] > stand["ma30"]).all():
-            continue
-        base_low = float(stand["low"].min())
-
-        for retest_i in range(stand_i + 1, min(stand_i + MA30_RETEST_LOOKAHEAD, latest_i)):
-            if float(x.iloc[retest_i].low) > base_low * 1.01:
-                continue
-            for key_i in range(retest_i, min(retest_i + MA30_RECLAIM_DAYS, latest_i)):
-                key = x.iloc[key_i]
-                if float(key.close) <= float(key.ma30):
-                    continue
-                if key_i == latest_i - 1 and latest_close > float(key.high):
-                    candidate = {
-                        "stand_i": stand_i,
-                        "retest_i": retest_i,
-                        "key_i": key_i,
-                        "base_low": base_low,
-                        "key_high": float(key.high),
-                        "key_low": float(key.low),
-                    }
-                    if best is None or candidate["key_i"] > best["key_i"]:
-                        best = candidate
-                break
-            break
-
-    if best is None:
-        return {}, None
-
-    key = x.iloc[int(best["key_i"])]
-    key_date = key.date.strftime("%Y-%m-%d")
-    ma30 = float(latest.ma30)
-    lots = float(latest.volume_lots) if pd.notna(latest.volume_lots) else 0.0
-    turnover = float(latest.turnover) if pd.notna(latest.turnover) else 0.0
-    avg20 = float(latest.avg20_lots) if pd.notna(latest.avg20_lots) else 0.0
-    ratio = lots / avg20 if avg20 else 0.0
-    support_lower = float(best["key_low"])
-    support_upper = max(support_lower, min(ma30, float(best["key_high"])))
-    extension = latest_close / float(best["key_high"]) - 1.0
-
-    setup = {
-        "pattern": "30MA關鍵K",
-        "setup_date": x.iloc[int(best["stand_i"])].date.strftime("%Y-%m-%d"),
-        "confirmation_mode": "回測後突破關鍵K",
-        "trigger_level": round(float(best["key_high"]), 2),
-        "support_lower": round(support_lower, 2),
-        "support_upper": round(support_upper, 2),
-        "support_source": "30MA回測關鍵K低點＋30MA",
-        "structure_extension_pct": round(extension * 100, 2),
-        "close_location": round(close_location(latest), 2),
-        "volume_ok": lots >= MIN_VOLUME_LOTS and turnover >= MIN_TURNOVER,
-    }
-    signal = {
-        "date": latest.date.strftime("%Y-%m-%d"),
-        "code": code,
-        "signal_route": "30MA關鍵K",
-        "signal_light": "🟢綠燈",
-        "close": round(latest_close, 2),
-        "baseline_entry": round(float(best["key_high"]), 2),
-        "key_date": key_date,
-        "key_high": round(float(best["key_high"]), 2),
-        "key_low": round(float(best["key_low"]), 2),
-        "volume_lots": round(lots, 0),
-        "volume_ratio": round(ratio, 2),
-        "turnover": round(turnover, 0),
-        "support_lower": setup["support_lower"],
-        "support_upper": setup["support_upper"],
-        "support_source": setup["support_source"],
-        "pattern_key": f"30MA關鍵K:{key_date}:{float(best['key_high']):.2f}",
-        "structure_extension_pct": setup["structure_extension_pct"],
-        "confirmation_mode": setup["confirmation_mode"],
-        "stop_price": round(support_lower * (1.0 - SUPPORT_BREAK_TOL), 2),
-        "target_price": "",
-        "target_source": "",
-        "risk_reward": "",
-        "risk_reward_status": "30MA獨立規則未套用",
-        "evidence_count": 2,
-        "evidence_notes": "30MA回測、關鍵K突破",
-        "breakout_efficiency": "",
-        "atr_compression_ratio": "",
-    }
-    return setup, signal
-
-
 def recommendation_fields() -> list[str]:
     return [
         "date", "code", "name", "trend", "strategy_source", "signal_route", "signal_light",
@@ -1061,9 +551,7 @@ def append_recommendation(row: dict) -> None:
                 if not migrated.get("strategy_source"):
                     route = old.get("signal_route", "")
                     migrated["strategy_source"] = (
-                        "龍蝦核心" if route in {"破底翻", "突破回踩不破"}
-                        else "龍蝦舊版30MA" if route == "30MA回踩"
-                        else ""
+                        "龍蝦核心" if route.startswith("破底翻") else ""
                     )
                 writer.writerow(migrated)
 
@@ -1224,8 +712,7 @@ def detect_exit_warnings(market: pd.DataFrame, latest_date: str, state: dict) ->
                 stop = support * (1.0 - SUPPORT_BREAK_TOL)
         prior_volume = float(x.iloc[max(0, len(x) - 6):-1]["volume_lots"].mean())
         volume_ratio = float(t.volume_lots) / prior_volume if prior_volume > 0 else 0.0
-        # Historical 30MA/breakout recommendations are retired. Never surface
-        # their exits inside the article-standard break-bottom notification.
+        # Only current break-bottom recommendations receive exit warnings.
         if not route.startswith("破底翻"):
             continue
 
@@ -1237,13 +724,6 @@ def detect_exit_warnings(market: pd.DataFrame, latest_date: str, state: dict) ->
         elif route.startswith("破底翻") and support > 0 and close < support:
             warning_type = "A點重新失守"
             reason = f"收盤{close:.2f}跌回A點支撐{support:.2f}下方"
-        elif elapsed <= EXIT_WARNING_DAYS and route in {"突破後站穩", "突破回踩不破"}:
-            if trigger > 0 and close < trigger and volume_ratio >= EXIT_VOLUME_5D_MIN:
-                warning_type = "假突破觀察"
-                reason = f"{elapsed}日內放量跌回突破區，5日量比{volume_ratio:.2f}x"
-            elif trigger > 0 and close <= trigger * (1.0 + STALLED_BOUNDARY_TOL) and volume_ratio >= EXIT_VOLUME_5D_MIN:
-                warning_type = "走不開觀察"
-                reason = f"{elapsed}日內放量仍黏在突破邊界，5日量比{volume_ratio:.2f}x"
         if not warning_type:
             continue
         pattern_key = rec.get("pattern_key") or f"{rec_date}:{code}:{route}"
@@ -1391,10 +871,7 @@ def main() -> int:
             signal.update({
                 "name": name,
                 "trend": signal["signal_route"],
-                "strategy_source": (
-                    "龍蝦30MA關鍵K" if signal["signal_route"] == "30MA關鍵K"
-                    else "龍蝦核心"
-                ),
+                "strategy_source": "龍蝦核心",
                 "primary_key_date": "",
                 "primary_key_high": "",
                 "primary_key_low": "",
