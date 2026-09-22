@@ -136,6 +136,14 @@ jobs:
           echo "FAIL_STAGE=VCP三階段掃描" >> "$GITHUB_ENV"
           python vcp_scan.py
 
+      - name: Scan early volatility-contraction observations and send separate LINE summary
+        shell: bash
+        env:
+          LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
+        run: |
+          echo "FAIL_STAGE=初步波動收縮觀察掃描" >> "$GITHUB_ENV"
+          python vcp_early_watch.py
+
       - name: Scan N-bottom observations and send one LINE summary
         shell: bash
         env:
@@ -183,7 +191,7 @@ jobs:
           git config user.name "lobster-radar-cloud"
           git config user.email "actions@github.com"
 
-          for f in lobster_tw_6m_prices.sqlite fundamental_support.json signal_state.json candidate_status.csv vcp_candidates.csv n_bottom_watch.csv formal_recommendations.csv; do
+          for f in lobster_tw_6m_prices.sqlite fundamental_support.json signal_state.json candidate_status.csv vcp_candidates.csv vcp_early_watch.csv n_bottom_watch.csv formal_recommendations.csv; do
             if [ -e "$f" ]; then
               git add "$f"
             fi
