@@ -33,6 +33,8 @@ from pathlib import Path
 
 import pandas as pd
 
+from stock_universe import filter_market_frame
+
 BASE = Path(__file__).resolve().parent
 DB = BASE / "lobster_tw_6m_prices.sqlite"
 STATE_FILE = BASE / "signal_state.json"
@@ -97,6 +99,7 @@ def read_market() -> pd.DataFrame:
         con.close()
     for col in ["open", "high", "low", "close", "volume", "turnover"]:
         df[col] = pd.to_numeric(df[col], errors="coerce")
+    df = filter_market_frame(df)
     df["date"] = pd.to_datetime(df["date"])
     df["volume_lots"] = df["volume"] / 1000.0
     return df.dropna(subset=["open", "high", "low", "close"])

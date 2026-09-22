@@ -20,6 +20,8 @@ from pathlib import Path
 
 import pandas as pd
 
+from stock_universe import filter_market_frame
+
 BASE = Path(__file__).resolve().parent
 DB = BASE / "lobster_tw_6m_prices.sqlite"
 OUTPUT = BASE / "vcp_candidates.csv"
@@ -73,6 +75,7 @@ def read_market() -> pd.DataFrame:
         )
     finally:
         con.close()
+    df = filter_market_frame(df)
     for col in ("open", "high", "low", "close", "volume", "turnover"):
         df[col] = pd.to_numeric(df[col], errors="coerce")
     df["date"] = pd.to_datetime(df["date"])

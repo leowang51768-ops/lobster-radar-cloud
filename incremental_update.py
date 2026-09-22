@@ -7,6 +7,8 @@ import requests
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
+from stock_universe import AI_STOCK_CODES, AI_STOCK_COUNT
+
 DB=Path(__file__).with_name('lobster_tw_6m_prices.sqlite')
 day=dt.date.fromisoformat(sys.argv[1]) if len(sys.argv)>1 else dt.date.today()
 
@@ -68,6 +70,13 @@ ymd=day.strftime('%Y%m%d')
 tw=parse(get(f'https://www.twse.com.tw/rwd/zh/afterTrading/MI_INDEX?date={ymd}&type=ALLBUT0999&response=json'),'上市')
 otc=parse(get(f"https://www.tpex.org.tw/www/zh-tw/afterTrading/dailyQuotes?date={day.strftime('%Y/%m/%d')}&id=&response=json"),'上櫃')
 if not tw or not otc: raise SystemExit(f'Not committed: official data incomplete for {day}; TWSE={len(tw)}, TPEx={len(otc)}')
+tw=[row for row in tw if row[2] in AI_STOCK_CODES]
+otc=[row for row in otc if row[2] in AI_STOCK_CODES]
+present={row[2] for row in tw+otc}
+if len(present) < AI_STOCK_COUNT:
+    missing=sorted(AI_STOCK_CODES-present)
+    print(json.dumps({'warning':'universe stocks missing from official daily data',
+                      'missing_count':len(missing),'missing_codes':missing},ensure_ascii=False))
 
 cutoff=six_months_before(day).isoformat()
 con=sqlite3.connect(DB)
@@ -83,4 +92,7 @@ try:
 finally:
     con.close()
 
-print(json.dumps({'date':day.isoformat(),'twse_rows':len(tw),'tpex_rows':len(otc),'retention_cutoff':cutoff,'deleted_old_rows':deleted,'mode':'one-day incremental + rolling six-month retention'},ensure_ascii=False))
+print(json.dumps({'date':day.isoformat(),'twse_rows':len(tw),'tpex_rows':len(otc),
+                  'tracked_universe':AI_STOCK_COUNT,'present_universe':len(present),
+                  'retention_cutoff':cutoff,'deleted_old_rows':deleted,
+                  'mode':'fixed AI universe + one-day incremental + rolling six-month retention'},ensure_ascii=False))
