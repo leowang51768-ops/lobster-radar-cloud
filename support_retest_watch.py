@@ -66,7 +66,7 @@ def classify_latest(g):
                     if close<entry_lower: failures.append("收盤未達試單區下緣")
                     if close>entry_upper: failures.append("收盤超出試單區上緣")
                     if stop>=entry_lower: failures.append("結構停損無效")
-                    if (close-stop)/close>.08: failures.append("停損距離超過8%")
+                    # No maximum percentage distance; retain the original B-point stop.
                     if close<=float(t.open): failures.append("突破K棒未收紅（收盤未高於開盤）")
                 eligible=stage.startswith("突破B點") and not failures
                 # Historical zone is estimated consistently for every stock in the
