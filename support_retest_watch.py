@@ -11,7 +11,7 @@ from stock_universe import filter_market_frame
 BASE=Path(__file__).resolve().parent
 DB=BASE/"lobster_tw_6m_prices.sqlite"
 OUTPUT=BASE/"n_bottom_watch.csv"
-FIELDS=["date","code","name","market","stage","close","a_low","b_neckline","c_low","invalidation","volume_ratio","avg20_lots","avg20_turnover","entry_lower","entry_upper","stop_price","entry_status"]
+FIELDS=["date","code","name","market","stage","close","a_low","b_neckline","c_low","invalidation","volume_ratio","avg20_lots","avg20_turnover","entry_lower","entry_upper","stop_price","entry_status","entry_fail_reasons"]
 
 def tick(price):
     return .01 if price<10 else .05 if price<50 else .1 if price<100 else .5 if price<500 else 1 if price<1000 else 5
@@ -61,8 +61,15 @@ def classify_latest(g):
                 # N字底突破交易停損：B點頸線下方2%，向下取有效跳動單位。
                 # C點下方保留為整體型態失效價，與交易停損分開。
                 stop=round_tick(B*.98,ROUND_FLOOR)
-                eligible=(stage.startswith("突破B點") and entry_lower<=close<=entry_upper and stop<entry_lower and (close-stop)/close<=.08 and close>float(t.open))
-                candidates.append(({"entry_lower":entry_lower,"entry_upper":entry_upper,"stop_price":stop,"entry_status":"正式試單" if eligible else "僅觀察","date":str(t.date)[:10],"code":str(t.code),"name":str(t["name"]),"market":str(t.market),"stage":stage,"close":round(close,2),"a_low":round(A,2),"b_neckline":round(B,2),"c_low":round(C,2),"invalidation":round(C*.99,2),"volume_ratio":round(ratio,2),"avg20_lots":round(float(x.iloc[-20:].volume.mean()/1000),0),"avg20_turnover":round(float(x.iloc[-20:].turnover.mean()),0)},c))
+                failures=[]
+                if stage.startswith("突破B點"):
+                    if close<entry_lower: failures.append("收盤未達試單區下緣")
+                    if close>entry_upper: failures.append("收盤超出試單區上緣")
+                    if stop>=entry_lower: failures.append("結構停損無效")
+                    if (close-stop)/close>.08: failures.append("停損距離超過8%")
+                    if close<=float(t.open): failures.append("突破K棒未收紅（收盤未高於開盤）")
+                eligible=stage.startswith("突破B點") and not failures
+                candidates.append(({"entry_lower":entry_lower,"entry_upper":entry_upper,"stop_price":stop,"entry_status":"正式試單" if eligible else "僅觀察","entry_fail_reasons":"；".join(failures),"date":str(t.date)[:10],"code":str(t.code),"name":str(t["name"]),"market":str(t.market),"stage":stage,"close":round(close,2),"a_low":round(A,2),"b_neckline":round(B,2),"c_low":round(C,2),"invalidation":round(C*.99,2),"volume_ratio":round(ratio,2),"avg20_lots":round(float(x.iloc[-20:].volume.mean()/1000),0),"avg20_turnover":round(float(x.iloc[-20:].turnover.mean()),0)},c))
     if not candidates:return None
     return max(candidates,key=lambda item: ({"突破B點｜當日收盤確認":3,"接近B點":2,"C點形成":1}[item[0]["stage"]],item[1]))[0]
 
