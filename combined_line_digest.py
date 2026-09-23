@@ -95,8 +95,8 @@ def collect(day):
     for r in rows("vcp_candidates.csv", day):
         stage=r.get("vcp_stage", "")
         breakout=stage == "當日突破"
-        if stage not in ("當日突破", "突破後回踩"):
-            continue  # Do not crowd five slots with pre-breakout watch candidates.
+        if stage not in ("當日突破", "突破後回踩") or r.get("line_eligible") != "1":
+            continue  # Observations with excessive risk/low RR never occupy LINE slots.
         candidates.append(dict(
             code=r["code"], name=r["name"], route="VCP", stage=stage,
             day=day if breakout else "",close=number(r.get("close")),
