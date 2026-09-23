@@ -27,8 +27,8 @@ FIELDS = ("date", "code", "name", "close", "near_high_20_pct",
           "range20_pct", "range40_pct", "compression_ratio",
           "volume_lots", "avg20_lots", "avg20_turnover",
           "volume_vs_avg20", "volume_note", "trend_note", "stage", "action")
-MIN_LOTS = 300
-MIN_TURNOVER = 30_000_000
+MIN_LOTS = 1000
+MIN_TURNOVER = 100_000_000
 
 
 def read_market():
