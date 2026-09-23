@@ -130,6 +130,8 @@ def collect(day):
             breakout=True, within=r.get("entry_status")=="正式試單",
             entry_lower=number(r.get("entry_lower")), entry_upper=number(r.get("entry_upper")),
             source_fail_reasons=r.get("entry_fail_reasons", ""),
+            zone_lower=r.get("structure_zone_lower", ""),
+            zone_upper=r.get("structure_zone_upper", ""),
         ))
     return [apply_structure_risk(candidate) for candidate in candidates]
 
@@ -251,11 +253,18 @@ def format_message(day, selected, count, diagnostic_rows=None):
             f"停損距離{r['risk_pct']:.2f}%｜上限{MAX_STOP_DISTANCE_PCT:g}%"
             if r.get("risk_pct") is not None else "停損距離無法計算"
         )
+        zone_line = ""
+        if r["route"] == "N字底":
+            lo, hi = number(r.get("zone_lower")), number(r.get("zone_upper"))
+            zone_line = (f"\n歷史壓力轉支撐區{lo:g}～{hi:g}｜近期突破價（B點）{r['pivot']:g}"
+                         if lo > 0 and hi == r["pivot"] and lo < hi
+                         else f"\n歷史壓力轉支撐區待確認｜近期突破價（B點）{r['pivot']:g}")
         lines.append(
             f"\n{i}. {r['code']} {r['name']}｜{r['route']}｜{r['stage']}"
             f"\n{date_label}"
             f"\n收盤{r['close']:g}｜" 
             f"{'突破支撐（原壓力價）' if r['breakout'] else '關鍵觸發價'}{r['pivot']:g}"
+            f"{zone_line}"
             f"｜量比{r['volume_ratio']:.2f}x（破底翻20日基準；VCP／N字底5日基準）"
             f"\n{stop_label}｜{risk_label}"
             f"\n結構風報比{rr_label}｜{r['status']}"
