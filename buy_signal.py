@@ -1073,6 +1073,9 @@ def main() -> int:
                 f"策略來源：{row['strategy_source']}",
                 f"階段：{row.get('entry_stage', 'C點站回｜早期試單')}｜收盤：{row.get('close', '')}",
             ]
+            if (row["signal_route"].startswith("破底翻")
+                    and row.get("neckline_status") == "當日收盤突破壓力頸線（量比≥1.2）"):
+                lines.append(f"🚀 突破日：{row['date']}｜當日收盤確認突破頸線")
             if row["signal_route"] == "Price Action":
                 lines += [
                     f"觸發：{row.get('confirmation_mode', '')}",
