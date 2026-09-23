@@ -58,8 +58,8 @@ def classify_latest(g):
                 if stage.startswith("突破B點") and ratio<1.2: continue
                 entry_lower=round_tick(B*1.005,ROUND_CEILING)
                 entry_upper=round_tick(B*1.03,ROUND_FLOOR)
-                stop=round_tick(C*.99,ROUND_FLOOR)
-                eligible=(stage.startswith("突破B點") and entry_lower<=close<=entry_upper and stop<entry_lower and close>float(t.open))
+                # N字底突破交易停損：B點頸線下方2%，向下取有效跳動單位。\n                # C點下方保留為整體型態失效價，與交易停損分開。\n                stop=round_tick(B*.98,ROUND_FLOOR)
+                eligible=(stage.startswith("突破B點") and entry_lower<=close<=entry_upper and stop<entry_lower and (close-stop)/close<=.08 and close>float(t.open))
                 candidates.append(({"entry_lower":entry_lower,"entry_upper":entry_upper,"stop_price":stop,"entry_status":"正式試單" if eligible else "僅觀察","date":str(t.date)[:10],"code":str(t.code),"name":str(t["name"]),"market":str(t.market),"stage":stage,"close":round(close,2),"a_low":round(A,2),"b_neckline":round(B,2),"c_low":round(C,2),"invalidation":round(C*.99,2),"volume_ratio":round(ratio,2),"avg20_lots":round(float(x.iloc[-20:].volume.mean()/1000),0),"avg20_turnover":round(float(x.iloc[-20:].turnover.mean()),0)},c))
     if not candidates:return None
     return max(candidates,key=lambda item: ({"突破B點｜當日收盤確認":3,"接近B點":2,"C點形成":1}[item[0]["stage"]],item[1]))[0]
