@@ -448,8 +448,9 @@ def make_row(x: pd.DataFrame, i: int, profile: dict, stage: str,
     support_lower = contraction_floor
     support_upper = contraction_floor
     stop_price = contraction_floor * (1.0 - PIVOT_STOP_BUFFER)
-    stop_distance = close / stop_price - 1.0 if stop_price > 0 else math.inf
-    if stop_distance > 0.10:
+    # Same 8% close-to-structure-stop risk definition as the combined LINE digest.
+    stop_distance = (close - stop_price) / close if close > 0 and stop_price > 0 else math.inf
+    if not 0 <= stop_distance <= 0.08:
         return None
     upper_pivot = upper_pivot_before(x, i, pivot, close)
     upside_pct = None
