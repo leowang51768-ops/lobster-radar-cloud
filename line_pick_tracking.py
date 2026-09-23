@@ -63,7 +63,7 @@ def store_notification(signal_date, selected):
                  risk_pct=pick["risk_pct"],volume_ratio=pick["volume_ratio"],
                  breakout_date=pick["day"],status=pick["status"],
                  entry_basis="signal_day_close_paper",
-                 notification_version="combined-top5-v1")
+                 notification_version="combined-top10-v1")
         old.append(row)
         seen.add(key)
         added+=1
