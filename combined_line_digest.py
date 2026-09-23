@@ -178,7 +178,8 @@ def format_message(day, selected, count):
         lines.append(
             f"\n{i}. {r['code']} {r['name']}｜{r['route']}｜{r['stage']}"
             f"\n{date_label}"
-            f"\n收盤{r['close']:g}｜突破樞紐／觸發價{r['pivot']:g}"
+            f"\n收盤{r['close']:g}｜" 
+            f"{'突破支撐（原壓力價）' if r['breakout'] else '關鍵觸發價'}{r['pivot']:g}"
             f"｜量比{r['volume_ratio']:.2f}x（破底翻20日基準；VCP／N字底5日基準）"
             f"\n{stop_label}｜{risk_label}"
             f"\n結構風報比{rr_label}｜{r['status']}"
