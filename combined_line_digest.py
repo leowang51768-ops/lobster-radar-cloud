@@ -45,9 +45,8 @@ def market_date():
 
 
 
-# Confirmed cap: 8% from the signal-day close to the ORIGINAL
-# strategy structure stop. A tighter stop is never invented to satisfy the cap.
-MAX_STOP_DISTANCE_PCT = 8.0
+# Entry requires a valid original structural stop, but no maximum stop-distance.
+# Keep the actual distance visible so users can judge position risk.
 
 
 def apply_structure_risk(candidate):
@@ -61,13 +60,7 @@ def apply_structure_risk(candidate):
         return candidate
     risk_pct = (close-stop)/close*100
     candidate["risk_pct"] = round(risk_pct, 2)
-    candidate["risk_ok"] = risk_pct <= MAX_STOP_DISTANCE_PCT
-    if not candidate["risk_ok"]:
-        candidate["within"] = False
-        candidate["status"] = (
-            f"風險超限（>{MAX_STOP_DISTANCE_PCT:g}%）僅觀察；"
-            "原策略訊號與歷史績效紀錄不變"
-        )
+    candidate["risk_ok"] = True  # Valid structural stop; no percentage cap.
     return candidate
 
 
@@ -199,7 +192,7 @@ def rank(candidate):
 
 
 def choose(candidates, limit=MAX_STOCKS):
-    """Only actionable price-zone candidates within the 8% risk cap use LINE slots.
+    """Only actionable price-zone candidates with valid structural stops use LINE slots.
 
     Every observation, out-of-range entry and over-cap signal stays in its
     originating scanner CSV, rather than displacing qualified candidates.
@@ -230,7 +223,7 @@ def candidate_diagnosis(candidate):
         if risk is None:
             reasons.append("結構停損無效或價格資料不足")
         else:
-            reasons.append(f"風險超限：停損距離{risk:.2f}%（超過8%）")
+            reasons.append("結構停損無效")
     if upper is not None and number(upper)>0 and close>number(upper):
         excess = (close/number(upper)-1)*100
         reasons.append(f"超出試單區上緣{excess:.2f}%（上緣{number(upper):g}）")
@@ -281,16 +274,16 @@ def write_diagnostics(day, candidates, selected):
 
 def format_message(day, selected, count, diagnostic_rows=None):
     lines=[f"🦞 龍蝦雷達｜三策略合併精選｜{day}",
-           f"先篩買點區＋停損距離≤{MAX_STOP_DISTANCE_PCT:g}%，再依突破品質排序｜最多{MAX_STOCKS}檔｜掃描候選{count}筆",
-           "破底翻／VCP用原結構停損；N字底用B點下方2%。不符試單區或風險上限者保留CSV，不占LINE名額。"]
+           f"先篩策略買點區與有效結構停損，再依突破品質排序｜最多{MAX_STOCKS}檔｜掃描候選{count}筆",
+           "破底翻／VCP用原結構停損；N字底用B點下方2%。停損距離僅顯示、不設8%入選上限；不符試單區者保留CSV。"]
     if diagnostic_rows is not None:
         excluded=[r for r in diagnostic_rows if not r["selected"]]
-        risk_count=sum("風險超限" in r["exclusion_reasons"] or "結構停損無效" in r["exclusion_reasons"] for r in excluded)
+        risk_count=sum("結構停損無效" in r["exclusion_reasons"] for r in excluded)
         range_count=sum("超出試單區" in r["exclusion_reasons"] or "低於試單區" in r["exclusion_reasons"] for r in excluded)
-        other_count=sum(not ("風險超限" in r["exclusion_reasons"] or "結構停損無效" in r["exclusion_reasons"] or "超出試單區" in r["exclusion_reasons"] or "低於試單區" in r["exclusion_reasons"]) for r in excluded)
-        lines.append(f"排除診斷：{len(excluded)}筆未入選｜風險超限/停損無效{risk_count}｜試單區外{range_count}｜其他{other_count}（原因可重疊；逐檔詳見line_scan_diagnostics.csv）")
+        other_count=sum(not ("結構停損無效" in r["exclusion_reasons"] or "超出試單區" in r["exclusion_reasons"] or "低於試單區" in r["exclusion_reasons"]) for r in excluded)
+        lines.append(f"排除診斷：{len(excluded)}筆未入選｜停損無效{risk_count}｜試單區外{range_count}｜其他{other_count}（原因可重疊；逐檔詳見line_scan_diagnostics.csv）")
     if not selected:
-        lines.append("當日無同時符合買點區與8%停損距離的股票；其他候選保留在CSV。")
+        lines.append("當日無符合策略買點區及有效結構停損的股票；其他候選保留在CSV。")
     for i,r in enumerate(selected,1):
         date_label=(f"🚀 突破日：{r['day']}｜當日收盤確認" if r["breakout"]
                     else f"觀察日：{day}｜非當日突破")
@@ -298,7 +291,7 @@ def format_message(day, selected, count, diagnostic_rows=None):
         stop_label = (f"B點下方2%停損{r['stop']:g}" if r["route"] == "N字底"
                       else f"結構停損{r['stop']:g}")
         risk_label = (
-            f"停損距離{r['risk_pct']:.2f}%｜上限{MAX_STOP_DISTANCE_PCT:g}%"
+            f"停損距離{r['risk_pct']:.2f}%（無8%入選上限）"
             if r.get("risk_pct") is not None else "停損距離無法計算"
         )
         lo, hi = number(r.get("zone_lower")), number(r.get("zone_upper"))
