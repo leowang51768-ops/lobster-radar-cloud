@@ -198,7 +198,7 @@ jobs:
           git config user.name "lobster-radar-cloud"
           git config user.email "actions@github.com"
 
-          for f in lobster_tw_6m_prices.sqlite fundamental_support.json signal_state.json candidate_status.csv vcp_candidates.csv vcp_early_watch.csv n_bottom_watch.csv formal_recommendations.csv line_pick_snapshots.csv line_pick_performance.csv; do
+          for f in lobster_tw_6m_prices.sqlite fundamental_support.json signal_state.json candidate_status.csv vcp_candidates.csv vcp_early_watch.csv n_bottom_watch.csv line_scan_diagnostics.csv formal_recommendations.csv line_pick_snapshots.csv line_pick_performance.csv; do
             if [ -e "$f" ]; then
               git add "$f"
             fi
