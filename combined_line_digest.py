@@ -16,6 +16,8 @@ from pathlib import Path
 
 BASE = Path(__file__).resolve().parent
 MAX_STOCKS = 5
+DIAGNOSTICS = BASE / "line_scan_diagnostics.csv"
+DIAG_FIELDS = ["date", "code", "name", "route", "stage", "close", "entry_lower", "entry_upper", "entry_excess_pct", "stop_price", "stop_distance_pct", "risk_ok", "within_entry", "line_eligible", "selected", "exclusion_reasons"]
 
 
 def rows(filename, day):
@@ -91,12 +93,15 @@ def collect(day):
             stop=number(r.get("failure_level") or r.get("stop_price")),
             status="正式買點" if formal else "僅觀察",
             breakout=breakout, within=bool(formal),
+            entry_lower=number(r.get("trigger_level")) if formal else None,
+            entry_upper=None,
+            source_fail_reasons="" if formal else "破底翻：僅突破頸線，尚未符合正式結構買點",
         ))
     for r in rows("vcp_candidates.csv", day):
         stage=r.get("vcp_stage", "")
         breakout=stage == "當日突破"
-        if stage not in ("當日突破", "突破後回踩") or r.get("line_eligible") != "1":
-            continue  # Observations with excessive risk/low RR never occupy LINE slots.
+        if stage not in ("當日突破", "突破後回踩"):
+            continue  # Pre-breakout observations stay in their scanner CSV.
         candidates.append(dict(
             code=r["code"], name=r["name"], route="VCP", stage=stage,
             day=day if breakout else "",close=number(r.get("close")),
@@ -104,7 +109,9 @@ def collect(day):
             rr=number(r.get("reward_risk_ratio"), -1),
             quality=number(r.get("quality_score"))/100,
             stop=number(r.get("stop_price")), status="僅觀察",
-            breakout=breakout, within=number(r.get("distance_to_pivot_pct"),999)<=3,
+            breakout=breakout, within=number(r.get("distance_to_pivot_pct"),999)<=3 and r.get("line_eligible") == "1",
+            entry_lower=None, entry_upper=number(r.get("pivot"))*1.03,
+            source_fail_reasons=("VCP：上方壓力目標風報比低於1.5" if number(r.get("reward_risk_ratio"),-1)>=0 and number(r.get("reward_risk_ratio"),-1)<1.5 else ""),
         ))
     for r in rows("n_bottom_watch.csv", day):
         if not r.get("stage", "").startswith("突破B點"):
@@ -121,6 +128,8 @@ def collect(day):
             quality=1.0 if close>pivot and close<=number(r.get("entry_upper")) else 0.0,
             stop=stop,status="試單區內（待風險驗證）" if r.get("entry_status")=="正式試單" else "僅觀察／已超試單區",
             breakout=True, within=r.get("entry_status")=="正式試單",
+            entry_lower=number(r.get("entry_lower")), entry_upper=number(r.get("entry_upper")),
+            source_fail_reasons=r.get("entry_fail_reasons", ""),
         ))
     return [apply_structure_risk(candidate) for candidate in candidates]
 
@@ -159,6 +168,67 @@ def choose(candidates, limit=MAX_STOCKS):
     return selected
 
 
+
+def candidate_diagnosis(candidate):
+    """Explain disqualification without changing which stocks are selected."""
+    reasons = []
+    close = number(candidate.get("close"))
+    lower = candidate.get("entry_lower")
+    upper = candidate.get("entry_upper")
+    risk = candidate.get("risk_pct")
+    if not candidate.get("risk_ok"):
+        if risk is None:
+            reasons.append("結構停損無效或價格資料不足")
+        else:
+            reasons.append(f"風險超限：停損距離{risk:.2f}%（超過8%）")
+    if upper is not None and number(upper)>0 and close>number(upper):
+        excess = (close/number(upper)-1)*100
+        reasons.append(f"超出試單區上緣{excess:.2f}%（上緣{number(upper):g}）")
+    elif lower is not None and number(lower)>0 and close<number(lower):
+        reasons.append(f"低於試單區下緣{(1-close/number(lower))*100:.2f}%（下緣{number(lower):g}）")
+    source = candidate.get("source_fail_reasons","")
+    if source:
+        for item in source.split("；"):
+            if item and not (item == "收盤超出試單區上緣" and any("超出試單區" in x for x in reasons)) and not (item == "收盤未達試單區下緣" and any("低於試單區" in x for x in reasons)) and not (item == "停損距離超過8%" and not candidate.get("risk_ok")):
+                reasons.append(item)
+    if not candidate.get("within") and not reasons:
+        reasons.append("其他條件未通過（掃描器未提供細項）")
+    return reasons
+
+
+def write_diagnostics(day, candidates, selected):
+    selected_codes = {r["code"] for r in selected}
+    rows_out = []
+    for r in candidates:
+        upper = r.get("entry_upper")
+        close = number(r.get("close"))
+        excess = round((close/number(upper)-1)*100, 4) if upper is not None and number(upper)>0 and close>number(upper) else ""
+        selected_flag = r["code"] in selected_codes and r in selected
+        reasons = [] if selected_flag else candidate_diagnosis(r)
+        if not selected_flag and r.get("risk_ok") and r.get("within"):
+            reasons = ["當日同股去重或超出LINE前五檔名額"]
+        rows_out.append(dict(date=day, code=r["code"],name=r["name"],route=r["route"],
+                             stage=r["stage"],close=r["close"],
+                             entry_lower=r.get("entry_lower") if r.get("entry_lower") is not None else "",
+                             entry_upper=upper if upper is not None else "",
+                             entry_excess_pct=excess,stop_price=r["stop"],
+                             stop_distance_pct=r.get("risk_pct") if r.get("risk_pct") is not None else "",
+                             risk_ok=int(bool(r.get("risk_ok"))),within_entry=int(bool(r.get("within"))),
+                             line_eligible=int(bool(r.get("risk_ok") and r.get("within"))),
+                             selected=int(selected_flag),exclusion_reasons="；".join(reasons)))
+    with DIAGNOSTICS.open("w",encoding="utf-8-sig",newline="") as handle:
+        writer=csv.DictWriter(handle,fieldnames=DIAG_FIELDS)
+        writer.writeheader()
+        writer.writerows(rows_out)
+    print("LINE_SCAN_DIAGNOSTICS "+json.dumps({"date":day,"candidates":len(rows_out),
+           "selected":len(selected),"excluded":len(rows_out)-len(selected),
+           "file":DIAGNOSTICS.name},ensure_ascii=False))
+    for r in rows_out:
+        if not r["selected"]:
+            print("LINE_EXCLUDED "+json.dumps({"code":r["code"],"name":r["name"],
+                  "route":r["route"],"reasons":r["exclusion_reasons"]},ensure_ascii=False))
+    return rows_out
+
 def format_message(day, selected, count):
     lines=[f"🦞 龍蝦雷達｜三策略合併精選｜{day}",
            f"先篩買點區＋停損距離≤{MAX_STOP_DISTANCE_PCT:g}%，再依突破品質排序｜最多{MAX_STOCKS}檔｜掃描候選{count}筆",
@@ -194,6 +264,7 @@ def main():
     day=market_date()
     candidates=collect(day)
     selected=choose(candidates)
+    diagnostic_rows=write_diagnostics(day,candidates,selected)
     print(json.dumps({"date":day,"candidate_signals":len(candidates),
                       "qualified_unique_selected":len(selected),
                       "excluded_observations":len(candidates)-len([r for r in candidates if r.get("risk_ok") is True and r.get("within") is True]),
