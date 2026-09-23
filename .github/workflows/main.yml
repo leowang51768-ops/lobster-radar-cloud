@@ -136,10 +136,10 @@ jobs:
           echo "FAIL_STAGE=VCP三階段掃描" >> "$GITHUB_ENV"
           python vcp_scan.py
 
-      - name: Scan early volatility-contraction observations and send separate LINE summary
+      - name: Scan early volatility-contraction observations (CSV only, LINE disabled)
         shell: bash
         env:
-          LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
+          LINE_CHANNEL_ACCESS_TOKEN: ""
         run: |
           echo "FAIL_STAGE=初步波動收縮觀察掃描" >> "$GITHUB_ENV"
           python vcp_early_watch.py
