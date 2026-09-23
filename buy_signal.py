@@ -63,8 +63,9 @@ PRICE_ACTION_ENGULF_GAIN_MIN = 0.02
 PRICE_ACTION_SPRING_GAIN_MIN = 0.025
 PRICE_ACTION_LOOKBACK = 40
 MAX_STRUCTURE_EXTENSION = 0.08
-MIN_VOLUME_LOTS = 300
-MIN_TURNOVER = 30_000_000
+MIN_VOLUME_LOTS = 1000
+MIN_DAILY_VOLUME_LOTS = 300
+MIN_TURNOVER = 100_000_000
 SUPPORT_BREAK_TOL = 0.005
 MIN_RISK_REWARD = 1.50
 MIN_UPSIDE_ROOM = 0.08
@@ -538,7 +539,7 @@ def detect_price_action_trigger(code: str, x: pd.DataFrame) -> tuple[dict, dict 
 
     volume_trigger = (
         liquidity_ok
-        and current_lots >= MIN_VOLUME_LOTS
+        and current_lots >= MIN_DAILY_VOLUME_LOTS
         and volume_ratio_5d >= PRICE_ACTION_VOLUME_RATIO_MIN
     )
     above_ma5 = pd.notna(t.ma5) and close > float(t.ma5)
@@ -641,7 +642,7 @@ def detect_price_action_trigger(code: str, x: pd.DataFrame) -> tuple[dict, dict 
     evidence = [
         ("站上5MA", above_ma5),
         ("紅K實體≥1%", bullish_body),
-        ("成交量≥300張", current_lots >= MIN_VOLUME_LOTS),
+        ("當日成交量≥300張（另須20日均量≥1000張）", current_lots >= MIN_DAILY_VOLUME_LOTS),
         ("5日量比≥1.3x", volume_ratio_5d >= PRICE_ACTION_VOLUME_RATIO_MIN),
         ("看漲吞噬", bullish_engulfing),
         ("20日破底翻強攻", spring),
