@@ -69,11 +69,9 @@ def classify_latest(g):
                     if (close-stop)/close>.08: failures.append("停損距離超過8%")
                     if close<=float(t.open): failures.append("突破K棒未收紅（收盤未高於開盤）")
                 eligible=stage.startswith("突破B點") and not failures
-                # Separately documented chart zone; never use it to alter B or the stop.
-                # Scope the manually checked interval to this exact stock/date/setup.
+                # Historical zone is estimated consistently for every stock in the
+                # consolidated digest; never let it change B or the trade stop.
                 zone_lower, zone_upper, zone_source = "", "", ""
-                if str(t.code) == "2368" and str(t.date)[:10] == "2026-09-23" and B == 1130.0:
-                    zone_lower, zone_upper, zone_source = 1070.0, 1130.0, "使用者圖表確認（僅2026-09-23）"
                 candidates.append(({"entry_lower":entry_lower,"entry_upper":entry_upper,"stop_price":stop,"entry_status":"正式試單" if eligible else "僅觀察","entry_fail_reasons":"；".join(failures),"structure_zone_lower":zone_lower,"structure_zone_upper":zone_upper,"structure_zone_source":zone_source,"date":str(t.date)[:10],"code":str(t.code),"name":str(t["name"]),"market":str(t.market),"stage":stage,"close":round(close,2),"a_low":round(A,2),"b_neckline":round(B,2),"c_low":round(C,2),"invalidation":round(C*.99,2),"volume_ratio":round(ratio,2),"avg20_lots":round(float(x.iloc[-20:].volume.mean()/1000),0),"avg20_turnover":round(float(x.iloc[-20:].turnover.mean()),0)},c))
     if not candidates:return None
     return max(candidates,key=lambda item: ({"突破B點｜當日收盤確認":3,"接近B點":2,"C點形成":1}[item[0]["stage"]],item[1]))[0]
