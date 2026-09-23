@@ -215,6 +215,10 @@ def main():
                  "Content-Type":"application/json; charset=UTF-8"})
     with urllib.request.urlopen(request,timeout=30) as response:
         print("Combined LINE status:",response.status)
+    # Only the stocks in the successfully accepted daily LINE message become
+    # immutable tracking samples; scans and observations do not count.
+    from line_pick_tracking import store_notification
+    store_notification(day, selected)
     return 0
 
 
