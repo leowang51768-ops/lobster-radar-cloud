@@ -451,11 +451,9 @@ def make_row(x: pd.DataFrame, i: int, profile: dict, stage: str,
     support_lower = contraction_floor
     support_upper = contraction_floor
     stop_price = contraction_floor * (1.0 - PIVOT_STOP_BUFFER)
-    # Same 8% close-to-structure-stop risk definition as the combined LINE digest.
+    # Keep the original contraction-based stop and show its distance; no 8% cap.
     stop_distance = (close - stop_price) / close if close > 0 and stop_price > 0 else math.inf
-    # Preserve valid VCP shapes as observations even if not actionable today.
-    # The combined LINE digest applies the unchanged <=8% stop-distance cap.
-    risk_ok = 0 <= stop_distance <= 0.08
+    risk_ok = math.isfinite(stop_distance) and stop_distance > 0
     upper_pivot = upper_pivot_before(x, i, pivot, close)
     upside_pct = None
     reward_risk = None
@@ -484,7 +482,7 @@ def make_row(x: pd.DataFrame, i: int, profile: dict, stage: str,
         explanation = f"突破後第{i - int(breakout_i)}日量縮回踩，收盤守住樞紐支撐"
         action = "VCP回踩確認；列高優先觀察，正式採用前仍須完成獨立回測"
     if not risk_ok:
-        action += "｜結構停損距離超過8%或無效，僅觀察、不進LINE"
+        action += "｜結構停損無效，僅觀察、不進LINE"
     if not rr_ok:
         action += "｜上方樞紐推估風報比低於1.5，僅觀察、不進LINE"
     # Quality now rewards verified structural completeness, not merely the
