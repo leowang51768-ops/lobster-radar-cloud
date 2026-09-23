@@ -139,7 +139,7 @@ def format_message(day, selected, count):
             f"\n{i}. {r['code']} {r['name']}｜{r['route']}｜{r['stage']}"
             f"\n{date_label}"
             f"\n收盤{r['close']:g}｜突破樞紐／觸發價{r['pivot']:g}"
-            f"｜5日量比{r['volume_ratio']:.2f}x"
+            f"｜量比{r['volume_ratio']:.2f}x（破底翻20日基準；VCP／N字底5日基準）"
             f"\n停損參考{r['stop']:g}｜風報比{rr_label}｜{r['status']}"
         )
     message="\n".join(lines)
