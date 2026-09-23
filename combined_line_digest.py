@@ -43,63 +43,30 @@ def market_date():
 
 
 
-def tick(price):
-    """Tick step for the ordinary TW equity price bands."""
-    if price < 10:
-        return 0.01
-    if price < 50:
-        return 0.05
-    if price < 100:
-        return 0.1
-    if price < 500:
-        return 0.5
-    if price < 1000:
-        return 1.0
-    return 5.0
+# Provisional configurable cap: 8% from the signal-day close to the ORIGINAL
+# strategy structure stop. A tighter stop is never invented to satisfy the cap.
+MAX_STOP_DISTANCE_PCT = 8.0
 
 
-def attach_ma20_stops(day, selected):
-    """Use completed trade-day MA20 and the immediately lower valid price tick.
-
-    Only changes LINE display, not the immutable structural stop used for
-    existing formal recommendation records and their performance history.
-    """
-    if not selected:
-        return
-    with sqlite3.connect(BASE / "lobster_tw_6m_prices.sqlite") as con:
-        for item in selected:
-            closes = con.execute(
-                "SELECT close FROM prices WHERE stock_id=? AND date<=? "
-                "ORDER BY date DESC LIMIT 20", (item["code"], day)
-            ).fetchall()
-            if len(closes) < 20:
-                item["ma20"] = None
-                item["stop20"] = None
-                item["ma20_note"] = "20日收盤資料不足"
-                continue
-            ma20 = sum(float(r[0]) for r in closes) / 20
-            if not math.isfinite(ma20) or ma20 <= 0:
-                item["ma20"] = None
-                item["stop20"] = None
-                item["ma20_note"] = "20MA資料異常"
-                continue
-            # Prices below 20MA are rounded DOWN to the legal equity tick,
-            # never rounded to 20MA itself or to an above-MA quote.
-            unit = tick(ma20)
-            lower = math.floor(round(ma20 / unit, 10)) * unit
-            if lower >= ma20 - 1e-8:
-                lower -= unit
-            # Re-evaluate tick around a band boundary, conservatively downward.
-            lower = round(lower, 2)
-            while lower > 0 and (lower >= ma20 or
-                    abs(round(lower/tick(lower))*tick(lower)-lower)>1e-7):
-                lower = round(lower - tick(lower), 2)
-            item["ma20"] = round(ma20, 2)
-            item["stop20"] = lower if lower > 0 else None
-            item["ma20_note"] = (
-                "收盤未站上20MA，無有效20MA下方多單停損參考"
-                if item["close"] <= ma20 else ""
-            )
+def apply_structure_risk(candidate):
+    close = number(candidate.get("close"))
+    stop = number(candidate.get("stop"))
+    if close <= 0 or stop <= 0 or stop >= close:
+        candidate["risk_pct"] = None
+        candidate["risk_ok"] = False
+        candidate["within"] = False
+        candidate["status"] = "結構停損無效／無法估算風險，僅觀察"
+        return candidate
+    risk_pct = (close-stop)/close*100
+    candidate["risk_pct"] = round(risk_pct, 2)
+    candidate["risk_ok"] = risk_pct <= MAX_STOP_DISTANCE_PCT
+    if not candidate["risk_ok"]:
+        candidate["within"] = False
+        candidate["status"] = (
+            f"風險超限（>{MAX_STOP_DISTANCE_PCT:g}%）僅觀察；"
+            "原策略訊號與歷史績效紀錄不變"
+        )
+    return candidate
 
 
 def collect(day):
@@ -155,7 +122,7 @@ def collect(day):
             stop=stop,status="試單區內（待風險驗證）" if r.get("entry_status")=="正式試單" else "僅觀察／已超試單區",
             breakout=True, within=r.get("entry_status")=="正式試單",
         ))
-    return candidates
+    return [apply_structure_risk(candidate) for candidate in candidates]
 
 
 def rank(candidate):
@@ -188,26 +155,25 @@ def choose(candidates, limit=MAX_STOCKS):
 def format_message(day, selected, count):
     lines=[f"🦞 龍蝦雷達｜三策略合併精選｜{day}",
            f"突破品質優先｜最多{MAX_STOCKS}檔｜候選訊號{count}筆（同股去重）",
-           "觀察與正式買點分開標示；非當日突破不得標示突破日。"]
+           f"結構停損＋停損距離上限{MAX_STOP_DISTANCE_PCT:g}%（暫定）；超限僅觀察。非當日突破不標示突破日。"]
     if not selected:
         lines.append("當日無符合突破／買點通知條件的股票。")
     for i,r in enumerate(selected,1):
         date_label=(f"🚀 突破日：{r['day']}｜當日收盤確認" if r["breakout"]
                     else f"觀察日：{day}｜非當日突破")
         rr_label=f"{r['rr']:.2f}" if r["rr"] >= 0 else "未驗證"
-        stop_label = (
-            f"當日20MA{r['ma20']:g}｜20MA下方一檔停損參考{r['stop20']:g}"
-            if r.get("stop20") is not None
-            else f"20MA停損無法計算：{r.get('ma20_note', '資料不足')}"
+        stop_label = f"結構停損{r['stop']:g}"
+        risk_label = (
+            f"停損距離{r['risk_pct']:.2f}%｜上限{MAX_STOP_DISTANCE_PCT:g}%"
+            if r.get("risk_pct") is not None else "停損距離無法計算"
         )
-        note = f"｜⚠️{r['ma20_note']}" if r.get("ma20_note") else ""
         lines.append(
             f"\n{i}. {r['code']} {r['name']}｜{r['route']}｜{r['stage']}"
             f"\n{date_label}"
             f"\n收盤{r['close']:g}｜突破樞紐／觸發價{r['pivot']:g}"
             f"｜量比{r['volume_ratio']:.2f}x（破底翻20日基準；VCP／N字底5日基準）"
-            f"\n{stop_label}｜原結構停損{r['stop']:g}"
-            f"\n原風報比{rr_label}（非20MA停損重算）｜{r['status']}{note}"
+            f"\n{stop_label}｜{risk_label}"
+            f"\n結構風報比{rr_label}｜{r['status']}"
         )
     message="\n".join(lines)
     if len(message)>4900:
@@ -222,7 +188,6 @@ def main():
     print(json.dumps({"date":day,"candidate_signals":len(candidates),
                       "unique_selected":len(selected),
                       "selected":[r["code"] for r in selected]},ensure_ascii=False))
-    attach_ma20_stops(day, selected)
     message=format_message(day,selected,len(candidates))
     token=os.getenv("LINE_CHANNEL_ACCESS_TOKEN","").strip()
     if not token:
