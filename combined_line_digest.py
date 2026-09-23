@@ -42,6 +42,66 @@ def market_date():
     return str(value)[:10]
 
 
+
+def tick(price):
+    """Tick step for the ordinary TW equity price bands."""
+    if price < 10:
+        return 0.01
+    if price < 50:
+        return 0.05
+    if price < 100:
+        return 0.1
+    if price < 500:
+        return 0.5
+    if price < 1000:
+        return 1.0
+    return 5.0
+
+
+def attach_ma20_stops(day, selected):
+    """Use completed trade-day MA20 and the immediately lower valid price tick.
+
+    Only changes LINE display, not the immutable structural stop used for
+    existing formal recommendation records and their performance history.
+    """
+    if not selected:
+        return
+    with sqlite3.connect(BASE / "lobster_tw_6m_prices.sqlite") as con:
+        for item in selected:
+            closes = con.execute(
+                "SELECT close FROM prices WHERE stock_id=? AND date<=? "
+                "ORDER BY date DESC LIMIT 20", (item["code"], day)
+            ).fetchall()
+            if len(closes) < 20:
+                item["ma20"] = None
+                item["stop20"] = None
+                item["ma20_note"] = "20日收盤資料不足"
+                continue
+            ma20 = sum(float(r[0]) for r in closes) / 20
+            if not math.isfinite(ma20) or ma20 <= 0:
+                item["ma20"] = None
+                item["stop20"] = None
+                item["ma20_note"] = "20MA資料異常"
+                continue
+            # Prices below 20MA are rounded DOWN to the legal equity tick,
+            # never rounded to 20MA itself or to an above-MA quote.
+            unit = tick(ma20)
+            lower = math.floor(round(ma20 / unit, 10)) * unit
+            if lower >= ma20 - 1e-8:
+                lower -= unit
+            # Re-evaluate tick around a band boundary, conservatively downward.
+            lower = round(lower, 2)
+            while lower > 0 and (lower >= ma20 or
+                    abs(round(lower/tick(lower))*tick(lower)-lower)>1e-7):
+                lower = round(lower - tick(lower), 2)
+            item["ma20"] = round(ma20, 2)
+            item["stop20"] = lower if lower > 0 else None
+            item["ma20_note"] = (
+                "收盤未站上20MA，無有效20MA下方多單停損參考"
+                if item["close"] <= ma20 else ""
+            )
+
+
 def collect(day):
     candidates = []
     # A break-bottom C-point buy is not itself a neckline breakout.
@@ -135,12 +195,19 @@ def format_message(day, selected, count):
         date_label=(f"🚀 突破日：{r['day']}｜當日收盤確認" if r["breakout"]
                     else f"觀察日：{day}｜非當日突破")
         rr_label=f"{r['rr']:.2f}" if r["rr"] >= 0 else "未驗證"
+        stop_label = (
+            f"當日20MA{r['ma20']:g}｜20MA下方一檔停損參考{r['stop20']:g}"
+            if r.get("stop20") is not None
+            else f"20MA停損無法計算：{r.get('ma20_note', '資料不足')}"
+        )
+        note = f"｜⚠️{r['ma20_note']}" if r.get("ma20_note") else ""
         lines.append(
             f"\n{i}. {r['code']} {r['name']}｜{r['route']}｜{r['stage']}"
             f"\n{date_label}"
             f"\n收盤{r['close']:g}｜突破樞紐／觸發價{r['pivot']:g}"
             f"｜量比{r['volume_ratio']:.2f}x（破底翻20日基準；VCP／N字底5日基準）"
-            f"\n停損參考{r['stop']:g}｜風報比{rr_label}｜{r['status']}"
+            f"\n{stop_label}｜原結構停損{r['stop']:g}"
+            f"\n原風報比{rr_label}（非20MA停損重算）｜{r['status']}{note}"
         )
     message="\n".join(lines)
     if len(message)>4900:
@@ -155,6 +222,7 @@ def main():
     print(json.dumps({"date":day,"candidate_signals":len(candidates),
                       "unique_selected":len(selected),
                       "selected":[r["code"] for r in selected]},ensure_ascii=False))
+    attach_ma20_stops(day, selected)
     message=format_message(day,selected,len(candidates))
     token=os.getenv("LINE_CHANNEL_ACCESS_TOKEN","").strip()
     if not token:
