@@ -25,7 +25,7 @@ def classify_latest(g):
     x=g.sort_values("date").reset_index(drop=True)
     if len(x)<65: return None
     t=x.iloc[-1]; i=len(x)-1
-    if not (x.iloc[-20:].volume.mean()/1000>=300 and x.iloc[-20:].turnover.mean()>=30000000): return None
+    if not (x.iloc[-20:].volume.mean()/1000>=1000 and x.iloc[-20:].turnover.mean()>=100000000): return None
     close=float(t.close)
     # A、B、C 依時間順序尋找：A為局部低點，B為反彈高點，C為較高的第二底。
     # 僅採用C點已過至少兩根K棒的候選，避免以當日低點誤判已止跌。
