@@ -153,6 +153,12 @@ jobs:
           echo "FAIL_STAGE=三策略五檔合併LINE通知" >> "$GITHUB_ENV"
           python combined_line_digest.py
 
+      - name: Update daily LINE pick performance (5 10 20 sessions)
+        shell: bash
+        run: |
+          echo "FAIL_STAGE=LINE推薦績效更新" >> "$GITHUB_ENV"
+          python line_pick_tracking.py
+
       - name: Final health check
         run: |
           echo "FAIL_STAGE=最終健康檢查" >> "$GITHUB_ENV"
@@ -192,7 +198,7 @@ jobs:
           git config user.name "lobster-radar-cloud"
           git config user.email "actions@github.com"
 
-          for f in lobster_tw_6m_prices.sqlite fundamental_support.json signal_state.json candidate_status.csv vcp_candidates.csv vcp_early_watch.csv n_bottom_watch.csv formal_recommendations.csv; do
+          for f in lobster_tw_6m_prices.sqlite fundamental_support.json signal_state.json candidate_status.csv vcp_candidates.csv vcp_early_watch.csv n_bottom_watch.csv formal_recommendations.csv line_pick_snapshots.csv line_pick_performance.csv; do
             if [ -e "$f" ]; then
               git add "$f"
             fi
