@@ -5747,7 +5747,7 @@
       "support_source": "突破平台上緣轉支撐"
     }
   },
-  "updated_at": "2026-09-23T05:13:37.737033+00:00",
+  "updated_at": "2026-09-23T06:22:28.763426+00:00",
   "latest_trade_date": "2026-09-22",
   "layer1_candidate_count": 187,
   "stage_counts": {
@@ -5779,11 +5779,11 @@
   },
   "strategy_version": "龍蝦買點-v14-破底翻+PriceAction",
   "four_point_rule": "已取消",
-  "candidate_count": 63,
+  "candidate_count": 60,
   "formal_buy_signal_count": 0,
   "route_counts": {
     "破底翻": 50,
-    "Price Action": 13
+    "Price Action": 10
   },
   "exit_warning_keys": {
     "突破後站穩:2026-09-16:69.90:假突破觀察": "2026-09-18",
