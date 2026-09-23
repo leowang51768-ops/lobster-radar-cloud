@@ -110,28 +110,21 @@ jobs:
           assert required.issubset(set(cols)), f"Unexpected prices schema: {cols}"
           PY
 
-      - name: Evaluate integrated Lobster buy points and send one LINE alert with retry
+      # Keep each strategy's scanner and formal performance bookkeeping, but
+      # suppress their individual stock broadcasts. One combined digest below
+      # is the sole LINE stock-list sender (maximum five distinct tickers).
+      - name: Evaluate integrated Lobster buy points (CSV and tracking only)
         shell: bash
         env:
-          LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
+          LINE_CHANNEL_ACCESS_TOKEN: ""
         run: |
-          echo "FAIL_STAGE=買點判斷與LINE通知" >> "$GITHUB_ENV"
-          for attempt in 1 2; do
-            echo "Signal evaluation attempt $attempt/2"
-            if python buy_signal.py; then
-              exit 0
-            fi
-            if [ "$attempt" -lt 2 ]; then
-              echo "Signal evaluation failed; wait 10 seconds and retry once."
-              sleep 10
-            fi
-          done
-          exit 1
+          echo "FAIL_STAGE=破底翻及正式買點掃描" >> "$GITHUB_ENV"
+          python buy_signal.py
 
-      - name: Scan VCP stages and send one LINE summary
+      - name: Scan VCP stages (CSV only)
         shell: bash
         env:
-          LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
+          LINE_CHANNEL_ACCESS_TOKEN: ""
         run: |
           echo "FAIL_STAGE=VCP三階段掃描" >> "$GITHUB_ENV"
           python vcp_scan.py
@@ -144,13 +137,21 @@ jobs:
           echo "FAIL_STAGE=初步波動收縮觀察掃描" >> "$GITHUB_ENV"
           python vcp_early_watch.py
 
-      - name: Scan N-bottom observations and send one LINE summary
+      - name: Scan N-bottom observations (CSV and tracking only)
+        shell: bash
+        env:
+          LINE_CHANNEL_ACCESS_TOKEN: ""
+        run: |
+          echo "FAIL_STAGE=N字底掃描" >> "$GITHUB_ENV"
+          python support_retest_watch.py
+
+      - name: Send one combined top-five LINE stock digest
         shell: bash
         env:
           LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
         run: |
-          echo "FAIL_STAGE=N字底觀察掃描" >> "$GITHUB_ENV"
-          python support_retest_watch.py
+          echo "FAIL_STAGE=三策略五檔合併LINE通知" >> "$GITHUB_ENV"
+          python combined_line_digest.py
 
       - name: Final health check
         run: |
