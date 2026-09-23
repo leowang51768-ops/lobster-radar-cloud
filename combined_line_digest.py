@@ -229,10 +229,16 @@ def write_diagnostics(day, candidates, selected):
                   "route":r["route"],"reasons":r["exclusion_reasons"]},ensure_ascii=False))
     return rows_out
 
-def format_message(day, selected, count):
+def format_message(day, selected, count, diagnostic_rows=None):
     lines=[f"🦞 龍蝦雷達｜三策略合併精選｜{day}",
            f"先篩買點區＋停損距離≤{MAX_STOP_DISTANCE_PCT:g}%，再依突破品質排序｜最多{MAX_STOCKS}檔｜掃描候選{count}筆",
            "破底翻／VCP用原結構停損；N字底用B點下方2%。不符試單區或風險上限者保留CSV，不占LINE名額。"]
+    if diagnostic_rows is not None:
+        excluded=[r for r in diagnostic_rows if not r["selected"]]
+        risk_count=sum("風險超限" in r["exclusion_reasons"] or "結構停損無效" in r["exclusion_reasons"] for r in excluded)
+        range_count=sum("超出試單區" in r["exclusion_reasons"] or "低於試單區" in r["exclusion_reasons"] for r in excluded)
+        other_count=sum(not ("風險超限" in r["exclusion_reasons"] or "結構停損無效" in r["exclusion_reasons"] or "超出試單區" in r["exclusion_reasons"] or "低於試單區" in r["exclusion_reasons"]) for r in excluded)
+        lines.append(f"排除診斷：{len(excluded)}筆未入選｜風險超限/停損無效{risk_count}｜試單區外{range_count}｜其他{other_count}（原因可重疊；逐檔詳見line_scan_diagnostics.csv）")
     if not selected:
         lines.append("當日無同時符合買點區與8%停損距離的股票；其他候選保留在CSV。")
     for i,r in enumerate(selected,1):
@@ -269,7 +275,7 @@ def main():
                       "qualified_unique_selected":len(selected),
                       "excluded_observations":len(candidates)-len([r for r in candidates if r.get("risk_ok") is True and r.get("within") is True]),
                       "selected":[r["code"] for r in selected]},ensure_ascii=False))
-    message=format_message(day,selected,len(candidates))
+    message=format_message(day,selected,len(candidates),diagnostic_rows)
     token=os.getenv("LINE_CHANNEL_ACCESS_TOKEN","").strip()
     if not token:
         print("Combined LINE token missing; preview only")
