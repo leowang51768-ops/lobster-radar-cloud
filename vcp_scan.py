@@ -586,7 +586,10 @@ def send_line_summary(rows: list[dict], trade_date: str) -> None:
             else:
                 upside_line = "60日內無明確上方樞紐｜風報比暫無法估算"
             blocks.append(
-                f"{rank}. {row['code']} {row['name']}｜{row['vcp_stage']}\n"
+                f"{rank}. {row['code']} {row['name']}｜{row['vcp_stage']}\\n"
+                + (f"🚀 突破日：{row['date']}｜當日收盤確認\\n"
+                   if row['vcp_stage'] == "當日突破"
+                   else f"觀察日：{row['date']}｜非當日突破\\n")
                 f"收{row['close']}｜突破樞紐{row['pivot']}｜品質{row['quality_score']}分\n"
                 f"{upside_line}\n"
                 f"最後收縮下緣{row['support_lower']}｜停損{row['stop_price']}\n"
