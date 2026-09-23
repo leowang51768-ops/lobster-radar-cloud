@@ -136,6 +136,54 @@ def collect(day):
     return [apply_structure_risk(candidate) for candidate in candidates]
 
 
+def populate_historical_zones(day, candidates):
+    """Estimate a descriptive, recurring historical price band for every route.
+
+    Use only closing prices strictly preceding the signal day. Do not infer
+    support from a single price print or change the original entry/stop logic.
+    """
+    with sqlite3.connect(BASE / "lobster_tw_6m_prices.sqlite") as con:
+        prices = {}
+        for code in {r["code"] for r in candidates}:
+            prices[code] = [
+                float(item[0]) for item in con.execute(
+                    "SELECT close FROM prices WHERE stock_id=? AND date<? "
+                    "ORDER BY date DESC LIMIT 60", (code, day)
+                ) if item[0] is not None and float(item[0]) > 0
+            ]
+    for r in candidates:
+        pivot = number(r.get("pivot"))
+        r["zone_lower"], r["zone_upper"], r["zone_source"] = None, None, ""
+        if pivot <= 0:
+            continue
+        # Repeated closing-price bands 1.5%-8% below the pattern pivot.
+        # A floor requires two distinct historical sessions in a narrow band;
+        # this is a heuristic, not chart-confirmed support or an entry trigger.
+        levels = sorted(
+            p for p in prices[r["code"]]
+            if pivot * 0.92 <= p <= pivot * 0.985
+        )
+        groups = []
+        for p in levels:
+            matching = next((g for g in groups if abs(p / g["center"] - 1) <= 0.01), None)
+            if matching is None:
+                groups.append({"values": [p], "center": p})
+            else:
+                matching["values"].append(p)
+                matching["center"] = sorted(matching["values"])[len(matching["values"]) // 2]
+        repeated = [g for g in groups if len(g["values"]) >= 2]
+        if not repeated:
+            continue
+        # Prefer the most repeatedly occupied historical price band, then the
+        # one nearest the current pivot. Round only for display, not for stops.
+        winner = max(repeated, key=lambda g: (len(g["values"]), g["center"]))
+        lower = winner["center"]
+        if lower < pivot:
+            r["zone_lower"] = lower
+            r["zone_upper"] = pivot
+            r["zone_source"] = "近60日重複收盤價區間（演算法估算）"
+
+
 def rank(candidate):
     # Scheme B: current-day confirmed price/volume breakout first. Nonextended
     # position and volume quality follow; RR breaks ties, unknown RR ranks last.
@@ -253,12 +301,11 @@ def format_message(day, selected, count, diagnostic_rows=None):
             f"停損距離{r['risk_pct']:.2f}%｜上限{MAX_STOP_DISTANCE_PCT:g}%"
             if r.get("risk_pct") is not None else "停損距離無法計算"
         )
-        zone_line = ""
-        if r["route"] == "N字底":
-            lo, hi = number(r.get("zone_lower")), number(r.get("zone_upper"))
-            zone_line = (f"\n歷史壓力轉支撐區{lo:g}～{hi:g}｜近期突破價（B點）{r['pivot']:g}"
-                         if lo > 0 and hi == r["pivot"] and lo < hi
-                         else f"\n歷史壓力轉支撐區待確認｜近期突破價（B點）{r['pivot']:g}")
+        lo, hi = number(r.get("zone_lower")), number(r.get("zone_upper"))
+        pivot_label = "近期突破價（B點）" if r["route"] == "N字底" else "近期突破／觸發價"
+        zone_line = (f"\n歷史價位參考區（演算法估算）{lo:g}～{hi:g}｜{pivot_label}{r['pivot']:g}"
+                     if lo > 0 and hi == r["pivot"] and lo < hi
+                     else f"\n歷史價位參考區未確認｜{pivot_label}{r['pivot']:g}")
         lines.append(
             f"\n{i}. {r['code']} {r['name']}｜{r['route']}｜{r['stage']}"
             f"\n{date_label}"
@@ -279,6 +326,7 @@ def main():
     day=market_date()
     candidates=collect(day)
     selected=choose(candidates)
+    populate_historical_zones(day,candidates)
     diagnostic_rows=write_diagnostics(day,candidates,selected)
     print(json.dumps({"date":day,"candidate_signals":len(candidates),
                       "qualified_unique_selected":len(selected),
