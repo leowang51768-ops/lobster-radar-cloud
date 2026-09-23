@@ -31,8 +31,8 @@ BASE_LOOKBACK = 325
 PIVOT_LOOKBACK = 60
 MIN_CONTRACTIONS = 2
 MAX_CONTRACTIONS = 6
-DEPTH_RATIO_MIN = 0.35
-DEPTH_RATIO_MAX = 0.70
+DEPTH_RATIO_MIN = 0.30
+DEPTH_RATIO_MAX = 0.85
 PIVOT_CLUSTER_TOL = 0.01
 PIVOT_MIN_TOUCHES = 2
 PIVOT_MIN_GAP_DAYS = 1
@@ -48,8 +48,8 @@ RETEST_LOW_TOL = 0.01
 RETEST_CLOSE_TOL = 0.005
 MA60_MAX_BELOW = 0.10
 MA60_MAX_5D_DECLINE = 0.02
-VCP_MAX_LEG_GAP_DAYS = 10
-VCP_MAX_LAST_TROUGH_AGE = 10
+VCP_MAX_LEG_GAP_DAYS = 15
+VCP_MAX_LAST_TROUGH_AGE = 15
 VCP_MAX_FINAL_PEAK_DISTANCE = 0.05
 VCP_MAX_PEAK_DISTANCE_WORSENING = 0.015
 VCP_MAX_LAST_LEG_VOLUME_RATIO = 0.90
@@ -132,7 +132,7 @@ def trend_and_liquidity_ok(x: pd.DataFrame, i: int) -> bool:
     return bool(
         pd.notna(row.ma20) and pd.notna(row.ma50) and pd.notna(row.ma60)
         and float(row.close) > float(row.ma60)
-        and float(row.ma20) > float(row.ma50) > float(row.ma60)
+        and float(row.ma20) > float(row.ma60)
         and float(row.ma60) > old_ma60
         and higher_structure
     )
@@ -177,8 +177,8 @@ def contraction_profile(x: pd.DataFrame, end_i: int, pivot: float) -> dict | Non
             continue
         clean.append(leg)
     # A 65-session base can contain older unrelated swings. Select the longest
-    # valid ending sequence. Each pullback must contract to roughly 35%-70% of
-    # the preceding pullback, matching the article's "about half" principle.
+    # valid ending sequence. Allow irregular but still progressively shrinking
+    # pullbacks (30%-85% of the prior leg); final depth remains <=15%.
     chosen = None
     for count in range(min(MAX_CONTRACTIONS, len(clean)), MIN_CONTRACTIONS - 1, -1):
         candidate = clean[-count:]
@@ -435,7 +435,10 @@ def breakout_quality(x: pd.DataFrame, i: int, pivot: float) -> tuple[bool, float
         float(row.close) > pivot * (1.0 + max(BREAKOUT_BUFFER, 0.005))
         and float(x.iloc[i - 1].close) <= pivot
     )
-    return bool(crossed and ratio >= BREAKOUT_VOLUME_RATIO and location >= 0.75 and body >= 0.70), ratio
+    # A short real body after a gap-up can still be a sound close above pivot.
+    # Keep breakout/volume and close-position confirmation; score body quality
+    # separately instead of making a 70% body a mandatory entry gate.
+    return bool(crossed and ratio >= BREAKOUT_VOLUME_RATIO and location >= 0.70), ratio
 
 
 def make_row(x: pd.DataFrame, i: int, profile: dict, stage: str,
@@ -450,8 +453,9 @@ def make_row(x: pd.DataFrame, i: int, profile: dict, stage: str,
     stop_price = contraction_floor * (1.0 - PIVOT_STOP_BUFFER)
     # Same 8% close-to-structure-stop risk definition as the combined LINE digest.
     stop_distance = (close - stop_price) / close if close > 0 and stop_price > 0 else math.inf
-    if not 0 <= stop_distance <= 0.08:
-        return None
+    # Preserve valid VCP shapes as observations even if not actionable today.
+    # The combined LINE digest applies the unchanged <=8% stop-distance cap.
+    risk_ok = 0 <= stop_distance <= 0.08
     upper_pivot = upper_pivot_before(x, i, pivot, close)
     upside_pct = None
     reward_risk = None
@@ -459,11 +463,14 @@ def make_row(x: pd.DataFrame, i: int, profile: dict, stage: str,
         risk = close - stop_price
         reward = upper_pivot - close
         if risk <= 0 or reward <= 0:
-            return None
-        upside_pct = reward / close * 100.0
-        reward_risk = reward / risk
-        if reward_risk < 1.5:
-            return None
+            upper_pivot = None
+        else:
+            upside_pct = reward / close * 100.0
+            reward_risk = reward / risk
+    # Low estimated reward/risk is an observation flag, not proof that the
+    # volatility-contraction shape does not exist.
+    rr_ok = reward_risk is None or reward_risk >= 1.5
+    # The upper-pivot estimate is only advisory; never fabricate a target.
     ma60 = float(row.ma60)
     ma60_old = float(x.iloc[i - 5].ma60)
     ma_change = ma60 / ma60_old - 1.0 if ma60_old > 0 else 0.0
@@ -477,6 +484,10 @@ def make_row(x: pd.DataFrame, i: int, profile: dict, stage: str,
     else:
         explanation = f"突破後第{i - int(breakout_i)}日量縮回踩，收盤守住樞紐支撐"
         action = "VCP回踩確認；列高優先觀察，正式採用前仍須完成獨立回測"
+    if not risk_ok:
+        action += "｜結構停損距離超過8%或無效，僅觀察、不進LINE"
+    if not rr_ok:
+        action += "｜上方樞紐推估風報比低於1.5，僅觀察、不進LINE"
     # Quality now rewards verified structural completeness, not merely the
     # number of contractions.  A 100 score therefore requires continuity,
     # pivot convergence and final-leg volume contraction to all be strong.
@@ -487,6 +498,8 @@ def make_row(x: pd.DataFrame, i: int, profile: dict, stage: str,
         + max(0.0, 0.05 - profile["final_peak_distance"]) * 200
         + max(0, VCP_MAX_LAST_TROUGH_AGE - profile["last_trough_age"])
         + (10 if stage == "突破後回踩" else 5 if stage == "當日突破" else 0)
+        + (5 if stage == "當日突破" and close > float(row.open) and
+           (close - float(row.open)) / max(float(row.high)-float(row.low), 1e-9) >= 0.70 else 0)
     ))
     return {
         "date": row.date.strftime("%Y-%m-%d"),
