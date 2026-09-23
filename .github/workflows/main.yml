@@ -128,14 +128,6 @@ jobs:
           done
           exit 1
 
-      - name: Scan close-confirmed resistance breakouts and send LINE observation
-        shell: bash
-        env:
-          LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
-        run: |
-          echo "FAIL_STAGE=壓力區突破收盤觀察" >> "$GITHUB_ENV"
-          python resistance_breakout_watch.py
-
       - name: Scan VCP stages and send one LINE summary
         shell: bash
         env:
@@ -199,7 +191,7 @@ jobs:
           git config user.name "lobster-radar-cloud"
           git config user.email "actions@github.com"
 
-          for f in lobster_tw_6m_prices.sqlite fundamental_support.json signal_state.json candidate_status.csv vcp_candidates.csv vcp_early_watch.csv n_bottom_watch.csv resistance_breakout_watch.csv formal_recommendations.csv; do
+          for f in lobster_tw_6m_prices.sqlite fundamental_support.json signal_state.json candidate_status.csv vcp_candidates.csv vcp_early_watch.csv n_bottom_watch.csv formal_recommendations.csv; do
             if [ -e "$f" ]; then
               git add "$f"
             fi
