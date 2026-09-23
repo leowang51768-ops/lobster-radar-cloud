@@ -45,9 +45,9 @@ def classify_latest(g):
                 if float(x.iloc[c+1:i+1].low.min())<C*.99: continue
                 if close<C*1.01 or close>B*1.10: continue
                 # C之後已上行；突破只在當日首次跨越B頸線時提示。
-                if close>B*1.003:
-                    if float(x.iloc[i-1].close)>B*1.003: continue
-                    stage="突破B點"
+                if close>B*1.005:
+                    if float(x.iloc[i-1].close)>B: continue
+                    stage="突破B點｜當日收盤確認"
                 elif close>=B*.97:
                     stage="接近B點"
                 elif close>float(x.iloc[i-1].close) and close>float(x.iloc[c].close):
@@ -55,14 +55,14 @@ def classify_latest(g):
                 else: continue
                 v5=float(x.iloc[i-5:i].volume.mean())
                 ratio=float(t.volume)/v5 if v5>0 else 0
-                if stage=="突破B點" and ratio<1.2: continue
-                entry_lower=round_tick(B+tick(B),ROUND_CEILING)
+                if stage.startswith("突破B點") and ratio<1.2: continue
+                entry_lower=round_tick(B*1.005,ROUND_CEILING)
                 entry_upper=round_tick(B*1.03,ROUND_FLOOR)
                 stop=round_tick(C*.99,ROUND_FLOOR)
                 eligible=(stage=="突破B點" and entry_lower<=close<=entry_upper and stop<entry_lower and close>float(t.open))
                 candidates.append(({"entry_lower":entry_lower,"entry_upper":entry_upper,"stop_price":stop,"entry_status":"正式試單" if eligible else "僅觀察","date":str(t.date)[:10],"code":str(t.code),"name":str(t["name"]),"market":str(t.market),"stage":stage,"close":round(close,2),"a_low":round(A,2),"b_neckline":round(B,2),"c_low":round(C,2),"invalidation":round(C*.99,2),"volume_ratio":round(ratio,2),"avg20_lots":round(float(x.iloc[-20:].volume.mean()/1000),0),"avg20_turnover":round(float(x.iloc[-20:].turnover.mean()),0)},c))
     if not candidates:return None
-    return max(candidates,key=lambda item: ({"突破B點":3,"接近B點":2,"C點形成":1}[item[0]["stage"]],item[1]))[0]
+    return max(candidates,key=lambda item: ({"突破B點｜當日收盤確認":3,"接近B點":2,"C點形成":1}[item[0]["stage"]],item[1]))[0]
 
 def main():
     if not DB.exists(): raise SystemExit(f"Database missing: {DB}")
@@ -79,7 +79,7 @@ def main():
         if str(dates[code])[:10]!=latest: continue
         row=classify_latest(g)
         if row: rows.append(row)
-    rows.sort(key=lambda r:({"突破B點":0,"接近B點":1,"C點形成":2}[r["stage"]],-r["volume_ratio"],r["code"]))
+    rows.sort(key=lambda r:({"突破B點｜當日收盤確認":0,"接近B點":1,"C點形成":2}[r["stage"]],-r["volume_ratio"],r["code"]))
     with OUTPUT.open("w",encoding="utf-8-sig",newline="") as f:
         writer=csv.DictWriter(f,fieldnames=FIELDS);writer.writeheader();writer.writerows(rows)
     from buy_signal import RECOMMENDATIONS, recommendation_fields
