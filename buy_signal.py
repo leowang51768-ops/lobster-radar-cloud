@@ -939,7 +939,25 @@ def main() -> int:
         if len(x) < LOOKBACK + FALSE_BREAK_RECOVERY_DAYS:
             continue
 
+        # Resistance breakout is an additional same-day stage INSIDE the
+        # reversal route, never a separate scanner or a prerequisite for C-point entry.
+        # A neckline is the reversal pattern's own resistance level.
         false_setup, false_signal = detect_false_break_reversal(code, x)
+        if false_setup and false_setup.get("neckline"):
+            neckline = float(false_setup["neckline"])
+            today_close = float(x.iloc[-1].close)
+            yesterday_close = float(x.iloc[-2].close)
+            prior5_volume = float(x.iloc[-6:-1]["volume_lots"].mean())
+            today_volume = float(x.iloc[-1].volume_lots)
+            if (yesterday_close <= neckline
+                    and today_close >= neckline * 1.005
+                    and prior5_volume > 0
+                    and today_volume / prior5_volume >= 1.2):
+                false_setup["neckline_status"] = "當日收盤突破壓力頸線（量比≥1.2）"
+                if false_signal is not None:
+                    false_signal["neckline_status"] = false_setup["neckline_status"]
+                    false_signal["entry_stage"] = str(false_signal.get("entry_stage", "")) + "｜壓力區突破當日收盤確認"
+
         false_signal = apply_new_plan_gate(false_signal, false_setup, x)
         price_action_setup, price_action_signal = detect_price_action_trigger(code, x)
         setups = [
@@ -1068,7 +1086,7 @@ def main() -> int:
                 lines += [
                     f"A點支撐：{row.get('a_point_lower', row['support_lower'])}～{row.get('a_point_upper', row['support_upper'])}",
                     f"B點低點：{row.get('b_point', row['key_low'])}（{row.get('b_point_date', row['key_date'])}）",
-                    f"頸線：{row.get('neckline') or '未形成'}｜{row.get('neckline_status', '')}",
+                    f"頸線／壓力：{row.get('neckline') or '未形成'}｜{row.get('neckline_status', '')}",
                     f"底底高：{row.get('higher_low_status', '等待確認')}",
                     f"支撐來源：{row['support_source']}",
                     f"成交量：{int(row['volume_lots'])}張｜量比：{row['volume_ratio']}x",
