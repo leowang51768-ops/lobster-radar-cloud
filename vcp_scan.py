@@ -61,7 +61,7 @@ FIELDS = [
     "support_upper", "stop_price", "contraction_count", "base_sessions",
     "contraction_depths_pct", "volume_dry_ratio", "volume_ratio",
     "avg20_volume_lots", "avg20_turnover", "ma60", "ma60_5d_change_pct",
-    "quality_score", "action", "invalidation",
+    "quality_score", "action", "invalidation", "line_eligible",
 ]
 
 
@@ -470,7 +470,6 @@ def make_row(x: pd.DataFrame, i: int, profile: dict, stage: str,
     # Low estimated reward/risk is an observation flag, not proof that the
     # volatility-contraction shape does not exist.
     rr_ok = reward_risk is None or reward_risk >= 1.5
-    # The upper-pivot estimate is only advisory; never fabricate a target.
     ma60 = float(row.ma60)
     ma60_old = float(x.iloc[i - 5].ma60)
     ma_change = ma60 / ma60_old - 1.0 if ma60_old > 0 else 0.0
@@ -522,6 +521,7 @@ def make_row(x: pd.DataFrame, i: int, profile: dict, stage: str,
         "avg20_turnover": round(float(row.avg20_turnover), 0),
         "ma60": round(ma60, 2), "ma60_5d_change_pct": round(ma_change * 100, 2),
         "quality_score": quality, "action": action,
+        "line_eligible": "1" if risk_ok and rr_ok else "0",
         "invalidation": f"收盤跌破最後收縮下緣（{stop_price:.2f}）即失效",
     }
 
