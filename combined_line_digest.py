@@ -155,14 +155,15 @@ def choose(candidates, limit=MAX_STOCKS):
 def format_message(day, selected, count):
     lines=[f"🦞 龍蝦雷達｜三策略合併精選｜{day}",
            f"突破品質優先｜最多{MAX_STOCKS}檔｜候選訊號{count}筆（同股去重）",
-           f"結構停損＋停損距離上限{MAX_STOP_DISTANCE_PCT:g}%（已確認）；超限僅觀察。非當日突破不標示突破日。"]
+           f"破底翻／VCP用原結構停損；N字底用B點下方2%；停損距離上限{MAX_STOP_DISTANCE_PCT:g}%。超限僅觀察。"]
     if not selected:
         lines.append("當日無符合突破／買點通知條件的股票。")
     for i,r in enumerate(selected,1):
         date_label=(f"🚀 突破日：{r['day']}｜當日收盤確認" if r["breakout"]
                     else f"觀察日：{day}｜非當日突破")
         rr_label=f"{r['rr']:.2f}" if r["rr"] >= 0 else "未驗證"
-        stop_label = f"結構停損{r['stop']:g}"
+        stop_label = (f"B點下方2%停損{r['stop']:g}" if r["route"] == "N字底"
+                      else f"結構停損{r['stop']:g}")
         risk_label = (
             f"停損距離{r['risk_pct']:.2f}%｜上限{MAX_STOP_DISTANCE_PCT:g}%"
             if r.get("risk_pct") is not None else "停損距離無法計算"
