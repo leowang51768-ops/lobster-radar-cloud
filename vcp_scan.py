@@ -432,8 +432,8 @@ def breakout_quality(x: pd.DataFrame, i: int, pivot: float) -> tuple[bool, float
     prior5 = float(x.iloc[i - 5:i].volume_lots.mean())
     ratio = float(row.volume_lots) / prior5 if prior5 > 0 else 0.0
     crossed = (
-        float(row.close) > pivot * (1.0 + BREAKOUT_BUFFER)
-        and float(x.iloc[i - 1].close) <= pivot * (1.0 + BREAKOUT_BUFFER)
+        float(row.close) > pivot * (1.0 + max(BREAKOUT_BUFFER, 0.005))
+        and float(x.iloc[i - 1].close) <= pivot
     )
     return bool(crossed and ratio >= BREAKOUT_VOLUME_RATIO and location >= 0.75 and body >= 0.70), ratio
 
@@ -471,8 +471,8 @@ def make_row(x: pd.DataFrame, i: int, profile: dict, stage: str,
         explanation = "符合第二階段上升趨勢，VCP回檔約逐次減半且末端量縮，收盤距樞紐價0～5%，尚未突破"
         action = "列入觀察；不得提前追價，等待帶量突破或突破後回踩"
     elif stage == "當日突破":
-        explanation = "今日收盤有效突破樞紐價，量能≥前5日均量1.2倍且K棒效率合格"
-        action = "確認為突破日；先觀察，不直接列正式試單，等待2～5日量縮回踩"
+        explanation = "當日收盤突破VCP壓力樞紐上緣至少0.5%，量能≥前5日均量1.2倍且K棒效率合格"
+        action = "壓力區突破當日收盤確認｜VCP內建觀察；不必等回踩才通知，正式試單仍依原有條件"
     else:
         explanation = f"突破後第{i - int(breakout_i)}日量縮回踩，收盤守住樞紐支撐"
         action = "VCP回踩確認；列高優先觀察，正式採用前仍須完成獨立回測"
