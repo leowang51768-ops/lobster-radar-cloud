@@ -119,7 +119,7 @@ def main():
     lines=[f"🦞 龍蝦雷達｜N字底突破B點｜{latest}","符合突破B點、量比與試單區間者為正式試單；其餘僅觀察。"]
     if not rows:lines.append("目前無符合條件個股")
     for n,r in enumerate(rows[:10],1):
-        lines.append(f"{n}. {r['code']} {r['name']}｜{r['stage']}\n收盤{r['close']}｜A底{r['a_low']}｜B頸線{r['b_neckline']}｜C底{r['c_low']}\n量比{r['volume_ratio']}｜試單區{r['entry_lower']}～{r['entry_upper']}｜停損{r['stop_price']}｜{r['entry_status']}")
+        breakout_label = (f"🚀 突破日：{r['date']}｜當日收盤確認突破B點"\n                          if r["stage"].startswith("突破B點")\n                          else f"尚未突破B點｜觀察日期：{r['date']}")\n        lines.append(f"{n}. {r['code']} {r['name']}｜{r['stage']}\n{breakout_label}\n收盤{r['close']}｜A底{r['a_low']}｜B頸線{r['b_neckline']}｜C底{r['c_low']}\n量比{r['volume_ratio']}｜試單區{r['entry_lower']}～{r['entry_upper']}｜停損{r['stop_price']}｜{r['entry_status']}")
     payload=json.dumps({"messages":[{"type":"text","text":"\n".join(lines)[:4900]}]},ensure_ascii=False).encode()
     req=urllib.request.Request("https://api.line.me/v2/bot/message/broadcast",data=payload,headers={"Authorization":f"Bearer {token}","Content-Type":"application/json; charset=UTF-8"},method="POST")
     with urllib.request.urlopen(req,timeout=30) as response:print("N-bottom LINE status:",response.status)
