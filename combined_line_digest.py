@@ -140,9 +140,16 @@ def rank(candidate):
 
 
 def choose(candidates, limit=MAX_STOCKS):
+    """Only actionable price-zone candidates within the 8% risk cap use LINE slots.
+
+    Every observation, out-of-range entry and over-cap signal stays in its
+    originating scanner CSV, rather than displacing qualified candidates.
+    """
     selected=[]
     seen=set()
-    for r in sorted(candidates,key=rank):
+    qualified=(r for r in candidates if r.get("risk_ok") is True
+               and r.get("within") is True)
+    for r in sorted(qualified,key=rank):
         if r["code"] in seen:
             continue
         seen.add(r["code"])
@@ -154,10 +161,10 @@ def choose(candidates, limit=MAX_STOCKS):
 
 def format_message(day, selected, count):
     lines=[f"🦞 龍蝦雷達｜三策略合併精選｜{day}",
-           f"突破品質優先｜最多{MAX_STOCKS}檔｜候選訊號{count}筆（同股去重）",
-           f"破底翻／VCP用原結構停損；N字底用B點下方2%；停損距離上限{MAX_STOP_DISTANCE_PCT:g}%。超限僅觀察。"]
+           f"先篩買點區＋停損距離≤{MAX_STOP_DISTANCE_PCT:g}%，再依突破品質排序｜最多{MAX_STOCKS}檔｜掃描候選{count}筆",
+           "破底翻／VCP用原結構停損；N字底用B點下方2%。不符試單區或風險上限者保留CSV，不占LINE名額。"]
     if not selected:
-        lines.append("當日無符合突破／買點通知條件的股票。")
+        lines.append("當日無同時符合買點區與8%停損距離的股票；其他候選保留在CSV。")
     for i,r in enumerate(selected,1):
         date_label=(f"🚀 突破日：{r['day']}｜當日收盤確認" if r["breakout"]
                     else f"觀察日：{day}｜非當日突破")
@@ -187,7 +194,8 @@ def main():
     candidates=collect(day)
     selected=choose(candidates)
     print(json.dumps({"date":day,"candidate_signals":len(candidates),
-                      "unique_selected":len(selected),
+                      "qualified_unique_selected":len(selected),
+                      "excluded_observations":len(candidates)-len([r for r in candidates if r.get("risk_ok") is True and r.get("within") is True]),
                       "selected":[r["code"] for r in selected]},ensure_ascii=False))
     message=format_message(day,selected,len(candidates))
     token=os.getenv("LINE_CHANNEL_ACCESS_TOKEN","").strip()
