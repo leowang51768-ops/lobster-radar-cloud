@@ -43,7 +43,7 @@ def market_date():
 
 
 
-# Provisional configurable cap: 8% from the signal-day close to the ORIGINAL
+# Confirmed cap: 8% from the signal-day close to the ORIGINAL
 # strategy structure stop. A tighter stop is never invented to satisfy the cap.
 MAX_STOP_DISTANCE_PCT = 8.0
 
@@ -155,7 +155,7 @@ def choose(candidates, limit=MAX_STOCKS):
 def format_message(day, selected, count):
     lines=[f"🦞 龍蝦雷達｜三策略合併精選｜{day}",
            f"突破品質優先｜最多{MAX_STOCKS}檔｜候選訊號{count}筆（同股去重）",
-           f"結構停損＋停損距離上限{MAX_STOP_DISTANCE_PCT:g}%（暫定）；超限僅觀察。非當日突破不標示突破日。"]
+           f"結構停損＋停損距離上限{MAX_STOP_DISTANCE_PCT:g}%（已確認）；超限僅觀察。非當日突破不標示突破日。"]
     if not selected:
         lines.append("當日無符合突破／買點通知條件的股票。")
     for i,r in enumerate(selected,1):
