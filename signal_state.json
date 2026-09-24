@@ -5745,10 +5745,17 @@
       "support_lower": 99.99,
       "support_upper": 101.0,
       "support_source": "突破平台上緣轉支撐"
+    },
+    "6533": {
+      "Price Action": "PriceAction:2026-09-24:看漲吞噬",
+      "name": "晶心科",
+      "support_lower": 249.5,
+      "support_upper": 249.5,
+      "support_source": "近5日低點"
     }
   },
-  "updated_at": "2026-09-23T09:11:28.172071+00:00",
-  "latest_trade_date": "2026-09-23",
+  "updated_at": "2026-09-24T08:38:46.603261+00:00",
+  "latest_trade_date": "2026-09-24",
   "layer1_candidate_count": 187,
   "stage_counts": {
     "正式試單": 1,
@@ -5779,11 +5786,11 @@
   },
   "strategy_version": "龍蝦買點-v14-破底翻+PriceAction",
   "four_point_rule": "已取消",
-  "candidate_count": 56,
-  "formal_buy_signal_count": 0,
+  "candidate_count": 50,
+  "formal_buy_signal_count": 1,
   "route_counts": {
     "破底翻": 46,
-    "Price Action": 10
+    "Price Action": 4
   },
   "exit_warning_keys": {
     "突破後站穩:2026-09-16:69.90:假突破觀察": "2026-09-18",
