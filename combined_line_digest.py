@@ -92,7 +92,8 @@ def collect(day):
             left_a_lower=number(r.get("a_point_lower") or r.get("support_lower")),
             left_a_upper=number(r.get("a_point_upper") or r.get("support_upper")),
             b_low=number(r.get("b_point")),
-            right_a_buy=number(r.get("trigger_level")),
+            right_a_buy=(number(r.get("trigger_level"))
+                         if "早期試單" in r.get("entry_stage", "") else None),
         ))
     for r in rows("vcp_candidates.csv", day):
         stage=r.get("vcp_stage", "")
@@ -309,7 +310,8 @@ def format_message(day, selected, count, diagnostic_rows=None):
         if r["route"] == "破底翻":
             left_lo, left_hi = r["left_a_lower"], r["left_a_upper"]
             abc_line = (f"\n左A支撐區{left_lo:g}～{left_hi:g} → B點低點{r['b_low']:g}"
-                        f" → 右A（買點）{r['right_a_buy']:g}")
+                        + (f" → 右A（買點）{r['right_a_buy']:g}"
+                           if r["right_a_buy"] is not None else "｜右A（買點）非本次頸線突破訊號"))
         lines.append(
             f"\n{i}. {r['code']} {r['name']}｜{r['route']}｜{r['stage']}"
             f"\n{date_label}"
