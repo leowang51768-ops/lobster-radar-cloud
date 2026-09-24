@@ -66,7 +66,7 @@ def apply_structure_risk(candidate):
 
 def collect(day):
     candidates = []
-    # A break-bottom C-point buy is not itself a neckline breakout.
+    # A break-bottom right-A buy is not itself a neckline breakout.
     # Only date-verified neckline breaks receive the breakout priority.
     for r in rows("candidate_status.csv", day):
         if r.get("pattern") != "破底翻":
@@ -78,7 +78,7 @@ def collect(day):
         rr = number(r.get("risk_reward"), -1)
         candidates.append(dict(
             code=r["code"], name=r["name"], route="破底翻",
-            stage="頸線當日突破" if breakout else "C點／結構買點",
+            stage="頸線當日突破" if breakout else "右A（買點）／結構買點",
             day=day if breakout else "", close=number(r.get("close")),
             pivot=number(r.get("neckline")) if breakout else number(r.get("trigger_level")),
             volume_ratio=number(r.get("volume_ratio")),
@@ -89,6 +89,10 @@ def collect(day):
             entry_lower=number(r.get("trigger_level")) if formal else None,
             entry_upper=None,
             source_fail_reasons="" if formal else "破底翻：僅突破頸線，尚未符合正式結構買點",
+            left_a_lower=number(r.get("a_point_lower") or r.get("support_lower")),
+            left_a_upper=number(r.get("a_point_upper") or r.get("support_upper")),
+            b_low=number(r.get("b_point")),
+            right_a_buy=number(r.get("trigger_level")),
         ))
     for r in rows("vcp_candidates.csv", day):
         stage=r.get("vcp_stage", "")
@@ -302,6 +306,10 @@ def format_message(day, selected, count, diagnostic_rows=None):
                      else f"\n歷史價位參考區未確認｜{pivot_label}{r['pivot']:g}")
         abc_line = (f"\nA底{r['a_low']:g} → B頸線{r['pivot']:g} → C底{r['c_low']:g} → 突破B點"
                     if r["route"] == "N字底" else "")
+        if r["route"] == "破底翻":
+            left_lo, left_hi = r["left_a_lower"], r["left_a_upper"]
+            abc_line = (f"\n左A支撐區{left_lo:g}～{left_hi:g} → B點低點{r['b_low']:g}"
+                        f" → 右A（買點）{r['right_a_buy']:g}")
         lines.append(
             f"\n{i}. {r['code']} {r['name']}｜{r['route']}｜{r['stage']}"
             f"\n{date_label}"
