@@ -40,7 +40,7 @@ MIN_VOLUME_LOTS = 1000
 MIN_AVG_TURNOVER = 100_000_000
 NEAR_PIVOT_PCT = 0.05
 BREAKOUT_BUFFER = 0.003
-PIVOT_STOP_BUFFER = 0.01
+PIVOT_STOP_BUFFER = 0.02
 BREAKOUT_VOLUME_RATIO = 1.20
 RETEST_MIN_DAYS = 2
 RETEST_MAX_DAYS = 5
@@ -445,13 +445,13 @@ def make_row(x: pd.DataFrame, i: int, profile: dict, stage: str,
              pivot: float, volume_ratio: float, breakout_i: int | None = None) -> dict | None:
     row = x.iloc[i]
     close = float(row.close)
-    # Article risk control is anchored to the final contraction's lower edge,
-    # not an arbitrary one percent below the breakout pivot.
+    # Current strategy stop: 2% below the breakout neckline (pivot).
+    # Keep the final-contraction floor separately as descriptive support.
     contraction_floor = float(profile["support"])
     support_lower = contraction_floor
     support_upper = contraction_floor
-    stop_price = contraction_floor * (1.0 - PIVOT_STOP_BUFFER)
-    # Keep the original contraction-based stop and show its distance; no 8% cap.
+    stop_price = pivot * (1.0 - PIVOT_STOP_BUFFER)
+    # Show the neckline-based stop distance; no 8% eligibility cap.
     stop_distance = (close - stop_price) / close if close > 0 and stop_price > 0 else math.inf
     risk_ok = math.isfinite(stop_distance) and stop_distance > 0
     upper_pivot = upper_pivot_before(x, i, pivot, close)
@@ -520,7 +520,7 @@ def make_row(x: pd.DataFrame, i: int, profile: dict, stage: str,
         "ma60": round(ma60, 2), "ma60_5d_change_pct": round(ma_change * 100, 2),
         "quality_score": quality, "action": action,
         "line_eligible": "1" if risk_ok and rr_ok else "0",
-        "invalidation": f"收盤跌破最後收縮下緣（{stop_price:.2f}）即失效",
+        "invalidation": f"收盤跌破頸線下方2%停損價（{stop_price:.2f}）即失效",
     }
 
 
@@ -607,7 +607,7 @@ def send_line_summary(rows: list[dict], trade_date: str) -> None:
                 f"{breakout_label}\n"
                 f"收{row['close']}｜突破樞紐{row['pivot']}｜品質{row['quality_score']}分\n"
                 f"{upside_line}\n"
-                f"最後收縮下緣{row['support_lower']}｜停損{row['stop_price']}\n"
+                f"最後收縮下緣{row['support_lower']}｜頸線下方2%停損{row['stop_price']}\n"
                 f"行動：{row['action']}"
             )
 
