@@ -393,7 +393,7 @@ def detect_false_break_reversal(code: str, x: pd.DataFrame) -> tuple[dict, dict 
     )
     extension = close / trigger_level - 1.0 if trigger_level and math.isfinite(trigger_level) else math.inf
     entry_stage = (
-        "C點站回｜早期試單"
+        "右A（買點）站回｜早期試單"
         if is_early_entry
         else "底底高＋突破頸線｜確認加碼"
     )
@@ -493,7 +493,7 @@ def detect_false_break_reversal(code: str, x: pd.DataFrame) -> tuple[dict, dict 
     }
     evidence = ["假跌破B點", "3日內收復A點"]
     if is_early_entry:
-        evidence.append("C點收紅且收盤位置≥55%")
+        evidence.append("右A（買點）收紅且收盤位置≥55%")
     else:
         evidence.extend(["回檔低點高於B點", "有效突破頸線"])
     if best["break_depth_3pct"]:
@@ -1063,7 +1063,7 @@ def main() -> int:
     if triggers or exit_warnings or force_notify:
         lines = [
             f"🦞 龍蝦雷達正式買點｜{latest_date}",
-            "正式路線：A/B/C破底翻＋Price Action；VCP仍由獨立觀察雷達通知。",
+            "正式路線：破底翻（左A／B／右A買點）＋Price Action；VCP另由獨立雷達掃描。",
         ]
         if not triggers and not exit_warnings:
             lines.append("✅ LINE測試成功｜目前無正式買點候選")
@@ -1072,7 +1072,7 @@ def main() -> int:
                 "",
                 f"🟢 {row['code']} {row['name']}｜{row['signal_route']}",
                 f"策略來源：{row['strategy_source']}",
-                f"階段：{row.get('entry_stage', 'C點站回｜早期試單')}｜收盤：{row.get('close', '')}",
+                f"階段：{row.get('entry_stage', '右A（買點）站回｜早期試單')}｜收盤：{row.get('close', '')}",
             ]
             if (row["signal_route"].startswith("破底翻")
                     and row.get("neckline_status") == "當日收盤突破壓力頸線（量比≥1.2）"):
@@ -1088,8 +1088,9 @@ def main() -> int:
                 ]
             else:
                 lines += [
-                    f"A點支撐：{row.get('a_point_lower', row['support_lower'])}～{row.get('a_point_upper', row['support_upper'])}",
+                    f"左A支撐區：{row.get('a_point_lower', row['support_lower'])}～{row.get('a_point_upper', row['support_upper'])}",
                     f"B點低點：{row.get('b_point', row['key_low'])}（{row.get('b_point_date', row['key_date'])}）",
+                    f"右A（買點）：{row.get('trigger_level', row.get('baseline_entry', ''))}｜股價重新站回左A支撐區",
                     f"頸線／壓力：{row.get('neckline') or '未形成'}｜{row.get('neckline_status', '')}",
                     f"底底高：{row.get('higher_low_status', '等待確認')}",
                     f"支撐來源：{row['support_source']}",
