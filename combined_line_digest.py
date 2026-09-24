@@ -125,6 +125,7 @@ def collect(day):
             source_fail_reasons=r.get("entry_fail_reasons", ""),
             zone_lower=r.get("structure_zone_lower", ""),
             zone_upper=r.get("structure_zone_upper", ""),
+            a_low=number(r.get("a_low")), c_low=number(r.get("c_low")),
         ))
     return [apply_structure_risk(candidate) for candidate in candidates]
 
@@ -275,7 +276,7 @@ def write_diagnostics(day, candidates, selected):
 def format_message(day, selected, count, diagnostic_rows=None):
     lines=[f"🦞 龍蝦雷達｜三策略合併精選｜{day}",
            f"先篩策略買點區與有效結構停損，再依突破品質排序｜最多{MAX_STOCKS}檔｜掃描候選{count}筆",
-           "破底翻／VCP用原結構停損；N字底用B點下方2%。停損距離僅顯示、不設8%入選上限；不符試單區者保留CSV。"]
+           "破底翻／VCP用原結構停損；N字底用C底下方1%。停損距離僅顯示、不設8%入選上限；不符試單區者保留CSV。"]
     if diagnostic_rows is not None:
         excluded=[r for r in diagnostic_rows if not r["selected"]]
         risk_count=sum("結構停損無效" in r["exclusion_reasons"] for r in excluded)
@@ -288,7 +289,7 @@ def format_message(day, selected, count, diagnostic_rows=None):
         date_label=(f"🚀 突破日：{r['day']}｜當日收盤確認" if r["breakout"]
                     else f"觀察日：{day}｜非當日突破")
         rr_label=f"{r['rr']:.2f}" if r["rr"] >= 0 else "未驗證"
-        stop_label = (f"B點下方2%停損{r['stop']:g}" if r["route"] == "N字底"
+        stop_label = (f"C底下方1%停損{r['stop']:g}" if r["route"] == "N字底"
                       else f"結構停損{r['stop']:g}")
         risk_label = (
             f"停損距離{r['risk_pct']:.2f}%（無8%入選上限）"
@@ -299,11 +300,14 @@ def format_message(day, selected, count, diagnostic_rows=None):
         zone_line = (f"\n歷史價位參考區（演算法估算）{lo:g}～{hi:g}｜{pivot_label}{r['pivot']:g}"
                      if lo > 0 and hi == r["pivot"] and lo < hi
                      else f"\n歷史價位參考區未確認｜{pivot_label}{r['pivot']:g}")
+        abc_line = (f"\nA底{r['a_low']:g} → B頸線{r['pivot']:g} → C底{r['c_low']:g} → 突破B點"
+                    if r["route"] == "N字底" else "")
         lines.append(
             f"\n{i}. {r['code']} {r['name']}｜{r['route']}｜{r['stage']}"
             f"\n{date_label}"
             f"\n收盤{r['close']:g}｜" 
             f"{'突破支撐（原壓力價）' if r['breakout'] else '關鍵觸發價'}{r['pivot']:g}"
+            f"{abc_line}"
             f"{zone_line}"
             f"｜量比{r['volume_ratio']:.2f}x（破底翻20日基準；VCP／N字底5日基準）"
             f"\n{stop_label}｜{risk_label}"
@@ -311,7 +315,9 @@ def format_message(day, selected, count, diagnostic_rows=None):
         )
     message="\n".join(lines)
     if len(message)>4900:
-        raise RuntimeError("LINE digest exceeds safe 4900-character cap")
+        # Keep all selected stocks and their A/B/C and stops: split over
+        # multiple LINE text messages instead of truncating the top-ten list.
+        pass
     return message
 
 
@@ -334,7 +340,17 @@ def main():
     if not selected and os.getenv("COMBINED_FORCE_NOTIFY")!="1":
         print("No qualified entries; LINE skipped")
         return 0
-    payload=json.dumps({"messages":[{"type":"text","text":message}]},ensure_ascii=False).encode("utf-8")
+    chunks=[]
+    for line in message.split("\n"):
+        if len(line)>4900:
+            raise RuntimeError("Single LINE line exceeds 4900 characters")
+        if chunks and len(chunks[-1])+1+len(line)>4900:
+            chunks.append(line)
+        elif chunks:
+            chunks[-1]+="\n"+line
+        else:
+            chunks.append(line)
+    payload=json.dumps({"messages":[{"type":"text","text":chunk} for chunk in chunks]},ensure_ascii=False).encode("utf-8")
     request=urllib.request.Request(
         "https://api.line.me/v2/bot/message/broadcast",
         data=payload,method="POST",
