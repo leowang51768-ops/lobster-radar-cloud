@@ -58,20 +58,20 @@ def classify_latest(g):
                 if stage.startswith("突破B點") and ratio<1.2: continue
                 entry_lower=round_tick(B*1.005,ROUND_CEILING)
                 entry_upper=round_tick(B*1.03,ROUND_FLOOR)
-                # N字底依圖示：停損設於C底下方1%，向下取有效跳動單位。
-                stop=round_tick(C*.99,ROUND_FLOOR)
+                # N字底依圖示：停損設於B點下方2%，向下取有效跳動單位；A/B/C仍完整顯示。
+                stop=round_tick(B*.98,ROUND_FLOOR)
                 failures=[]
                 if stage.startswith("突破B點"):
                     if close<entry_lower: failures.append("收盤未達試單區下緣")
                     if close>entry_upper: failures.append("收盤超出試單區上緣")
                     if stop>=entry_lower: failures.append("結構停損無效")
-                    # No maximum stop-distance cap; C-point structural stop is retained.
+                    # No maximum stop-distance cap; B-point structural stop is retained.
                     if close<=float(t.open): failures.append("突破K棒未收紅（收盤未高於開盤）")
                 eligible=stage.startswith("突破B點") and not failures
                 # Historical zone is estimated consistently for every stock in the
                 # consolidated digest; never let it change B or the trade stop.
                 zone_lower, zone_upper, zone_source = "", "", ""
-                candidates.append(({"entry_lower":entry_lower,"entry_upper":entry_upper,"stop_price":stop,"entry_status":"正式試單" if eligible else "僅觀察","entry_fail_reasons":"；".join(failures),"structure_zone_lower":zone_lower,"structure_zone_upper":zone_upper,"structure_zone_source":zone_source,"date":str(t.date)[:10],"code":str(t.code),"name":str(t["name"]),"market":str(t.market),"stage":stage,"close":round(close,2),"a_low":round(A,2),"b_neckline":round(B,2),"c_low":round(C,2),"invalidation":stop,"volume_ratio":round(ratio,2),"avg20_lots":round(float(x.iloc[-20:].volume.mean()/1000),0),"avg20_turnover":round(float(x.iloc[-20:].turnover.mean()),0)},c))
+                candidates.append(({"entry_lower":entry_lower,"entry_upper":entry_upper,"stop_price":stop,"entry_status":"正式試單" if eligible else "僅觀察","entry_fail_reasons":"；".join(failures),"structure_zone_lower":zone_lower,"structure_zone_upper":zone_upper,"structure_zone_source":zone_source,"date":str(t.date)[:10],"code":str(t.code),"name":str(t["name"]),"market":str(t.market),"stage":stage,"close":round(close,2),"a_low":round(A,2),"b_neckline":round(B,2),"c_low":round(C,2),"invalidation":round_tick(C*.99,ROUND_FLOOR),"volume_ratio":round(ratio,2),"avg20_lots":round(float(x.iloc[-20:].volume.mean()/1000),0),"avg20_turnover":round(float(x.iloc[-20:].turnover.mean()),0)},c))
     if not candidates:return None
     return max(candidates,key=lambda item: ({"突破B點｜當日收盤確認":3,"接近B點":2,"C點形成":1}[item[0]["stage"]],item[1]))[0]
 
@@ -112,7 +112,7 @@ def main():
                        "a_point_lower":r["a_low"],"b_point":r["b_neckline"],"entry_stage":"突破B點早期試單",
                        "volume_ratio":r["volume_ratio"],"support_lower":r["c_low"],
                        "support_upper":r["b_neckline"],"stop_price":r["stop_price"],
-                       "pattern_key":key,"strategy_version":"N字底-B突破-C底停損1%-v2"})
+                       "pattern_key":key,"strategy_version":"N字底-B突破-B點停損2%-v3"})
         existing.append(record)
         seen.add((r["code"],key))
         added+=1
@@ -135,7 +135,7 @@ def main():
             if r["stage"].startswith("突破B點")
             else f"尚未突破B點｜觀察日期：{r['date']}"
         )
-        lines.append(f"{n}. {r['code']} {r['name']}｜{r['stage']}\n{breakout_label}\n收盤{r['close']}｜A底{r['a_low']}｜B頸線{r['b_neckline']}｜C底{r['c_low']}\n量比{r['volume_ratio']}｜試單區{r['entry_lower']}～{r['entry_upper']}｜C底下方1%停損{r['stop_price']}｜{r['entry_status']}")
+        lines.append(f"{n}. {r['code']} {r['name']}｜{r['stage']}\n{breakout_label}\n收盤{r['close']}｜A底{r['a_low']}｜B頸線{r['b_neckline']}｜C底{r['c_low']}\n量比{r['volume_ratio']}｜試單區{r['entry_lower']}～{r['entry_upper']}｜B點下方2%停損{r['stop_price']}｜{r['entry_status']}")
     payload=json.dumps({"messages":[{"type":"text","text":"\n".join(lines)[:4900]}]},ensure_ascii=False).encode()
     req=urllib.request.Request("https://api.line.me/v2/bot/message/broadcast",data=payload,headers={"Authorization":f"Bearer {token}","Content-Type":"application/json; charset=UTF-8"},method="POST")
     with urllib.request.urlopen(req,timeout=30) as response:print("N-bottom LINE status:",response.status)
