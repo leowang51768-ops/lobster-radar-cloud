@@ -314,10 +314,7 @@ def format_message(day, selected, count, diagnostic_rows=None):
             f"\n結構風報比{rr_label}｜{r['status']}"
         )
     message="\n".join(lines)
-    if len(message)>4900:
-        # Keep all selected stocks and their A/B/C and stops: split over
-        # multiple LINE text messages instead of truncating the top-ten list.
-        pass
+    # Long messages are split into multiple LINE text messages by main().
     return message
 
 
