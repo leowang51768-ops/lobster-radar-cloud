@@ -281,7 +281,7 @@ def write_diagnostics(day, candidates, selected):
 def format_message(day, selected, count, diagnostic_rows=None):
     lines=[f"🦞 龍蝦雷達｜三策略合併精選｜{day}",
            f"先篩策略買點區與有效結構停損，再依突破品質排序｜最多{MAX_STOCKS}檔｜掃描候選{count}筆",
-           "破底翻／VCP用原結構停損；N字底用B點下方2%。停損距離僅顯示、不設8%入選上限；不符試單區者保留CSV。"]
+           "破底翻用B點低點下方一檔；VCP用頸線下方2%；N字底用B點下方2%。停損距離僅顯示、不設8%入選上限；不符試單區者保留CSV。"]
     if diagnostic_rows is not None:
         excluded=[r for r in diagnostic_rows if not r["selected"]]
         risk_count=sum("結構停損無效" in r["exclusion_reasons"] for r in excluded)
@@ -295,6 +295,7 @@ def format_message(day, selected, count, diagnostic_rows=None):
                     else f"觀察日：{day}｜非當日突破")
         rr_label=f"{r['rr']:.2f}" if r["rr"] >= 0 else "未驗證"
         stop_label = (f"B點下方2%停損{r['stop']:g}" if r["route"] == "N字底"
+                      else f"頸線下方2%停損{r['stop']:g}" if r["route"] == "VCP"
                       else f"結構停損{r['stop']:g}")
         risk_label = (
             f"停損距離{r['risk_pct']:.2f}%（無8%入選上限）"
