@@ -112,7 +112,7 @@ jobs:
 
       # Keep each strategy's scanner and formal performance bookkeeping, but
       # suppress their individual stock broadcasts. One combined digest below
-      # is the sole LINE stock-list sender (maximum ten distinct tickers).
+      # is the sole LINE stock-list sender (maximum five distinct tickers).
       - name: Evaluate integrated Lobster buy points (CSV and tracking only)
         shell: bash
         env:
@@ -145,12 +145,12 @@ jobs:
           echo "FAIL_STAGE=N字底掃描" >> "$GITHUB_ENV"
           python support_retest_watch.py
 
-      - name: Send one combined top-ten LINE stock digest
+      - name: Send one combined top-five LINE stock digest
         shell: bash
         env:
           LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
         run: |
-          echo "FAIL_STAGE=三策略十檔合併LINE通知" >> "$GITHUB_ENV"
+          echo "FAIL_STAGE=三策略五檔合併LINE通知" >> "$GITHUB_ENV"
           python combined_line_digest.py
 
       - name: Update daily LINE pick performance (5 10 20 sessions)
