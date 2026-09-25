@@ -12,12 +12,14 @@ import math
 import os
 import sqlite3
 import urllib.request
+import urllib.parse
+import datetime
 from pathlib import Path
 
 BASE = Path(__file__).resolve().parent
 MAX_STOCKS = 10
 DIAGNOSTICS = BASE / "line_scan_diagnostics.csv"
-DIAG_FIELDS = ["date", "code", "name", "route", "stage", "close", "entry_lower", "entry_upper", "entry_excess_pct", "stop_price", "stop_distance_pct", "risk_ok", "within_entry", "line_eligible", "selected", "exclusion_reasons"]
+DIAG_FIELDS = ["date", "code", "name", "route", "stage", "close", "entry_lower", "entry_upper", "entry_excess_pct", "stop_price", "stop_distance_pct", "risk_ok", "within_entry", "line_eligible", "breakout_score", "volume_score", "pattern_score", "institutional_score", "composite_score", "foreign_buy", "trust_buy", "institutional_total", "trust_consecutive_days", "selected", "exclusion_reasons"]
 
 
 def rows(filename, day):
@@ -34,6 +36,133 @@ def number(value, default=0.0):
         return n if math.isfinite(n) else default
     except (ValueError, TypeError):
         return default
+
+
+def clamp(value, low=0.0, high=1.0):
+    return max(low, min(high, value))
+
+
+def finmind_institutional(code, day):
+    """Fetch institutional net buy/sell for ranking only.
+
+    Failure never disqualifies a stock: it simply contributes zero bonus.
+    Values are converted from shares to lots (1,000 shares).
+    """
+    try:
+        start = (datetime.datetime.strptime(day, "%Y-%m-%d") - datetime.timedelta(days=15)).strftime("%Y-%m-%d")
+        query = urllib.parse.urlencode({
+            "dataset": "TaiwanStockInstitutionalInvestorsBuySell",
+            "data_id": code,
+            "start_date": start,
+            "end_date": day,
+        })
+        req = urllib.request.Request(
+            "https://api.finmindtrade.com/api/v4/data?" + query,
+            headers={"User-Agent": "lobster-radar/1.0"},
+        )
+        with urllib.request.urlopen(req, timeout=8) as resp:
+            payload = json.loads(resp.read().decode("utf-8"))
+        data = payload.get("data") or []
+        if payload.get("msg") != "success" or not data:
+            return {"foreign": 0, "trust": 0, "total": 0, "trust_days": 0, "available": False}
+
+        by_date = {}
+        for item in data:
+            d = str(item.get("date", ""))
+            name = str(item.get("name", ""))
+            net = (number(item.get("buy")) - number(item.get("sell"))) / 1000.0
+            by_date.setdefault(d, {})[name] = by_date.setdefault(d, {}).get(name, 0.0) + net
+        dates = sorted(d for d in by_date if d <= day)
+        if not dates:
+            return {"foreign": 0, "trust": 0, "total": 0, "trust_days": 0, "available": False}
+        latest = by_date[dates[-1]]
+        foreign = latest.get("Foreign_Investor", 0.0) + latest.get("Foreign_Dealer_Self", 0.0)
+        trust = latest.get("Investment_Trust", 0.0)
+        dealer = latest.get("Dealer_Self", 0.0) + latest.get("Dealer_Hedging", 0.0)
+        trust_days = 0
+        for d in reversed(dates):
+            if by_date[d].get("Investment_Trust", 0.0) > 0:
+                trust_days += 1
+            else:
+                break
+        return {
+            "foreign": round(foreign, 1),
+            "trust": round(trust, 1),
+            "total": round(foreign + trust + dealer, 1),
+            "trust_days": trust_days,
+            "available": True,
+        }
+    except Exception as exc:
+        print("FINMIND_WARNING " + json.dumps({"code": code, "error": str(exc)}, ensure_ascii=False))
+        return {"foreign": 0, "trust": 0, "total": 0, "trust_days": 0, "available": False}
+
+
+def pattern_completeness(candidate):
+    route = candidate.get("route")
+    if route == "破底翻":
+        # Evidence count is produced by the break-bottom scanner; six or more
+        # independent structure/evidence checks is treated as fully complete.
+        return clamp(number(candidate.get("evidence_count")) / 6.0)
+    if route == "VCP":
+        # VCP scanner quality_score already measures contraction continuity,
+        # pivot convergence and final-leg volume drying.
+        return clamp(number(candidate.get("vcp_quality")) / 100.0)
+    if route == "N字底":
+        a, b, c = number(candidate.get("a_low")), number(candidate.get("pivot")), number(candidate.get("c_low"))
+        return 1.0 if a > 0 and b > 0 and c > a and c < b and candidate.get("breakout") else 0.5
+    return 0.0
+
+
+def score_candidates(day, candidates):
+    """40% breakout quality + 25% volume + 25% pattern + 10% institutions."""
+    # Use the same objective daily close-location measure across all 3 routes.
+    with sqlite3.connect(BASE / "lobster_tw_6m_prices.sqlite") as con:
+        ohlc = {}
+        for code in {r["code"] for r in candidates}:
+            row = con.execute(
+                "SELECT open,high,low,close FROM prices WHERE stock_id=? AND date=? LIMIT 1",
+                (code, day),
+            ).fetchone()
+            if row:
+                ohlc[code] = tuple(number(x) for x in row)
+
+    inst_cache = {}
+    for r in candidates:
+        op, hi, lo, cl = ohlc.get(r["code"], (0.0, 0.0, 0.0, number(r.get("close"))))
+        close_location = clamp((cl - lo) / (hi - lo)) if hi > lo else 0.5
+        # 75% of this component is where the stock closed in its daily range;
+        # 25% rewards a verified same-day breakout over a non-breakout entry/retest.
+        breakout_component = clamp(0.75 * close_location + 0.25 * int(bool(r.get("breakout"))))
+        volume_component = clamp(number(r.get("volume_ratio")) / 2.0)
+        pattern_component = pattern_completeness(r)
+
+        if r["code"] not in inst_cache:
+            inst_cache[r["code"]] = finmind_institutional(r["code"], day)
+        inst = inst_cache[r["code"]]
+        institutional_points = 0.0
+        if inst["total"] > 0:
+            institutional_points += 3.0
+        if inst["foreign"] > 0:
+            institutional_points += 2.0
+        if inst["trust"] > 0:
+            institutional_points += 2.0
+        if inst["trust_days"] >= 2:
+            institutional_points += 3.0
+        institutional_points = min(10.0, institutional_points)
+
+        r["breakout_score"] = round(breakout_component * 40.0, 1)
+        r["volume_score"] = round(volume_component * 25.0, 1)
+        r["pattern_score"] = round(pattern_component * 25.0, 1)
+        r["institutional_score"] = round(institutional_points, 1)
+        r["composite_score"] = round(
+            r["breakout_score"] + r["volume_score"] + r["pattern_score"] + r["institutional_score"], 1
+        )
+        r["foreign_buy"] = inst["foreign"]
+        r["trust_buy"] = inst["trust"]
+        r["institutional_total"] = inst["total"]
+        r["trust_consecutive_days"] = inst["trust_days"]
+        r["institutional_available"] = inst["available"]
+    return candidates
 
 
 def market_date():
@@ -83,6 +212,7 @@ def collect(day):
             pivot=number(r.get("neckline")) if breakout else number(r.get("trigger_level")),
             volume_ratio=number(r.get("volume_ratio")),
             rr=rr, quality=number(r.get("close_location")),
+            evidence_count=number(r.get("evidence_count")),
             stop=number(r.get("failure_level") or r.get("stop_price")),
             status="正式買點" if formal else "僅觀察",
             breakout=breakout, within=bool(formal),
@@ -106,6 +236,7 @@ def collect(day):
             pivot=number(r.get("pivot")), volume_ratio=number(r.get("volume_ratio")),
             rr=number(r.get("reward_risk_ratio"), -1),
             quality=number(r.get("quality_score"))/100,
+            vcp_quality=number(r.get("quality_score")),
             stop=number(r.get("stop_price")), status="僅觀察",
             breakout=breakout, within=number(r.get("distance_to_pivot_pct"),999)<=10 and r.get("line_eligible") == "1",
             entry_lower=None, entry_upper=number(r.get("pivot"))*1.10,
@@ -184,15 +315,14 @@ def populate_historical_zones(day, candidates):
 
 
 def rank(candidate):
-    # Scheme B: current-day confirmed price/volume breakout first. Nonextended
-    # position and volume quality follow; RR breaks ties, unknown RR ranks last.
-    # Do not use nominal stock price as a ranking criterion.
+    # Composite ranking only; strategy eligibility is still decided upstream.
+    # Weights: breakout quality 40, volume 25, pattern completeness 25,
+    # institutional bonus 10.  Institutions can improve rank but never qualify
+    # or disqualify a stock.
     return (
-        -int(candidate["breakout"]),
-        -int(candidate["within"]),
-        -min(max(candidate["volume_ratio"],0),3),
-        -candidate["quality"],
-        -candidate["rr"],
+        -number(candidate.get("composite_score")),
+        -number(candidate.get("breakout_score")),
+        -number(candidate.get("volume_score")),
         candidate["code"],
     )
 
@@ -264,6 +394,11 @@ def write_diagnostics(day, candidates, selected):
                              stop_distance_pct=r.get("risk_pct") if r.get("risk_pct") is not None else "",
                              risk_ok=int(bool(r.get("risk_ok"))),within_entry=int(bool(r.get("within"))),
                              line_eligible=int(bool(r.get("risk_ok") and r.get("within"))),
+                             breakout_score=r.get("breakout_score",""), volume_score=r.get("volume_score",""),
+                             pattern_score=r.get("pattern_score",""), institutional_score=r.get("institutional_score",""),
+                             composite_score=r.get("composite_score",""), foreign_buy=r.get("foreign_buy",""),
+                             trust_buy=r.get("trust_buy",""), institutional_total=r.get("institutional_total",""),
+                             trust_consecutive_days=r.get("trust_consecutive_days",""),
                              selected=int(selected_flag),exclusion_reasons="；".join(reasons)))
     with DIAGNOSTICS.open("w",encoding="utf-8-sig",newline="") as handle:
         writer=csv.DictWriter(handle,fieldnames=DIAG_FIELDS)
@@ -280,7 +415,8 @@ def write_diagnostics(day, candidates, selected):
 
 def format_message(day, selected, count, diagnostic_rows=None):
     lines=[f"🦞 龍蝦雷達｜三策略合併精選｜{day}",
-           f"先篩策略買點區與有效結構停損，再依突破品質排序｜最多{MAX_STOCKS}檔｜掃描候選{count}筆",
+           f"先篩策略買點區與有效結構停損，再依綜合分數排序｜最多{MAX_STOCKS}檔｜掃描候選{count}筆",
+           "排名權重：突破品質40%＋量比25%＋型態完整度25%＋法人籌碼10%（法人只加分、不淘汰）",
            "破底翻用B點低點下方一檔；VCP用頸線下方2%；N字底用B點下方2%。停損距離僅顯示、不設8%入選上限；不符試單區者保留CSV。"]
     if diagnostic_rows is not None:
         excluded=[r for r in diagnostic_rows if not r["selected"]]
@@ -322,6 +458,8 @@ def format_message(day, selected, count, diagnostic_rows=None):
             f"{zone_line}"
             f"｜量比{r['volume_ratio']:.2f}x（破底翻20日基準；VCP／N字底5日基準）"
             f"\n{stop_label}｜{risk_label}"
+            f"\n綜合分數{r.get('composite_score',0):.1f}｜突破{r.get('breakout_score',0):.1f}/40｜量比{r.get('volume_score',0):.1f}/25｜型態{r.get('pattern_score',0):.1f}/25｜法人{r.get('institutional_score',0):.1f}/10"
+            f"\n法人合計{r.get('institutional_total',0):+g}張｜外資{r.get('foreign_buy',0):+g}｜投信{r.get('trust_buy',0):+g}｜投信連買{r.get('trust_consecutive_days',0)}日"
             f"\n結構風報比{rr_label}｜{r['status']}"
         )
     message="\n".join(lines)
@@ -332,6 +470,7 @@ def format_message(day, selected, count, diagnostic_rows=None):
 def main():
     day=market_date()
     candidates=collect(day)
+    score_candidates(day,candidates)
     selected=choose(candidates)
     populate_historical_zones(day,candidates)
     diagnostic_rows=write_diagnostics(day,candidates,selected)
