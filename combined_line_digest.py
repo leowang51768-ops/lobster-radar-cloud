@@ -303,9 +303,9 @@ def format_message(day, selected, count, diagnostic_rows=None):
         )
         lo, hi = number(r.get("zone_lower")), number(r.get("zone_upper"))
         pivot_label = "近期突破價（B點）" if r["route"] == "N字底" else "近期突破／觸發價"
-        zone_line = (f"\n歷史價位參考區（演算法估算）{lo:g}～{hi:g}｜{pivot_label}{r['pivot']:g}"
+        zone_line = (f"\n買點價位參考區（演算法估算，非策略試單區）{lo:g}～{hi:g}｜{pivot_label}{r['pivot']:g}"
                      if lo > 0 and hi == r["pivot"] and lo < hi
-                     else f"\n歷史價位參考區未確認｜{pivot_label}{r['pivot']:g}")
+                     else f"\n買點價位參考區未確認｜{pivot_label}{r['pivot']:g}")
         abc_line = (f"\nA底{r['a_low']:g} → B頸線{r['pivot']:g} → C底{r['c_low']:g} → 突破B點"
                     if r["route"] == "N字底" else "")
         if r["route"] == "破底翻":
