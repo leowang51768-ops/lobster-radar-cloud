@@ -1,3 +1,3 @@
-﻿date,code,name,route,stage,close,entry_lower,entry_upper,entry_excess_pct,stop_price,stop_distance_pct,risk_ok,within_entry,line_eligible,selected,exclusion_reasons
-2026-09-24,6533,晶心科,N字底,B點當日突破,276.0,274.5,286.5,,267.5,3.08,1,1,1,1,
-2026-09-24,3189,景碩,N字底,B點當日突破,962.0,937.0,978.0,,913.0,5.09,1,1,1,1,
+﻿date,code,name,route,stage,close,entry_lower,entry_upper,entry_excess_pct,stop_price,stop_distance_pct,risk_ok,within_entry,line_eligible,breakout_score,volume_score,pattern_score,institutional_score,composite_score,foreign_buy,trust_buy,institutional_total,trust_consecutive_days,selected,exclusion_reasons
+2026-09-24,6533,晶心科,N字底,B點當日突破,276.0,274.5,286.5,,267.5,3.08,1,1,1,40.0,25.0,25.0,5.0,95.0,1265.8,0.0,1303.4,0,1,
+2026-09-24,3189,景碩,N字底,B點當日突破,962.0,937.0,978.0,,913.0,5.09,1,1,1,24.8,23.0,25.0,7.0,79.8,6834.2,984.0,7927.8,1,1,
