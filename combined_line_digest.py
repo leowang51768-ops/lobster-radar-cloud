@@ -107,8 +107,8 @@ def collect(day):
             rr=number(r.get("reward_risk_ratio"), -1),
             quality=number(r.get("quality_score"))/100,
             stop=number(r.get("stop_price")), status="僅觀察",
-            breakout=breakout, within=number(r.get("distance_to_pivot_pct"),999)<=3 and r.get("line_eligible") == "1",
-            entry_lower=None, entry_upper=number(r.get("pivot"))*1.03,
+            breakout=breakout, within=number(r.get("distance_to_pivot_pct"),999)<=10 and r.get("line_eligible") == "1",
+            entry_lower=None, entry_upper=number(r.get("pivot"))*1.10,
             source_fail_reasons=("VCP：上方壓力目標風報比低於1.5" if number(r.get("reward_risk_ratio"),-1)>=0 and number(r.get("reward_risk_ratio"),-1)<1.5 else ""),
         ))
     for r in rows("n_bottom_watch.csv", day):
