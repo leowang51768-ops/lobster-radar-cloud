@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""One daily LINE stock digest, at most ten DISTINCT tickers across 3 strategies.
+"""One daily LINE stock digest, at most five DISTINCT tickers across 3 strategies.
 
 Reads completed scanner CSVs; does not alter strategy eligibility or performance
 records. Today's verified breakout quality ranks before reward/risk. Observe-only
@@ -17,7 +17,7 @@ import datetime
 from pathlib import Path
 
 BASE = Path(__file__).resolve().parent
-MAX_STOCKS = 10
+MAX_STOCKS = 5
 DIAGNOSTICS = BASE / "line_scan_diagnostics.csv"
 DIAG_FIELDS = ["date", "code", "name", "route", "stage", "close", "entry_lower", "entry_upper", "entry_excess_pct", "stop_price", "stop_distance_pct", "risk_ok", "within_entry", "line_eligible", "breakout_score", "volume_score", "pattern_score", "institutional_score", "composite_score", "foreign_buy", "trust_buy", "institutional_total", "trust_consecutive_days", "selected", "exclusion_reasons"]
 
@@ -244,7 +244,7 @@ def collect(day):
         ))
     for r in rows("n_bottom_watch.csv", day):
         if not r.get("stage", "").startswith("突破B點"):
-            continue  # No C-point / near-neckline rows in top-ten breakout digest.
+            continue  # No C-point / near-neckline rows in top-five breakout digest.
         close=number(r.get("close"))
         pivot=number(r.get("b_neckline"))
         stop=number(r.get("stop_price"))
@@ -385,7 +385,7 @@ def write_diagnostics(day, candidates, selected):
         selected_flag = r["code"] in selected_codes and r in selected
         reasons = [] if selected_flag else candidate_diagnosis(r)
         if not selected_flag and r.get("risk_ok") and r.get("within"):
-            reasons = ["當日同股去重或超出LINE前十檔名額"]
+            reasons = ["當日同股去重或超出LINE前五檔名額"]
         rows_out.append(dict(date=day, code=r["code"],name=r["name"],route=r["route"],
                              stage=r["stage"],close=r["close"],
                              entry_lower=r.get("entry_lower") if r.get("entry_lower") is not None else "",
