@@ -57,7 +57,7 @@ def classify_latest(g):
                 ratio=float(t.volume)/v5 if v5>0 else 0
                 if stage.startswith("突破B點") and ratio<1.2: continue
                 entry_lower=round_tick(B*1.005,ROUND_CEILING)
-                entry_upper=round_tick(B*1.03,ROUND_FLOOR)
+                entry_upper=round_tick(B*1.05,ROUND_FLOOR)
                 # N字底依圖示：停損設於B點下方2%，向下取有效跳動單位；A/B/C仍完整顯示。
                 stop=round_tick(B*.98,ROUND_FLOOR)
                 failures=[]
