@@ -1,8 +1,8 @@
 """Fixed AI-industry stock universe for every Lobster Radar scanner.
 
-The user-supplied list is labelled "175 stocks", but it contains 161 unique
-company names.  The intended companies are retained here with official ticker
-and market-suffix corrections; do not silently add companies to reach 175.
+The original user-supplied list contained 161 unique company names.  CPU-platform
+coverage has since been extended with explicitly approved additions; keep ticker
+and market-suffix corrections authoritative and do not silently pad the universe.
 """
 from __future__ import annotations
 
@@ -17,13 +17,14 @@ STOCKS_TO_TRACK = {
     "3661.TW": "世芯-KY", "3443.TW": "創意", "3529.TWO": "力旺",
     "3035.TW": "智原", "6643.TWO": "M31", "6533.TW": "晶心科",
     "6531.TW": "愛普*", "8227.TWO": "巨有科技", "6462.TWO": "神盾",
-    "6684.TWO": "安格",
+    "6684.TWO": "安格", "2388.TW": "威盛",
 
     # 3. 高速傳輸、BMC、記憶體與控制器
     "5274.TWO": "信驊", "5269.TW": "祥碩", "4966.TWO": "譜瑞-KY",
     "8299.TWO": "群聯", "2454.TW": "聯發科", "2379.TW": "瑞昱",
     "2408.TW": "南亞科", "2344.TW": "華邦電", "6485.TWO": "點序",
     "4967.TW": "十銓", "3260.TWO": "威剛", "3006.TW": "晶豪科",
+    "3014.TW": "聯陽",
 
     # 4. 先進封裝 (CoWoS/FOPLP)、OSAT 封測與檢測分析
     "3374.TWO": "精材", "6789.TW": "采鈺", "3711.TW": "日月光投控",
@@ -97,8 +98,8 @@ AI_STOCK_COUNT = len(AI_STOCK_CODES)
 
 if len(STOCKS_TO_TRACK) != AI_STOCK_COUNT:
     raise RuntimeError("AI stock universe contains duplicate four-digit codes")
-if AI_STOCK_COUNT != 161:
-    raise RuntimeError(f"Unexpected AI stock universe size: {AI_STOCK_COUNT}; expected 161")
+if AI_STOCK_COUNT != 163:
+    raise RuntimeError(f"Unexpected AI stock universe size: {AI_STOCK_COUNT}; expected 163")
 
 
 def filter_market_frame(frame, code_column: str = "code"):
