@@ -12,14 +12,13 @@ import math
 import os
 import sqlite3
 import urllib.request
-import urllib.parse
-import datetime
+from chip_analysis import load_institutional
 from pathlib import Path
 
 BASE = Path(__file__).resolve().parent
 MAX_STOCKS = 5
 DIAGNOSTICS = BASE / "line_scan_diagnostics.csv"
-DIAG_FIELDS = ["date", "code", "name", "route", "stage", "close", "entry_lower", "entry_upper", "entry_excess_pct", "stop_price", "stop_distance_pct", "risk_ok", "within_entry", "line_eligible", "breakout_score", "volume_score", "pattern_score", "institutional_score", "composite_score", "foreign_buy", "trust_buy", "institutional_total", "trust_consecutive_days", "selected", "exclusion_reasons"]
+DIAG_FIELDS = ["date", "code", "name", "route", "stage", "close", "entry_lower", "entry_upper", "entry_excess_pct", "stop_price", "stop_distance_pct", "risk_ok", "within_entry", "line_eligible", "breakout_score", "volume_score", "pattern_score", "institutional_score", "composite_score", "foreign_buy", "trust_buy", "institutional_total", "trust_consecutive_days", "selected", "exclusion_reasons", "institutional_available", "chip_data_date", "chip_summary", "chip_missing_reason", "foreign_consecutive_days"]
 
 
 def rows(filename, day):
@@ -42,60 +41,6 @@ def clamp(value, low=0.0, high=1.0):
     return max(low, min(high, value))
 
 
-def finmind_institutional(code, day):
-    """Fetch institutional net buy/sell for ranking only.
-
-    Failure never disqualifies a stock: it simply contributes zero bonus.
-    Values are converted from shares to lots (1,000 shares).
-    """
-    try:
-        start = (datetime.datetime.strptime(day, "%Y-%m-%d") - datetime.timedelta(days=15)).strftime("%Y-%m-%d")
-        query = urllib.parse.urlencode({
-            "dataset": "TaiwanStockInstitutionalInvestorsBuySell",
-            "data_id": code,
-            "start_date": start,
-            "end_date": day,
-        })
-        req = urllib.request.Request(
-            "https://api.finmindtrade.com/api/v4/data?" + query,
-            headers={"User-Agent": "lobster-radar/1.0"},
-        )
-        with urllib.request.urlopen(req, timeout=8) as resp:
-            payload = json.loads(resp.read().decode("utf-8"))
-        data = payload.get("data") or []
-        if payload.get("msg") != "success" or not data:
-            return {"foreign": 0, "trust": 0, "total": 0, "trust_days": 0, "available": False}
-
-        by_date = {}
-        for item in data:
-            d = str(item.get("date", ""))
-            name = str(item.get("name", ""))
-            net = (number(item.get("buy")) - number(item.get("sell"))) / 1000.0
-            by_date.setdefault(d, {})[name] = by_date.setdefault(d, {}).get(name, 0.0) + net
-        dates = sorted(d for d in by_date if d <= day)
-        if not dates:
-            return {"foreign": 0, "trust": 0, "total": 0, "trust_days": 0, "available": False}
-        latest = by_date[dates[-1]]
-        foreign = latest.get("Foreign_Investor", 0.0) + latest.get("Foreign_Dealer_Self", 0.0)
-        trust = latest.get("Investment_Trust", 0.0)
-        dealer = latest.get("Dealer_Self", 0.0) + latest.get("Dealer_Hedging", 0.0)
-        trust_days = 0
-        for d in reversed(dates):
-            if by_date[d].get("Investment_Trust", 0.0) > 0:
-                trust_days += 1
-            else:
-                break
-        return {
-            "foreign": round(foreign, 1),
-            "trust": round(trust, 1),
-            "total": round(foreign + trust + dealer, 1),
-            "trust_days": trust_days,
-            "available": True,
-        }
-    except Exception as exc:
-        print("FINMIND_WARNING " + json.dumps({"code": code, "error": str(exc)}, ensure_ascii=False))
-        return {"foreign": 0, "trust": 0, "total": 0, "trust_days": 0, "available": False}
-
 
 def pattern_completeness(candidate):
     route = candidate.get("route")
@@ -117,6 +62,7 @@ def score_candidates(day, candidates):
     """40% breakout quality + 25% volume + 25% pattern + 10% institutions."""
     # Use the same objective daily close-location measure across all 3 routes.
     with sqlite3.connect(BASE / "lobster_tw_6m_prices.sqlite") as con:
+        sessions = [row[0] for row in con.execute("SELECT DISTINCT date FROM prices WHERE date<=? ORDER BY date", (day,))]
         ohlc = {}
         for code in {r["code"] for r in candidates}:
             row = con.execute(
@@ -126,7 +72,7 @@ def score_candidates(day, candidates):
             if row:
                 ohlc[code] = tuple(number(x) for x in row)
 
-    inst_cache = {}
+    inst_cache = load_institutional({r["code"] for r in candidates}, day, sessions)
     for r in candidates:
         op, hi, lo, cl = ohlc.get(r["code"], (0.0, 0.0, 0.0, number(r.get("close"))))
         close_location = clamp((cl - lo) / (hi - lo)) if hi > lo else 0.5
@@ -136,19 +82,13 @@ def score_candidates(day, candidates):
         volume_component = clamp(number(r.get("volume_ratio")) / 2.0)
         pattern_component = pattern_completeness(r)
 
-        if r["code"] not in inst_cache:
-            inst_cache[r["code"]] = finmind_institutional(r["code"], day)
         inst = inst_cache[r["code"]]
-        institutional_points = 0.0
-        if inst["total"] > 0:
-            institutional_points += 3.0
-        if inst["foreign"] > 0:
-            institutional_points += 2.0
-        if inst["trust"] > 0:
-            institutional_points += 2.0
-        if inst["trust_days"] >= 2:
-            institutional_points += 3.0
-        institutional_points = min(10.0, institutional_points)
+        institutional_points = inst["score"]
+        r["chip_data_date"] = inst["data_date"]
+        r["chip_summary"] = inst["summary"]
+        r["chip_missing_reason"] = inst["reason"]
+        r["chip_history"] = inst["history"]
+        r["foreign_consecutive_days"] = inst["foreign_days"]
 
         r["breakout_score"] = round(breakout_component * 40.0, 1)
         r["volume_score"] = round(volume_component * 25.0, 1)
@@ -317,8 +257,8 @@ def populate_historical_zones(day, candidates):
 def rank(candidate):
     # Composite ranking only; strategy eligibility is still decided upstream.
     # Weights: breakout quality 40, volume 25, pattern completeness 25,
-    # institutional bonus 10.  Institutions can improve rank but never qualify
-    # or disqualify a stock.
+    # institutional evidence 10. Negative flow does not veto a stock; missing
+    # current/history data postpones notification in choose().
     return (
         -number(candidate.get("composite_score")),
         -number(candidate.get("breakout_score")),
@@ -336,7 +276,8 @@ def choose(candidates, limit=MAX_STOCKS):
     selected=[]
     seen=set()
     qualified=(r for r in candidates if r.get("risk_ok") is True
-               and r.get("within") is True)
+               and r.get("within") is True
+               and r.get("institutional_available") is True)
     for r in sorted(qualified,key=rank):
         if r["code"] in seen:
             continue
@@ -351,6 +292,8 @@ def choose(candidates, limit=MAX_STOCKS):
 def candidate_diagnosis(candidate):
     """Explain disqualification without changing which stocks are selected."""
     reasons = []
+    if candidate.get("institutional_available") is not True:
+        reasons.append("籌碼資料未齊：" + candidate.get("chip_missing_reason", "未取得"))
     close = number(candidate.get("close"))
     lower = candidate.get("entry_lower")
     upper = candidate.get("entry_upper")
@@ -384,7 +327,7 @@ def write_diagnostics(day, candidates, selected):
         excess = round((close/number(upper)-1)*100, 4) if upper is not None and number(upper)>0 and close>number(upper) else ""
         selected_flag = r["code"] in selected_codes and r in selected
         reasons = [] if selected_flag else candidate_diagnosis(r)
-        if not selected_flag and r.get("risk_ok") and r.get("within"):
+        if not selected_flag and r.get("risk_ok") and r.get("within") and r.get("institutional_available"):
             reasons = ["當日同股去重或超出LINE前五檔名額"]
         rows_out.append(dict(date=day, code=r["code"],name=r["name"],route=r["route"],
                              stage=r["stage"],close=r["close"],
@@ -393,7 +336,11 @@ def write_diagnostics(day, candidates, selected):
                              entry_excess_pct=excess,stop_price=r["stop"],
                              stop_distance_pct=r.get("risk_pct") if r.get("risk_pct") is not None else "",
                              risk_ok=int(bool(r.get("risk_ok"))),within_entry=int(bool(r.get("within"))),
-                             line_eligible=int(bool(r.get("risk_ok") and r.get("within"))),
+                             line_eligible=int(bool(r.get("risk_ok") and r.get("within") and r.get("institutional_available"))),
+                             institutional_available=int(bool(r.get("institutional_available"))),
+                             chip_data_date=r.get("chip_data_date", ""), chip_summary=r.get("chip_summary", ""),
+                             chip_missing_reason=r.get("chip_missing_reason", ""),
+                             foreign_consecutive_days=r.get("foreign_consecutive_days", 0),
                              breakout_score=r.get("breakout_score",""), volume_score=r.get("volume_score",""),
                              pattern_score=r.get("pattern_score",""), institutional_score=r.get("institutional_score",""),
                              composite_score=r.get("composite_score",""), foreign_buy=r.get("foreign_buy",""),
@@ -416,7 +363,7 @@ def write_diagnostics(day, candidates, selected):
 def format_message(day, selected, count, diagnostic_rows=None):
     lines=[f"🦞 龍蝦雷達｜三策略合併精選｜{day}",
            f"先篩策略買點區與有效結構停損，再依綜合分數排序｜最多{MAX_STOCKS}檔｜掃描候選{count}筆",
-           "排名權重：突破品質40%＋量比25%＋型態完整度25%＋法人籌碼10%（法人只加分、不淘汰）",
+           "排名權重：突破品質40%＋量比25%＋型態完整度25%＋法人籌碼10%（籌碼影響排序；資料未齊暫緩通知）",
            "破底翻用B點低點下方一檔；VCP用頸線下方2%；N字底用B點下方2%。停損距離僅顯示、不設8%入選上限；不符試單區者保留CSV。"]
     if diagnostic_rows is not None:
         excluded=[r for r in diagnostic_rows if not r["selected"]]
@@ -425,7 +372,7 @@ def format_message(day, selected, count, diagnostic_rows=None):
         other_count=sum(not ("結構停損無效" in r["exclusion_reasons"] or "超出試單區" in r["exclusion_reasons"] or "低於試單區" in r["exclusion_reasons"]) for r in excluded)
         lines.append(f"排除診斷：{len(excluded)}筆未入選｜停損無效{risk_count}｜試單區外{range_count}｜其他{other_count}（原因可重疊；逐檔詳見line_scan_diagnostics.csv）")
     if not selected:
-        lines.append("當日無符合策略買點區及有效結構停損的股票；其他候選保留在CSV。")
+        lines.append("當日無同時符合策略買點區、有效結構停損及籌碼資料完整條件的股票；候選保留在CSV。")
     for i,r in enumerate(selected,1):
         date_label=(f"🚀 突破日：{r['day']}｜當日收盤確認" if r["breakout"]
                     else f"觀察日：{day}｜非當日突破")
@@ -459,7 +406,7 @@ def format_message(day, selected, count, diagnostic_rows=None):
             f"｜量比{r['volume_ratio']:.2f}x（破底翻20日基準；VCP／N字底5日基準）"
             f"\n{stop_label}｜{risk_label}"
             f"\n綜合分數{r.get('composite_score',0):.1f}｜突破{r.get('breakout_score',0):.1f}/40｜量比{r.get('volume_score',0):.1f}/25｜型態{r.get('pattern_score',0):.1f}/25｜法人{r.get('institutional_score',0):.1f}/10"
-            f"\n法人合計{r.get('institutional_total',0):+g}張｜外資{r.get('foreign_buy',0):+g}｜投信{r.get('trust_buy',0):+g}｜投信連買{r.get('trust_consecutive_days',0)}日"
+            f"\n🧩 籌碼：{r.get('chip_summary', '資料未齊，暫不判讀')}"
             f"\n結構風報比{rr_label}｜{r['status']}"
         )
     message="\n".join(lines)
@@ -474,6 +421,9 @@ def main():
     selected=choose(candidates)
     populate_historical_zones(day,candidates)
     diagnostic_rows=write_diagnostics(day,candidates,selected)
+    from chip_candidate_tracking import record_candidates, update_outcomes
+    record_candidates(day, candidates, selected)
+    update_outcomes()
     print(json.dumps({"date":day,"candidate_signals":len(candidates),
                       "qualified_unique_selected":len(selected),
                       "excluded_observations":len(candidates)-len([r for r in candidates if r.get("risk_ok") is True and r.get("within") is True]),
