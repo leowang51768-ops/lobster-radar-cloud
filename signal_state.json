@@ -5752,10 +5752,17 @@
       "support_lower": 249.5,
       "support_upper": 249.5,
       "support_source": "近5日低點"
+    },
+    "6187": {
+      "Price Action": "PriceAction:2026-09-29:20日破底翻強攻",
+      "name": "萬潤",
+      "support_lower": 1180.0,
+      "support_upper": 1180.0,
+      "support_source": "近5日低點"
     }
   },
-  "updated_at": "2026-09-25T07:05:05.266770+00:00",
-  "latest_trade_date": "2026-09-24",
+  "updated_at": "2026-09-29T12:46:42.594323+00:00",
+  "latest_trade_date": "2026-09-29",
   "layer1_candidate_count": 187,
   "stage_counts": {
     "正式試單": 1,
@@ -5786,11 +5793,11 @@
   },
   "strategy_version": "龍蝦買點-v14-破底翻+PriceAction",
   "four_point_rule": "已取消",
-  "candidate_count": 50,
-  "formal_buy_signal_count": 0,
+  "candidate_count": 57,
+  "formal_buy_signal_count": 1,
   "route_counts": {
-    "破底翻": 46,
-    "Price Action": 4
+    "破底翻": 47,
+    "Price Action": 10
   },
   "exit_warning_keys": {
     "突破後站穩:2026-09-16:69.90:假突破觀察": "2026-09-18",
