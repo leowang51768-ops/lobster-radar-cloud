@@ -443,7 +443,7 @@ def retest_support_from_snapshot(snap):
 
 
 def collect_retest_confirmations(day, limit=MAX_STOCKS):
-    """Second-stage signal: a prior first-stage pick retests support within 1-5 sessions and closes back above it."""
+    """Second-stage signal: a prior first-stage pick later retests support and closes back above it."""
     sessions = trading_sessions_through(day)
     idx = {d: i for i, d in enumerate(sessions)}
     current_i = idx.get(day)
@@ -461,7 +461,7 @@ def collect_retest_confirmations(day, limit=MAX_STOCKS):
             if start_i is None:
                 continue
             age = current_i - start_i
-            if age < 1 or age > 5:
+            if age < 1:
                 continue
 
             support = retest_support_from_snapshot(snap)
@@ -496,8 +496,7 @@ def collect_retest_confirmations(day, limit=MAX_STOCKS):
             # but must close back at/above support and remain above the strategy stop.
             touched = lo <= support * 1.01
             held = close >= support
-            stop_intact = close > stop
-            if not (touched and held and stop_intact):
+            if not (touched and held):
                 continue
 
             vol_ratio_vs_breakout = (vol / breakout_vol) if breakout_vol > 0 else None
@@ -522,7 +521,7 @@ def collect_retest_confirmations(day, limit=MAX_STOCKS):
 def format_retest_message(day, picks):
     lines = [
         f"🦞 龍蝦雷達｜回測確認買點｜{day}",
-        "前面已出現突破候選，1～5個交易日內回測支撐後收盤守住｜屬較穩定的第二階段訊號；買不買仍由盤中情況決定。",
+        "前面已出現突破候選，之後回測支撐且收盤守住｜屬較穩定的第二階段訊號；買不買仍由盤中情況決定。",
     ]
     for i, r in enumerate(picks, 1):
         vol_text = ("資料不足" if r["volume_vs_breakout"] is None
