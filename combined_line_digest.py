@@ -449,9 +449,11 @@ def update_breakout_tracking(day, selected):
     """Track first-stage picks until they become confirmed retests or failed breakouts.
 
     Status definitions:
-    tracking  = breakout remains above support; no confirmed retest yet.
-    confirmed = price retested support (low <= support+1%) and closed back at/above support.
-    invalid   = daily close fell below support.
+    tracking      = D0 breakout day or D1-D5 consolidation while support still holds.
+    true_breakout = from D1 onward, close >= D0 breakout close +2% without a support retest.
+    confirmed     = price retested support (low <= support+1%) and closed back at/above support.
+    invalid       = daily close fell below support.
+    expired       = no resolution by the end of D5.
     """
     today=datetime.now(ZoneInfo("Asia/Taipei")).date().isoformat()
     live=(day==today)
@@ -482,6 +484,12 @@ def update_breakout_tracking(day, selected):
             item["last_close"]=close
             item["last_volume"]=vol
 
+            # Trading-day age is counted from D0 breakout day.
+            sessions=trading_sessions_through(day)
+            pos={d:i for i,d in enumerate(sessions)}
+            age=(pos.get(day,0)-pos.get(signal_day,0)) if signal_day in pos else 0
+            item["tracking_day"]=age
+
             if close < support:
                 item["status"]="invalid"
                 item["status_label"]="🔴 失效突破"
@@ -493,14 +501,38 @@ def update_breakout_tracking(day, selected):
             touched=low <= support*1.01
             if touched:
                 item["status"]="confirmed"
-                item["status_label"]="🟢 真突破／回測確認"
+                item["status_label"]="🟢 回測確認"
                 item["resolved_date"]=day
                 item["resolved_close"]=close
                 breakout_vol=number(item.get("breakout_volume"))
                 item["volume_vs_breakout"]=(vol/breakout_vol if breakout_vol>0 else None)
                 confirmed.append(dict(item))
+                continue
+
+            breakout_close=number(item.get("breakout_close"))
+            gain_vs_breakout=((close/breakout_close)-1.0) if breakout_close>0 else 0.0
+            item["gain_vs_breakout_pct"]=round(gain_vs_breakout*100,4)
+
+            if age>=1 and gain_vs_breakout>=0.02:
+                item["status"]="true_breakout"
+                item["status_label"]="🔵 真突破"
+                item["true_breakout_date"]=day
+                item["true_breakout_close"]=close
+                item["resolved_date"]=day
+                item["resolved_close"]=close
+            elif age>=1:
+                item["status_label"]="🟡 突破後盤整"
             else:
-                item["status_label"]="🟡 強勢突破追蹤中｜尚未回測"
+                item["status_label"]="🟡 突破追蹤中"
+
+            # Main decision window D1-D3; hard tracking limit D5.
+            # A stock that still has no confirmation, failure, or +2% true breakout
+            # by the end of D5 is closed as a stale consolidation.
+            if age>=5 and item.get("status")=="tracking":
+                item["status"]="expired"
+                item["status_label"]="⚪ 突破後久盤｜追蹤結束"
+                item["resolved_date"]=day
+                item["resolved_close"]=close
 
         # Add today's newly-notified first-stage candidates only after evaluating
         # older tracking rows, so a breakout cannot confirm itself on signal day.
