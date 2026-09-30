@@ -14,6 +14,8 @@ import sqlite3
 import urllib.request
 from chip_analysis import load_institutional
 from pathlib import Path
+from datetime import datetime
+from zoneinfo import ZoneInfo
 
 BASE = Path(__file__).resolve().parent
 MAX_STOCKS = 5
@@ -168,8 +170,8 @@ def collect(day):
     for r in rows("vcp_candidates.csv", day):
         stage=r.get("vcp_stage", "")
         breakout=stage == "當日突破"
-        if stage not in ("當日突破", "突破後回踩"):
-            continue  # Pre-breakout observations stay in their scanner CSV.
+        if stage != "當日突破":
+            continue  # First-stage LINE is same-day breakout candidates only. Retests use a separate second-stage digest.
         candidates.append(dict(
             code=r["code"], name=r["name"], route="VCP", stage=stage,
             day=day if breakout else "",close=number(r.get("close")),
@@ -361,8 +363,8 @@ def write_diagnostics(day, candidates, selected):
     return rows_out
 
 def format_message(day, selected, count, diagnostic_rows=None):
-    lines=[f"🦞 龍蝦雷達｜三策略合併精選｜{day}",
-           f"先篩策略買點區與有效結構停損，再依綜合分數排序｜最多{MAX_STOCKS}檔｜掃描候選{count}筆",
+    lines=[f"🦞 龍蝦雷達｜當日突破候選｜{day}",
+           f"今天剛出現突破／收復訊號，先列入觀察，不代表一定要買｜最多{MAX_STOCKS}檔｜掃描候選{count}筆",
            "排名權重：突破品質40%＋量比25%＋型態完整度25%＋法人籌碼10%（籌碼影響排序；資料未齊暫緩通知）",
            "破底翻用B點低點下方一檔；VCP用頸線下方2%；N字底用B點下方2%。停損距離僅顯示、不設8%入選上限；不符試單區者保留CSV。"]
     if diagnostic_rows is not None:
@@ -414,29 +416,128 @@ def format_message(day, selected, count, diagnostic_rows=None):
     return message
 
 
-def main():
-    day=market_date()
-    candidates=collect(day)
-    score_candidates(day,candidates)
-    selected=choose(candidates)
-    populate_historical_zones(day,candidates)
-    diagnostic_rows=write_diagnostics(day,candidates,selected)
-    from chip_candidate_tracking import record_candidates, update_outcomes
-    record_candidates(day, candidates, selected)
-    update_outcomes()
-    print(json.dumps({"date":day,"candidate_signals":len(candidates),
-                      "qualified_unique_selected":len(selected),
-                      "excluded_observations":len(candidates)-len([r for r in candidates if r.get("risk_ok") is True and r.get("within") is True]),
-                      "selected":[r["code"] for r in selected]},ensure_ascii=False))
-    message=format_message(day,selected,len(candidates),diagnostic_rows)
-    token=os.getenv("LINE_CHANNEL_ACCESS_TOKEN","").strip()
-    if not token:
-        print("Combined LINE token missing; preview only")
-        print(message)
-        return 0
-    if not selected and os.getenv("COMBINED_FORCE_NOTIFY")!="1":
-        print("No qualified entries; LINE skipped")
-        return 0
+
+def read_snapshot_rows():
+    path = BASE / "line_pick_snapshots.csv"
+    if not path.exists():
+        return []
+    with path.open(encoding="utf-8-sig", newline="") as file:
+        return list(csv.DictReader(file))
+
+
+def trading_sessions_through(day):
+    with sqlite3.connect(BASE / "lobster_tw_6m_prices.sqlite") as con:
+        return [str(r[0])[:10] for r in con.execute(
+            "SELECT DISTINCT date FROM prices WHERE date<=? ORDER BY date", (day,)
+        )]
+
+
+def retest_support_from_snapshot(snap):
+    route = snap.get("route", "")
+    pivot = number(snap.get("pivot"))
+    if route in ("N字底", "VCP"):
+        return pivot
+    # For break-bottom, snapshots created after this change persist the left-A
+    # support as retest_support. Older rows fall back to the recorded pivot.
+    return number(snap.get("retest_support")) or pivot
+
+
+def collect_retest_confirmations(day, limit=MAX_STOCKS):
+    """Second-stage signal: a prior first-stage pick retests support within 1-5 sessions and closes back above it."""
+    sessions = trading_sessions_through(day)
+    idx = {d: i for i, d in enumerate(sessions)}
+    current_i = idx.get(day)
+    if current_i is None:
+        return []
+    snaps = read_snapshot_rows()
+    if not snaps:
+        return []
+
+    confirmations = []
+    with sqlite3.connect(BASE / "lobster_tw_6m_prices.sqlite") as con:
+        for snap in snaps:
+            signal_day = snap.get("signal_date", "")
+            start_i = idx.get(signal_day)
+            if start_i is None:
+                continue
+            age = current_i - start_i
+            if age < 1 or age > 5:
+                continue
+
+            support = retest_support_from_snapshot(snap)
+            stop = number(snap.get("stop_price"))
+            if support <= 0 or stop <= 0:
+                continue
+
+            # Avoid duplicate second-stage confirmations for the same original signal.
+            key = f"{signal_day}|{snap.get('code','')}"
+            state_path = BASE / "retest_confirmation_state.json"
+            try:
+                state = json.loads(state_path.read_text(encoding="utf-8")) if state_path.exists() else {}
+            except Exception:
+                state = {}
+            if key in state:
+                continue
+
+            row = con.execute(
+                "SELECT open,high,low,close,volume FROM prices WHERE stock_id=? AND date=? LIMIT 1",
+                (snap["code"], day),
+            ).fetchone()
+            base = con.execute(
+                "SELECT volume FROM prices WHERE stock_id=? AND date=? LIMIT 1",
+                (snap["code"], signal_day),
+            ).fetchone()
+            if not row:
+                continue
+            op, hi, lo, close, vol = [number(v) for v in row]
+            breakout_vol = number(base[0]) if base else 0.0
+
+            # A retest must actually approach/touch support, may pierce it intraday,
+            # but must close back at/above support and remain above the strategy stop.
+            touched = lo <= support * 1.01
+            held = close >= support
+            stop_intact = close > stop
+            if not (touched and held and stop_intact):
+                continue
+
+            vol_ratio_vs_breakout = (vol / breakout_vol) if breakout_vol > 0 else None
+            confirmations.append({
+                "code": snap["code"], "name": snap["name"], "route": snap["route"],
+                "signal_date": signal_day, "day": day, "age": age,
+                "close": close, "low": lo, "support": support, "stop": stop,
+                "volume_vs_breakout": vol_ratio_vs_breakout,
+                "composite_score": number(snap.get("composite_score")),
+                "state_key": key,
+            })
+
+    # Prefer retests closest to support; shrinking volume is a bonus, not a hard gate.
+    confirmations.sort(key=lambda r: (
+        abs(r["close"] / r["support"] - 1.0),
+        r["volume_vs_breakout"] if r["volume_vs_breakout"] is not None else 9.0,
+        r["code"],
+    ))
+    return confirmations[:limit]
+
+
+def format_retest_message(day, picks):
+    lines = [
+        f"🦞 龍蝦雷達｜回測確認買點｜{day}",
+        "前面已出現突破候選，1～5個交易日內回測支撐後收盤守住｜屬較穩定的第二階段訊號；買不買仍由盤中情況決定。",
+    ]
+    for i, r in enumerate(picks, 1):
+        vol_text = ("資料不足" if r["volume_vs_breakout"] is None
+                    else f"{r['volume_vs_breakout']:.2f}x" + ("（量縮）" if r["volume_vs_breakout"] < 1 else ""))
+        lines.append(
+            f"\n{i}. {r['code']} {r['name']}｜{r['route']}"
+            f"\n原突破日：{r['signal_date']}｜突破後第{r['age']}個交易日"
+            f"\n今日低點{r['low']:g}｜收盤{r['close']:g}｜回測支撐{r['support']:g}"
+            f"\n結構停損{r['stop']:g}｜今日量／突破日量：{vol_text}"
+            f"\n✅ 收盤守住支撐，列入回測確認觀察"
+        )
+    return "\n".join(lines)
+
+
+def send_line_text(token, message, label):
     chunks=[]
     for line in message.split("\n"):
         if len(line)>4900:
@@ -454,11 +555,73 @@ def main():
         headers={"Authorization":f"Bearer {token}",
                  "Content-Type":"application/json; charset=UTF-8"})
     with urllib.request.urlopen(request,timeout=30) as response:
-        print("Combined LINE status:",response.status)
-    # Only the stocks in the successfully accepted daily LINE message become
-    # immutable tracking samples; scans and observations do not count.
-    from line_pick_tracking import store_notification
-    store_notification(day, selected)
+        print(f"{label} LINE status:",response.status)
+
+
+def mark_retest_confirmations(day, picks):
+    if not picks:
+        return
+    # Historical replays never mutate live confirmation state.
+    today=datetime.now(ZoneInfo("Asia/Taipei")).date().isoformat()
+    if day != today:
+        print(f"Historical replay {day}; retest state unchanged")
+        return
+    path = BASE / "retest_confirmation_state.json"
+    try:
+        state = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
+    except Exception:
+        state = {}
+    for r in picks:
+        state[r["state_key"]] = {
+            "confirmed_date": day, "code": r["code"], "name": r["name"],
+            "route": r["route"], "support": r["support"], "close": r["close"],
+        }
+    path.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def main():
+    day=market_date()
+    candidates=collect(day)
+    score_candidates(day,candidates)
+    selected=choose(candidates)
+    populate_historical_zones(day,candidates)
+    diagnostic_rows=write_diagnostics(day,candidates,selected)
+    from chip_candidate_tracking import record_candidates, update_outcomes
+    record_candidates(day, candidates, selected)
+    update_outcomes()
+    print(json.dumps({"date":day,"candidate_signals":len(candidates),
+                      "qualified_unique_selected":len(selected),
+                      "excluded_observations":len(candidates)-len([r for r in candidates if r.get("risk_ok") is True and r.get("within") is True]),
+                      "selected":[r["code"] for r in selected]},ensure_ascii=False))
+    breakout_message=format_message(day,selected,len(candidates),diagnostic_rows)
+    retest_picks=collect_retest_confirmations(day)
+    retest_message=format_retest_message(day,retest_picks) if retest_picks else ""
+    token=os.getenv("LINE_CHANNEL_ACCESS_TOKEN","").strip()
+    if not token:
+        print("Combined LINE token missing; preview only")
+        print(breakout_message)
+        if retest_message:
+            print("\n--- SECOND STAGE ---\n"+retest_message)
+        return 0
+
+    sent_breakout=False
+    if selected or os.getenv("COMBINED_FORCE_NOTIFY")=="1":
+        send_line_text(token, breakout_message, "Breakout candidate")
+        sent_breakout=True
+    else:
+        print("No qualified first-stage breakout entries; first LINE skipped")
+
+    if retest_picks:
+        send_line_text(token, retest_message, "Retest confirmation")
+        mark_retest_confirmations(day, retest_picks)
+    else:
+        print("No second-stage retest confirmations; second LINE skipped")
+
+    # Only first-stage stocks in a successfully accepted live LINE message
+    # become immutable tracking samples for performance and future retests.
+    if sent_breakout:
+        from line_pick_tracking import store_notification
+        store_notification(day, selected)
     return 0
 
 
