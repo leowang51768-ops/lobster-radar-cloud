@@ -417,121 +417,164 @@ def format_message(day, selected, count, diagnostic_rows=None):
 
 
 
-def read_snapshot_rows():
-    path = BASE / "line_pick_snapshots.csv"
-    if not path.exists():
-        return []
-    with path.open(encoding="utf-8-sig", newline="") as file:
-        return list(csv.DictReader(file))
+TRACKING_PATH = BASE / "breakout_tracking.json"
+WATCHLIST_PATH = BASE / "breakout_watchlist.json"
 
 
-def trading_sessions_through(day):
+def load_breakout_tracking():
+    if not TRACKING_PATH.exists():
+        return {}
+    try:
+        data=json.loads(TRACKING_PATH.read_text(encoding="utf-8"))
+        return data if isinstance(data,dict) else {}
+    except Exception as exc:
+        print("BREAKOUT_TRACKING_WARNING "+json.dumps({"error":str(exc)},ensure_ascii=False))
+        return {}
+
+
+def save_breakout_tracking(state):
+    TRACKING_PATH.write_text(
+        json.dumps(state,ensure_ascii=False,indent=2),
+        encoding="utf-8",
+    )
+
+
+def tracking_support(pick):
+    if pick.get("route")=="破底翻":
+        return number(pick.get("left_a_upper"))
+    return number(pick.get("pivot"))
+
+
+def update_breakout_tracking(day, selected):
+    """Track first-stage picks until they become confirmed retests or failed breakouts.
+
+    Status definitions:
+    tracking  = breakout remains above support; no confirmed retest yet.
+    confirmed = price retested support (low <= support+1%) and closed back at/above support.
+    invalid   = daily close fell below support.
+    """
+    today=datetime.now(ZoneInfo("Asia/Taipei")).date().isoformat()
+    live=(day==today)
+    state=load_breakout_tracking()
+
+    confirmed=[]
+    invalidated=[]
+    active_before=[v for v in state.values() if v.get("status")=="tracking"]
+
     with sqlite3.connect(BASE / "lobster_tw_6m_prices.sqlite") as con:
-        return [str(r[0])[:10] for r in con.execute(
-            "SELECT DISTINCT date FROM prices WHERE date<=? ORDER BY date", (day,)
-        )]
-
-
-def retest_support_from_snapshot(snap):
-    route = snap.get("route", "")
-    pivot = number(snap.get("pivot"))
-    if route in ("N字底", "VCP"):
-        return pivot
-    # For break-bottom, snapshots created after this change persist the left-A
-    # support as retest_support. Older rows fall back to the recorded pivot.
-    return number(snap.get("retest_support")) or pivot
-
-
-def collect_retest_confirmations(day, limit=MAX_STOCKS):
-    """Second-stage signal: a prior first-stage pick later retests support and closes back above it."""
-    sessions = trading_sessions_through(day)
-    idx = {d: i for i, d in enumerate(sessions)}
-    current_i = idx.get(day)
-    if current_i is None:
-        return []
-    snaps = read_snapshot_rows()
-    if not snaps:
-        return []
-
-    confirmations = []
-    with sqlite3.connect(BASE / "lobster_tw_6m_prices.sqlite") as con:
-        for snap in snaps:
-            signal_day = snap.get("signal_date", "")
-            start_i = idx.get(signal_day)
-            if start_i is None:
+        for item in active_before:
+            signal_day=item.get("signal_date","")
+            if not signal_day or signal_day>=day:
                 continue
-            age = current_i - start_i
-            if age < 1:
-                continue
-
-            support = retest_support_from_snapshot(snap)
-            stop = number(snap.get("stop_price"))
-            if support <= 0 or stop <= 0:
-                continue
-
-            # Avoid duplicate second-stage confirmations for the same original signal.
-            key = f"{signal_day}|{snap.get('code','')}"
-            state_path = BASE / "retest_confirmation_state.json"
-            try:
-                state = json.loads(state_path.read_text(encoding="utf-8")) if state_path.exists() else {}
-            except Exception:
-                state = {}
-            if key in state:
-                continue
-
-            row = con.execute(
-                "SELECT open,high,low,close,volume FROM prices WHERE stock_id=? AND date=? LIMIT 1",
-                (snap["code"], day),
-            ).fetchone()
-            base = con.execute(
-                "SELECT volume FROM prices WHERE stock_id=? AND date=? LIMIT 1",
-                (snap["code"], signal_day),
+            row=con.execute(
+                "SELECT low,close,volume FROM prices WHERE stock_id=? AND date=? LIMIT 1",
+                (item.get("code"),day),
             ).fetchone()
             if not row:
                 continue
-            op, hi, lo, close, vol = [number(v) for v in row]
-            breakout_vol = number(base[0]) if base else 0.0
-
-            # A retest must actually approach/touch support, may pierce it intraday,
-            # but must close back at/above support and remain above the strategy stop.
-            touched = lo <= support * 1.01
-            held = close >= support
-            if not (touched and held):
+            low,close,vol=[number(x) for x in row]
+            support=number(item.get("retest_support"))
+            if support<=0:
                 continue
 
-            vol_ratio_vs_breakout = (vol / breakout_vol) if breakout_vol > 0 else None
-            confirmations.append({
-                "code": snap["code"], "name": snap["name"], "route": snap["route"],
-                "signal_date": signal_day, "day": day, "age": age,
-                "close": close, "low": lo, "support": support, "stop": stop,
-                "volume_vs_breakout": vol_ratio_vs_breakout,
-                "composite_score": number(snap.get("composite_score")),
-                "state_key": key,
-            })
+            item["last_checked_date"]=day
+            item["last_low"]=low
+            item["last_close"]=close
+            item["last_volume"]=vol
 
-    # Prefer retests closest to support; shrinking volume is a bonus, not a hard gate.
-    confirmations.sort(key=lambda r: (
-        abs(r["close"] / r["support"] - 1.0),
-        r["volume_vs_breakout"] if r["volume_vs_breakout"] is not None else 9.0,
-        r["code"],
-    ))
-    return confirmations[:limit]
+            if close < support:
+                item["status"]="invalid"
+                item["status_label"]="🔴 失效突破"
+                item["resolved_date"]=day
+                item["resolved_close"]=close
+                invalidated.append(dict(item))
+                continue
+
+            touched=low <= support*1.01
+            if touched:
+                item["status"]="confirmed"
+                item["status_label"]="🟢 真突破／回測確認"
+                item["resolved_date"]=day
+                item["resolved_close"]=close
+                breakout_vol=number(item.get("breakout_volume"))
+                item["volume_vs_breakout"]=(vol/breakout_vol if breakout_vol>0 else None)
+                confirmed.append(dict(item))
+            else:
+                item["status_label"]="🟡 強勢突破追蹤中｜尚未回測"
+
+        # Add today's newly-notified first-stage candidates only after evaluating
+        # older tracking rows, so a breakout cannot confirm itself on signal day.
+        for pick in selected:
+            key=f"{day}|{pick['code']}"
+            if key in state:
+                continue
+            support=tracking_support(pick)
+            volrow=con.execute(
+                "SELECT volume FROM prices WHERE stock_id=? AND date=? LIMIT 1",
+                (pick["code"],day),
+            ).fetchone()
+            state[key]={
+                "tracking_key":key,
+                "signal_date":day,
+                "code":pick["code"],
+                "name":pick["name"],
+                "route":pick["route"],
+                "stage":pick["stage"],
+                "breakout_close":number(pick.get("close")),
+                "pivot":number(pick.get("pivot")),
+                "retest_support":support,
+                "stop_price":number(pick.get("stop")),
+                "volume_ratio":number(pick.get("volume_ratio")),
+                "composite_score":number(pick.get("composite_score")),
+                "breakout_volume":number(volrow[0]) if volrow else 0.0,
+                "status":"tracking",
+                "status_label":"🟡 突破追蹤中",
+                "created_date":day,
+                "last_checked_date":day,
+            }
+
+    active=[dict(v) for v in state.values() if v.get("status")=="tracking"]
+    active.sort(key=lambda x:(x.get("signal_date",""),x.get("code","")))
+
+    if live:
+        save_breakout_tracking(state)
+        payload={
+            "signal_type":"當日突破候選追蹤池",
+            "generated_at":datetime.now(ZoneInfo("Asia/Taipei")).isoformat(timespec="seconds"),
+            "count":len(active),
+            "stocks":active,
+        }
+        WATCHLIST_PATH.write_text(
+            json.dumps(payload,ensure_ascii=False,indent=2),
+            encoding="utf-8",
+        )
+    else:
+        print(f"Historical replay {day}; breakout tracking/watchlist unchanged")
+
+    print("BREAKOUT_TRACKING "+json.dumps({
+        "date":day,
+        "active":len(active),
+        "confirmed":[x["code"] for x in confirmed],
+        "invalid":[x["code"] for x in invalidated],
+        "new":[x["code"] for x in selected],
+    },ensure_ascii=False))
+    return confirmed, invalidated, active
 
 
 def format_retest_message(day, picks):
-    lines = [
+    lines=[
         f"🦞 龍蝦雷達｜回測確認買點｜{day}",
         "前面已出現突破候選，之後回測支撐且收盤守住｜屬較穩定的第二階段訊號；買不買仍由盤中情況決定。",
     ]
-    for i, r in enumerate(picks, 1):
-        vol_text = ("資料不足" if r["volume_vs_breakout"] is None
-                    else f"{r['volume_vs_breakout']:.2f}x" + ("（量縮）" if r["volume_vs_breakout"] < 1 else ""))
+    for i,r in enumerate(picks[:MAX_STOCKS],1):
+        vr=r.get("volume_vs_breakout")
+        vol_text=("資料不足" if vr is None else f"{vr:.2f}x"+("（量縮）" if vr<1 else ""))
         lines.append(
             f"\n{i}. {r['code']} {r['name']}｜{r['route']}"
-            f"\n原突破日：{r['signal_date']}｜突破後第{r['age']}個交易日"
-            f"\n今日低點{r['low']:g}｜收盤{r['close']:g}｜回測支撐{r['support']:g}"
-            f"\n結構停損{r['stop']:g}｜今日量／突破日量：{vol_text}"
-            f"\n✅ 收盤守住支撐，列入回測確認觀察"
+            f"\n原突破日：{r['signal_date']}"
+            f"\n今日低點{number(r.get('last_low')):g}｜收盤{number(r.get('last_close')):g}｜回測支撐{number(r.get('retest_support')):g}"
+            f"\n今日量／突破日量：{vol_text}"
+            f"\n✅ 真突破／回測確認"
         )
     return "\n".join(lines)
 
@@ -557,64 +600,6 @@ def send_line_text(token, message, label):
         print(f"{label} LINE status:",response.status)
 
 
-def mark_retest_confirmations(day, picks):
-    if not picks:
-        return
-    # Historical replays never mutate live confirmation state.
-    today=datetime.now(ZoneInfo("Asia/Taipei")).date().isoformat()
-    if day != today:
-        print(f"Historical replay {day}; retest state unchanged")
-        return
-    path = BASE / "retest_confirmation_state.json"
-    try:
-        state = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
-    except Exception:
-        state = {}
-    for r in picks:
-        state[r["state_key"]] = {
-            "confirmed_date": day, "code": r["code"], "name": r["name"],
-            "route": r["route"], "support": r["support"], "close": r["close"],
-        }
-    path.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
-
-
-def save_breakout_watchlist(day, selected):
-    """Persist the latest live first-stage picks for next-session monitor sync."""
-    today=datetime.now(ZoneInfo("Asia/Taipei")).date().isoformat()
-    if day != today:
-        print(f"Historical replay {day}; breakout watchlist unchanged")
-        return
-    path = BASE / "breakout_watchlist.json"
-    stocks=[]
-    for pick in selected:
-        support = (number(pick.get("left_a_upper"))
-                   if pick.get("route")=="破底翻"
-                   else number(pick.get("pivot")))
-        stocks.append({
-            "code": pick["code"],
-            "name": pick["name"],
-            "route": pick["route"],
-            "stage": pick["stage"],
-            "signal_date": day,
-            "breakout_close": number(pick.get("close")),
-            "pivot": number(pick.get("pivot")),
-            "retest_support": support,
-            "stop_price": number(pick.get("stop")),
-            "volume_ratio": number(pick.get("volume_ratio")),
-            "composite_score": number(pick.get("composite_score")),
-        })
-    payload={
-        "signal_type": "當日突破候選",
-        "signal_date": day,
-        "generated_at": datetime.now(ZoneInfo("Asia/Taipei")).isoformat(timespec="seconds"),
-        "max_stocks": MAX_STOCKS,
-        "count": len(stocks),
-        "stocks": stocks,
-    }
-    path.write_text(json.dumps(payload,ensure_ascii=False,indent=2),encoding="utf-8")
-    print("BREAKOUT_WATCHLIST "+json.dumps({"date":day,"count":len(stocks),"codes":[x["code"] for x in stocks]},ensure_ascii=False))
-
-
 def main():
     day=market_date()
     candidates=collect(day)
@@ -629,9 +614,11 @@ def main():
                       "qualified_unique_selected":len(selected),
                       "excluded_observations":len(candidates)-len([r for r in candidates if r.get("risk_ok") is True and r.get("within") is True]),
                       "selected":[r["code"] for r in selected]},ensure_ascii=False))
+
     breakout_message=format_message(day,selected,len(candidates),diagnostic_rows)
-    retest_picks=collect_retest_confirmations(day)
-    retest_message=format_retest_message(day,retest_picks) if retest_picks else ""
+    confirmed, invalidated, active=update_breakout_tracking(day,selected)
+    retest_message=format_retest_message(day,confirmed) if confirmed else ""
+
     token=os.getenv("LINE_CHANNEL_ACCESS_TOKEN","").strip()
     if not token:
         print("Combined LINE token missing; preview only")
@@ -647,22 +634,20 @@ def main():
     else:
         print("No qualified first-stage breakout entries; first LINE skipped")
 
-    if retest_picks:
+    if confirmed:
         send_line_text(token, retest_message, "Retest confirmation")
-        mark_retest_confirmations(day, retest_picks)
     else:
         print("No second-stage retest confirmations; second LINE skipped")
 
-    # Only first-stage stocks in a successfully accepted live LINE message
-    # become immutable tracking samples for performance and future retests.
-    # Keep a dedicated live watchlist for the next-session realtime monitor.
-    # An empty list clears stale first-stage picks when no new breakout candidates exist.
-    save_breakout_watchlist(day, selected)
+    if invalidated:
+        print("INVALID_BREAKOUTS "+json.dumps(
+            [{"code":x["code"],"name":x["name"],"support":x["retest_support"],"close":x["last_close"]}
+             for x in invalidated],ensure_ascii=False))
+
     if sent_breakout:
         from line_pick_tracking import store_notification
         store_notification(day, selected)
     return 0
-
 
 if __name__=="__main__":
     raise SystemExit(main())
