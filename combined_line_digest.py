@@ -578,6 +578,43 @@ def mark_retest_confirmations(day, picks):
     path.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
+def save_breakout_watchlist(day, selected):
+    """Persist the latest live first-stage picks for next-session monitor sync."""
+    today=datetime.now(ZoneInfo("Asia/Taipei")).date().isoformat()
+    if day != today:
+        print(f"Historical replay {day}; breakout watchlist unchanged")
+        return
+    path = BASE / "breakout_watchlist.json"
+    stocks=[]
+    for pick in selected:
+        support = (number(pick.get("left_a_upper"))
+                   if pick.get("route")=="破底翻"
+                   else number(pick.get("pivot")))
+        stocks.append({
+            "code": pick["code"],
+            "name": pick["name"],
+            "route": pick["route"],
+            "stage": pick["stage"],
+            "signal_date": day,
+            "breakout_close": number(pick.get("close")),
+            "pivot": number(pick.get("pivot")),
+            "retest_support": support,
+            "stop_price": number(pick.get("stop")),
+            "volume_ratio": number(pick.get("volume_ratio")),
+            "composite_score": number(pick.get("composite_score")),
+        })
+    payload={
+        "signal_type": "當日突破候選",
+        "signal_date": day,
+        "generated_at": datetime.now(ZoneInfo("Asia/Taipei")).isoformat(timespec="seconds"),
+        "max_stocks": MAX_STOCKS,
+        "count": len(stocks),
+        "stocks": stocks,
+    }
+    path.write_text(json.dumps(payload,ensure_ascii=False,indent=2),encoding="utf-8")
+    print("BREAKOUT_WATCHLIST "+json.dumps({"date":day,"count":len(stocks),"codes":[x["code"] for x in stocks]},ensure_ascii=False))
+
+
 def main():
     day=market_date()
     candidates=collect(day)
@@ -618,6 +655,9 @@ def main():
 
     # Only first-stage stocks in a successfully accepted live LINE message
     # become immutable tracking samples for performance and future retests.
+    # Keep a dedicated live watchlist for the next-session realtime monitor.
+    # An empty list clears stale first-stage picks when no new breakout candidates exist.
+    save_breakout_watchlist(day, selected)
     if sent_breakout:
         from line_pick_tracking import store_notification
         store_notification(day, selected)
