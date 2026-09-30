@@ -445,6 +445,45 @@ def tracking_support(pick):
     return number(pick.get("pivot"))
 
 
+def nearest_upper_resistance(con, code, day, pivot, close, lookback=60):
+    """Nearest repeated local-high cluster above current price, using only prior sessions."""
+    rows_=con.execute(
+        "SELECT date,high FROM prices WHERE stock_id=? AND date<? ORDER BY date DESC LIMIT ?",
+        (code,day,lookback),
+    ).fetchall()
+    rows_=list(reversed(rows_))
+    if len(rows_)<5:
+        return None
+    highs=[number(r[1]) for r in rows_]
+    peaks=[]
+    for pos in range(2,len(highs)-2):
+        price=highs[pos]
+        if price>=max(highs[pos-2:pos+3]):
+            if not peaks or pos-peaks[-1][0]>=1:
+                peaks.append((pos,price))
+            elif price>peaks[-1][1]:
+                peaks[-1]=(pos,price)
+
+    clusters=[]
+    for peak_i,price in peaks:
+        matches=[c for c in clusters if abs(price/c["center"]-1.0)<=0.01]
+        if matches:
+            c=min(matches,key=lambda x:abs(price/x["center"]-1.0))
+            c["touches"].append((peak_i,price))
+            vals=sorted(p for _,p in c["touches"])
+            n=len(vals)
+            c["center"]=vals[n//2] if n%2 else (vals[n//2-1]+vals[n//2])/2
+        else:
+            clusters.append({"center":price,"touches":[(peak_i,price)]})
+
+    floor=max(number(pivot)*1.01,number(close))
+    valid=[
+        c["center"] for c in clusters
+        if len(c["touches"])>=2 and c["center"]>floor
+    ]
+    return min(valid) if valid else None
+
+
 def update_breakout_tracking(day, selected):
     """Track first-stage picks until they become confirmed retests or failed breakouts.
 
@@ -518,6 +557,16 @@ def update_breakout_tracking(day, selected):
                 item["status_label"]="🔵 真突破"
                 item["true_breakout_date"]=day
                 item["true_breakout_close"]=close
+                upper=nearest_upper_resistance(
+                    con,item.get("code"),day,item.get("pivot"),close
+                )
+                item["upper_resistance"]=round(upper,2) if upper is not None else None
+                if upper is not None and upper>close:
+                    item["upside_amount"]=round(upper-close,2)
+                    item["upside_pct"]=round((upper/close-1.0)*100,2)
+                else:
+                    item["upside_amount"]=None
+                    item["upside_pct"]=None
                 item["resolved_date"]=day
                 item["resolved_close"]=close
             elif age>=1:
