@@ -19,8 +19,8 @@ DB = BASE / "lobster_tw_6m_prices.sqlite"
 SNAPSHOTS = BASE / "line_pick_snapshots.csv"
 PERFORMANCE = BASE / "line_pick_performance.csv"
 FIELDS = ["signal_date","first_notified_at","code","name","route","stage",
-          "baseline_entry","pivot","stop_price","risk_pct","volume_ratio",
-          "breakout_date","status","entry_basis","notification_version"]
+          "baseline_entry","pivot","retest_support","stop_price","risk_pct","volume_ratio",
+          "composite_score","breakout_date","status","entry_basis","notification_version"]
 PERF_FIELDS = FIELDS + ["horizon","exit_date","exit_close","return_pct",
                         "win","stop_touched_through_horizon","outcome_status"]
 HORIZONS = (5,10,20)
@@ -59,11 +59,14 @@ def store_notification(signal_date, selected):
         row=dict(signal_date=signal_date,first_notified_at=timestamp,
                  code=pick["code"],name=pick["name"],route=pick["route"],
                  stage=pick["stage"],baseline_entry=pick["close"],
-                 pivot=pick["pivot"],stop_price=pick["stop"],
+                 pivot=pick["pivot"],
+                 retest_support=(pick.get("left_a_upper") if pick.get("route")=="破底翻" else pick["pivot"]),
+                 stop_price=pick["stop"],
                  risk_pct=pick["risk_pct"],volume_ratio=pick["volume_ratio"],
+                 composite_score=pick.get("composite_score",""),
                  breakout_date=pick["day"],status=pick["status"],
                  entry_basis="signal_day_close_paper",
-                 notification_version="combined-top10-v1")
+                 notification_version="two-stage-top5-v1")
         old.append(row)
         seen.add(key)
         added+=1
