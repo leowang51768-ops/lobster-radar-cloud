@@ -478,10 +478,13 @@ def nearest_upper_resistance(con, code, day, pivot, close, lookback=60):
 
     floor=max(number(pivot)*1.01,number(close))
     valid=[
-        c["center"] for c in clusters
-        if len(c["touches"])>=2 and c["center"]>floor
+        (c["center"],len(c["touches"])) for c in clusters
+        if len(c["touches"])>=3 and c["center"]>floor
     ]
-    return min(valid) if valid else None
+    if not valid:
+        return None
+    center,touches=min(valid,key=lambda x:x[0])
+    return {"price":center,"touches":touches}
 
 
 def update_breakout_tracking(day, selected):
@@ -557,10 +560,16 @@ def update_breakout_tracking(day, selected):
                 item["status_label"]="🔵 真突破"
                 item["true_breakout_date"]=day
                 item["true_breakout_close"]=close
-                upper=nearest_upper_resistance(
+                upper_info=nearest_upper_resistance(
                     con,item.get("code"),day,item.get("pivot"),close
                 )
+                upper=(upper_info or {}).get("price") if upper_info else None
+                touches=int((upper_info or {}).get("touches",0)) if upper_info else 0
                 item["upper_resistance"]=round(upper,2) if upper is not None else None
+                item["upper_resistance_touches"]=touches
+                item["upper_resistance_strength"]=(
+                    "強壓力區" if touches>=4 else "有效壓力" if touches>=3 else "未確認"
+                )
                 if upper is not None and upper>close:
                     item["upside_amount"]=round(upper-close,2)
                     item["upside_pct"]=round((upper/close-1.0)*100,2)
