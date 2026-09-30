@@ -5759,10 +5759,17 @@
       "support_lower": 1180.0,
       "support_upper": 1180.0,
       "support_source": "近5日低點"
+    },
+    "2324": {
+      "Price Action": "PriceAction:2026-09-30:20日破底翻強攻",
+      "name": "仁寶",
+      "support_lower": 36.05,
+      "support_upper": 36.05,
+      "support_source": "近5日低點"
     }
   },
-  "updated_at": "2026-09-29T12:46:42.594323+00:00",
-  "latest_trade_date": "2026-09-29",
+  "updated_at": "2026-09-30T12:49:00.678921+00:00",
+  "latest_trade_date": "2026-09-30",
   "layer1_candidate_count": 187,
   "stage_counts": {
     "正式試單": 1,
@@ -5793,11 +5800,11 @@
   },
   "strategy_version": "龍蝦買點-v14-破底翻+PriceAction",
   "four_point_rule": "已取消",
-  "candidate_count": 57,
+  "candidate_count": 60,
   "formal_buy_signal_count": 1,
   "route_counts": {
     "破底翻": 47,
-    "Price Action": 10
+    "Price Action": 13
   },
   "exit_warning_keys": {
     "突破後站穩:2026-09-16:69.90:假突破觀察": "2026-09-18",
