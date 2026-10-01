@@ -1,8 +1,5 @@
 name: Independent Branch Evidence Tracking
 on:
-  push:
-    branches: [main]
-    paths: ['.github/workflows/branch-tracking.yml']
   workflow_dispatch:
   schedule:
     # 台灣時間週一至週五22:00；與雷達通知流程獨立
