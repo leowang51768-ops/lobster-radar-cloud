@@ -111,11 +111,21 @@ def parse_history(html, code, branch, broker, day):
     text = ''.join(p.text)
     if not re.search(r'\(' + re.escape(code) + r'\)', text) or '單一券商歷史明細' not in text:
         raise ValueError('History identity/title mismatch')
-    # Require the selected branch and broker, rather than trusting the requested URL.
+    # Static source builds selectors with JavaScript. Verify server-rendered
+    # navigation identities when selectors are absent; never execute page scripts.
+    navigation=[]
+    for url in re.findall(r'/z/zc/zco/zco0/zco0\.djhtm\?[^\s\"\'<>]+',html,re.I):
+        query=urllib.parse.parse_qs(urllib.parse.urlparse(url).query)
+        identity={k.lower():v for k,v in query.items()}
+        if all(k in identity for k in ('a','b','bhid')):
+            navigation.append(identity)
+    server_identity=bool(navigation) and all(v['a']==[code] and v['b']==[branch] and v['bhid']==[broker] for v in navigation)
+    # Require response identity, rather than trusting the requested URL.
     for name, expected in (('sel_BrokerBranch', branch), ('sel_Broker', broker)):
         select = re.search(r'<select\b[^>]*\bname\s*=\s*[\"\']?' + name + r'[\"\']?[^>]*>(.*?)</select>', html, re.I | re.S)
         if not select:
-            raise ValueError('History identity selector missing')
+            if server_identity:continue
+            raise ValueError('History response identity missing or mismatched')
         options = re.findall(r'<option\b([^>]*)>', select[1], re.I)
         chosen = next((a for a in options if re.search(r'\bselected\b', a, re.I)), options[0] if options else '')
         value = re.search(r'\bvalue\s*=\s*[\"\']?([^\s\"\'>]+)', chosen, re.I)
