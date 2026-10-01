@@ -120,7 +120,7 @@ def parse_history(html, code, branch, broker, day):
         chosen = next((a for a in options if re.search(r'\bselected\b', a, re.I)), options[0] if options else '')
         value = re.search(r'\bvalue\s*=\s*[\"\']?([^\s\"\'>]+)', chosen, re.I)
         if not value or value[1] != expected:
-            raise ValueError('History branch identity mismatch')
+            raise ValueError(f'History {name} identity mismatch: expected {expected}, got {value[1] if value else None}')
     out = []
     for row in p.rows:
         if len(row) != 5 or not re.fullmatch(r'\d{4}/\d{2}/\d{2}', row[0]['text']):
@@ -227,10 +227,13 @@ def collect(args):
     statuses = db.execute('SELECT code,status,rows,error FROM stock_status WHERE day=? ORDER BY code',(day,)).fetchall()
     good = sum(r[1]=='ok' for r in statuses)
     counts = {table:db.execute(f'SELECT COUNT(*) FROM {table}').fetchone()[0] for table in ('ranking','history','queue')}
+    history_errors=[{'code':c,'branch':b,'error':e} for c,b,e in db.execute('SELECT code,branch,error FROM queue WHERE error IS NOT NULL ORDER BY code,branch LIMIT 60')]
     observed_days = db.execute("SELECT COUNT(DISTINCT day) FROM stock_status WHERE status='ok'").fetchone()[0]
     full_days = db.execute("SELECT COUNT(*) FROM (SELECT day FROM stock_status WHERE status='ok' GROUP BY day HAVING COUNT(*)=?)",(len(universe),)).fetchone()[0]
     report = {'date':day,'mode':'collection_only','expected_stocks':len(universe),'covered_stocks':good,'coverage_complete':good==len(universe),'status':'complete' if good==len(universe) else 'partial','source_blocked':stop,'ranking_limit_per_side':15,'history_target_top_per_side':3,'history_requests_succeeded':history_ok,'observed_collection_days':observed_days,'complete_collection_days':full_days,'counts':counts,'review_stage':'可開始資料品質複盤' if full_days>=20 else '資料累積中','strategy_changes':False,'notes':['未上榜不等於零交易','歷史回填以今天發現的分點為條件，存在選樣偏差；不得冒充當時已知訊號','60日紀錄不代表60筆獨立交易樣本；未建立關鍵分點勝率判定','數字單位為張，原頁有四捨五入；股價成交量使用官方來源且成交量單位為股','排行榜與逐日歷史分開保存，不互相覆蓋'],'missing_stocks':[c for c in universe if not any(r[0]==c and r[1]=='ok' for r in statuses)],'errors':[{ 'code':r[0],'error':r[3]} for r in statuses if r[1]!='ok']}
     (data/'status.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
+    report['history_errors']=history_errors
+    report['history_coverage_complete']=counts['queue']>0 and db.execute('SELECT COUNT(*) FROM queue WHERE last_success IS NULL').fetchone()[0]==0
     with (data/'coverage.csv').open('w',encoding='utf-8-sig',newline='') as f:
         writer=csv.writer(f);writer.writerow(['date','code','status','rows','error']);writer.writerows((day,*r) for r in statuses)
     db.close()
