@@ -27,6 +27,9 @@ jobs:
         run: python -m unittest discover -s branch_tracker/tests -v
       - name: Accumulate branch evidence only
         run: python branch_tracker/collect.py
+      - name: Refresh matured price and quantity observations
+        if: ${{ always() }}
+        run: python branch_tracker/price_relationship.py
       - name: Save successful evidence and coverage even on partial failure
         if: ${{ always() }}
         shell: bash
