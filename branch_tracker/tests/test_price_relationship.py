@@ -1,5 +1,6 @@
 import importlib.util
 import unittest
+import sqlite3
 from pathlib import Path
 
 spec=importlib.util.spec_from_file_location('relationship',Path(__file__).parents[1]/'price_relationship.py')
@@ -29,6 +30,20 @@ class RelationshipTests(unittest.TestCase):
         result=m.price_change(prices,sessions,0,'6531',5)
         self.assertEqual(result['end_day'],'2026-10-05')
         self.assertAlmostEqual(result['return_pct'],5)
+
+    def test_analysis_keeps_pending_and_nonoverlapping_outcomes(self):
+        with sqlite3.connect(':memory:') as db:
+            db.executescript('CREATE TABLE official_prices(day TEXT,code TEXT,close REAL,volume REAL); CREATE TABLE ranking(day TEXT,code TEXT,side TEXT,rank INT,branch TEXT,broker TEXT,name TEXT,net REAL,buy REAL,sell REAL);')
+            days=[f'2026-09-{i:02d}' for i in range(1,13)]
+            db.executemany('INSERT INTO official_prices VALUES(?,?,?,?)',[(d,'X',100+i,5000000) for i,d in enumerate(days)])
+            db.executemany('INSERT INTO ranking VALUES(?,?,?,?,?,?,?,?,?,?)',[(d,'X','buy',1,'B','R','branch',500,600,100) for d in days])
+            detail,summary=m.analyze(db)
+            self.assertEqual(len(detail),36)
+            five=next(r for r in summary if r['horizon_sessions']==5)
+            self.assertEqual(five['mature_daily_observations'],7)
+            self.assertEqual(five['nonoverlapping_windows'],2)
+            self.assertEqual(detail[0]['net_share_pct'],10)
+            self.assertTrue(all(r['return_pct'] is None for r in detail if r['status']!='mature'))
 
     def test_missing_or_immature_is_not_zero_return(self):
         sessions=['2026-10-01','2026-10-02']
