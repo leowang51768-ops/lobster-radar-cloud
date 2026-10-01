@@ -1,4 +1,5 @@
 name: Lobster Daily Price Update
+# One-time Oct 1 recovery after fixing trading-session tracking.
 
 on:
   push:
