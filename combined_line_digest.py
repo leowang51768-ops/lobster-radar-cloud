@@ -506,6 +506,10 @@ def update_breakout_tracking(day, selected):
     active_before=[v for v in state.values() if v.get("status")=="tracking"]
 
     with sqlite3.connect(BASE / "lobster_tw_6m_prices.sqlite") as con:
+        sessions = [row[0] for row in con.execute(
+            "SELECT DISTINCT date FROM prices WHERE date<=? ORDER BY date", (day,)
+        )]
+        pos = {d: i for i, d in enumerate(sessions)}
         for item in active_before:
             signal_day=item.get("signal_date","")
             if not signal_day or signal_day>=day:
@@ -527,8 +531,6 @@ def update_breakout_tracking(day, selected):
             item["last_volume"]=vol
 
             # Trading-day age is counted from D0 breakout day.
-            sessions=trading_sessions_through(day)
-            pos={d:i for i,d in enumerate(sessions)}
             age=(pos.get(day,0)-pos.get(signal_day,0)) if signal_day in pos else 0
             item["tracking_day"]=age
 
