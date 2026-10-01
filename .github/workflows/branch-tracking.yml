@@ -1,0 +1,46 @@
+name: Independent Branch Evidence Tracking
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/branch-tracking.yml']
+  workflow_dispatch:
+  schedule:
+    # 台灣時間週一至週五22:00；與雷達通知流程獨立
+    - cron: "0 14 * * 1-5"
+permissions:
+  contents: write
+concurrency:
+  group: independent-branch-tracking
+  cancel-in-progress: false
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Verify parsers and deduplication
+        run: python -m unittest discover -s branch_tracker/tests -v
+      - name: Accumulate branch evidence only
+        run: python branch_tracker/collect.py
+      - name: Save successful evidence and coverage even on partial failure
+        if: ${{ always() }}
+        shell: bash
+        run: |
+          if [ ! -d branch_tracker/data ]; then
+            exit 0
+          fi
+          git config user.name "lobster-branch-tracking"
+          git config user.email "actions@github.com"
+          git add branch_tracker/data
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m "Accumulate independent branch evidence $(TZ=Asia/Taipei date +%F)"
+          # Radar may have committed unrelated files while this job was running.
+          git pull --rebase origin main
+          git push
