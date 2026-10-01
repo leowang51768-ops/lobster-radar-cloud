@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-01",
+  "mode": "collection_only",
+  "expected_stocks": 163,
+  "covered_stocks": 163,
+  "coverage_complete": true,
+  "status": "complete",
+  "source_blocked": false,
+  "ranking_limit_per_side": 15,
+  "history_target_top_per_side": 3,
+  "history_requests_succeeded": 0,
+  "observed_collection_days": 1,
+  "complete_collection_days": 1,
+  "counts": {
+    "ranking": 4890,
+    "history": 0,
+    "queue": 978
+  },
+  "review_stage": "資料累積中",
+  "strategy_changes": false,
+  "notes": [
+    "未上榜不等於零交易",
+    "歷史回填以今天發現的分點為條件，存在選樣偏差；不得冒充當時已知訊號",
+    "60日紀錄不代表60筆獨立交易樣本；未建立關鍵分點勝率判定",
+    "數字單位為張，原頁有四捨五入；股價成交量使用官方來源且成交量單位為股",
+    "排行榜與逐日歷史分開保存，不互相覆蓋"
+  ],
+  "missing_stocks": [],
+  "errors": [],
+  "database_bytes": 2904064
+}
