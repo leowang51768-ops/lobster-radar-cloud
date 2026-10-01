@@ -8,12 +8,12 @@
   "source_blocked": false,
   "ranking_limit_per_side": 15,
   "history_target_top_per_side": 3,
-  "history_requests_succeeded": 0,
+  "history_requests_succeeded": 60,
   "observed_collection_days": 1,
   "complete_collection_days": 1,
   "counts": {
     "ranking": 4890,
-    "history": 0,
+    "history": 3600,
     "queue": 978
   },
   "review_stage": "資料累積中",
@@ -330,5 +330,5 @@
     }
   ],
   "history_coverage_complete": false,
-  "database_bytes": 2908160
+  "database_bytes": 3301376
 }
