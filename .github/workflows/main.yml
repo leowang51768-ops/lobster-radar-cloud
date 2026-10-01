@@ -145,7 +145,7 @@ jobs:
           echo "FAIL_STAGE=N字底掃描" >> "$GITHUB_ENV"
           python support_retest_watch.py
 
-      - name: Send two-stage LINE: breakout candidates and retest confirmations
+      - name: "Send two-stage LINE: breakout candidates and retest confirmations"
         shell: bash
         env:
           FINMIND_TOKEN: ${{ secrets.FINMIND_TOKEN }}
