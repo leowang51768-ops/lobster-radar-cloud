@@ -32,6 +32,14 @@ class CollectorTests(unittest.TestCase):
         self.assertEqual(rows[1][-1],-194)
         with self.assertRaises(ValueError):m.parse_history(HISTORY,'6531','1470','1480','2026-10-01')
 
+    def test_static_javascript_selector_page_binds_server_identity(self):
+        import re
+        html=re.sub(r'<select.*?</select>','',HISTORY,flags=re.S)
+        nav="<script>self.location = '/z/zc/zco/zco0/zco0.djhtm?a=6531&BHID=1480&b=1480&C='+i;</script>"
+        self.assertEqual(len(m.parse_history(html+nav,'6531','1480','1480','2026-10-01')),2)
+        for bad in (html,html+nav.replace('b=1480','b=1470')):
+            with self.assertRaises(ValueError):m.parse_history(bad,'6531','1480','1480','2026-10-01')
+
     def test_duplicates_and_future_history_rejected(self):
         for html in (HISTORY.replace('2026/09/30','2026/10/01'),HISTORY.replace('2026/10/01','2026/10/02')):
             with self.assertRaises(ValueError):m.parse_history(html,'6531','1480','1480','2026-10-01')
