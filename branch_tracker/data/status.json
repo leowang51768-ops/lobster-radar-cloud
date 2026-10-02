@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-01",
+  "date": "2026-10-02",
   "mode": "collection_only",
   "expected_stocks": 163,
   "covered_stocks": 163,
@@ -9,12 +9,12 @@
   "ranking_limit_per_side": 15,
   "history_target_top_per_side": 3,
   "history_requests_succeeded": 60,
-  "observed_collection_days": 1,
-  "complete_collection_days": 1,
+  "observed_collection_days": 2,
+  "complete_collection_days": 2,
   "counts": {
-    "ranking": 4890,
-    "history": 3600,
-    "queue": 978
+    "ranking": 9780,
+    "history": 7200,
+    "queue": 1657
   },
   "review_stage": "資料累積中",
   "strategy_changes": false,
@@ -29,306 +29,306 @@
   "errors": [],
   "history_errors": [
     {
-      "code": "1503",
+      "code": "2312",
       "branch": "1440",
       "error": "History identity selector missing"
     },
     {
-      "code": "1503",
+      "code": "2312",
       "branch": "1480",
       "error": "History identity selector missing"
     },
     {
-      "code": "1503",
-      "branch": "6168",
+      "code": "2312",
+      "branch": "1650",
       "error": "History identity selector missing"
     },
     {
-      "code": "1503",
-      "branch": "7790",
+      "code": "2312",
+      "branch": "8380",
       "error": "History identity selector missing"
     },
     {
-      "code": "1503",
-      "branch": "8887",
+      "code": "2312",
+      "branch": "8711",
       "error": "History identity selector missing"
     },
     {
-      "code": "1503",
+      "code": "2312",
+      "branch": "9268",
+      "error": "History identity selector missing"
+    },
+    {
+      "code": "2313",
+      "branch": "1440",
+      "error": "History identity selector missing"
+    },
+    {
+      "code": "2313",
+      "branch": "1470",
+      "error": "History identity selector missing"
+    },
+    {
+      "code": "2313",
+      "branch": "1480",
+      "error": "History identity selector missing"
+    },
+    {
+      "code": "2313",
+      "branch": "1560",
+      "error": "History identity selector missing"
+    },
+    {
+      "code": "2313",
+      "branch": "8440",
+      "error": "History identity selector missing"
+    },
+    {
+      "code": "2313",
       "branch": "9200",
       "error": "History identity selector missing"
     },
     {
-      "code": "1513",
-      "branch": "003800380038004b",
-      "error": "History identity selector missing"
-    },
-    {
-      "code": "1513",
-      "branch": "1480",
-      "error": "History identity selector missing"
-    },
-    {
-      "code": "1513",
-      "branch": "1650",
-      "error": "History identity selector missing"
-    },
-    {
-      "code": "1513",
-      "branch": "8440",
-      "error": "History identity selector missing"
-    },
-    {
-      "code": "1513",
-      "branch": "9268",
-      "error": "History identity selector missing"
-    },
-    {
-      "code": "1513",
-      "branch": "9300",
-      "error": "History identity selector missing"
-    },
-    {
-      "code": "1514",
-      "branch": "0031003000340043",
-      "error": "History identity selector missing"
-    },
-    {
-      "code": "1514",
-      "branch": "0035003300380059",
-      "error": "History identity selector missing"
-    },
-    {
-      "code": "1514",
-      "branch": "0039004200310067",
-      "error": "History identity selector missing"
-    },
-    {
-      "code": "1514",
-      "branch": "1650",
-      "error": "History identity selector missing"
-    },
-    {
-      "code": "1514",
-      "branch": "8440",
-      "error": "History identity selector missing"
-    },
-    {
-      "code": "1514",
-      "branch": "9800",
-      "error": "History identity selector missing"
-    },
-    {
-      "code": "1519",
-      "branch": "0037003700390063",
-      "error": "History identity selector missing"
-    },
-    {
-      "code": "1519",
-      "branch": "1440",
-      "error": "History identity selector missing"
-    },
-    {
-      "code": "1519",
-      "branch": "1470",
-      "error": "History identity selector missing"
-    },
-    {
-      "code": "1519",
-      "branch": "1650",
-      "error": "History identity selector missing"
-    },
-    {
-      "code": "1519",
-      "branch": "8880",
-      "error": "History identity selector missing"
-    },
-    {
-      "code": "1519",
-      "branch": "8888",
-      "error": "History identity selector missing"
-    },
-    {
-      "code": "1560",
-      "branch": "0039004100300030",
-      "error": "History identity selector missing"
-    },
-    {
-      "code": "1560",
-      "branch": "1650",
-      "error": "History identity selector missing"
-    },
-    {
-      "code": "1560",
-      "branch": "8440",
-      "error": "History identity selector missing"
-    },
-    {
-      "code": "1560",
-      "branch": "8890",
-      "error": "History identity selector missing"
-    },
-    {
-      "code": "1560",
-      "branch": "9268",
-      "error": "History identity selector missing"
-    },
-    {
-      "code": "1560",
-      "branch": "9800",
-      "error": "History identity selector missing"
-    },
-    {
-      "code": "1773",
-      "branch": "1440",
-      "error": "History identity selector missing"
-    },
-    {
-      "code": "1773",
-      "branch": "1470",
-      "error": "History identity selector missing"
-    },
-    {
-      "code": "1773",
-      "branch": "1480",
-      "error": "History identity selector missing"
-    },
-    {
-      "code": "1773",
-      "branch": "7797",
-      "error": "History identity selector missing"
-    },
-    {
-      "code": "1773",
-      "branch": "8440",
-      "error": "History identity selector missing"
-    },
-    {
-      "code": "1773",
-      "branch": "9268",
-      "error": "History identity selector missing"
-    },
-    {
-      "code": "2059",
-      "branch": "1110",
-      "error": "History identity selector missing"
-    },
-    {
-      "code": "2059",
-      "branch": "1480",
-      "error": "History identity selector missing"
-    },
-    {
-      "code": "2059",
-      "branch": "8880",
-      "error": "History identity selector missing"
-    },
-    {
-      "code": "2059",
-      "branch": "8900",
-      "error": "History identity selector missing"
-    },
-    {
-      "code": "2059",
-      "branch": "9188",
-      "error": "History identity selector missing"
-    },
-    {
-      "code": "2059",
-      "branch": "9600",
-      "error": "History identity selector missing"
-    },
-    {
-      "code": "2301",
+      "code": "2317",
       "branch": "0039004100380031",
       "error": "History identity selector missing"
     },
     {
-      "code": "2301",
+      "code": "2317",
+      "branch": "0039004200320030",
+      "error": "History identity selector missing"
+    },
+    {
+      "code": "2317",
+      "branch": "1440",
+      "error": "History identity selector missing"
+    },
+    {
+      "code": "2317",
       "branch": "1470",
       "error": "History identity selector missing"
     },
     {
-      "code": "2301",
+      "code": "2317",
       "branch": "1480",
       "error": "History identity selector missing"
     },
     {
-      "code": "2301",
-      "branch": "7000",
-      "error": "History identity selector missing"
-    },
-    {
-      "code": "2301",
-      "branch": "9200",
-      "error": "History identity selector missing"
-    },
-    {
-      "code": "2301",
-      "branch": "9333",
-      "error": "History identity selector missing"
-    },
-    {
-      "code": "2303",
-      "branch": "1480",
-      "error": "History identity selector missing"
-    },
-    {
-      "code": "2303",
-      "branch": "8888",
-      "error": "History identity selector missing"
-    },
-    {
-      "code": "2303",
-      "branch": "9100",
-      "error": "History identity selector missing"
-    },
-    {
-      "code": "2303",
-      "branch": "9216",
-      "error": "History identity selector missing"
-    },
-    {
-      "code": "2303",
+      "code": "2317",
       "branch": "9800",
       "error": "History identity selector missing"
     },
     {
-      "code": "2303",
-      "branch": "9801",
+      "code": "2324",
+      "branch": "0039003800320046",
       "error": "History identity selector missing"
     },
     {
-      "code": "2308",
+      "code": "2324",
+      "branch": "0039003800390041",
+      "error": "History identity selector missing"
+    },
+    {
+      "code": "2324",
       "branch": "1470",
       "error": "History identity selector missing"
     },
     {
-      "code": "2308",
+      "code": "2324",
       "branch": "1480",
       "error": "History identity selector missing"
     },
     {
-      "code": "2308",
-      "branch": "1590",
+      "code": "2324",
+      "branch": "8440",
       "error": "History identity selector missing"
     },
     {
-      "code": "2308",
+      "code": "2324",
+      "branch": "9813",
+      "error": "History identity selector missing"
+    },
+    {
+      "code": "2330",
+      "branch": "1440",
+      "error": "History identity selector missing"
+    },
+    {
+      "code": "2330",
+      "branch": "1470",
+      "error": "History identity selector missing"
+    },
+    {
+      "code": "2330",
+      "branch": "8440",
+      "error": "History identity selector missing"
+    },
+    {
+      "code": "2330",
+      "branch": "9200",
+      "error": "History identity selector missing"
+    },
+    {
+      "code": "2330",
+      "branch": "9268",
+      "error": "History identity selector missing"
+    },
+    {
+      "code": "2330",
+      "branch": "9800",
+      "error": "History identity selector missing"
+    },
+    {
+      "code": "2344",
+      "branch": "1470",
+      "error": "History identity selector missing"
+    },
+    {
+      "code": "2344",
       "branch": "1650",
       "error": "History identity selector missing"
     },
     {
-      "code": "2308",
+      "code": "2344",
+      "branch": "8440",
+      "error": "History identity selector missing"
+    },
+    {
+      "code": "2344",
+      "branch": "8888",
+      "error": "History identity selector missing"
+    },
+    {
+      "code": "2344",
+      "branch": "9266",
+      "error": "History identity selector missing"
+    },
+    {
+      "code": "2344",
+      "branch": "9359",
+      "error": "History identity selector missing"
+    },
+    {
+      "code": "2345",
+      "branch": "0039003200300046",
+      "error": "History identity selector missing"
+    },
+    {
+      "code": "2345",
+      "branch": "1440",
+      "error": "History identity selector missing"
+    },
+    {
+      "code": "2345",
+      "branch": "1480",
+      "error": "History identity selector missing"
+    },
+    {
+      "code": "2345",
+      "branch": "1590",
+      "error": "History identity selector missing"
+    },
+    {
+      "code": "2345",
+      "branch": "5850",
+      "error": "History identity selector missing"
+    },
+    {
+      "code": "2345",
       "branch": "9100",
       "error": "History identity selector missing"
     },
     {
-      "code": "2308",
-      "branch": "9875",
+      "code": "2355",
+      "branch": "0031003000340043",
+      "error": "History identity selector missing"
+    },
+    {
+      "code": "2355",
+      "branch": "1480",
+      "error": "History identity selector missing"
+    },
+    {
+      "code": "2355",
+      "branch": "1560",
+      "error": "History identity selector missing"
+    },
+    {
+      "code": "2355",
+      "branch": "1650",
+      "error": "History identity selector missing"
+    },
+    {
+      "code": "2355",
+      "branch": "8440",
+      "error": "History identity selector missing"
+    },
+    {
+      "code": "2355",
+      "branch": "9800",
+      "error": "History identity selector missing"
+    },
+    {
+      "code": "2356",
+      "branch": "1023",
+      "error": "History identity selector missing"
+    },
+    {
+      "code": "2356",
+      "branch": "1470",
+      "error": "History identity selector missing"
+    },
+    {
+      "code": "2356",
+      "branch": "1590",
+      "error": "History identity selector missing"
+    },
+    {
+      "code": "2356",
+      "branch": "5850",
+      "error": "History identity selector missing"
+    },
+    {
+      "code": "2356",
+      "branch": "8440",
+      "error": "History identity selector missing"
+    },
+    {
+      "code": "2356",
+      "branch": "9800",
+      "error": "History identity selector missing"
+    },
+    {
+      "code": "2357",
+      "branch": "1260",
+      "error": "History identity selector missing"
+    },
+    {
+      "code": "2357",
+      "branch": "1470",
+      "error": "History identity selector missing"
+    },
+    {
+      "code": "2357",
+      "branch": "1560",
+      "error": "History identity selector missing"
+    },
+    {
+      "code": "2357",
+      "branch": "1650",
+      "error": "History identity selector missing"
+    },
+    {
+      "code": "2357",
+      "branch": "8890",
+      "error": "History identity selector missing"
+    },
+    {
+      "code": "2357",
+      "branch": "9200",
       "error": "History identity selector missing"
     }
   ],
   "history_coverage_complete": false,
-  "database_bytes": 3301376
+  "database_bytes": 5324800
 }
