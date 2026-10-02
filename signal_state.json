@@ -5787,10 +5787,24 @@
       "support_lower": 869.0,
       "support_upper": 869.0,
       "support_source": "近5日低點"
+    },
+    "3363": {
+      "Price Action": "PriceAction:2026-10-02:20日破底翻強攻",
+      "name": "上詮",
+      "support_lower": 629.0,
+      "support_upper": 629.0,
+      "support_source": "近5日低點"
+    },
+    "6442": {
+      "Price Action": "PriceAction:2026-10-02:20日破底翻強攻",
+      "name": "光聖",
+      "support_lower": 1465.0,
+      "support_upper": 1465.0,
+      "support_source": "近5日低點"
     }
   },
-  "updated_at": "2026-10-01T14:53:48.115114+00:00",
-  "latest_trade_date": "2026-10-01",
+  "updated_at": "2026-10-02T12:44:54.631841+00:00",
+  "latest_trade_date": "2026-10-02",
   "layer1_candidate_count": 187,
   "stage_counts": {
     "正式試單": 1,
@@ -5821,11 +5835,11 @@
   },
   "strategy_version": "龍蝦買點-v14-破底翻+PriceAction",
   "four_point_rule": "已取消",
-  "candidate_count": 57,
-  "formal_buy_signal_count": 3,
+  "candidate_count": 63,
+  "formal_buy_signal_count": 2,
   "route_counts": {
-    "破底翻": 48,
-    "Price Action": 9
+    "破底翻": 47,
+    "Price Action": 16
   },
   "exit_warning_keys": {
     "突破後站穩:2026-09-16:69.90:假突破觀察": "2026-09-18",
