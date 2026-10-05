@@ -5768,7 +5768,7 @@
       "support_source": "近5日低點"
     },
     "3008": {
-      "Price Action": "PriceAction:2026-10-01:20日破底翻強攻",
+      "Price Action": "PriceAction:2026-10-05:20日破底翻強攻",
       "name": "大立光",
       "support_lower": 5740.0,
       "support_upper": 5740.0,
@@ -5796,15 +5796,22 @@
       "support_source": "近5日低點"
     },
     "6442": {
-      "Price Action": "PriceAction:2026-10-02:20日破底翻強攻",
+      "Price Action": "PriceAction:2026-10-05:20日破底翻強攻",
       "name": "光聖",
       "support_lower": 1465.0,
       "support_upper": 1465.0,
       "support_source": "近5日低點"
+    },
+    "8210": {
+      "Price Action": "PriceAction:2026-10-05:20日破底翻強攻",
+      "name": "勤誠",
+      "support_lower": 822.0,
+      "support_upper": 822.0,
+      "support_source": "近5日低點"
     }
   },
-  "updated_at": "2026-10-02T12:44:54.631841+00:00",
-  "latest_trade_date": "2026-10-02",
+  "updated_at": "2026-10-05T12:50:07.242089+00:00",
+  "latest_trade_date": "2026-10-05",
   "layer1_candidate_count": 187,
   "stage_counts": {
     "正式試單": 1,
@@ -5836,10 +5843,10 @@
   "strategy_version": "龍蝦買點-v14-破底翻+PriceAction",
   "four_point_rule": "已取消",
   "candidate_count": 63,
-  "formal_buy_signal_count": 2,
+  "formal_buy_signal_count": 3,
   "route_counts": {
-    "破底翻": 47,
-    "Price Action": 16
+    "破底翻": 44,
+    "Price Action": 19
   },
   "exit_warning_keys": {
     "突破後站穩:2026-09-16:69.90:假突破觀察": "2026-09-18",
