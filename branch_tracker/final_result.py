@@ -19,6 +19,7 @@ DATA = Path(__file__).resolve().parent / "data"
 DB = DATA / "branches.sqlite"
 TARGET_SESSIONS = 120
 MIN_CONSECUTIVE_BUY_DAYS = 3
+MAX_CONSECUTIVE_BUY_DAYS = 15
 MIN_3D_NET_AMOUNT = 10_000_000
 HORIZONS = (5, 10, 20)
 
@@ -149,33 +150,42 @@ def main():
                 "grade": grade(score, n),
             })
 
-        # Current accumulation: same pair net-buying in latest 3 market sessions,
-        # total estimated net amount > NT$10m. Missing history means not eligible,
-        # not zero buying.
-        recent3 = sessions[max(0, latest_idx-2):latest_idx+1]
+        # Current accumulation: detect the active consecutive net-buy streak,
+        # capped at 15 trading sessions. A valid signal requires at least 3
+        # consecutive buy days and estimated cumulative net amount > NT$10m.
         recent5 = sessions[max(0, latest_idx-4):latest_idx+1]
         recent20 = sessions[max(0, latest_idx-19):latest_idx+1]
         influence_map = {(r["code"], r["branch"], r["broker"]): r for r in influence_rows}
         candidates = []
         for key, by_day in hist.items():
             code, branch, broker = key
-            if len(recent3) < 3 or any(d not in by_day for d in recent3):
+            streak_days = []
+            for i in range(latest_idx, max(-1, latest_idx - MAX_CONSECUTIVE_BUY_DAYS), -1):
+                d = sessions[i]
+                row = by_day.get(d)
+                if not row or row["net"] <= 0:
+                    break
+                streak_days.append(d)
+            streak_days.reverse()
+            if len(streak_days) < MIN_CONSECUTIVE_BUY_DAYS:
                 continue
-            nets = [by_day[d]["net"] for d in recent3]
-            if any(x <= 0 for x in nets):
-                continue
+
             amount = 0.0
+            nets = []
             usable = True
-            for d, net in zip(recent3, nets):
+            for d in streak_days:
+                net = by_day[d]["net"]
                 p = prices.get((d, code), (None, None))[0]
                 if not p:
                     usable = False
                     break
+                nets.append(net)
                 amount += net * 1000 * p
             if not usable or amount < MIN_3D_NET_AMOUNT:
                 continue
 
-            p3 = prices.get((recent3[-1], code), (None, None))[0]
+            latest_streak_day = streak_days[-1]
+            p3 = prices.get((latest_streak_day, code), (None, None))[0]
             p5start = prices.get((recent5[0], code), (None, None))[0] if recent5 else None
             p20start = prices.get((recent20[0], code), (None, None))[0] if recent20 else None
             r5 = pct(p5start, p3)
@@ -186,7 +196,7 @@ def main():
             # "Not yet launched" is a ranking aid, not proof of concealed buying.
             not_extended = (r5 is None or r5 <= 5.0) and (r20 is None or r20 <= 12.0)
             amount_score = clamp(math.log10(max(amount, 1) / MIN_3D_NET_AMOUNT + 1) * 25, 0, 25)
-            continuity_score = 35.0
+            continuity_score = clamp(20.0 + (len(streak_days) - 3) * 2.5, 20.0, 50.0)
             history_score = min(25.0, inf_score * 0.25)
             extension_score = 15.0 if not_extended else 3.0
             stealth_score = continuity_score + amount_score + history_score + extension_score
@@ -197,10 +207,10 @@ def main():
                 "branch_name": meta.get(key, ""),
                 "branch": branch,
                 "broker": broker,
-                "latest_day": recent3[-1],
-                "consecutive_buy_days": 3,
-                "three_day_net_lots": round(sum(nets), 2),
-                "three_day_est_net_amount": round(amount),
+                "latest_day": latest_streak_day,
+                "consecutive_buy_days": len(streak_days),
+                "streak_net_lots": round(sum(nets), 2),
+                "streak_est_net_amount": round(amount),
                 "price_5d_pct": round(r5, 2) if r5 is not None else None,
                 "price_20d_pct": round(r20, 2) if r20 is not None else None,
                 "not_extended": not_extended,
@@ -215,7 +225,7 @@ def main():
             r["not_extended"],
             r["historical_grade"] == "A",
             r["stealth_score"],
-            r["three_day_est_net_amount"],
+            r["streak_est_net_amount"],
         ), reverse=True)
         influence_rows.sort(key=lambda r: (r["grade"] == "A", r["influence_score"], r["d10_samples"]), reverse=True)
 
@@ -230,7 +240,7 @@ def main():
             "current_candidates": candidates[:20],
             "top_influence_pairs": [r for r in influence_rows if r["grade"] in ("A", "B")][:50],
             "rules": {
-                "current_signal": "同股同分點最近3交易日皆淨買超，3日估算淨買超金額>1,000萬元",
+                "current_signal": "同股同分點目前連續淨買超3～15個交易日，該連買段估算累計淨買超金額>1,000萬元",
                 "not_extended_aid": "5日漲幅<=5%且20日漲幅<=12%時優先；僅代表價格尚未過度延伸，不代表內線或主力身分",
                 "history_validation": "以已儲存歷史配對D+5/D+10/D+20收盤；回填樣本存在事後選樣偏差，分數僅作排序",
             },
@@ -246,22 +256,22 @@ def main():
         f"- 目標歷史：120交易日",
         f"- 股票×分點組合：{len(influence_rows):,}",
         f"- 已達120日組合：{complete_pairs:,}",
-        f"- 今日符合「連買3日＋累計>1,000萬」：{len(candidates)}組",
+        f"- 今日符合「連買3～15日＋累計>1,000萬」：{len(candidates)}組",
         "",
         "## 疑似提前布局",
     ]
     if not candidates:
         lines.append("目前沒有符合正式門檻的組合。")
     else:
-        lines.append("|排名|股票|分點|3日淨買超張|估算金額|5日股價|20日股價|歷史等級|D+10樣本/勝率|分數|")
-        lines.append("|---:|---|---|---:|---:|---:|---:|---|---|---:|")
+        lines.append("|排名|股票|分點|連買日數|連買段淨買超張|估算金額|5日股價|20日股價|歷史等級|D+10樣本/勝率|分數|")
+        lines.append("|---:|---|---|---:|---:|---:|---:|---:|---|---|---:|")
         for i, r in enumerate(candidates[:10], 1):
             win = "—" if r["historical_d10_win_pct"] is None else f'{r["historical_d10_win_pct"]:.1f}%'
             p5 = "—" if r["price_5d_pct"] is None else f'{r["price_5d_pct"]:+.1f}%'
             p20 = "—" if r["price_20d_pct"] is None else f'{r["price_20d_pct"]:+.1f}%'
             lines.append(
-                f'|{i}|{r["code"]} {r["name"]}|{r["branch_name"]}|{r["three_day_net_lots"]:,.0f}|'
-                f'{r["three_day_est_net_amount"]/10000:,.0f}萬|{p5}|{p20}|{r["historical_grade"]}|'
+                f'|{i}|{r["code"]} {r["name"]}|{r["branch_name"]}|{r["consecutive_buy_days"]}|{r["streak_net_lots"]:,.0f}|'
+                f'{r["streak_est_net_amount"]/10000:,.0f}萬|{p5}|{p20}|{r["historical_grade"]}|'
                 f'{r["historical_d10_samples"]}/{win}|{r["stealth_score"]:.1f}|'
             )
     lines += [
@@ -277,7 +287,7 @@ def main():
     with (DATA / "current_candidates.csv").open("w", encoding="utf-8-sig", newline="") as f:
         fields = list(candidates[0].keys()) if candidates else [
             "code","name","branch_name","latest_day","consecutive_buy_days",
-            "three_day_net_lots","three_day_est_net_amount","stealth_score"
+            "streak_net_lots","streak_est_net_amount","stealth_score"
         ]
         w = csv.DictWriter(f, fieldnames=fields)
         w.writeheader()
