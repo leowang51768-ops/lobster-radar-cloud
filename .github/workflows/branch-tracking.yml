@@ -12,7 +12,7 @@ concurrency:
 jobs:
   collect:
     runs-on: ubuntu-latest
-    timeout-minutes: 35
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
         with:
@@ -23,13 +23,16 @@ jobs:
       - name: Verify parsers and deduplication
         run: python -m unittest discover -s branch_tracker/tests -v
       - name: Accumulate branch evidence only
-        run: python branch_tracker/collect.py
+        run: python branch_tracker/collect.py --history-budget 120
       - name: Refresh matured price and quantity observations
         if: ${{ always() }}
         run: python branch_tracker/price_relationship.py
       - name: Build readable daily evidence audit
         if: ${{ always() }}
         run: python branch_tracker/audit.py
+      - name: Build final branch conclusions
+        if: ${{ always() }}
+        run: python branch_tracker/final_result.py
       - name: Save successful evidence and coverage even on partial failure
         if: ${{ always() }}
         shell: bash
