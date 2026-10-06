@@ -7,10 +7,15 @@ on:
         description: "Optional trade date YYYY-MM-DD for manual testing"
         required: false
         type: string
+  # One-purpose push trigger used only when we intentionally touch the trigger file.
+  push:
+    paths:
+      - ".github/lobster-manual-trigger"
   schedule:
-    # 台北時間週一至週五 20:30
-    # GitHub cron 使用 UTC，所以 20:30 台北 = 12:30 UTC
-    - cron: "30 12 * * 1-5"
+    # 台北時間週一至週五 16:30 正式執行；16:45 備援補跑。
+    # GitHub cron 使用 UTC，所以 16:30 / 16:45 台北 = 08:30 / 08:45 UTC。
+    - cron: "30 8 * * 1-5"
+    - cron: "45 8 * * 1-5"
 
 permissions:
   contents: write
@@ -199,7 +204,7 @@ jobs:
           git config user.name "lobster-radar-cloud"
           git config user.email "actions@github.com"
 
-          for f in lobster_tw_6m_prices.sqlite fundamental_support.json signal_state.json candidate_status.csv vcp_candidates.csv vcp_early_watch.csv n_bottom_watch.csv line_scan_diagnostics.csv formal_recommendations.csv line_pick_snapshots.csv line_pick_performance.csv breakout_watchlist.json breakout_tracking.json chip_candidate_snapshots.jsonl chip_candidate_outcomes.csv; do
+          for f in lobster_tw_6m_prices.sqlite fundamental_support.json signal_state.json candidate_status.csv vcp_candidates.csv vcp_early_watch.csv n_bottom_watch.csv line_scan_diagnostics.csv formal_recommendations.csv line_pick_snapshots.csv line_pick_performance.csv breakout_watchlist.json breakout_tracking.json line_daily_send_state.json chip_candidate_snapshots.jsonl chip_candidate_outcomes.csv; do
             if [ -e "$f" ]; then
               git add "$f"
             fi
@@ -224,13 +229,26 @@ jobs:
           import urllib.request
           from datetime import datetime
           from zoneinfo import ZoneInfo
+          from pathlib import Path
+
+          trade_date = os.environ.get("TRADE_DATE", "unknown")
+          state_path = Path("line_daily_send_state.json")
+          if state_path.exists():
+              try:
+                  sent_state = json.loads(state_path.read_text(encoding="utf-8"))
+                  if (sent_state.get(trade_date) or {}).get("daily_result_sent"):
+                      print("Daily LINE result already sent; suppress duplicate backup failure alert")
+                      raise SystemExit(0)
+              except SystemExit:
+                  raise
+              except Exception as e:
+                  print("Could not read LINE send state:", repr(e))
 
           token = os.environ.get("LINE_CHANNEL_ACCESS_TOKEN", "").strip()
           if not token:
               print("LINE token missing; cannot send failure alert")
               raise SystemExit(0)
 
-          trade_date = os.environ.get("TRADE_DATE", "unknown")
           stage = os.environ.get("FAIL_STAGE", "unknown")
           now = datetime.now(ZoneInfo("Asia/Taipei")).strftime("%Y-%m-%d %H:%M")
           text = (
