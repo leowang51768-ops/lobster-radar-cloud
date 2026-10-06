@@ -20,8 +20,32 @@ from zoneinfo import ZoneInfo
 BASE = Path(__file__).resolve().parent
 MAX_STOCKS = 5
 DIAGNOSTICS = BASE / "line_scan_diagnostics.csv"
+SEND_STATE = BASE / "line_daily_send_state.json"
 DIAG_FIELDS = ["date", "code", "name", "route", "stage", "close", "entry_lower", "entry_upper", "entry_excess_pct", "stop_price", "stop_distance_pct", "risk_ok", "within_entry", "line_eligible", "breakout_score", "volume_score", "pattern_score", "institutional_score", "composite_score", "foreign_buy", "trust_buy", "institutional_total", "trust_consecutive_days", "selected", "exclusion_reasons", "institutional_available", "chip_data_date", "chip_summary", "chip_missing_reason", "foreign_consecutive_days"]
 
+
+
+def load_send_state():
+    if not SEND_STATE.exists():
+        return {}
+    try:
+        data = json.loads(SEND_STATE.read_text(encoding="utf-8"))
+        return data if isinstance(data, dict) else {}
+    except Exception as exc:
+        print("LINE_SEND_STATE_WARNING " + json.dumps({"error": str(exc)}, ensure_ascii=False))
+        return {}
+
+
+def save_send_state(state):
+    # Keep the file small while preserving enough audit history.
+    keys = sorted(state.keys())
+    if len(keys) > 120:
+        for key in keys[:-120]:
+            state.pop(key, None)
+    SEND_STATE.write_text(
+        json.dumps(state, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
 
 def rows(filename, day):
     path = BASE / filename
@@ -719,15 +743,30 @@ def main():
             print("\n--- SECOND STAGE ---\n"+retest_message)
         return 0
 
+    send_state=load_send_state()
+    day_state=send_state.setdefault(day,{})
     sent_breakout=False
-    if selected or os.getenv("COMBINED_FORCE_NOTIFY")=="1":
-        send_line_text(token, breakout_message, "Breakout candidate")
+
+    # Always send exactly one first-stage daily result, even when zero stocks qualify.
+    # The second 16:45 schedule is a backup run, so persistent state prevents duplicates.
+    if not day_state.get("daily_result_sent"):
+        send_line_text(token, breakout_message, "Daily breakout result")
+        day_state["daily_result_sent"]=datetime.now(ZoneInfo("Asia/Taipei")).isoformat(timespec="seconds")
+        day_state["selected_codes"]=[r["code"] for r in selected]
+        save_send_state(send_state)
         sent_breakout=True
     else:
-        print("No qualified first-stage breakout entries; first LINE skipped")
+        print(f"Daily LINE result already sent for {day}; duplicate broadcast skipped")
 
-    if confirmed:
-        send_line_text(token, retest_message, "Retest confirmation")
+    sent_retest=set(day_state.get("retest_codes") or [])
+    fresh_confirmed=[r for r in confirmed if r.get("code") not in sent_retest]
+    if fresh_confirmed:
+        send_line_text(token, format_retest_message(day,fresh_confirmed), "Retest confirmation")
+        sent_retest.update(r.get("code") for r in fresh_confirmed)
+        day_state["retest_codes"]=sorted(x for x in sent_retest if x)
+        save_send_state(send_state)
+    elif confirmed:
+        print("Retest confirmations already sent; duplicate second-stage LINE skipped")
     else:
         print("No second-stage retest confirmations; second LINE skipped")
 
@@ -736,7 +775,7 @@ def main():
             [{"code":x["code"],"name":x["name"],"support":x["retest_support"],"close":x["last_close"]}
              for x in invalidated],ensure_ascii=False))
 
-    if sent_breakout:
+    if sent_breakout and selected:
         from line_pick_tracking import store_notification
         store_notification(day, selected)
     return 0
