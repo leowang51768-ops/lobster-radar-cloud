@@ -5808,10 +5808,17 @@
       "support_lower": 822.0,
       "support_upper": 822.0,
       "support_source": "近5日低點"
+    },
+    "3013": {
+      "Price Action": "PriceAction:2026-10-06:看漲吞噬",
+      "name": "晟銘電",
+      "support_lower": 85.1,
+      "support_upper": 85.1,
+      "support_source": "近5日低點"
     }
   },
-  "updated_at": "2026-10-05T12:50:07.242089+00:00",
-  "latest_trade_date": "2026-10-05",
+  "updated_at": "2026-10-06T15:03:47.904603+00:00",
+  "latest_trade_date": "2026-10-06",
   "layer1_candidate_count": 187,
   "stage_counts": {
     "正式試單": 1,
@@ -5842,11 +5849,11 @@
   },
   "strategy_version": "龍蝦買點-v14-破底翻+PriceAction",
   "four_point_rule": "已取消",
-  "candidate_count": 63,
-  "formal_buy_signal_count": 3,
+  "candidate_count": 44,
+  "formal_buy_signal_count": 1,
   "route_counts": {
-    "破底翻": 44,
-    "Price Action": 19
+    "破底翻": 32,
+    "Price Action": 12
   },
   "exit_warning_keys": {
     "突破後站穩:2026-09-16:69.90:假突破觀察": "2026-09-18",
