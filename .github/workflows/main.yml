@@ -50,7 +50,36 @@ jobs:
           fi
           echo "FAIL_STAGE=初始化" >> "$GITHUB_ENV"
 
+      - name: Check Taiwan market calendar
+        id: market_calendar
+        shell: bash
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import os
+          from datetime import date
+
+          trade_date = os.environ["TRADE_DATE"]
+          d = date.fromisoformat(trade_date)
+          holidays = {
+              "2026-01-01",
+              "2026-02-12","2026-02-13","2026-02-16","2026-02-17","2026-02-18","2026-02-19","2026-02-20",
+              "2026-02-27",
+              "2026-04-03","2026-04-06",
+              "2026-05-01","2026-06-19",
+              "2026-09-25","2026-09-28",
+              "2026-10-09","2026-10-26","2026-12-25",
+          }
+          closed = d.weekday() >= 5 or trade_date in holidays
+          print("closed=" + ("true" if closed else "false"))
+          print("reason=" + ("TWSE scheduled closure" if closed else "trading day"))
+          PY
+
+      - name: Market closed notice
+        if: ${{ steps.market_calendar.outputs.closed == 'true' }}
+        run: echo "TWSE closed on $TRADE_DATE; skip market scan and LINE stock notification without failure."
+
       - name: Update official TWSE and TPEx prices with auto retry
+        if: ${{ steps.market_calendar.outputs.closed != 'true' }}
         shell: bash
         run: |
           echo "FAIL_STAGE=官方股價更新" >> "$GITHUB_ENV"
@@ -86,6 +115,7 @@ jobs:
           fi
 
       - name: Verify database health
+        if: ${{ steps.market_calendar.outputs.closed != 'true' }}
         run: |
           echo "FAIL_STAGE=資料庫驗證" >> "$GITHUB_ENV"
           python - <<'PY'
@@ -119,6 +149,7 @@ jobs:
       # suppress their individual stock broadcasts. One combined digest below
       # is the sole LINE stock-list sender (maximum five distinct tickers).
       - name: Evaluate integrated Lobster buy points (CSV and tracking only)
+        if: ${{ steps.market_calendar.outputs.closed != 'true' }}
         shell: bash
         env:
           LINE_CHANNEL_ACCESS_TOKEN: ""
@@ -127,6 +158,7 @@ jobs:
           python buy_signal.py
 
       - name: Scan VCP stages (CSV only)
+        if: ${{ steps.market_calendar.outputs.closed != 'true' }}
         shell: bash
         env:
           LINE_CHANNEL_ACCESS_TOKEN: ""
@@ -135,6 +167,7 @@ jobs:
           python vcp_scan.py
 
       - name: Scan early volatility-contraction observations (CSV only, LINE disabled)
+        if: ${{ steps.market_calendar.outputs.closed != 'true' }}
         shell: bash
         env:
           LINE_CHANNEL_ACCESS_TOKEN: ""
@@ -143,6 +176,7 @@ jobs:
           python vcp_early_watch.py
 
       - name: Scan N-bottom observations (CSV and tracking only)
+        if: ${{ steps.market_calendar.outputs.closed != 'true' }}
         shell: bash
         env:
           LINE_CHANNEL_ACCESS_TOKEN: ""
@@ -151,6 +185,7 @@ jobs:
           python support_retest_watch.py
 
       - name: "Send two-stage LINE: breakout candidates and retest confirmations"
+        if: ${{ steps.market_calendar.outputs.closed != 'true' }}
         shell: bash
         env:
           FINMIND_TOKEN: ${{ secrets.FINMIND_TOKEN }}
@@ -160,12 +195,14 @@ jobs:
           python combined_line_digest.py
 
       - name: Update daily LINE pick performance (5 10 20 sessions)
+        if: ${{ steps.market_calendar.outputs.closed != 'true' }}
         shell: bash
         run: |
           echo "FAIL_STAGE=LINE推薦績效更新" >> "$GITHUB_ENV"
           python line_pick_tracking.py
 
       - name: Final health check
+        if: ${{ steps.market_calendar.outputs.closed != 'true' }}
         run: |
           echo "FAIL_STAGE=最終健康檢查" >> "$GITHUB_ENV"
           python - <<'PY'
@@ -199,6 +236,7 @@ jobs:
           PY
 
       - name: Commit updated database and signal state
+        if: ${{ steps.market_calendar.outputs.closed != 'true' }}
         run: |
           echo "FAIL_STAGE=結果寫回GitHub" >> "$GITHUB_ENV"
           git config user.name "lobster-radar-cloud"
@@ -219,7 +257,7 @@ jobs:
           git push
 
       - name: LINE alert when daily workflow still fails
-        if: ${{ failure() }}
+        if: ${{ failure() && steps.market_calendar.outputs.closed != 'true' }}
         env:
           LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
         run: |
