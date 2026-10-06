@@ -515,11 +515,11 @@ def update_breakout_tracking(day, selected):
     """Track first-stage picks until they become confirmed retests or failed breakouts.
 
     Status definitions:
-    tracking      = D0 breakout day or D1-D5 consolidation while support still holds.
-    true_breakout = from D1 onward, close >= D0 breakout close +2% without a support retest.
+    tracking      = signal day (internal age 0 / visible D1) through visible D10 while unresolved.
+    true_breakout = from the next session onward, close >= signal-day close +2% without a support retest.
     confirmed     = price retested support (low <= support+1%) and closed back at/above support.
     invalid       = daily close fell below support.
-    expired       = no resolution by the end of D5.
+    expired       = no resolution by visible D10 (internal age 9).
     """
     today=datetime.now(ZoneInfo("Asia/Taipei")).date().isoformat()
     live=(day==today)
