@@ -609,12 +609,12 @@ def update_breakout_tracking(day, selected):
             else:
                 item["status_label"]="🟡 突破追蹤中"
 
-            # Main decision window D1-D3; hard tracking limit D5.
-            # A stock that still has no confirmation, failure, or +2% true breakout
-            # by the end of D5 is closed as a stale consolidation.
-            if age>=5 and item.get("status")=="tracking":
+            # Main decision window D1-D3; hard visible tracking limit D10.
+            # Internal age is zero-based (signal day = 0), therefore visible D10
+            # is internal age 9. D30 performance tracking is handled separately.
+            if age>=9 and item.get("status")=="tracking":
                 item["status"]="expired"
-                item["status_label"]="⚪ 突破後久盤｜追蹤結束"
+                item["status_label"]="⚪ D10 未表態｜結束即時追蹤"
                 item["resolved_date"]=day
                 item["resolved_close"]=close
 
@@ -624,6 +624,21 @@ def update_breakout_tracking(day, selected):
             key=f"{day}|{pick['code']}"
             if key in state:
                 continue
+
+            # V1.4 consistency: one active signal per stock. A newer same-code
+            # signal replaces any older still-tracking signal while preserving
+            # the old row in the durable ledger for later performance review.
+            for old in state.values():
+                if not isinstance(old, dict):
+                    continue
+                if (old.get("status")=="tracking"
+                        and str(old.get("code") or "")==str(pick["code"])
+                        and str(old.get("signal_date") or "") < day):
+                    old["status"]="expired"
+                    old["status_label"]="⚪ 新訊號取代舊追蹤"
+                    old["resolved_date"]=day
+                    old["resolved_close"]=number(pick.get("close"))
+
             support=tracking_support(pick)
             volrow=con.execute(
                 "SELECT volume FROM prices WHERE stock_id=? AND date=? LIMIT 1",
@@ -649,7 +664,15 @@ def update_breakout_tracking(day, selected):
                 "last_checked_date":day,
             }
 
-    active=[dict(v) for v in state.values() if v.get("status")=="tracking"]
+    active_by_code={}
+    for value in state.values():
+        if not isinstance(value,dict) or value.get("status")!="tracking":
+            continue
+        code=str(value.get("code") or "")
+        old=active_by_code.get(code)
+        if old is None or (str(value.get("signal_date") or ""),str(value.get("tracking_key") or "")) >= (str(old.get("signal_date") or ""),str(old.get("tracking_key") or "")):
+            active_by_code[code]=dict(value)
+    active=list(active_by_code.values())
     active.sort(key=lambda x:(x.get("signal_date",""),x.get("code","")))
 
     if live:
