@@ -257,7 +257,7 @@ jobs:
           git push
 
       - name: LINE alert when daily workflow still fails
-        if: ${{ failure() && steps.market_calendar.outputs.closed != 'true' }}
+        if: ${{ failure() && github.event_name == 'schedule' && steps.market_calendar.outputs.closed != 'true' }}
         env:
           LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
         run: |
