@@ -2,9 +2,11 @@
 """Scan the official TWSE/TPEx database for VCP stages.
 
 This module is observation-only.  It writes vcp_candidates.csv and never
-changes formal_recommendations.csv.  States are mutually exclusive:
+changes formal_recommendations.csv.  Formal VCP uses 2-5 progressively tighter
+T legs, rising troughs, drying volume and a repeated-resistance pivot upper edge.
+States are mutually exclusive:
 1. 接近突破: valid contraction, 0-5% below pivot, volume drying up.
-2. 當日突破: closes >0.3% above pivot with efficient price/volume expansion.
+2. 當日突破: closes >=0.5% above pivot with efficient price/volume expansion.
 3. 突破後回踩: 2-5 sessions after breakout, volume contracts and pivot holds.
 """
 from __future__ import annotations
@@ -30,10 +32,10 @@ MIN_HISTORY = 70
 BASE_LOOKBACK = 325
 PIVOT_LOOKBACK = 60
 MIN_CONTRACTIONS = 2
-MAX_CONTRACTIONS = 6
-DEPTH_RATIO_MIN = 0.30
-DEPTH_RATIO_MAX = 0.85
-PIVOT_CLUSTER_TOL = 0.01
+MAX_CONTRACTIONS = 5
+DEPTH_RATIO_MIN = 0.00
+DEPTH_RATIO_MAX = 0.80
+PIVOT_CLUSTER_TOL = 0.015
 PIVOT_MIN_TOUCHES = 2
 PIVOT_MIN_GAP_DAYS = 1
 MIN_VOLUME_LOTS = 1000
@@ -51,7 +53,7 @@ MA60_MAX_5D_DECLINE = 0.02
 VCP_MAX_LEG_GAP_DAYS = 15
 VCP_MAX_LAST_TROUGH_AGE = 15
 VCP_MAX_FINAL_PEAK_DISTANCE = 0.05
-VCP_MAX_PEAK_DISTANCE_WORSENING = 0.015
+VCP_MAX_PEAK_DISTANCE_WORSENING = 0.005
 VCP_MAX_LAST_LEG_VOLUME_RATIO = 0.90
 
 FIELDS = [
@@ -176,9 +178,9 @@ def contraction_profile(x: pd.DataFrame, end_i: int, pivot: float) -> dict | Non
                 clean[-1] = leg
             continue
         clean.append(leg)
-    # A 65-session base can contain older unrelated swings. Select the longest
-    # valid ending sequence. Allow irregular but still progressively shrinking
-    # pullbacks (30%-85% of the prior leg); final depth remains <=15%.
+    # Select the longest recent ending sequence. A formal VCP requires 2-5
+    # complete T legs, each later T at least ~20% tighter than the prior one;
+    # the final T must be <=10%.
     chosen = None
     for count in range(min(MAX_CONTRACTIONS, len(clean)), MIN_CONTRACTIONS - 1, -1):
         candidate = clean[-count:]
@@ -189,7 +191,7 @@ def contraction_profile(x: pd.DataFrame, end_i: int, pivot: float) -> dict | Non
             ratios
             and all(1 <= gap <= VCP_MAX_LEG_GAP_DAYS for gap in gaps)
             and all(DEPTH_RATIO_MIN <= ratio <= DEPTH_RATIO_MAX for ratio in ratios)
-            and depths[-1] <= 0.15
+            and depths[-1] <= 0.10
         ):
             chosen = candidate
             break
@@ -197,6 +199,21 @@ def contraction_profile(x: pd.DataFrame, end_i: int, pivot: float) -> dict | Non
         return None
     clean = chosen
     depths = [leg[2] for leg in clean]
+
+    # Each later T should form a higher (or essentially equal) trough.
+    # Allow only 1% downside tolerance for wick/tick noise.
+    troughs = [leg[4] for leg in clean]
+    if any(later < earlier * 0.99 for earlier, later in zip(troughs, troughs[1:])):
+        return None
+
+    # Each T should dry up in volume relative to the prior T.
+    t_volumes = [
+        float(base.iloc[leg[0]:leg[1] + 1].volume_lots.mean())
+        for leg in clean
+    ]
+    if any(later > earlier for earlier, later in zip(t_volumes, t_volumes[1:])):
+        return None
+
     # The article defines a healthy base as roughly 3-65 weeks.
     base_sessions = len(base) - clean[0][0]
     if not (15 <= base_sessions <= 325):
@@ -310,6 +327,9 @@ def pivot_before(x: pd.DataFrame, i: int) -> float | None:
         return None
 
     # Most touches wins; ties prefer the cluster touched most recently.
+    # Formal pivot is the UPPER EDGE of the repeated resistance cluster, not
+    # the median/average. This prevents a price inside the resistance band from
+    # being misclassified as a breakout.
     winner = max(
         repeated,
         key=lambda cluster: (
@@ -317,7 +337,7 @@ def pivot_before(x: pd.DataFrame, i: int) -> float | None:
             max(idx for idx, _ in cluster["touches"]),
         ),
     )
-    return float(winner["center"])
+    return float(max(price for _, price in winner["touches"]))
 
 
 def upper_pivot_before(x: pd.DataFrame, i: int, pivot: float, close: float) -> float | None:
