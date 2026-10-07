@@ -27,7 +27,7 @@ def classify_latest(g):
     t=x.iloc[-1]; i=len(x)-1
     if not (x.iloc[-20:].volume.mean()/1000>=1000 and x.iloc[-20:].turnover.mean()>=100000000): return None
     close=float(t.close)
-    # A、B、C 依時間順序尋找：A為局部低點，B為反彈高點，C為較高的第二底。
+    # A、B、C 依時間順序尋找：A為局部低點；B先是候選反彈高點，必須等C形成後才回頭正式確認；C為較高的第二底。
     # 僅採用C點已過至少兩根K棒的候選，避免以當日低點誤判已止跌。
     candidates=[]
     for a in range(max(5,i-48),i-9):
@@ -41,6 +41,9 @@ def classify_latest(g):
             for c in range(b+3,min(b+21,i-1)):
                 C=float(x.iloc[c].low)
                 if C<=A or C>=B*.98: continue
+                # B 只能在 C 已形成後回頭確認；而且 B 必須是 A→C 之間
+                # 的主要波段高點，不能把途中任一局部高點先叫做 B。
+                if B<float(x.iloc[a+1:c+1].high.max()): continue
                 if C>float(x.iloc[b+1:c+1].low.min()): continue
                 if float(x.iloc[c+1:i+1].low.min())<C*.99: continue
                 if close<C*1.01 or close>B*1.10: continue
