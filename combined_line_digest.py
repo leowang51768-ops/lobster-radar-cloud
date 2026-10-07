@@ -549,6 +549,38 @@ def nearest_upper_resistance(con, code, day, pivot, close, lookback=60):
     return {"price":center,"touches":touches}
 
 
+def true_breakout_threshold_info(con, code, day, pivot, breakout_close):
+    """Define the true-breakout threshold, including the no-overhead-pressure case.
+
+    If no valid historical resistance exists above the breakout close in the
+    available database history, treat the stock as being in price-discovery
+    territory and use breakout close +2% as the continuation-confirmation
+    threshold.  The threshold is still only a candidate new support until a
+    later retest holds.
+    """
+    breakout_close=number(breakout_close)
+    if breakout_close<=0:
+        return {"threshold":None, "source":"無有效突破收盤", "price_discovery":False}
+
+    upper_info=nearest_upper_resistance(
+        con,code,day,pivot,breakout_close,lookback=60
+    )
+    threshold=round(breakout_close*1.02,4)
+    if not upper_info:
+        return {
+            "threshold":threshold,
+            "source":"可用歷史資料無上方有效壓力｜突破收盤+2%",
+            "price_discovery":True,
+        }
+    return {
+        "threshold":threshold,
+        "source":"一般真突破確認｜突破收盤+2%",
+        "price_discovery":False,
+        "upper_resistance_at_signal":round(number(upper_info.get("price")),4),
+        "upper_resistance_touches_at_signal":int(upper_info.get("touches") or 0),
+    }
+
+
 def update_breakout_tracking(day, selected):
     """Track D1-D10 outcomes with the same taxonomy used by Wall Street Ghost V1.4.
 
@@ -594,8 +626,16 @@ def update_breakout_tracking(day, selected):
             breakout_close=number(item.get("breakout_close"))
             true_threshold=number(item.get("true_breakout_threshold"))
             if true_threshold<=0 and breakout_close>0:
-                true_threshold=breakout_close*1.02
-                item["true_breakout_threshold"]=round(true_threshold,4)
+                threshold_info=true_breakout_threshold_info(
+                    con,item.get("code"),signal_day,item.get("pivot"),breakout_close
+                )
+                true_threshold=number(threshold_info.get("threshold"))
+                item["true_breakout_threshold"]=round(true_threshold,4) if true_threshold>0 else None
+                item["true_breakout_threshold_source"]=threshold_info.get("source")
+                item["price_discovery"]=bool(threshold_info.get("price_discovery"))
+                if threshold_info.get("upper_resistance_at_signal") is not None:
+                    item["upper_resistance_at_signal"]=threshold_info.get("upper_resistance_at_signal")
+                    item["upper_resistance_touches_at_signal"]=threshold_info.get("upper_resistance_touches_at_signal")
 
             item["last_checked_date"]=day
             item["last_low"]=low
@@ -743,6 +783,9 @@ def update_breakout_tracking(day, selected):
             support_info=tracking_support_info(pick)
             support=number(support_info.get("level"))
             close0=number(pick.get("close"))
+            threshold_info=true_breakout_threshold_info(
+                con,pick.get("code"),day,pick.get("pivot"),close0
+            )
             volrow=con.execute(
                 "SELECT volume FROM prices WHERE stock_id=? AND date=? LIMIT 1",
                 (pick["code"],day),
@@ -762,13 +805,17 @@ def update_breakout_tracking(day, selected):
                 "support_confirmed":bool(support_info.get("confirmed")),
                 "confirmed_support":support if support_info.get("confirmed") else None,
                 "stop_price":number(pick.get("stop")),
-                "true_breakout_threshold":round(close0*1.02,4) if close0>0 else None,
+                "true_breakout_threshold":threshold_info.get("threshold"),
+                "true_breakout_threshold_source":threshold_info.get("source"),
+                "price_discovery":bool(threshold_info.get("price_discovery")),
+                "upper_resistance_at_signal":threshold_info.get("upper_resistance_at_signal"),
+                "upper_resistance_touches_at_signal":threshold_info.get("upper_resistance_touches_at_signal"),
                 "volume_ratio":number(pick.get("volume_ratio")),
                 "composite_score":number(pick.get("composite_score")),
                 "breakout_volume":number(volrow[0]) if volrow else 0.0,
                 "status":"tracking",
                 "status_label":"🟧 突破",
-                "status_definition":"已完成原策略訊號；突破價先視為候選支撐，需後續回測觸及且收盤守住才升級為確認支撐；真突破門檻同理先為候選新支撐。",
+                "status_definition":"已完成原策略訊號；突破價先視為候選支撐，需後續回測觸及且收盤守住才升級為確認支撐；若可用歷史資料無上方有效壓力，真突破門檻定為突破收盤+2%，達門檻後仍先視為候選新支撐。",
                 "created_date":day,
                 "last_checked_date":day,
             }
