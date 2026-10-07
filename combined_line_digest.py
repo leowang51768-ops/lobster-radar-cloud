@@ -512,14 +512,11 @@ def nearest_upper_resistance(con, code, day, pivot, close, lookback=60):
 
 
 def update_breakout_tracking(day, selected):
-    """Track first-stage picks until they become confirmed retests or failed breakouts.
+    """Track D1-D10 outcomes with the same taxonomy used by Wall Street Ghost V1.4.
 
-    Status definitions:
-    tracking      = signal day (internal age 0 / visible D1) through visible D10 while unresolved.
-    true_breakout = from the next session onward, close >= signal-day close +2% without a support retest.
-    confirmed     = price retested support (low <= support+1%) and closed back at/above support.
-    invalid       = daily close fell below support.
-    expired       = no resolution by visible D10 (internal age 9).
+    Internal age is zero-based (signal day=0 / visible D1).
+    A true breakout remains active through D10 so a later retest of the new
+    support (the true-breakout threshold) can be classified.
     """
     today=datetime.now(ZoneInfo("Asia/Taipei")).date().isoformat()
     live=(day==today)
@@ -527,13 +524,19 @@ def update_breakout_tracking(day, selected):
 
     confirmed=[]
     invalidated=[]
-    active_before=[v for v in state.values() if v.get("status")=="tracking"]
+    active_before=[
+        v for v in state.values()
+        if isinstance(v,dict)
+        and v.get("status") in ("tracking","true_breakout")
+        and not v.get("monitoring_complete")
+    ]
 
     with sqlite3.connect(BASE / "lobster_tw_6m_prices.sqlite") as con:
-        sessions = [row[0] for row in con.execute(
-            "SELECT DISTINCT date FROM prices WHERE date<=? ORDER BY date", (day,)
+        sessions=[row[0] for row in con.execute(
+            "SELECT DISTINCT date FROM prices WHERE date<=? ORDER BY date",(day,)
         )]
-        pos = {d: i for i, d in enumerate(sessions)}
+        pos={d:i for i,d in enumerate(sessions)}
+
         for item in active_before:
             signal_day=item.get("signal_date","")
             if not signal_day or signal_day>=day:
@@ -546,27 +549,69 @@ def update_breakout_tracking(day, selected):
                 continue
             low,close,vol=[number(x) for x in row]
             support=number(item.get("retest_support"))
-            if support<=0:
-                continue
+            stop=number(item.get("stop_price"))
+            breakout_close=number(item.get("breakout_close"))
+            true_threshold=number(item.get("true_breakout_threshold"))
+            if true_threshold<=0 and breakout_close>0:
+                true_threshold=breakout_close*1.02
+                item["true_breakout_threshold"]=round(true_threshold,4)
 
             item["last_checked_date"]=day
             item["last_low"]=low
             item["last_close"]=close
             item["last_volume"]=vol
-
-            # Trading-day age is counted from D0 breakout day.
             age=(pos.get(day,0)-pos.get(signal_day,0)) if signal_day in pos else 0
             item["tracking_day"]=age
 
-            if close < support:
+            # Highest priority: original structural stop invalidates the pattern.
+            if stop>0 and close<stop:
                 item["status"]="invalid"
-                item["status_label"]="🔴 失效突破"
+                item["status_label"]="⛔ 型態失效"
                 item["resolved_date"]=day
                 item["resolved_close"]=close
                 invalidated.append(dict(item))
                 continue
 
-            touched=low <= support*1.01
+            # After true breakout, use the true-breakout threshold as the new support.
+            if item.get("status")=="true_breakout":
+                new_support=number(item.get("new_support")) or true_threshold
+                if new_support>0:
+                    item["new_support"]=round(new_support,4)
+                if new_support>0 and close<new_support:
+                    item["status"]="post_true_retest_failed"
+                    item["status_label"]="🟣 真突破後回測失敗"
+                    item["resolved_date"]=day
+                    item["resolved_close"]=close
+                    continue
+                if new_support>0 and low<=new_support*1.01 and close>=new_support:
+                    item["status"]="post_true_retest_success"
+                    item["status_label"]="🟦 真突破後回測成功"
+                    item["resolved_date"]=day
+                    item["resolved_close"]=close
+                    continue
+                if age>=9:
+                    item["monitoring_complete"]=True
+                    item["status_label"]="🔵 真突破｜D10完成"
+                    item["resolved_date"]=day
+                    item["resolved_close"]=close
+                continue
+
+            # Before true breakout, judge the original breakout support.
+            if support<=0:
+                continue
+            if close<support:
+                if close>=support*0.99:
+                    item["status"]="retest_failed"
+                    item["status_label"]="🟤 回測失敗"
+                else:
+                    item["status"]="failed"
+                    item["status_label"]="🔴 突破失敗"
+                item["resolved_date"]=day
+                item["resolved_close"]=close
+                invalidated.append(dict(item))
+                continue
+
+            touched=low<=support*1.01
             if touched:
                 item["status"]="confirmed"
                 item["status_label"]="🟢 回測確認"
@@ -577,15 +622,14 @@ def update_breakout_tracking(day, selected):
                 confirmed.append(dict(item))
                 continue
 
-            breakout_close=number(item.get("breakout_close"))
             gain_vs_breakout=((close/breakout_close)-1.0) if breakout_close>0 else 0.0
             item["gain_vs_breakout_pct"]=round(gain_vs_breakout*100,4)
-
-            if age>=1 and gain_vs_breakout>=0.02:
+            if age>=1 and true_threshold>0 and close>=true_threshold:
                 item["status"]="true_breakout"
                 item["status_label"]="🔵 真突破"
                 item["true_breakout_date"]=day
                 item["true_breakout_close"]=close
+                item["new_support"]=round(true_threshold,4)
                 upper_info=nearest_upper_resistance(
                     con,item.get("code"),day,item.get("pivot"),close
                 )
@@ -602,44 +646,40 @@ def update_breakout_tracking(day, selected):
                 else:
                     item["upside_amount"]=None
                     item["upside_pct"]=None
-                item["resolved_date"]=day
-                item["resolved_close"]=close
-            elif age>=1:
+                continue
+
+            if age>=1:
                 item["status_label"]="🟡 突破後盤整"
             else:
-                item["status_label"]="🟡 突破追蹤中"
+                item["status_label"]="🟧 突破"
 
-            # Main decision window D1-D3; hard visible tracking limit D10.
-            # Internal age is zero-based (signal day = 0), therefore visible D10
-            # is internal age 9. D30 performance tracking is handled separately.
             if age>=9 and item.get("status")=="tracking":
                 item["status"]="expired"
-                item["status_label"]="⚪ D10 未表態｜結束即時追蹤"
+                item["status_label"]="⚪ D10 未表態"
                 item["resolved_date"]=day
                 item["resolved_close"]=close
 
-        # Add today's newly-notified first-stage candidates only after evaluating
-        # older tracking rows, so a breakout cannot confirm itself on signal day.
+        # Add today's newly-notified first-stage candidates after older rows.
         for pick in selected:
             key=f"{day}|{pick['code']}"
             if key in state:
                 continue
 
-            # V1.4 consistency: one active signal per stock. A newer same-code
-            # signal replaces any older still-tracking signal while preserving
-            # the old row in the durable ledger for later performance review.
+            # One active signal per code: newest signal replaces older active rows.
             for old in state.values():
-                if not isinstance(old, dict):
+                if not isinstance(old,dict):
                     continue
-                if (old.get("status")=="tracking"
+                if (old.get("status") in ("tracking","true_breakout")
+                        and not old.get("monitoring_complete")
                         and str(old.get("code") or "")==str(pick["code"])
-                        and str(old.get("signal_date") or "") < day):
+                        and str(old.get("signal_date") or "")<day):
                     old["status"]="expired"
                     old["status_label"]="⚪ 新訊號取代舊追蹤"
                     old["resolved_date"]=day
                     old["resolved_close"]=number(pick.get("close"))
 
             support=tracking_support(pick)
+            close0=number(pick.get("close"))
             volrow=con.execute(
                 "SELECT volume FROM prices WHERE stock_id=? AND date=? LIMIT 1",
                 (pick["code"],day),
@@ -651,22 +691,27 @@ def update_breakout_tracking(day, selected):
                 "name":pick["name"],
                 "route":pick["route"],
                 "stage":pick["stage"],
-                "breakout_close":number(pick.get("close")),
+                "breakout_close":close0,
                 "pivot":number(pick.get("pivot")),
                 "retest_support":support,
                 "stop_price":number(pick.get("stop")),
+                "true_breakout_threshold":round(close0*1.02,4) if close0>0 else None,
                 "volume_ratio":number(pick.get("volume_ratio")),
                 "composite_score":number(pick.get("composite_score")),
                 "breakout_volume":number(volrow[0]) if volrow else 0.0,
                 "status":"tracking",
-                "status_label":"🟡 突破追蹤中",
+                "status_label":"🟧 突破",
                 "created_date":day,
                 "last_checked_date":day,
             }
 
+    # Live pool includes unresolved tracking plus true-breakout rows waiting for
+    # a possible retest of their new support.
     active_by_code={}
     for value in state.values():
-        if not isinstance(value,dict) or value.get("status")!="tracking":
+        if not isinstance(value,dict):
+            continue
+        if value.get("status") not in ("tracking","true_breakout") or value.get("monitoring_complete"):
             continue
         code=str(value.get("code") or "")
         old=active_by_code.get(code)
