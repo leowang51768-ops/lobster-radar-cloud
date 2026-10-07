@@ -549,6 +549,44 @@ def nearest_upper_resistance(con, code, day, pivot, close, lookback=60):
     return {"price":center,"touches":touches}
 
 
+def active_tracking_support(item):
+    """Return the support level that is CURRENTLY relevant for distance/ranking.
+
+    Before true breakout -> original breakout/structural support.
+    After true breakout  -> candidate/confirmed new support (true-breakout level).
+    This keeps "distance to support" synchronized whenever support changes.
+    """
+    status=str(item.get("status") or "")
+    if status in ("true_breakout","post_true_retest_success","post_true_retest_failed"):
+        level=(
+            number(item.get("new_support"))
+            or number(item.get("candidate_new_support"))
+            or number(item.get("true_breakout_threshold"))
+        )
+        if level>0:
+            return level, (
+                "已確認新支撐" if number(item.get("new_support"))>0
+                else "候選新支撐"
+            )
+    level=number(item.get("confirmed_support")) or number(item.get("retest_support"))
+    return level, (
+        "已確認支撐" if bool(item.get("support_confirmed")) else
+        str(item.get("support_status") or "候選支撐")
+    )
+
+
+def update_support_distance(item, price):
+    """Persist signed percentage distance from price to the current active support."""
+    support, support_state=active_tracking_support(item)
+    px=number(price)
+    item["current_support"]=round(support,4) if support>0 else None
+    item["current_support_status"]=support_state if support>0 else "未確認"
+    item["distance_to_support_pct"]=(
+        round((px/support-1.0)*100,4) if support>0 and px>0 else None
+    )
+    return item["current_support"], item["distance_to_support_pct"]
+
+
 def true_breakout_threshold_info(con, code, day, pivot, breakout_close):
     """Define the true-breakout threshold, including the no-overhead-pressure case.
 
@@ -641,6 +679,7 @@ def update_breakout_tracking(day, selected):
             item["last_low"]=low
             item["last_close"]=close
             item["last_volume"]=vol
+            update_support_distance(item, close)
             age=(pos.get(day,0)-pos.get(signal_day,0)) if signal_day in pos else 0
             item["tracking_day"]=age
 
@@ -676,6 +715,7 @@ def update_breakout_tracking(day, selected):
                 if candidate_new_support>0 and low<=candidate_new_support*1.01 and close>=candidate_new_support:
                     item["new_support"]=round(candidate_new_support,4)
                     item["new_support_status"]="已確認新支撐"
+                    update_support_distance(item, close)
                     item["status"]="post_true_retest_success"
                     item["status_label"]="🟦 真突破後回測成功"
                     item["resolved_date"]=day
@@ -710,6 +750,7 @@ def update_breakout_tracking(day, selected):
                 item["support_status"]="已確認支撐"
                 item["support_confirmed"]=True
                 item["confirmed_support"]=round(support,4)
+                update_support_distance(item, close)
                 item["status"]="confirmed"
                 item["status_label"]="🟢 回測確認"
                 item["resolved_date"]=day
@@ -729,6 +770,7 @@ def update_breakout_tracking(day, selected):
                 item["candidate_new_support"]=round(true_threshold,4)
                 item["new_support"]=None
                 item["new_support_status"]="候選新支撐"
+                update_support_distance(item, close)
                 upper_info=nearest_upper_resistance(
                     con,item.get("code"),day,item.get("pivot"),close
                 )
@@ -804,6 +846,9 @@ def update_breakout_tracking(day, selected):
                 "support_status":support_info.get("status"),
                 "support_confirmed":bool(support_info.get("confirmed")),
                 "confirmed_support":support if support_info.get("confirmed") else None,
+                "current_support":support if support>0 else None,
+                "current_support_status":support_info.get("status"),
+                "distance_to_support_pct":round((close0/support-1.0)*100,4) if close0>0 and support>0 else None,
                 "stop_price":number(pick.get("stop")),
                 "true_breakout_threshold":threshold_info.get("threshold"),
                 "true_breakout_threshold_source":threshold_info.get("source"),
@@ -815,7 +860,7 @@ def update_breakout_tracking(day, selected):
                 "breakout_volume":number(volrow[0]) if volrow else 0.0,
                 "status":"tracking",
                 "status_label":"🟧 突破",
-                "status_definition":"已完成原策略訊號；突破價先視為候選支撐，需後續回測觸及且收盤守住才升級為確認支撐；若可用歷史資料無上方有效壓力，真突破門檻定為突破收盤+2%，達門檻後仍先視為候選新支撐。",
+                "status_definition":"已完成原策略訊號；距支撐一律以當下有效支撐計算：(現價÷目前支撐−1)×100%。真突破前用原突破／結構支撐；真突破後自動切換至真突破門檻形成的候選／確認新支撐。",
                 "created_date":day,
                 "last_checked_date":day,
             }
