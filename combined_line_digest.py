@@ -648,7 +648,10 @@ def update_breakout_tracking(day, selected):
                     item["upside_pct"]=None
                 continue
 
-            if age>=1:
+            if true_threshold>0 and close>=true_threshold*0.98:
+                item["status_label"]="🟨 接近真突破"
+                item["near_true_breakout"]=True
+            elif age>=1:
                 item["status_label"]="🟡 突破後盤整"
             else:
                 item["status_label"]="🟧 突破"
@@ -701,6 +704,7 @@ def update_breakout_tracking(day, selected):
                 "breakout_volume":number(volrow[0]) if volrow else 0.0,
                 "status":"tracking",
                 "status_label":"🟧 突破",
+                "status_definition":"已完成原策略突破並收盤確認；後續依該型態突破／關鍵支撐與真突破門檻追蹤。",
                 "created_date":day,
                 "last_checked_date":day,
             }
