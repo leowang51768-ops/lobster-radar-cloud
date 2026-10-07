@@ -390,7 +390,7 @@ def format_message(day, selected, count, diagnostic_rows=None):
     lines=[f"🦞 龍蝦雷達｜當日突破候選｜{day}",
            f"今天剛出現突破／收復訊號，先列入觀察，不代表一定要買｜最多{MAX_STOCKS}檔｜掃描候選{count}筆",
            "排名權重：突破品質40%＋量比25%＋型態完整度25%＋法人籌碼10%（籌碼影響排序；資料未齊暫緩通知）",
-           "破底翻用B點低點下方一檔；VCP用頸線下方2%；N字底用B點下方2%。停損距離僅顯示、不設8%入選上限；不符試單區者保留CSV。"]
+           "破底翻用B點低點下方2%；VCP用pivot／頸線下方2%；N字底用B點下方2%。停損距離僅顯示、不設8%入選上限；不符試單區者保留CSV。"]
     if diagnostic_rows is not None:
         excluded=[r for r in diagnostic_rows if not r["selected"]]
         risk_count=sum("結構停損無效" in r["exclusion_reasons"] for r in excluded)
