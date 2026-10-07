@@ -185,8 +185,8 @@ jobs:
           python support_retest_watch.py
 
       - name: "Send two-stage LINE: breakout candidates and retest confirmations"
-        # 自動通知只允許台北 20:00 的正式排程；19:00 僅收集／分析，push 與手動測試都不發股票 LINE。
-        if: ${{ steps.market_calendar.outputs.closed != 'true' && github.event_name == 'schedule' && github.event.schedule == '0 12 * * 1-5' }}
+        # 自動通知只允許台北 20:00 正式排程；另保留專用 manual-trigger push 供必要時手動補發。
+        if: ${{ steps.market_calendar.outputs.closed != 'true' && ((github.event_name == 'schedule' && github.event.schedule == '0 12 * * 1-5') || github.event_name == 'push') }}
         shell: bash
         env:
           FINMIND_TOKEN: ${{ secrets.FINMIND_TOKEN }}
@@ -258,8 +258,8 @@ jobs:
           git push
 
       - name: LINE alert when daily workflow still fails
-        # 19:00 的資料收集即使失敗也不通知；20:00 最終排程仍失敗才發警報。
-        if: ${{ failure() && github.event_name == 'schedule' && github.event.schedule == '0 12 * * 1-5' && steps.market_calendar.outputs.closed != 'true' }}
+        # 19:00 的資料收集失敗不通知；20:00 最終排程或專用 manual-trigger 補發失敗才發警報。
+        if: ${{ failure() && ((github.event_name == 'schedule' && github.event.schedule == '0 12 * * 1-5') || github.event_name == 'push') && steps.market_calendar.outputs.closed != 'true' }}
         env:
           LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
         run: |
