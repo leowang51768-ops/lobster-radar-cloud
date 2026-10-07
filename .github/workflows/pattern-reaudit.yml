@@ -1,0 +1,32 @@
+name: Pattern Definition Reaudit
+
+on:
+  push:
+    paths:
+      - ".github/pattern-reaudit-trigger"
+
+permissions:
+  contents: write
+
+jobs:
+  reaudit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install pandas requests
+      - name: Rebuild D1-D10 tracking under new definitions
+        run: python reaudit_pattern_tracking.py
+      - name: Commit corrected tracking
+        run: |
+          git config user.name "lobster-radar-cloud"
+          git config user.email "actions@github.com"
+          git add breakout_tracking.json breakout_watchlist.json pattern_definition_reaudit.json
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git commit -m "Reaudit D1-D10 tracking under final pattern definitions"
+          git push
