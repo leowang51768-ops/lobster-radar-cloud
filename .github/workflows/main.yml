@@ -12,10 +12,10 @@ on:
     paths:
       - ".github/lobster-manual-trigger"
   schedule:
-    # 台北時間週一至週五 16:30 正式執行；16:45 備援補跑。
-    # GitHub cron 使用 UTC，所以 16:30 / 16:45 台北 = 08:30 / 08:45 UTC。
-    - cron: "30 8 * * 1-5"
-    - cron: "45 8 * * 1-5"
+    # 台北時間週一至週五 19:00 開始讀取盤後資料並分析；20:00 才發送 LINE 最終結果。
+    # GitHub cron 使用 UTC，所以 19:00 / 20:00 台北 = 11:00 / 12:00 UTC。
+    - cron: "0 11 * * 1-5"
+    - cron: "0 12 * * 1-5"
 
 permissions:
   contents: write
@@ -185,7 +185,8 @@ jobs:
           python support_retest_watch.py
 
       - name: "Send two-stage LINE: breakout candidates and retest confirmations"
-        if: ${{ steps.market_calendar.outputs.closed != 'true' }}
+        # 自動通知只允許台北 20:00 的正式排程；19:00 僅收集／分析，push 與手動測試都不發股票 LINE。
+        if: ${{ steps.market_calendar.outputs.closed != 'true' && github.event_name == 'schedule' && github.event.schedule == '0 12 * * 1-5' }}
         shell: bash
         env:
           FINMIND_TOKEN: ${{ secrets.FINMIND_TOKEN }}
@@ -257,7 +258,8 @@ jobs:
           git push
 
       - name: LINE alert when daily workflow still fails
-        if: ${{ failure() && github.event_name == 'schedule' && steps.market_calendar.outputs.closed != 'true' }}
+        # 19:00 的資料收集即使失敗也不通知；20:00 最終排程仍失敗才發警報。
+        if: ${{ failure() && github.event_name == 'schedule' && github.event.schedule == '0 12 * * 1-5' && steps.market_calendar.outputs.closed != 'true' }}
         env:
           LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
         run: |
