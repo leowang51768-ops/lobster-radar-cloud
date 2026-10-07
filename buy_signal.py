@@ -179,7 +179,9 @@ def add_four_layer_evidence(
     support = float(signal["support_lower"])
     if signal.get("signal_route", "").startswith("破底翻") and signal.get("b_point"):
         b_point = float(signal["b_point"])
-        stop = max(0.0, b_point - tw_stock_tick(b_point))
+        # 正式定義：破底翻 B＝跌破左A支撐後的破底最低點；
+        # 原策略停損＝B點下方2%，並向下取台股有效跳動單位。
+        stop = floor_to_tw_tick(b_point * 0.98)
     else:
         stop = support * (1.0 - SUPPORT_BREAK_TOL)
     older = x.iloc[max(0, signal_i - 120):max(0, signal_i - LOOKBACK)]
@@ -222,6 +224,15 @@ def tw_stock_tick(price: float) -> float:
     if price < 1000:
         return 1.00
     return 5.00
+
+
+def floor_to_tw_tick(price: float) -> float:
+    """Round a positive price downward to a valid TW stock tick."""
+    price = max(0.0, float(price))
+    unit = tw_stock_tick(price)
+    if unit <= 0:
+        return price
+    return max(0.0, math.floor((price + 1e-9) / unit) * unit)
 
 
 def false_break_support_zone(x: pd.DataFrame, break_i: int) -> tuple[float, float, int] | None:
@@ -425,7 +436,7 @@ def detect_false_break_reversal(code: str, x: pd.DataFrame) -> tuple[dict, dict 
         "entry_stage": entry_stage,
         "dif_converging": dif_converging,
         "failure_level": round(
-            max(0.0, best["break_low"] - tw_stock_tick(best["break_low"])), 2
+            floor_to_tw_tick(best["break_low"] * 0.98), 2
         ),
         "structure_extension_pct": round(extension * 100, 2) if math.isfinite(extension) else "",
         "close_location": round(location, 2),
@@ -845,14 +856,14 @@ def detect_exit_warnings(market: pd.DataFrame, latest_date: str, state: dict) ->
         trigger = float(rec.get("support_upper") or rec.get("key_high") or 0.0)
         route = str(rec.get("signal_route", ""))
         if route.startswith("破底翻"):
-            # B is the article's invalidation reference.  Prefer the stored
-            # failure level; fall back to the recorded B/key low for old rows.
+            # 破底翻 B＝跌破左A支撐後的最低點；停損固定為 B 下方2%。
+            # Prefer the stored failure level; old rows are upgraded on the fly.
             stop = float(
                 rec.get("failure_level") or rec.get("b_point")
                 or rec.get("key_low") or 0.0
             )
             if stop > 0 and not rec.get("failure_level"):
-                stop = max(0.0, stop - tw_stock_tick(stop))
+                stop = floor_to_tw_tick(stop * 0.98)
         else:
             stop = float(rec.get("stop_price") or 0.0)
             if stop <= 0:
@@ -1096,7 +1107,7 @@ def main() -> int:
                     f"支撐來源：{row['support_source']}",
                     f"成交量：{int(row['volume_lots'])}張｜量比：{row['volume_ratio']}x",
                     f"績效基準試單價：{row['baseline_entry']}",
-                    f"失效／停損：再破B點，價格低於 {row.get('failure_level', row.get('stop_price'))}",
+                    f"失效／停損：B點低點下方2%＝{row.get('failure_level', row.get('stop_price'))}",
                 ]
             lines += [
                 f"型態證據：{row.get('evidence_count', '')}項｜{row.get('evidence_notes', '')}",
