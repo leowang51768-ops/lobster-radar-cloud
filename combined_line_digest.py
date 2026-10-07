@@ -463,10 +463,48 @@ def save_breakout_tracking(state):
     )
 
 
+def tracking_support_info(pick):
+    """Return the level monitored as support without pretending it is confirmed.
+
+    Breakout resistance becomes a *candidate* support first.  It is promoted to
+    confirmed support only after a later retest touches the level and closes
+    back above it.  For a non-breakout break-bottom right-A setup, the repeated
+    historical A-zone is already structural support.
+    """
+    route=str(pick.get("route") or "")
+    pivot=number(pick.get("pivot"))
+    breakout=bool(pick.get("breakout"))
+    if breakout and pivot>0:
+        source=(
+            "VCP突破樞紐（原壓力轉候選支撐）" if route=="VCP"
+            else "N字底B頸線（原壓力轉候選支撐）" if route=="N字底"
+            else "破底翻頸線／突破價（原壓力轉候選支撐）"
+        )
+        return {
+            "level":pivot,
+            "source":source,
+            "status":"候選支撐",
+            "confirmed":False,
+        }
+    if route=="破底翻":
+        level=number(pick.get("left_a_upper"))
+        return {
+            "level":level,
+            "source":"破底翻A點重複承接支撐區",
+            "status":"已確認結構支撐" if level>0 else "未確認",
+            "confirmed":level>0,
+        }
+    return {
+        "level":pivot,
+        "source":"型態關鍵價",
+        "status":"候選支撐" if pivot>0 else "未確認",
+        "confirmed":False,
+    }
+
+
 def tracking_support(pick):
-    if pick.get("route")=="破底翻":
-        return number(pick.get("left_a_upper"))
-    return number(pick.get("pivot"))
+    """Backward-compatible numeric helper used by older callers/tests."""
+    return number(tracking_support_info(pick).get("level"))
 
 
 def nearest_upper_resistance(con, code, day, pivot, close, lookback=60):
@@ -549,6 +587,9 @@ def update_breakout_tracking(day, selected):
                 continue
             low,close,vol=[number(x) for x in row]
             support=number(item.get("retest_support"))
+            if support>0 and not item.get("support_status"):
+                item["support_status"]="候選支撐"
+                item["support_confirmed"]=False
             stop=number(item.get("stop_price"))
             breakout_close=number(item.get("breakout_close"))
             true_threshold=number(item.get("true_breakout_threshold"))
@@ -572,18 +613,29 @@ def update_breakout_tracking(day, selected):
                 invalidated.append(dict(item))
                 continue
 
-            # After true breakout, use the true-breakout threshold as the new support.
+            # After true breakout, the threshold is only a candidate new support.
+            # It becomes confirmed new support only after a later retest touches
+            # the level and closes back above it.
             if item.get("status")=="true_breakout":
-                new_support=number(item.get("new_support")) or true_threshold
-                if new_support>0:
-                    item["new_support"]=round(new_support,4)
-                if new_support>0 and close<new_support:
+                candidate_new_support=(
+                    number(item.get("candidate_new_support"))
+                    or number(item.get("new_support"))
+                    or true_threshold
+                )
+                if candidate_new_support>0:
+                    item["candidate_new_support"]=round(candidate_new_support,4)
+                    if not item.get("new_support_status"):
+                        item["new_support_status"]="候選新支撐"
+                if candidate_new_support>0 and close<candidate_new_support:
                     item["status"]="post_true_retest_failed"
                     item["status_label"]="🟣 真突破後回測失敗"
+                    item["new_support_status"]="候選新支撐失敗"
                     item["resolved_date"]=day
                     item["resolved_close"]=close
                     continue
-                if new_support>0 and low<=new_support*1.01 and close>=new_support:
+                if candidate_new_support>0 and low<=candidate_new_support*1.01 and close>=candidate_new_support:
+                    item["new_support"]=round(candidate_new_support,4)
+                    item["new_support_status"]="已確認新支撐"
                     item["status"]="post_true_retest_success"
                     item["status_label"]="🟦 真突破後回測成功"
                     item["resolved_date"]=day
@@ -613,6 +665,11 @@ def update_breakout_tracking(day, selected):
 
             touched=low<=support*1.01
             if touched:
+                # A former resistance/pivot is promoted from candidate support
+                # to confirmed support only after this touch-and-hold event.
+                item["support_status"]="已確認支撐"
+                item["support_confirmed"]=True
+                item["confirmed_support"]=round(support,4)
                 item["status"]="confirmed"
                 item["status_label"]="🟢 回測確認"
                 item["resolved_date"]=day
@@ -629,7 +686,9 @@ def update_breakout_tracking(day, selected):
                 item["status_label"]="🔵 真突破"
                 item["true_breakout_date"]=day
                 item["true_breakout_close"]=close
-                item["new_support"]=round(true_threshold,4)
+                item["candidate_new_support"]=round(true_threshold,4)
+                item["new_support"]=None
+                item["new_support_status"]="候選新支撐"
                 upper_info=nearest_upper_resistance(
                     con,item.get("code"),day,item.get("pivot"),close
                 )
@@ -681,7 +740,8 @@ def update_breakout_tracking(day, selected):
                     old["resolved_date"]=day
                     old["resolved_close"]=number(pick.get("close"))
 
-            support=tracking_support(pick)
+            support_info=tracking_support_info(pick)
+            support=number(support_info.get("level"))
             close0=number(pick.get("close"))
             volrow=con.execute(
                 "SELECT volume FROM prices WHERE stock_id=? AND date=? LIMIT 1",
@@ -697,6 +757,10 @@ def update_breakout_tracking(day, selected):
                 "breakout_close":close0,
                 "pivot":number(pick.get("pivot")),
                 "retest_support":support,
+                "support_source":support_info.get("source"),
+                "support_status":support_info.get("status"),
+                "support_confirmed":bool(support_info.get("confirmed")),
+                "confirmed_support":support if support_info.get("confirmed") else None,
                 "stop_price":number(pick.get("stop")),
                 "true_breakout_threshold":round(close0*1.02,4) if close0>0 else None,
                 "volume_ratio":number(pick.get("volume_ratio")),
@@ -704,7 +768,7 @@ def update_breakout_tracking(day, selected):
                 "breakout_volume":number(volrow[0]) if volrow else 0.0,
                 "status":"tracking",
                 "status_label":"🟧 突破",
-                "status_definition":"已完成原策略突破並收盤確認；後續依該型態突破／關鍵支撐與真突破門檻追蹤。",
+                "status_definition":"已完成原策略訊號；突破價先視為候選支撐，需後續回測觸及且收盤守住才升級為確認支撐；真突破門檻同理先為候選新支撐。",
                 "created_date":day,
                 "last_checked_date":day,
             }
