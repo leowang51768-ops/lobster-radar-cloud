@@ -1,0 +1,304 @@
+{
+  "run_date": "2026-10-08",
+  "before": 29,
+  "kept": [
+    {
+      "tracking_key": "2026-09-30|6770",
+      "code": "6770",
+      "name": "力積電",
+      "route": "N字底",
+      "signal_date": "2026-09-30",
+      "status_label": "🟢 回測確認",
+      "pivot": 73.7,
+      "stop_price": 72.2,
+      "current_support": 73.7,
+      "distance_to_support_pct": 1.0855
+    },
+    {
+      "tracking_key": "2026-09-30|6488",
+      "code": "6488",
+      "name": "環球晶",
+      "route": "N字底",
+      "signal_date": "2026-09-30",
+      "status_label": "🔵 真突破",
+      "pivot": 996.0,
+      "stop_price": 976.0,
+      "current_support": 1055.7,
+      "distance_to_support_pct": 15.0895
+    },
+    {
+      "tracking_key": "2026-10-01|3706",
+      "code": "3706",
+      "name": "神達",
+      "route": "N字底",
+      "signal_date": "2026-10-01",
+      "status_label": "🟤 回測失敗",
+      "pivot": 81.5,
+      "stop_price": 79.8,
+      "current_support": 81.5,
+      "distance_to_support_pct": -0.2454
+    },
+    {
+      "tracking_key": "2026-10-01|8046",
+      "code": "8046",
+      "name": "南電",
+      "route": "N字底",
+      "signal_date": "2026-10-01",
+      "status_label": "🟦 真突破後回測成功",
+      "pivot": 1380.0,
+      "stop_price": 1350.0,
+      "current_support": 1380.0,
+      "distance_to_support_pct": 8.3333
+    },
+    {
+      "tracking_key": "2026-10-02|4958",
+      "code": "4958",
+      "name": "臻鼎-KY",
+      "route": "N字底",
+      "signal_date": "2026-10-02",
+      "status_label": "🟦 真突破後回測成功",
+      "pivot": 550.0,
+      "stop_price": 539.0,
+      "current_support": 550.0,
+      "distance_to_support_pct": 4.3636
+    },
+    {
+      "tracking_key": "2026-10-02|3163",
+      "code": "3163",
+      "name": "波若威",
+      "route": "N字底",
+      "signal_date": "2026-10-02",
+      "status_label": "🟢 回測確認",
+      "pivot": 689.0,
+      "stop_price": 675.0,
+      "current_support": 689.0,
+      "distance_to_support_pct": 0.0
+    },
+    {
+      "tracking_key": "2026-10-02|6239",
+      "code": "6239",
+      "name": "力成",
+      "route": "N字底",
+      "signal_date": "2026-10-02",
+      "status_label": "🔴 突破失敗",
+      "pivot": 302.0,
+      "stop_price": 295.5,
+      "current_support": 302.0,
+      "distance_to_support_pct": -1.4901
+    },
+    {
+      "tracking_key": "2026-10-05|6187",
+      "code": "6187",
+      "name": "萬潤",
+      "route": "N字底",
+      "signal_date": "2026-10-05",
+      "status_label": "🟢 回測確認",
+      "pivot": 1455.0,
+      "stop_price": 1425.0,
+      "current_support": 1455.0,
+      "distance_to_support_pct": 5.4983
+    },
+    {
+      "tracking_key": "2026-10-05|2376",
+      "code": "2376",
+      "name": "技嘉",
+      "route": "N字底",
+      "signal_date": "2026-10-05",
+      "status_label": "🟢 回測確認",
+      "pivot": 376.0,
+      "stop_price": 368.0,
+      "current_support": 376.0,
+      "distance_to_support_pct": 1.0638
+    },
+    {
+      "tracking_key": "2026-10-06|6290",
+      "code": "6290",
+      "name": "良維",
+      "route": "N字底",
+      "signal_date": "2026-10-06",
+      "status_label": "🟢 回測確認",
+      "pivot": 284.0,
+      "stop_price": 278.0,
+      "current_support": 284.0,
+      "distance_to_support_pct": 0.1761
+    },
+    {
+      "tracking_key": "2026-10-06|6239",
+      "code": "6239",
+      "name": "力成",
+      "route": "N字底",
+      "signal_date": "2026-10-06",
+      "status_label": "🟢 回測確認",
+      "pivot": 302.0,
+      "stop_price": 295.5,
+      "current_support": 302.0,
+      "distance_to_support_pct": 1.8212
+    },
+    {
+      "tracking_key": "2026-10-06|3013",
+      "code": "3013",
+      "name": "晟銘電",
+      "route": "N字底",
+      "signal_date": "2026-10-06",
+      "status_label": "🟢 回測確認",
+      "pivot": 93.9,
+      "stop_price": 92.0,
+      "current_support": 93.9,
+      "distance_to_support_pct": 2.5559
+    },
+    {
+      "tracking_key": "2026-10-06|2368",
+      "code": "2368",
+      "name": "金像電",
+      "route": "N字底",
+      "signal_date": "2026-10-06",
+      "status_label": "🟢 回測確認",
+      "pivot": 1245.0,
+      "stop_price": 1220.0,
+      "current_support": 1245.0,
+      "distance_to_support_pct": 0.0
+    },
+    {
+      "tracking_key": "2026-10-07|6442",
+      "code": "6442",
+      "name": "光聖",
+      "route": "N字底",
+      "signal_date": "2026-10-07",
+      "status_label": "🟧 突破",
+      "pivot": 1705.0,
+      "stop_price": 1670.0,
+      "current_support": 1705.0,
+      "distance_to_support_pct": 6.4516
+    },
+    {
+      "tracking_key": "2026-10-07|4989",
+      "code": "4989",
+      "name": "榮科",
+      "route": "N字底",
+      "signal_date": "2026-10-07",
+      "status_label": "🟧 突破",
+      "pivot": 72.6,
+      "stop_price": 71.1,
+      "current_support": 72.6,
+      "distance_to_support_pct": 1.5152
+    }
+  ],
+  "deleted": [
+    {
+      "tracking_key": "2026-09-30|6789",
+      "code": "6789",
+      "name": "采鈺",
+      "route": "N字底",
+      "signal_date": "2026-09-30",
+      "reason": "依訊號日以前資料重建後，不符合2026-10-08新版型態定義"
+    },
+    {
+      "tracking_key": "2026-09-30|6257",
+      "code": "6257",
+      "name": "矽格",
+      "route": "N字底",
+      "signal_date": "2026-09-30",
+      "reason": "依訊號日以前資料重建後，不符合2026-10-08新版型態定義"
+    },
+    {
+      "tracking_key": "2026-09-30|6269",
+      "code": "6269",
+      "name": "台郡",
+      "route": "N字底",
+      "signal_date": "2026-09-30",
+      "reason": "依訊號日以前資料重建後，不符合2026-10-08新版型態定義"
+    },
+    {
+      "tracking_key": "2026-10-01|3406",
+      "code": "3406",
+      "name": "玉晶光",
+      "route": "N字底",
+      "signal_date": "2026-10-01",
+      "reason": "依訊號日以前資料重建後，不符合2026-10-08新版型態定義"
+    },
+    {
+      "tracking_key": "2026-10-01|6488",
+      "code": "6488",
+      "name": "環球晶",
+      "route": "N字底",
+      "signal_date": "2026-10-01",
+      "reason": "依訊號日以前資料重建後，不符合2026-10-08新版型態定義"
+    },
+    {
+      "tracking_key": "2026-10-02|6442",
+      "code": "6442",
+      "name": "光聖",
+      "route": "N字底",
+      "signal_date": "2026-10-02",
+      "reason": "依訊號日以前資料重建後，不符合2026-10-08新版型態定義"
+    },
+    {
+      "tracking_key": "2026-10-02|2377",
+      "code": "2377",
+      "name": "微星",
+      "route": "N字底",
+      "signal_date": "2026-10-02",
+      "reason": "依訊號日以前資料重建後，不符合2026-10-08新版型態定義"
+    },
+    {
+      "tracking_key": "2026-10-05|4989",
+      "code": "4989",
+      "name": "榮科",
+      "route": "N字底",
+      "signal_date": "2026-10-05",
+      "reason": "依訊號日以前資料重建後，不符合2026-10-08新版型態定義"
+    },
+    {
+      "tracking_key": "2026-10-05|2344",
+      "code": "2344",
+      "name": "華邦電",
+      "route": "N字底",
+      "signal_date": "2026-10-05",
+      "reason": "依訊號日以前資料重建後，不符合2026-10-08新版型態定義"
+    },
+    {
+      "tracking_key": "2026-10-05|3406",
+      "code": "3406",
+      "name": "玉晶光",
+      "route": "N字底",
+      "signal_date": "2026-10-05",
+      "reason": "依訊號日以前資料重建後，不符合2026-10-08新版型態定義"
+    },
+    {
+      "tracking_key": "2026-10-06|3693",
+      "code": "3693",
+      "name": "營邦",
+      "route": "N字底",
+      "signal_date": "2026-10-06",
+      "reason": "依訊號日以前資料重建後，不符合2026-10-08新版型態定義"
+    },
+    {
+      "tracking_key": "2026-10-07|4908",
+      "code": "4908",
+      "name": "前鼎",
+      "route": "N字底",
+      "signal_date": "2026-10-07",
+      "reason": "依訊號日以前資料重建後，不符合2026-10-08新版型態定義"
+    },
+    {
+      "tracking_key": "2026-10-07|3014",
+      "code": "3014",
+      "name": "聯陽",
+      "route": "N字底",
+      "signal_date": "2026-10-07",
+      "reason": "依訊號日以前資料重建後，不符合2026-10-08新版型態定義"
+    },
+    {
+      "tracking_key": "2026-10-07|2369",
+      "code": "2369",
+      "name": "菱生",
+      "route": "N字底",
+      "signal_date": "2026-10-07",
+      "reason": "依訊號日以前資料重建後，不符合2026-10-08新版型態定義"
+    }
+  ],
+  "after": 15,
+  "kept_count": 15,
+  "deleted_count": 14,
+  "latest_trade_date": "2026-10-07"
+}
