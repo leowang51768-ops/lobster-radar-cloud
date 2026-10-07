@@ -63,6 +63,22 @@ def number(value, default=0.0):
         return default
 
 
+def tw_stock_tick(price):
+    price=number(price)
+    if price < 10: return 0.01
+    if price < 50: return 0.05
+    if price < 100: return 0.10
+    if price < 500: return 0.50
+    if price < 1000: return 1.00
+    return 5.00
+
+
+def floor_to_tw_tick(price):
+    price=max(0.0, number(price))
+    unit=tw_stock_tick(price)
+    return max(0.0, math.floor((price + 1e-9) / unit) * unit) if unit > 0 else price
+
+
 def clamp(value, low=0.0, high=1.0):
     return max(low, min(high, value))
 
@@ -179,7 +195,12 @@ def collect(day):
             volume_ratio=number(r.get("volume_ratio")),
             rr=rr, quality=number(r.get("close_location")),
             evidence_count=number(r.get("evidence_count")),
-            stop=number(r.get("failure_level") or r.get("stop_price")),
+            # Always derive the break-bottom stop from the formally defined B low.
+            # This also upgrades historical candidate rows that still carry the old
+            # one-tick-below-B failure level.
+            stop=floor_to_tw_tick(number(r.get("b_point")) * 0.98)
+                 if number(r.get("b_point")) > 0
+                 else number(r.get("failure_level") or r.get("stop_price")),
             status="正式買點" if formal else "僅觀察",
             breakout=breakout, within=bool(formal),
             entry_lower=number(r.get("trigger_level")) if formal else None,
@@ -850,6 +871,7 @@ def update_breakout_tracking(day, selected):
                 "current_support_status":support_info.get("status"),
                 "distance_to_support_pct":round((close0/support-1.0)*100,4) if close0>0 and support>0 else None,
                 "stop_price":number(pick.get("stop")),
+                "b_low":number(pick.get("b_low")) if pick.get("route")=="破底翻" else None,
                 "true_breakout_threshold":threshold_info.get("threshold"),
                 "true_breakout_threshold_source":threshold_info.get("source"),
                 "price_discovery":bool(threshold_info.get("price_discovery")),
