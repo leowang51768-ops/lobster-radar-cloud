@@ -27,7 +27,7 @@ FIELDS = ["signal_date","first_notified_at","code","name","route","stage",
 PERF_FIELDS = FIELDS + ["horizon","exit_date","exit_close","return_pct",
                         "win","stop_touched_through_horizon","outcome_status"]
 HORIZONS = (5,10,20,30)
-PERFORMANCE_START_DATE = "2026-10-08"
+PERFORMANCE_START_DATE = "2026-10-07"
 
 
 def read_rows(path):
