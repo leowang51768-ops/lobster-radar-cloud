@@ -36,4 +36,20 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git add data/global_market_risk.json
           git commit -m "update global market risk newsroom"
-          git push
+
+          # 與雷達主流程共用 repo 時，遇到對方剛好先推送就先 rebase 再重試。
+          for attempt in 1 2 3 4; do
+            git pull --rebase origin "${GITHUB_REF_NAME}" || {
+              echo "git pull --rebase failed on attempt $attempt"
+              git rebase --abort || true
+              sleep 8
+              continue
+            }
+            if git push origin "HEAD:${GITHUB_REF_NAME}"; then
+              exit 0
+            fi
+            echo "git push conflict on attempt $attempt; retrying"
+            sleep 8
+          done
+          echo "Failed to publish newsroom update after 4 retries."
+          exit 1
