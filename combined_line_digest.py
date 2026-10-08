@@ -998,7 +998,7 @@ def main():
     sent_breakout=False
 
     # Always send exactly one first-stage daily result, even when zero stocks qualify.
-    # The second 16:45 schedule is a backup run, so persistent state prevents duplicates.
+    # The 20:30 Taipei backup schedule retries the daily run; persistent state prevents duplicate LINE broadcasts.
     if not day_state.get("daily_result_sent"):
         send_line_text(token, breakout_message, "Daily breakout result")
         day_state["daily_result_sent"]=datetime.now(ZoneInfo("Asia/Taipei")).isoformat(timespec="seconds")
