@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
-"""Immutable snapshots of actual daily LINE stock picks + 5/10/20-session outcomes.
+"""Immutable D1 snapshots of actual daily LINE picks + 5/10/20/30-session outcomes.
 
-Tracking is separate from formal recommendation history. Historical manual replay
-does not create a new live recommendation; all maturities use official DB closes.
+Performance evaluates whether the ORIGINAL D1 signal was useful.
+The baseline is permanently the D1 signal-day close. Later evolution such as
+retest confirmation, true breakout, consolidation or a normal support retest is
+path information only; it must never replace/reset the D1 performance baseline.
+Historical manual replay does not create a new live recommendation.
 """
 from __future__ import annotations
 import csv
@@ -23,7 +26,8 @@ FIELDS = ["signal_date","first_notified_at","code","name","route","stage",
           "composite_score","breakout_date","status","entry_basis","notification_version"]
 PERF_FIELDS = FIELDS + ["horizon","exit_date","exit_close","return_pct",
                         "win","stop_touched_through_horizon","outcome_status"]
-HORIZONS = (5,10,20)
+HORIZONS = (5,10,20,30)
+PERFORMANCE_START_DATE = "2026-10-08"
 
 
 def read_rows(path):
@@ -43,7 +47,10 @@ def write_rows(path,fields,items):
 
 
 def store_notification(signal_date, selected):
-    """Call only AFTER successful LINE HTTP response and for live trade dates."""
+    """Store the original D1 signal only, after a successful live LINE broadcast.
+
+    Same-stock later retests/confirmations do not create a new performance entry.
+    """
     today=datetime.now(ZoneInfo("Asia/Taipei")).date().isoformat()
     if signal_date != today:
         print(f"Historical replay {signal_date}; no new LIVE snapshots")
@@ -80,10 +87,18 @@ def update_performance():
     """Recompute outcomes from fixed snapshots without mutating entry fields.
 
     Future day 1 is the first distinct exchange trading date after signal_date.
-    Return is a mark-to-market close-to-close observation, NOT stop-executed
-    realized return. Stop-touch is flagged separately without filling assumptions.
+    Return is always measured from the fixed D1 close (baseline_entry) to the
+    horizon close. A later retest/confirmation does not reset signal_date or cost.
+    Normal retests are therefore not classified as failure by themselves.
+
+    Return is mark-to-market close-to-close, NOT stop-executed realized return.
+    Stop-touch is flagged separately as path/risk information only and never
+    overwrites the D1-based return or win calculation.
     """
-    snapshots=read_rows(SNAPSHOTS)
+    snapshots=[
+        r for r in read_rows(SNAPSHOTS)
+        if (r.get("signal_date") or "") >= PERFORMANCE_START_DATE
+    ]
     if not snapshots:
         if not PERFORMANCE.exists():
             write_rows(PERFORMANCE,PERF_FIELDS,[])
@@ -133,7 +148,11 @@ def update_performance():
         summary[h]={"matured":len(matured),
                     "win_rate_pct":round(100*sum(r["win"]=="1" for r in matured)/len(matured),2) if matured else None,
                     "avg_return_pct":round(sum(r["return_pct"] for r in matured)/len(matured),2) if matured else None}
-    print("LINE_PICK_PERFORMANCE "+json.dumps(summary,ensure_ascii=False))
+    print("LINE_PICK_PERFORMANCE "+json.dumps({
+        "performance_start_date": PERFORMANCE_START_DATE,
+        "evaluation_basis": "D1 signal-day close; later retests are path only",
+        "horizons": summary,
+    },ensure_ascii=False))
 
 
 if __name__=="__main__":
