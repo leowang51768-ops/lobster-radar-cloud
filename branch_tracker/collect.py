@@ -181,15 +181,38 @@ def collect(args):
     codes = args.codes.split(',') if args.codes else sorted(universe)
     if not set(codes) <= set(universe):
         raise ValueError('Only fixed-universe stocks allowed')
-    day = args.day or datetime.now(ZoneInfo('Asia/Taipei')).date().isoformat()
+    requested_day = args.day
+    taipei_today = datetime.now(ZoneInfo('Asia/Taipei')).date().isoformat()
     data = ROOT/'branch_tracker'/'data'; data.mkdir(parents=True,exist_ok=True)
     with sqlite3.connect(ROOT/'lobster_tw_6m_prices.sqlite') as prices:
-        today_codes = {r[0] for r in prices.execute('SELECT stock_id FROM prices WHERE date=?', (day,))}
-        if not today_codes:
-            print(json.dumps({'day':day,'status':'no_official_prices','note':'休市或上游未更新；不採用舊資料'},ensure_ascii=False))
-            return 0
-        if not set(universe) <= today_codes:
-            raise RuntimeError('Official prices incomplete; collection deferred')
+        if requested_day:
+            day = requested_day
+            today_codes = {r[0] for r in prices.execute('SELECT stock_id FROM prices WHERE date=?', (day,))}
+            if not today_codes:
+                print(json.dumps({'day':day,'status':'no_official_prices','note':'指定日期無官方股價；不採用其他日期'},ensure_ascii=False))
+                return 0
+            if not set(universe) <= today_codes:
+                raise RuntimeError('Official prices incomplete; collection deferred')
+        else:
+            # GitHub scheduled jobs can be delayed past midnight. Never bind the
+            # collection target to the workflow's actual wall-clock date; use the
+            # latest COMPLETE official trading date already present in the radar DB.
+            day = None
+            for (candidate_day,) in prices.execute(
+                'SELECT DISTINCT date FROM prices WHERE date<=? ORDER BY date DESC',
+                (taipei_today,)
+            ):
+                candidate_codes = {
+                    r[0] for r in prices.execute(
+                        'SELECT stock_id FROM prices WHERE date=?', (candidate_day,)
+                    )
+                }
+                if set(universe) <= candidate_codes:
+                    day = candidate_day
+                    break
+            if day is None:
+                print(json.dumps({'day':taipei_today,'status':'no_complete_official_prices','note':'尚無163檔完整官方交易日資料；本次不採集'},ensure_ascii=False))
+                return 0
         price_rows = prices.execute('SELECT date,stock_id,close,volume FROM prices WHERE date<=?',(day,)).fetchall()
     db = open_db(data/'branches.sqlite')
     db.executemany('INSERT OR IGNORE INTO official_prices VALUES(?,?,?,?)',[r for r in price_rows if r[1] in universe])
