@@ -1,11 +1,174 @@
 {
   "schema": 1,
-  "risk_level": "green",
-  "risk_score": 0,
-  "risk_reasons": [],
-  "ticker": ["全球市場正常｜全球市場風險新聞台啟動中，等待第一輪資料"],
-  "markets": {},
-  "active_news": [],
+  "risk_level": "red",
+  "risk_score": 6,
+  "risk_reasons": [
+    "費半明顯下跌",
+    "韓股明顯下跌",
+    "出現重大風險新聞"
+  ],
+  "ticker": [
+    "⚠ 全球市場風險｜費半 -4.5%｜NASDAQ -1.5%｜日經225 -1.4%｜KOSPI -4.5%｜台股加權 -1.0%｜恆生 -2.0%",
+    "⚠ 全球市場風險｜美債10Y 5.23%｜VIX 15.6",
+    "⚠ 全球市場風險｜Will the S&P 500 plummet to 5,000 by the end of next year? Warnings resurface: AI bubble to bur",
+    "⚠ 全球市場風險｜Widely traded Chinese concept stocks decline broadly; 21Vianet (VNET.US) falls nearly 3%",
+    "⚠ 全球市場風險｜The Treasury Market Is Facing a Crucial Vote of Investor Confidence",
+    "⚠ 全球市場風險｜The Treasury Market Is Facing a Crucial Vote of Investor Confidence",
+    "⚠ 全球市場風險｜Understanding the Paradox: Why Do U.S. Stocks Continue to Rally Despite Mounting Stress in the ",
+    "⚠ 全球市場風險｜台股連假躲崩？美股四大指數開盤全殺 台指期夜盤一度失守49K、台積電ADR臉綠",
+    "⚠ 全球市場風險｜台股新增開戶「30歲以下占63%」！ 網揭：小學生都在談股票",
+    "⚠ 全球市場風險｜台股創高「00935還在63元」！他想認栽換0050 引論戰"
+  ],
+  "markets": {
+    "US_SOX": {
+      "label": "費半",
+      "price": 12629.843,
+      "change_pct": -4.4
+    },
+    "US_NASDAQ": {
+      "label": "NASDAQ",
+      "price": 27195.574,
+      "change_pct": -1.4
+    },
+    "US_SP500": {
+      "label": "S&P500",
+      "price": 7766.83,
+      "change_pct": -0.6
+    },
+    "US_DOW": {
+      "label": "道瓊",
+      "price": 51238.94,
+      "change_pct": -0.6
+    },
+    "VIX": {
+      "label": "VIX",
+      "price": 15.58,
+      "change_pct": 3.4
+    },
+    "JP_NIKKEI": {
+      "label": "日經225",
+      "price": 69042.11,
+      "change_pct": -1.4
+    },
+    "KR_KOSPI": {
+      "label": "KOSPI",
+      "price": 6625.93,
+      "change_pct": -4.6
+    },
+    "TW_TAIEX": {
+      "label": "台股加權",
+      "price": 49313.44,
+      "change_pct": -1.0
+    },
+    "HK_HSI": {
+      "label": "恆生",
+      "price": 23785.79,
+      "change_pct": -2.0
+    },
+    "US10Y": {
+      "label": "美債10年殖利率",
+      "price": 5.231,
+      "change_pct": -0.8
+    }
+  },
+  "active_news": [
+    {
+      "title": "Will the S&P 500 plummet to 5,000 by the end of next year? Warnings resurface: AI bubble to burst within two years - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQUWd6aHFObGVudTFkekd4MTFSYngtbjh0d0JsTjR6Mk9NdFFfOWhfYVRiWjI3Mi1tcnlCZlZYTjRVYnNCaklhZGg5b2FGaXktWWVKSFQxZlVNWmlPZExsXzFVMVA0RklqVGlBMzV5b0diUXVESWkzRnhDNWctNW1TdkhKZElMNUc5cHc?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-08T16:59+08:00",
+      "importance": 3,
+      "risk_score": 4
+    },
+    {
+      "title": "Widely traded Chinese concept stocks decline broadly; 21Vianet (VNET.US) falls nearly 3% - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxORk42ZS1ZbmRXc0RLcEl4dThBWkJ3SUE1a1dOLTRjSlZQVV9wbkE0LTB0ZksxR2ZMWEJubV8wM3REdGtVRWR3SUdsVjZrbDNCbzlBZnJ2ZHg4YWdXV2lXcFJGZWlnT2tuN29oNGVjNU5SSFY3UjdfNVg4OUE1VjVCbGFiYWptTnMxeE9YSFBrTkI0TEctQnBwMlNqQmdGaGN4MWMtSXE4aGhiQ1V4S3lMTEd3?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-09T00:23+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "The Treasury Market Is Facing a Crucial Vote of Investor Confidence - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNemh3WXJBeWw1R3pXZTVQY1pBdkFuLVc4ZWJVcV9FV1hnMF9zRHVOQXA1Rm5vVHptOFJnMFhkTUdsaWJ4T21SYVZpNEU3bkh6cUR0WVZnRnVIaGVQbVNkdFgtdDJFYWhhNEJuZFRfZURSR3JCWFZrSTI3cllKRlNlblN0MGNnUEVBc2MyY1lNMFFCbjVxeU16QjJvMXRDOXdl?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-08T23:53+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "The Treasury Market Is Facing a Crucial Vote of Investor Confidence - Moomoo",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOR2p3TGlPYmF5SjFoM3NIZVkxX0tDNmY4MmFyelIwQ24ySzUtYTZOd3BkS0lwNzZxYWliTkFlUnV4cURHVE9kdHpFb2pDWjdoVjY1VTQ1dGZXWjV2MzRoYzVQYW9tQ1U1R2QxQzlWaE95dHNaMmJaS2xBdUxnRzJHQWRZNTNVV01aMHl1VDBJVm53THdGem96MGJzTjkxT1VPdTlLYUdFZXM?oc=5",
+      "source": "Moomoo",
+      "published_at": "2026-10-08T23:37+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Understanding the Paradox: Why Do U.S. Stocks Continue to Rally Despite Mounting Stress in the Treasury Market? - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNNnBsM2tfR216TXZ6aDU0LUVXWkJrdVFMVDZkSUlmdVVXV0tEV3hsWlR3M2poZTItYVdSbHJzenJCYi12VFpKTmRVQWJCZTlEODd6X0tUZ3o4a3hBMVJWRWZRNThNVi1pLXJSUWdLazhyZWY4UGFEZXB2eWhra3E0SllmcUV1OXZ6eUhDdmN6VlpPVGwxZFIybFVzbFVubEdkQUswYlN3?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-08T23:08+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股連假躲崩？美股四大指數開盤全殺 台指期夜盤一度失守49K、台積電ADR臉綠 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMixANBVV95cUxQdVVjSm81c3RHYkdGVmdIUU11ZmlyUUJmN0xPSlVHQnp5TkxtTU9SUm1zQXhTbTJvMVkzRmdJSEFsM2FSVGRiWklGUHN3YXd5Wng5ZUxfZUVtYTBpaUpFVG5QWnlXZm1RanNtSzVQZk9rYnRVOWc3UWRhcVhCeWw3blZiTWVWTlBFZWVMZ0RaSG9HWjlURFRRbEZyeG1tbUpEbDNoU1J2ZlFwZU1OQ0ZrTEJ1aS12T2RDcjlQYzZaNURNMmE1akZuY2kydE9vR21icVJLRmQ0VldJQllERmZaWHg3X0pCN0s5U2wtUWxhaks2NGhMaVhlNXQwLU1mWGRuS1g1VENUZnR5MVpkM05Lb3J5MjFLQXZYWDM3bllCNTVkem0zZjU4Vi1MTHlyU0d2bXF3UExZMGs5dnRpdTJyTEhQZmsyX2VRU2xrNnI3YWhRUENRUVlQejNBTms2ckF1ZVkzYXFOZTUzd0EzY05OV3owbkJjczhPTFFIVEhHT2x0SlZ5cVl5Zy1wdmNpellZVTBOSTY2ODBtRUdxX2RMeW5FOEVuTjd0M3F4c3p0Sm1WSU9mTGtwY0pFTGRvUXQ4RkQ0ZA?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-08T22:35+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股新增開戶「30歲以下占63%」！ 網揭：小學生都在談股票 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi1AJBVV95cUxQbFpJekZEWktDTXRoR0hFenlQSjBrVTF3a2x5Z0RiSlVUd2t6YkxaOEFVYUQ3UlN4Z2I2M0p2MWM2WldtQnBNM1VBbVFsMDhJMGV4SWRrbjJaYWQ2MktPVHBqQm12VU9LeER6V09IYVJsQ1g2cXdwc1l1NHRac3N1bUdoa2tFY3MyZV9aVmVaa1g0NVR2bi1acENXblBfNlVSdjRfbW03c2ZpcG5NSHRPbmdVSF95WGRFVUhGeG5NT2xRV1RZb0dMXy0teUpERGc0eENGNkt5MlRMNmg4Q0NsVE5vV25faTJXdnNKU3FLYTRrWGQ0MXhoSi03NWtrYXJlNXRuM29WYi1CSVZPb3pkMGhQMFZybmUzS3NpOHlxN0F5bXRLdXktNWxNLWFBSkhJZ3ZsSWRCWmJfcmF2SnNBN0J4d1E2U3Y5bXY4MzdvMjFfR2o3?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-08T20:05+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股創高「00935還在63元」！他想認栽換0050 引論戰 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiogJBVV95cUxPNmY5dzlnN21nelRmdXF0N2RFdEt1YVBELUs1cXFPVWc5UDMtWTZQWUlsM19yeHYwTFB6TjExa2M2cm92eUc4U0pMRWJndGI0OU90WkpzR05TVTdfdmE2S0tmcnNQQV9TUHlDRkRLNDZqV0VFUGNrN1p2LW1CZlBiZFZmWkdzYTNWS0lKamFvN21uZldIUHNIbU5aMVpBVU9aMTF2bmZmQWk2bUpFbWlMWXFCV0lUTzh0Y3pIRkl0RnVRVmJELTlZVFlNSmFCUkdwUFlRcXZMWXNzYXoxMzN6bE5lTEV4dTFGaS0waXNzX2JmNm4yV1hlXzA1SWJjMDBGTnh4V0g1QVB3ZUJUUmtDVUtIQllHejlBZDkwSjlmWW9qdw?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-08T19:47+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Counterpoint: Global Foundry 2.0 Market Revenue in 2Q26 Rises 25% YoY to $96.6 Billion, with Advanced Packaging in the Spotlight - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNX296cm5IMHUwYkFVY1VkbndGUWtXaG03NzY1djhhRXA1eXM2OWpnNktWa2c4YU5Hd0M0aHVjTTU3TUZUaWJYS3oxWmlaYWNVOFFaRUk5Z3lmSl9TU1VIMzU4dXVwZXVEc2pGeHVvSGxEQ05MdzkxMkFTVWl6Vk03VmJsSDBENDhlcHE2cFU4bXZCck5CNUZwTWFxQVVjMGg5SzdxaUpn?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-08T17:19+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "外資國慶前變臉台股摔破五日線！權值股軟腳台塑集團揪被動元件當抗跌大隊｜Yahoo財經掃描 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiuARBVV95cUxNdTRQRmdFRXh5Sl9nTmZwWDJrSmRjM0QwNE43dWtiSGhFQTFZNFVub2NxZHpvbEo2RjIwM0NTMUxtNEdEUUNEN2hlWWtJU1Ytal8wUk8zbThBaEQwVjVmSkFxVEZhRVdzenNVaFpDenFTdVYxSVdhQlJURXpWWGNFSmZVeGI5RXJVRjdaaHZSaDlHRjd4elNJbEMzM2pBc0xycUJXYWtabEpHeE8wZ2Q3ZFcxZjhUYkI1YmJpb0kxOXRuQjdlNWFmWlExOGp3bXVBYWQ4aXZkS3gwYXR4d25uRzFZM0wtOHAwdzA4Q1NwRTZYWFRpSS1SRjY4YTFWdU5GWGI0QjNDaHB1MWtmMnVWUWpCdExVaGg4bWt1cEV2UkM3ZUtUZ09FYVRyY0ZKQm5NMWdfT0hVRWlMMzhLVkV4R2RKQXBwakwyd3pqTEtrcngzblZYdGswcm5MYWNCMWcxZ0ZKaUJ2c3F2bExkUjVtYjFqNTg1cDlUQ0N3TUhCLWpkOXQxT2w2S0ZiZHdfUVUzR0ZrLXZwR3pFaWl5dWpsYTFjQm5wZThzekFPbUhLeXU3WnJUV1dNc3B4emtLN3MtRnBxTi1VRXZ4ejlNOTB3TWFOM1dZaVdQSzZtM0JaenNwaU1fT2JmZzNDQThJcXBMbzBMT0RnbWk3VHZ0UkZVNUpmbzVyaUdZTFlxMEF1UzBrTld3X0duTW5nYTJCX19EZmRoWGtTTjk0Um1ybDliUlROMHdsckh0?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-08T17:06+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "【Follow法人】外資連4天狂砍面板雙虎逾45萬張！台積電遭提款313億元 0050也中箭 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMizgNBVV95cUxPRU5EOVdUbGZoQTM5dzllZnlYUF9IQVBvWXhDY3MtVEhXam45UUl5T2RISUhLTC1pWWxhaWFkNlFTdmFtdV9nZ2p1U0lMYXFuWjBNTTBwM29HOFJqdGNFNUJYRDgxRDRfazFkSmJxTXpUcldtS0NGRTQ4Mkhva1EwSkNWbFFCdUpCZExYU2tEVl85YXRZRmhOZnpEbFJyYTJYek5PNGRmd2MtNUpfNWlqa01Xay1pZzVNd0Q2SFNLU2xEU2FHbnpXR2pGczF4a2VlaTZFNy1MU2x4OEJPM1pVRTg1dG9qbEo1Z3VBLWJHd1dJR1hFTXgzcXp0a3dCMUVsX3FiTkVsbFFWNDlqVGVvTTVrVFpDbVh6TVVJbnZjMEhzZHd2QmRUdjlhcjVPallFd3VIUHNoRHhyLUNIUHpSZk9zWVhfVGtJY2NMVjZSRDlELXRCbHB4WXlWZmJnbUFRY1NWRzN4RjcxV3hxOURxbUFXQ2p2eWM1eWQzZmtIV2pKOERRenNyNGJieHFVMjU3VEVqdGkxVlN5U21leVVWak1STXVVbHdDZVZ1b2RqTmREN0p4aEsxRUF4b3pkMEZkYzBfeUF3QnlwYVIya2c?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-08T16:37+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Hong Kong Market Quick Look | All three major indices declined, with the tech index down nearly 3% - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQa3MtWWJWSE5FSnJIaUx0Vl9MWnBGMHlyTm1GRDBIc29nZmtDanAwcDFwb1A3NEJIT0lJa2xFMEQ5enZZZnV6eTU5NXYwVEt4OHJYWTlxX1UxdnkyRWJIT2QyUE9NUm55cTVBdmRlcVlKQWhtYTZ6Z180X0tJNE9RZ3RHMlg1X2c1Tmp6ZF9kSVlSZHFfSVUzUWR3OC1jaXliUi1ITEtn?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-08T16:24+08:00",
+      "importance": 2,
+      "risk_score": 0
+    }
+  ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-08T21:30:00+08:00"
+  "updated_at": "2026-10-09T03:59:25+08:00"
 }
