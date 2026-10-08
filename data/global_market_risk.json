@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "risk_level": "green",
+  "risk_score": 0,
+  "risk_reasons": [],
+  "ticker": ["全球市場正常｜全球市場風險新聞台啟動中，等待第一輪資料"],
+  "markets": {},
+  "active_news": [],
+  "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
+  "updated_at": "2026-10-08T21:30:00+08:00"
+}
