@@ -5822,10 +5822,31 @@
       "support_lower": 204.0,
       "support_upper": 204.0,
       "support_source": "近5日低點"
+    },
+    "3533": {
+      "Price Action": "PriceAction:2026-10-08:看漲吞噬",
+      "name": "嘉澤",
+      "support_lower": 1800.0,
+      "support_upper": 1800.0,
+      "support_source": "近5日低點"
+    },
+    "3653": {
+      "Price Action": "PriceAction:2026-10-08:看漲吞噬",
+      "name": "健策",
+      "support_lower": 6760.0,
+      "support_upper": 6760.0,
+      "support_source": "近5日低點"
+    },
+    "3661": {
+      "Price Action": "PriceAction:2026-10-08:看漲吞噬",
+      "name": "世芯-KY",
+      "support_lower": 3765.0,
+      "support_upper": 3765.0,
+      "support_source": "近5日低點"
     }
   },
-  "updated_at": "2026-10-07T12:43:45.453385+00:00",
-  "latest_trade_date": "2026-10-07",
+  "updated_at": "2026-10-08T14:48:39.142762+00:00",
+  "latest_trade_date": "2026-10-08",
   "layer1_candidate_count": 187,
   "stage_counts": {
     "正式試單": 1,
@@ -5856,11 +5877,11 @@
   },
   "strategy_version": "龍蝦買點-v14-破底翻+PriceAction",
   "four_point_rule": "已取消",
-  "candidate_count": 42,
-  "formal_buy_signal_count": 2,
+  "candidate_count": 36,
+  "formal_buy_signal_count": 3,
   "route_counts": {
-    "破底翻": 33,
-    "Price Action": 9
+    "破底翻": 30,
+    "Price Action": 6
   },
   "exit_warning_keys": {
     "突破後站穩:2026-09-16:69.90:假突破觀察": "2026-09-18",
