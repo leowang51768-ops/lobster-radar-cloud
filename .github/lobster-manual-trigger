@@ -1,2 +1,2 @@
-manual trigger 2026-10-07
-reason: backfill today's final scan and LINE digest so D1 tracking is not missed
+manual trigger 2026-10-08
+reason: backfill today's final scan and LINE digest before the 10/09 holiday and weekend
