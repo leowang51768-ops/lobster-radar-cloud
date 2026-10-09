@@ -1,4 +1,3 @@
-# branch-tracker universe refresh trigger
 """Fixed AI-industry stock universe for every Lobster Radar scanner.
 
 The original user-supplied list contained 161 unique company names.  CPU-platform
@@ -73,7 +72,7 @@ STOCKS_TO_TRACK = {
     "3037.TW": "欣興", "2368.TW": "金像電", "8046.TW": "南電",
     "3189.TW": "景碩", "3044.TW": "健鼎", "2313.TW": "華通",
     "4958.TW": "臻鼎-KY", "3715.TW": "定穎投控", "5469.TW": "瀚宇博",
-    "6191.TW": "精成科", "2355.TW": "敬鵬", "4989.TW": "榮科", "8039.TW": "台虹",
+    "6191.TW": "精成科", "2355.TW": "敬鵬", "4989.TW": "榮科",
     "6269.TW": "台郡",
 
     # 11. 伺服器機殼、高階滑軌、高速線束與連接器
