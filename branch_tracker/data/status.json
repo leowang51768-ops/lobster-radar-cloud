@@ -2,6 +2,8 @@
   "date": "2026-10-08",
   "mode": "collection_only",
   "expected_stocks": 163,
+  "fixed_stocks": 163,
+  "supplemental_stocks": 0,
   "covered_stocks": 163,
   "coverage_complete": true,
   "status": "complete",
@@ -13,7 +15,7 @@
   "complete_collection_days": 4,
   "counts": {
     "ranking": 19556,
-    "history": 25200,
+    "history": 32386,
     "queue": 2707
   },
   "review_stage": "資料累積中",
@@ -29,5 +31,5 @@
   "errors": [],
   "history_errors": [],
   "history_coverage_complete": false,
-  "database_bytes": 10612736
+  "database_bytes": 11444224
 }
