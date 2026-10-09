@@ -177,10 +177,27 @@ def open_db(path):
 
 def collect(args):
     from stock_universe import STOCKS_TO_TRACK
-    universe = {t.split('.')[0]: n for t,n in STOCKS_TO_TRACK.items()}
+    base_universe = {t.split('.')[0]: n for t,n in STOCKS_TO_TRACK.items()}
+
+    # Supplemental branch-only universe populated by Ghost manual-add sync.
+    # It never replaces/removes the fixed radar universe.
+    extra_path = ROOT / 'branch_tracker' / 'data' / 'extra_universe.json'
+    try:
+        raw_extra = json.loads(extra_path.read_text(encoding='utf-8')) if extra_path.exists() else {}
+    except (OSError, ValueError):
+        raw_extra = {}
+    if isinstance(raw_extra, dict) and isinstance(raw_extra.get('stocks'), dict):
+        raw_extra = raw_extra.get('stocks') or {}
+    extra_universe = {
+        str(k).split('.')[0]: str(v or str(k).split('.')[0])
+        for k, v in (raw_extra.items() if isinstance(raw_extra, dict) else [])
+        if str(k).split('.')[0].isdigit()
+    }
+    universe = {**base_universe, **extra_universe}
+
     codes = args.codes.split(',') if args.codes else sorted(universe)
     if not set(codes) <= set(universe):
-        raise ValueError('Only fixed-universe stocks allowed')
+        raise ValueError('Only fixed-universe or Ghost supplemental stocks allowed')
     requested_day = args.day
     taipei_today = datetime.now(ZoneInfo('Asia/Taipei')).date().isoformat()
     data = ROOT/'branch_tracker'/'data'; data.mkdir(parents=True,exist_ok=True)
@@ -191,8 +208,8 @@ def collect(args):
             if not today_codes:
                 print(json.dumps({'day':day,'status':'no_official_prices','note':'指定日期無官方股價；不採用其他日期'},ensure_ascii=False))
                 return 0
-            if not set(universe) <= today_codes:
-                raise RuntimeError('Official prices incomplete; collection deferred')
+            if not set(base_universe) <= today_codes:
+                raise RuntimeError('Official prices incomplete for fixed universe; collection deferred')
         else:
             # GitHub scheduled jobs can be delayed past midnight. Never bind the
             # collection target to the workflow's actual wall-clock date; use the
@@ -207,7 +224,7 @@ def collect(args):
                         'SELECT stock_id FROM prices WHERE date=?', (candidate_day,)
                     )
                 }
-                if set(universe) <= candidate_codes:
+                if set(base_universe) <= candidate_codes:
                     day = candidate_day
                     break
             if day is None:
@@ -263,7 +280,7 @@ def collect(args):
     history_errors=[{'code':c,'branch':b,'error':e} for c,b,e in db.execute('SELECT code,branch,error FROM queue WHERE error IS NOT NULL ORDER BY code,branch LIMIT 60')]
     observed_days = db.execute("SELECT COUNT(DISTINCT day) FROM stock_status WHERE status='ok'").fetchone()[0]
     full_days = db.execute("SELECT COUNT(*) FROM (SELECT day FROM stock_status WHERE status='ok' GROUP BY day HAVING COUNT(*)=?)",(len(universe),)).fetchone()[0]
-    report = {'date':day,'mode':'collection_only','expected_stocks':len(universe),'covered_stocks':good,'coverage_complete':good==len(universe),'status':'complete' if good==len(universe) else 'partial','source_blocked':stop,'ranking_limit_per_side':15,'history_target_top_per_side':3,'history_requests_succeeded':history_ok,'observed_collection_days':observed_days,'complete_collection_days':full_days,'counts':counts,'review_stage':'可開始資料品質複盤' if full_days>=20 else '資料累積中','strategy_changes':False,'notes':['未上榜不等於零交易','歷史回填以今天發現的分點為條件，存在選樣偏差；不得冒充當時已知訊號','60日紀錄不代表60筆獨立交易樣本；未建立關鍵分點勝率判定','數字單位為張，原頁有四捨五入；股價成交量使用官方來源且成交量單位為股','排行榜與逐日歷史分開保存，不互相覆蓋'],'missing_stocks':[c for c in universe if not any(r[0]==c and r[1]=='ok' for r in statuses)],'errors':[{ 'code':r[0],'error':r[3]} for r in statuses if r[1]!='ok']}
+    report = {'date':day,'mode':'collection_only','expected_stocks':len(universe),'fixed_stocks':len(base_universe),'supplemental_stocks':len(extra_universe),'covered_stocks':good,'coverage_complete':good==len(universe),'status':'complete' if good==len(universe) else 'partial','source_blocked':stop,'ranking_limit_per_side':15,'history_target_top_per_side':3,'history_requests_succeeded':history_ok,'observed_collection_days':observed_days,'complete_collection_days':full_days,'counts':counts,'review_stage':'可開始資料品質複盤' if full_days>=20 else '資料累積中','strategy_changes':False,'notes':['未上榜不等於零交易','歷史回填以今天發現的分點為條件，存在選樣偏差；不得冒充當時已知訊號','60日紀錄不代表60筆獨立交易樣本；未建立關鍵分點勝率判定','數字單位為張，原頁有四捨五入；股價成交量使用官方來源且成交量單位為股','排行榜與逐日歷史分開保存，不互相覆蓋'],'missing_stocks':[c for c in universe if not any(r[0]==c and r[1]=='ok' for r in statuses)],'errors':[{ 'code':r[0],'error':r[3]} for r in statuses if r[1]!='ok']}
     (data/'status.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
     report['history_errors']=history_errors
     report['history_coverage_complete']=counts['queue']>0 and db.execute('SELECT COUNT(*) FROM queue WHERE last_success IS NULL').fetchone()[0]==0
