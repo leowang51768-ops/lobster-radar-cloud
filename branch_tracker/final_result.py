@@ -83,6 +83,22 @@ def main():
         except Exception:
             pass
 
+        # Merge Ghost manual-add supplemental universe.  This does not alter the
+        # fixed radar universe; it only lets branch tracking retain/display those
+        # extra names once Ghost has requested them.
+        extra_path = DATA / "extra_universe.json"
+        try:
+            raw_extra = json.loads(extra_path.read_text(encoding="utf-8")) if extra_path.exists() else {}
+        except (OSError, ValueError):
+            raw_extra = {}
+        if isinstance(raw_extra, dict) and isinstance(raw_extra.get("stocks"), dict):
+            raw_extra = raw_extra.get("stocks") or {}
+        if isinstance(raw_extra, dict):
+            for k, v in raw_extra.items():
+                code = str(k).split(".")[0]
+                if code.isdigit():
+                    stock_names[code] = str(v or code)
+
         # Retrospective history. A branch-stock pair may have fewer than 120 rows
         # while the source backfill is still accumulating; never pad missing days.
         hist = defaultdict(dict)
