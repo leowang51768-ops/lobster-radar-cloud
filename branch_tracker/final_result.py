@@ -10,11 +10,14 @@ import json
 import math
 import sqlite3
 import statistics
+import sys
 from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
 DATA = Path(__file__).resolve().parent / "data"
 DB = DATA / "branches.sqlite"
 TARGET_SESSIONS = 120
@@ -276,6 +279,50 @@ def main():
         ), reverse=True)
         influence_rows.sort(key=lambda r: (r["grade"] == "A", r["influence_score"], r["d10_samples"]), reverse=True)
 
+        # Per-stock latest branch snapshot for the Ghost radar table.
+        # This is deliberately NOT a buy signal.  It only proves that branch
+        # data exists for the stock and shows the latest top buy branch.  The
+        # formal current_candidates rules remain unchanged.
+        stock_branch_summary = []
+        latest_buy_rows = db.execute(
+            """SELECT r.code,r.branch,r.broker,r.name,r.net,r.rank
+               FROM ranking r
+               WHERE r.day=? AND r.side='buy'
+               ORDER BY r.code,r.rank""",
+            (latest_day,)
+        ).fetchall()
+        best_latest = {}
+        for code, branch, broker, branch_name, net, rank in latest_buy_rows:
+            best_latest.setdefault(code, (branch, broker, branch_name, net, rank))
+        for code in sorted(stock_names):
+            row = best_latest.get(code)
+            if not row:
+                stock_branch_summary.append({
+                    "code": code,
+                    "name": stock_names.get(code, ""),
+                    "status": "none",
+                    "signal_class": "none",
+                    "display": "分點資料缺失",
+                    "latest_day": latest_day,
+                })
+                continue
+            branch, broker, branch_name, net, rank = row
+            inf = influence_map.get((code, branch, broker), {})
+            hist_grade = inf.get("grade") or "觀察"
+            stock_branch_summary.append({
+                "code": code,
+                "name": stock_names.get(code, ""),
+                "branch_name": branch_name or "",
+                "branch": branch,
+                "broker": broker,
+                "historical_grade": hist_grade,
+                "status": "observe",
+                "signal_class": "none",
+                "latest_day": latest_day,
+                "latest_net_buy_lots": round(net, 2) if net is not None else None,
+                "display": f"{hist_grade}級｜⚪觀察｜{branch_name or broker}｜當日買超{net:,.0f}張" if net is not None else f"{hist_grade}級｜⚪觀察｜{branch_name or broker}",
+            })
+
         complete_pairs = sum(r["history_days"] >= TARGET_SESSIONS for r in influence_rows)
         result = {
             "generated_at": datetime.now(ZoneInfo("Asia/Taipei")).isoformat(timespec="seconds"),
@@ -285,6 +332,7 @@ def main():
             "branch_stock_pairs": len(influence_rows),
             "pairs_with_120_sessions": complete_pairs,
             "current_candidates": candidates[:20],
+            "stock_branch_summary": stock_branch_summary,
             "top_influence_pairs": [r for r in influence_rows if r["grade"] in ("A", "B")][:50],
             "rules": {
                 "current_signal": "同股同分點連買3～15日且累計>1,000萬元；成立後若轉為淨賣仍持續追蹤減碼/轉賣",
