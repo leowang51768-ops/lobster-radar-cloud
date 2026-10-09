@@ -1,3 +1,4 @@
+# trigger: refresh provisional 5-session branch summaries
 #!/usr/bin/env python3
 """Build user-facing final branch-tracking conclusions from persisted evidence.
 
