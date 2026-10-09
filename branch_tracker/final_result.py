@@ -150,42 +150,84 @@ def main():
                 "grade": grade(score, n),
             })
 
-        # Current accumulation: detect the active consecutive net-buy streak,
-        # capped at 15 trading sessions. A valid signal requires at least 3
-        # consecutive buy days and estimated cumulative net amount > NT$10m.
+        # Current branch direction:
+        # 1) Active 3-15 day net-buy streaks stay as candidates.
+        # 2) If a previously valid buy streak has just turned into net selling,
+        #    keep the pair visible so Ghost can warn that the branch is reducing.
+        #
+        # Direction labels are deliberately compact for the monitor:
+        #   🟢加碼 = still buying at a healthy pace
+        #   🟡降溫 = still net buying, but latest buy is <50% of prior streak-day average
+        #   🟠減碼 = 1-2 recent sell days and <25% of the prior buy streak has been sold back
+        #   🔴轉賣 = >=3 sell days or >=25% of the prior buy streak has been sold back
         recent5 = sessions[max(0, latest_idx-4):latest_idx+1]
         recent20 = sessions[max(0, latest_idx-19):latest_idx+1]
         influence_map = {(r["code"], r["branch"], r["broker"]): r for r in influence_rows}
         candidates = []
         for key, by_day in hist.items():
             code, branch, broker = key
-            streak_days = []
-            for i in range(latest_idx, max(-1, latest_idx - MAX_CONSECUTIVE_BUY_DAYS), -1):
-                d = sessions[i]
-                row = by_day.get(d)
-                if not row or row["net"] <= 0:
-                    break
-                streak_days.append(d)
-            streak_days.reverse()
-            if len(streak_days) < MIN_CONSECUTIVE_BUY_DAYS:
-                continue
+
+            def prior_buy_streak(end_idx):
+                days = []
+                for i in range(end_idx, max(-1, end_idx - MAX_CONSECUTIVE_BUY_DAYS), -1):
+                    d = sessions[i]
+                    row = by_day.get(d)
+                    if not row or row["net"] <= 0:
+                        break
+                    days.append(d)
+                days.reverse()
+                return days
+
+            # First determine whether the pair is still actively buying.
+            buy_streak_days = prior_buy_streak(latest_idx)
+            sell_days = []
+            direction = None
+            status = None
+
+            if len(buy_streak_days) >= MIN_CONSECUTIVE_BUY_DAYS:
+                latest_net = by_day[buy_streak_days[-1]]["net"]
+                prior_nets = [by_day[d]["net"] for d in buy_streak_days[:-1]]
+                prior_avg = safe_mean(prior_nets) if prior_nets else None
+                direction = "🟡降溫" if prior_avg and latest_net < prior_avg * 0.5 else "🟢加碼"
+                status = "buying"
+            else:
+                # No active buy streak.  Check whether the newest sessions are
+                # consecutive net-sell days immediately following a valid buy streak.
+                for i in range(latest_idx, max(-1, latest_idx - 5), -1):
+                    d = sessions[i]
+                    row = by_day.get(d)
+                    if not row or row["net"] >= 0:
+                        break
+                    sell_days.append(d)
+                sell_days.reverse()
+                before_sell_idx = latest_idx - len(sell_days)
+                buy_streak_days = prior_buy_streak(before_sell_idx) if sell_days and before_sell_idx >= 0 else []
+                if len(buy_streak_days) < MIN_CONSECUTIVE_BUY_DAYS:
+                    continue
+                status = "selling"
 
             amount = 0.0
-            nets = []
+            buy_nets = []
             usable = True
-            for d in streak_days:
+            for d in buy_streak_days:
                 net = by_day[d]["net"]
                 p = prices.get((d, code), (None, None))[0]
                 if not p:
                     usable = False
                     break
-                nets.append(net)
+                buy_nets.append(net)
                 amount += net * 1000 * p
             if not usable or amount < MIN_3D_NET_AMOUNT:
                 continue
 
-            latest_streak_day = streak_days[-1]
-            p3 = prices.get((latest_streak_day, code), (None, None))[0]
+            buy_lots = sum(buy_nets)
+            sell_lots = abs(sum(by_day[d]["net"] for d in sell_days)) if sell_days else 0.0
+            sellback_pct = (sell_lots / buy_lots * 100) if buy_lots > 0 else 0.0
+            if status == "selling":
+                direction = "🔴轉賣" if len(sell_days) >= 3 or sellback_pct >= 25.0 else "🟠減碼"
+
+            latest_state_day = sessions[latest_idx]
+            p3 = prices.get((latest_state_day, code), (None, None))[0]
             p5start = prices.get((recent5[0], code), (None, None))[0] if recent5 else None
             p20start = prices.get((recent20[0], code), (None, None))[0] if recent20 else None
             r5 = pct(p5start, p3)
@@ -193,10 +235,9 @@ def main():
 
             inf = influence_map.get(key, {})
             inf_score = inf.get("influence_score") or 0.0
-            # "Not yet launched" is a ranking aid, not proof of concealed buying.
             not_extended = (r5 is None or r5 <= 5.0) and (r20 is None or r20 <= 12.0)
             amount_score = clamp(math.log10(max(amount, 1) / MIN_3D_NET_AMOUNT + 1) * 25, 0, 25)
-            continuity_score = clamp(20.0 + (len(streak_days) - 3) * 2.5, 20.0, 50.0)
+            continuity_score = clamp(20.0 + (len(buy_streak_days) - 3) * 2.5, 20.0, 50.0)
             history_score = min(25.0, inf_score * 0.25)
             extension_score = 15.0 if not_extended else 3.0
             stealth_score = continuity_score + amount_score + history_score + extension_score
@@ -207,10 +248,15 @@ def main():
                 "branch_name": meta.get(key, ""),
                 "branch": branch,
                 "broker": broker,
-                "latest_day": latest_streak_day,
-                "consecutive_buy_days": len(streak_days),
-                "streak_net_lots": round(sum(nets), 2),
+                "latest_day": latest_state_day,
+                "consecutive_buy_days": len(buy_streak_days),
+                "consecutive_sell_days": len(sell_days),
+                "streak_net_lots": round(buy_lots, 2),
                 "streak_est_net_amount": round(amount),
+                "recent_sell_lots": round(sell_lots, 2),
+                "sellback_pct": round(sellback_pct, 2),
+                "status": status,
+                "direction": direction,
                 "price_5d_pct": round(r5, 2) if r5 is not None else None,
                 "price_20d_pct": round(r20, 2) if r20 is not None else None,
                 "not_extended": not_extended,
@@ -222,6 +268,7 @@ def main():
             })
 
         candidates.sort(key=lambda r: (
+            r["status"] == "buying",
             r["not_extended"],
             r["historical_grade"] == "A",
             r["stealth_score"],
@@ -240,7 +287,7 @@ def main():
             "current_candidates": candidates[:20],
             "top_influence_pairs": [r for r in influence_rows if r["grade"] in ("A", "B")][:50],
             "rules": {
-                "current_signal": "同股同分點目前連續淨買超3～15個交易日，該連買段估算累計淨買超金額>1,000萬元",
+                "current_signal": "同股同分點連買3～15日且累計>1,000萬元；成立後若轉為淨賣仍持續追蹤減碼/轉賣",
                 "not_extended_aid": "5日漲幅<=5%且20日漲幅<=12%時優先；僅代表價格尚未過度延伸，不代表內線或主力身分",
                 "history_validation": "以已儲存歷史配對D+5/D+10/D+20收盤；回填樣本存在事後選樣偏差，分數僅作排序",
             },
