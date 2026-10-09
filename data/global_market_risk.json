@@ -8,16 +8,16 @@
     "出現重大風險新聞"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 -4.5%｜NASDAQ -1.5%｜日經225 -1.4%｜KOSPI -4.5%｜台股加權 -1.0%｜恆生 -2.0%",
+    "⚠ 全球市場風險｜費半 -4.5%｜NASDAQ -1.5%｜日經225 -0.0%｜KOSPI -4.5%｜台股加權 -1.0%｜恆生 +0.1%",
     "⚠ 全球市場風險｜美債10Y 5.23%｜VIX 15.4",
+    "⚠ 全球市場風險｜HK Market Midday Review | All three major indices rose in tandem, with the Hang Seng Tech Index",
     "⚠ 全球市場風險｜Will the S&P 500 plummet to 5,000 by the end of next year? Warnings resurface: AI bubble to bur",
+    "⚠ 全球市場風險｜Hong Kong Stocks in Focus | PCB-related stocks lead the decliners, amid market rumors of supply",
+    "⚠ 全球市場風險｜Gold prices rebounded, boosting gold stocks; the central bank has increased its gold holdings f",
+    "⚠ 全球市場風險｜French sovereign debt is the first casualty, followed by U.S. Treasuries? Is the global market ",
     "⚠ 全球市場風險｜Key Pre-Market Highlights for U.S. Stocks | Fed's September Meeting Minutes Lean Hawkish, Inter",
-    "⚠ 全球市場風險｜台股連假後挫咧等？美股3指數收黑、半導體股齊下殺 台積電ADR跌3%、台指期夜盤失守4萬9",
-    "⚠ 全球市場風險｜AI股挫！費半大跌逾3％ 台積電ADR慘摔3.01％",
-    "⚠ 全球市場風險｜Widely traded Chinese concept stocks decline broadly; 21Vianet (VNET.US) falls nearly 3%",
-    "⚠ 全球市場風險｜The Treasury Market Is Facing a Crucial Vote of Investor Confidence",
-    "⚠ 全球市場風險｜The Treasury Market Is Facing a Crucial Vote of Investor Confidence",
-    "⚠ 全球市場風險｜Understanding the Paradox: Why Do U.S. Stocks Continue to Rally Despite Mounting Stress in the "
+    "⚠ 全球市場風險｜台積電Q3營收1.49兆元創單季高、大立光攻CPO、9月進出口連35紅 本周大事回顧",
+    "⚠ 全球市場風險｜台股跌近500點該逃？專家曝真正原因：這批籌碼該洗了 記憶體需求看旺「5萬點行情還有戲」"
   ],
   "markets": {
     "US_SOX": {
@@ -47,8 +47,8 @@
     },
     "JP_NIKKEI": {
       "label": "日經225",
-      "price": 69042.11,
-      "change_pct": -1.4
+      "price": 69034.13,
+      "change_pct": 0.0
     },
     "KR_KOSPI": {
       "label": "KOSPI",
@@ -62,8 +62,8 @@
     },
     "HK_HSI": {
       "label": "恆生",
-      "price": 23785.79,
-      "change_pct": -2.0
+      "price": 24165.05,
+      "change_pct": 0.2
     },
     "US10Y": {
       "label": "美債10年殖利率",
@@ -73,12 +73,44 @@
   },
   "active_news": [
     {
+      "title": "HK Market Midday Review | All three major indices rose in tandem, with the Hang Seng Tech Index up 1.55%, Xiaomi surging over 7%, and Kuaishou gaining more than 3%; AI hardware stocks weakened, while gold and new energy vehicle (NEV) stocks stren - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxONEFaVTRiRDJpY0lxYXVRM0I5anRWUmtNMFY4SVpUeFpMUHFNeHRfcy1weWg4TFM3SlJOWEJoYWNuNHdNNmx2ZjZZb1NEZVNwRnB3dDNKQUkyejc5UVBXM1Q4dFFrbzBHOTZ5azBYSWlDRW1VX19SM3BGTm1mYXB6Q3h2ZVlxZHdKYTZOdXpEcXFjeF9TbUxaanJmODhqNzg?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-09T12:14+08:00",
+      "importance": 5,
+      "risk_score": 4
+    },
+    {
       "title": "Will the S&P 500 plummet to 5,000 by the end of next year? Warnings resurface: AI bubble to burst within two years - 富途牛牛",
       "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQUWd6aHFObGVudTFkekd4MTFSYngtbjh0d0JsTjR6Mk9NdFFfOWhfYVRiWjI3Mi1tcnlCZlZYTjRVYnNCaklhZGg5b2FGaXktWWVKSFQxZlVNWmlPZExsXzFVMVA0RklqVGlBMzV5b0diUXVESWkzRnhDNWctNW1TdkhKZElMNUc5cHc?oc=5",
       "source": "富途牛牛",
       "published_at": "2026-10-08T16:59+08:00",
       "importance": 3,
       "risk_score": 4
+    },
+    {
+      "title": "Hong Kong Stocks in Focus | PCB-related stocks lead the decliners, amid market rumors of supply-chain restrictions on military‑grade PCBs and concerns over OpenAI's revenue figures. - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNRnRRTS0yRDltY3hmMXFicWt2UXB6V3R1YU1LX1prU0V5ZHM0dmFyNDNjRXVHNG5MejhrTE90Q21iV1E3dUdUTG90ckNNbnJqWVhCa2RYclFjVTBDU2Nlc3doRHhWb0lKSXE1LWFtS21fSU1GRF9aREZZOTBfN3dkeXdwbzRrMjZXMllIUEctOXJrSUdXR25xYUh4bi0?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-09T12:05+08:00",
+      "importance": 4,
+      "risk_score": 2
+    },
+    {
+      "title": "Gold prices rebounded, boosting gold stocks; the central bank has increased its gold holdings for 23 consecutive months, with Zijin Gold International and Chifeng Gold leading the gains. - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQQjRyMHNmQVo5NEI5b0pwWUZlbUpzak14czNhQmlVOGR1T1JGQzJFZnQ5dXRHWm9SdlJzWUNxbzJtTE1kYWhKeGxRc0VwZ2Y2Mk5uS0hTVk1yZ2F2bjUzdGxrcmhOaWVncWhoVFRkTk9GX1liNUNLUE9YTUFBbGx0TWtTZHMyY2ZXRFE0SUhPUXJSeUd3ZWU4VWFoWDhlY01CdUFOYk9LODl5dw?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-09T11:00+08:00",
+      "importance": 4,
+      "risk_score": 2
+    },
+    {
+      "title": "French sovereign debt is the first casualty, followed by U.S. Treasuries? Is the global market feeling the impact of Japan’s rate hike? - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNbkVNc28taUJPSXczazFEX09rcUtfU2hGdmVoNUpPTzVXbnpSQUd2VXRyRnJiSUhuR0pQSjd1ZXoxM1hUYXZKRGhLb1JaejNGaGFZY3hkUGpNQno5c05XN0NUMlNJMjVYb1ktcjhQN25kRVdvZGlPbGJMZDAzbllaREl5QmVvWDhtT0doZkZlaGNycHZiNW9ELUl2RFhzQTFXckxR?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-09T09:07+08:00",
+      "importance": 4,
+      "risk_score": 2
     },
     {
       "title": "Key Pre-Market Highlights for U.S. Stocks | Fed's September Meeting Minutes Lean Hawkish, International Oil Prices Surge, Three Major U.S. Index Futures Fall - 富途牛牛",
@@ -89,86 +121,54 @@
       "risk_score": 2
     },
     {
+      "title": "台積電Q3營收1.49兆元創單季高、大立光攻CPO、9月進出口連35紅 本周大事回顧 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiswNBVV95cUxQUnRVRHJTWVlkeWV0NEZVUzNvRlJHWDYxdHE5UG9leW05R3VxaWFQRUw3MnFrYTc1SHlxNmxYX0ZnVmJYNWtJTWdIejNNdE9DYUQ0U2Nha2xEU09iR3RTV0czUHIxSGtwTnJ4M2RlMEJISDRtYlV6V0JsLVJLV0xiVnJma09qLVZ5OHJKVXdENkpCVlBEMnFSMVk3VFVoVjlXZjY2bFRpSFB5TGtzRUtBS2RlUDBlbWVSaGRaT3NBaWQ3cHJ4UUhLSGxKcU02bjZBTlgwejFRLUpMTjNHN19CZlYtd09HS1VoRG5relRXME1Lb2pTaFpWdWQ0c05YZVpqQVA3T1lob3Z6NFBDb1FXQ3pUVzI4UVg1YlNYLXVmd1poVFNHcmxhOHRPMDc1RU1RM2NSSFc1REhRakEwLTVRTjlDSGNNTlpMTHpoTmdnZjBRQm5TSHMtbGRVUHdES2lneWpFYUVnS0FrcGZmNGk3YzlDcVloRS1kck90RXRqN09xU18xbGdmTUN5R3BneEVaTmoxdk1wNl9DYk5kdUJYbURHMl9BRzJVc19kSEQ1R0xDYUk?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-09T11:25+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股跌近500點該逃？專家曝真正原因：這批籌碼該洗了 記憶體需求看旺「5萬點行情還有戲」 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiigRBVV95cUxNT1hoNlpfRzhPWkdwblE2dFdDU2piNDZQcmtGeHJlQWVoVEx0eEYyenRiRHBpYUpBVmlHZmFydHlJbXJKN1BpRGd6R1o3ZGJORzMwUkVWWXkxMzI4LTc1bDZFMS1JV1hsQkI4VlhtLUthVDNYZnZBbGs4eFFZRmRtUlNHeE1LRmtIMTJQLVJhWUlteHFrR1pBWi1lSU90c0JWTmhvWUpJcWVOVlRZaXNVem9HMllvWEgxbHdqajBvNEV1SjgxZlMzeW9id05XN2kyU2dXX250akFHZmpuSmRhakZBeVZrYWZ6XzJUaEZlbm1iRmZ5aWF2bmJSazItRm5DY3hMNFIxVFdBVVc1MnFGdTd6b19rTml6azNDYktKYU5JVUhJNU1ORUp0b1VLMHRyN0F2NlRKNTRjZUJHLWRQa0Y1MDBJUnp6WjRfQXU5ZVRwZG5WeXBUT2NEbndTV2VUQmoxdG5zbDlrMEdHTGp1aXJmeFNrTXJpcmtpdUlqU0JfOTc4SXF0bHBWUTI2bGM1UXByR01ycHhUQm1mc1NsZDFxVUtpS2NWa2xGbnRsVUlEb3J2cm9EdmhIVzRjTHJjZ3NEdnBVZkF5WW44NnBXZDAwM0JxOW9EVU9XZVZzUkExY1ZhejZOUGMwdmFXQ1ZRSTNDUWFwYnZoU0FEUHZqZkdOc19tYUttbHc?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-09T11:14+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股會不會破5萬點不重要！財經作家揭「這2檔ETF」：漲時開心、跌時安心 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMinwNBVV95cUxQYXlEZk5NLXNOVXFVZFFHZ1Y4VHFzSFpkamxwV3g2bHhhVEFwOTBDakJDVnVIWVJDTGFWbXZQbE1yUHRKYlFTcl9TdnJvendfeU9tRVV1aDd5SjBzR25NbjdBdmFadGRNdVk2ZEVpMnlJZnZFQ1dDVWZ5dkxBZWhvbnV3UGRjOFRSakV5OFV5Szh0eldtU1FlZ3F5b0I1TlAzWWYzcWc5MU9yMDZ4by1GR2RfNHJ2ZEhQeWhSd2FxOTJPUEQ5amxmMjliX0NUd3haSTBKcWhfdmt6MFVhNEJlQXBLWWdYU1pJYll3TzBHVmFuQW4wWTBCSVd4WEJ6UG0xbjBCWlBsczgwUHRUTEJnVDRVYXFBSTF0TnBWTFpuSGhSbGh3NmNwemlSWWJBTTZxQlh0RjBlQ2VxX0h5RXkxd3lDUDI3ZzR3cmJ5NlhmUGlJZFF1TlJldl9HY2ZRR1d3ZmUxeWhRNVhhV3BCZE5aM3FacjFFdWhtUTBqYjFoeERmMy14RVhER1ExblZlSkJITGFnWVVmTHRrZHhhNmYw?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-09T11:02+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "《基金》今年來平均漲幅近120％！台股基金超賺 中小型居冠 - 富聯網",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNRURKbEo5UUQwdDRwVkNOb1loZTBQSFZZX09pN3cwOUdmNHVWX2xwNXBucVhMcGx1dUNyVXB0b1VoMGJOTERiWG5WXzNnbHVEdEx6WmxzVEZUZXdQRlFxbUFiR1hmb3pFem1zQnlvNThzYXNxVHh5WENkOTktbzMzUEpLbVV2c19V?oc=5",
+      "source": "富聯網",
+      "published_at": "2026-10-09T10:07+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股殖利率跌破2%！「這5檔ETF」配息率衝20%、1檔績效飆120% 分析師這樣看 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMigwNBVV95cUxOcEhEeGZXdHVKT1F2dUZIU095MXdoeE5ycTQtN3Nwb2t5cmJFajhrNU9PTGwydUZMQVh0ZEpIMFpzOVR5dlB2RlNuUlF6NGFpUEhuSzlqRkxjaGlVS3NDcTJudEVHYm5QYm9vM0diaUZTeHEzdXUyd3VhSUNKeHNTMk9WaXZ2MFhQVG83Rl9IdU5hZGozRUNVVUl4UjZKbnAyNk93NHBkM2FaTnpSTkR1bVBVZ2lFUlNHVjFadThpTnhaRHgwcFJZSUlPaE84Xy1HTDBBczZyby1FS2tpdjZkNm9JenpYcGtnZ2lpcDlBQWxvTWtzRS1TZFZkNU1iZFZYallRRWE3RHpvcmxVR2MxMm4xT2JJek1fS3FVU0Y0M1ZhZkdrUzRjdE50SjRoRlJXNkoyMjNYdVd4QnBRNlF1TC04VlpDd1B4SzlyTXNBNzEyZDcwSXotMUZXZXNyQlFzRUU2eF96U3pyNldwZW4xVmRKVUpQMDZlS1FuUG5LdlZVYnc?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-09T08:24+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
       "title": "台股連假後挫咧等？美股3指數收黑、半導體股齊下殺 台積電ADR跌3%、台指期夜盤失守4萬9 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMi9gNBVV95cUxNSVBnNVJCdXNQT1ZpeEFwZGJvWFhZRFNZYTk5OF82YkpoWU51MWViUjgyU0RXMkwtdUZSQ1owYWhUSE1GQkRjVEswNl8tSVUzYTFENTNmYlBlV0lDZjVJNzRuTENjdDJpSGZoNU1TTldvRGI5V0ZPSVRmVFZaVDVoN1luTTRSMnY3SC11cmJyaDJHazROMkNUUFpmUEllY2RabF9nc0tYbGxDUGg0ZFlMX1VOTkZ6ZG9sZXJtaEhZNVdRT1BlRzgzVkQzWFN1aUhZd0hMbU5ZSEotWmZFRlI3Wk5TQTF3M1MzRUo2Wkp6WnR1NzhNa0J5TXdDZWlYWHNvbnpvQWd0MGRHMGRzQV9zMzhBbElueEhJZ1oxeExTT1dZQ0dEcU95UTBCMEdwWUp0Z3lOSFRRa19kd2w0WWZuZC1CaFBlMnpCWThxWnpxRDZmN3NCaHF2dnhIY3FMaHoxN294MjR2cl95ZmY4UFZIdDNIcXVXTU45MlVrT3UwSmJTMGx4VmpXd0tVRDVudG13Q29vWFBrVEZ0WWR6bjA1UGVNTnJiMTJFa1o1bFdjcEcxdkFBY3p5dXlOLXdNcW5BS3ZIZElvRU0xTllKZTFYekhVclNBUkFaZm9Vc3ZZZnhGYUFzLTFEeVJtUlA3cG5uNVhxRnpR?oc=5",
       "source": "Yahoo股市",
       "published_at": "2026-10-09T07:05+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "AI股挫！費半大跌逾3％ 台積電ADR慘摔3.01％ - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxNdVd6bWxHODBoOGhKZ1oyWDRZMzMyek5OWlhWRFdhb0FsZDBhajlydEd6VG5DcXcwZDlDLUIxc0Q3NW5qUkZSREFMNndYMm9mMHg0a2JvVHBSaWlYbG9MTVkxa1BUd2plWWpIQXZuZkU2ZTFrVnV4bFdmTE50dU5ScEFhX04xdjA1b1lIakVKbzdLUm96VzNmM0VNRDVwMVZKb3dzclFJLWRuZHUzWTc5RnJHVTJQZjFoVEpobFJneEpvQ2JoRWdzVUVIZFZyQzdUZm9YQ2tBOGRRa0Z2R0JqTEVrX0pzTnhhWkhyN3J2UTM3MWFvSkNJV09TSQ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-09T06:23+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Widely traded Chinese concept stocks decline broadly; 21Vianet (VNET.US) falls nearly 3% - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxORk42ZS1ZbmRXc0RLcEl4dThBWkJ3SUE1a1dOLTRjSlZQVV9wbkE0LTB0ZksxR2ZMWEJubV8wM3REdGtVRWR3SUdsVjZrbDNCbzlBZnJ2ZHg4YWdXV2lXcFJGZWlnT2tuN29oNGVjNU5SSFY3UjdfNVg4OUE1VjVCbGFiYWptTnMxeE9YSFBrTkI0TEctQnBwMlNqQmdGaGN4MWMtSXE4aGhiQ1V4S3lMTEd3?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-09T00:23+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "The Treasury Market Is Facing a Crucial Vote of Investor Confidence - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNemh3WXJBeWw1R3pXZTVQY1pBdkFuLVc4ZWJVcV9FV1hnMF9zRHVOQXA1Rm5vVHptOFJnMFhkTUdsaWJ4T21SYVZpNEU3bkh6cUR0WVZnRnVIaGVQbVNkdFgtdDJFYWhhNEJuZFRfZURSR3JCWFZrSTI3cllKRlNlblN0MGNnUEVBc2MyY1lNMFFCbjVxeU16QjJvMXRDOXdl?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-08T23:53+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "The Treasury Market Is Facing a Crucial Vote of Investor Confidence - Moomoo",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOR2p3TGlPYmF5SjFoM3NIZVkxX0tDNmY4MmFyelIwQ24ySzUtYTZOd3BkS0lwNzZxYWliTkFlUnV4cURHVE9kdHpFb2pDWjdoVjY1VTQ1dGZXWjV2MzRoYzVQYW9tQ1U1R2QxQzlWaE95dHNaMmJaS2xBdUxnRzJHQWRZNTNVV01aMHl1VDBJVm53THdGem96MGJzTjkxT1VPdTlLYUdFZXM?oc=5",
-      "source": "Moomoo",
-      "published_at": "2026-10-08T23:37+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Understanding the Paradox: Why Do U.S. Stocks Continue to Rally Despite Mounting Stress in the Treasury Market? - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNNnBsM2tfR216TXZ6aDU0LUVXWkJrdVFMVDZkSUlmdVVXV0tEV3hsWlR3M2poZTItYVdSbHJzenJCYi12VFpKTmRVQWJCZTlEODd6X0tUZ3o4a3hBMVJWRWZRNThNVi1pLXJSUWdLazhyZWY4UGFEZXB2eWhra3E0SllmcUV1OXZ6eUhDdmN6VlpPVGwxZFIybFVzbFVubEdkQUswYlN3?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-08T23:08+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股連假躲崩？美股四大指數開盤全殺 台指期夜盤一度失守49K、台積電ADR臉綠 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMixANBVV95cUxQdVVjSm81c3RHYkdGVmdIUU11ZmlyUUJmN0xPSlVHQnp5TkxtTU9SUm1zQXhTbTJvMVkzRmdJSEFsM2FSVGRiWklGUHN3YXd5Wng5ZUxfZUVtYTBpaUpFVG5QWnlXZm1RanNtSzVQZk9rYnRVOWc3UWRhcVhCeWw3blZiTWVWTlBFZWVMZ0RaSG9HWjlURFRRbEZyeG1tbUpEbDNoU1J2ZlFwZU1OQ0ZrTEJ1aS12T2RDcjlQYzZaNURNMmE1akZuY2kydE9vR21icVJLRmQ0VldJQllERmZaWHg3X0pCN0s5U2wtUWxhaks2NGhMaVhlNXQwLU1mWGRuS1g1VENUZnR5MVpkM05Lb3J5MjFLQXZYWDM3bllCNTVkem0zZjU4Vi1MTHlyU0d2bXF3UExZMGs5dnRpdTJyTEhQZmsyX2VRU2xrNnI3YWhRUENRUVlQejNBTms2ckF1ZVkzYXFOZTUzd0EzY05OV3owbkJjczhPTFFIVEhHT2x0SlZ5cVl5Zy1wdmNpellZVTBOSTY2ODBtRUdxX2RMeW5FOEVuTjd0M3F4c3p0Sm1WSU9mTGtwY0pFTGRvUXQ4RkQ0ZA?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-08T22:35+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股新增開戶「30歲以下占63%」！ 網揭：小學生都在談股票 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi1AJBVV95cUxQbFpJekZEWktDTXRoR0hFenlQSjBrVTF3a2x5Z0RiSlVUd2t6YkxaOEFVYUQ3UlN4Z2I2M0p2MWM2WldtQnBNM1VBbVFsMDhJMGV4SWRrbjJaYWQ2MktPVHBqQm12VU9LeER6V09IYVJsQ1g2cXdwc1l1NHRac3N1bUdoa2tFY3MyZV9aVmVaa1g0NVR2bi1acENXblBfNlVSdjRfbW03c2ZpcG5NSHRPbmdVSF95WGRFVUhGeG5NT2xRV1RZb0dMXy0teUpERGc0eENGNkt5MlRMNmg4Q0NsVE5vV25faTJXdnNKU3FLYTRrWGQ0MXhoSi03NWtrYXJlNXRuM29WYi1CSVZPb3pkMGhQMFZybmUzS3NpOHlxN0F5bXRLdXktNWxNLWFBSkhJZ3ZsSWRCWmJfcmF2SnNBN0J4d1E2U3Y5bXY4MzdvMjFfR2o3?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-08T20:05+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股創高「00935還在63元」！他想認栽換0050 引論戰 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiogJBVV95cUxPNmY5dzlnN21nelRmdXF0N2RFdEt1YVBELUs1cXFPVWc5UDMtWTZQWUlsM19yeHYwTFB6TjExa2M2cm92eUc4U0pMRWJndGI0OU90WkpzR05TVTdfdmE2S0tmcnNQQV9TUHlDRkRLNDZqV0VFUGNrN1p2LW1CZlBiZFZmWkdzYTNWS0lKamFvN21uZldIUHNIbU5aMVpBVU9aMTF2bmZmQWk2bUpFbWlMWXFCV0lUTzh0Y3pIRkl0RnVRVmJELTlZVFlNSmFCUkdwUFlRcXZMWXNzYXoxMzN6bE5lTEV4dTFGaS0waXNzX2JmNm4yV1hlXzA1SWJjMDBGTnh4V0g1QVB3ZUJUUmtDVUtIQllHejlBZDkwSjlmWW9qdw?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-08T19:47+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Counterpoint: Global Foundry 2.0 Market Revenue in 2Q26 Rises 25% YoY to $96.6 Billion, with Advanced Packaging in the Spotlight - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNX296cm5IMHUwYkFVY1VkbndGUWtXaG03NzY1djhhRXA1eXM2OWpnNktWa2c4YU5Hd0M0aHVjTTU3TUZUaWJYS3oxWmlaYWNVOFFaRUk5Z3lmSl9TU1VIMzU4dXVwZXVEc2pGeHVvSGxEQ05MdzkxMkFTVWl6Vk03VmJsSDBENDhlcHE2cFU4bXZCck5CNUZwTWFxQVVjMGg5SzdxaUpn?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-08T17:19+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-09T08:08:28+08:00"
+  "updated_at": "2026-10-09T14:00:26+08:00"
 }
