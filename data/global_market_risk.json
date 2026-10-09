@@ -8,46 +8,46 @@
     "出現重大風險新聞"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 -4.5%｜NASDAQ -1.5%｜日經225 -0.0%｜KOSPI -4.5%｜台股加權 -1.0%｜恆生 +0.1%",
-    "⚠ 全球市場風險｜美債10Y 5.23%｜VIX 15.4",
+    "⚠ 全球市場風險｜費半 -3.4%｜NASDAQ -1.2%｜日經225 -0.0%｜KOSPI -4.5%｜台股加權 -1.0%｜恆生 +0.3%",
+    "⚠ 全球市場風險｜美債10Y 5.24%｜VIX 15.2",
     "⚠ 全球市場風險｜HK Market Midday Review | All three major indices rose in tandem, with the Hang Seng Tech Index",
-    "⚠ 全球市場風險｜Will the S&P 500 plummet to 5,000 by the end of next year? Warnings resurface: AI bubble to bur",
     "⚠ 全球市場風險｜Hong Kong Stocks in Focus | PCB-related stocks lead the decliners, amid market rumors of supply",
     "⚠ 全球市場風險｜Gold prices rebounded, boosting gold stocks; the central bank has increased its gold holdings f",
     "⚠ 全球市場風險｜French sovereign debt is the first casualty, followed by U.S. Treasuries? Is the global market ",
-    "⚠ 全球市場風險｜Key Pre-Market Highlights for U.S. Stocks | Fed's September Meeting Minutes Lean Hawkish, Inter",
-    "⚠ 全球市場風險｜台積電Q3營收1.49兆元創單季高、大立光攻CPO、9月進出口連35紅 本周大事回顧",
-    "⚠ 全球市場風險｜台股跌近500點該逃？專家曝真正原因：這批籌碼該洗了 記憶體需求看旺「5萬點行情還有戲」"
+    "⚠ 全球市場風險｜蘇威元：大山吃台電.台積電AI電纜商機 營收獲利創歷史新高",
+    "⚠ 全球市場風險｜分析｜迎戰輝達！AMD蘇姿丰密訪台積電等台廠 專家揭旋風固樁背後戰略",
+    "⚠ 全球市場風險｜[HK Stocks] Hang Seng Index closes up 425 points; tech and internet stocks lead gains; Xiaomi s",
+    "⚠ 全球市場風險｜Hong Kong Market Quick Take | All three major indices rose, with the tech index up over 3%; tec"
   ],
   "markets": {
     "US_SOX": {
       "label": "費半",
       "price": 12623.715,
-      "change_pct": -4.4
+      "change_pct": -3.4
     },
     "US_NASDAQ": {
       "label": "NASDAQ",
       "price": 27193.34,
-      "change_pct": -1.4
+      "change_pct": -1.2
     },
     "US_SP500": {
       "label": "S&P500",
       "price": 7765.36,
-      "change_pct": -0.6
+      "change_pct": -0.4
     },
     "US_DOW": {
       "label": "道瓊",
       "price": 51231.64,
-      "change_pct": -0.6
+      "change_pct": 0.0
     },
     "VIX": {
       "label": "VIX",
-      "price": 15.41,
-      "change_pct": 2.2
+      "price": 15.15,
+      "change_pct": -1.6
     },
     "JP_NIKKEI": {
       "label": "日經225",
-      "price": 69034.13,
+      "price": 69030.92,
       "change_pct": 0.0
     },
     "KR_KOSPI": {
@@ -62,13 +62,13 @@
     },
     "HK_HSI": {
       "label": "恆生",
-      "price": 24165.05,
-      "change_pct": 0.2
+      "price": 24211.35,
+      "change_pct": 0.4
     },
     "US10Y": {
       "label": "美債10年殖利率",
-      "price": 5.231,
-      "change_pct": -0.8
+      "price": 5.24,
+      "change_pct": 0.2
     }
   },
   "active_news": [
@@ -78,14 +78,6 @@
       "source": "富途牛牛",
       "published_at": "2026-10-09T12:14+08:00",
       "importance": 5,
-      "risk_score": 4
-    },
-    {
-      "title": "Will the S&P 500 plummet to 5,000 by the end of next year? Warnings resurface: AI bubble to burst within two years - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQUWd6aHFObGVudTFkekd4MTFSYngtbjh0d0JsTjR6Mk9NdFFfOWhfYVRiWjI3Mi1tcnlCZlZYTjRVYnNCaklhZGg5b2FGaXktWWVKSFQxZlVNWmlPZExsXzFVMVA0RklqVGlBMzV5b0diUXVESWkzRnhDNWctNW1TdkhKZElMNUc5cHc?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-08T16:59+08:00",
-      "importance": 3,
       "risk_score": 4
     },
     {
@@ -113,12 +105,52 @@
       "risk_score": 2
     },
     {
-      "title": "Key Pre-Market Highlights for U.S. Stocks | Fed's September Meeting Minutes Lean Hawkish, International Oil Prices Surge, Three Major U.S. Index Futures Fall - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNSFg5enBJODJacVRIc3d3U2pkWFo5UG5WNHlNR055Qmo0N28yaTFJSm16SnJqNl9MQmxEYXhPaFhMb05pQ1hMQ0FtVV9VdUJCWUdZSmVzNE9aN211MVJNRExkV0pSUmd6TDRuaE1RY2E5OUVORFZJYXgtT3dwQTNUdjdVcmQ1QWJnb0ZDa09oVGxaN0VVNEdZcXVyOW1jbUU?oc=5",
+      "title": "蘇威元：大山吃台電.台積電AI電纜商機 營收獲利創歷史新高 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiggNBVV95cUxQTGE5TVZRTDZ0Zk5lWmZSYzBoYmhTc3g4WF8xQ0ZNWDdWX3g5UkN5M3hUcDhpTV9YcjhxZ2taX096a0RRZkNRYTItdGNBeHloMVhBU0lYZjAwbTV1Mzl6ckI4NjZ6dU9pMDVmeE0zN0lXN2dpd0gxNHlZel8zQUNNMWE5U0Y5TFhQdk1nNk9ocWpyeW8xXzE4d1F3eFF4N3doUktkdU92VHBhWUNzNU1IbUhmb3BLMTkzeXA2WHcyNnVuR2k0aUNRYWowYWJHZ3BXR3ZnLUw5WHN4Rmh4VDBwbUI2d3VhdmN3YklXX0FabXg3cFVMaHJXbHE1d25nMmNzeWpQbU9xMy1peGliRnhQU0cza2NuVXJRenN6WHNrUk9XQ1cxNnUwOGNFZUZUT2d0VGxrUWVQUFZhdFdqWVR4eWU0aVlQNkYwSmVDSk16cFppSEVqZFB0ZTdZOU5yVDU2dmlhZ3c3T1hEckttOWp0YkhwODQyc0o1MW9saXdLUnlFUQ?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-09T19:44+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "分析｜迎戰輝達！AMD蘇姿丰密訪台積電等台廠 專家揭旋風固樁背後戰略 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiswNBVV95cUxOVENuQWFjemlrNER5dl8xSnZMandYbVdTM19pdW1GN3RBbWp1bWd1M0U4aTFnYVVZSnV3cVMxVmdDZHpZVnJxQVdGdzVOMTdwQXFlclowXzQybDdLN3FXcFdCcG5WTXZuWkF0RTlrUlU5VzJ1RERhem5UdkRZWmpvZ3FMMlhYNkNLSVg0bTdkRVJyakozYmY1aDEtU3M1U19zTnVCdEY0RHhUeGVsekFRanlkRFpiM3dsZVp3MlNrMU1YU2NScEJMbXEwMzZfZjZMMEFMdm1BUVdWT0dnSDhuRzhRXzBzRnpvRXZqdlpTck1qb0hCcmtFWjl4dld3Q3BKS1EwNExVRW5DUjNTVDBrQVM3QVpiYm9sTFpxN0M5ZTRLZFlLNjVsMU9IM18xRm5tek1UUEl6SGR0NkhOYnZWVUNqcDBvaWpISjJSeWNRempLT2JTb0toQk5obWo2U05SNHJERkNQTVh1ZUZnMlZCUGFQTWtRNmp0U0F6WDYxM0xxS3JLNDFQMFdzTzJCWmFKQWExRUZwa1VmZThsRy16REgzRUowM0dSbDVvVUVuTjhGakE?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-09T17:58+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "[HK Stocks] Hang Seng Index closes up 425 points; tech and internet stocks lead gains; Xiaomi surges over 9%; HSBC rises nearly 2% - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPNVFlcXhmbDA5TkNaOG1KS3dvSWxzX3ctSXNEblF3T05RUEI4VXhKYWNvTUttS1pJeHFWSEFHeHNQN0hDUTBzdEZpWnR0OXpVYjZtakFPRlJXdW92RXhPOXM1R0U1VzA5a0xITHI1dzFBNGE4M1NZaTlILU9CY3AtRUF0VGtHdlNuenlCVGQ2RmxyUi1xbU00YXBB?oc=5",
       "source": "富途牛牛",
-      "published_at": "2026-10-08T20:35+08:00",
-      "importance": 4,
-      "risk_score": 2
+      "published_at": "2026-10-09T16:45+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Hong Kong Market Quick Take | All three major indices rose, with the tech index up over 3%; tech stocks rallied, as Xiaomi surged nearly 10% and Kuaishou gained more than 5%; gold stocks rebounded, with Zijin Gold International climbing nearly 8%; Chines - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxORlVFNERkaTJLOVd0QXhuMjVjRzZCT2RWbTVoWHQwQ29pSDQ2OTNkMnZkYkRWTlh0Y1hrakF1bm1kc1BFZ1BFNXhOMUtWRnBxeFcweDNaX1BuMWtwY0tjQ0tPclFrNVAzY3A5MWRVVEtMeXc4a1dZYV9UOFRsRXR5U2lDcDF3UDgzWlFiSkdmcG8xOHdwQ3ZEUHV5M2h5VVJE?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-09T16:21+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台積電砸639億擴充CoWoS產能！「美晶圓代工廠」接5年大單 2028年產量再提升 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMinANBVV95cUxQdTd1MXZZNW1vVlFTN0pPTlB4Z1dRNE9TUTd4eWs4NXh5NVgwRldaTWxURmE4R083Y3p4c093WXZXWnd6YTFnZnhvcG1SMTlDMnpiVHZyQVhUVHRtOEd2VjVlUnhNOUhWazBmWFczbksyWE1Jd1dFV1ViVFhzeHU2d2xEcllsMnFNRDhoM1ZLUHdkLWk5QjNwODBTVExkZXo3M2NQT001TktHSGp6RmZPSnNHVy1Kdk5LbU9WU3Q5WG1EVk1sZWhyckpxa2tUTVhVb2hRVkZBTGFZSzI4eEQ0ZnZKbUtHcGZWc2tzcWVfaWdaZmZQUGhyX0ZxVlFGTWxxSzIyMG1XYmRIUHdVYUZuQkZZY1B2cG94WEpUbDFwZ2trZURrbDVwWFFMekdabmJCaG1KWHZyQUZaTlhWYTg2NWpveEkxY1RPWWJ2Vl9FOGFWU2tGcjl3dW1MTHdEVkdOTTU5VThRX0Vla3hVZ0R6Rks0QTZ4bzJkd1FtS3J3aGJsWUZya3E4bFRsNmdvanF0eThXYUVteFU1cGc2?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-09T13:42+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "“Memory Crisis” Storm Sweeps Global PC Market: Q3 Sales Drop Over 20% Year-on-Year - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPV0xnbXFiOS16SnRGbFBTRkhsT09LbU83bnU5WEc2aFNvd0w3MTRlR1Y4NGhpRDJTSDFuN0hrT09WYWdzcXVYcG5PSGtrdlNpenl6YVR4YkpKV2pTYmZkWnRRR2lybWF4TnN2VW9BQXFIa0tDUlNPb0FpRTlISXpqT2pBTkJEZW5DTDBfaXZaWEJCWEpBVnhFc1N0T1RzOUVBM0E?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-09T13:35+08:00",
+      "importance": 2,
+      "risk_score": 0
     },
     {
       "title": "台積電Q3營收1.49兆元創單季高、大立光攻CPO、9月進出口連35紅 本周大事回顧 - Yahoo股市",
@@ -135,40 +167,8 @@
       "published_at": "2026-10-09T11:14+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "台股會不會破5萬點不重要！財經作家揭「這2檔ETF」：漲時開心、跌時安心 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMinwNBVV95cUxQYXlEZk5NLXNOVXFVZFFHZ1Y4VHFzSFpkamxwV3g2bHhhVEFwOTBDakJDVnVIWVJDTGFWbXZQbE1yUHRKYlFTcl9TdnJvendfeU9tRVV1aDd5SjBzR25NbjdBdmFadGRNdVk2ZEVpMnlJZnZFQ1dDVWZ5dkxBZWhvbnV3UGRjOFRSakV5OFV5Szh0eldtU1FlZ3F5b0I1TlAzWWYzcWc5MU9yMDZ4by1GR2RfNHJ2ZEhQeWhSd2FxOTJPUEQ5amxmMjliX0NUd3haSTBKcWhfdmt6MFVhNEJlQXBLWWdYU1pJYll3TzBHVmFuQW4wWTBCSVd4WEJ6UG0xbjBCWlBsczgwUHRUTEJnVDRVYXFBSTF0TnBWTFpuSGhSbGh3NmNwemlSWWJBTTZxQlh0RjBlQ2VxX0h5RXkxd3lDUDI3ZzR3cmJ5NlhmUGlJZFF1TlJldl9HY2ZRR1d3ZmUxeWhRNVhhV3BCZE5aM3FacjFFdWhtUTBqYjFoeERmMy14RVhER1ExblZlSkJITGFnWVVmTHRrZHhhNmYw?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-09T11:02+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "《基金》今年來平均漲幅近120％！台股基金超賺 中小型居冠 - 富聯網",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNRURKbEo5UUQwdDRwVkNOb1loZTBQSFZZX09pN3cwOUdmNHVWX2xwNXBucVhMcGx1dUNyVXB0b1VoMGJOTERiWG5WXzNnbHVEdEx6WmxzVEZUZXdQRlFxbUFiR1hmb3pFem1zQnlvNThzYXNxVHh5WENkOTktbzMzUEpLbVV2c19V?oc=5",
-      "source": "富聯網",
-      "published_at": "2026-10-09T10:07+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股殖利率跌破2%！「這5檔ETF」配息率衝20%、1檔績效飆120% 分析師這樣看 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMigwNBVV95cUxOcEhEeGZXdHVKT1F2dUZIU095MXdoeE5ycTQtN3Nwb2t5cmJFajhrNU9PTGwydUZMQVh0ZEpIMFpzOVR5dlB2RlNuUlF6NGFpUEhuSzlqRkxjaGlVS3NDcTJudEVHYm5QYm9vM0diaUZTeHEzdXUyd3VhSUNKeHNTMk9WaXZ2MFhQVG83Rl9IdU5hZGozRUNVVUl4UjZKbnAyNk93NHBkM2FaTnpSTkR1bVBVZ2lFUlNHVjFadThpTnhaRHgwcFJZSUlPaE84Xy1HTDBBczZyby1FS2tpdjZkNm9JenpYcGtnZ2lpcDlBQWxvTWtzRS1TZFZkNU1iZFZYallRRWE3RHpvcmxVR2MxMm4xT2JJek1fS3FVU0Y0M1ZhZkdrUzRjdE50SjRoRlJXNkoyMjNYdVd4QnBRNlF1TC04VlpDd1B4SzlyTXNBNzEyZDcwSXotMUZXZXNyQlFzRUU2eF96U3pyNldwZW4xVmRKVUpQMDZlS1FuUG5LdlZVYnc?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-09T08:24+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股連假後挫咧等？美股3指數收黑、半導體股齊下殺 台積電ADR跌3%、台指期夜盤失守4萬9 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi9gNBVV95cUxNSVBnNVJCdXNQT1ZpeEFwZGJvWFhZRFNZYTk5OF82YkpoWU51MWViUjgyU0RXMkwtdUZSQ1owYWhUSE1GQkRjVEswNl8tSVUzYTFENTNmYlBlV0lDZjVJNzRuTENjdDJpSGZoNU1TTldvRGI5V0ZPSVRmVFZaVDVoN1luTTRSMnY3SC11cmJyaDJHazROMkNUUFpmUEllY2RabF9nc0tYbGxDUGg0ZFlMX1VOTkZ6ZG9sZXJtaEhZNVdRT1BlRzgzVkQzWFN1aUhZd0hMbU5ZSEotWmZFRlI3Wk5TQTF3M1MzRUo2Wkp6WnR1NzhNa0J5TXdDZWlYWHNvbnpvQWd0MGRHMGRzQV9zMzhBbElueEhJZ1oxeExTT1dZQ0dEcU95UTBCMEdwWUp0Z3lOSFRRa19kd2w0WWZuZC1CaFBlMnpCWThxWnpxRDZmN3NCaHF2dnhIY3FMaHoxN294MjR2cl95ZmY4UFZIdDNIcXVXTU45MlVrT3UwSmJTMGx4VmpXd0tVRDVudG13Q29vWFBrVEZ0WWR6bjA1UGVNTnJiMTJFa1o1bFdjcEcxdkFBY3p5dXlOLXdNcW5BS3ZIZElvRU0xTllKZTFYekhVclNBUkFaZm9Vc3ZZZnhGYUFzLTFEeVJtUlA3cG5uNVhxRnpR?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-09T07:05+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-09T14:00:26+08:00"
+  "updated_at": "2026-10-09T20:43:58+08:00"
 }
