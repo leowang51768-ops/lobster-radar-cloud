@@ -8,42 +8,42 @@
     "出現重大風險新聞"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 -3.4%｜NASDAQ -1.2%｜日經225 -0.0%｜KOSPI -4.5%｜台股加權 -1.0%｜恆生 +0.3%",
-    "⚠ 全球市場風險｜美債10Y 5.24%｜VIX 15.2",
+    "⚠ 全球市場風險｜費半 -3.8%｜NASDAQ -0.7%｜日經225 -0.0%｜KOSPI -4.5%｜台股加權 -1.0%｜恆生 +0.3%",
+    "⚠ 全球市場風險｜美債10Y 5.25%｜VIX 14.8",
     "⚠ 全球市場風險｜HK Market Midday Review | All three major indices rose in tandem, with the Hang Seng Tech Index",
     "⚠ 全球市場風險｜Hong Kong Stocks in Focus | PCB-related stocks lead the decliners, amid market rumors of supply",
     "⚠ 全球市場風險｜Gold prices rebounded, boosting gold stocks; the central bank has increased its gold holdings f",
     "⚠ 全球市場風險｜French sovereign debt is the first casualty, followed by U.S. Treasuries? Is the global market ",
-    "⚠ 全球市場風險｜蘇威元：大山吃台電.台積電AI電纜商機 營收獲利創歷史新高",
-    "⚠ 全球市場風險｜分析｜迎戰輝達！AMD蘇姿丰密訪台積電等台廠 專家揭旋風固樁背後戰略",
-    "⚠ 全球市場風險｜[HK Stocks] Hang Seng Index closes up 425 points; tech and internet stocks lead gains; Xiaomi s",
-    "⚠ 全球市場風險｜Hong Kong Market Quick Take | All three major indices rose, with the tech index up over 3%; tec"
+    "⚠ 全球市場風險｜U.S. AI chip stocks rose collectively in pre-market trading, with Broadcom gaining more than 2%",
+    "⚠ 全球市場風險｜個股概覽 | 個股 - 股市",
+    "⚠ 全球市場風險｜彰基前院長涉背信案 檢扣11筆不動產、台積電股票",
+    "⚠ 全球市場風險｜蘇威元：大山吃台電.台積電AI電纜商機 營收獲利創歷史新高"
   ],
   "markets": {
     "US_SOX": {
       "label": "費半",
-      "price": 12623.715,
-      "change_pct": -3.4
+      "price": 12569.598,
+      "change_pct": -3.8
     },
     "US_NASDAQ": {
       "label": "NASDAQ",
-      "price": 27193.34,
-      "change_pct": -1.2
+      "price": 27355.21,
+      "change_pct": -0.6
     },
     "US_SP500": {
       "label": "S&P500",
-      "price": 7765.36,
-      "change_pct": -0.4
+      "price": 7812.23,
+      "change_pct": 0.2
     },
     "US_DOW": {
       "label": "道瓊",
-      "price": 51231.64,
-      "change_pct": 0.0
+      "price": 51691.85,
+      "change_pct": 1.0
     },
     "VIX": {
       "label": "VIX",
-      "price": 15.15,
-      "change_pct": -1.6
+      "price": 14.82,
+      "change_pct": -3.8
     },
     "JP_NIKKEI": {
       "label": "日經225",
@@ -67,8 +67,8 @@
     },
     "US10Y": {
       "label": "美債10年殖利率",
-      "price": 5.24,
-      "change_pct": 0.2
+      "price": 5.253,
+      "change_pct": 0.4
     }
   },
   "active_news": [
@@ -105,6 +105,30 @@
       "risk_score": 2
     },
     {
+      "title": "U.S. AI chip stocks rose collectively in pre-market trading, with Broadcom gaining more than 2%. - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOaFJxMExTRzgwOXVUTTNsNUhnb1ZzZWpwOXJwamRKdTRyS3hlbkpvZElLa0I0Ml8tbG1JTHhhYS1UVUl1d1NkR1dyeDJ1bzdEWDZoVkFRcC1rbTRYOUFlLUxMc3VxRUVOaENfOEEyWnRVeW0ybXR1d2txYW5kd2FFU3hlZWVHdlQ4eDZDYi1pbzRnU25HVzRRUUJGNTVNSVBmZHc?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-09T23:19+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "個股概覽 | 個股 - 股市 - CMoney",
+      "url": "https://news.google.com/rss/articles/CBMiREFVX3lxTFBfVGtPUmhQeF9nalNLNm9zTGJWQlREWTlFa2dVeEhkNElpN1d0OXlyaFF3U3NaYnBodklvejVEU1YtdkNl?oc=5",
+      "source": "CMoney",
+      "published_at": "2026-10-09T22:11+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "彰基前院長涉背信案 檢扣11筆不動產、台積電股票 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi0AJBVV95cUxOdHRnVENub1d5Uy1XZGNLR0Z5Y0RTdU9GckRfX2NJZ3ljSTNWM3JuUVRPRHJ0NjFFS2FwWEdNbUpmNTRjanRfNVo5VzJONVZmczcybDQ4ZXI0Y1ItX3dZUEZqZWItTTBUSVg4cWVfXy04S0xyOGU5Q0dpeVRSODc1eG91S2dxVUhzaWpELVBpSkVDNFo2aUw5WXNwcFNla2dHUi1aR20xc1NqbV9oVlIxd2JaSGtqV21EbU13VnJoRzhObHpyc01NM0o0YXV4NlpWaWJ2YVlMaFQ0bjdTa1RjUDlRbDZocHlUZWFYNzdPMkVnVDhmbWJOZ3hHVW16WjBNNVJ3Y2xzQU5pdS1ycEk4N2JNNVpEWXF0OEIySWZzMnhxRHRiRUhfaHNCa2VOR1dOcWd0dG9wamFXVGYzQVprQy1HR1hDcFI2UVJCczlwZ20?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-09T21:41+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
       "title": "蘇威元：大山吃台電.台積電AI電纜商機 營收獲利創歷史新高 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMiggNBVV95cUxQTGE5TVZRTDZ0Zk5lWmZSYzBoYmhTc3g4WF8xQ0ZNWDdWX3g5UkN5M3hUcDhpTV9YcjhxZ2taX096a0RRZkNRYTItdGNBeHloMVhBU0lYZjAwbTV1Mzl6ckI4NjZ6dU9pMDVmeE0zN0lXN2dpd0gxNHlZel8zQUNNMWE5U0Y5TFhQdk1nNk9ocWpyeW8xXzE4d1F3eFF4N3doUktkdU92VHBhWUNzNU1IbUhmb3BLMTkzeXA2WHcyNnVuR2k0aUNRYWowYWJHZ3BXR3ZnLUw5WHN4Rmh4VDBwbUI2d3VhdmN3YklXX0FabXg3cFVMaHJXbHE1d25nMmNzeWpQbU9xMy1peGliRnhQU0cza2NuVXJRenN6WHNrUk9XQ1cxNnUwOGNFZUZUT2d0VGxrUWVQUFZhdFdqWVR4eWU0aVlQNkYwSmVDSk16cFppSEVqZFB0ZTdZOU5yVDU2dmlhZ3c3T1hEckttOWp0YkhwODQyc0o1MW9saXdLUnlFUQ?oc=5",
       "source": "Yahoo股市",
@@ -124,7 +148,7 @@
       "title": "[HK Stocks] Hang Seng Index closes up 425 points; tech and internet stocks lead gains; Xiaomi surges over 9%; HSBC rises nearly 2% - 富途牛牛",
       "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPNVFlcXhmbDA5TkNaOG1KS3dvSWxzX3ctSXNEblF3T05RUEI4VXhKYWNvTUttS1pJeHFWSEFHeHNQN0hDUTBzdEZpWnR0OXpVYjZtakFPRlJXdW92RXhPOXM1R0U1VzA5a0xITHI1dzFBNGE4M1NZaTlILU9CY3AtRUF0VGtHdlNuenlCVGQ2RmxyUi1xbU00YXBB?oc=5",
       "source": "富途牛牛",
-      "published_at": "2026-10-09T16:45+08:00",
+      "published_at": "2026-10-09T16:52+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -140,35 +164,11 @@
       "title": "台積電砸639億擴充CoWoS產能！「美晶圓代工廠」接5年大單 2028年產量再提升 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMinANBVV95cUxQdTd1MXZZNW1vVlFTN0pPTlB4Z1dRNE9TUTd4eWs4NXh5NVgwRldaTWxURmE4R083Y3p4c093WXZXWnd6YTFnZnhvcG1SMTlDMnpiVHZyQVhUVHRtOEd2VjVlUnhNOUhWazBmWFczbksyWE1Jd1dFV1ViVFhzeHU2d2xEcllsMnFNRDhoM1ZLUHdkLWk5QjNwODBTVExkZXo3M2NQT001TktHSGp6RmZPSnNHVy1Kdk5LbU9WU3Q5WG1EVk1sZWhyckpxa2tUTVhVb2hRVkZBTGFZSzI4eEQ0ZnZKbUtHcGZWc2tzcWVfaWdaZmZQUGhyX0ZxVlFGTWxxSzIyMG1XYmRIUHdVYUZuQkZZY1B2cG94WEpUbDFwZ2trZURrbDVwWFFMekdabmJCaG1KWHZyQUZaTlhWYTg2NWpveEkxY1RPWWJ2Vl9FOGFWU2tGcjl3dW1MTHdEVkdOTTU5VThRX0Vla3hVZ0R6Rks0QTZ4bzJkd1FtS3J3aGJsWUZya3E4bFRsNmdvanF0eThXYUVteFU1cGc2?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-10-09T13:42+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "“Memory Crisis” Storm Sweeps Global PC Market: Q3 Sales Drop Over 20% Year-on-Year - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPV0xnbXFiOS16SnRGbFBTRkhsT09LbU83bnU5WEc2aFNvd0w3MTRlR1Y4NGhpRDJTSDFuN0hrT09WYWdzcXVYcG5PSGtrdlNpenl6YVR4YkpKV2pTYmZkWnRRR2lybWF4TnN2VW9BQXFIa0tDUlNPb0FpRTlISXpqT2pBTkJEZW5DTDBfaXZaWEJCWEpBVnhFc1N0T1RzOUVBM0E?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-09T13:35+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台積電Q3營收1.49兆元創單季高、大立光攻CPO、9月進出口連35紅 本周大事回顧 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiswNBVV95cUxQUnRVRHJTWVlkeWV0NEZVUzNvRlJHWDYxdHE5UG9leW05R3VxaWFQRUw3MnFrYTc1SHlxNmxYX0ZnVmJYNWtJTWdIejNNdE9DYUQ0U2Nha2xEU09iR3RTV0czUHIxSGtwTnJ4M2RlMEJISDRtYlV6V0JsLVJLV0xiVnJma09qLVZ5OHJKVXdENkpCVlBEMnFSMVk3VFVoVjlXZjY2bFRpSFB5TGtzRUtBS2RlUDBlbWVSaGRaT3NBaWQ3cHJ4UUhLSGxKcU02bjZBTlgwejFRLUpMTjNHN19CZlYtd09HS1VoRG5relRXME1Lb2pTaFpWdWQ0c05YZVpqQVA3T1lob3Z6NFBDb1FXQ3pUVzI4UVg1YlNYLXVmd1poVFNHcmxhOHRPMDc1RU1RM2NSSFc1REhRakEwLTVRTjlDSGNNTlpMTHpoTmdnZjBRQm5TSHMtbGRVUHdES2lneWpFYUVnS0FrcGZmNGk3YzlDcVloRS1kck90RXRqN09xU18xbGdmTUN5R3BneEVaTmoxdk1wNl9DYk5kdUJYbURHMl9BRzJVc19kSEQ1R0xDYUk?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-09T11:25+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股跌近500點該逃？專家曝真正原因：這批籌碼該洗了 記憶體需求看旺「5萬點行情還有戲」 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiigRBVV95cUxNT1hoNlpfRzhPWkdwblE2dFdDU2piNDZQcmtGeHJlQWVoVEx0eEYyenRiRHBpYUpBVmlHZmFydHlJbXJKN1BpRGd6R1o3ZGJORzMwUkVWWXkxMzI4LTc1bDZFMS1JV1hsQkI4VlhtLUthVDNYZnZBbGs4eFFZRmRtUlNHeE1LRmtIMTJQLVJhWUlteHFrR1pBWi1lSU90c0JWTmhvWUpJcWVOVlRZaXNVem9HMllvWEgxbHdqajBvNEV1SjgxZlMzeW9id05XN2kyU2dXX250akFHZmpuSmRhakZBeVZrYWZ6XzJUaEZlbm1iRmZ5aWF2bmJSazItRm5DY3hMNFIxVFdBVVc1MnFGdTd6b19rTml6azNDYktKYU5JVUhJNU1ORUp0b1VLMHRyN0F2NlRKNTRjZUJHLWRQa0Y1MDBJUnp6WjRfQXU5ZVRwZG5WeXBUT2NEbndTV2VUQmoxdG5zbDlrMEdHTGp1aXJmeFNrTXJpcmtpdUlqU0JfOTc4SXF0bHBWUTI2bGM1UXByR01ycHhUQm1mc1NsZDFxVUtpS2NWa2xGbnRsVUlEb3J2cm9EdmhIVzRjTHJjZ3NEdnBVZkF5WW44NnBXZDAwM0JxOW9EVU9XZVZzUkExY1ZhejZOUGMwdmFXQ1ZRSTNDUWFwYnZoU0FEUHZqZkdOc19tYUttbHc?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-09T11:14+08:00",
+      "published_at": "2026-10-09T13:48+08:00",
       "importance": 2,
       "risk_score": 0
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-09T20:43:58+08:00"
+  "updated_at": "2026-10-10T02:31:27+08:00"
 }
