@@ -1,10 +1,10 @@
 {
   "date": "2026-10-08",
   "mode": "collection_only",
-  "expected_stocks": 163,
+  "expected_stocks": 165,
   "fixed_stocks": 163,
-  "supplemental_stocks": 0,
-  "covered_stocks": 163,
+  "supplemental_stocks": 2,
+  "covered_stocks": 165,
   "coverage_complete": true,
   "status": "complete",
   "source_blocked": false,
@@ -12,11 +12,11 @@
   "history_target_top_per_side": 3,
   "history_requests_succeeded": 120,
   "observed_collection_days": 4,
-  "complete_collection_days": 4,
+  "complete_collection_days": 1,
   "counts": {
-    "ranking": 19556,
-    "history": 32386,
-    "queue": 2707
+    "ranking": 19616,
+    "history": 39586,
+    "queue": 2719
   },
   "review_stage": "資料累積中",
   "strategy_changes": false,
@@ -31,5 +31,5 @@
   "errors": [],
   "history_errors": [],
   "history_coverage_complete": false,
-  "database_bytes": 11444224
+  "database_bytes": 12271616
 }
