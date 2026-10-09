@@ -9,41 +9,41 @@
   ],
   "ticker": [
     "⚠ 全球市場風險｜費半 -4.5%｜NASDAQ -1.5%｜日經225 -1.4%｜KOSPI -4.5%｜台股加權 -1.0%｜恆生 -2.0%",
-    "⚠ 全球市場風險｜美債10Y 5.23%｜VIX 15.6",
+    "⚠ 全球市場風險｜美債10Y 5.23%｜VIX 15.4",
     "⚠ 全球市場風險｜Will the S&P 500 plummet to 5,000 by the end of next year? Warnings resurface: AI bubble to bur",
+    "⚠ 全球市場風險｜Key Pre-Market Highlights for U.S. Stocks | Fed's September Meeting Minutes Lean Hawkish, Inter",
+    "⚠ 全球市場風險｜台股連假後挫咧等？美股3指數收黑、半導體股齊下殺 台積電ADR跌3%、台指期夜盤失守4萬9",
+    "⚠ 全球市場風險｜AI股挫！費半大跌逾3％ 台積電ADR慘摔3.01％",
     "⚠ 全球市場風險｜Widely traded Chinese concept stocks decline broadly; 21Vianet (VNET.US) falls nearly 3%",
     "⚠ 全球市場風險｜The Treasury Market Is Facing a Crucial Vote of Investor Confidence",
     "⚠ 全球市場風險｜The Treasury Market Is Facing a Crucial Vote of Investor Confidence",
-    "⚠ 全球市場風險｜Understanding the Paradox: Why Do U.S. Stocks Continue to Rally Despite Mounting Stress in the ",
-    "⚠ 全球市場風險｜台股連假躲崩？美股四大指數開盤全殺 台指期夜盤一度失守49K、台積電ADR臉綠",
-    "⚠ 全球市場風險｜台股新增開戶「30歲以下占63%」！ 網揭：小學生都在談股票",
-    "⚠ 全球市場風險｜台股創高「00935還在63元」！他想認栽換0050 引論戰"
+    "⚠ 全球市場風險｜Understanding the Paradox: Why Do U.S. Stocks Continue to Rally Despite Mounting Stress in the "
   ],
   "markets": {
     "US_SOX": {
       "label": "費半",
-      "price": 12629.843,
+      "price": 12623.715,
       "change_pct": -4.4
     },
     "US_NASDAQ": {
       "label": "NASDAQ",
-      "price": 27195.574,
+      "price": 27193.34,
       "change_pct": -1.4
     },
     "US_SP500": {
       "label": "S&P500",
-      "price": 7766.83,
+      "price": 7765.36,
       "change_pct": -0.6
     },
     "US_DOW": {
       "label": "道瓊",
-      "price": 51238.94,
+      "price": 51231.64,
       "change_pct": -0.6
     },
     "VIX": {
       "label": "VIX",
-      "price": 15.58,
-      "change_pct": 3.4
+      "price": 15.41,
+      "change_pct": 2.2
     },
     "JP_NIKKEI": {
       "label": "日經225",
@@ -79,6 +79,30 @@
       "published_at": "2026-10-08T16:59+08:00",
       "importance": 3,
       "risk_score": 4
+    },
+    {
+      "title": "Key Pre-Market Highlights for U.S. Stocks | Fed's September Meeting Minutes Lean Hawkish, International Oil Prices Surge, Three Major U.S. Index Futures Fall - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNSFg5enBJODJacVRIc3d3U2pkWFo5UG5WNHlNR055Qmo0N28yaTFJSm16SnJqNl9MQmxEYXhPaFhMb05pQ1hMQ0FtVV9VdUJCWUdZSmVzNE9aN211MVJNRExkV0pSUmd6TDRuaE1RY2E5OUVORFZJYXgtT3dwQTNUdjdVcmQ1QWJnb0ZDa09oVGxaN0VVNEdZcXVyOW1jbUU?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-08T20:35+08:00",
+      "importance": 4,
+      "risk_score": 2
+    },
+    {
+      "title": "台股連假後挫咧等？美股3指數收黑、半導體股齊下殺 台積電ADR跌3%、台指期夜盤失守4萬9 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi9gNBVV95cUxNSVBnNVJCdXNQT1ZpeEFwZGJvWFhZRFNZYTk5OF82YkpoWU51MWViUjgyU0RXMkwtdUZSQ1owYWhUSE1GQkRjVEswNl8tSVUzYTFENTNmYlBlV0lDZjVJNzRuTENjdDJpSGZoNU1TTldvRGI5V0ZPSVRmVFZaVDVoN1luTTRSMnY3SC11cmJyaDJHazROMkNUUFpmUEllY2RabF9nc0tYbGxDUGg0ZFlMX1VOTkZ6ZG9sZXJtaEhZNVdRT1BlRzgzVkQzWFN1aUhZd0hMbU5ZSEotWmZFRlI3Wk5TQTF3M1MzRUo2Wkp6WnR1NzhNa0J5TXdDZWlYWHNvbnpvQWd0MGRHMGRzQV9zMzhBbElueEhJZ1oxeExTT1dZQ0dEcU95UTBCMEdwWUp0Z3lOSFRRa19kd2w0WWZuZC1CaFBlMnpCWThxWnpxRDZmN3NCaHF2dnhIY3FMaHoxN294MjR2cl95ZmY4UFZIdDNIcXVXTU45MlVrT3UwSmJTMGx4VmpXd0tVRDVudG13Q29vWFBrVEZ0WWR6bjA1UGVNTnJiMTJFa1o1bFdjcEcxdkFBY3p5dXlOLXdNcW5BS3ZIZElvRU0xTllKZTFYekhVclNBUkFaZm9Vc3ZZZnhGYUFzLTFEeVJtUlA3cG5uNVhxRnpR?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-09T07:05+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "AI股挫！費半大跌逾3％ 台積電ADR慘摔3.01％ - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxNdVd6bWxHODBoOGhKZ1oyWDRZMzMyek5OWlhWRFdhb0FsZDBhajlydEd6VG5DcXcwZDlDLUIxc0Q3NW5qUkZSREFMNndYMm9mMHg0a2JvVHBSaWlYbG9MTVkxa1BUd2plWWpIQXZuZkU2ZTFrVnV4bFdmTE50dU5ScEFhX04xdjA1b1lIakVKbzdLUm96VzNmM0VNRDVwMVZKb3dzclFJLWRuZHUzWTc5RnJHVTJQZjFoVEpobFJneEpvQ2JoRWdzVUVIZFZyQzdUZm9YQ2tBOGRRa0Z2R0JqTEVrX0pzTnhhWkhyN3J2UTM3MWFvSkNJV09TSQ?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-09T06:23+08:00",
+      "importance": 2,
+      "risk_score": 0
     },
     {
       "title": "Widely traded Chinese concept stocks decline broadly; 21Vianet (VNET.US) falls nearly 3% - 富途牛牛",
@@ -143,32 +167,8 @@
       "published_at": "2026-10-08T17:19+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "外資國慶前變臉台股摔破五日線！權值股軟腳台塑集團揪被動元件當抗跌大隊｜Yahoo財經掃描 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiuARBVV95cUxNdTRQRmdFRXh5Sl9nTmZwWDJrSmRjM0QwNE43dWtiSGhFQTFZNFVub2NxZHpvbEo2RjIwM0NTMUxtNEdEUUNEN2hlWWtJU1Ytal8wUk8zbThBaEQwVjVmSkFxVEZhRVdzenNVaFpDenFTdVYxSVdhQlJURXpWWGNFSmZVeGI5RXJVRjdaaHZSaDlHRjd4elNJbEMzM2pBc0xycUJXYWtabEpHeE8wZ2Q3ZFcxZjhUYkI1YmJpb0kxOXRuQjdlNWFmWlExOGp3bXVBYWQ4aXZkS3gwYXR4d25uRzFZM0wtOHAwdzA4Q1NwRTZYWFRpSS1SRjY4YTFWdU5GWGI0QjNDaHB1MWtmMnVWUWpCdExVaGg4bWt1cEV2UkM3ZUtUZ09FYVRyY0ZKQm5NMWdfT0hVRWlMMzhLVkV4R2RKQXBwakwyd3pqTEtrcngzblZYdGswcm5MYWNCMWcxZ0ZKaUJ2c3F2bExkUjVtYjFqNTg1cDlUQ0N3TUhCLWpkOXQxT2w2S0ZiZHdfUVUzR0ZrLXZwR3pFaWl5dWpsYTFjQm5wZThzekFPbUhLeXU3WnJUV1dNc3B4emtLN3MtRnBxTi1VRXZ4ejlNOTB3TWFOM1dZaVdQSzZtM0JaenNwaU1fT2JmZzNDQThJcXBMbzBMT0RnbWk3VHZ0UkZVNUpmbzVyaUdZTFlxMEF1UzBrTld3X0duTW5nYTJCX19EZmRoWGtTTjk0Um1ybDliUlROMHdsckh0?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-08T17:06+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "【Follow法人】外資連4天狂砍面板雙虎逾45萬張！台積電遭提款313億元 0050也中箭 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMizgNBVV95cUxPRU5EOVdUbGZoQTM5dzllZnlYUF9IQVBvWXhDY3MtVEhXam45UUl5T2RISUhLTC1pWWxhaWFkNlFTdmFtdV9nZ2p1U0lMYXFuWjBNTTBwM29HOFJqdGNFNUJYRDgxRDRfazFkSmJxTXpUcldtS0NGRTQ4Mkhva1EwSkNWbFFCdUpCZExYU2tEVl85YXRZRmhOZnpEbFJyYTJYek5PNGRmd2MtNUpfNWlqa01Xay1pZzVNd0Q2SFNLU2xEU2FHbnpXR2pGczF4a2VlaTZFNy1MU2x4OEJPM1pVRTg1dG9qbEo1Z3VBLWJHd1dJR1hFTXgzcXp0a3dCMUVsX3FiTkVsbFFWNDlqVGVvTTVrVFpDbVh6TVVJbnZjMEhzZHd2QmRUdjlhcjVPallFd3VIUHNoRHhyLUNIUHpSZk9zWVhfVGtJY2NMVjZSRDlELXRCbHB4WXlWZmJnbUFRY1NWRzN4RjcxV3hxOURxbUFXQ2p2eWM1eWQzZmtIV2pKOERRenNyNGJieHFVMjU3VEVqdGkxVlN5U21leVVWak1STXVVbHdDZVZ1b2RqTmREN0p4aEsxRUF4b3pkMEZkYzBfeUF3QnlwYVIya2c?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-08T16:37+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Hong Kong Market Quick Look | All three major indices declined, with the tech index down nearly 3% - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQa3MtWWJWSE5FSnJIaUx0Vl9MWnBGMHlyTm1GRDBIc29nZmtDanAwcDFwb1A3NEJIT0lJa2xFMEQ5enZZZnV6eTU5NXYwVEt4OHJYWTlxX1UxdnkyRWJIT2QyUE9NUm55cTVBdmRlcVlKQWhtYTZ6Z180X0tJNE9RZ3RHMlg1X2c1Tmp6ZF9kSVlSZHFfSVUzUWR3OC1jaXliUi1ITEtn?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-08T16:24+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-09T03:59:25+08:00"
+  "updated_at": "2026-10-09T08:08:28+08:00"
 }
