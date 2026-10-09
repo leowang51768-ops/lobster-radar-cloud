@@ -320,7 +320,7 @@ def main():
                 "signal_class": "none",
                 "latest_day": latest_day,
                 "latest_net_buy_lots": round(net, 2) if net is not None else None,
-                "display": f"{hist_grade}級｜⚪觀察｜{branch_name or broker}｜當日買超{net:,.0f}張" if net is not None else f"{hist_grade}級｜⚪觀察｜{branch_name or broker}",
+                "display": f"{hist_grade}級｜⚪參考｜{branch_name or broker}｜當日買超{net:,.0f}張" if net is not None else f"{hist_grade}級｜⚪參考｜{branch_name or broker}",
             })
 
         complete_pairs = sum(r["history_days"] >= TARGET_SESSIONS for r in influence_rows)
@@ -333,6 +333,7 @@ def main():
             "pairs_with_120_sessions": complete_pairs,
             "current_candidates": candidates[:20],
             "stock_branch_summary": stock_branch_summary,
+            "history_backfill_pending": [r for r in influence_rows if r["history_days"] < TARGET_SESSIONS][:200],
             "top_influence_pairs": [r for r in influence_rows if r["grade"] in ("A", "B")][:50],
             "rules": {
                 "current_signal": "同股同分點連買3～15日且累計>1,000萬元；成立後若轉為淨賣仍持續追蹤減碼/轉賣",
