@@ -279,49 +279,106 @@ def main():
         ), reverse=True)
         influence_rows.sort(key=lambda r: (r["grade"] == "A", r["influence_score"], r["d10_samples"]), reverse=True)
 
-        # Per-stock latest branch snapshot for the Ghost radar table.
-        # This is deliberately NOT a buy signal.  It only proves that branch
-        # data exists for the stock and shows the latest top buy branch.  The
-        # formal current_candidates rules remain unchanged.
+        # Per-stock recent-buy branch snapshot for the Ghost radar table.
+        # This is deliberately NOT a formal buy signal.  Before 120-session
+        # validation is mature, Ghost still needs useful provisional context
+        # instead of a blank cell.  Therefore use the latest 5 ACTUAL trading
+        # sessions, rank branches by recurrence first and cumulative net-buy lots
+        # second, and keep up to 5 branches per stock.
+        # Formal current_candidates rules remain unchanged and still override this
+        # provisional summary inside Ghost.
         stock_branch_summary = []
-        latest_buy_rows = db.execute(
-            """SELECT r.code,r.branch,r.broker,r.name,r.net,r.rank
-               FROM ranking r
-               WHERE r.day=? AND r.side='buy'
-               ORDER BY r.code,r.rank""",
-            (latest_day,)
-        ).fetchall()
-        best_latest = {}
-        for code, branch, broker, branch_name, net, rank in latest_buy_rows:
-            best_latest.setdefault(code, (branch, broker, branch_name, net, rank))
+        recent_summary_days = sessions[max(0, latest_idx - 4):latest_idx + 1]
+        if recent_summary_days:
+            placeholders = ",".join("?" for _ in recent_summary_days)
+            recent_buy_rows = db.execute(
+                f"""SELECT r.day,r.code,r.branch,r.broker,r.name,r.net,r.rank
+                    FROM ranking r
+                    WHERE r.day IN ({placeholders}) AND r.side='buy'
+                    ORDER BY r.code,r.day,r.rank""",
+                tuple(recent_summary_days)
+            ).fetchall()
+        else:
+            recent_buy_rows = []
+
+        per_stock_branch = defaultdict(lambda: {
+            "days": set(), "net": 0.0, "latest_day": "", "latest_rank": 999999,
+            "branch_name": ""
+        })
+        for day, code, branch, broker, branch_name, net, rank in recent_buy_rows:
+            key = (code, branch, broker)
+            item = per_stock_branch[key]
+            item["days"].add(day)
+            item["net"] += float(net or 0)
+            if day >= item["latest_day"]:
+                item["latest_day"] = day
+                item["latest_rank"] = int(rank or 999999)
+                item["branch_name"] = branch_name or item["branch_name"]
+
+        recent_by_code = defaultdict(list)
+        for (code, branch, broker), item in per_stock_branch.items():
+            inf = influence_map.get((code, branch, broker), {})
+            recent_by_code[code].append({
+                "code": code,
+                "name": stock_names.get(code, ""),
+                "branch_name": item["branch_name"] or "",
+                "branch": branch,
+                "broker": broker,
+                "historical_grade": inf.get("grade") or "觀察",
+                "status": "buying",
+                "signal_class": "buying",
+                "layout_active": False,
+                "provisional": True,
+                "latest_day": item["latest_day"] or latest_day,
+                "consecutive_buy_days": len(item["days"]),
+                "net_buy_lots": round(item["net"], 2),
+                "recent_buy_days": len(item["days"]),
+                "recent_window_sessions": len(recent_summary_days),
+                "latest_rank": item["latest_rank"],
+            })
+
         for code in sorted(stock_names):
-            row = best_latest.get(code)
-            if not row:
+            branches = recent_by_code.get(code, [])
+            branches.sort(key=lambda r: (
+                -int(r.get("recent_buy_days") or 0),
+                -float(r.get("net_buy_lots") or 0),
+                int(r.get("latest_rank") or 999999),
+                str(r.get("broker") or ""),
+            ))
+            branches = branches[:5]
+
+            if not branches:
                 stock_branch_summary.append({
                     "code": code,
                     "name": stock_names.get(code, ""),
                     "status": "none",
                     "signal_class": "none",
-                    "display": "分點資料缺失",
+                    "display": "近期5交易日暫無買盤摘要",
                     "latest_day": latest_day,
+                    "provisional": True,
                 })
                 continue
-            branch, broker, branch_name, net, rank = row
-            inf = influence_map.get((code, branch, broker), {})
-            hist_grade = inf.get("grade") or "觀察"
-            stock_branch_summary.append({
-                "code": code,
-                "name": stock_names.get(code, ""),
-                "branch_name": branch_name or "",
-                "branch": branch,
-                "broker": broker,
-                "historical_grade": hist_grade,
-                "status": "observe",
-                "signal_class": "none",
-                "latest_day": latest_day,
-                "latest_net_buy_lots": round(net, 2) if net is not None else None,
-                "display": f"{hist_grade}級｜⚪參考｜{branch_name or broker}｜當日買超{net:,.0f}張" if net is not None else f"{hist_grade}級｜⚪參考｜{branch_name or broker}",
-            })
+
+            primary = dict(branches[0])
+            primary["branches"] = branches
+            primary["branch_count"] = len(branches)
+            primary["other_branch_count"] = max(0, len(branches) - 1)
+            primary["total_net_lots"] = round(sum(float(x.get("net_buy_lots") or 0) for x in branches), 2)
+
+            label = primary.get("branch_name") or primary.get("broker") or "分點"
+            days = int(primary.get("recent_buy_days") or 0)
+            lots = float(primary.get("net_buy_lots") or 0)
+            more = primary["other_branch_count"]
+            parts = [
+                "暫定",
+                f"近5日出現{days}日",
+                label,
+                f"累計買超{lots:,.0f}張",
+            ]
+            if more:
+                parts.append(f"＋{more}")
+            primary["display"] = "｜".join(parts)
+            stock_branch_summary.append(primary)
 
         complete_pairs = sum(r["history_days"] >= TARGET_SESSIONS for r in influence_rows)
         result = {
