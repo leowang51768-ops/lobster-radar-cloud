@@ -1,5 +1,8 @@
 {
   "stocks": {
-    "8039": "台虹"
-  }
+    "8039": "台虹",
+    "1301": "台塑"
+  },
+  "updated_at": "2026-10-10T00:37:32+08:00",
+  "source": "WallStreet-Ghost manual add"
 }
