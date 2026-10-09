@@ -1,3 +1,4 @@
+# branch-tracker universe refresh trigger
 """Fixed AI-industry stock universe for every Lobster Radar scanner.
 
 The original user-supplied list contained 161 unique company names.  CPU-platform
