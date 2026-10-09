@@ -15,7 +15,7 @@
   "complete_collection_days": 1,
   "counts": {
     "ranking": 19616,
-    "history": 39586,
+    "history": 46786,
     "queue": 2719
   },
   "review_stage": "資料累積中",
@@ -31,5 +31,5 @@
   "errors": [],
   "history_errors": [],
   "history_coverage_complete": false,
-  "database_bytes": 12271616
+  "database_bytes": 13082624
 }
