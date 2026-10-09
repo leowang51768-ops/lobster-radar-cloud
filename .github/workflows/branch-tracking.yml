@@ -5,6 +5,7 @@ on:
     paths:
       - "branch_tracker/final_result.py"
       - "stock_universe.py"
+      - "branch_tracker/data/extra_universe.json"
   schedule:
     # 台灣時間週一至週五22:00；與雷達通知流程獨立
     - cron: "0 14 * * 1-5"
