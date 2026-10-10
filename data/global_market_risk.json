@@ -15,9 +15,9 @@
     "⚠ 全球市場風險｜HK Market Midday Review | All three major indices rose in tandem, with the Hang Seng Tech Index",
     "⚠ 全球市場風險｜Hong Kong Stocks in Focus | PCB-related stocks lead the decliners, amid market rumors of supply",
     "⚠ 全球市場風險｜Gold prices rebounded, boosting gold stocks; the central bank has increased its gold holdings f",
-    "⚠ 全球市場風險｜French sovereign debt is the first casualty, followed by U.S. Treasuries? Is the global market ",
     "⚠ 全球市場風險｜Sharp fluctuations in gold and silver prices have fueled precious metals trading! Related reven",
-    "⚠ 全球市場風險｜Trump said Putin agreed to supply diesel to the global market, and OFAC issued a temporary lice"
+    "⚠ 全球市場風險｜Trump said Putin agreed to supply diesel to the global market, and OFAC issued a temporary lice",
+    "⚠ 全球市場風險｜影》綠怕政績被「整碗端走」？前台積電工程師挺松機遷址：百年難得機遇"
   ],
   "markets": {
     "US_SOX": {
@@ -113,14 +113,6 @@
       "risk_score": 2
     },
     {
-      "title": "French sovereign debt is the first casualty, followed by U.S. Treasuries? Is the global market feeling the impact of Japan’s rate hike? - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNbkVNc28taUJPSXczazFEX09rcUtfU2hGdmVoNUpPTzVXbnpSQUd2VXRyRnJiSUhuR0pQSjd1ZXoxM1hUYXZKRGhLb1JaejNGaGFZY3hkUGpNQno5c05XN0NUMlNJMjVYb1ktcjhQN25kRVdvZGlPbGJMZDAzbllaREl5QmVvWDhtT0doZkZlaGNycHZiNW9ELUl2RFhzQTFXckxR?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-09T09:07+08:00",
-      "importance": 4,
-      "risk_score": 2
-    },
-    {
       "title": "Sharp fluctuations in gold and silver prices have fueled precious metals trading! Related revenues at global banks are poised to hit record highs, with JPMorgan posting $700 million in profits for the first half of the year. - 富途牛牛",
       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxORTR6emlvVG5ZV1kzcnk4TEI4RUF5TkgwZ1l2N0l4RE81RDlRVmNKTnlsdDJNNGRvWDE2dUstRmt1YmlkdkJQZHNmLVc1Vm1JRzlHcmtLSkxoN25QV1VwTDZjYlRIR2hDcEkyQlhfckhpZlpRTk1oRGhWV1pxbzl4YzVQbEgyQTUzdFh0clhFN29LekRaTkpYYW9PYzMzV21wNktZSFdDRnRvLU1p?oc=5",
       "source": "富途牛牛",
@@ -137,10 +129,18 @@
       "risk_score": 0
     },
     {
-      "title": "台積電馬斯克／馬斯克：台積電只能分租 Terafab將自營 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMizAJBVV95cUxPMUdaNzcyWnJLQWUyNjRPd1QtdDVSb1gwOFA0OTJNalUzYWFhTHZycjJCcFFuQ1RucktiQkRrQjJYd2pDQ1dmWnVMLW0tTHZpYUE5elZKdXY5eGhXSzdNS1VWQUNmZ1JlbjdXY0sxOUlFY2V1NFc5Y3NTcXdqUDMzWDZtM3VTQzdKc3BSMWtGXzFaWGRGSkZDM1NNWEdFSGpweFFBSi1WWUM2Z01GNzBPbUZxZWtIcVVQUlZ2RnVKSVgwX1BCZzJpczZkVGI3ei1UeWQxa3FYcWRFY2lBMGktdl9vMDBxX0tpTnFqUzBwTURKd2NQOWxPRmFBMnBLVElYbnVSXzJEU2JYQTZjWkpaeno0SWR5UDVKR2FMRFlWeUxvSjByTFBrTWxvSE9OdFl0QVEwaExUZW54ajNSU2M0TmFoOWVBVTBpRFVYcw?oc=5",
+      "title": "影》綠怕政績被「整碗端走」？前台積電工程師挺松機遷址：百年難得機遇 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiqgNBVV95cUxNeXY5QnVBT0QwMG5zYV9Zd3Z2bUd6NW9pSEZ0clFwUUlXTjNqV2ZyRlQ3U3BDZ213SXFqUmpKWFNSU3VmWnBsZG1FU0ZCdURhdkF5NFFJRXpyekVmSU5weDJiYnhSLU9lS3JIdnJSa1JOeC1kZW1HcHV0ZUxSelhWMm8tdG5oWjlXNml0TjY1QWpDMFBuNUhaekEwYXBqRkFBUnI2YXc0dEFlWWxfekZldktwZVRGOElOZ3NmT1NqN3lYaHFhN2dsUmltZmxvUTJpTVZLX1pnc3M4TGpHRV8tMktMTTRUYlNhdG5mY3BVNXZMa3YtLTR6enlfcHVlNG82dlZvVGpGWEtDTXNSXzFZbUp5NFlrVHBfWGF4VlB2MldUSkQtcHRQNlNQMHpmeWpOS05GZkNqR1VUZ0JFWmtDUVhKTHB2NmVONGxxNTg3WmZZemF1UVVYRnA4Mi1nN1RpNU15aThrM3VGY25Bdk5tWEhRSnFqZXI4VVNDUFdVYzZ3TlFrSjlFMW5hZ2dlaHppYmptc3F6REpRcXBNaTFnY3l3UEdsVzdoVHc?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-10-10T06:28+08:00",
+      "published_at": "2026-10-10T08:57+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "市場緊盯通膨數據、Q3財報！美股3指數收紅 台積電ADR跌逾1% - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi5AJBVV95cUxNYzlpMVNZc2o1a1dBOHB2Zy1hZ25vZ0JiVjIwT0cyU2xiblA3bzRMLWhIMjl2ZWh4WmwwdGxtVUNfX0RCenVFcm9hdGI3NkxuNFZvQjlrbk1tOGk1U3EtOHlFb0ViZHNEY1NmRDF3Y1FsM0U0bGVRdnRHc0RTWFc5OWNaVmxFTWV4aDZiczQyT2J3d1JieTNDVFV0VkdBNUM0QlJiY1pBa0lKNl9MdkJVYi1ZbG8yZ3VyZWFkVzBOaWVnOUhGRFB0RVJmRzNpLWt3cjh5NE9Jakh1Y2hZSi1ZcUlrVzFxR3MyZXRVSk1kamRWZFViZEZuSlJ6cG9BZTg5MUd4WG1GaTVUdmRNa0tzVV9PcDRUV252bzhDRmtkb2hrSVM4TXlFN1ExVDVJMHBTVVRJRm1iNEhIVFFuYkdwdnNCU2s1dTBpU1lVYzJEZEoyLXh4ZFdmaThOTWJTanlNRWJUTw?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-10T07:40+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -170,5 +170,5 @@
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-10T06:49:26+08:00"
+  "updated_at": "2026-10-10T09:56:23+08:00"
 }
