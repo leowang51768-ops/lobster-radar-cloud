@@ -1,23 +1,22 @@
 {
   "schema": 1,
   "risk_level": "red",
-  "risk_score": 6,
+  "risk_score": 3,
   "risk_reasons": [
     "費半明顯下跌",
-    "韓股明顯下跌",
-    "出現重大風險新聞"
+    "韓股明顯下跌"
   ],
   "ticker": [
     "⚠ 全球市場風險｜費半 -3.8%｜NASDAQ -0.6%｜日經225 -0.0%｜KOSPI -4.5%｜台股加權 -1.0%｜恆生 +0.3%",
     "⚠ 全球市場風險｜美債10Y 5.24%｜VIX 14.8",
-    "⚠ 全球市場風險｜Southbound Capital Flow | Southbound capital recorded net purchases of HK$291 million; southbou",
-    "⚠ 全球市場風險｜Five Key Signals Warn of Market Risks! AI Bubble and U.S. Treasury Debt Crisis May Be Convergin",
     "⚠ 全球市場風險｜Sharp fluctuations in gold and silver prices have fueled precious metals trading! Related reven",
     "⚠ 全球市場風險｜Trump said Putin agreed to supply diesel to the global market, and OFAC issued a temporary lice",
+    "⚠ 全球市場風險｜Q3營收1.49兆！台積電法說前要押嗎？專家潑冷水「短線不一定漲」揭獲利時機",
+    "⚠ 全球市場風險｜怕台積電買在高點？大咖法人再升目標價200元 「3大利多」穩占霸主地位",
+    "⚠ 全球市場風險｜美股100%想轉戰台股！他擬改「6：4配置」擔心太晚進場 掀網論戰：台股無腦歐印",
     "⚠ 全球市場風險｜台積電迎勁敵？輝達傳考量導入英特爾先進封裝 最快2028年下半年啟動",
     "⚠ 全球市場風險｜滿手台股ETF！他想調整持股改抱台積電 網曝關鍵：這2檔擇一",
-    "⚠ 全球市場風險｜台股創高「雙十前夕」崩近500點！投資人慌了 哲哲喊話：幸福是等來的",
-    "⚠ 全球市場風險｜高股息越領越心虛？台股5萬點前「資產體檢4件事」 內行示警：退休金別被通膨吃了"
+    "⚠ 全球市場風險｜台股創高「雙十前夕」崩近500點！投資人慌了 哲哲喊話：幸福是等來的"
   ],
   "markets": {
     "US_SOX": {
@@ -37,7 +36,7 @@
     },
     "US_DOW": {
       "label": "道瓊",
-      "price": 51654.9,
+      "price": 51654.95,
       "change_pct": 1.0
     },
     "VIX": {
@@ -73,22 +72,6 @@
   },
   "active_news": [
     {
-      "title": "Southbound Capital Flow | Southbound capital recorded net purchases of HK$291 million; southbound investors again divested from AI hardware stocks while increasing their holdings in AIA (01299) by over HK$1 billion - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQVzVLYnhqd3FJYVFmLWFUOGowNVZaQzVrTWh5WVNuUndlbTJOVWRJd28xRnNqRUVEZWtJdVV4VFJHWkRnTmlpbFFuS2FkY2YyR3VZcWo4UmwtR2MzSzBaXzFzVEZ2RlQ3QmhZZ241T3hacExGOEUxMGI2UEdrSVgtdV82LUt5R1lKWVZGUG9WOGpxOTZHd2o5cnhqUFIxaFkzUEdBd3pUM2JjU1RQemZJX0w2b0M?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-09T17:52+08:00",
-      "importance": 5,
-      "risk_score": 4
-    },
-    {
-      "title": "Five Key Signals Warn of Market Risks! AI Bubble and U.S. Treasury Debt Crisis May Be Converging - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNalZLeEtid0RyVWZQS2lKalVNLXVpRUY4cXhleWgxSC05R3JqZHVYczFTYk5OdF9TNndKTDQ0NGhjWFJRdG9ZVVdhOEJ3dVpLUG1Xd3pyU044Y1ZUWExpODBBT1JoSmloRDh3ZzhIaVI0V0VWY0Y5bnpVTlNDWlhucy00bmQ3MXBDdFp5Sm14eHdLUG1OUElGMUpB?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-09T16:53+08:00",
-      "importance": 5,
-      "risk_score": 4
-    },
-    {
       "title": "Sharp fluctuations in gold and silver prices have fueled precious metals trading! Related revenues at global banks are poised to hit record highs, with JPMorgan posting $700 million in profits for the first half of the year. - 富途牛牛",
       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxORTR6emlvVG5ZV1kzcnk4TEI4RUF5TkgwZ1l2N0l4RE81RDlRVmNKTnlsdDJNNGRvWDE2dUstRmt1YmlkdkJQZHNmLVc1Vm1JRzlHcmtLSkxoN25QV1VwTDZjYlRIR2hDcEkyQlhfckhpZlpRTk1oRGhWV1pxbzl4YzVQbEgyQTUzdFh0clhFN29LekRaTkpYYW9PYzMzV21wNktZSFdDRnRvLU1p?oc=5",
       "source": "富途牛牛",
@@ -105,10 +88,34 @@
       "risk_score": 0
     },
     {
+      "title": "Q3營收1.49兆！台積電法說前要押嗎？專家潑冷水「短線不一定漲」揭獲利時機 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi1wJBVV95cUxQX3c2VjU0Z3ZwZVpySG1BYzBfbG1zZkFPbFE4X1luZHBUS0VKUk5DWE4tMEVZS0xXRWctb0JZMDJWMVRla3VhVzltVnN1QTBWSTF1NUFrYi1hRXNiTlFMelpxY2Vmal9IVTB3Q0piQmtuRF9zenZseG1iMHA5dmc3blhKaHE0QUthMUh6dmlzWVN6VldhUjNhbC1ieEQ1SFYtNGh0WTlPa3BpMUY3TGVCQ1dXZVBnLXdPSVFCOGdabVMtREN2LWtNVXZfUjJKeXNzYjlSMVBvSXlIQ3MxMHM2Y2JZbVd4WWl4eUQ4M19ndDBMZ3otajRPTXpld2xlVkQtOW8wZlEwdlZaTnJMYWJyTzRPM1hNa09FeDk0bjZJT0JXWTc3T1Q4MGw5V2dNZFFBTzF5ZFZhaWFlcFE4akRqdEppRGx1ZnFiOTM2b0o2VmZWQXN4WUdn?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-10T20:15+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "怕台積電買在高點？大咖法人再升目標價200元 「3大利多」穩占霸主地位 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiqANBVV95cUxNeWViT2xtQnh5N1Nsb2RIUnRBSWZ6REpjS3ZBR1NjR1FTbWxUcFZrMXJnNFJDd0R4UWN5alF6RlFYVElwNjctOWJUZEUzWFh2NWNFc1hUdDREX2FnRHRlWXFZbXZ2TFdQUEJ0RzJKX19fNjdHV2Zfa29lSTVhdkxxeGpXUmJTNVk1QWF1M3FTMkJhOGVmMjJiN0E1QVlxYzdIOFgxSkFROVNKT19Wa1NuZVdCZmhYaTVfU1ZDbGlIMzJPeFc3aGFYSF9nQ3Fja1FsQTZYNFI2VFdoVVJQRHFRdDNBM3ZYakR1bHplZDVJT04xT1JmQjl2SFpZYkZZWXQ1ZW5VR2hpRC1TSzRoWmREVnVFa3gzU3lYdnpQZmJvYnNZcnFGNGNZMk54WGJyRm1PeEZ2X1htUG9GQ3FDMzcwQnVBc1NiZERGNHpyZ3pkb3RBRXJWV2RyRTExTG5jVTlaZnEwUmlOVWNWMmkteFVlbEtIYmlfVDJPTmI0cmRaMnUyT3BwYkRVOUt6Z3JCM0NfWGlUY1pwN0xrQ05lcFhkWGd3cDZxOF9h?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-10T18:45+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "美股100%想轉戰台股！他擬改「6：4配置」擔心太晚進場 掀網論戰：台股無腦歐印 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxPcmJFSUl3Y250WE5sRE9yZThTdEpCQ3diLTBhNnlvS1g4LU1YTmpCb0JBcHZQVTBUOV9oZDVodHR2eHZOQnhJNllCV1ZWdzJOVlg4c2pYZ3JkVlR3RFZfeFdKNkxFOWFhYnM1YnFFN2kwRy1wNk9QMkhNcERCcVhGQ2w2dUFLN3FaRVV1NWJlTGlFcF9CUUNhSERlcEp5c3BQN0Y4ZXdjWUx6MkVITlRGUDJnX082UzduTWxOSHA1TFRHU2xLd1ZiNFJPTkZvNGltaDZLWG9sS0V2V3lDZXJlRDJZdHFKUU0tMERVUzZZMGRUenQyRHgw?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-10T16:37+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
       "title": "台積電迎勁敵？輝達傳考量導入英特爾先進封裝 最快2028年下半年啟動 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMiswNBVV95cUxQU1Rud1REVjQ3V2dMTXBvbzFIR3pJRFA1OWxOdW5PYTBPYUVhUTdpUVZrWmIyRl96ZThwb18xU1BoNEdtbThhcGk5dTdPQWFER0ZQbzBKZmpMeEtCM1I0ZWpKUnpYSXRJbWMxbTU4eHFic1dzYWFKN0swU1pGNkt4aEN5V0JZRTRiYjlQVmxPVFM2Wk1yVjktNnBJc211Q1dmdk5jbGxtTzlBdm1VZ0NwMi1ERDNrRFBDdXNGZ08yQ2pFOFN2X281RHRTT3dtTnZFMkdwbVBnWi01YnhrZm13Zkd1UFVBVDkyQ2JuZ0Uza2tTYmcwUm5lQV9iTUlmVmpITVNzRUxiSlR2bXVxeGlLUl9zNzA3cHE0c0tOOFVsQ0tqM0tzbXpNRjMyeDB3MG5LVFpsMk51aUdNaVFUQVJZQ2pkRnJOVGd1WGFaTXltaFB2bmNySFRuLS1UcjQwQTJaaFB1X0d1OThRY002X3ZmX0doN2ZheXZwVzROS1Q5VkZKMjdQM0tjcEp3WFpCWE1wRlBtM2V3VzlIZjZOUzlvR3BaQS1FUUJrQjd4LTJmWDQ2Rmc?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-10-10T14:58+08:00",
+      "published_at": "2026-10-10T15:02+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -137,6 +144,14 @@
       "risk_score": 0
     },
     {
+      "title": "台股國慶前五萬大關測試！12檔台股ETF規模仍創高、高息型吃香 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMihANBVV95cUxQcmtjWmw3aW1UX3QtZllBMGk3YnY1anh2c2VpcDl5dWNsZV9sUGpmYkN2TXFNMkVhYlkwaGdzTHVJeEVpV0dfLURMc05xTXNfMmlaR3RoRWRkY18yM1hLWEEyUVA5cEZnd0xJMzR5c3FJaW8ybTRFeEpuNUdLei1uZ0Vqdm5NU1o3dlBObEZYMzZmb05sNFhjeWpkbXdMZ0xIYS0yNmJZQTM4WEJqXzVZemJvbWxzRFZfM2VSOFRvQVYtN2RtdFVmVHFBLWUyeDNlRm9aLWpCcG9nc053ZGV3TDBKYUxGblZHcTl6NFJ6VmFKR3BxdFBjSUo2ZjRmSXpUbGQzYk1vX3pfRzVLaDA1VW9RTENmb0lGb3lPSXg3SzZleU9jb2N4VGRKS2xkczl1YjNjQndTdjdJaW1nNWRQRUhQSnl5dzIxeGhKajVGb1JhNVlLTHhlcV9RVkJMMm1oQzk3MzhaQ2ZKQWdyRDRrbXN5NGFQTmJXQnlVcUVVU0NkZFZx?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-10T12:01+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
       "title": "台股5萬點震盪選股怎麼選？專家點「6大黑馬股」本益比10倍以下：「它」年增率穩定維持 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMikgNBVV95cUxOWWRtRmNiYlY1SWcwem8xNnNMWl8tN25Xa1hIRTBYNW1XTVNyVVRtdEE5SXdSZFE1LXVNa2JlWi1jS3VtLUtLWjVwN3RscHRUTTBUV2I4S0FBVDJNbjdwZkxZR2VxR2tCNXZlbllUZnVEMThhTEtvUXpDZS01UDh0UF9yaHJwUzhubWhSMHpVdWxUQXBVMDNiYzdrd1lldl9kcEItRUtWU2RWTFdySVNXTmRGbkRtR2ZvNjJVT1phSDhaX3ZKQ3RqczlreWtWaHlQZVFENVlZS3ZPSldocWxncDlwWEFBYkVOM1dzNElJQmI2M1dlVWw2MU4wc3VjLTFid0J2MDRja2t6Z3pEY00ta1ZFaG0tSEZTS2VRcDZqYzI1ZTJuNEkxb0dtbl9Ca281QkMxOU1MOTFNNGpXZHRKd1NMRF8tUFpwNHVjRjF0Z0wzWGFzVTF6YUtVSG1BZFZlWnpFa0NZT3EyWG9VaGZPa20xS3Z5c1V5U0RJQ2c1UmdfRGpvQzRZTHhFdWpEMjFNcVE?oc=5",
       "source": "Yahoo股市",
@@ -151,24 +166,8 @@
       "published_at": "2026-10-10T10:53+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "市場緊盯通膨數據、Q3財報！美股3指數收紅 台積電ADR跌逾1% - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi5AJBVV95cUxNYzlpMVNZc2o1a1dBOHB2Zy1hZ25vZ0JiVjIwT0cyU2xiblA3bzRMLWhIMjl2ZWh4WmwwdGxtVUNfX0RCenVFcm9hdGI3NkxuNFZvQjlrbk1tOGk1U3EtOHlFb0ViZHNEY1NmRDF3Y1FsM0U0bGVRdnRHc0RTWFc5OWNaVmxFTWV4aDZiczQyT2J3d1JieTNDVFV0VkdBNUM0QlJiY1pBa0lKNl9MdkJVYi1ZbG8yZ3VyZWFkVzBOaWVnOUhGRFB0RVJmRzNpLWt3cjh5NE9Jakh1Y2hZSi1ZcUlrVzFxR3MyZXRVSk1kamRWZFViZEZuSlJ6cG9BZTg5MUd4WG1GaTVUdmRNa0tzVV9PcDRUV252bzhDRmtkb2hrSVM4TXlFN1ExVDVJMHBTVVRJRm1iNEhIVFFuYkdwdnNCU2s1dTBpU1lVYzJEZEoyLXh4ZFdmaThOTWJTanlNRWJUTw?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-10T07:40+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股處置新制3箭 10日起「關禁閉期」縮短 - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9WTWNQRzJXWEZ0X2tiVHBLNEp1RjhaY0h1TEN5WDcySzZDRV9MRWVwUUVOdVkzTlE2dGh0dEVxT1dTaUxsRlBTOWpYREN0UFZsZWYzdXpzOUE?oc=5",
-      "source": "自由時報",
-      "published_at": "2026-10-10T02:26+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-10T15:54:20+08:00"
+  "updated_at": "2026-10-10T21:59:48+08:00"
 }
