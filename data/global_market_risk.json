@@ -1,22 +1,23 @@
 {
   "schema": 1,
   "risk_level": "red",
-  "risk_score": 3,
+  "risk_score": 6,
   "risk_reasons": [
     "費半明顯下跌",
-    "韓股明顯下跌"
+    "韓股明顯下跌",
+    "出現重大風險新聞"
   ],
   "ticker": [
     "⚠ 全球市場風險｜費半 -3.8%｜NASDAQ -0.6%｜日經225 -0.0%｜KOSPI -4.5%｜台股加權 -1.0%｜恆生 +0.3%",
     "⚠ 全球市場風險｜美債10Y 5.24%｜VIX 14.8",
-    "⚠ 全球市場風險｜Trump said Putin agreed to supply diesel to the global market, and OFAC issued a temporary lice",
+    "⚠ 全球市場風險｜台股違約當沖占6成 立院籲檢討",
+    "⚠ 全球市場風險｜HK Market Barometer | Hang Seng Index Rebounds Above 24,000 Points as Sentiment Improves in Lin",
     "⚠ 全球市場風險｜台股ETF除息潮最後買進日一次整理6檔新股申購開跑美股Q3財報季開跑！台灣油價再凍漲｜投資早知道",
     "⚠ 全球市場風險｜Q3營收1.49兆！台積電法說前要押嗎？專家潑冷水「短線不一定漲」揭獲利時機",
     "⚠ 全球市場風險｜怕台積電買在高點？大咖法人再升目標價200元 「3大利多」穩占霸主地位",
     "⚠ 全球市場風險｜美股100%想轉戰台股！他擬改「6：4配置」擔心太晚進場 掀網論戰：台股無腦歐印",
     "⚠ 全球市場風險｜台積電迎勁敵？輝達傳考量導入英特爾先進封裝 最快2028年下半年啟動",
-    "⚠ 全球市場風險｜滿手台股ETF！他想調整持股改抱台積電 網曝關鍵：這2檔擇一",
-    "⚠ 全球市場風險｜台股創高「雙十前夕」崩近500點！投資人慌了 哲哲喊話：幸福是等來的"
+    "⚠ 全球市場風險｜滿手台股ETF！他想調整持股改抱台積電 網曝關鍵：這2檔擇一"
   ],
   "markets": {
     "US_SOX": {
@@ -72,11 +73,19 @@
   },
   "active_news": [
     {
-      "title": "Trump said Putin agreed to supply diesel to the global market, and OFAC issued a temporary license. - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNN2VPWkxVc0VsTGtWLWlNTU9QSkhUUEpvZTczM0RqS0lndDlNSkhieVl5ZzBnQzJIY2o0QjRwZGpnVEFRRmZCOG5CWGpVaWE1N3Q4Y09qQWxoMFNJNm9TM0xBcWhKaDlxWFJDTEk2U2wzSHd6b0NJc1NTaWQyQVNPbWhkU1F1bklaNDlZU0c1VEtad0tXcUdpR05HMVdOQQ?oc=5",
+      "title": "台股違約當沖占6成 立院籲檢討 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxQdWV3Q2xfWFowOVJRdnRwYzZ6VkFaZkQ2WU9VbDlrYlAtVDllTFFzMEVtMHpPN0hXNUdGOWVBREk4YTNhakhVclNCQmdMak5ZbnVZMTZiT29UVlFSOXhMTGlHamU0b3g3Rkdvd2ljX2UwM1Z0cng1QnFWZmxVUXNRS05kblRzYWNubmVwNGpYRk1JWGU5SGxQVldqR1dUOG9kY1hvdDdPc0hmOUlDRUhLX0M5YXBJVkZIaFdoVkk5N2ZhMTFLZ1REbUx4UkoyeXBSVDA1XzhfU1cxLXFQS21GN1RBUndHa3RoVGVfM1ZWWFZteV8yOGVYb2x3?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-11T04:10+08:00",
+      "importance": 5,
+      "risk_score": 4
+    },
+    {
+      "title": "HK Market Barometer | Hang Seng Index Rebounds Above 24,000 Points as Sentiment Improves in Line with Overseas Markets - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPcFBqbmtfWFVxSEMyd2ZERHg5SktYRkRoMTZrOU9BbGd1bVJsZVhNQVR6cm5yMUtxM09BY2F0SmI5UUhNMXRCVkFxUHVqS2pvNzQ0b0NwblFHSXdNaFE0Y011T3RZcGFBSnk2cFM2WXBXMjhKTV9kSjhhNkQwMzgtSlgteGdLT1VQUFowaTIyd1N4S0VxVmFydERlZEZXUUl5b183aS0wV0s3UQ?oc=5",
       "source": "富途牛牛",
-      "published_at": "2026-10-10T03:28+08:00",
-      "importance": 3,
+      "published_at": "2026-10-11T02:38+08:00",
+      "importance": 2,
       "risk_score": 0
     },
     {
@@ -115,7 +124,7 @@
       "title": "台積電迎勁敵？輝達傳考量導入英特爾先進封裝 最快2028年下半年啟動 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMiswNBVV95cUxQU1Rud1REVjQ3V2dMTXBvbzFIR3pJRFA1OWxOdW5PYTBPYUVhUTdpUVZrWmIyRl96ZThwb18xU1BoNEdtbThhcGk5dTdPQWFER0ZQbzBKZmpMeEtCM1I0ZWpKUnpYSXRJbWMxbTU4eHFic1dzYWFKN0swU1pGNkt4aEN5V0JZRTRiYjlQVmxPVFM2Wk1yVjktNnBJc211Q1dmdk5jbGxtTzlBdm1VZ0NwMi1ERDNrRFBDdXNGZ08yQ2pFOFN2X281RHRTT3dtTnZFMkdwbVBnWi01YnhrZm13Zkd1UFVBVDkyQ2JuZ0Uza2tTYmcwUm5lQV9iTUlmVmpITVNzRUxiSlR2bXVxeGlLUl9zNzA3cHE0c0tOOFVsQ0tqM0tzbXpNRjMyeDB3MG5LVFpsMk51aUdNaVFUQVJZQ2pkRnJOVGd1WGFaTXltaFB2bmNySFRuLS1UcjQwQTJaaFB1X0d1OThRY002X3ZmX0doN2ZheXZwVzROS1Q5VkZKMjdQM0tjcEp3WFpCWE1wRlBtM2V3VzlIZjZOUzlvR3BaQS1FUUJrQjd4LTJmWDQ2Rmc?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-10-10T15:02+08:00",
+      "published_at": "2026-10-10T14:52+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -158,16 +167,8 @@
       "published_at": "2026-10-10T11:16+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "台積電法說會10/15登場！A14量產、馬斯克合作有答案？市場最關注明年「這件事」 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMilgNBVV95cUxQbUVKX2xDWnlmQUY2dGdmbmJYT25CWkZWM0VGXzZFTWRXYzY5djl5UEpmb1NMblpfWEZYUGpPXzIwVGdkSzU3Z29NaUhTOXNrMmtUZlBDbHd0SUNuZVFISkwxT3l4RGR5LUtISWhCRkFmSzJfTUUtR0gzZF9HQ09SVXZzRnJSU3o3Q1p2RC00cE45Y084VERjaThiUWVMZU5iQ1ZxU29jUGc4WDA3OW9SVVVHMVlWd1RzZ2JUS3huaFJiaTRIYkkyV3hTZUFPOXlMTHRvTW1OMjBodHFqWDcwM3pkckdTUHNmdzdva0Z3VGlFQTNiYy0wQlZmRDdmOFNuUnRmZ1dFRTlCUVdSSlRSbkdualZCLThrQlNRRndySDUyd0VveVRwUHhBSGV5WVgtSDFhb1JtVG5EU2dPbTRmZC1GRWtxOGQtcnctaUNEOFFhLTdXbXhxZ0JiVjNMeDZYV0kwai1CTTJpal9nbURNVU1fUjA3b2hDcXNvRW03UEVYTC1XYnpRRlpTaTZ2U1ZBMGk0NVNB?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-10T10:53+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-11T02:14:02+08:00"
+  "updated_at": "2026-10-11T05:42:59+08:00"
 }
