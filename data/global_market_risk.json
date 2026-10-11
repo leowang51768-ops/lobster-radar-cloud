@@ -11,13 +11,13 @@
     "⚠ 全球市場風險｜費半 -3.8%｜NASDAQ -0.6%｜日經225 -0.0%｜KOSPI -4.5%｜台股加權 -1.0%｜恆生 +0.3%",
     "⚠ 全球市場風險｜美債10Y 5.24%｜VIX 14.8",
     "⚠ 全球市場風險｜台股違約當沖占6成 立院籲檢討",
+    "⚠ 全球市場風險｜台股「6檔新股抽籤」輪番上陣！最高價差拚賺6萬元 「2檔」申購進入倒數",
     "⚠ 全球市場風險｜HK Market Barometer | Hang Seng Index Rebounds Above 24,000 Points as Sentiment Improves in Lin",
     "⚠ 全球市場風險｜台股ETF除息潮最後買進日一次整理6檔新股申購開跑美股Q3財報季開跑！台灣油價再凍漲｜投資早知道",
     "⚠ 全球市場風險｜Q3營收1.49兆！台積電法說前要押嗎？專家潑冷水「短線不一定漲」揭獲利時機",
     "⚠ 全球市場風險｜怕台積電買在高點？大咖法人再升目標價200元 「3大利多」穩占霸主地位",
     "⚠ 全球市場風險｜美股100%想轉戰台股！他擬改「6：4配置」擔心太晚進場 掀網論戰：台股無腦歐印",
-    "⚠ 全球市場風險｜台積電迎勁敵？輝達傳考量導入英特爾先進封裝 最快2028年下半年啟動",
-    "⚠ 全球市場風險｜滿手台股ETF！他想調整持股改抱台積電 網曝關鍵：這2檔擇一"
+    "⚠ 全球市場風險｜台積電迎勁敵？輝達傳考量導入英特爾先進封裝 最快2028年下半年啟動"
   ],
   "markets": {
     "US_SOX": {
@@ -79,6 +79,14 @@
       "published_at": "2026-10-11T04:10+08:00",
       "importance": 5,
       "risk_score": 4
+    },
+    {
+      "title": "台股「6檔新股抽籤」輪番上陣！最高價差拚賺6萬元 「2檔」申購進入倒數 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi1AJBVV95cUxOQU4xRHpUWVc1NWtNYU92UEpLWHBQbGlYV0xGeU1udXp2R2V6RHZuclBneGh2ai1ESU5SMURlMnlraVB2d2IwaFFQNzVPOElXYjN6QUJQWHdNQXNYRGlJVUZOZHNHemZEQlFORFNQYmpRRTBMLUpsakFOVnN4cXZTQnFSV1p4ODBEOUFIQVdyck5aZU92VEVmbDZPMm1KYVJNRC1oRlZKNjVEQlVzdUVCbThDWVQyNkF0LVJLdFFUNTE2UHllN25NTUhtUjk4d0lPTldQWHliX3BsVm9SNEYzZm5MWXdBcEZDdXlnSVBSbWxJcFQwXzA4S1lHenQzTkFvbzUzMWpUWnJidENVQUE2cmwzcTcyODdISVpSd09CcnJfZnFONkF1cC1BTXpSYzFfbjJtRE5uX2t0aHBwYjhwbjEybk41SGVJUEU4ZF9haXBJZ2t0?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-11T07:50+08:00",
+      "importance": 2,
+      "risk_score": 0
     },
     {
       "title": "HK Market Barometer | Hang Seng Index Rebounds Above 24,000 Points as Sentiment Improves in Line with Overseas Markets - 富途牛牛",
@@ -145,30 +153,22 @@
       "risk_score": 0
     },
     {
-      "title": "高股息越領越心虛？台股5萬點前「資產體檢4件事」 內行示警：退休金別被通膨吃了 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi3ANBVV95cUxPVjljc2ZWS0NkVFlfemRVNl84ODdlTlhRMTRvZUhqQ2VLNWItX19vYnFBT09KNFVaR1ljY2J5a3N5MGhTVHFual80Z0w1NGQxUTR4TWpXX2xyM0s4NmlRUWIyd2dRRkhUY0FCUG1hdVNaaDhDOGEzZ0hiODNPeThuUnE1d3ppenlDQmRZTjhLeXJpSVhhTEhFNmlUUkt0RUlKNl80WHB2Wi05cVdES1hwOTk0VHlzQmwxSl9TNEdIS05xU1NOdkQ4VTJ5ZHVFZTY1cUhlc1B3TjV2YlpGeE14SHh1RFJzTnlobkpCWENIcl9nODM3VTU4VEM1eEZOQk9TQmlmZDFGQlVOelNvR3Z2SU5rV2lnVUxnQURHc2llSG1oc1drZnVGTGRnV3JaYmJnSnhmcFFhX3JWSGs3VkpoM3hSSms4ZEE5ZXhpRGp5N3VwUHd5TjZOemU3ZWN1YWJUNHo5ZjVrV0MwZmhuRnpETWpNVHh6Q1EwbDVLTk9ad2RacDZnS0RlUnk0X0lfYndoSkNpRU1DSm83V05ZYUt6RHlmQjRVTVVvX212LUpHVWYzNWEtcGVfVzR3MzhJNkJyVTU3YUZ0cG9rSkVxUlVoRTA1RWoxalpCdGdERA?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-10T12:05+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股國慶前五萬大關測試！12檔台股ETF規模仍創高、高息型吃香 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMihANBVV95cUxQcmtjWmw3aW1UX3QtZllBMGk3YnY1anh2c2VpcDl5dWNsZV9sUGpmYkN2TXFNMkVhYlkwaGdzTHVJeEVpV0dfLURMc05xTXNfMmlaR3RoRWRkY18yM1hLWEEyUVA5cEZnd0xJMzR5c3FJaW8ybTRFeEpuNUdLei1uZ0Vqdm5NU1o3dlBObEZYMzZmb05sNFhjeWpkbXdMZ0xIYS0yNmJZQTM4WEJqXzVZemJvbWxzRFZfM2VSOFRvQVYtN2RtdFVmVHFBLWUyeDNlRm9aLWpCcG9nc053ZGV3TDBKYUxGblZHcTl6NFJ6VmFKR3BxdFBjSUo2ZjRmSXpUbGQzYk1vX3pfRzVLaDA1VW9RTENmb0lGb3lPSXg3SzZleU9jb2N4VGRKS2xkczl1YjNjQndTdjdJaW1nNWRQRUhQSnl5dzIxeGhKajVGb1JhNVlLTHhlcV9RVkJMMm1oQzk3MzhaQ2ZKQWdyRDRrbXN5NGFQTmJXQnlVcUVVU0NkZFZx?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-10T12:01+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
       "title": "台股5萬點震盪選股怎麼選？專家點「6大黑馬股」本益比10倍以下：「它」年增率穩定維持 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMikgNBVV95cUxOWWRtRmNiYlY1SWcwem8xNnNMWl8tN25Xa1hIRTBYNW1XTVNyVVRtdEE5SXdSZFE1LXVNa2JlWi1jS3VtLUtLWjVwN3RscHRUTTBUV2I4S0FBVDJNbjdwZkxZR2VxR2tCNXZlbllUZnVEMThhTEtvUXpDZS01UDh0UF9yaHJwUzhubWhSMHpVdWxUQXBVMDNiYzdrd1lldl9kcEItRUtWU2RWTFdySVNXTmRGbkRtR2ZvNjJVT1phSDhaX3ZKQ3RqczlreWtWaHlQZVFENVlZS3ZPSldocWxncDlwWEFBYkVOM1dzNElJQmI2M1dlVWw2MU4wc3VjLTFid0J2MDRja2t6Z3pEY00ta1ZFaG0tSEZTS2VRcDZqYzI1ZTJuNEkxb0dtbl9Ca281QkMxOU1MOTFNNGpXZHRKd1NMRF8tUFpwNHVjRjF0Z0wzWGFzVTF6YUtVSG1BZFZlWnpFa0NZT3EyWG9VaGZPa20xS3Z5c1V5U0RJQ2c1UmdfRGpvQzRZTHhFdWpEMjFNcVE?oc=5",
       "source": "Yahoo股市",
       "published_at": "2026-10-10T11:16+08:00",
       "importance": 2,
       "risk_score": 0
+    },
+    {
+      "title": "台積電法說會10/15登場！A14量產、馬斯克合作有答案？市場最關注明年「這件事」 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMilgNBVV95cUxQbUVKX2xDWnlmQUY2dGdmbmJYT25CWkZWM0VGXzZFTWRXYzY5djl5UEpmb1NMblpfWEZYUGpPXzIwVGdkSzU3Z29NaUhTOXNrMmtUZlBDbHd0SUNuZVFISkwxT3l4RGR5LUtISWhCRkFmSzJfTUUtR0gzZF9HQ09SVXZzRnJSU3o3Q1p2RC00cE45Y084VERjaThiUWVMZU5iQ1ZxU29jUGc4WDA3OW9SVVVHMVlWd1RzZ2JUS3huaFJiaTRIYkkyV3hTZUFPOXlMTHRvTW1OMjBodHFqWDcwM3pkckdTUHNmdzdva0Z3VGlFQTNiYy0wQlZmRDdmOFNuUnRmZ1dFRTlCUVdSSlRSbkdualZCLThrQlNRRndySDUyd0VveVRwUHhBSGV5WVgtSDFhb1JtVG5EU2dPbTRmZC1GRWtxOGQtcnctaUNEOFFhLTdXbXhxZ0JiVjNMeDZYV0kwai1CTTJpal9nbURNVU1fUjA3b2hDcXNvRW03UEVYTC1XYnpRRlpTaTZ2U1ZBMGk0NVNB?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-10T10:53+08:00",
+      "importance": 2,
+      "risk_score": 0
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-11T05:42:59+08:00"
+  "updated_at": "2026-10-11T08:29:15+08:00"
 }
