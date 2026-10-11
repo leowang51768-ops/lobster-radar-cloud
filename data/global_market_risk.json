@@ -11,13 +11,13 @@
     "⚠ 全球市場風險｜費半 -3.8%｜NASDAQ -0.6%｜日經225 -0.0%｜KOSPI -4.5%｜台股加權 -1.0%｜恆生 +0.3%",
     "⚠ 全球市場風險｜美債10Y 5.24%｜VIX 14.8",
     "⚠ 全球市場風險｜台股違約當沖占6成 立院籲檢討",
+    "⚠ 全球市場風險｜CITIC Securities: U.S. stock earnings may continue strong growth in Q3; expectations for Hong K",
+    "⚠ 全球市場風險｜個股概覽 | 個股 - 股市",
+    "⚠ 全球市場風險｜台灣賣鏟子的威力！ 謝金河揭「台股挑戰5萬點」最大底氣",
     "⚠ 全球市場風險｜鴻海、廣達、台達電捲入美國337調查！ 經濟部說明、3家大廠最新回應一次看",
     "⚠ 全球市場風險｜台積電ADR重摔4%！專家揭「1:8公式」：台股週一恐跌千點",
     "⚠ 全球市場風險｜AI科技股大跌＋美337調查 週一台股跌千點？散戶剉",
-    "⚠ 全球市場風險｜台股攻5萬點在即！不敗教主解析009816總報酬超越0050、0056關鍵",
-    "⚠ 全球市場風險｜台股週一開盤有硬仗！專家曝「跌千點」可能性",
-    "⚠ 全球市場風險｜鴻海、廣達遭點名！美國啟動337專利調查 經濟部發聲了",
-    "⚠ 全球市場風險｜台積電ADR回檔 台股週一開盤恐有場硬仗"
+    "⚠ 全球市場風險｜台股攻5萬點在即！不敗教主解析009816總報酬超越0050、0056關鍵"
   ],
   "markets": {
     "US_SOX": {
@@ -79,6 +79,30 @@
       "published_at": "2026-10-11T04:10+08:00",
       "importance": 5,
       "risk_score": 4
+    },
+    {
+      "title": "CITIC Securities: U.S. stock earnings may continue strong growth in Q3; expectations for Hong Kong stock fundamentals have entered a bottoming phase - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOcXVMcWZnZzJxQWhhcXdKTk1odzllbmR5c3BaanVMR0hia0FHVFRPM29CbkdKNGlYU2NZMDByVWl6MVlPMDgwRHR6U1JtN3M4cjJ5SUhTbXR1NjZWTUlvV0ZLNlhfVnhzQWxWMUR6ek9FUnpPX3NJWjg5UDNGWXRnRzZXcHZYdkxBd2FDZ2ZkYkdpd1c2MWVaRjA3REdFczQ1cjZjZHVncUkxSEE?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-11T23:23+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "個股概覽 | 個股 - 股市 - CMoney",
+      "url": "https://news.google.com/rss/articles/CBMiREFVX3lxTFBfVGtPUmhQeF9nalNLNm9zTGJWQlREWTlFa2dVeEhkNElpN1d0OXlyaFF3U3NaYnBodklvejVEU1YtdkNl?oc=5",
+      "source": "CMoney",
+      "published_at": "2026-10-11T23:05+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台灣賣鏟子的威力！ 謝金河揭「台股挑戰5萬點」最大底氣 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi6AJBVV95cUxPb1hWWWlDMlcwY2dCVm5EVlYxUU8xOVpYa1M5cVlNR2lRVWNNb2RvdzFnM2xwRDI4VlpnVldZbzQ5bHNKNzA2a0tCTFkzZjFxbUVhTU1NNmNBWWt3T1ZvQmsxOWp2WDlXYnUtQUNjcmt6WnVrYU1BNGMzODZjMU1xNDhZRGstTG53eXB4ay1ZVEZ2VG9hSm5lZVR5a0R2S21XRjBnUWRGWk1SRVAtSl8zZEVjVWw0WGxSOVNfN3FvcC1kT1BsUDRhVllsaWYyYS0yMnRsVGxnbHh1dmlfTXM3dTZPaVRWNG5nWTdNTEctVVRtSmx0eTY2YkZacVRjanBrS0Z4dENkNFR2RzFTOFBWbDNjbGRzMFY2QUI0ZFI3U1Yybi1CeGoxb1N4NTB6YUdyQ2RQM0lkMVU4aUtvTS1nUmhZb3pmMHBpX1k4eFdxUFU3OUtaSVJGRDl0N0lSMG5leldKNS13OXo?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-11T22:00+08:00",
+      "importance": 2,
+      "risk_score": 0
     },
     {
       "title": "鴻海、廣達、台達電捲入美國337調查！ 經濟部說明、3家大廠最新回應一次看 - Yahoo股市",
@@ -143,32 +167,8 @@
       "published_at": "2026-10-11T15:05+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "明日開盤跌千點？台積電ADR跌4%等3情勢 專家推估：恐面臨硬仗 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi-wJBVV95cUxNVVNEYlhwc2V6UUk2WU9sYjRMVExMc0paQ05kTjMyYm9ZeVlqVVoyWFJhajBKbHBzak1UaVAyN0hETFhQWlBDeWNXNDRGdndxTlN3YnBaWlZIZ1FCaEhZdU5oWmlMYUVveFVIN0xSUG0tZTBzbjE2VlpWdkx4eHM0anFSd2JSRE95V1gzdW8wM1VNTTBlSUhxTGVON3JPUDBoTTRmNXlEandWUldKeWxnNDdZbXVMSGpjUHYxZllrc1VHMjN2VDFkMkxaOFpZNktlUl9FVHFhX2FqTU94bk9ZbXpNZVlMS3VzNHJsVnkyenZkejdtSnpybVVWM09FUjVJVURBQzl6ZDgyRkZOendreXVWQ0kyMm5sa0hueHE4bzZnUDRKWklodUNXa21DREFZS3Nvd3VacmJlU1ZDWUhKaUZuZjItZERQYjNrOUNINlluY3FRXzVPRm1iV1NQM2RaN2ZBU2tBUUpsQTRMR0REbjdrMTh2NUktcFFv?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-11T13:28+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股5萬點倒數！杜金龍揭「3檔多頭猛將」 看好Q4主升段熱到明年 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMihANBVV95cUxNUjBFRjFVOFZfV1YxRjZTR1JMS0hGZnZfdEJwWE02UGEwQ2VfQ1pMVW5QSlR0X1pOZnNrblNFR3NKN1BWYzB4WUlVMEJWRUNsMGNUcGZlNzFjelMxTlBBRDh6QWlfTDRmeDNyTHNRNVlQeUUzak16UzJxUnk2bkQ2Vmh5bnRlSUY0aGs4aVc2R3Nja3E3d3hYTlZLQWJhZkwxb1dSSFhzRzhNdUlHOVRlZXJtaDhGV0dVNmpxWGVSb0RnWHlZZ0RKa0FXLTdwTHNXS0NseDc5N2U0RWRTUExHc3ZOcExhUVVvLXVMeDRQRldCajJOekw3NlRrUkM2WFZiZGVfYzY5a1lvV09QTGZHQS1zZ2ZqUGtDcUpOdnJYMm9FWllla3FYTUV0WjZSaklRMFlNVjVISkZxMTdpV01ELW5HR01RM3VITkRKVk1YMEdqY05EcERWd2d6WXotZy14Qjk2NWJIT25faXBaYjFLU0NKN29GckZ2eGl0ZHNYTTZEZ1Vl?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-11T12:29+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "大盤創高後拉回 這12檔台股ETF規模仍創高 00927今年來漲幅翻倍居冠 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMilwNBVV95cUxOdVdJZnYxbFNJcXdrSWRKQjJvU3NETHluUDIyNjdmRmppaVpEMHhtdFVJSVUxMGhNWnNhMTFCYXhTdEtYVEdKaEhDaGlFV1lfaUNUSVd0bzl4Vk43VEtOLTEzZU16RjN1R1lrdzdSRGhsVUtIY2JLeEwzTXpDbEVEdU1LWXhxTGhha19XbUw3U3JSbzJvb0pmcHd1NlVwY2lxMC02dWctRlpHd0JBdGV2bHp0OVlWY2d4dFZiUDhYc2hmZzltZ2VBNkdIRkFEclNvaF9TajV4dzFxWmR1aHp1WWFrQkJBdzc0cEZSOWJjOUFwX29tcW1ZOUJCenZXRlJuZ2p1UWxJWjdYTllaMXN0REVKN2g3TXFsTzJhang2Q0FTdy1VY0hRV3dIS2hVQ2ZKTlBlU1ZFczlXOXA3RmdhR09yZnlvMlRZVDZXV0lYOGVvRlNqRlJVS1VfcWdveEVoTXptdFlKN2NJSkNpM3pGQk4waVFCbXduMHA5MmZ0bVN0dkF1NUYydGhDbzhPY24xdW1BRklQOA?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-11T12:26+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-11T20:42:20+08:00"
+  "updated_at": "2026-10-12T01:47:14+08:00"
 }
