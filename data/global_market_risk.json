@@ -1,23 +1,22 @@
 {
   "schema": 1,
   "risk_level": "red",
-  "risk_score": 6,
+  "risk_score": 3,
   "risk_reasons": [
     "費半明顯下跌",
-    "韓股明顯下跌",
-    "出現重大風險新聞"
+    "韓股明顯下跌"
   ],
   "ticker": [
     "⚠ 全球市場風險｜費半 -3.8%｜NASDAQ -0.6%｜日經225 -0.0%｜KOSPI -4.5%｜台股加權 -1.0%｜恆生 +0.3%",
     "⚠ 全球市場風險｜美債10Y 5.24%｜VIX 14.8",
-    "⚠ 全球市場風險｜台股違約當沖占6成 立院籲檢討",
+    "⚠ 全球市場風險｜We're About to Get a Huge Read on Whether Earnings Can Keep Propping up the Stock Market",
     "⚠ 全球市場風險｜CITIC Securities: U.S. stock earnings may continue strong growth in Q3; expectations for Hong K",
+    "⚠ 全球市場風險｜〈財經週報-加碼美國製造〉台積電赴美狂蓋廠 廠務5強營運吃補",
     "⚠ 全球市場風險｜個股概覽 | 個股 - 股市",
     "⚠ 全球市場風險｜台灣賣鏟子的威力！ 謝金河揭「台股挑戰5萬點」最大底氣",
     "⚠ 全球市場風險｜鴻海、廣達、台達電捲入美國337調查！ 經濟部說明、3家大廠最新回應一次看",
     "⚠ 全球市場風險｜台積電ADR重摔4%！專家揭「1:8公式」：台股週一恐跌千點",
-    "⚠ 全球市場風險｜AI科技股大跌＋美337調查 週一台股跌千點？散戶剉",
-    "⚠ 全球市場風險｜台股攻5萬點在即！不敗教主解析009816總報酬超越0050、0056關鍵"
+    "⚠ 全球市場風險｜AI科技股大跌＋美337調查 週一台股跌千點？散戶剉"
   ],
   "markets": {
     "US_SOX": {
@@ -73,18 +72,26 @@
   },
   "active_news": [
     {
-      "title": "台股違約當沖占6成 立院籲檢討 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxQdWV3Q2xfWFowOVJRdnRwYzZ6VkFaZkQ2WU9VbDlrYlAtVDllTFFzMEVtMHpPN0hXNUdGOWVBREk4YTNhakhVclNCQmdMak5ZbnVZMTZiT29UVlFSOXhMTGlHamU0b3g3Rkdvd2ljX2UwM1Z0cng1QnFWZmxVUXNRS05kblRzYWNubmVwNGpYRk1JWGU5SGxQVldqR1dUOG9kY1hvdDdPc0hmOUlDRUhLX0M5YXBJVkZIaFdoVkk5N2ZhMTFLZ1REbUx4UkoyeXBSVDA1XzhfU1cxLXFQS21GN1RBUndHa3RoVGVfM1ZWWFZteV8yOGVYb2x3?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-11T04:10+08:00",
-      "importance": 5,
-      "risk_score": 4
+      "title": "We're About to Get a Huge Read on Whether Earnings Can Keep Propping up the Stock Market - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQc1FBd1VWeUFaZFU1QUFNdW9CamM2RXVxbmxKbXdaNzFYRU8zajBCR3hvR3pGbzJvai1Nc0ZTMW42WFNGNl9LQk5kVTlQaTk4OEt2anZQVjAtMUNaa3daYmRfLVZCNE9MZnAyYTN3STYzMGFzckF1aURjTnVmV1EyWmJ2YzY0ejlhSEhsRA?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-11T23:23+08:00",
+      "importance": 2,
+      "risk_score": 0
     },
     {
       "title": "CITIC Securities: U.S. stock earnings may continue strong growth in Q3; expectations for Hong Kong stock fundamentals have entered a bottoming phase - 富途牛牛",
       "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOcXVMcWZnZzJxQWhhcXdKTk1odzllbmR5c3BaanVMR0hia0FHVFRPM29CbkdKNGlYU2NZMDByVWl6MVlPMDgwRHR6U1JtN3M4cjJ5SUhTbXR1NjZWTUlvV0ZLNlhfVnhzQWxWMUR6ek9FUnpPX3NJWjg5UDNGWXRnRzZXcHZYdkxBd2FDZ2ZkYkdpd1c2MWVaRjA3REdFczQ1cjZjZHVncUkxSEE?oc=5",
       "source": "富途牛牛",
       "published_at": "2026-10-11T23:23+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "〈財經週報-加碼美國製造〉台積電赴美狂蓋廠 廠務5強營運吃補 - 自由時報",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1DdlRieVgzbm1NaUZfR290MjlGZHNLTXJsejRoLTJtc19hc3hrdy10ZW5MQ21SRjZYTEtFRWo3cGxOaHZhTUlTM1dfZU10c0dILWlGaEFlNmU?oc=5",
+      "source": "自由時報",
+      "published_at": "2026-10-11T23:12+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -159,16 +166,8 @@
       "published_at": "2026-10-11T16:20+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "只會存錢真的吃虧嗎？「每月1萬元」對比0050、台積電 網友曝兩派不同答案 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiqwNBVV95cUxPemxtNEZPbm5vVXNGem5QWWlnR19WYkkyb0J0N09DN29GbzJIQUVRWF9sRlVoWFBjSGF0VWhfUFpQc0dzdGc0bFN4SENTaGFPekdKQ2JWZTFYWTRIWXdhMVVOTFNhVFNaT2FTUFBYT3IwY3JXOHRpc0RvX0dtZ2ozLUNCTTEzM3VzdVVBbHppMDV6NnFEZ0Y4bDA0cUFIRTdDSFZXTjFtNDk2eTJjWURybW1fZldsbVdBdzNBaGEtaFE2blBpNTBkSjcyVjlKUlpNbkp6UHI3WUo2XzZLZGhJdi1XN3czQjlTQ3B5QllYY1gyQ1dRenlKbnZRSzdUaVdNdXNfdW5lZVlyd05BLWItaGZ2dXJJcHQ3aDV6SXFsek1jT0lkZ01YeWdyLXdGVjRtRjB1aFZ1dzJJRGpPTEtUZ19rdGZsa05LRGR3eWhuOGdHc2hYTXhmXy1iV0Fzay16TVUwbXAxQzVQczczZnVBSlExZDBBcWtRM3NPbE1STFhWS0Yzek9VcHVhWlo4SjZXeF9NcEM5N093NWtvSFFUN3d3UUlUdmRtTkJZ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-11T15:05+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-12T01:47:14+08:00"
+  "updated_at": "2026-10-12T05:04:39+08:00"
 }
