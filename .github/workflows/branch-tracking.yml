@@ -7,8 +7,8 @@ on:
       - "stock_universe.py"
       - "branch_tracker/data/extra_universe.json"
   schedule:
-    # 台灣時間週一至週五22:00；與雷達通知流程獨立
-    - cron: "0 14 * * 1-5"
+    # 台灣時間20:40執行，21:00稽核前先收集分點資料
+    - cron: "40 12 * * 1-5"
 permissions:
   contents: write
 concurrency:
@@ -53,5 +53,12 @@ jobs:
           fi
           git commit -m "Accumulate independent branch evidence $(TZ=Asia/Taipei date +%F)"
           # Radar may have committed unrelated files while this job was running.
-          git pull --rebase origin main
-          git push
+          for attempt in 1 2 3 4 5 6; do
+            if git pull --rebase origin main && git push origin HEAD:main; then
+              exit 0
+            fi
+            git rebase --abort || true
+            sleep $((attempt * 10))
+          done
+          echo "Failed to publish branch evidence after retries"
+          exit 1
