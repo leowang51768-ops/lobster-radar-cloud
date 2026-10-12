@@ -6,6 +6,7 @@ from decimal import Decimal, ROUND_FLOOR, ROUND_CEILING
 from pathlib import Path
 import pandas as pd
 
+from price_integrity import guard_market_frame
 from stock_universe import filter_market_frame
 
 BASE=Path(__file__).resolve().parent
@@ -82,7 +83,7 @@ def main():
     if not DB.exists(): raise SystemExit(f"Database missing: {DB}")
     with sqlite3.connect(DB) as con:
         market=pd.read_sql_query("SELECT date,market,stock_id AS code,stock_name AS name,open,high,low,close,volume,turnover FROM prices ORDER BY stock_id,date",con)
-    market=filter_market_frame(market)
+    market=guard_market_frame(filter_market_frame(market))
     for col in ("open","high","low","close","volume","turnover"):
         market[col]=pd.to_numeric(market[col],errors="coerce")
     market=market.dropna(subset=["open","high","low","close","volume","turnover"])

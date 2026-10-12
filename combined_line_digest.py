@@ -148,11 +148,9 @@ def score_candidates(day, candidates):
 
 
 def market_date():
-    with sqlite3.connect(BASE / "lobster_tw_6m_prices.sqlite") as con:
-        value = con.execute("SELECT MAX(date) FROM prices").fetchone()[0]
-    if not value:
-        raise RuntimeError("No dated price records")
-    return str(value)[:10]
+    from price_integrity import validate_database
+    return validate_database(BASE / "lobster_tw_6m_prices.sqlite")
+
 
 
 

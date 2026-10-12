@@ -43,6 +43,9 @@ jobs:
       - name: Install signal dependencies
         run: pip install pandas requests
 
+      - name: Verify price integrity regression tests
+        run: python -m unittest discover -s tests -p test_price_integrity.py -v
+
       - name: Get trade date
         shell: bash
         run: |
@@ -87,18 +90,10 @@ jobs:
         run: |
           echo "FAIL_STAGE=官方股價更新" >> "$GITHUB_ENV"
           echo "Requested trade date: $TRADE_DATE"
-          EXISTING_ROWS=$(python - <<'PY'
-          import os, sqlite3
-          con = sqlite3.connect('lobster_tw_6m_prices.sqlite')
-          n = con.execute('SELECT COUNT(*) FROM prices WHERE date=?', (os.environ['TRADE_DATE'],)).fetchone()[0]
-          con.close()
-          print(n)
-          PY
-          )
-          echo "Existing rows for $TRADE_DATE: $EXISTING_ROWS"
-          if [ "$EXISTING_ROWS" -gt 0 ]; then
-            echo "Trade date already exists; skip refetch and continue to signal evaluation."
+          if python price_integrity.py; then
+            echo "All tracked stocks have usable prices for $TRADE_DATE; skip refetch."
           else
+            echo "Missing or invalid daily data; refetch both official markets."
             success=0
             for attempt in 1 2 3 4 5 6 7 8; do
               echo "Price update attempt $attempt/8"
@@ -121,6 +116,7 @@ jobs:
         if: ${{ steps.market_calendar.outputs.closed != 'true' }}
         run: |
           echo "FAIL_STAGE=資料庫驗證" >> "$GITHUB_ENV"
+          python price_integrity.py
           python - <<'PY'
           import os
           import sqlite3

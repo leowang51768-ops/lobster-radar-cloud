@@ -22,6 +22,7 @@ from pathlib import Path
 
 import pandas as pd
 
+from price_integrity import guard_market_frame
 from stock_universe import filter_market_frame
 
 BASE = Path(__file__).resolve().parent
@@ -77,7 +78,7 @@ def read_market() -> pd.DataFrame:
         )
     finally:
         con.close()
-    df = filter_market_frame(df)
+    df = guard_market_frame(filter_market_frame(df))
     for col in ("open", "high", "low", "close", "volume", "turnover"):
         df[col] = pd.to_numeric(df[col], errors="coerce")
     df["date"] = pd.to_datetime(df["date"])

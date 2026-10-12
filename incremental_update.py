@@ -7,6 +7,7 @@ import requests
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
+from price_integrity import validate_rows
 from stock_universe import AI_STOCK_CODES, AI_STOCK_COUNT
 
 DB=Path(__file__).with_name('lobster_tw_6m_prices.sqlite')
@@ -73,10 +74,7 @@ if not tw or not otc: raise SystemExit(f'Not committed: official data incomplete
 tw=[row for row in tw if row[2] in AI_STOCK_CODES]
 otc=[row for row in otc if row[2] in AI_STOCK_CODES]
 present={row[2] for row in tw+otc}
-if len(present) < AI_STOCK_COUNT:
-    missing=sorted(AI_STOCK_CODES-present)
-    print(json.dumps({'warning':'universe stocks missing from official daily data',
-                      'missing_count':len(missing),'missing_codes':missing},ensure_ascii=False))
+validate_rows(tw + otc, day.isoformat())
 
 cutoff=six_months_before(day).isoformat()
 con=sqlite3.connect(DB)

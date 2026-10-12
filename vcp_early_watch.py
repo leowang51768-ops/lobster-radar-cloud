@@ -17,6 +17,7 @@ from pathlib import Path
 
 import pandas as pd
 
+from price_integrity import guard_market_frame
 from stock_universe import filter_market_frame
 
 BASE = Path(__file__).resolve().parent
@@ -36,10 +37,10 @@ def read_market():
         raise SystemExit(f"Official price database missing: {DB}")
     with sqlite3.connect(DB) as conn:
         df = pd.read_sql_query(
-            "SELECT date, stock_id AS code, stock_name AS name, "
+            "SELECT date, market, stock_id AS code, stock_name AS name, "
             "open, high, low, close, volume, turnover FROM prices "
             "ORDER BY stock_id, date", conn)
-    df = filter_market_frame(df)
+    df = guard_market_frame(filter_market_frame(df))
     df["date"] = pd.to_datetime(df["date"])
     for key in ("open", "high", "low", "close", "volume", "turnover"):
         df[key] = pd.to_numeric(df[key], errors="coerce")
