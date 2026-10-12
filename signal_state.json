@@ -5761,10 +5761,10 @@
       "support_source": "近5日低點"
     },
     "2324": {
-      "Price Action": "PriceAction:2026-09-30:20日破底翻強攻",
+      "Price Action": "PriceAction:2026-10-12:20日破底翻強攻",
       "name": "仁寶",
-      "support_lower": 36.05,
-      "support_upper": 36.05,
+      "support_lower": 35.4,
+      "support_upper": 35.4,
       "support_source": "近5日低點"
     },
     "3008": {
@@ -5843,10 +5843,31 @@
       "support_lower": 3765.0,
       "support_upper": 3765.0,
       "support_source": "近5日低點"
+    },
+    "1503": {
+      "Price Action": "PriceAction:2026-10-12:看漲吞噬",
+      "name": "士電",
+      "support_lower": 195.5,
+      "support_upper": 195.5,
+      "support_source": "近5日低點"
+    },
+    "1519": {
+      "Price Action": "PriceAction:2026-10-12:看漲吞噬",
+      "name": "華城",
+      "support_lower": 688.0,
+      "support_upper": 688.0,
+      "support_source": "近5日低點"
+    },
+    "5443": {
+      "Price Action": "PriceAction:2026-10-12:看漲吞噬",
+      "name": "均豪",
+      "support_lower": 109.5,
+      "support_upper": 109.5,
+      "support_source": "近5日低點"
     }
   },
-  "updated_at": "2026-10-08T14:48:39.142762+00:00",
-  "latest_trade_date": "2026-10-08",
+  "updated_at": "2026-10-12T14:51:27.167060+00:00",
+  "latest_trade_date": "2026-10-12",
   "layer1_candidate_count": 187,
   "stage_counts": {
     "正式試單": 1,
@@ -5877,11 +5898,11 @@
   },
   "strategy_version": "龍蝦買點-v14-破底翻+PriceAction",
   "four_point_rule": "已取消",
-  "candidate_count": 36,
-  "formal_buy_signal_count": 3,
+  "candidate_count": 49,
+  "formal_buy_signal_count": 4,
   "route_counts": {
-    "破底翻": 30,
-    "Price Action": 6
+    "破底翻": 34,
+    "Price Action": 15
   },
   "exit_warning_keys": {
     "突破後站穩:2026-09-16:69.90:假突破觀察": "2026-09-18",
