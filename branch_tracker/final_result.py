@@ -13,7 +13,8 @@ import sqlite3
 import statistics
 import sys
 from collections import defaultdict
-from datetime import datetime
+from datetime import datetime, date
+import calendar
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -21,7 +22,16 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 DATA = Path(__file__).resolve().parent / "data"
 DB = DATA / "branches.sqlite"
-TARGET_SESSIONS = 120
+TARGET_SESSIONS = 120  # compatibility field; analysis uses six calendar months
+HISTORY_MONTHS = 6
+
+def history_start(day):
+    d = date.fromisoformat(day)
+    month_index = d.year * 12 + d.month - 1 - HISTORY_MONTHS
+    year, month = divmod(month_index, 12)
+    month += 1
+    return date(year, month, min(d.day, calendar.monthrange(year, month)[1])).isoformat()
+
 MIN_CONSECUTIVE_BUY_DAYS = 3
 MAX_CONSECUTIVE_BUY_DAYS = 15
 MIN_3D_NET_AMOUNT = 10_000_000
@@ -75,6 +85,9 @@ def main():
         sessions = sorted({d for d, c in prices})
         session_pos = {d: i for i, d in enumerate(sessions)}
         latest_idx = session_pos[latest_day]
+        window_start = history_start(latest_day)
+        history_sessions = [d for d in sessions if window_start <= d <= latest_day]
+        available_sessions = {code: [d for d in history_sessions if (d, code) in prices] for code in {c for _, c in prices}}
 
         stock_names = {}
         try:
@@ -117,7 +130,7 @@ def main():
         influence_rows = []
         for key, by_day in hist.items():
             code, branch, broker = key
-            valid_days = [d for d in sessions[max(0, latest_idx - TARGET_SESSIONS + 1):latest_idx + 1]
+            valid_days = [d for d in history_sessions
                           if d in by_day and (d, code) in prices]
             buy_days = [d for d in valid_days if by_day[d]["net"] > 0]
             outcome_rows = []
@@ -159,6 +172,11 @@ def main():
                 "broker": broker,
                 "branch_name": meta.get(key, ""),
                 "history_days": len(valid_days),
+                "history_window_start": window_start,
+                "available_price_sessions": len(available_sessions.get(code, [])),
+                "available_history_start": min(valid_days) if valid_days else None,
+                "available_history_end": max(valid_days) if valid_days else None,
+                "history_basis": "最近六個月；不足以現有期間分析",
                 "buy_days": len(buy_days),
                 "d5_samples": len(sample5),
                 "d10_samples": len(sample10),
@@ -397,17 +415,20 @@ def main():
             primary["display"] = "｜".join(parts)
             stock_branch_summary.append(primary)
 
-        complete_pairs = sum(r["history_days"] >= TARGET_SESSIONS for r in influence_rows)
+        complete_pairs = sum(r["history_days"] >= r["available_price_sessions"] and r["available_price_sessions"] > 0 for r in influence_rows)
         result = {
             "generated_at": datetime.now(ZoneInfo("Asia/Taipei")).isoformat(timespec="seconds"),
             "data_through": latest_day,
             "universe_size": 163,
-            "history_target_sessions": TARGET_SESSIONS,
+            "history_target_sessions": len(history_sessions),
+            "history_target_months": HISTORY_MONTHS,
+            "history_window_start": window_start,
+            "short_history_is_failure": False,
             "branch_stock_pairs": len(influence_rows),
             "pairs_with_120_sessions": complete_pairs,
             "current_candidates": candidates[:20],
             "stock_branch_summary": stock_branch_summary,
-            "history_backfill_pending": [r for r in influence_rows if r["history_days"] < TARGET_SESSIONS][:200],
+            "history_backfill_pending": [r for r in influence_rows if r["history_days"] < r["available_price_sessions"]][:200],
             "top_influence_pairs": [r for r in influence_rows if r["grade"] in ("A", "B")][:50],
             "rules": {
                 "current_signal": "同股同分點連買3～15日且累計>1,000萬元；成立後若轉為淨賣仍持續追蹤減碼/轉賣",
@@ -423,9 +444,9 @@ def main():
         f"# 關鍵分點最終結果｜{latest_day}",
         "",
         f"- 股票池：163檔",
-        f"- 目標歷史：120交易日",
+        f"- 歷史基準：最近六個月；不足六個月以現有期間分析",
         f"- 股票×分點組合：{len(influence_rows):,}",
-        f"- 已達120日組合：{complete_pairs:,}",
+        f"- 已涵蓋可用股價交易日的組合：{complete_pairs:,}",
         f"- 今日符合「連買3～15日＋累計>1,000萬」：{len(candidates)}組",
         "",
         "## 疑似提前布局",

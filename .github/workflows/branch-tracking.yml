@@ -67,7 +67,7 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
             python branch_tracker/merge_evidence.py "$RUNNER_TEMP/branch-local.sqlite" branch_tracker/data/branches.sqlite
-            python branch_tracker/collect.py --history-budget 0
+            # Publishing must not depend on another network collection succeeding.
             python branch_tracker/price_relationship.py
             python branch_tracker/audit.py
             python branch_tracker/final_result.py
