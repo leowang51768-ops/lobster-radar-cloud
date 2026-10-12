@@ -7,16 +7,16 @@
     "韓股明顯下跌"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 -3.8%｜NASDAQ -0.6%｜日經225 -0.0%｜KOSPI -4.5%｜台股加權 -1.0%｜恆生 +0.3%",
+    "⚠ 全球市場風險｜費半 -3.8%｜NASDAQ -0.6%｜日經225 -0.0%｜KOSPI -3.6%｜台股加權 -1.0%｜恆生 +0.3%",
     "⚠ 全球市場風險｜美債10Y 5.24%｜VIX 14.8",
+    "⚠ 全球市場風險｜台積電法說會倒數！蔡明翰揭「利多不漲」原因：出現黑K也不用急著賣",
+    "⚠ 全球市場風險｜台股國慶連假後恐迎千點跌勢？台積電ADR挫4％ 葉育碩示警「3大利空」",
+    "⚠ 全球市場風險｜〈台股盤前要聞〉台積電Q3營收1.49兆元寫新猷、長榮法說釋利多貨櫃旺到明年春節",
+    "⚠ 全球市場風險｜台股西進首度倒退嚕》台商西進5大投資地全線撤退 福建惠台措施失靈 北京投資額剩高峰期1％",
     "⚠ 全球市場風險｜We're About to Get a Huge Read on Whether Earnings Can Keep Propping up the Stock Market",
-    "⚠ 全球市場風險｜CITIC Securities: U.S. stock earnings may continue strong growth in Q3; expectations for Hong K",
-    "⚠ 全球市場風險｜〈財經週報-加碼美國製造〉台積電赴美狂蓋廠 廠務5強營運吃補",
     "⚠ 全球市場風險｜個股概覽 | 個股 - 股市",
     "⚠ 全球市場風險｜台灣賣鏟子的威力！ 謝金河揭「台股挑戰5萬點」最大底氣",
-    "⚠ 全球市場風險｜鴻海、廣達、台達電捲入美國337調查！ 經濟部說明、3家大廠最新回應一次看",
-    "⚠ 全球市場風險｜台積電ADR重摔4%！專家揭「1:8公式」：台股週一恐跌千點",
-    "⚠ 全球市場風險｜AI科技股大跌＋美337調查 週一台股跌千點？散戶剉"
+    "⚠ 全球市場風險｜鴻海、廣達、台達電捲入美國337調查！ 經濟部說明、3家大廠最新回應一次看"
   ],
   "markets": {
     "US_SOX": {
@@ -51,8 +51,8 @@
     },
     "KR_KOSPI": {
       "label": "KOSPI",
-      "price": 6625.93,
-      "change_pct": -4.6
+      "price": 6556.59,
+      "change_pct": -3.6
     },
     "TW_TAIEX": {
       "label": "台股加權",
@@ -72,26 +72,42 @@
   },
   "active_news": [
     {
+      "title": "台積電法說會倒數！蔡明翰揭「利多不漲」原因：出現黑K也不用急著賣 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMipgNBVV95cUxQOC1haFlmUzZIUEJ1empMazNJVmViQ1M5UmhYRHJ5MS0tLXNZaklZRjUxd2tmUzA3SzhjNm13MjN1d2lDWm9NdHF2VWd3T0xtUm9EZjdOM3FzVzlGbk0yMFRTWVJTaGExS0ZoenpwY3JrTjRVcnVwZWQzWHRpdW9DR3pOcEhWMnBYcFEyVkttdEpOMzJJNVRQSkJmY1ZDRmFuam9lWXpLUFdCYUlOQXU5VExvNmM0ckdmSzEtZXlwWVVJVTdRX3owWlZ5ZUgyQTdSdjJ5UVJVQl9CdWhKdkdSbnRveTdMeXZ4aS1oZXBGV1FIR01pX1JULUhPeFFhYVJVVEZYR1Atb0d1MTdZRHFiMXJEbFB6X2xBdWZERWRZMXBjQnVRSXJaMURxQ1Z4NnQ3YmZfNEx1aS0ySFJoT3BNd0h4d3dLUnV1MHc0ZkhER2RfcndNMFlIUEp3SW9UQ3MzdjBlUVZXNDF4Vy1OMXA4MTVuaDVqUHdaM3ZYdHE1dmZrS3FGb1p2OUhsLWttYVZTMDg3RW5JN3NkdGRMWTRmZk5tRlJqZw?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-12T07:30+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股國慶連假後恐迎千點跌勢？台積電ADR挫4％ 葉育碩示警「3大利空」 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMikgNBVV95cUxQZ1Q4Z2lYRDVoVWc0X0JJRFk1MGotWnRhWFh2R19JX3dlVlgzTmU3cmdZWC1aNUlXOGFZbGJMdVhUZ1RZMG50dWFFY2xnb1Zmb3RhVzFsNlpKc2VoR3BhS0ZtcjRMSmdZLTdfS1hrQ2c3U1VFd1k0NEt6RTQ1S0JfNFhnbkxuTkV0WFBJdG9EenZfSnFxVm5ZZEU1dTZqRGhGZVFDUV9oRWtfTmdrRFdZWGFJTDA2X2hCaFBhTVR0RjY4Y19VWG5ydU1oSkE3aDZNTXZxeDJUdVh0YUYyOFJQb2QzZEtMTEJSblJra0VFMnNKMjAyYi1oQVdmZWsyX21jT0I2dDFGcHAxaG5MeWRsc056bTZfYUI4cmRPQ1o4RjZaUlVTTWF5bUNJV1hrMTZCRnpZVjdCTDVnMC1ENVhKV0lTcGM0ZHduam1ZbTF5ZHJWSWdBRk8yWFYyczdiWnB4a19XSlhCb2FxZE1wc3k3RUprVVdDdEpZUEtHRFQ3YTJ2X0lvekktWmJIaTlKOHlHeVE?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-12T05:13+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "〈台股盤前要聞〉台積電Q3營收1.49兆元寫新猷、長榮法說釋利多貨櫃旺到明年春節 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi2gNBVV95cUxPMkxCUm5EVWZuVXRfbDBaZllRcDN1M3pFWTZPdkhzVmhoWkxZVFV0cHd3ekU5SUloTkIzc1ozVzZxUEVLcEVfdldlT2I3M2lIQ0NzZnhoNE5OWW4yeGlaZFhYZDdYd0dNM3hyajRhaE5HRjEyd0FrZDN3NGxkd1FNM2dSV3k5VlROV2t0d0RnbzlJMWNsbTBpLWdaVElDUjJKRnFwSldfdmFFakNJaU5COVJyXzVCTHRhRjVvQW1tOXZTZW8yLVBFRFZ4OHFTLUxUQWRwVnhidjVtSmJYWjZWM0xHUUg1RjRrd0tsYWhWRmJsNWxCNUdBMkFhQi1oTEJYN1U1RzVtUTIwdi1sNEhzdW9tWmxlcjRUSlJIMWhEWDFyMXgzVjdyVElMNjJFakxyQzhGN1pRX3VnODU1NVlQcHluQkE1aDJWN1k3WUc1dzhJbkZBaElVV2JGbnh1RWdrT0t3ZjRtUjRuclRIM1BkQk5PZTVZeV9fanl3MDBFdDRNX3hxclZKWUMzUV9WbG04ZWJFODJYNC14ZUtVRHhMY1lOb192VWZLTzJsdkkxMXNXVkkxUFAxZXFvN0N5NW1sdnJrQTVIOUdmbEdjVjNMeUN4MVJ4ekVPN2c?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-12T05:10+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股西進首度倒退嚕》台商西進5大投資地全線撤退 福建惠台措施失靈 北京投資額剩高峰期1％ - 自由時報",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9TWk5rUVlsbnM3V0NieFVSR0dRNjUwVHpoeVRJX3hQMXRfd0tkNjhxM3RaSERxQ3RfcTZBT182VTdIWFZUMVlMYjFORzZJSE5JanVWSThIeWw?oc=5",
+      "source": "自由時報",
+      "published_at": "2026-10-12T01:23+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
       "title": "We're About to Get a Huge Read on Whether Earnings Can Keep Propping up the Stock Market - 富途牛牛",
       "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQc1FBd1VWeUFaZFU1QUFNdW9CamM2RXVxbmxKbXdaNzFYRU8zajBCR3hvR3pGbzJvai1Nc0ZTMW42WFNGNl9LQk5kVTlQaTk4OEt2anZQVjAtMUNaa3daYmRfLVZCNE9MZnAyYTN3STYzMGFzckF1aURjTnVmV1EyWmJ2YzY0ejlhSEhsRA?oc=5",
       "source": "富途牛牛",
       "published_at": "2026-10-11T23:23+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "CITIC Securities: U.S. stock earnings may continue strong growth in Q3; expectations for Hong Kong stock fundamentals have entered a bottoming phase - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOcXVMcWZnZzJxQWhhcXdKTk1odzllbmR5c3BaanVMR0hia0FHVFRPM29CbkdKNGlYU2NZMDByVWl6MVlPMDgwRHR6U1JtN3M4cjJ5SUhTbXR1NjZWTUlvV0ZLNlhfVnhzQWxWMUR6ek9FUnpPX3NJWjg5UDNGWXRnRzZXcHZYdkxBd2FDZ2ZkYkdpd1c2MWVaRjA3REdFczQ1cjZjZHVncUkxSEE?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-11T23:23+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "〈財經週報-加碼美國製造〉台積電赴美狂蓋廠 廠務5強營運吃補 - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1DdlRieVgzbm1NaUZfR290MjlGZHNLTXJsejRoLTJtc19hc3hrdy10ZW5MQ21SRjZYTEtFRWo3cGxOaHZhTUlTM1dfZU10c0dILWlGaEFlNmU?oc=5",
-      "source": "自由時報",
-      "published_at": "2026-10-11T23:12+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -150,24 +166,8 @@
       "published_at": "2026-10-11T17:58+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "鴻海、廣達遭點名！美國啟動337專利調查 經濟部發聲了 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi3wJBVV95cUxOYjFvY0MxRmp5dWFINVRJcEJLOHpSZ1dOMVZ1N3JBd2Q2VDJ2aTJYTXNEMGlsRlpjOHFLMk5ZUzJOd2p6clhiRGlpRHV5MWliNjBudFBLdkc3bnpLbE5xa3BoOXpYbVVKdktxcmRIR1NlcmQ3UjRkbzNoWUxveUpUYTJLaWZyQkZyVy1ZZ09MdFJHc2VqT1FvYUUydXJmOFdhbUwxX1hqU1dzUmZrLV91VkdId2xCQkJYTWI5ZTBUVnlYSktscGhvbUQtWlBwenB3eTFsenVLVUxBbllyQmVtZHlPMmZZRjBGbVMtLVViT3VvVEF4QzNwWnJzR0YyMzlnZE4tcS1ZTlpKSk5pT29QVUxUQlRoOVMybmpCQjBaeWZnT0dBZnNTc2s0aVRuV3U3bHV0WXZIOWhQdEswa2s5RTU2REk2OUotWDhUUW9teU5BZEhjUkxHV1BOT29qMzA?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-11T17:56+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台積電ADR回檔 台股週一開盤恐有場硬仗 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMijwJBVV95cUxOczR4a0VxRnl1QkhNZzFhS29CYTc0WS1Mb2tJS1JoRk1pYVNfWGlrWHQxcUxXdmRNMWFWX28wOWc1WXMtTXlJaDNYZUx2V1Z3eG9GVWZ1bDYyUk52MWFib2tQX2k2TkNINUUyZ2drU3dHQk9xeFZCS19QSFlLY28xTHdWakVuM090a2FYVHk3cGw0OEtJTWhoVlA4SkJpNUV3Njg4TzZEaFhHWlc3OWk0Q1k3TGNlR0w4dEt5MVFhaXB5NTF5Qk56NV9hcnBKSGNUN2tpTFlQTFZ1eW1SZzNRR2pnTFM0YVdIdnhuUUZEanA0S2hVWmlwV0M0YWI2aXZSUXFqMlU4SkNDcUs4RGRr?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-11T16:20+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-12T05:04:39+08:00"
+  "updated_at": "2026-10-12T08:26:22+08:00"
 }
