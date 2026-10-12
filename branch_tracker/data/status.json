@@ -10,12 +10,12 @@
   "source_blocked": false,
   "ranking_limit_per_side": 15,
   "history_target_top_per_side": 3,
-  "history_requests_succeeded": 119,
+  "history_requests_succeeded": 120,
   "observed_collection_days": 5,
   "complete_collection_days": 1,
   "counts": {
     "ranking": 24596,
-    "history": 62371,
+    "history": 69571,
     "queue": 3150
   },
   "review_stage": "資料累積中",
@@ -36,10 +36,10 @@
       "error": "The read operation timed out"
     }
   ],
-  "history_pairs_ever_fetched": 1040,
+  "history_pairs_ever_fetched": 1160,
   "history_coverage_complete": false,
   "history_coverage_note": "成功抓取不代表完整60交易日；須逐組核對交易日缺口",
   "ranking_coverage_complete": true,
   "errors_total": 1,
-  "database_bytes": 16404480
+  "database_bytes": 17219584
 }
