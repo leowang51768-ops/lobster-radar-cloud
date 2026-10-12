@@ -1,6 +1,10 @@
 name: Independent Branch Evidence Tracking
 on:
   workflow_dispatch:
+  workflow_run:
+    workflows: ["Lobster Daily Price Update"]
+    types: [completed]
+    branches: [main]
   push:
     paths:
       - "branch_tracker/final_result.py"
@@ -16,11 +20,15 @@ concurrency:
   cancel-in-progress: false
 jobs:
   collect:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
         with:
+          # A queued push may point to a snapshot predating the previous
+          # collector's database commit. Always start with current evidence.
+          ref: main
           fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
@@ -62,3 +70,10 @@ jobs:
           done
           echo "Failed to publish branch evidence after retries"
           exit 1
+      - name: Preserve evidence if collection or publication fails
+        if: ${{ failure() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: branch-evidence-${{ github.run_id }}
+          path: branch_tracker/data/
+          retention-days: 14
