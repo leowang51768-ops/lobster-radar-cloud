@@ -3,9 +3,12 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - "branch_tracker/final_result.py"
-      - "stock_universe.py"
+      - "branch_tracker/*.py"
+      - "branch_tracker/tests/**"
       - "branch_tracker/data/extra_universe.json"
+      - ".github/workflows/branch-tracking.yml"
+      - "stock_universe.py"
+
   schedule:
     # 台灣時間20:40執行，21:00稽核前先收集分點資料
     - cron: "40 12 * * 1-5"
@@ -58,7 +61,27 @@ jobs:
               exit 0
             fi
             git rebase --abort || true
+            # A binary SQLite conflict cannot be solved by repeating rebase.
+            # Merge independent evidence rows into the current remote snapshot.
+            cp branch_tracker/data/branches.sqlite "$RUNNER_TEMP/branch-local.sqlite"
+            git fetch origin main
+            git reset --hard origin/main
+            python branch_tracker/merge_evidence.py "$RUNNER_TEMP/branch-local.sqlite" branch_tracker/data/branches.sqlite
+            python branch_tracker/collect.py --history-budget 0
+            python branch_tracker/price_relationship.py
+            python branch_tracker/audit.py
+            python branch_tracker/final_result.py
+            git add branch_tracker/data
+            git diff --cached --quiet && exit 0
+            git commit -m "Merge independently collected branch evidence"
             sleep $((attempt * 10))
           done
           echo "Failed to publish branch evidence after retries"
           exit 1
+      - name: Preserve evidence on failure
+        if: ${{ failure() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: branch-evidence-${{ github.run_id }}
+          path: branch_tracker/data/
+          retention-days: 30
