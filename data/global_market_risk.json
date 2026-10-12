@@ -8,41 +8,41 @@
     "出現重大風險新聞"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 -3.1%｜NASDAQ +0.3%｜日經225 -0.0%｜KOSPI -6.2%｜台股加權 -0.0%｜恆生 +2.0%",
+    "⚠ 全球市場風險｜費半 -3.1%｜NASDAQ +0.2%｜日經225 -0.0%｜KOSPI -3.6%｜台股加權 -0.0%｜恆生 +2.0%",
     "⚠ 全球市場風險｜美債10Y 5.24%｜VIX 15.2",
+    "⚠ 全球市場風險｜\"The Big Short\" investor Burry shifts to put options on the Nasdaq and semiconductor ETFs, warn",
     "⚠ 全球市場風險｜Institution: Hong Kong stocks now have the fundamentals to resume their upward trend, with key ",
     "⚠ 全球市場風險｜TVB Limited Once Again Earns \"Media of the Year\" at The Spark Awards 2026",
     "⚠ 全球市場風險｜Hong Kong Market Quick Look | The three major indices showed divergent trends, with the tech in",
     "⚠ 全球市場風險｜Hong Kong‑listed Chinese bank stocks rose against the market trend, with shares of Agricultural",
     "⚠ 全球市場風險｜Bond Market Sell-off Brings “Unexpected Turn”: Could Global Central Banks Reduce the Number of ",
-    "⚠ 全球市場風險｜台積電股價三年內可望翻倍！外媒親揭真實數字",
-    "⚠ 全球市場風險｜台股小跌11點外資再賣522億元 調節台塑四寶、晶圓代工族群",
-    "⚠ 全球市場風險｜【1012精選強勢股】台股量縮小跌11點，櫃買卻逆勢收紅？用「突破均線糾結」找整理完準備發動的股票"
+    "⚠ 全球市場風險｜航海王重返航道 台股49K失而復得",
+    "⚠ 全球市場風險｜Concerns Arise Over Delays in Native 800V Power Deployment for AI Data Centers; Morgan Stanley:"
   ],
   "markets": {
     "US_SOX": {
       "label": "費半",
-      "price": 12233.384,
+      "price": 12236.788,
       "change_pct": -3.0
     },
     "US_NASDAQ": {
       "label": "NASDAQ",
-      "price": 27273.69,
+      "price": 27245.902,
       "change_pct": 0.2
     },
     "US_SP500": {
       "label": "S&P500",
-      "price": 7807.04,
+      "price": 7807.24,
       "change_pct": 0.6
     },
     "US_DOW": {
       "label": "道瓊",
-      "price": 51882.93,
+      "price": 51850.55,
       "change_pct": 1.2
     },
     "VIX": {
       "label": "VIX",
-      "price": 15.2,
+      "price": 15.21,
       "change_pct": 2.4
     },
     "JP_NIKKEI": {
@@ -53,7 +53,7 @@
     "KR_KOSPI": {
       "label": "KOSPI",
       "price": 6384.24,
-      "change_pct": -6.2
+      "change_pct": -3.6
     },
     "TW_TAIEX": {
       "label": "台股加權",
@@ -72,6 +72,14 @@
     }
   },
   "active_news": [
+    {
+      "title": "\"The Big Short\" investor Burry shifts to put options on the Nasdaq and semiconductor ETFs, warning of a peak within nine months. - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOd1BGVGVGY3hsSFg1OGViMzFXakc4cGZFSC1tR3cxZVhNM1JWSlQwRk15VVNBTG1ERzVkRkhXb0diSU44ZU52bVBQMk5NQ0FNMUtualljYTE4VVhLSU1IYl82ZjFSR3JBcG03WDVaWDVJdS1QVE1CV1NMRXY3T3lhYlRaWWRJTEUzcTJrVWEtSlAtS180aEpiN1JSVEg?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-12T19:29+08:00",
+      "importance": 5,
+      "risk_score": 4
+    },
     {
       "title": "Institution: Hong Kong stocks now have the fundamentals to resume their upward trend, with key focus on sectors such as dividends, AI hardware, and AI applications. - 富途牛牛",
       "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPcGVfRU84amEyX041SW44WEZ3Tm53Rko0a3ZsVVZtRllIMHlGdUlFdmdpY3RFVGNId2VoOURQcF9zcXBGNEd0bjdkSkJoMVdnM3BoZXMxWE5zaFhRczdFQnRhR2NLLThNSmxXUWx3YXRGMF9TX2VBM1lyT2R5Njd5Q2VSTjUzMHV4V2NWYUVMR056WkFrMllieDdIcVFXcnhuVGUwb290UFFkQ1k?oc=5",
@@ -113,6 +121,38 @@
       "risk_score": 2
     },
     {
+      "title": "航海王重返航道 台股49K失而復得 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxNZW5sNHpzUDVIQmgzVldnR29XQ25IbXdreDlCTENkTEU3em1wT003SGlBZXRaaU1TWEoxc3lRWFh5bkxxWlRlWmlYc1RhYTFPV2hVVEt3OUgwTm9FNC10OXlVZGcyTGRNZ3REYWFGTXI5am1FWDl3VjV4UjNabzBWaTFCYWxDUzRsajVpNWJfaFFJclFMd0RFVTZnYWVKLS15V0ZNVjZqOWg2Sk1qU19jeTZEQ3pVTzhnanFYMVRhWl9rNkdmNnM3MG8wYXI4WjUza3BueDllXzdhcEZOZjFwRXNIYjYtLTFlQXZuVldvMFdud2VQTEZMdTFEeFU?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-13T04:10+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Concerns Arise Over Delays in Native 800V Power Deployment for AI Data Centers; Morgan Stanley: Market Overreacting, OCP Summit Expected to Catalyze Semiconductor Stocks - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOZjMxd1pKUGkwX0hlTmd0MXpRQUNxTWUxUWZiR1V2UDYzVGM3amNLNVpWZ0EwbllyVXpNa1hpcWw2eUI5TW52ZjZkYXRZajl3Z2tFNE0zeXBtckVtMU1QVVl4VlozWTk4UlZ3cS13M3NyMl9sVlFUSmxpckZZVGJ1MnpfbW1mNmk2QVlkM3dPNzNzUjJiYzE3VUZlUXdyQnUtUDZzTm1pcVE?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-12T23:08+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Bitmine Immersion Technologies (BMNR) Announces ETH Holdings Reach 6.03 Million Tokens, and Total Crypto and Total Cash & Marketable Securities Holdings of $16.2 Billion - 全球企業動態 - Quamnet",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBXdXJLMGQyTDJKdjBQSS1nY3o0U3owTzhNZjI1SHZRbGhNblRxSS1uaGpuRDBHTWNhdnlVMHdJaVZENlltT0NNaGU5cTlXanYzb003QTV2elMtWkVyM0Nn?oc=5",
+      "source": "Quamnet",
+      "published_at": "2026-10-12T22:00+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "「紅巨人」發威 台股收小黑！石英元件引動兩大商機看這邊 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi8wJBVV95cUxPbWhqdXktLU8xNXE1N0I0MWZvTF9tV2ZiMEJTWW5UQVNQc2JnSkVhMEc2Q2JxYldBd0FYTWc4dThLMDduVTJraG1ydE5jNUtnckwwcVVFb3dkUTdSSkhiajBBN1huWklPSExfR2RzaDJjV2ZLUE9DcDZwbG1DZWk0RFM0bnNTSlpyOFBsR3hRUUtFalhVR3p2RFFEa0xReURnZnM1dGJ1ZG1aazVWOUZ5VVJtUXAwRVVVdmh5TGQ3UGo5Uy1manZzS09kY1lja2ZCLUNJbDdHTW1JUWxteDdlM2dvZUx3UE1BZ3ZfVGhMUndrSjBLRWdHNkg4LXZ3UmRtMDhvZWc1QnJ3NVVqVDhNbVl1cHlWQ0hHOGc5bHBHT1psYlR1eHNGc3lhaXYwbTZrMUZCOEJvdUJJb0xwYVlUU0Z4ZG82YmQyUUY1TXd1SkZ6NDdXaUxpYnhHN1FBeTE3LUw4dlhXbkZubXM4N2ZZdXVyRQ?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-12T21:20+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
       "title": "台積電股價三年內可望翻倍！外媒親揭真實數字 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMizAJBVV95cUxNZnVSWmJGbVZ1Q19aUk9zeXM2cE1VZllIVjNDa0VTUXRBeDk5cmQzZUt6a3l6dmY1aHBmVW9ndFZsdHFkQ1NHd2xpcTNlWFBvZXg5S2R6Qk9TY3Y4RVRSTk1qVThyeG53R1dIRnVTY0gwUHRHeWxrR09BekQ2ZlNJMFV5M1hmZ3gwWGNGZ3oyRF81OFZrYnBDRlc0WFVWem5xSFJna1IxRkduUmZtRmZRTW9GeENoNlE2RXh1WThVLTlINlRDT0RYbkhBX3dmdEFvWlp6QXZWZ2hCYkNOYVlaNlo3V2ZwbUg5emVveVZXWUwwOElGOUE3ZGZxYnFzdUF0VGNLUER3V2VEb245bjFfcEdxLTV1MjRya1dXaVRfZEJGVmNkWEJlb3RySWtvSXE3ckM5RXdWSVlsREhieHVYWU8wTEFJeWVBbkg3Mg?oc=5",
       "source": "Yahoo股市",
@@ -127,48 +167,8 @@
       "published_at": "2026-10-12T20:12+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "【1012精選強勢股】台股量縮小跌11點，櫃買卻逆勢收紅？用「突破均線糾結」找整理完準備發動的股票 - CMoney投資網誌",
-      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1lSVg3NTl6a0ItVWJsVUZaQVkxeFZWMDVOYUs4YXVkeXg0c1REV0JhZU92LXFicERNQkxNM2Y3cG1vMF9NYS01U2VBcXpkTmVQWnVXRmM3aVBsUUloZnVUQXJUNTluaS1PQ1RJOW03VENFazM5eEpGNzFLUXQtUQ?oc=5",
-      "source": "CMoney投資網誌",
-      "published_at": "2026-10-12T18:25+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "4.3 萬股東股票將淪壁紙！證交所：永冠-KY 確定 11/18 下市 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi2wJBVV95cUxPRTFzbHJhaUZhNGN5QUxoZlhtMmRmR0E5Q2syRHIydUUwRHp4MjBadmRGWmY2WVRUaEFfYWh0T0xVZkRMU3RWMVVtN2hQbjNCRjM3TDA1Z2lXUThiR3Yya2ZmRzdpR1hzNWJtTGtNbDllc3Vka21TNDZDbXp3VnVVVi1odE81bFBZenNEM0JKbFBkOGFoRHJVYWZRaVRTLUJtNC1HUmNfREVTakZ5bnNkcl9Gc01NQjItVTQwSW5EWXF4Q2wwZFFjNHhXaU1tNWNfTzdMdUhhUGpUQ2NtNDU3a09uLUFxUTNGYnFFZWlDb3RaMHREREd6YWJwNTJrUVR5NnFFcEo5OEhuSWQwbE1yMzgwYmM3U08yUHJpbUVRUkdlYTExQl9Ia1RpczhhMHJ5ckVTWUNWT2hhR1JOdE1wWGZONjNnTHUzVFk0blFkU01Qei02N2tja0RPOA?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-12T18:25+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "DPC Dash - Domino's Pizza China Strengthens Market Presence in Q3 2026 with Continued Store Expansion, Product Innovation and Improving Sales Momentum - Macau Business",
-      "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxQQmZvdXozZFdhQmFDRUpNVnA5UWwxLVo3VUNZM3NaNkdobHBZVW5vRlhCNTFpQzh4X3dZcmpXbWRYNWo0M2NSdTRwWi14dG5fdGIxTGJNXzl1SFUyc1ljYng4eDRxR2xFc2F0YUh5V0lEb005Q0lyTW5TUG9fX0gxeEM2Y1JfbmxLaTJFRUJjZkZoV20tR0NJWERjLXFxZVhXYXlWNlVBV0xOa1p2VXI3MDM5NFVvU2dfWGdmbXRDd3VTNWlSd2FKUE84eTdRWlZuVl9hQUFUbElTR0oxbXBXNGdzdFFiR2JIandwNm5VcGxhZ3JXWWxiTHR4STBPLUROVnQw?oc=5",
-      "source": "Macau Business",
-      "published_at": "2026-10-12T18:17+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Q3法說會倒數！台積電收跌仍吸515億成交額居冠「這檔光電」CPO題材助攻亮燈、喊價8200元成焦點 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiiARBVV95cUxNa1Q3R2VfNWxUa1dTTUJPQ252TXB4WVVvQzJBU1Raek91M1VTRGhTa3I0bUtWODg4Q0RYbDI4LUYyQXU0M1FjVzVYWjhTSmlSQXJWbWpfU3NXOWxjcXBrS21PcGI5RXFSbVZCaTNnTlY5VDExUUUxZVJhMlhHTTVaMEJHR09sbVRRcXFtZXNTRmZjcUNZTFFBMUxoeDlYZHRJRmhYVUd2U3RDRzhoNXR6NzFwdk1DTnMyRF9wTDlLWGZXcmtlaG9ncWVOM01tYmp3NTFHQzN4OGxtb25OcElSTEVNTmYyQTE0Q2NHZzJFdF9Ka0NKUHp3VWViTjQ2WjU2YXZ0bmZfeFBaMkRNRk94Zy1PRjVDLUhya0RYbUNQcnlSanRzSHJ4TUQ1NTI4dlp4VWpxbkhKVXlfNUJkbE53WnRfeEpMZlZVTUxkLVhueFZmWTFlZW85WkhzdnBOd3IwUVNGNVlhOTlUb25KY3pITDY1dHhwZWpiX0doNjNpZUxxY3ljMHFlcWhyMXJxSVo3WFZfeFE2VWVwZy1yaHQ2NFk1MXRjdldfTjNNRHJwNDVZWVNaQUN2alM0dlVnNFJLTHhWNWRtZlhFa0kxd0NyS2hOTGpPN3IzQk5YbEk5MHdZdjFrTThmMkhINEE0bnlHVE93VlRoMzhfeG50NmVVcDBnN2ZHdnVj?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-12T18:00+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台積電占全台灣一成用電量 台電拋用電大戶\"自包電廠\" - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi5wJBVV95cUxOYXBGTXE5NGh5YTZ3dWpsRjRfR0UwcU1mZlY1cXNhOHdWRm1fSWwzQ2JfTnNxejd3SXkwWGwzTkx1ajh5aVphTm8tc3M1bGRrYlgwYVdVYUJxSFRscm80cUxVVVB4RGMxUFlMMGRLSG5WZlNVejNBYW45Zlc4R1R4TTY2UzFNWkdCbnFTdkdUOVFwWWJsbjczSnNYX21MR2Z4WWRNdW9PQ3NZcl9kSWJfb29jUE9KY0R2RFhFWmRDaVlmQllPenpROXFnSG9OVloyanlxY0lfZE5MWnhMazdOdHJ2cmFRU3EtLXhkNjRKYjRJcmp4cnR6V1lXZUJWWEtsZjBmZTFLM29hT3ZSMWtxRjMtZHFlcEFQS2puZUIzYTlFTGY1Z2VfVnZjd1lBZFJ2ZkR1Vm45LWdVdUZydGVUSWs3aTMzVnA5ZjNUYXg3U2xZNkNfZUwwVWw4OFNMaFQwcWVibWhVMA?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-12T17:58+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-12T23:23:34+08:00"
+  "updated_at": "2026-10-13T06:31:33+08:00"
 }
