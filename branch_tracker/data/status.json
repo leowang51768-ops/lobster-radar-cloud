@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-12",
+  "date": "2026-10-13",
   "mode": "collection_only",
   "expected_stocks": 166,
   "fixed_stocks": 163,
@@ -11,12 +11,12 @@
   "ranking_limit_per_side": 15,
   "history_target_top_per_side": 3,
   "history_requests_succeeded": 120,
-  "observed_collection_days": 5,
-  "complete_collection_days": 1,
+  "observed_collection_days": 6,
+  "complete_collection_days": 2,
   "counts": {
-    "ranking": 24596,
-    "history": 69571,
-    "queue": 3150
+    "ranking": 29576,
+    "history": 76771,
+    "queue": 3538
   },
   "review_stage": "資料累積中",
   "strategy_changes": false,
@@ -29,17 +29,11 @@
   ],
   "missing_stocks": [],
   "errors": [],
-  "history_errors": [
-    {
-      "code": "8210",
-      "branch": "1560",
-      "error": "The read operation timed out"
-    }
-  ],
-  "history_pairs_ever_fetched": 1160,
+  "history_errors": [],
+  "history_pairs_ever_fetched": 1280,
   "history_coverage_complete": false,
   "history_coverage_note": "成功抓取不代表完整60交易日；須逐組核對交易日缺口",
   "ranking_coverage_complete": true,
-  "errors_total": 1,
-  "database_bytes": 17219584
+  "errors_total": 0,
+  "database_bytes": 19603456
 }
