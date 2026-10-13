@@ -1,2 +1,2 @@
-manual trigger 2026-10-12
-reason: recover missing official price update and daily radar scan; existing LINE deduplication applies
+manual trigger 2026-10-13 cross-day repair
+reason: validate previous completed session after overnight schedule delay; existing LINE deduplication applies

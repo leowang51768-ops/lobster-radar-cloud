@@ -8,11 +8,11 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 from stock_universe import STOCKS_TO_TRACK
+from scan_trade_date import resolve_trade_date
 
 
 def requested_date():
-    value = os.environ.get('TRADE_DATE') or datetime.now(ZoneInfo('Asia/Taipei')).date().isoformat()
-    return date.fromisoformat(value).isoformat()
+    return resolve_trade_date(explicit=os.environ.get('TRADE_DATE'))
 
 
 def validate_rows(rows, trade_date):

@@ -46,14 +46,15 @@ jobs:
       - name: Verify price integrity regression tests
         run: python -m unittest discover -s tests -p test_price_integrity.py -v
 
+      - name: Verify cross-day session tests
+        run: python -m unittest discover -s tests -p test_scan_trade_date.py -v
+
       - name: Get trade date
         shell: bash
+        env:
+          MANUAL_TRADE_DATE: ${{ github.event.inputs.trade_date }}
         run: |
-          if [ -n "${{ github.event.inputs.trade_date }}" ]; then
-            echo "TRADE_DATE=${{ github.event.inputs.trade_date }}" >> "$GITHUB_ENV"
-          else
-            echo "TRADE_DATE=$(TZ=Asia/Taipei date +%F)" >> "$GITHUB_ENV"
-          fi
+          echo "TRADE_DATE=$(python scan_trade_date.py)" >> "$GITHUB_ENV"
           echo "FAIL_STAGE=初始化" >> "$GITHUB_ENV"
 
       - name: Check Taiwan market calendar
@@ -63,19 +64,8 @@ jobs:
           python - <<'PY' >> "$GITHUB_OUTPUT"
           import os
           from datetime import date
-
-          trade_date = os.environ["TRADE_DATE"]
-          d = date.fromisoformat(trade_date)
-          holidays = {
-              "2026-01-01",
-              "2026-02-12","2026-02-13","2026-02-16","2026-02-17","2026-02-18","2026-02-19","2026-02-20",
-              "2026-02-27",
-              "2026-04-03","2026-04-06",
-              "2026-05-01","2026-06-19",
-              "2026-09-25","2026-09-28",
-              "2026-10-09","2026-10-26","2026-12-25",
-          }
-          closed = d.weekday() >= 5 or trade_date in holidays
+          from scan_trade_date import is_trade_day
+          closed = not is_trade_day(date.fromisoformat(os.environ["TRADE_DATE"]))
           print("closed=" + ("true" if closed else "false"))
           print("reason=" + ("TWSE scheduled closure" if closed else "trading day"))
           PY
