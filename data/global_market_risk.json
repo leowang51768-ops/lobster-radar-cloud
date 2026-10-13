@@ -8,42 +8,42 @@
     "出現重大風險新聞"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 -3.8%｜NASDAQ -0.6%｜日經225 -1.8%｜KOSPI -8.9%｜台股加權 -1.9%｜恆生 +0.6%",
-    "⚠ 全球市場風險｜美債10Y 5.22%｜VIX 15.5",
+    "⚠ 全球市場風險｜費半 -2.9%｜NASDAQ -0.6%｜日經225 -1.8%｜KOSPI -8.9%｜台股加權 -1.9%｜恆生 +0.6%",
+    "⚠ 全球市場風險｜美債10Y 5.22%｜VIX 15.3",
     "⚠ 全球市場風險｜AI hardware stocks diverged. Southbound investors sold over HKD 200 million worth of GenScript ",
     "⚠ 全球市場風險｜Tech Selloff Deepens as Bank Earnings Fuel Stock Market Rotation -- Barrons.com",
     "⚠ 全球市場風險｜【Yahoo早盤】油價升息疑慮夾擊！台股重挫逾千點 分析師丁彥鈞：低點已過",
     "⚠ 全球市場風險｜台股失守4.9萬點！分析師卻依舊看好：台灣出口、股市表現非常亮眼",
+    "⚠ 全球市場風險｜TWA00 加權指數- 讓台股回歸正常股票- 股市爆料同學會",
     "⚠ 全球市場風險｜個股概覽 | 個股 - 股市",
-    "⚠ 全球市場風險｜2026光通訊概念股有哪些？16檔台股、CPO供應鏈與最新進度一次看",
-    "⚠ 全球市場風險｜Bitcoin Diverges From South Korean Stocks as AI Concerns Deepen the Kospi Selloff",
-    "⚠ 全球市場風險｜韓國市場的混亂正對美國晶片股造成震盪"
+    "⚠ 全球市場風險｜U.S. Stock Market Watch | Memory chip stocks slide in pre-market trading; Micron down 5%, SK Hy",
+    "⚠ 全球市場風險｜Chipmaking Outlook, Oil, Bond Yields Rattle Asian Stock Markets"
   ],
   "markets": {
     "US_SOX": {
       "label": "費半",
-      "price": 12092.568,
-      "change_pct": -3.8
+      "price": 12208.795,
+      "change_pct": -2.8
     },
     "US_NASDAQ": {
       "label": "NASDAQ",
-      "price": 27192.97,
+      "price": 27204.38,
       "change_pct": -0.6
     },
     "US_SP500": {
       "label": "S&P500",
-      "price": 7801.22,
-      "change_pct": -0.2
+      "price": 7805.45,
+      "change_pct": 0.0
     },
     "US_DOW": {
       "label": "道瓊",
-      "price": 51655.82,
+      "price": 51670.1,
       "change_pct": 0.0
     },
     "VIX": {
       "label": "VIX",
-      "price": 15.49,
-      "change_pct": 1.8
+      "price": 15.27,
+      "change_pct": 0.4
     },
     "JP_NIKKEI": {
       "label": "日經225",
@@ -67,7 +67,7 @@
     },
     "US10Y": {
       "label": "美債10年殖利率",
-      "price": 5.223,
+      "price": 5.217,
       "change_pct": -0.4
     }
   },
@@ -105,10 +105,42 @@
       "risk_score": 0
     },
     {
+      "title": "TWA00 加權指數- 讓台股回歸正常股票- 股市爆料同學會 - CMoney",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5zYjJIRjRiZHVqTW1iLU5WRjZzT2pYM2dMcHZWcFRLQjBhc0xqRE1rTnQ5bnprM1BNOURkVVhsNklIQzFMREpRQjlVM2phcHZEZ0FMMURyU3g?oc=5",
+      "source": "CMoney",
+      "published_at": "2026-10-13T23:32+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
       "title": "個股概覽 | 個股 - 股市 - CMoney",
       "url": "https://news.google.com/rss/articles/CBMiREFVX3lxTFBfVGtPUmhQeF9nalNLNm9zTGJWQlREWTlFa2dVeEhkNElpN1d0OXlyaFF3U3NaYnBodklvejVEU1YtdkNl?oc=5",
       "source": "CMoney",
       "published_at": "2026-10-13T23:28+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "U.S. Stock Market Watch | Memory chip stocks slide in pre-market trading; Micron down 5%, SK Hynix drops over 6% - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQa2Fxamx5cTU4TVVpLXd3RmdEdEJBYzRrVmhKNXZ4SEptZEI4cjRBR2prNlhUMVVXNkVvZHRSRUlCRUJBdEhwNG9aVjJ5NC04M09lcld2SFNrN1h4UFNVdHh6S1VEeThIWnViNWJIWkgyT2dtWHRjeU5DSlBBc3VhSUhBaVM1SUFXcUlUYUhyUUlDeFAyY1VxX2lHbGw?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-13T23:18+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Chipmaking Outlook, Oil, Bond Yields Rattle Asian Stock Markets - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQT1YyajY2ZVNobGlaRU9RdWwxNVRCLUIxemsxdkxHekJta0dveUdVeWttSXlNMWtuQ19PaDVycTU4blhNLVBpWDhRc2paTTJsVS1HS1ByWDhJYkZmX2hnQ29PMnZFWmlUNElDMFpUNksyRFRlX2Y4dmRleVB2LW1LRUF6SHduamVzdUhCWHo5VjhmMmtIZGd0aS1wSHdwOFEwMHBodC1XUQ?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-13T23:18+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "中國三迪(00910.HK)擬折讓約19.5%配售最多508.8萬股 淨籌約670萬港元 - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1MaVV4OG5QUVhJTjEzYUdINVY3SG9OUWdCb2pGcWdDSENDcjlwWWJTbWk4b0NsWlNCeV8ybHB5UmlxZENuWTM3eHozSlRWSmdCTjg3Q0VpS2dHeTlEdmJzQW5lT2JLdUx1MTNv?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-10-13T22:17+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -135,40 +167,8 @@
       "published_at": "2026-10-13T21:32+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "台股大跌近千點 關鍵看月線？四條件篩好股 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMitgJBVV95cUxNS3VxQnhSV0t0b1ItSHJvdjhhSC1pZzVFbEpMNFRxckszSHRyUUx0MHBsZG9sVFBkNXg0VVhQVjE3OE5ZRDN1U29BZWM4T0dvUDA4RGZ3Q2J0TkJBV3c5Q1JSemFfZmhpZ3R3N3VUQXMtQ1RrcnV2dHdFTkkzNVY5eHprSENTYzQyQnZkRkU2b2M1MWRpeFNxZExMQndDTHgxbkVnRW9aTXpQT3Z0MWs5eUJzaEFlcFBGdkZQOU1DUXFQaEtzbWV6bnVHMkRIRWItVGhHY1BjWkVueGZ6aTdiNks3ZGg4NjRwSV94QWpKZWU3UUVFZ1V0Z3BlOXdYOUFST1U3LVQ5OHlESldZaDduSGk0eFNlU1JNekpLNTZuLXh4QzJ0MlJTNEQwWnVIdkZtOE1qWVhn?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-13T21:19+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "韓股重摔拖累台股？周代運曝台灣卡住韓國命門：台股才是主人 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMilgNBVV95cUxPS2pkbC00MEpIZnFzV1B3dWd3VlY4bUt4V09OU3UzQ3Y1UllON1poRjBnRkE3RUJKRkpqTExTZVU1Qkg0M19MNFFfZXdXdEdDanhCa1BDX2lSQ181S010SVk4dU5jSndaMk5RYnBoZ0Z0djhmT0VOT3VoRGhGQnFvU295TXRVcV9fd2ZZOS16aW1XbnRSb3hmZXA0YXB3U2Z2alk1cEhRU2drNU1VMWpOOE1lajR3eW1HUkZHTzlQTUFNNXNnVW1nOExlb1FhSEZSY05uT1dadUdsejhRMUNpbXZoZElnTzN1dWJjZ0JtRFBlalR6WlMyNjBVSEluSkthYmVxSDRBemRIY1Q2R2REVHZXZWJuVGlibEdKcUM1Y2xzS3ZxY3BUTDBVT3NfQnpSX0FNRFN5RHZmbGpWcnQ4N3RBRi1vemVOUnBvVjRkRXRnOUNnWTZSVk5nV0NNMEwyZmNCV096aEw4U1h2OWR2UWlwLXdLTXFTMEFNbW5Ra0ZyeXZBajJQYThYYXJQS0ktSXBkeDVR?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-13T21:00+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "The semiconductor sector remains under sustained pressure! Dan Ives, a prominent Wall Street technology analyst, bucks the trend to offer strong support, arguing that the sell-off is a \"gross overreaction\" by the market and that the demand gap remains substa - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNLTE3T3duNDNyS3hKVUVjLTJOQnlyV2xhUXlqTU1FdkRRZGZzZTdnN05GQTQzTmJIVmtURUxBWGNJS1FHV19JR1FOcWpMdXh3UXNJRFlFTlJzdTNRR1JkOWM5WnE0WEJtbDlPTnA0SVpMNW9DWi1WREtvVld3TldISWY3TXhjcm5Sa05OQndNYmhaeFhWRkpBMC10RE9TZXZVNnJOVzFaZ3ZSR2JnbjFIQg?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-13T20:56+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股市值榜大洗牌！川湖、致茂摔出兆元俱樂部 富邦金逆勢創新高 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiowNBVV95cUxNZ0N4cnFJVGp6XzYyWks5ZF9XU2lKLUVkemxVajFta043M2I0OXNlMzd0Zm1tRjl1S3phUVl6LTZzSDVzbEVTRGt6djBWVzQ5eXRoa1J0NE5Edk1QWkFHMGNuczRSWjYxT3R3VndnN2c3YkVlQm9aSzZrWUc2TmtscTgtc1cyV2VSX3RILXNsbkh0X3pJTjBCT0lEMFpVbFNPbUFCeEdxZ092YlhnWUpTb1dZNGF1OXBpNGpDRWhoRjB4T0hRVnI0Z3NXZldzQXFvaF9keWFSUVhnZVlwelFVOGdNclpxRzBPd0pRYzNzT1B5dkN0YWdJUjBTdHR5ZkkxV29DMXVaLTdnTmx5RTdRb3BQaE9Ma2xoQzExbkVTc2lSRHU1RFZIWjcxN28xSWF1NWcwc3RtQi1SNTdLaEZZZHVacHdPT21FSjZTWFVmWXU3djVIdWJwckQ2RS1Ob1RzX2Y5SE9wY1FLMUh0VnR2cVNMek5XNVhGZ1BZNFlqUnNjYnNzMGRMc01YbXg2ZTFieTVKaUMtNWIyNFhuaGVNQi12VQ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-13T18:50+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-14T01:41:18+08:00"
+  "updated_at": "2026-10-14T05:57:02+08:00"
 }
