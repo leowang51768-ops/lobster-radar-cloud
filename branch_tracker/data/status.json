@@ -15,7 +15,7 @@
   "complete_collection_days": 3,
   "counts": {
     "ranking": 34556,
-    "history": 98311,
+    "history": 105511,
     "queue": 3894
   },
   "review_stage": "資料累積中",
@@ -36,10 +36,10 @@
       "error": "<urlopen error _ssl.c:999: The handshake operation timed out>"
     }
   ],
-  "history_pairs_ever_fetched": 1639,
+  "history_pairs_ever_fetched": 1759,
   "history_coverage_complete": false,
   "history_coverage_note": "成功抓取不代表完整60交易日；須逐組核對交易日缺口",
   "ranking_coverage_complete": true,
   "errors_total": 1,
-  "database_bytes": 23597056
+  "database_bytes": 24408064
 }
