@@ -24,11 +24,19 @@ def resolve_trade_date(now=None, explicit=None):
     if now.tzinfo is None:
         raise ValueError('Timezone-aware timestamp required')
     local = now.astimezone(TAIPEI)
-    # Official daily radar starts at 19:00. A delayed overnight/morning run
-    # still belongs to the previous eligible session, even after midnight.
+
+    # Taiwan-session rule:
+    # - After the market close (13:30 Taipei), the current Taiwan date is the
+    #   completed session and should be fetched immediately when the workflow
+    #   is manually triggered or runs later the same day.
+    # - Before 13:30, use the latest completed prior trade day.
+    # This removes the old 19:00 cutoff that incorrectly mapped a 17:00 manual
+    # trigger on 10/14 back to 10/13.
     day = local.date()
-    if local.time() < time(19):
+    if local.time() < time(13, 30):
         day -= timedelta(days=1)
+
+    # Keep existing 2026 holiday protection for now.
     if day.year != 2026:
         raise ValueError('Market calendar needs verification for year ' + str(day.year))
     while not is_trade_day(day):
