@@ -23,12 +23,20 @@ class PriceIntegrityTests(unittest.TestCase):
         with self.assertRaises(RuntimeError):
             validate_rows(self.rows, '2026-10-12')
 
+    def test_partial_allowed_for_final_fallback(self):
+        self.assertEqual(
+            validate_rows(self.rows[:107], '2026-10-12', require_all=False),
+            '2026-10-12'
+        )
+
     def test_stale_stock_not_used(self):
+        stale_code = self.rows[0][2]
         self.rows[0] = ('2026-10-08', *self.rows[0][1:])
         frame = pd.DataFrame(self.rows, columns=['date','market','code','name','open','high','low','close','volume','turnover'])
         with patch.dict(os.environ, {'TRADE_DATE': '2026-10-12'}):
-            with self.assertRaises(RuntimeError):
-                guard_market_frame(frame)
+            guarded = guard_market_frame(frame)
+            self.assertNotIn(stale_code, set(guarded['code'].astype(str)))
+            self.assertEqual(len(guarded), 162)
 
     def test_historical_run_excludes_future(self):
         future = [('2026-10-13', *r[1:]) for r in self.rows]
