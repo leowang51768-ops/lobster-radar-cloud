@@ -1,22 +1,22 @@
 {
-  "date": "2026-10-13",
+  "date": "2026-10-14",
   "mode": "collection_only",
   "expected_stocks": 166,
   "fixed_stocks": 163,
   "supplemental_stocks": 3,
-  "covered_stocks": 166,
-  "coverage_complete": true,
+  "covered_stocks": 90,
+  "coverage_complete": false,
   "status": "partial",
   "source_blocked": false,
   "ranking_limit_per_side": 15,
   "history_target_top_per_side": 3,
   "history_requests_succeeded": 120,
-  "observed_collection_days": 6,
+  "observed_collection_days": 7,
   "complete_collection_days": 2,
   "counts": {
-    "ranking": 29576,
-    "history": 76771,
-    "queue": 3538
+    "ranking": 32276,
+    "history": 83971,
+    "queue": 3723
   },
   "review_stage": "資料累積中",
   "strategy_changes": false,
@@ -27,13 +27,395 @@
     "數字單位為張，原頁有四捨五入；股價成交量使用官方來源且成交量單位為股",
     "排行榜與逐日歷史分開保存，不互相覆蓋"
   ],
-  "missing_stocks": [],
-  "errors": [],
+  "missing_stocks": [
+    "2330",
+    "6488",
+    "3532",
+    "6182",
+    "2303",
+    "5347",
+    "6770",
+    "3443",
+    "6462",
+    "2388",
+    "2408",
+    "2344",
+    "3014",
+    "3374",
+    "3711",
+    "6239",
+    "3289",
+    "3587",
+    "6830",
+    "8150",
+    "8110",
+    "2369",
+    "6187",
+    "1560",
+    "8064",
+    "6667",
+    "6829",
+    "6515",
+    "6510",
+    "3680",
+    "7556",
+    "6788",
+    "3689",
+    "4908",
+    "3363",
+    "3163",
+    "2345",
+    "6530",
+    "2421",
+    "6805",
+    "3483",
+    "6230",
+    "3071",
+    "6412",
+    "1519",
+    "1503",
+    "6203",
+    "3540",
+    "2383",
+    "6274",
+    "2368",
+    "3189",
+    "4958",
+    "6191",
+    "4989",
+    "2059",
+    "6584",
+    "8210",
+    "3665",
+    "6290",
+    "6117",
+    "3008",
+    "2382",
+    "6669",
+    "2317",
+    "4938",
+    "2376",
+    "3515",
+    "3706",
+    "6414",
+    "6166",
+    "2359",
+    "4585",
+    "2312",
+    "1301",
+    "6548"
+  ],
+  "errors": [
+    {
+      "code": "1301",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "1503",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "1519",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "1560",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2059",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2303",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2312",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2317",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2330",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2344",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2345",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2359",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2368",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2369",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2376",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2382",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2383",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2388",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2408",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2421",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3008",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3014",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3071",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3163",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3189",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3289",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3363",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3374",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3443",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3483",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3515",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3532",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3540",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3587",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3665",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3680",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3689",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3706",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3711",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "4585",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "4908",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "4938",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "4958",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "4989",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "5347",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6117",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6166",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6182",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6187",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6191",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6203",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6230",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6239",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6274",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6290",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6412",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6414",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6462",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6488",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6510",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6515",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6530",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6548",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6584",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6667",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6669",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6770",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6788",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6805",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6829",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6830",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "7556",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "8064",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "8110",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "8150",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "8210",
+      "error": "Source date missing or stale"
+    }
+  ],
   "history_errors": [],
-  "history_pairs_ever_fetched": 1280,
+  "history_pairs_ever_fetched": 1400,
   "history_coverage_complete": false,
   "history_coverage_note": "成功抓取不代表完整60交易日；須逐組核對交易日缺口",
-  "ranking_coverage_complete": true,
+  "ranking_coverage_complete": false,
   "errors_total": 0,
-  "database_bytes": 19603456
+  "database_bytes": 21295104
 }
