@@ -5866,8 +5866,8 @@
       "support_source": "近5日低點"
     }
   },
-  "updated_at": "2026-10-14T08:52:40.446581+00:00",
-  "latest_trade_date": "2026-10-13",
+  "updated_at": "2026-10-14T09:19:18.717961+00:00",
+  "latest_trade_date": "2026-10-14",
   "layer1_candidate_count": 187,
   "stage_counts": {
     "正式試單": 1,
@@ -5898,10 +5898,10 @@
   },
   "strategy_version": "龍蝦買點-v14-破底翻+PriceAction",
   "four_point_rule": "已取消",
-  "candidate_count": 42,
+  "candidate_count": 45,
   "formal_buy_signal_count": 0,
   "route_counts": {
-    "破底翻": 31,
+    "破底翻": 34,
     "Price Action": 11
   },
   "exit_warning_keys": {
