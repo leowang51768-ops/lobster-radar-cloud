@@ -1,2 +1,2 @@
-trigger 2026-10-14 official-close candidate rebuild
-reason: candidate current price must use latest official close from price database, not breakout_tracking last_close
+trigger 2026-10-14 D1-D10 sync rebuild
+reason: rebuild candidate pool using actual TWSE trading-day D calculation and latest signal per stock
