@@ -2,7 +2,7 @@
   "version": 241,
   "receiver_ready": true,
   "events_path": "ghost_monitor_events.json",
-  "state_path": "ghost_monitor_state.json",
-  "updated_at": "2026-10-14T21:31:13+08:00",
+  "state_path": "ghost_monitor_projection.json",
+  "updated_at": "2026-10-14T21:34:10+08:00",
   "scope": "pattern lifecycle and evidence only; no orders"
 }

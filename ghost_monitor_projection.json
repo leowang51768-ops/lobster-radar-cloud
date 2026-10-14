@@ -1,0 +1,2758 @@
+{
+  "stocks": {
+    "6770": {
+      "code": "6770",
+      "name": "力積電",
+      "stage": "POOL",
+      "signal_id": "2026-09-30|6770",
+      "confirmed_date": "2026-09-30",
+      "tracking_day": 9,
+      "sources": [
+        "branch",
+        "radar"
+      ],
+      "pick": {
+        "tracking_key": "2026-09-30|6770",
+        "code": "6770",
+        "name": "力積電",
+        "route": "N字底",
+        "stage": "B點當日突破",
+        "signal_date": "2026-09-30",
+        "breakout_close": 75.3,
+        "pivot": 73.7,
+        "retest_support": 73.7,
+        "stop_price": 72.2,
+        "volume_ratio": 1.47,
+        "composite_score": 88,
+        "status": "invalid",
+        "status_label": "🟢 回測確認",
+        "created_date": "2026-09-30",
+        "last_checked_date": "2026-10-14",
+        "tracking_day": 1,
+        "breakout_volume": 0,
+        "last_low": 73.3,
+        "last_close": 71.0,
+        "last_volume": 92791273.0,
+        "resolved_date": "2026-10-14",
+        "resolved_close": 74.5,
+        "volume_vs_breakout": null,
+        "true_breakout_threshold": 76.806,
+        "true_breakout_threshold_source": "可用歷史資料無上方有效壓力｜突破收盤+2%",
+        "price_discovery": true,
+        "upper_resistance_at_signal": null,
+        "upper_resistance_touches_at_signal": null,
+        "support_status": "已確認支撐",
+        "support_confirmed": true,
+        "confirmed_support": 73.7,
+        "candidate_new_support": null,
+        "new_support": null,
+        "new_support_status": null,
+        "definition_reaudit": "2026-10-08-new-pattern-definitions",
+        "a_low": 66.2,
+        "b_point": 73.7,
+        "c_low": 67.0,
+        "current_support": 73.7,
+        "current_support_status": "已確認支撐",
+        "distance_to_support_pct": 1.0855,
+        "signal_id": "2026-09-30|6770"
+      },
+      "retired_date": "2026-10-14",
+      "exit_reason": "pattern_invalid"
+    },
+    "6488": {
+      "code": "6488",
+      "name": "環球晶",
+      "stage": "POOL",
+      "signal_id": "2026-09-30|6488",
+      "confirmed_date": "2026-09-30",
+      "tracking_day": 9,
+      "sources": [
+        "branch",
+        "radar"
+      ],
+      "pick": {
+        "tracking_key": "2026-09-30|6488",
+        "code": "6488",
+        "name": "環球晶",
+        "route": "N字底",
+        "stage": "B點當日突破",
+        "signal_date": "2026-09-30",
+        "breakout_close": 1035.0,
+        "pivot": 996.0,
+        "retest_support": 996.0,
+        "stop_price": 976.0,
+        "volume_ratio": 1.27,
+        "composite_score": 82.9,
+        "status": "failed",
+        "status_label": "🟣 真突破後回測失敗",
+        "created_date": "2026-09-30",
+        "last_checked_date": "2026-10-14",
+        "tracking_day": 9,
+        "breakout_volume": 0,
+        "last_low": 994.0,
+        "last_close": 1020.0,
+        "last_volume": 10898821.0,
+        "gain_vs_breakout_pct": 4.8309,
+        "true_breakout_date": "2026-10-01",
+        "true_breakout_close": 1085.0,
+        "upper_resistance": null,
+        "upper_resistance_touches": 0,
+        "upper_resistance_strength": "未確認",
+        "upside_amount": null,
+        "upside_pct": null,
+        "resolved_date": "2026-10-14",
+        "resolved_close": 1020.0,
+        "true_breakout_threshold": 1055.7,
+        "new_support": null,
+        "true_breakout_threshold_source": "可用歷史資料無上方有效壓力｜突破收盤+2%",
+        "price_discovery": true,
+        "upper_resistance_at_signal": null,
+        "upper_resistance_touches_at_signal": null,
+        "support_status": "候選支撐",
+        "support_confirmed": false,
+        "confirmed_support": null,
+        "candidate_new_support": 1055.7,
+        "new_support_status": "候選新支撐失敗",
+        "definition_reaudit": "2026-10-08-new-pattern-definitions",
+        "a_low": 778.0,
+        "b_point": 996.0,
+        "c_low": 823.0,
+        "current_support": 1055.7,
+        "current_support_status": "候選新支撐",
+        "distance_to_support_pct": -3.3816,
+        "signal_id": "2026-09-30|6488"
+      },
+      "retired_date": "2026-10-14",
+      "exit_reason": "pattern_invalid"
+    },
+    "3706": {
+      "code": "3706",
+      "name": "神達",
+      "stage": "D",
+      "signal_id": "2026-10-12|3706",
+      "confirmed_date": "2026-10-12",
+      "tracking_day": 2,
+      "sources": [
+        "branch",
+        "radar"
+      ],
+      "pick": {
+        "tracking_key": "2026-10-12|3706",
+        "signal_date": "2026-10-12",
+        "code": "3706",
+        "name": "神達",
+        "route": "N字底",
+        "stage": "B點當日突破",
+        "breakout_close": 82.3,
+        "pivot": 81.5,
+        "retest_support": 81.5,
+        "support_source": "N字底B頸線（原壓力轉候選支撐）",
+        "support_status": "候選支撐",
+        "support_confirmed": false,
+        "confirmed_support": null,
+        "current_support": 83.946,
+        "current_support_status": "候選新支撐",
+        "distance_to_support_pct": 0.3026,
+        "stop_price": 79.8,
+        "b_low": null,
+        "true_breakout_threshold": 83.946,
+        "true_breakout_threshold_source": "可用歷史資料無上方有效壓力｜突破收盤+2%",
+        "price_discovery": true,
+        "upper_resistance_at_signal": null,
+        "upper_resistance_touches_at_signal": null,
+        "volume_ratio": 2.35,
+        "composite_score": 84.5,
+        "breakout_volume": 11667867.0,
+        "status": "true_breakout",
+        "status_label": "🔵 真突破",
+        "status_definition": "已完成原策略訊號；距支撐一律以當下有效支撐計算：(現價÷目前支撐−1)×100%。真突破前用原突破／結構支撐；真突破後自動切換至真突破門檻形成的候選／確認新支撐。",
+        "created_date": "2026-10-12",
+        "last_checked_date": "2026-10-14",
+        "last_low": 83.2,
+        "last_close": 84.2,
+        "last_volume": 15110244.0,
+        "tracking_day": 2,
+        "gain_vs_breakout_pct": 2.3086,
+        "true_breakout_date": "2026-10-14",
+        "true_breakout_close": 84.2,
+        "candidate_new_support": 83.946,
+        "new_support": null,
+        "new_support_status": "候選新支撐",
+        "upper_resistance": null,
+        "upper_resistance_touches": 0,
+        "upper_resistance_strength": "未確認",
+        "upside_amount": null,
+        "upside_pct": null
+      }
+    },
+    "8046": {
+      "code": "8046",
+      "name": "南電",
+      "stage": "D",
+      "signal_id": "2026-10-01|8046",
+      "confirmed_date": "2026-10-01",
+      "tracking_day": 8,
+      "sources": [
+        "branch",
+        "radar"
+      ],
+      "pick": {
+        "tracking_key": "2026-10-01|8046",
+        "signal_date": "2026-10-01",
+        "code": "8046",
+        "name": "南電",
+        "route": "N字底",
+        "stage": "B點當日突破",
+        "breakout_close": 1420.0,
+        "pivot": 1380.0,
+        "retest_support": 1380.0,
+        "stop_price": 1350.0,
+        "volume_ratio": 1.39,
+        "composite_score": 79.2,
+        "breakout_volume": 19869429.0,
+        "status": "post_true_retest_success",
+        "status_label": "🟦 真突破後回測成功",
+        "created_date": "2026-10-01",
+        "last_checked_date": "2026-10-14",
+        "last_low": 1445.0,
+        "last_close": 1430.0,
+        "last_volume": 15131229.0,
+        "tracking_day": 2,
+        "gain_vs_breakout_pct": 2.8169,
+        "true_breakout_date": "2026-10-02",
+        "true_breakout_close": 1460.0,
+        "upper_resistance": null,
+        "upper_resistance_touches": 0,
+        "upper_resistance_strength": "未確認",
+        "upside_amount": null,
+        "upside_pct": null,
+        "resolved_date": "2026-10-05",
+        "resolved_close": 1495.0,
+        "true_breakout_threshold": 1448.4,
+        "new_support": 1448.4,
+        "true_breakout_threshold_source": "可用歷史資料無上方有效壓力｜突破收盤+2%",
+        "price_discovery": true,
+        "upper_resistance_at_signal": null,
+        "upper_resistance_touches_at_signal": null,
+        "support_status": "候選支撐",
+        "support_confirmed": false,
+        "confirmed_support": null,
+        "candidate_new_support": 1448.4,
+        "new_support_status": "已確認新支撐",
+        "definition_reaudit": "2026-10-08-new-pattern-definitions",
+        "a_low": 792.0,
+        "b_point": 1380.0,
+        "c_low": 1010.0,
+        "current_support": 1380.0,
+        "current_support_status": "候選支撐",
+        "distance_to_support_pct": 8.3333
+      }
+    },
+    "4958": {
+      "code": "4958",
+      "name": "臻鼎-KY",
+      "stage": "D",
+      "signal_id": "2026-10-02|4958",
+      "confirmed_date": "2026-10-02",
+      "tracking_day": 7,
+      "sources": [
+        "branch",
+        "radar"
+      ],
+      "pick": {
+        "tracking_key": "2026-10-02|4958",
+        "signal_date": "2026-10-02",
+        "code": "4958",
+        "name": "臻鼎-KY",
+        "route": "N字底",
+        "stage": "B點當日突破",
+        "breakout_close": 561.0,
+        "pivot": 550.0,
+        "retest_support": 550.0,
+        "stop_price": 539.0,
+        "volume_ratio": 2.11,
+        "composite_score": 97.0,
+        "breakout_volume": 69348102.0,
+        "status": "post_true_retest_success",
+        "status_label": "🟦 真突破後回測成功",
+        "created_date": "2026-10-02",
+        "last_checked_date": "2026-10-14",
+        "last_low": 572.0,
+        "last_close": 567.0,
+        "last_volume": 40603476.0,
+        "tracking_day": 2,
+        "gain_vs_breakout_pct": 2.6738,
+        "true_breakout_date": "2026-10-05",
+        "true_breakout_close": 576.0,
+        "upper_resistance": null,
+        "upper_resistance_touches": 0,
+        "upper_resistance_strength": "未確認",
+        "upside_amount": null,
+        "upside_pct": null,
+        "resolved_date": "2026-10-06",
+        "resolved_close": 574.0,
+        "true_breakout_threshold": 572.22,
+        "new_support": 572.22,
+        "true_breakout_threshold_source": "可用歷史資料無上方有效壓力｜突破收盤+2%",
+        "price_discovery": true,
+        "upper_resistance_at_signal": null,
+        "upper_resistance_touches_at_signal": null,
+        "support_status": "候選支撐",
+        "support_confirmed": false,
+        "confirmed_support": null,
+        "candidate_new_support": 572.22,
+        "new_support_status": "已確認新支撐",
+        "definition_reaudit": "2026-10-08-new-pattern-definitions",
+        "a_low": 421.5,
+        "b_point": 550.0,
+        "c_low": 446.5,
+        "current_support": 550.0,
+        "current_support_status": "候選支撐",
+        "distance_to_support_pct": 4.3636
+      }
+    },
+    "3163": {
+      "code": "3163",
+      "name": "波若威",
+      "stage": "POOL",
+      "signal_id": "2026-10-02|3163",
+      "confirmed_date": "2026-10-02",
+      "tracking_day": 7,
+      "sources": [
+        "branch",
+        "radar"
+      ],
+      "pick": {
+        "tracking_key": "2026-10-02|3163",
+        "signal_date": "2026-10-02",
+        "code": "3163",
+        "name": "波若威",
+        "route": "N字底",
+        "stage": "B點當日突破",
+        "breakout_close": 713.0,
+        "pivot": 689.0,
+        "retest_support": 689.0,
+        "stop_price": 675.0,
+        "volume_ratio": 5.44,
+        "composite_score": 90.2,
+        "breakout_volume": 8067176.0,
+        "status": "invalid",
+        "status_label": "🟢 回測確認",
+        "created_date": "2026-10-02",
+        "last_checked_date": "2026-10-14",
+        "last_low": 688.0,
+        "last_close": 653.0,
+        "last_volume": 2182088.0,
+        "tracking_day": 2,
+        "gain_vs_breakout_pct": -0.561,
+        "resolved_date": "2026-10-14",
+        "resolved_close": 689.0,
+        "volume_vs_breakout": 0.27048969800584494,
+        "true_breakout_threshold": 727.26,
+        "true_breakout_threshold_source": "可用歷史資料無上方有效壓力｜突破收盤+2%",
+        "price_discovery": true,
+        "upper_resistance_at_signal": null,
+        "upper_resistance_touches_at_signal": null,
+        "support_status": "已確認支撐",
+        "support_confirmed": true,
+        "confirmed_support": 689.0,
+        "candidate_new_support": null,
+        "new_support": null,
+        "new_support_status": null,
+        "definition_reaudit": "2026-10-08-new-pattern-definitions",
+        "a_low": 631.0,
+        "b_point": 689.0,
+        "c_low": 639.0,
+        "current_support": 689.0,
+        "current_support_status": "已確認支撐",
+        "distance_to_support_pct": 0.0,
+        "signal_id": "2026-10-02|3163"
+      },
+      "retired_date": "2026-10-14",
+      "exit_reason": "pattern_invalid"
+    },
+    "6239": {
+      "code": "6239",
+      "name": "力成",
+      "stage": "POOL",
+      "signal_id": "2026-10-06|6239",
+      "confirmed_date": "2026-10-06",
+      "tracking_day": 5,
+      "sources": [
+        "branch",
+        "radar"
+      ],
+      "pick": {
+        "tracking_key": "2026-10-06|6239",
+        "signal_date": "2026-10-06",
+        "code": "6239",
+        "name": "力成",
+        "route": "N字底",
+        "stage": "B點當日突破",
+        "breakout_close": 310.5,
+        "pivot": 302.0,
+        "retest_support": 302.0,
+        "stop_price": 295.5,
+        "volume_ratio": 1.63,
+        "composite_score": 88.8,
+        "breakout_volume": 27368367.0,
+        "status": "failed",
+        "status_label": "🟢 回測確認",
+        "created_date": "2026-10-06",
+        "last_checked_date": "2026-10-14",
+        "true_breakout_threshold": 316.71,
+        "last_low": 304.0,
+        "last_close": 298.5,
+        "last_volume": 14753768.0,
+        "tracking_day": 1,
+        "resolved_date": "2026-10-14",
+        "resolved_close": 307.5,
+        "volume_vs_breakout": 0.539081049300457,
+        "true_breakout_threshold_source": "可用歷史資料無上方有效壓力｜突破收盤+2%",
+        "price_discovery": true,
+        "upper_resistance_at_signal": null,
+        "upper_resistance_touches_at_signal": null,
+        "support_status": "已確認支撐",
+        "support_confirmed": true,
+        "confirmed_support": 302.0,
+        "candidate_new_support": null,
+        "new_support": null,
+        "new_support_status": null,
+        "definition_reaudit": "2026-10-08-new-pattern-definitions",
+        "a_low": 259.0,
+        "b_point": 302.0,
+        "c_low": 279.5,
+        "current_support": 302.0,
+        "current_support_status": "已確認支撐",
+        "distance_to_support_pct": 1.8212,
+        "signal_id": "2026-10-06|6239"
+      },
+      "retired_date": "2026-10-14",
+      "exit_reason": "pattern_invalid"
+    },
+    "6187": {
+      "code": "6187",
+      "name": "萬潤",
+      "stage": "D",
+      "signal_id": "2026-10-05|6187",
+      "confirmed_date": "2026-10-05",
+      "tracking_day": 6,
+      "sources": [
+        "branch",
+        "radar"
+      ],
+      "pick": {
+        "tracking_key": "2026-10-05|6187",
+        "signal_date": "2026-10-05",
+        "code": "6187",
+        "name": "萬潤",
+        "route": "N字底",
+        "stage": "B點當日突破",
+        "breakout_close": 1490.0,
+        "pivot": 1455.0,
+        "retest_support": 1455.0,
+        "stop_price": 1425.0,
+        "volume_ratio": 1.78,
+        "composite_score": 90.2,
+        "breakout_volume": 4888741.0,
+        "status": "confirmed",
+        "status_label": "🟢 回測確認",
+        "created_date": "2026-10-05",
+        "last_checked_date": "2026-10-14",
+        "last_low": 1445.0,
+        "last_close": 1540.0,
+        "last_volume": 5714672.0,
+        "tracking_day": 1,
+        "gain_vs_breakout_pct": 3.0201,
+        "true_breakout_date": "2026-10-06",
+        "true_breakout_close": 1535.0,
+        "upper_resistance": null,
+        "upper_resistance_touches": 0,
+        "upper_resistance_strength": "未確認",
+        "upside_amount": null,
+        "upside_pct": null,
+        "resolved_date": "2026-10-06",
+        "resolved_close": 1535.0,
+        "true_breakout_threshold": 1519.8,
+        "new_support": null,
+        "true_breakout_threshold_source": "可用歷史資料無上方有效壓力｜突破收盤+2%",
+        "price_discovery": true,
+        "upper_resistance_at_signal": null,
+        "upper_resistance_touches_at_signal": null,
+        "support_status": "已確認支撐",
+        "support_confirmed": true,
+        "confirmed_support": 1455.0,
+        "candidate_new_support": null,
+        "new_support_status": null,
+        "definition_reaudit": "2026-10-08-new-pattern-definitions",
+        "a_low": 1035.0,
+        "b_point": 1455.0,
+        "c_low": 1180.0,
+        "current_support": 1455.0,
+        "current_support_status": "已確認支撐",
+        "distance_to_support_pct": 5.4983
+      }
+    },
+    "2376": {
+      "code": "2376",
+      "name": "技嘉",
+      "stage": "POOL",
+      "signal_id": "2026-10-05|2376",
+      "confirmed_date": "2026-10-05",
+      "tracking_day": 6,
+      "sources": [
+        "branch",
+        "radar"
+      ],
+      "pick": {
+        "tracking_key": "2026-10-05|2376",
+        "signal_date": "2026-10-05",
+        "code": "2376",
+        "name": "技嘉",
+        "route": "N字底",
+        "stage": "B點當日突破",
+        "breakout_close": 388.5,
+        "pivot": 376.0,
+        "retest_support": 376.0,
+        "stop_price": 368.0,
+        "volume_ratio": 1.89,
+        "composite_score": 87.7,
+        "breakout_volume": 11355878.0,
+        "status": "invalid",
+        "status_label": "🟢 回測確認",
+        "created_date": "2026-10-05",
+        "last_checked_date": "2026-10-14",
+        "last_low": 377.5,
+        "last_close": 356.0,
+        "last_volume": 6692268.0,
+        "tracking_day": 1,
+        "resolved_date": "2026-10-14",
+        "resolved_close": 380.0,
+        "volume_vs_breakout": 0.5893219353008196,
+        "true_breakout_threshold": 396.27,
+        "true_breakout_threshold_source": "可用歷史資料無上方有效壓力｜突破收盤+2%",
+        "price_discovery": true,
+        "upper_resistance_at_signal": null,
+        "upper_resistance_touches_at_signal": null,
+        "support_status": "已確認支撐",
+        "support_confirmed": true,
+        "confirmed_support": 376.0,
+        "candidate_new_support": null,
+        "new_support": null,
+        "new_support_status": null,
+        "definition_reaudit": "2026-10-08-new-pattern-definitions",
+        "a_low": 335.5,
+        "b_point": 376.0,
+        "c_low": 358.5,
+        "current_support": 376.0,
+        "current_support_status": "已確認支撐",
+        "distance_to_support_pct": 1.0638,
+        "signal_id": "2026-10-05|2376"
+      },
+      "retired_date": "2026-10-14",
+      "exit_reason": "pattern_invalid"
+    },
+    "6290": {
+      "code": "6290",
+      "name": "良維",
+      "stage": "D",
+      "signal_id": "2026-10-14|6290",
+      "confirmed_date": "2026-10-14",
+      "tracking_day": 0,
+      "sources": [
+        "branch",
+        "radar"
+      ],
+      "pick": {
+        "tracking_key": "2026-10-14|6290",
+        "signal_date": "2026-10-14",
+        "code": "6290",
+        "name": "良維",
+        "route": "N字底",
+        "stage": "B點當日突破",
+        "breakout_close": 292.0,
+        "pivot": 284.0,
+        "retest_support": 284.0,
+        "support_source": "N字底B頸線（原壓力轉候選支撐）",
+        "support_status": "候選支撐",
+        "support_confirmed": false,
+        "confirmed_support": null,
+        "current_support": 284.0,
+        "current_support_status": "候選支撐",
+        "distance_to_support_pct": 2.8169,
+        "stop_price": 278.0,
+        "b_low": null,
+        "true_breakout_threshold": 297.84,
+        "true_breakout_threshold_source": "可用歷史資料無上方有效壓力｜突破收盤+2%",
+        "price_discovery": true,
+        "upper_resistance_at_signal": null,
+        "upper_resistance_touches_at_signal": null,
+        "volume_ratio": 3.6,
+        "composite_score": 93.0,
+        "breakout_volume": 13460663.0,
+        "status": "tracking",
+        "status_label": "🟧 突破",
+        "status_definition": "已完成原策略訊號；距支撐一律以當下有效支撐計算：(現價÷目前支撐−1)×100%。真突破前用原突破／結構支撐；真突破後自動切換至真突破門檻形成的候選／確認新支撐。",
+        "created_date": "2026-10-14",
+        "last_checked_date": "2026-10-14",
+        "last_close": 292.0
+      }
+    },
+    "3013": {
+      "code": "3013",
+      "name": "晟銘電",
+      "stage": "D",
+      "signal_id": "2026-10-06|3013",
+      "confirmed_date": "2026-10-06",
+      "tracking_day": 5,
+      "sources": [
+        "branch",
+        "radar"
+      ],
+      "pick": {
+        "tracking_key": "2026-10-06|3013",
+        "signal_date": "2026-10-06",
+        "code": "3013",
+        "name": "晟銘電",
+        "route": "N字底",
+        "stage": "B點當日突破",
+        "breakout_close": 95.0,
+        "pivot": 93.9,
+        "retest_support": 93.9,
+        "stop_price": 92.0,
+        "volume_ratio": 1.9,
+        "composite_score": 82.8,
+        "breakout_volume": 6098792.0,
+        "status": "confirmed",
+        "status_label": "🟢 回測確認",
+        "created_date": "2026-10-06",
+        "last_checked_date": "2026-10-14",
+        "true_breakout_threshold": 96.9,
+        "last_low": 93.7,
+        "last_close": 97.4,
+        "last_volume": 4384685.0,
+        "tracking_day": 1,
+        "resolved_date": "2026-10-07",
+        "resolved_close": 96.3,
+        "volume_vs_breakout": 0.7189431939964505,
+        "true_breakout_threshold_source": "可用歷史資料無上方有效壓力｜突破收盤+2%",
+        "price_discovery": true,
+        "upper_resistance_at_signal": null,
+        "upper_resistance_touches_at_signal": null,
+        "support_status": "已確認支撐",
+        "support_confirmed": true,
+        "confirmed_support": 93.9,
+        "candidate_new_support": null,
+        "new_support": null,
+        "new_support_status": null,
+        "definition_reaudit": "2026-10-08-new-pattern-definitions",
+        "a_low": 81.1,
+        "b_point": 93.9,
+        "c_low": 81.5,
+        "current_support": 93.9,
+        "current_support_status": "已確認支撐",
+        "distance_to_support_pct": 2.5559
+      }
+    },
+    "2368": {
+      "code": "2368",
+      "name": "金像電",
+      "stage": "D",
+      "signal_id": "2026-10-14|2368",
+      "confirmed_date": "2026-10-14",
+      "tracking_day": 0,
+      "sources": [
+        "branch",
+        "radar"
+      ],
+      "pick": {
+        "tracking_key": "2026-10-14|2368",
+        "signal_date": "2026-10-14",
+        "code": "2368",
+        "name": "金像電",
+        "route": "N字底",
+        "stage": "B點當日突破",
+        "breakout_close": 1260.0,
+        "pivot": 1245.0,
+        "retest_support": 1245.0,
+        "support_source": "N字底B頸線（原壓力轉候選支撐）",
+        "support_status": "候選支撐",
+        "support_confirmed": false,
+        "confirmed_support": null,
+        "current_support": 1245.0,
+        "current_support_status": "候選支撐",
+        "distance_to_support_pct": 1.2048,
+        "stop_price": 1220.0,
+        "b_low": null,
+        "true_breakout_threshold": 1285.2,
+        "true_breakout_threshold_source": "可用歷史資料無上方有效壓力｜突破收盤+2%",
+        "price_discovery": true,
+        "upper_resistance_at_signal": null,
+        "upper_resistance_touches_at_signal": null,
+        "volume_ratio": 1.23,
+        "composite_score": 80.9,
+        "breakout_volume": 16417946.0,
+        "status": "tracking",
+        "status_label": "🟧 突破",
+        "status_definition": "已完成原策略訊號；距支撐一律以當下有效支撐計算：(現價÷目前支撐−1)×100%。真突破前用原突破／結構支撐；真突破後自動切換至真突破門檻形成的候選／確認新支撐。",
+        "created_date": "2026-10-14",
+        "last_checked_date": "2026-10-14",
+        "last_close": 1260.0
+      }
+    },
+    "6442": {
+      "code": "6442",
+      "name": "光聖",
+      "stage": "POOL",
+      "signal_id": "2026-10-07|6442",
+      "confirmed_date": "2026-10-07",
+      "tracking_day": 4,
+      "sources": [
+        "branch",
+        "radar"
+      ],
+      "pick": {
+        "tracking_key": "2026-10-07|6442",
+        "signal_date": "2026-10-07",
+        "code": "6442",
+        "name": "光聖",
+        "route": "N字底",
+        "stage": "B點當日突破",
+        "breakout_close": 1815.0,
+        "pivot": 1705.0,
+        "retest_support": 1705.0,
+        "stop_price": 1670.0,
+        "true_breakout_threshold": 1851.3,
+        "volume_ratio": 1.7,
+        "composite_score": 88.2,
+        "breakout_volume": 3981562.0,
+        "status": "invalid",
+        "status_label": "🟢 回測確認",
+        "status_definition": "已完成原策略突破並收盤確認；後續依該型態突破／關鍵支撐與真突破門檻追蹤。",
+        "created_date": "2026-10-07",
+        "last_checked_date": "2026-10-14",
+        "true_breakout_threshold_source": "可用歷史資料無上方有效壓力｜突破收盤+2%",
+        "price_discovery": true,
+        "upper_resistance_at_signal": null,
+        "upper_resistance_touches_at_signal": null,
+        "support_status": "已確認支撐",
+        "support_confirmed": true,
+        "confirmed_support": 1705.0,
+        "candidate_new_support": null,
+        "new_support": null,
+        "new_support_status": null,
+        "tracking_day": 1,
+        "resolved_date": "2026-10-14",
+        "resolved_close": 1785.0,
+        "definition_reaudit": "2026-10-08-new-pattern-definitions",
+        "a_low": 1000.0,
+        "b_point": 1705.0,
+        "c_low": 1430.0,
+        "current_support": 1705.0,
+        "current_support_status": "已確認支撐",
+        "distance_to_support_pct": 4.6921,
+        "last_low": 1715.0,
+        "last_close": 1640.0,
+        "last_volume": 3701979.0,
+        "volume_vs_breakout": 0.9297805735537962,
+        "signal_id": "2026-10-07|6442"
+      },
+      "retired_date": "2026-10-14",
+      "exit_reason": "pattern_invalid"
+    },
+    "4989": {
+      "code": "4989",
+      "name": "榮科",
+      "stage": "POOL",
+      "signal_id": "2026-10-07|4989",
+      "confirmed_date": "2026-10-07",
+      "tracking_day": 4,
+      "sources": [
+        "branch",
+        "radar"
+      ],
+      "pick": {
+        "tracking_key": "2026-10-07|4989",
+        "signal_date": "2026-10-07",
+        "code": "4989",
+        "name": "榮科",
+        "route": "N字底",
+        "stage": "B點當日突破",
+        "breakout_close": 73.7,
+        "pivot": 72.6,
+        "retest_support": 72.6,
+        "stop_price": 71.1,
+        "true_breakout_threshold": 75.174,
+        "volume_ratio": 1.9,
+        "composite_score": 87.9,
+        "breakout_volume": 23621619.0,
+        "status": "invalid",
+        "status_label": "🟢 回測確認",
+        "status_definition": "已完成原策略突破並收盤確認；後續依該型態突破／關鍵支撐與真突破門檻追蹤。",
+        "created_date": "2026-10-07",
+        "last_checked_date": "2026-10-14",
+        "true_breakout_threshold_source": "可用歷史資料無上方有效壓力｜突破收盤+2%",
+        "price_discovery": true,
+        "upper_resistance_at_signal": null,
+        "upper_resistance_touches_at_signal": null,
+        "support_status": "已確認支撐",
+        "support_confirmed": true,
+        "confirmed_support": 72.6,
+        "candidate_new_support": null,
+        "new_support": null,
+        "new_support_status": null,
+        "tracking_day": 1,
+        "resolved_date": "2026-10-14",
+        "resolved_close": 73.2,
+        "definition_reaudit": "2026-10-08-new-pattern-definitions",
+        "a_low": 50.1,
+        "b_point": 72.6,
+        "c_low": 58.8,
+        "current_support": 72.6,
+        "current_support_status": "已確認支撐",
+        "distance_to_support_pct": 0.8264,
+        "last_low": 71.6,
+        "last_close": 69.7,
+        "last_volume": 23775247.0,
+        "volume_vs_breakout": 1.0065037032389694,
+        "signal_id": "2026-10-07|4989"
+      },
+      "retired_date": "2026-10-14",
+      "exit_reason": "pattern_invalid"
+    },
+    "5443": {
+      "code": "5443",
+      "name": "均豪",
+      "stage": "POOL",
+      "signal_id": "2026-10-12|5443",
+      "confirmed_date": "2026-10-12",
+      "tracking_day": 0,
+      "sources": [
+        "radar"
+      ],
+      "pick": {
+        "tracking_key": "2026-10-12|5443",
+        "signal_date": "2026-10-12",
+        "code": "5443",
+        "name": "均豪",
+        "route": "N字底",
+        "stage": "B點當日突破",
+        "breakout_close": 115.5,
+        "pivot": 114.0,
+        "retest_support": 114.0,
+        "support_source": "N字底B頸線（原壓力轉候選支撐）",
+        "support_status": "候選支撐",
+        "support_confirmed": false,
+        "confirmed_support": null,
+        "current_support": 114.0,
+        "current_support_status": "候選支撐",
+        "distance_to_support_pct": -2.193,
+        "stop_price": 111.5,
+        "b_low": null,
+        "true_breakout_threshold": 117.81,
+        "true_breakout_threshold_source": "可用歷史資料無上方有效壓力｜突破收盤+2%",
+        "price_discovery": true,
+        "upper_resistance_at_signal": null,
+        "upper_resistance_touches_at_signal": null,
+        "volume_ratio": 2.12,
+        "composite_score": 90.7,
+        "breakout_volume": 3052041.0,
+        "status": "failed",
+        "status_label": "🔴 突破失敗",
+        "status_definition": "已完成原策略訊號；距支撐一律以當下有效支撐計算：(現價÷目前支撐−1)×100%。真突破前用原突破／結構支撐；真突破後自動切換至真突破門檻形成的候選／確認新支撐。",
+        "created_date": "2026-10-12",
+        "last_checked_date": "2026-10-14",
+        "last_low": 111.5,
+        "last_close": 111.5,
+        "last_volume": 1974657.0,
+        "tracking_day": 2,
+        "resolved_date": "2026-10-14",
+        "resolved_close": 111.5
+      },
+      "retired_date": "2026-10-14",
+      "exit_reason": "pattern_invalid"
+    },
+    "4977": {
+      "code": "4977",
+      "name": "眾達-KY",
+      "stage": "D",
+      "signal_id": "2026-10-14|4977",
+      "confirmed_date": "2026-10-14",
+      "tracking_day": 0,
+      "sources": [
+        "branch",
+        "radar"
+      ],
+      "pick": {
+        "tracking_key": "2026-10-14|4977",
+        "signal_date": "2026-10-14",
+        "code": "4977",
+        "name": "眾達-KY",
+        "route": "N字底",
+        "stage": "B點當日突破",
+        "breakout_close": 191.0,
+        "pivot": 189.5,
+        "retest_support": 189.5,
+        "support_source": "N字底B頸線（原壓力轉候選支撐）",
+        "support_status": "候選支撐",
+        "support_confirmed": false,
+        "confirmed_support": null,
+        "current_support": 189.5,
+        "current_support_status": "候選支撐",
+        "distance_to_support_pct": 0.7916,
+        "stop_price": 185.5,
+        "b_low": null,
+        "true_breakout_threshold": 194.82,
+        "true_breakout_threshold_source": "可用歷史資料無上方有效壓力｜突破收盤+2%",
+        "price_discovery": true,
+        "upper_resistance_at_signal": null,
+        "upper_resistance_touches_at_signal": null,
+        "volume_ratio": 2.71,
+        "composite_score": 93.0,
+        "breakout_volume": 10821003.0,
+        "status": "tracking",
+        "status_label": "🟧 突破",
+        "status_definition": "已完成原策略訊號；距支撐一律以當下有效支撐計算：(現價÷目前支撐−1)×100%。真突破前用原突破／結構支撐；真突破後自動切換至真突破門檻形成的候選／確認新支撐。",
+        "created_date": "2026-10-14",
+        "last_checked_date": "2026-10-14",
+        "last_close": 191.0
+      }
+    },
+    "2312": {
+      "code": "2312",
+      "name": "金寶",
+      "stage": "D",
+      "signal_id": "2026-10-14|2312",
+      "confirmed_date": "2026-10-14",
+      "tracking_day": 0,
+      "sources": [
+        "branch",
+        "radar"
+      ],
+      "pick": {
+        "tracking_key": "2026-10-14|2312",
+        "signal_date": "2026-10-14",
+        "code": "2312",
+        "name": "金寶",
+        "route": "N字底",
+        "stage": "B點當日突破",
+        "breakout_close": 33.25,
+        "pivot": 31.7,
+        "retest_support": 31.7,
+        "support_source": "N字底B頸線（原壓力轉候選支撐）",
+        "support_status": "候選支撐",
+        "support_confirmed": false,
+        "confirmed_support": null,
+        "current_support": 31.7,
+        "current_support_status": "候選支撐",
+        "distance_to_support_pct": 4.8896,
+        "stop_price": 31.05,
+        "b_low": null,
+        "true_breakout_threshold": 33.915,
+        "true_breakout_threshold_source": "可用歷史資料無上方有效壓力｜突破收盤+2%",
+        "price_discovery": true,
+        "upper_resistance_at_signal": null,
+        "upper_resistance_touches_at_signal": null,
+        "volume_ratio": 5.47,
+        "composite_score": 87.9,
+        "breakout_volume": 55445283.0,
+        "status": "tracking",
+        "status_label": "🟧 突破",
+        "status_definition": "已完成原策略訊號；距支撐一律以當下有效支撐計算：(現價÷目前支撐−1)×100%。真突破前用原突破／結構支撐；真突破後自動切換至真突破門檻形成的候選／確認新支撐。",
+        "created_date": "2026-10-14",
+        "last_checked_date": "2026-10-14",
+        "last_close": 33.25
+      }
+    },
+    "3580": {
+      "code": "3580",
+      "name": "友威科",
+      "stage": "D",
+      "signal_id": "2026-10-14|3580",
+      "confirmed_date": "2026-10-14",
+      "tracking_day": 0,
+      "sources": [
+        "branch",
+        "radar"
+      ],
+      "pick": {
+        "tracking_key": "2026-10-14|3580",
+        "signal_date": "2026-10-14",
+        "code": "3580",
+        "name": "友威科",
+        "route": "N字底",
+        "stage": "B點當日突破",
+        "breakout_close": 121.0,
+        "pivot": 116.0,
+        "retest_support": 116.0,
+        "support_source": "N字底B頸線（原壓力轉候選支撐）",
+        "support_status": "候選支撐",
+        "support_confirmed": false,
+        "confirmed_support": null,
+        "current_support": 116.0,
+        "current_support_status": "候選支撐",
+        "distance_to_support_pct": 4.3103,
+        "stop_price": 113.5,
+        "b_low": null,
+        "true_breakout_threshold": 123.42,
+        "true_breakout_threshold_source": "可用歷史資料無上方有效壓力｜突破收盤+2%",
+        "price_discovery": true,
+        "upper_resistance_at_signal": null,
+        "upper_resistance_touches_at_signal": null,
+        "volume_ratio": 3.14,
+        "composite_score": 82.7,
+        "breakout_volume": 6722757.0,
+        "status": "tracking",
+        "status_label": "🟧 突破",
+        "status_definition": "已完成原策略訊號；距支撐一律以當下有效支撐計算：(現價÷目前支撐−1)×100%。真突破前用原突破／結構支撐；真突破後自動切換至真突破門檻形成的候選／確認新支撐。",
+        "created_date": "2026-10-14",
+        "last_checked_date": "2026-10-14",
+        "last_close": 121.0
+      }
+    },
+    "1301": {
+      "code": "1301",
+      "name": "台塑",
+      "stage": "A1",
+      "signal_id": "branch|1301|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "1503": {
+      "code": "1503",
+      "name": "士電",
+      "stage": "A1",
+      "signal_id": "branch|1503|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "1513": {
+      "code": "1513",
+      "name": "中興電",
+      "stage": "A1",
+      "signal_id": "branch|1513|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "1514": {
+      "code": "1514",
+      "name": "亞力",
+      "stage": "A1",
+      "signal_id": "branch|1514|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "1519": {
+      "code": "1519",
+      "name": "華城",
+      "stage": "A1",
+      "signal_id": "branch|1519|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "1560": {
+      "code": "1560",
+      "name": "中砂",
+      "stage": "A1",
+      "signal_id": "branch|1560|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "1773": {
+      "code": "1773",
+      "name": "勝一",
+      "stage": "A1",
+      "signal_id": "branch|1773|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "2059": {
+      "code": "2059",
+      "name": "川湖",
+      "stage": "A1",
+      "signal_id": "branch|2059|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "2301": {
+      "code": "2301",
+      "name": "光寶科",
+      "stage": "A1",
+      "signal_id": "branch|2301|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "2303": {
+      "code": "2303",
+      "name": "聯電",
+      "stage": "A1",
+      "signal_id": "branch|2303|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "2308": {
+      "code": "2308",
+      "name": "台達電",
+      "stage": "A1",
+      "signal_id": "branch|2308|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "2313": {
+      "code": "2313",
+      "name": "華通",
+      "stage": "A1",
+      "signal_id": "branch|2313|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "2317": {
+      "code": "2317",
+      "name": "鴻海",
+      "stage": "A1",
+      "signal_id": "branch|2317|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "2324": {
+      "code": "2324",
+      "name": "仁寶",
+      "stage": "A1",
+      "signal_id": "branch|2324|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "2330": {
+      "code": "2330",
+      "name": "台積電",
+      "stage": "A1",
+      "signal_id": "branch|2330|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "2344": {
+      "code": "2344",
+      "name": "華邦電",
+      "stage": "A1",
+      "signal_id": "branch|2344|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "2345": {
+      "code": "2345",
+      "name": "智邦",
+      "stage": "A1",
+      "signal_id": "branch|2345|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "2355": {
+      "code": "2355",
+      "name": "敬鵬",
+      "stage": "A1",
+      "signal_id": "branch|2355|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "2356": {
+      "code": "2356",
+      "name": "英業達",
+      "stage": "A1",
+      "signal_id": "branch|2356|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "2357": {
+      "code": "2357",
+      "name": "華碩",
+      "stage": "A1",
+      "signal_id": "branch|2357|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "2359": {
+      "code": "2359",
+      "name": "所羅門",
+      "stage": "A1",
+      "signal_id": "branch|2359|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "2360": {
+      "code": "2360",
+      "name": "致茂",
+      "stage": "A1",
+      "signal_id": "branch|2360|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "2369": {
+      "code": "2369",
+      "name": "菱生",
+      "stage": "A1",
+      "signal_id": "branch|2369|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "2377": {
+      "code": "2377",
+      "name": "微星",
+      "stage": "A1",
+      "signal_id": "branch|2377|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "2379": {
+      "code": "2379",
+      "name": "瑞昱",
+      "stage": "A1",
+      "signal_id": "branch|2379|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "2382": {
+      "code": "2382",
+      "name": "廣達",
+      "stage": "A1",
+      "signal_id": "branch|2382|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "2383": {
+      "code": "2383",
+      "name": "台光電",
+      "stage": "A1",
+      "signal_id": "branch|2383|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "2385": {
+      "code": "2385",
+      "name": "群光",
+      "stage": "A1",
+      "signal_id": "branch|2385|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "2388": {
+      "code": "2388",
+      "name": "威盛",
+      "stage": "A1",
+      "signal_id": "branch|2388|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "2395": {
+      "code": "2395",
+      "name": "研華",
+      "stage": "A1",
+      "signal_id": "branch|2395|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "2404": {
+      "code": "2404",
+      "name": "漢唐",
+      "stage": "A1",
+      "signal_id": "branch|2404|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "2408": {
+      "code": "2408",
+      "name": "南亞科",
+      "stage": "A1",
+      "signal_id": "branch|2408|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "2421": {
+      "code": "2421",
+      "name": "建準",
+      "stage": "A1",
+      "signal_id": "branch|2421|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "2441": {
+      "code": "2441",
+      "name": "超豐",
+      "stage": "A1",
+      "signal_id": "branch|2441|2026-10-13",
+      "first_seen_date": "2026-10-13",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 2
+    },
+    "2449": {
+      "code": "2449",
+      "name": "京元電子",
+      "stage": "A1",
+      "signal_id": "branch|2449|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "2454": {
+      "code": "2454",
+      "name": "聯發科",
+      "stage": "A1",
+      "signal_id": "branch|2454|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "2467": {
+      "code": "2467",
+      "name": "志聖",
+      "stage": "A1",
+      "signal_id": "branch|2467|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "3006": {
+      "code": "3006",
+      "name": "晶豪科",
+      "stage": "A1",
+      "signal_id": "branch|3006|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "3008": {
+      "code": "3008",
+      "name": "大立光",
+      "stage": "A1",
+      "signal_id": "branch|3008|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "3014": {
+      "code": "3014",
+      "name": "聯陽",
+      "stage": "A1",
+      "signal_id": "branch|3014|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "3015": {
+      "code": "3015",
+      "name": "全漢",
+      "stage": "A1",
+      "signal_id": "branch|3015|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "3017": {
+      "code": "3017",
+      "name": "奇鋐",
+      "stage": "A1",
+      "signal_id": "branch|3017|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "3032": {
+      "code": "3032",
+      "name": "偉訓",
+      "stage": "A1",
+      "signal_id": "branch|3032|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "3035": {
+      "code": "3035",
+      "name": "智原",
+      "stage": "A1",
+      "signal_id": "branch|3035|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "3037": {
+      "code": "3037",
+      "name": "欣興",
+      "stage": "A1",
+      "signal_id": "branch|3037|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "3044": {
+      "code": "3044",
+      "name": "健鼎",
+      "stage": "A1",
+      "signal_id": "branch|3044|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "3047": {
+      "code": "3047",
+      "name": "訊舟",
+      "stage": "A1",
+      "signal_id": "branch|3047|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "3071": {
+      "code": "3071",
+      "name": "協禧",
+      "stage": "A1",
+      "signal_id": "branch|3071|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "3078": {
+      "code": "3078",
+      "name": "僑威",
+      "stage": "A1",
+      "signal_id": "branch|3078|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "3081": {
+      "code": "3081",
+      "name": "聯亞",
+      "stage": "A1",
+      "signal_id": "branch|3081|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "3131": {
+      "code": "3131",
+      "name": "弘塑",
+      "stage": "A1",
+      "signal_id": "branch|3131|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "3189": {
+      "code": "3189",
+      "name": "景碩",
+      "stage": "A1",
+      "signal_id": "branch|3189|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "3217": {
+      "code": "3217",
+      "name": "優群",
+      "stage": "A1",
+      "signal_id": "branch|3217|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "3231": {
+      "code": "3231",
+      "name": "緯創",
+      "stage": "A1",
+      "signal_id": "branch|3231|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "3260": {
+      "code": "3260",
+      "name": "威剛",
+      "stage": "A1",
+      "signal_id": "branch|3260|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "3289": {
+      "code": "3289",
+      "name": "宜特",
+      "stage": "A1",
+      "signal_id": "branch|3289|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "3324": {
+      "code": "3324",
+      "name": "雙鴻",
+      "stage": "A1",
+      "signal_id": "branch|3324|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "3325": {
+      "code": "3325",
+      "name": "旭品",
+      "stage": "A1",
+      "signal_id": "branch|3325|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "3338": {
+      "code": "3338",
+      "name": "泰碩",
+      "stage": "A1",
+      "signal_id": "branch|3338|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "3363": {
+      "code": "3363",
+      "name": "上詮",
+      "stage": "A1",
+      "signal_id": "branch|3363|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "3374": {
+      "code": "3374",
+      "name": "精材",
+      "stage": "A1",
+      "signal_id": "branch|3374|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "3380": {
+      "code": "3380",
+      "name": "明泰",
+      "stage": "A1",
+      "signal_id": "branch|3380|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "3406": {
+      "code": "3406",
+      "name": "玉晶光",
+      "stage": "A1",
+      "signal_id": "branch|3406|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "3443": {
+      "code": "3443",
+      "name": "創意",
+      "stage": "A1",
+      "signal_id": "branch|3443|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "3483": {
+      "code": "3483",
+      "name": "力致",
+      "stage": "A1",
+      "signal_id": "branch|3483|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "3515": {
+      "code": "3515",
+      "name": "華擎",
+      "stage": "A1",
+      "signal_id": "branch|3515|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "3526": {
+      "code": "3526",
+      "name": "凡甲",
+      "stage": "A1",
+      "signal_id": "branch|3526|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "3529": {
+      "code": "3529",
+      "name": "力旺",
+      "stage": "A1",
+      "signal_id": "branch|3529|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "3532": {
+      "code": "3532",
+      "name": "台勝科",
+      "stage": "A1",
+      "signal_id": "branch|3532|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "3533": {
+      "code": "3533",
+      "name": "嘉澤",
+      "stage": "A1",
+      "signal_id": "branch|3533|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "3540": {
+      "code": "3540",
+      "name": "曜越",
+      "stage": "A1",
+      "signal_id": "branch|3540|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "3583": {
+      "code": "3583",
+      "name": "辛耘",
+      "stage": "A1",
+      "signal_id": "branch|3583|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "3587": {
+      "code": "3587",
+      "name": "閎康",
+      "stage": "A1",
+      "signal_id": "branch|3587|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "3605": {
+      "code": "3605",
+      "name": "宏致",
+      "stage": "A1",
+      "signal_id": "branch|3605|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "3653": {
+      "code": "3653",
+      "name": "健策",
+      "stage": "A1",
+      "signal_id": "branch|3653|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "3661": {
+      "code": "3661",
+      "name": "世芯-KY",
+      "stage": "A1",
+      "signal_id": "branch|3661|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "3665": {
+      "code": "3665",
+      "name": "貿聯-KY",
+      "stage": "A1",
+      "signal_id": "branch|3665|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "3680": {
+      "code": "3680",
+      "name": "家登",
+      "stage": "A1",
+      "signal_id": "branch|3680|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "3689": {
+      "code": "3689",
+      "name": "湧德",
+      "stage": "A1",
+      "signal_id": "branch|3689|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "3693": {
+      "code": "3693",
+      "name": "營邦",
+      "stage": "A1",
+      "signal_id": "branch|3693|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "3711": {
+      "code": "3711",
+      "name": "日月光投控",
+      "stage": "A1",
+      "signal_id": "branch|3711|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "3715": {
+      "code": "3715",
+      "name": "定穎投控",
+      "stage": "A1",
+      "signal_id": "branch|3715|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "4566": {
+      "code": "4566",
+      "name": "時碩工業",
+      "stage": "A1",
+      "signal_id": "branch|4566|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "4585": {
+      "code": "4585",
+      "name": "達明",
+      "stage": "A1",
+      "signal_id": "branch|4585|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "4903": {
+      "code": "4903",
+      "name": "聯光通",
+      "stage": "A1",
+      "signal_id": "branch|4903|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "4908": {
+      "code": "4908",
+      "name": "前鼎",
+      "stage": "A1",
+      "signal_id": "branch|4908|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "4938": {
+      "code": "4938",
+      "name": "和碩",
+      "stage": "A1",
+      "signal_id": "branch|4938|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "4966": {
+      "code": "4966",
+      "name": "譜瑞-KY",
+      "stage": "A1",
+      "signal_id": "branch|4966|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "4967": {
+      "code": "4967",
+      "name": "十銓",
+      "stage": "A1",
+      "signal_id": "branch|4967|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "4979": {
+      "code": "4979",
+      "name": "華星光",
+      "stage": "A1",
+      "signal_id": "branch|4979|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "5269": {
+      "code": "5269",
+      "name": "祥碩",
+      "stage": "A1",
+      "signal_id": "branch|5269|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "5274": {
+      "code": "5274",
+      "name": "信驊",
+      "stage": "A1",
+      "signal_id": "branch|5274|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "5289": {
+      "code": "5289",
+      "name": "宜鼎",
+      "stage": "A1",
+      "signal_id": "branch|5289|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "5347": {
+      "code": "5347",
+      "name": "世界先進",
+      "stage": "A1",
+      "signal_id": "branch|5347|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "5426": {
+      "code": "5426",
+      "name": "振發",
+      "stage": "A1",
+      "signal_id": "branch|5426|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "5469": {
+      "code": "5469",
+      "name": "瀚宇博",
+      "stage": "A1",
+      "signal_id": "branch|5469|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "5536": {
+      "code": "5536",
+      "name": "聖暉*",
+      "stage": "A1",
+      "signal_id": "branch|5536|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "6117": {
+      "code": "6117",
+      "name": "迎廣",
+      "stage": "A1",
+      "signal_id": "branch|6117|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "6125": {
+      "code": "6125",
+      "name": "廣運",
+      "stage": "A1",
+      "signal_id": "branch|6125|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "6139": {
+      "code": "6139",
+      "name": "亞翔",
+      "stage": "A1",
+      "signal_id": "branch|6139|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "6166": {
+      "code": "6166",
+      "name": "凌華",
+      "stage": "A1",
+      "signal_id": "branch|6166|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "6182": {
+      "code": "6182",
+      "name": "合晶",
+      "stage": "A1",
+      "signal_id": "branch|6182|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "6191": {
+      "code": "6191",
+      "name": "精成科",
+      "stage": "A1",
+      "signal_id": "branch|6191|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "6196": {
+      "code": "6196",
+      "name": "帆宣",
+      "stage": "A1",
+      "signal_id": "branch|6196|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "6203": {
+      "code": "6203",
+      "name": "海韻電",
+      "stage": "A1",
+      "signal_id": "branch|6203|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "6215": {
+      "code": "6215",
+      "name": "和椿",
+      "stage": "A1",
+      "signal_id": "branch|6215|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "6223": {
+      "code": "6223",
+      "name": "旺矽",
+      "stage": "A1",
+      "signal_id": "branch|6223|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "6230": {
+      "code": "6230",
+      "name": "尼得科超眾",
+      "stage": "A1",
+      "signal_id": "branch|6230|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "6257": {
+      "code": "6257",
+      "name": "矽格",
+      "stage": "A1",
+      "signal_id": "branch|6257|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "6269": {
+      "code": "6269",
+      "name": "台郡",
+      "stage": "A1",
+      "signal_id": "branch|6269|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "6274": {
+      "code": "6274",
+      "name": "台燿",
+      "stage": "A1",
+      "signal_id": "branch|6274|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "6275": {
+      "code": "6275",
+      "name": "元山",
+      "stage": "A1",
+      "signal_id": "branch|6275|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "6282": {
+      "code": "6282",
+      "name": "康舒",
+      "stage": "A1",
+      "signal_id": "branch|6282|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "6412": {
+      "code": "6412",
+      "name": "群電",
+      "stage": "A1",
+      "signal_id": "branch|6412|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "6414": {
+      "code": "6414",
+      "name": "樺漢",
+      "stage": "A1",
+      "signal_id": "branch|6414|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "6426": {
+      "code": "6426",
+      "name": "統新",
+      "stage": "A1",
+      "signal_id": "branch|6426|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "6462": {
+      "code": "6462",
+      "name": "神盾",
+      "stage": "A1",
+      "signal_id": "branch|6462|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "6485": {
+      "code": "6485",
+      "name": "點序",
+      "stage": "A1",
+      "signal_id": "branch|6485|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "6510": {
+      "code": "6510",
+      "name": "精測",
+      "stage": "A1",
+      "signal_id": "branch|6510|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "6515": {
+      "code": "6515",
+      "name": "穎崴",
+      "stage": "A1",
+      "signal_id": "branch|6515|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "6530": {
+      "code": "6530",
+      "name": "創威",
+      "stage": "A1",
+      "signal_id": "branch|6530|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "6531": {
+      "code": "6531",
+      "name": "愛普*",
+      "stage": "A1",
+      "signal_id": "branch|6531|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "6533": {
+      "code": "6533",
+      "name": "晶心科",
+      "stage": "A1",
+      "signal_id": "branch|6533|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "6548": {
+      "code": "6548",
+      "name": "長科*",
+      "stage": "A1",
+      "signal_id": "branch|6548|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "6584": {
+      "code": "6584",
+      "name": "南俊國際",
+      "stage": "A1",
+      "signal_id": "branch|6584|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "6640": {
+      "code": "6640",
+      "name": "均華",
+      "stage": "A1",
+      "signal_id": "branch|6640|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "6643": {
+      "code": "6643",
+      "name": "M31",
+      "stage": "A1",
+      "signal_id": "branch|6643|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "6667": {
+      "code": "6667",
+      "name": "信紘科",
+      "stage": "A1",
+      "signal_id": "branch|6667|2026-10-13",
+      "first_seen_date": "2026-10-13",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 2
+    },
+    "6669": {
+      "code": "6669",
+      "name": "緯穎",
+      "stage": "A1",
+      "signal_id": "branch|6669|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "6684": {
+      "code": "6684",
+      "name": "安格",
+      "stage": "A1",
+      "signal_id": "branch|6684|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "6788": {
+      "code": "6788",
+      "name": "華景電",
+      "stage": "A1",
+      "signal_id": "branch|6788|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "6789": {
+      "code": "6789",
+      "name": "采鈺",
+      "stage": "A1",
+      "signal_id": "branch|6789|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "6805": {
+      "code": "6805",
+      "name": "富世達",
+      "stage": "A1",
+      "signal_id": "branch|6805|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "6829": {
+      "code": "6829",
+      "name": "千附精密",
+      "stage": "A1",
+      "signal_id": "branch|6829|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "6830": {
+      "code": "6830",
+      "name": "汎銓",
+      "stage": "A1",
+      "signal_id": "branch|6830|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "6933": {
+      "code": "6933",
+      "name": "AMAX-KY",
+      "stage": "A1",
+      "signal_id": "branch|6933|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "7556": {
+      "code": "7556",
+      "name": "意德士",
+      "stage": "A1",
+      "signal_id": "branch|7556|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "8028": {
+      "code": "8028",
+      "name": "昇陽半導體",
+      "stage": "A1",
+      "signal_id": "branch|8028|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "8039": {
+      "code": "8039",
+      "name": "台虹",
+      "stage": "A1",
+      "signal_id": "branch|8039|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "8064": {
+      "code": "8064",
+      "name": "東捷",
+      "stage": "A1",
+      "signal_id": "branch|8064|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "8103": {
+      "code": "8103",
+      "name": "瀚荃",
+      "stage": "A1",
+      "signal_id": "branch|8103|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "8110": {
+      "code": "8110",
+      "name": "華東",
+      "stage": "A1",
+      "signal_id": "branch|8110|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "8150": {
+      "code": "8150",
+      "name": "南茂",
+      "stage": "A1",
+      "signal_id": "branch|8150|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "8210": {
+      "code": "8210",
+      "name": "勤誠",
+      "stage": "A1",
+      "signal_id": "branch|8210|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "8227": {
+      "code": "8227",
+      "name": "巨有科技",
+      "stage": "A1",
+      "signal_id": "branch|8227|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "8299": {
+      "code": "8299",
+      "name": "群聯",
+      "stage": "A1",
+      "signal_id": "branch|8299|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "8358": {
+      "code": "8358",
+      "name": "金居",
+      "stage": "A1",
+      "signal_id": "branch|8358|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    },
+    "8996": {
+      "code": "8996",
+      "name": "高力",
+      "stage": "A1",
+      "signal_id": "branch|8996|2026-10-14",
+      "first_seen_date": "2026-10-14",
+      "sources": [
+        "branch"
+      ],
+      "a_age": 1
+    }
+  },
+  "archive": {
+    "2026-10-01|3706": {
+      "code": "3706",
+      "stage": "POOL",
+      "signal_id": "2026-10-01|3706",
+      "confirmed_date": "2026-10-01",
+      "first_seen_date": null,
+      "retired_date": "2026-10-02",
+      "exit_reason": "pattern_invalid"
+    },
+    "2026-10-02|6239": {
+      "code": "6239",
+      "stage": "POOL",
+      "signal_id": "2026-10-02|6239",
+      "confirmed_date": "2026-10-02",
+      "first_seen_date": null,
+      "retired_date": "2026-10-05",
+      "exit_reason": "pattern_invalid"
+    },
+    "2026-10-12|5443": {
+      "code": "5443",
+      "stage": "POOL",
+      "signal_id": "2026-10-12|5443",
+      "confirmed_date": "2026-10-12",
+      "first_seen_date": null,
+      "retired_date": "2026-10-14",
+      "exit_reason": "pattern_invalid"
+    },
+    "2026-10-06|6290": {
+      "code": "6290",
+      "stage": "D",
+      "signal_id": "2026-10-06|6290",
+      "confirmed_date": "2026-10-06",
+      "first_seen_date": null,
+      "retired_date": null,
+      "exit_reason": null
+    },
+    "2026-10-06|2368": {
+      "code": "2368",
+      "stage": "D",
+      "signal_id": "2026-10-06|2368",
+      "confirmed_date": "2026-10-06",
+      "first_seen_date": null,
+      "retired_date": null,
+      "exit_reason": null
+    },
+    "2026-09-30|6770": {
+      "code": "6770",
+      "stage": "POOL",
+      "signal_id": "2026-09-30|6770",
+      "confirmed_date": "2026-09-30",
+      "first_seen_date": null,
+      "retired_date": "2026-10-14",
+      "exit_reason": "pattern_invalid"
+    },
+    "2026-09-30|6488": {
+      "code": "6488",
+      "stage": "POOL",
+      "signal_id": "2026-09-30|6488",
+      "confirmed_date": "2026-09-30",
+      "first_seen_date": null,
+      "retired_date": "2026-10-14",
+      "exit_reason": "pattern_invalid"
+    },
+    "2026-10-02|3163": {
+      "code": "3163",
+      "stage": "POOL",
+      "signal_id": "2026-10-02|3163",
+      "confirmed_date": "2026-10-02",
+      "first_seen_date": null,
+      "retired_date": "2026-10-14",
+      "exit_reason": "pattern_invalid"
+    },
+    "2026-10-05|2376": {
+      "code": "2376",
+      "stage": "POOL",
+      "signal_id": "2026-10-05|2376",
+      "confirmed_date": "2026-10-05",
+      "first_seen_date": null,
+      "retired_date": "2026-10-14",
+      "exit_reason": "pattern_invalid"
+    },
+    "2026-10-06|6239": {
+      "code": "6239",
+      "stage": "POOL",
+      "signal_id": "2026-10-06|6239",
+      "confirmed_date": "2026-10-06",
+      "first_seen_date": null,
+      "retired_date": "2026-10-14",
+      "exit_reason": "pattern_invalid"
+    },
+    "2026-10-07|6442": {
+      "code": "6442",
+      "stage": "POOL",
+      "signal_id": "2026-10-07|6442",
+      "confirmed_date": "2026-10-07",
+      "first_seen_date": null,
+      "retired_date": "2026-10-14",
+      "exit_reason": "pattern_invalid"
+    },
+    "2026-10-07|4989": {
+      "code": "4989",
+      "stage": "POOL",
+      "signal_id": "2026-10-07|4989",
+      "confirmed_date": "2026-10-07",
+      "first_seen_date": null,
+      "retired_date": "2026-10-14",
+      "exit_reason": "pattern_invalid"
+    }
+  },
+  "applied_events": {},
+  "version": 241,
+  "as_of_date": "2026-10-14",
+  "updated_at": "2026-10-14T21:34:10+08:00",
+  "completed_through": "2026-10-14",
+  "price_basis": "official_completed_session"
+}
