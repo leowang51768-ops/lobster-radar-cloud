@@ -1,2 +1,2 @@
-trigger 2026-10-14 official-calendar candidate rebuild
-reason: verify TWSE official holiday calendar based next-trading-day selection
+trigger 2026-10-14 official-close candidate rebuild
+reason: candidate current price must use latest official close from price database, not breakout_tracking last_close
