@@ -8,16 +8,16 @@
     "出現重大風險新聞"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 -2.9%｜NASDAQ -0.6%｜日經225 -1.8%｜KOSPI -8.9%｜台股加權 -1.9%｜恆生 +0.6%",
+    "⚠ 全球市場風險｜費半 -2.9%｜NASDAQ -0.6%｜日經225 +0.3%｜KOSPI -3.7%｜台股加權 -1.9%｜恆生 +0.6%",
     "⚠ 全球市場風險｜美債10Y 5.22%｜VIX 15.3",
     "⚠ 全球市場風險｜AI hardware stocks diverged. Southbound investors sold over HKD 200 million worth of GenScript ",
     "⚠ 全球市場風險｜Tech Selloff Deepens as Bank Earnings Fuel Stock Market Rotation -- Barrons.com",
     "⚠ 全球市場風險｜【Yahoo早盤】油價升息疑慮夾擊！台股重挫逾千點 分析師丁彥鈞：低點已過",
+    "⚠ 全球市場風險｜晶片股拋售潮！美股4大指數全收黑 台積電ADR逆勢上漲",
+    "⚠ 全球市場風險｜How significant is the impact? The Hang Seng Tech Index has undergone a major revision to its c",
+    "⚠ 全球市場風險｜2026光通訊概念股有哪些？16檔台股、CPO供應鏈與最新進度一次看",
     "⚠ 全球市場風險｜台股失守4.9萬點！分析師卻依舊看好：台灣出口、股市表現非常亮眼",
-    "⚠ 全球市場風險｜TWA00 加權指數- 讓台股回歸正常股票- 股市爆料同學會",
-    "⚠ 全球市場風險｜個股概覽 | 個股 - 股市",
-    "⚠ 全球市場風險｜U.S. Stock Market Watch | Memory chip stocks slide in pre-market trading; Micron down 5%, SK Hy",
-    "⚠ 全球市場風險｜Chipmaking Outlook, Oil, Bond Yields Rattle Asian Stock Markets"
+    "⚠ 全球市場風險｜TWA00 加權指數- 讓台股回歸正常股票- 股市爆料同學會"
   ],
   "markets": {
     "US_SOX": {
@@ -47,13 +47,13 @@
     },
     "JP_NIKKEI": {
       "label": "日經225",
-      "price": 67777.52,
-      "change_pct": -1.8
+      "price": 67995.01,
+      "change_pct": 0.4
     },
     "KR_KOSPI": {
       "label": "KOSPI",
-      "price": 6035.35,
-      "change_pct": -9.0
+      "price": 6148.73,
+      "change_pct": -3.6
     },
     "TW_TAIEX": {
       "label": "台股加權",
@@ -97,6 +97,30 @@
       "risk_score": 2
     },
     {
+      "title": "晶片股拋售潮！美股4大指數全收黑 台積電ADR逆勢上漲 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi3wJBVV95cUxQa3J2cHE2NEg4Y1JURHd1cWpzZUNma1doR1lUd0Y4U0Zqd2NzWFdhSXlNbzEtdi1qb0phb0huZVdqb2RBQm9yc1pSZ3Y2cmZ3ZkdmUmFJdmNXVF9MRVhrOF84TDdjY2FrWnVwQ3hzU1FTWUYxVDJpeVVTWmNqLU9xTmlHYWhOa2paOUZHeEZhOXZ2dHYyZC1sSDJERGZOQ0pBeUpPSW1qdDNnTmJ3RF9tZGxpcVpvRUp4ejNUeHB6TzVhVWZxVDRnWXo0Zk5JNUNkcEQ4XzZ5UkJlX1pGRDBkUW9xcjhtWmN6Y2FnbkRiamdFZG9TU0FnV2lOcVJzYjFrVEFtT1Q4NWcxb1Fxa2UxaXk4QldZVzNqQ3M1ZVF2eXYyYy1DLU1vVEVYRWIwaENfNHpIaDI5RDgtQkhTN291SDBMbURsVzVORGx2aENmajJ6QlBoOG10RHhQVzdhY0E?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-14T06:08+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "How significant is the impact? The Hang Seng Tech Index has undergone a major revision to its constituent‑stock rules, expanding the number of constituents from 30 to 50. - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPRDRuNTJub3R6dFVJR2JzTkEzQVI0QlVwOEV4eFk5b212bmc4UV91eFJtak1xUHFVUDF2N2ZJcjhwU1EyZjEyRC1EX29IOVY1RGt2OG95Z3UwNm9XWlhEODRlWEdLX082SkFQZ1BVNzd6OVBwUC1jQmptQkpMT2hnVWRIcDJLWVpUUmRMbm1uYmo0MGRMTTZFZGJncWVHZw?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-14T05:51+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "2026光通訊概念股有哪些？16檔台股、CPO供應鏈與最新進度一次看 - 數位時代",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNenlhajhKeGpjenpMSDJfaEtnTWZlR0pIY0F5ZmxWUFR5bXdtLUh0LXVVeFJYY0E2RHcySTlhQTJwRS1ITUNuMjkwT041U2FuamlWeHpJZ054bkFneVBTaDV2OFVDUVhWeFQ1Q2NGQmx6S1VBa0FETlAxaUJOZ0xDXw?oc=5",
+      "source": "數位時代",
+      "published_at": "2026-10-14T05:36+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
       "title": "台股失守4.9萬點！分析師卻依舊看好：台灣出口、股市表現非常亮眼 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMilANBVV95cUxNN3NVN3JxeEJ1YllyTlZUc3ZDdDAzbGVmZURkTHk3eUlyRUpra1RKNFdWQWhTd3l1RFoyb1liSm8tRFdwdzlpMGkwUzRpT21yZHRybDJ2NG5xYkh1RGZ0R3UwaHNMdHdDMHY4WjRqa1g3OEdfS1ZrNUhNNnRsX3BPRm5nd3JGSjhVc2tlcnVxR0I0azhoS2JSd2ZIMGtBbVBnUEpFR1p5YjJzclRNcWV0Ukl5VUJVVTRUMXNmNU5SekFiMzI5VmdRNll2VngxWlBXRTFSQTFHY2VqQ0V4MExYazllMVQ0dHVlUzZHd2ZBVTFObEw2UW5HdVVpRG41T3lfRjVMaDVVMTdKWGNud1Foazc3eFlXUjV0RUFTelpDdTh0aGNWOUFsY2hkeGVsVXBKYU0xZlh4dVR2eFFqcEduUHVKNnNxNUZkU2Y2VFAtbFVIU1ZJXzB2cTBkYmFSUmR3QmVTdzJJaWc2N2ZMUWpjREJlYlZ4cFkwUXZjYUp3VVA3Tzc0VGgzRFNfNzc0anNjZ0JJRg?oc=5",
       "source": "Yahoo股市",
@@ -121,6 +145,14 @@
       "risk_score": 0
     },
     {
+      "title": "全民瘋台股》專案金檢「四貸同堂」 央行聯手金管會降溫 - 自由時報",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9TYjY4bWJlVFczcTI3TUZrcVY1VGRQRC13TEhyVmlONnNGZjE2U0hSSk01R1FaNlU3SF9RUW5wd2hpOTZReGhVNEV1TGQ4enJyS0szYU9UUkg?oc=5",
+      "source": "自由時報",
+      "published_at": "2026-10-13T23:20+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
       "title": "U.S. Stock Market Watch | Memory chip stocks slide in pre-market trading; Micron down 5%, SK Hynix drops over 6% - 富途牛牛",
       "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQa2Fxamx5cTU4TVVpLXd3RmdEdEJBYzRrVmhKNXZ4SEptZEI4cjRBR2prNlhUMVVXNkVvZHRSRUlCRUJBdEhwNG9aVjJ5NC04M09lcld2SFNrN1h4UFNVdHh6S1VEeThIWnViNWJIWkgyT2dtWHRjeU5DSlBBc3VhSUhBaVM1SUFXcUlUYUhyUUlDeFAyY1VxX2lHbGw?oc=5",
       "source": "富途牛牛",
@@ -135,40 +167,8 @@
       "published_at": "2026-10-13T23:18+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "中國三迪(00910.HK)擬折讓約19.5%配售最多508.8萬股 淨籌約670萬港元 - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1MaVV4OG5QUVhJTjEzYUdINVY3SG9OUWdCb2pGcWdDSENDcjlwWWJTbWk4b0NsWlNCeV8ybHB5UmlxZENuWTM3eHozSlRWSmdCTjg3Q0VpS2dHeTlEdmJzQW5lT2JLdUx1MTNv?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-10-13T22:17+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "2026光通訊概念股有哪些？16檔台股、CPO供應鏈與最新進度一次看 - 數位時代",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNenlhajhKeGpjenpMSDJfaEtnTWZlR0pIY0F5ZmxWUFR5bXdtLUh0LXVVeFJYY0E2RHcySTlhQTJwRS1ITUNuMjkwT041U2FuamlWeHpJZ054bkFneVBTaDV2OFVDUVhWeFQ1Q2NGQmx6S1VBa0FETlAxaUJOZ0xDXw?oc=5",
-      "source": "數位時代",
-      "published_at": "2026-10-13T21:56+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Bitcoin Diverges From South Korean Stocks as AI Concerns Deepen the Kospi Selloff - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQbm91WnY0aG80WUxpVEUwdmNQZUt0R3Y5WnVtX2NvRTFmWklxQXB0TDVoNE9Jcm5weVdyZlNOQ0huZzE5czRHWjZNRS1vbVV5bFQ3VVdUVnluTE9aMFhtUVFTVGVlNG5Db3BGZjNqaHJWZ2hRc2JVQjBNQ01qX19fWkNaZ29PM1Rma3BmWGtiR1NmbVAwLWMxZDFaR204RVJBVmtGWGhnYjdRdw?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-13T21:48+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "韓國市場的混亂正對美國晶片股造成震盪 - Business Insider Taiwan",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1EcFJNVjJQQndISTVodWpFd05WeVo0NnlpV1A4c1VKSjMtb0RRRVhRdFVDTGc0MnRoTUNyQmxPa1dpMUZGZ2dOT3p5QXRjb19vWHpZa19R?oc=5",
-      "source": "Business Insider Taiwan",
-      "published_at": "2026-10-13T21:32+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-14T05:57:02+08:00"
+  "updated_at": "2026-10-14T08:46:09+08:00"
 }
