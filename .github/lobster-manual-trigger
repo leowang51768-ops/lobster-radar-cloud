@@ -1,2 +1,2 @@
-manual trigger 2026-10-14 after test fix
-reason: rerun official 2026-10-14 price update after aligning regression tests with 13:30 Taiwan close cutoff
+manual trigger 2026-10-14 after workflow resilience fix
+reason: rerun 2026-10-14 official price/radar update; LINE performance tracking must not block GitHub commit
