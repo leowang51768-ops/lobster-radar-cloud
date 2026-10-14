@@ -1,0 +1,23 @@
+{
+  "version": 234,
+  "date": "2026-10-15",
+  "generated_at": "2026-10-14T15:45:00+08:00",
+  "codes": [
+    "6290",
+    "3163",
+    "6239"
+  ],
+  "standby_codes": [
+    "6770",
+    "4989"
+  ],
+  "name_map": {
+    "3163": "波若威",
+    "4989": "榮科",
+    "6239": "力成",
+    "6290": "良維",
+    "6770": "力積電"
+  },
+  "source": "ghost_candidate_pool.json",
+  "rule": "preview only; workflow refreshes through 08:00 and publishes final seats at 08:30"
+}
