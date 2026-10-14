@@ -1,6 +1,14 @@
 name: Ghost Candidate Pool
 
 on:
+  push:
+    paths:
+      - 'lobster_tw_6m_prices.sqlite'
+      - 'breakout_tracking.json'
+      - '.github/ghost-candidate-trigger'
+  workflow_run:
+    workflows: ["Lobster Daily Price Update"]
+    types: [completed]
   schedule:
     # Taiwan 23:00-07:30 = UTC 15:00-23:30
     - cron: '0,30 15-23 * * *'
@@ -17,6 +25,7 @@ concurrency:
 
 jobs:
   build:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
