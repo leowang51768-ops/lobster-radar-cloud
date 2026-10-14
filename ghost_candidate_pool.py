@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import sqlite3
 from datetime import datetime, timedelta, date
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -10,6 +11,7 @@ ROOT = Path(__file__).resolve().parent
 TRACKING = ROOT / "breakout_tracking.json"
 POOL_OUT = ROOT / "ghost_candidate_pool.json"
 SEATS_OUT = ROOT / "today_trading_seats.json"
+PRICE_DB = ROOT / "lobster_tw_6m_prices.sqlite"
 
 HOLIDAYS_2026 = {
     "2026-01-01","2026-02-12","2026-02-13","2026-02-16","2026-02-17",
@@ -49,7 +51,22 @@ def load_json(path: Path, default):
     except Exception:
         return default
 
-def build_rows(data: dict) -> list[dict]:
+def latest_price_dates() -> tuple[str, dict[str, str]]:
+    if not PRICE_DB.exists():
+        return "", {}
+    with sqlite3.connect(PRICE_DB) as con:
+        rows = con.execute(
+            "SELECT stock_id, MAX(date) FROM prices GROUP BY stock_id"
+        ).fetchall()
+        latest = con.execute(
+            "SELECT value FROM metadata WHERE key='latest_trade_date'"
+        ).fetchone()
+    latest_trade_date = str(latest[0]) if latest and latest[0] else ""
+    return latest_trade_date, {str(code): str(day) for code, day in rows if code and day}
+
+
+def build_rows(data: dict) -> tuple[list[dict], str]:
+    latest_trade_date, price_dates = latest_price_dates()
     rows=[]
     for item in data.values():
         if not isinstance(item, dict):
@@ -78,8 +95,13 @@ def build_rows(data: dict) -> list[dict]:
             score=float(item.get("composite_score") or 0)
         except Exception:
             score=0.0
+        code=str(item.get("code") or "")
+        price_source_date=price_dates.get(code, "")
+        stale_price=bool(latest_trade_date and price_source_date != latest_trade_date)
+        if stale_price:
+            continue
         rows.append({
-            "code":str(item.get("code") or ""),
+            "code":code,
             "name":str(item.get("name") or item.get("code") or ""),
             "d":dday,
             "price":round(close,4),
@@ -90,6 +112,7 @@ def build_rows(data: dict) -> list[dict]:
             "status":"優先" if dist <= 3 else "可接受",
             "source_signal_date":str(item.get("signal_date") or ""),
             "source_last_checked_date":str(item.get("last_checked_date") or ""),
+            "price_source_date":price_source_date,
         })
     rows.sort(key=lambda r: (0 if r["distance_pct"] <= 3 else 1, -r["score"], r["distance_pct"], r["code"]))
     seen=set()
@@ -101,24 +124,26 @@ def build_rows(data: dict) -> list[dict]:
         out.append(r)
         if len(out)>=10:
             break
-    return out
+    return out, latest_trade_date
 
 def main():
     now=datetime.now(TAIPEI)
     target=target_trade_date(now)
     tracking=load_json(TRACKING,{})
-    rows=build_rows(tracking)
+    rows, latest_trade_date=build_rows(tracking)
     final=(now.hour > 8) or (now.hour==8 and now.minute>=0)
     pool={
         "version":234,
         "target_date":target.isoformat(),
         "generated_at":now.isoformat(timespec="seconds"),
         "source":"GitHub breakout_tracking D1-D10",
+        "price_source_date":latest_trade_date,
         "finalized":bool(final),
         "rules":{
             "distance":"0-3% priority; 3-5% acceptable; >5% excluded",
             "max_candidates":10,
-            "selection":"distance zone -> composite score -> distance"
+            "selection":"distance zone -> composite score -> distance",
+            "price_guard":"only rows whose price_source_date equals latest_trade_date may enter"
         },
         "rows":rows,
     }
