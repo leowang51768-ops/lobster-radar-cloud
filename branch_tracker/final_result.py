@@ -70,6 +70,29 @@ def grade(score, samples):
     return "觀察"
 
 
+def watch_key(code, branch, broker):
+    return f"{code}|{branch}|{broker}"
+
+
+def load_watch_pool():
+    path = DATA / "watch_pool.json"
+    if not path.exists():
+        return {}
+    try:
+        raw = json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+    rows = raw.get("entries", []) if isinstance(raw, dict) else []
+    out = {}
+    for row in rows:
+        if not isinstance(row, dict):
+            continue
+        key = watch_key(str(row.get("code") or ""), str(row.get("branch") or ""), str(row.get("broker") or ""))
+        if key != "||":
+            out[key] = row
+    return out
+
+
 def main():
     if not DB.exists():
         raise RuntimeError("branches.sqlite not found")
@@ -415,6 +438,132 @@ def main():
             primary["display"] = "｜".join(parts)
             stock_branch_summary.append(primary)
 
+        # Persistent branch observation pool.
+        # Purpose: once evidence is sufficient for approximate judgment, keep the
+        # pair permanently in the pool and continue updating it. Short-term
+        # cooling/selling does NOT delete historical observation membership.
+        previous_watch = load_watch_pool()
+        watch = dict(previous_watch)
+        formal_map = {
+            watch_key(r["code"], r["branch"], r["broker"]): r
+            for r in candidates
+        }
+        inf_by_key = {
+            watch_key(r["code"], r["branch"], r["broker"]): r
+            for r in influence_rows
+        }
+
+        current_recent = {}
+        for code, branches in recent_by_code.items():
+            for row in branches:
+                current_recent[watch_key(code, row["branch"], row["broker"])] = row
+
+        all_keys = set(watch) | set(current_recent) | set(formal_map)
+        now_iso = datetime.now(ZoneInfo("Asia/Taipei")).isoformat(timespec="seconds")
+        for key in sorted(all_keys):
+            recent = current_recent.get(key)
+            formal = formal_map.get(key)
+            inf = inf_by_key.get(key, {})
+            old = watch.get(key)
+
+            # Admission threshold = enough evidence for approximate judgment:
+            # formal 3-15 day signal, OR at least 2 appearances in latest 5
+            # trading sessions, OR at least 5 matured historical D+10 samples.
+            recent_days = int((recent or {}).get("recent_buy_days") or 0)
+            hist_samples = int(inf.get("d10_samples") or 0)
+            admit = bool(formal) or recent_days >= 2 or hist_samples >= 5
+            if old is None and not admit:
+                continue
+
+            code = str((formal or recent or old or {}).get("code") or inf.get("code") or "")
+            branch = str((formal or recent or old or {}).get("branch") or inf.get("branch") or "")
+            broker = str((formal or recent or old or {}).get("broker") or inf.get("broker") or "")
+            name = str((formal or recent or old or {}).get("name") or inf.get("name") or stock_names.get(code, ""))
+            branch_name = str((formal or recent or old or {}).get("branch_name") or inf.get("branch_name") or "")
+
+            if formal:
+                live_status = formal.get("direction") or formal.get("status") or "正式訊號"
+                signal_level = "確認"
+            elif recent:
+                live_status = "持續觀察"
+                signal_level = "觀察"
+            else:
+                live_status = "暫無新增買盤"
+                signal_level = "歷史觀察"
+
+            first_admitted = (old or {}).get("first_admitted_at") or now_iso
+            entry = {
+                "code": code,
+                "name": name,
+                "branch_name": branch_name,
+                "branch": branch,
+                "broker": broker,
+                "first_admitted_at": first_admitted,
+                "last_updated_at": now_iso,
+                "data_through": latest_day,
+                "pool_member": True,
+                "never_auto_remove": True,
+                "signal_level": signal_level,
+                "live_status": live_status,
+                "formal_key_branch": bool(formal),
+                "consecutive_buy_days": int((formal or {}).get("consecutive_buy_days") or 0),
+                "consecutive_sell_days": int((formal or {}).get("consecutive_sell_days") or 0),
+                "recent_buy_days_5": recent_days,
+                "streak_net_lots": (formal or {}).get("streak_net_lots"),
+                "streak_est_net_amount": (formal or {}).get("streak_est_net_amount"),
+                "recent_sell_lots": (formal or {}).get("recent_sell_lots"),
+                "sellback_pct": (formal or {}).get("sellback_pct"),
+                "historical_grade": inf.get("grade") or (old or {}).get("historical_grade") or "資料不足",
+                "historical_d10_samples": hist_samples,
+                "historical_d10_win_pct": inf.get("d10_win_pct"),
+                "historical_d10_avg_return_pct": inf.get("d10_avg_return_pct"),
+                "influence_score": inf.get("influence_score"),
+                "last_recent_buy_day": (recent or {}).get("latest_day") or (old or {}).get("last_recent_buy_day"),
+                "admission_reason": (
+                    "正式連買訊號" if formal else
+                    "近5日重複買超>=2日" if recent_days >= 2 else
+                    "歷史D+10樣本>=5"
+                ) if old is None else (old or {}).get("admission_reason"),
+            }
+            watch[key] = entry
+
+        watch_entries = list(watch.values())
+        watch_entries.sort(key=lambda r: (
+            bool(r.get("formal_key_branch")),
+            r.get("signal_level") == "觀察",
+            float(r.get("influence_score") or 0),
+            int(r.get("recent_buy_days_5") or 0),
+            str(r.get("code") or ""),
+        ), reverse=True)
+
+        monitor_by_stock = defaultdict(list)
+        for row in watch_entries:
+            monitor_by_stock[row["code"]].append(row)
+
+        monitor_feed = []
+        for code, rows in sorted(monitor_by_stock.items()):
+            rows.sort(key=lambda r: (
+                bool(r.get("formal_key_branch")),
+                int(r.get("recent_buy_days_5") or 0),
+                float(r.get("influence_score") or 0),
+            ), reverse=True)
+            formal_count = sum(bool(r.get("formal_key_branch")) for r in rows)
+            active_count = sum(r.get("live_status") != "暫無新增買盤" for r in rows)
+            monitor_feed.append({
+                "code": code,
+                "name": stock_names.get(code, rows[0].get("name", "")),
+                "data_through": latest_day,
+                "watch_branch_count": len(rows),
+                "active_branch_count": active_count,
+                "formal_key_branch_count": formal_count,
+                "branch_signal": (
+                    "關鍵分點確認" if formal_count else
+                    "分點持續觀察" if active_count else
+                    "歷史觀察"
+                ),
+                "branches": rows[:10],
+            })
+
         complete_pairs = sum(r["history_days"] >= r["available_price_sessions"] and r["available_price_sessions"] > 0 for r in influence_rows)
         result = {
             "generated_at": datetime.now(ZoneInfo("Asia/Taipei")).isoformat(timespec="seconds"),
@@ -427,10 +576,14 @@ def main():
             "branch_stock_pairs": len(influence_rows),
             "pairs_with_120_sessions": complete_pairs,
             "current_candidates": candidates[:20],
+            "watch_pool": watch_entries,
+            "monitor_branch_feed": monitor_feed,
             "stock_branch_summary": stock_branch_summary,
             "history_backfill_pending": [r for r in influence_rows if r["history_days"] < r["available_price_sessions"]][:200],
             "top_influence_pairs": [r for r in influence_rows if r["grade"] in ("A", "B")][:50],
             "rules": {
+                "watch_pool": "資料累積到可大約判斷即進觀察池；進池後永久保留並持續更新，不因短期降溫或轉賣刪除",
+                "monitor_feed": "觀察池同步輸出給即時監控；連買、偷偷買、減碼、轉賣與歷史影響力持續更新，作為籌碼情報",
                 "current_signal": "同股同分點連買3～15日且累計>1,000萬元；成立後若轉為淨賣仍持續追蹤減碼/轉賣",
                 "not_extended_aid": "5日漲幅<=5%且20日漲幅<=12%時優先；僅代表價格尚未過度延伸，不代表內線或主力身分",
                 "history_validation": "以已儲存歷史配對D+5/D+10/D+20收盤；回填樣本存在事後選樣偏差，分數僅作排序",
@@ -475,6 +628,25 @@ def main():
     ]
     (DATA / "FINAL_RESULT.md").write_text("\n".join(lines), encoding="utf-8")
 
+    (DATA / "watch_pool.json").write_text(
+        json.dumps({
+            "generated_at": datetime.now(ZoneInfo("Asia/Taipei")).isoformat(timespec="seconds"),
+            "data_through": latest_day,
+            "policy": "persistent_observation_pool",
+            "entries": watch_entries,
+        }, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+    (DATA / "monitor_branch_feed.json").write_text(
+        json.dumps({
+            "generated_at": datetime.now(ZoneInfo("Asia/Taipei")).isoformat(timespec="seconds"),
+            "data_through": latest_day,
+            "purpose": "feed branch intelligence to Ghost realtime monitor; never trigger orders alone",
+            "stocks": monitor_feed,
+        }, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+
     with (DATA / "current_candidates.csv").open("w", encoding="utf-8-sig", newline="") as f:
         fields = list(candidates[0].keys()) if candidates else [
             "code","name","branch_name","latest_day","consecutive_buy_days",
@@ -489,6 +661,8 @@ def main():
         "pairs": len(influence_rows),
         "pairs_with_120_sessions": complete_pairs,
         "current_candidates": len(candidates),
+        "watch_pool_entries": len(watch_entries),
+        "monitor_feed_stocks": len(monitor_feed),
         "top_candidate": candidates[0] if candidates else None,
     }, ensure_ascii=False))
 
