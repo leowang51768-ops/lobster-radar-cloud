@@ -9,42 +9,42 @@
     "出現重大風險新聞"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 -4.2%｜NASDAQ -2.0%｜日經225 -0.1%｜KOSPI -5.9%｜台股加權 +0.6%｜恆生 +0.2%",
-    "⚠ 全球市場風險｜美債10Y 5.19%｜VIX 17.2",
+    "⚠ 全球市場風險｜費半 -4.5%｜NASDAQ -2.0%｜日經225 -0.1%｜KOSPI -5.9%｜台股加權 +0.6%｜恆生 +0.2%",
+    "⚠ 全球市場風險｜美債10Y 5.19%｜VIX 16.9",
     "⚠ 全球市場風險｜Unprecedented Extreme Imbalance in 40 Years! Wall Street's \"Big Short\" Warns: Signs of U.S. Sto",
     "⚠ 全球市場風險｜美國9月CPI炸裂！費半挫2.2％上演連6跌、台積電ADR摔1.5％ 聯準會升息疑慮又起",
     "⚠ 全球市場風險｜HPE, Dell, Bank of America, State Street, ASML, and More Stocks That Explain Today's Market -- ",
     "⚠ 全球市場風險｜川普「暴雷」台灣砸1400億元包下20年阿拉斯加3成天然氣 經濟部證實了",
-    "⚠ 全球市場風險｜川普曝台灣買阿拉斯加天然氣！經濟部證實：投資最高44億美元 每年採購600萬噸",
-    "⚠ 全球市場風險｜Taiwan Semiconductor Manufacturing Co Ltd(TSM)股票10月14日盤中下跌3.45%：真相來了",
+    "⚠ 全球市場風險｜外資持續倒貨 台股多空對決 三大利空恐引爆？專業分析看這裡",
     "⚠ 全球市場風險｜Although buying initially led the market, shares in the semiconductor sector were sold off foll",
-    "⚠ 全球市場風險｜Hong Kong Stocks End Mixed as AI Concerns, Higher Oil Weigh; Standard Chartered Falls 4%"
+    "⚠ 全球市場風險｜Hong Kong Stocks End Mixed as AI Concerns, Higher Oil Weigh; Standard Chartered Falls 4%",
+    "⚠ 全球市場風險｜Technology stocks continue to decline; Goldman Sachs: Who stepped in at the top to buy U.S. tec"
   ],
   "markets": {
     "US_SOX": {
       "label": "費半",
-      "price": 11724.22,
-      "change_pct": -4.2
+      "price": 11684.383,
+      "change_pct": -4.6
     },
     "US_NASDAQ": {
       "label": "NASDAQ",
-      "price": 26693.887,
+      "price": 26692.87,
       "change_pct": -2.0
     },
     "US_SP500": {
       "label": "S&P500",
-      "price": 7714.55,
+      "price": 7718.94,
       "change_pct": -1.2
     },
     "US_DOW": {
       "label": "道瓊",
-      "price": 51558.93,
-      "change_pct": -0.6
+      "price": 51621.48,
+      "change_pct": -0.4
     },
     "VIX": {
       "label": "VIX",
-      "price": 17.24,
-      "change_pct": 12.8
+      "price": 16.87,
+      "change_pct": 10.4
     },
     "JP_NIKKEI": {
       "label": "日經225",
@@ -106,18 +106,10 @@
       "risk_score": 0
     },
     {
-      "title": "川普曝台灣買阿拉斯加天然氣！經濟部證實：投資最高44億美元 每年採購600萬噸 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi2gNBVV95cUxQV2ZPeGh6alRBWWVLTFpnZjRRalVSb2JaUXNjR1NGbkFXVHE2cWMxU2RObG9qV0xDc1VZMEJFMDBYY2sycDVQamplNFl5OGd3dW5FNG1EVWJoYUM1elNnakQzMUJEQzNPMldUZ3JzbE5DYXdyTl94Q3pEV3pSZlhFcnNvQ2s2RXJaMWtBUXNtMDJPMHViSmlTcUNSV3lZM2k3Ung3OU1Jbl91T09qZXdpNXVmQ2ZEUkhwMVR6QWhvU3I3UVVSTDNfTW1VT1pQUFozSDg1TTdleG9wOXhBTlV2UFJGREZBUzlCYmpLRU9NcXdPVEw4QURqbzNUSGJRVFUyLWpyS0piRUdnWnNzNzlCRFpacm1iX1ZjUC1oRldiUF9wb1JBcUZMaVdvT3FVWmotUkExZG51dHVjY3NWdmZReTlnS2VYVm9SRVZJQ0JZNHpSem1rTERWVTBUemRvRHRhMHFnYUtnSllZZ0FRY3o3NjBEVTBJdEp3SG02aTQ2cy1nQkJHOFVDa1BWaGdCWUdNd3NkbWFVenBNZmUyVVY2VEN5YlVJcW5Zc0lzRDVQNUtlQlJjM05JYmZwNVRxcjlQb0Rwdk5VMDlVeFVQRUFMVjFWcEpSaHJBSWc?oc=5",
+      "title": "外資持續倒貨 台股多空對決 三大利空恐引爆？專業分析看這裡 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMilwNBVV95cUxNM0MwTjVPODJMdjJYWGwzYUV2dFBjWTBmdkk0bnZ6QTZHeVVkaDZrWHBCdHVUUGxodnBfelFrRnJHVHcwMHNvMm4yQ19qUnFuM2JKNTZiMTZKbWNXcjNCeExhVmhGM2ltcWk4SEpmZjhzdy1NQ3ZiRlYyTjE5Tk9qVXl3M2t0RmVYd3gwY1V5SGtDWkluT2JuM0F0VkZWMTltYXNrd1FMVWZhRVowRGxzdVFaN0IwYzRMSTJtZTJ1R1RlX0lEZ0xuZjJ5WU5INmdWbXBUbUZZSVk2aGtmZ1UxWlBYS251RFpsd251RTgtWHNhLVBLb3prOEozX042VkFGLURXUTFaVGNuZFZuMGxFMld2c0UzSHpYLVY4NUJYbVBHcFREaHlNUFg0dWtxMFU0RnhuOTQzMjRTanhzYTU4cVlLT0V4RUd4YWpkOVJIamsxMmotOS1EM0lQRkxNclpqRU40dHFJcWtuZ2hTR1JqMXNLdGg1OWtZSWN0Z0NKSkJMLTVkc3B6VERmbVBnOHFWcUVUcTBoYw?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-10-14T12:27+08:00",
-      "importance": 3,
-      "risk_score": 0
-    },
-    {
-      "title": "Taiwan Semiconductor Manufacturing Co Ltd(TSM)股票10月14日盤中下跌3.45%：真相來了 - TradingKey",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNQVctNTBJRlZfUU95VXBNMk1zRzJtOU0tcEc2M2wtQUJieWt2ZEk5el9uZHN1ZVN6ajlRWk5lQWhleDBuU1BZUW1zVHJLdHJKM1F5THBTWkNDcTktdzR6MHFOdUp5ZVlDVnJaR1BsSHpEVUtrSzRSWW8yR3ZLWDRMVHlEendIcTQwUGJJVnVfczFGU0dz?oc=5",
-      "source": "TradingKey",
-      "published_at": "2026-10-15T02:23+08:00",
+      "published_at": "2026-10-15T00:05+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -154,6 +146,14 @@
       "risk_score": 0
     },
     {
+      "title": "台股尾盤急殺收漲284點、台積電持平 投顧示警短線恐進區間盤整 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMimgNBVV95cUxQbDUyaDJkNmhPamZDQkoxbUNxMDF2TXFhUnJ5c3plVjdkcTRCcUM5dVpRY3VZMHRVSEZhYkU0aXdqcUM2WFpsQy05QjJnak92RG5EN01RM0xyV2ZaVVRwYzVsd0ZsSTJaSjFXM3NUUHVPbTYtOUoyZTVpNzFpWE5wR3hTVW45ZEUtb2daeW1hbVNLYmVRZ0tvRWdoXzBlOHFxWTRFeFV2SEpucG53TFhoTXczeWY2Sm1NbW9rTE9uNDZjWUxMUUoxOWJnOFVIUldaMl9tV0ZaM1BiMERNZzFfME1GWmloR3lqOVZqdnNhVWFoaGlvM3JYYzVkNUx1TzE2cDJ4LWFCTmNnZkdSWGNUZV9PUU5oNTF3Tm5jVDJMMzJwaUJXanFjMTNfdVZ2QWxTMFlEMXpESXhCNzdCcTBkUVpWNE5XbnloV05HME84cVRrenJTQWFQdWpGeUIwc1Z1ZDlqRVlDUEJJd3F4bWFQZjd2QWgxZHdhSUQ4UHgyUklMRVNXRXp2NjUtSE8tRkMzblRYaFdCTVlYZw?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-14T18:17+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
       "title": "施羅德拓主動式ETF版圖 00419A聚焦台股AI領域 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMinwJBVV95cUxNSGRHQ05iZU11TU94ek51VEFCNFZzeGMxRHA3UnBJRmhkWG1qcWpmTmU5SExsS2YtaDd2WUNtdzNjZ2VuRmJJVkJyT3lOWkVQdk9xYmVrVlhHV0hWTFRQbnRfZlNJbEEtR2FwMEkxeXBISEpITkZkbWpWOG9KTUVoZVJzM1BneGdmblB5bmYzai00c2kyZGtYSVZpSU44UG1sQkRIT3NQNzFXN21EYXBWXzJ2M1ZEakFjU3dON0s0MHZyUDhVZUVQd0hJbzJaV3hZcVB5UmJYUmtjbllRaEpjNVlHVktRR0gzR3J0dG1jc0ZVeTJoT0xNRDBCc3Vad1d5dVpoek9pMUFBNHFkRXV0czlHaW41ZVRlMnV5alhpNA?oc=5",
       "source": "Yahoo股市",
@@ -162,14 +162,14 @@
       "risk_score": 0
     },
     {
-      "title": "神山尾盤遭提款200億台股仍漲284點！南亞狂飆奪吸金王 國巨領被動元件搶鋒頭｜Yahoo財經掃描 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMipwRBVV95cUxPODczZnE1UnUwaHlHX3B6LVRMcTJQUHRoTGdtcmNMSmNUaEhnSlgtZFhxY1p2UEhteEYxUGRybmJuUUI3RF9FY2VqY0dCZmZhY0taNW9xcUtyMk1aSVpiQXRXUEJUTXJ0OTNnMm5yNmpabGQ3LTZleWZSUW9QYmIwSG9oS0U1Ml8zbkVhWkFRekY5OUZRbnh4UU9pdFNxUW01QnA5OVY1RG03SG83ZDRablhrcW4tLU1EZHFGYVJMelJXb0pOR2lpelRlVElKbmsxX0xnVmZLNDV5TFBQU1ZaSkctLUlJUHQ3eHh4WWg3LXdKc3dFZG9lYlBmZ1BCQTl6czlGVzBqb2JFY0E5MUNzYjBzbGMwSi0zTk42QVR3aVlvaXdWa0E5dnI0LS1LLWxmcmRocGQ5b2hYbDNBUTV1TG12elBtR1FVT0EteGs3MEhGN3hUWVpGc1JXMjhtOTJEV2E5RlNrQjdRelg0bUl0bi1McEIzNzJVSE9qUVZadS1PZmprSklDM0puZUlvdXl5TlVobG1EdlhFNEtRLUJxVkdTdmh4eWRHZl9qTDF5RDBFQlNsMlo1cWU1bFRBOHNyWXAyOE5jNXROa3M4eXZtOG9IOXZKUDNfMzBoREEtX2EtREZZbmNKeEJndXJvMG8yRmExenRJa2lqLVROLTk5ZmFmYm1RQ0h3ZzNjTHBxU0tDSnl4eGR0RThTRDJrRWdLTnFvUzBLQQ?oc=5",
+      "title": "抽中1張爽賺12萬！特力屋、晶心科等3檔台股紅包申購倒數中 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMijANBVV95cUxNZlU2aFZEOTQ3ZTFIYkN5dGlFOXlHWkZnNHl6R1Z5R0N6aE5uT1JqekZlb0E1VUluZUtrQjd1dm1ZelMzTnhWMXhyMFZnY1VRWUQxZTRPaGJuX0FLU25tZnd1eGVRdWhpdExvZzFRaXgxT3ZDWlNHNFJKWndWd2Jaa2xaRTg4Qmtzb3BiSTN2OW1JODlMbndiXzVmUS1pdlZkc1pEY0ZxSjVzUUVmYlcxWkczd1lCVkpvMXZXd1FKVm52M1JHNDdtWFVMRHB5V002LV94Y0pQaU0tU0EyM3JESDBjS2U5WXRGYjRXYnQyWjhlU3cwUndzdFZ4ZE5MM2hUS2dYNVpNR2x0bWJuUHVsb2NCZXhpLWRKZ01hM2tkMW9vWEwwNUp0LXREbnNvY0xmVHZXRjZxcTRVT0ZucFA1TEIxYTRLNDdfaGtyc3dncWtybHpFTmdrTWd1R2dFZmRxOFEyYlIxYXFOUWVhazlJOHdsM0dIcWRGdWxPTmo3blNrNVdfYzJ4aVlkWU8?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-10-14T17:03+08:00",
+      "published_at": "2026-10-14T17:07+08:00",
       "importance": 2,
       "risk_score": 0
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-15T03:23:51+08:00"
+  "updated_at": "2026-10-15T06:24:20+08:00"
 }
