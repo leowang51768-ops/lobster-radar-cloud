@@ -1,34 +1,33 @@
 {
   "schema": 1,
   "risk_level": "red",
-  "risk_score": 6,
+  "risk_score": 4,
   "risk_reasons": [
-    "費半明顯下跌",
     "韓股明顯下跌",
     "出現重大風險新聞"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 -2.9%｜NASDAQ -0.6%｜日經225 +0.6%｜KOSPI -4.4%｜台股加權 +1.2%｜恆生 +0.5%",
-    "⚠ 全球市場風險｜美債10Y 5.22%｜VIX 15.3",
+    "⚠ 全球市場風險｜費半 -0.2%｜NASDAQ -0.1%｜日經225 -0.1%｜KOSPI -5.9%｜台股加權 +0.6%｜恆生 +0.2%",
+    "⚠ 全球市場風險｜美債10Y 5.22%｜VIX 15.2",
     "⚠ 全球市場風險｜Unprecedented Extreme Imbalance in 40 Years! Wall Street's \"Big Short\" Warns: Signs of U.S. Sto",
-    "⚠ 全球市場風險｜AI hardware stocks diverged. Southbound investors sold over HKD 200 million worth of GenScript ",
     "⚠ 全球市場風險｜Tech Selloff Deepens as Bank Earnings Fuel Stock Market Rotation -- Barrons.com",
     "⚠ 全球市場風險｜川普「暴雷」台灣砸1400億元包下20年阿拉斯加3成天然氣 經濟部證實了",
     "⚠ 全球市場風險｜川普曝台灣買阿拉斯加天然氣！經濟部證實：投資最高44億美元 每年採購600萬噸",
-    "⚠ 全球市場風險｜【Hot台股】南亞一度漲停飆破350元 網喊「祖傳南亞賣掉了阿嬤對不起」 分析師勸：別追高",
-    "⚠ 全球市場風險｜個股概覽 | 個股 - 股市",
-    "⚠ 全球市場風險｜台股暴跌近千點！杜金龍手握4檔金融股「10％防禦密碼」曝光 這檔喊抱緊不賣"
+    "⚠ 全球市場風險｜神山尾盤遭提款200億台股仍漲284點！南亞狂飆奪吸金王 國巨領被動元件搶鋒頭｜Yahoo財經掃描",
+    "⚠ 全球市場風險｜外資賣超200億！ 重砍台積電6752張 大買「這族群」網驚呆",
+    "⚠ 全球市場風險｜【Follow法人】外資續賣超200億元！再提款台積電168億元 南亞科台塑化也中箭",
+    "⚠ 全球市場風險｜鉅亨買基金：前20%投資高手 近九成資產重壓台股"
   ],
   "markets": {
     "US_SOX": {
       "label": "費半",
       "price": 12208.795,
-      "change_pct": -2.8
+      "change_pct": -0.2
     },
     "US_NASDAQ": {
       "label": "NASDAQ",
       "price": 27204.38,
-      "change_pct": -0.6
+      "change_pct": -0.2
     },
     "US_SP500": {
       "label": "S&P500",
@@ -38,32 +37,32 @@
     "US_DOW": {
       "label": "道瓊",
       "price": 51670.1,
-      "change_pct": 0.0
+      "change_pct": -0.4
     },
     "VIX": {
       "label": "VIX",
-      "price": 15.27,
-      "change_pct": 0.4
+      "price": 15.25,
+      "change_pct": -0.2
     },
     "JP_NIKKEI": {
       "label": "日經225",
-      "price": 68177.38,
-      "change_pct": 0.6
+      "price": 67744.29,
+      "change_pct": 0.0
     },
     "KR_KOSPI": {
       "label": "KOSPI",
-      "price": 6100.53,
-      "change_pct": -4.4
+      "price": 6008.81,
+      "change_pct": -5.8
     },
     "TW_TAIEX": {
       "label": "台股加權",
-      "price": 48922.07,
-      "change_pct": 1.2
+      "price": 48625.83,
+      "change_pct": 0.6
     },
     "HK_HSI": {
       "label": "恆生",
-      "price": 24396.65,
-      "change_pct": 0.6
+      "price": 24314.17,
+      "change_pct": 0.2
     },
     "US10Y": {
       "label": "美債10年殖利率",
@@ -77,14 +76,6 @@
       "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNSGg2RDhhblJzQy1pUENNMVhSMnFOXzNhNzR5OVRTbHVCd0FsR1pnRHlrVHBmN0gwYW1aNTBjUEJKRF8zS05jM3A0TEh2and1b19seGc5M004UEYtUGl3aWE4cS1mdE9UeHhfbW1qR1E3WFdzUktoTVZRRGkzeTQ1eXVyOGJteUt3OWhnZ1hBY0VZR0xPU1VNcDBSWDBUbzFBXzlZYWVqOA?oc=5",
       "source": "富途牛牛",
       "published_at": "2026-10-14T08:53+08:00",
-      "importance": 5,
-      "risk_score": 4
-    },
-    {
-      "title": "AI hardware stocks diverged. Southbound investors sold over HKD 200 million worth of GenScript Biotech (01548). - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPbXFEZXdMZm43bjdaUGNzMTY2WUVZS1NvWFhBTnY0ajFPVDJtbUJJTG81X2NmUnVYRmdQbkZadjZMdzBJNWhBakJEU3o2ZUxrUWFrOHRNQ2RYckJOVGQxam5jSm80c2JJdUVPOURETXJNSzNvZGxCaHpCMXAyVE5oTHJDQjdlUnBLUXNCRVVPeTJPUl9XXzMwUzdGVHYtbDB6TDROZk5tSUFXcEZhZlE?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-13T17:48+08:00",
       "importance": 5,
       "risk_score": 4
     },
@@ -113,62 +104,70 @@
       "risk_score": 0
     },
     {
-      "title": "【Hot台股】南亞一度漲停飆破350元 網喊「祖傳南亞賣掉了阿嬤對不起」 分析師勸：別追高 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiogRBVV95cUxPZTg5emZ4RWNmYlU5MG41TDYtYlBQUWh5bnZ6cGZMQkhIMl9lN0RBWTdlT3hnanczc1B0VWZHb1dOZGpiY0x3VWZERE1ac1BoTVZOTkJZUUIzSFFlajZmLVMwTTExMTNGckdHeVJpdklGbTlOcTNNNDFUb3lMSF92NlloQV9zUmtQRHJWU0ZmcUtJYXdjTWctcWJENDRQdnVvTlllV0Z6RXFxMm55Z3ZPSVltVW5QbzZnOW9MLW42ZW9HNnFqUGp0NC1XUGVSTlk1UGVmVUZTLVRvSEFqT1VkT1lENGN2WUNnblYteHA1NnJZc1otdmFfN0cyZTBIWjlLTFRMTmk5MTJXei1CQk0wNloyRm1lblVyNjZuTklFUWU1RXFoTnFlamVPakdEbjI1clNjMGpmMlVna2paSFgzYjR1VGF0TkZId1hXRS1HeUg5OXo3TldlTjNTMWdoNVlRVm5IamFUZUl4Zl90ajZHcHlNWFR1RFRiczRlY1hSNzlOS0FrN2ZXZW4wMFVrLUs4Sjkzd1pLYlN4RU9xWWJCUldFV2g4eVk2SHl0TTJZNnFyS3A3RTZqSFdKYk9Kcld4Z1VPR2djYm51cGxFblZKS3BtYW1TQ0VVOHBPVU9jWEpVbUtqT0puOFNzZVNhMVlpcW53emVON052YnBvWWQ5NXpfLTZkajNubHJlNE10M2F3T2liM0tVTkVFYlp0N2w5X3c?oc=5",
+      "title": "神山尾盤遭提款200億台股仍漲284點！南亞狂飆奪吸金王 國巨領被動元件搶鋒頭｜Yahoo財經掃描 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMipwRBVV95cUxPODczZnE1UnUwaHlHX3B6LVRMcTJQUHRoTGdtcmNMSmNUaEhnSlgtZFhxY1p2UEhteEYxUGRybmJuUUI3RF9FY2VqY0dCZmZhY0taNW9xcUtyMk1aSVpiQXRXUEJUTXJ0OTNnMm5yNmpabGQ3LTZleWZSUW9QYmIwSG9oS0U1Ml8zbkVhWkFRekY5OUZRbnh4UU9pdFNxUW01QnA5OVY1RG03SG83ZDRablhrcW4tLU1EZHFGYVJMelJXb0pOR2lpelRlVElKbmsxX0xnVmZLNDV5TFBQU1ZaSkctLUlJUHQ3eHh4WWg3LXdKc3dFZG9lYlBmZ1BCQTl6czlGVzBqb2JFY0E5MUNzYjBzbGMwSi0zTk42QVR3aVlvaXdWa0E5dnI0LS1LLWxmcmRocGQ5b2hYbDNBUTV1TG12elBtR1FVT0EteGs3MEhGN3hUWVpGc1JXMjhtOTJEV2E5RlNrQjdRelg0bUl0bi1McEIzNzJVSE9qUVZadS1PZmprSklDM0puZUlvdXl5TlVobG1EdlhFNEtRLUJxVkdTdmh4eWRHZl9qTDF5RDBFQlNsMlo1cWU1bFRBOHNyWXAyOE5jNXROa3M4eXZtOG9IOXZKUDNfMzBoREEtX2EtREZZbmNKeEJndXJvMG8yRmExenRJa2lqLVROLTk5ZmFmYm1RQ0h3ZzNjTHBxU0tDSnl4eGR0RThTRDJrRWdLTnFvUzBLQQ?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-10-14T11:50+08:00",
+      "published_at": "2026-10-14T17:03+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "個股概覽 | 個股 - 股市 - CMoney",
-      "url": "https://news.google.com/rss/articles/CBMiREFVX3lxTFBfVGtPUmhQeF9nalNLNm9zTGJWQlREWTlFa2dVeEhkNElpN1d0OXlyaFF3U3NaYnBodklvejVEU1YtdkNl?oc=5",
-      "source": "CMoney",
-      "published_at": "2026-10-14T11:12+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股暴跌近千點！杜金龍手握4檔金融股「10％防禦密碼」曝光 這檔喊抱緊不賣 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi7AJBVV95cUxPSXRGdUdQSEM0RnBUR1VpY0w4ZHE4ODJlT2J0emxzWFcwTFBNT3E1MkNRT1UtQUw1d3JOclhMb0xMbHNTRVVhVEd2QzBWTXZ5QnBVbExFZjZGdkRXRTFVdFdEeGJQb1pKQUJGc0E0UVEyN0owWjM1aTJ4UUZpdUhnazlObHhldWtlRGFISVV5b0RDWmI0QTdjUExCMVBERW9yemtlRFhwMjRhV1BFMHdPVjBaU015ejZobk5NSTI1eXdFSmtsNWdGX2tjZ1c0S3JhRlpnVC1McmU1dnRVOWloVVlNN3FzdW5haGJuMEdMMEtrMGx5SFR1dXlLMlNVcEYtRGN4Z244T0hrX1lsbF9FMnVSQVM1TDdrai04OGhXUmNMOVpKaVhjbFNTeEZJZ1ZWTHRmek40YmZVcmxLSU9oUjFXd2tnendVdHhkQWx6dFJ2VE81SnR4b1diWWtmTEI0TzBXelE2VFgyeW5z?oc=5",
+      "title": "外資賣超200億！ 重砍台積電6752張 大買「這族群」網驚呆 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMizgJBVV95cUxQMTNiZlZYWWdkdmlqVWNELW9hTVhmbE15VXRaZWhCZ0QycXpHbHdVb3pYXzQyelo2RVB6Rk80ZEVhU09wTkpxWWtoTE1JRElFNU5BdmNrNHhxOXVITWFLdUNwT2NuNTdKQTlJanhuWHRqSzlvVDN1QkQwdHBPd1BqWURZNFd2dlZwVEtYcVBGNkk3SHQtbWEzRW5GX0Z1azhRNGZjLU9BdWs3bGVYUGZiaTNBRjFMOXZqMWdxY1psTDNqVDZiTDVzaFlkUGRhSTczSkZsU2cxazZaT3dEUDFFOFRRWk9mR3c4bnFfWDd1dGNlcFlIeUM0UndsQThBcTV4WElKN0h4ZGlrOVo1THkyM3BxTkZkRlQtelVVb2htakxpSUhVYllQb1pzOEt2RGhtWkJocy0zUnhWSlh2THBFRm1KNUpDakFzaVBLdXFR?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-10-14T10:53+08:00",
+      "published_at": "2026-10-14T16:43+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "〈台股開盤〉台積電攜塑化跟上亞股反彈腳步 漲逾500點重回48900關卡 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMilANBVV95cUxNdFpyUjZ1RHVuVzRPc0NKcjAzY2JFQlVWTExfTXpCbUVOZ1NJd0EtNGVQbF9IOXJiTnByMk5FM09KR09VMkYydkZJbkRmSDhaVFdXSVJzSmVIT01oV3ZxS2NpVHJMSnROVzlBVFdrNW4wMV9iaURmTmNsSEdzc2xvTm5LOWhqUTh2N0RMejhEVFFMUnI4d0JTcGotbkpJTThTVHNGaUotWWVWY1V0aGdlS0FEU0Q2ZGFjNENpUkVjT2VYZVdzOVZJS1I4TzV6eGpMWGhZa3oyQ2RZTi1PR2pEc0NSbjNReVdkeDRpRm9lZThST184eWQyN0VVNTlqN1JPSUMtQUo3SnNFQmhvS3h0dzlOQ2o2TGdSSlkyNWRtTjFwNFV1WVlsVE9xUk5PUnBEWWJqUHJjX1c4dVVkT0gtTkFseDV5S2Z6M250bHRJY1otWmF0dmlGNjJfY2JQLWFIUno0Z0ZRTzFjTWV5WTM3amNMbHJaWnhTQ1RhbWVsRnBhRTRXMmZIZE8xRG50RTV0YVFENw?oc=5",
+      "title": "【Follow法人】外資續賣超200億元！再提款台積電168億元 南亞科台塑化也中箭 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiyANBVV95cUxON0RfN2hlbHZQWEF0WjJfcFp6alpEdnc4U0o2c2xfUXVaQUZRU2FfbkN3VzA3TFpYb2V3QVk5bXg0SVkxUGdBZkMxRkYySm5Ya1hvTU81M09TTXAxaVVyQUoyMHlJXzBKcmRFemEwemhuNjRnRFFmM1BYT09mV1ZHXzJQMXJBTXY1Mzk5cmpDZVZtWkUtbHdzTGxuWUM5TTZXNGNNTl90c3R6RmVONl8wX1h5MTU4OEc3dmE0UzhXRWRWam1DLWRDZERGWDEwX3RnUGRxZDAzODlqTGlGcXY1dnR1UVlrWjBQOXBFQjR3QVotTVVvcmk2OFF0RUF6bFFIa1R0YlRYQ0MtYU5YYnFaWkRaTG84UTB5SFZNWmVsd3ViVU5XYVVKUEFOaGdxTE51Rloyc1hwdjBpajdKWE9RN3FtR2ZadDdqZ3VUZVI4VVVIUWQ2OU1PWnZUcTg5VGxsSld4Mk1PX1JVTlpCblh4aU5OcmRmeXNIdTRlS1FTeXRmaWRyNGY0dHpGZ0NuTG5GUFNrX2VyVW9VNDk2d0F6em5IbEZQZTh0d2VkamJicnJFWjhDSXRnUmF4bHZzTFVMaUswVDBjUzY?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-10-14T10:29+08:00",
+      "published_at": "2026-10-14T16:37+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "外資賣超逾 1,650 億元！台股資金輪動至傳產，台積電法說前投信加碼封裝鏈 - TechNews 科技新報",
-      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE11eG0tQzNjeWJmOXNMX3F5NUs1bXZrSUlWRXBNcVkzcURXeUFyTE83eUZWbkJrVndKV09uZ0t6dWdJVmp4NUpndU9tQWJuSUJGRTBWQkFHaVpQLTlkZTRNY2dhcw?oc=5",
-      "source": "TechNews 科技新報",
-      "published_at": "2026-10-14T10:04+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股反彈漲逾350點！台積電回穩漲20元 後市2大觀察重點 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi4gJBVV95cUxQVjRQZTM4OFBfS3RUWkdIbWRiX0tKNVdZRnF6RjIza0tLWjIwWnhMeUdJZTVVVG9GTjVqcVFKVUJ6MWZUZXRRUXk4MDRiTG85WlFJV3dGS2QzYU1rNVpabUVYcFFnVVBoY3R5b3FETW5WaXNhUFlJNklzN0VQY0sxRnVIa0ZVdGMxaHB1NG95Y1h1RkZCaUFyZ216UjcxTkpVUENad2VoaVFJT2ZaY2NBb09rbkVmVF9jN1JpV283dExYTktwdDBqX2t5dFh4MWcxTzNMUVdXVFJMQ1NiOFdaQnhmWExIRzlqeFZMY0pmSTNFUnhwRFVQbWdYQTVkRmtzM2xsSi14MWhLenhCbDhURWM3X0FwdWJPOTh2UnhXUmo3UG5XOEszZFQ5RjdKMG93SmdPbzc2X0E4bk0yOXEwWm9SRk5CWmdydnBrQzNlSnhOQS1WUDE2TUdMUFNWRzl4OVE?oc=5",
+      "title": "鉅亨買基金：前20%投資高手 近九成資產重壓台股 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMizwJBVV95cUxNTmZjcVl3SVRsMFpXUGRLb2JzTFNXTU0yVVBsYzRTdTBlRVZGN0lOVTVpbWE4OWdNbUVLYXdvZHJsWGlKbkVKcE8wZ1dId0JpZVFvWEZjS0hFOU1qZlJudHdoTDNrZTFkWDY3aGIxMmxvdHZsVjF2Q2hiRUFiMThMM1dsbUtkaWZHV0ZULWk3c3pyUEtUa2FvaGpFTDZIcnYzcmUyZnNQbThwaGRHZ0dzREpqYnc1SjJhdlhwZEROd0MtR3Vld2ZXNjlKb1N6T3VoMkQtc3lqWV9HLUFHakpVcVJtUVNESXhZWjF1OFRFODBBNFVsS2hOMVpQcnYtZ3JkNnNOQW5CZDFjZUZYQUZ0dUVHTFRjOWprdEFlZ2IwQjEtalVzeDdjekY0STFrZmxyVkh3eUtudDV3bXVMemd1cGNfS3JqTnVYWGpMTFo5TQ?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-10-14T09:36+08:00",
+      "published_at": "2026-10-14T16:21+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "不懼美股震盪！台股反彈278點 台積電開2505元 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMipwJBVV95cUxPU3htTlBvV2Z5eVQ0YU9FUHJvRUFTWm1rQVNCV084dS1qYmhaZ3NwWEQ4Mk1Oek8tUlFYUVU4VFladHpNRy1kaDdXUk1sR3o4WC1SRVg2ZkVXbm55THFpN3duTHVnSHgtRmYyMFJVbExXYzFMdGNrbERDUERaZEV0N25EY2xMS1RUZTRMeE93QkFZaTFNRmVJZDRnLWg0QmhkODgwS1lzc2J3blMydGJPTXBQdXEyNzk0TmRNTkdmTlpEaEhpRnpfWWlSVjdWZ0IwN2NRRndkWkRQdWZ4amVJU2otVHdBdEJfc1lBamhMTG1GQm5Dd3JYX0Q0bkNDbzQ2OHFqdW5TeXdqczF1VlJuUFdUWmlXaENHa2s0Zm9ONmhwN1FuSno0?oc=5",
+      "title": "台股收漲284點！ 網見三法法人操作驚：內資軋外資 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMixgJBVV95cUxOd054aVNOb0xEZ3hXM1VPQU10M3ZuXzZIM3BQdnJGdXkxR1JLMTBKWno1aXk2M29yNmR6MVljYll4Q1NTSDFrYThHYW95Mkhya0swbkUybWlhVVN4Nmtja2VJSGNVamN5NDBDYVl0SW9MTWJWbklValUzWEJMejRKZjB0Vjd4WllabFBYN3dfbF9sWGJ2WEFRQllsVnlSR0V0bHEtM0xfQ09CbHdWS01fOUtkSjhSMWpaYk9oUVlic1F1dHhQT2hjN3liTWhzVU5ubEJlSC1QeWJrM0E3VnVuUDBOSi1vb0xkSE1rSFZhX1lVMFZhZjZLbDBMNEh2WnJFZE16dXA4WUVyT0tZMUN0SUFWTjVKUjZ5dUd3bXItR3RlSFQxd0FaR3RQR29Pd2pYZzNyUkl5VE1VYjlNeTVNZll4VVBSdw?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-10-14T09:36+08:00",
+      "published_at": "2026-10-14T16:07+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "三大法人提153億走沒用！台股硬上衝284點 股民笑：大哥嘎爆小兒 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMihwNBVV95cUxQZ0thWmo3ZF8zTkw1ckdUOGhqSnVidGl6aDdZRURkTVJFMmxad01xTUtYam8ybGZva2F3RHlmUU9Jemczc2V6T3ZYR3R4VWF3VkZqdjlyLTFJcE9NQ3NFUmdBYTktVUtWN3BPb2xOU3dibFlnY2RFZXhBWDRCaG81S0NmQ0kxQWxfRE5wYm5PSmlIcWE0TDNjV3hSUmpwVklsTTVOQktCdG5iUFNnS0hUZUx6QnIyZE1JQzU0djRBM01oWndlSG8xblV3cXhNVFVTOHg5SXI1X050VTBBeU9SeHhmMlFTMnRhc0Z6N29OX0NyT0VTQXFxaHBQeUlBRF9FOXV5VUpTTjczcXVidk4tbkZ2TzhOX2FPQVRvUnhkVnNPZFd2OVVBVWRkUFJoWG9TaURyUjNwdmNVU3VocEJmWThYSWt2dGw4QlBoU2cxcWlPcVg4RzhlMlJxeEE3X0h4N3hzQ3poNFZJTnJNWTFuTGlaeDllNlhDUmhjU2g1ZS1QUGZmdklj?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-14T16:05+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "《台股盤後》量縮收漲284點 10日線及49K得而復失 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiqAJBVV95cUxPN1E3MGJWUlFob1M0RGxTYW1nQktBZ2tTbWFpb1hPUmtOSVpkMlo1Q2J6WDE2b05CcHRLYlFHYnZYZUhsOG4tdDJ0MC1DVV9BLVRvc3hxQzFtRVNGZWREWW9nLW1MVGd6elZTUTNwR2lQWlU1NnNoMXdTYlNSb0xfVGVrTWQxbkstaTAxRm53RlpHUV9JV0NJZmZYRGZkWnlKUzBOdGk3YmNKVVRTZkZTLUxWc3FKQjlLT2VPTmMxNkxNTkNkWENvUEtaZ2g5Wi1DTERoVXZGRmxYOC1EYW41WEFSZjdjQmIxenpfQzBCQXBhQzUxamtqcDg5YzRaUnE0dU1BOUxSYnhzNGc2M0tqRTJpS1pBZVNrVnFpa0YtSTZvV1ZqYl85aQ?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-14T15:46+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Hong Kong Stock Ratings Summary: GF Securities Maintains Buy Rating on Alibaba - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPX1FKOFUzM3lOYkM2NWNRQU50Mi1DeXpvVVJnVlhHVjItYlF1M015U19BbmhRWmtZZWdPTHNLUXV0NDhFNW1DTFN3ODJDMkNxNEZWOVhkTGlQbGR5ODItOVRrR184Tlp0UVVQNXhtcC13azh6LTBMd0dxd0FQN202STNGVWJsbjFYbUVmRnROSGFIZlViYmY1alRIbnB1SmNUYVRfbGluUjdrLU5hQkE?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-14T15:11+08:00",
       "importance": 2,
       "risk_score": 0
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-14T13:26:22+08:00"
+  "updated_at": "2026-10-14T18:23:43+08:00"
 }
