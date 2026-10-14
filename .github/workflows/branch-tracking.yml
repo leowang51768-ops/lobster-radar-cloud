@@ -10,8 +10,11 @@ on:
       - "stock_universe.py"
 
   schedule:
-    # 台灣時間20:40執行，21:00稽核前先收集分點資料
+    # 台灣時間 17:30 先跑一輪；20:40 正式更新；21:30 備援補跑。
+    # GitHub cron 使用 UTC：17:30/20:40/21:30 台北 = 09:30/12:40/13:30 UTC。
+    - cron: "30 9 * * 1-5"
     - cron: "40 12 * * 1-5"
+    - cron: "30 13 * * 1-5"
 permissions:
   contents: write
 concurrency:
