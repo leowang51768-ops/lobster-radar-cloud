@@ -15,7 +15,7 @@
       "name": "環球晶",
       "first_returned_date": "2026-10-14",
       "last_returned_date": "2026-10-14",
-      "last_signal_id": "2026-09-30|6488",
+      "last_signal_id": "2026-10-01|6488",
       "reason": "pattern_invalid",
       "permanent": true,
       "continue_branch_tracking": true
@@ -82,5 +82,5 @@
     }
   },
   "version": 241,
-  "updated_at": "2026-10-14T21:31:13+08:00"
+  "updated_at": "2026-10-14T21:53:29+08:00"
 }
