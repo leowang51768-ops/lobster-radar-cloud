@@ -1,7 +1,7 @@
 {
   "version": 234,
   "target_date": "2026-10-15",
-  "generated_at": "2026-10-14T17:45:48+08:00",
+  "generated_at": "2026-10-14T18:06:27+08:00",
   "source": "GitHub breakout_tracking D1-D10",
   "price_source_date": "2026-10-14",
   "calendar_source": "TWSE官方開休市日曆",
@@ -9,22 +9,37 @@
   "rules": {
     "distance": "0-3% priority; 3-5% acceptable; >5% excluded",
     "max_candidates": 10,
-    "selection": "distance zone -> composite score -> distance",
+    "selection": "latest signal per stock -> D1-D10 by actual TWSE trading days -> distance zone -> composite score -> distance",
+    "d_day_rule": "signal_date=D1；只計算官方交易日；同股重複只留最新 signal_date",
     "price_guard": "現價一律使用 latest_trade_date 的官方收盤價；舊價或缺價不得進入"
   },
   "rows": [
     {
+      "code": "4977",
+      "name": "眾達-KY",
+      "d": 1,
+      "price": 191.0,
+      "support": 189.5,
+      "distance_pct": 0.7916,
+      "score": 93.0,
+      "route": "N字底",
+      "status": "優先",
+      "source_signal_date": "2026-10-14",
+      "source_last_checked_date": "2026-10-14",
+      "price_source_date": "2026-10-14"
+    },
+    {
       "code": "6290",
       "name": "良維",
-      "d": 2,
+      "d": 1,
       "price": 292.0,
       "support": 284.0,
       "distance_pct": 2.8169,
-      "score": 92.0,
+      "score": 93.0,
       "route": "N字底",
       "status": "優先",
-      "source_signal_date": "2026-10-06",
-      "source_last_checked_date": "2026-10-07",
+      "source_signal_date": "2026-10-14",
+      "source_last_checked_date": "2026-10-14",
       "price_source_date": "2026-10-14"
     },
     {
@@ -44,21 +59,21 @@
     {
       "code": "2368",
       "name": "金像電",
-      "d": 2,
+      "d": 1,
       "price": 1260.0,
       "support": 1245.0,
       "distance_pct": 1.2048,
-      "score": 81.9,
+      "score": 80.9,
       "route": "N字底",
       "status": "優先",
-      "source_signal_date": "2026-10-06",
-      "source_last_checked_date": "2026-10-07",
+      "source_signal_date": "2026-10-14",
+      "source_last_checked_date": "2026-10-14",
       "price_source_date": "2026-10-14"
     },
     {
       "code": "4958",
       "name": "臻鼎-KY",
-      "d": 3,
+      "d": 8,
       "price": 567.0,
       "support": 550.0,
       "distance_pct": 3.0909,
@@ -70,9 +85,23 @@
       "price_source_date": "2026-10-14"
     },
     {
+      "code": "2312",
+      "name": "金寶",
+      "d": 1,
+      "price": 33.25,
+      "support": 31.7,
+      "distance_pct": 4.8896,
+      "score": 87.9,
+      "route": "N字底",
+      "status": "可接受",
+      "source_signal_date": "2026-10-14",
+      "source_last_checked_date": "2026-10-14",
+      "price_source_date": "2026-10-14"
+    },
+    {
       "code": "3013",
       "name": "晟銘電",
-      "d": 2,
+      "d": 6,
       "price": 97.4,
       "support": 93.9,
       "distance_pct": 3.7274,
@@ -84,9 +113,23 @@
       "price_source_date": "2026-10-14"
     },
     {
+      "code": "3580",
+      "name": "友威科",
+      "d": 1,
+      "price": 121.0,
+      "support": 116.0,
+      "distance_pct": 4.3103,
+      "score": 82.7,
+      "route": "N字底",
+      "status": "可接受",
+      "source_signal_date": "2026-10-14",
+      "source_last_checked_date": "2026-10-14",
+      "price_source_date": "2026-10-14"
+    },
+    {
       "code": "8046",
       "name": "南電",
-      "d": 3,
+      "d": 9,
       "price": 1430.0,
       "support": 1380.0,
       "distance_pct": 3.6232,
