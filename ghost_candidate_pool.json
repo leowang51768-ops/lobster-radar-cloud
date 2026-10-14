@@ -1,13 +1,15 @@
 {
   "version": 234,
-  "target_date": "2026-10-15",
-  "generated_at": "2026-10-14T15:40:00+08:00",
-  "source": "GitHub breakout_tracking D1-D10 manual test run",
-  "finalized": false,
+  "target_date": "2026-10-14",
+  "generated_at": "2026-10-14T17:26:41+08:00",
+  "source": "GitHub breakout_tracking D1-D10",
+  "price_source_date": "2026-10-14",
+  "finalized": true,
   "rules": {
     "distance": "0-3% priority; 3-5% acceptable; >5% excluded",
     "max_candidates": 10,
-    "selection": "distance zone -> composite score -> distance"
+    "selection": "distance zone -> composite score -> distance",
+    "price_guard": "only rows whose price_source_date equals latest_trade_date may enter"
   },
   "rows": [
     {
@@ -15,39 +17,42 @@
       "name": "良維",
       "d": 2,
       "price": 284.5,
-      "support": 284,
+      "support": 284.0,
       "distance_pct": 0.1761,
-      "score": 92,
+      "score": 92.0,
       "route": "N字底",
       "status": "優先",
       "source_signal_date": "2026-10-06",
-      "source_last_checked_date": "2026-10-07"
+      "source_last_checked_date": "2026-10-07",
+      "price_source_date": "2026-10-14"
     },
     {
       "code": "3163",
       "name": "波若威",
       "d": 3,
-      "price": 689,
-      "support": 689,
-      "distance_pct": 0,
+      "price": 689.0,
+      "support": 689.0,
+      "distance_pct": 0.0,
       "score": 90.2,
       "route": "N字底",
       "status": "優先",
       "source_signal_date": "2026-10-02",
-      "source_last_checked_date": "2026-10-06"
+      "source_last_checked_date": "2026-10-06",
+      "price_source_date": "2026-10-14"
     },
     {
       "code": "6239",
       "name": "力成",
       "d": 2,
       "price": 307.5,
-      "support": 302,
+      "support": 302.0,
       "distance_pct": 1.8212,
       "score": 88.8,
       "route": "N字底",
       "status": "優先",
       "source_signal_date": "2026-10-06",
-      "source_last_checked_date": "2026-10-07"
+      "source_last_checked_date": "2026-10-07",
+      "price_source_date": "2026-10-14"
     },
     {
       "code": "6770",
@@ -56,11 +61,12 @@
       "price": 74.5,
       "support": 73.7,
       "distance_pct": 1.0855,
-      "score": 88,
+      "score": 88.0,
       "route": "N字底",
       "status": "優先",
       "source_signal_date": "2026-09-30",
-      "source_last_checked_date": "2026-10-01"
+      "source_last_checked_date": "2026-10-01",
+      "price_source_date": "2026-10-14"
     },
     {
       "code": "4989",
@@ -73,20 +79,36 @@
       "route": "N字底",
       "status": "優先",
       "source_signal_date": "2026-10-07",
-      "source_last_checked_date": "2026-10-08"
+      "source_last_checked_date": "2026-10-08",
+      "price_source_date": "2026-10-14"
     },
     {
       "code": "2376",
       "name": "技嘉",
       "d": 2,
-      "price": 380,
-      "support": 376,
+      "price": 380.0,
+      "support": 376.0,
       "distance_pct": 1.0638,
       "score": 87.7,
       "route": "N字底",
       "status": "優先",
       "source_signal_date": "2026-10-05",
-      "source_last_checked_date": "2026-10-06"
+      "source_last_checked_date": "2026-10-06",
+      "price_source_date": "2026-10-14"
+    },
+    {
+      "code": "3706",
+      "name": "神達",
+      "d": 3,
+      "price": 84.2,
+      "support": 83.946,
+      "distance_pct": 0.3026,
+      "score": 84.5,
+      "route": "N字底",
+      "status": "優先",
+      "source_signal_date": "2026-10-12",
+      "source_last_checked_date": "2026-10-14",
+      "price_source_date": "2026-10-14"
     },
     {
       "code": "3013",
@@ -99,46 +121,36 @@
       "route": "N字底",
       "status": "優先",
       "source_signal_date": "2026-10-06",
-      "source_last_checked_date": "2026-10-07"
+      "source_last_checked_date": "2026-10-07",
+      "price_source_date": "2026-10-14"
     },
     {
       "code": "2368",
       "name": "金像電",
       "d": 2,
-      "price": 1245,
-      "support": 1245,
-      "distance_pct": 0,
+      "price": 1245.0,
+      "support": 1245.0,
+      "distance_pct": 0.0,
       "score": 81.9,
       "route": "N字底",
       "status": "優先",
       "source_signal_date": "2026-10-06",
-      "source_last_checked_date": "2026-10-07"
+      "source_last_checked_date": "2026-10-07",
+      "price_source_date": "2026-10-14"
     },
     {
       "code": "4958",
       "name": "臻鼎-KY",
       "d": 3,
-      "price": 574,
-      "support": 550,
+      "price": 574.0,
+      "support": 550.0,
       "distance_pct": 4.3636,
-      "score": 97,
+      "score": 97.0,
       "route": "N字底",
       "status": "可接受",
       "source_signal_date": "2026-10-02",
-      "source_last_checked_date": "2026-10-06"
-    },
-    {
-      "code": "6442",
-      "name": "光聖",
-      "d": 2,
-      "price": 1785,
-      "support": 1705,
-      "distance_pct": 4.6921,
-      "score": 88.2,
-      "route": "N字底",
-      "status": "可接受",
-      "source_signal_date": "2026-10-07",
-      "source_last_checked_date": "2026-10-08"
+      "source_last_checked_date": "2026-10-06",
+      "price_source_date": "2026-10-14"
     }
   ]
 }

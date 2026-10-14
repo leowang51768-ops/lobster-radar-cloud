@@ -1,7 +1,7 @@
 {
   "version": 234,
-  "date": "2026-10-15",
-  "generated_at": "2026-10-14T15:40:00+08:00",
+  "date": "2026-10-14",
+  "generated_at": "2026-10-14T17:26:41+08:00",
   "codes": [
     "6290",
     "3163",
@@ -12,12 +12,12 @@
     "4989"
   ],
   "name_map": {
-    "3163": "波若威",
-    "4989": "榮科",
-    "6239": "力成",
     "6290": "良維",
-    "6770": "力積電"
+    "3163": "波若威",
+    "6239": "力成",
+    "6770": "力積電",
+    "4989": "榮科"
   },
   "source": "ghost_candidate_pool.json",
-  "rule": "manual test run after 2026-10-14 close; preview for 2026-10-15"
+  "rule": "08:30 cloud top3 + rank4/5 standby; local open positions still have priority when desktop starts"
 }
