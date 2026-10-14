@@ -122,22 +122,33 @@ def load_json(path: Path, default):
     except Exception:
         return default
 
-def latest_price_dates() -> tuple[str, dict[str, str]]:
+def latest_price_snapshot() -> tuple[str, dict[str, str], dict[str, float]]:
     if not PRICE_DB.exists():
-        return "", {}
+        return "", {}, {}
     with sqlite3.connect(PRICE_DB) as con:
-        rows = con.execute(
-            "SELECT stock_id, MAX(date) FROM prices GROUP BY stock_id"
-        ).fetchall()
         latest = con.execute(
             "SELECT value FROM metadata WHERE key='latest_trade_date'"
         ).fetchone()
-    latest_trade_date = str(latest[0]) if latest and latest[0] else ""
-    return latest_trade_date, {str(code): str(day) for code, day in rows if code and day}
+        latest_trade_date = str(latest[0]) if latest and latest[0] else ""
+        rows = con.execute(
+            "SELECT stock_id, date, close FROM prices WHERE date=?",
+            (latest_trade_date,),
+        ).fetchall() if latest_trade_date else []
+    price_dates = {}
+    closes = {}
+    for code, day, close in rows:
+        if not code or not day or close is None:
+            continue
+        price_dates[str(code)] = str(day)
+        try:
+            closes[str(code)] = float(close)
+        except Exception:
+            pass
+    return latest_trade_date, price_dates, closes
 
 
 def build_rows(data: dict) -> tuple[list[dict], str]:
-    latest_trade_date, price_dates = latest_price_dates()
+    latest_trade_date, price_dates, official_closes = latest_price_snapshot()
     rows=[]
     for item in data.values():
         if not isinstance(item, dict):
@@ -152,9 +163,12 @@ def build_rows(data: dict) -> tuple[list[dict], str]:
         dday=tracking_day+1
         if not 1 <= dday <= 10:
             continue
+        code=str(item.get("code") or "")
         try:
             support=float(item.get("current_support") or item.get("confirmed_support") or item.get("candidate_new_support") or item.get("retest_support") or 0)
-            close=float(item.get("last_close") or item.get("true_breakout_close") or item.get("breakout_close") or 0)
+            # Candidate "現價" must use the official close from the latest
+            # price database session, never breakout_tracking.last_close.
+            close=float(official_closes.get(code) or 0)
         except Exception:
             continue
         if support <= 0 or close <= 0:
@@ -166,7 +180,6 @@ def build_rows(data: dict) -> tuple[list[dict], str]:
             score=float(item.get("composite_score") or 0)
         except Exception:
             score=0.0
-        code=str(item.get("code") or "")
         price_source_date=price_dates.get(code, "")
         stale_price=bool(latest_trade_date and price_source_date != latest_trade_date)
         if stale_price:
@@ -217,7 +230,7 @@ def main():
             "distance":"0-3% priority; 3-5% acceptable; >5% excluded",
             "max_candidates":10,
             "selection":"distance zone -> composite score -> distance",
-            "price_guard":"only rows whose price_source_date equals latest_trade_date may enter"
+            "price_guard":"現價一律使用 latest_trade_date 的官方收盤價；舊價或缺價不得進入"
         },
         "rows":rows,
     }
