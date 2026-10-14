@@ -1,2 +1,2 @@
-manual trigger 2026-10-14 after 13:30 Asia/Taipei
-reason: verify corrected Taiwan trade-date cutoff and refresh official 2026-10-14 prices/radar
+manual trigger 2026-10-14 after test fix
+reason: rerun official 2026-10-14 price update after aligning regression tests with 13:30 Taiwan close cutoff
