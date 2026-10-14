@@ -6,6 +6,7 @@ on:
       - "branch_tracker/*.py"
       - "branch_tracker/tests/**"
       - "branch_tracker/data/extra_universe.json"
+      - "branch_tracker/data/monitor_return_pool.json"
       - ".github/workflows/branch-tracking.yml"
       - "stock_universe.py"
 
@@ -88,3 +89,4 @@ jobs:
           name: branch-evidence-${{ github.run_id }}
           path: branch_tracker/data/
           retention-days: 30
+

@@ -6,8 +6,15 @@ on:
       - 'lobster_tw_6m_prices.sqlite'
       - 'breakout_tracking.json'
       - '.github/ghost-candidate-trigger'
+      - 'ghost_monitor_events.json'
+      - 'ghost_lifecycle.py'
+      - 'ghost_state_sync.py'
+      - 'ghost_candidate_pool.py'
+      - 'ghost_tests/**'
+      - 'branch_tracker/data/monitor_branch_feed.json'
+      - '.github/workflows/ghost-candidate-pool.yml'
   workflow_run:
-    workflows: ["Lobster Daily Price Update"]
+    workflows: ["Lobster Daily Price Update", "Independent Branch Evidence Tracking"]
     types: [completed]
   schedule:
     # Taiwan 23:00-07:30 = UTC 15:00-23:30
@@ -35,6 +42,9 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Verify shared lifecycle
+        run: python -m unittest discover -s ghost_tests -v
+
       - name: Build cloud candidate pool
         run: python ghost_candidate_pool.py
 
@@ -56,10 +66,21 @@ jobs:
         run: |
           git config user.name "ghost-candidate-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add ghost_candidate_pool.json today_trading_seats.json || true
+          git add ghost_candidate_pool.json today_trading_seats.json ghost_monitor_state.json ghost_monitor_contract.json branch_tracker/data/monitor_return_pool.json
           if git diff --cached --quiet; then
             echo "No candidate change."
             exit 0
           fi
           git commit -m "ghost: update candidate pool"
-          git push
+          for attempt in 1 2 3; do
+            if git push; then exit 0; fi
+            # Refresh inputs and recompute rather than overwriting another job's files.
+            git fetch origin main
+            git reset --hard origin/main
+            python ghost_candidate_pool.py
+            git add ghost_candidate_pool.json today_trading_seats.json ghost_monitor_state.json ghost_monitor_contract.json branch_tracker/data/monitor_return_pool.json
+            git diff --cached --quiet && exit 0
+            git commit -m "ghost: reconcile updated inputs"
+          done
+          exit 1
+

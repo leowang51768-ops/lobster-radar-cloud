@@ -193,6 +193,10 @@ def collect(args):
         for k, v in (raw_extra.items() if isinstance(raw_extra, dict) else [])
         if str(k).split('.')[0].isdigit()
     }
+    return_path = ROOT/'branch_tracker/data/monitor_return_pool.json'
+    returned = json.loads(return_path.read_text(encoding='utf-8')).get('stocks', {}) if return_path.exists() else {}
+    extra_universe.update({str(code):str(row.get('name') or code) for code,row in returned.items()
+                           if str(code).isdigit() and isinstance(row,dict)})
     universe = {**base_universe, **extra_universe}
 
     codes = args.codes.split(',') if args.codes else sorted(universe)
@@ -304,3 +308,4 @@ if __name__ == '__main__':
     parser.add_argument('--history-budget',type=int,default=60)
     parser.add_argument('--delay',type=float,default=1.5)
     raise SystemExit(collect(parser.parse_args()))
+

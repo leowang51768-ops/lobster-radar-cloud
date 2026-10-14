@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import sqlite3
+import math
 from datetime import datetime, timedelta, date
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -101,15 +102,15 @@ def next_trade_day(d: date) -> date:
 
 
 def trading_day_index(signal_date: str, reference_date: str) -> int:
-    """Match local D1-D10 logic: signal day is D1; count only TWSE trading days."""
+    """Match local D0-D10 logic: signal day is D0; count only TWSE trading days."""
     try:
         start = date.fromisoformat(str(signal_date)[:10])
         end = date.fromisoformat(str(reference_date)[:10])
     except Exception:
-        return 1
-    if end <= start:
-        return 1
-    count = 1
+        return -1
+    if end < start:
+        return -1
+    count = 0
     x = start
     while x < end:
         x += timedelta(days=1)
@@ -165,8 +166,46 @@ def latest_price_snapshot() -> tuple[str, dict[str, str], dict[str, float]]:
     return latest_trade_date, price_dates, closes
 
 
-def build_rows(data: dict) -> tuple[list[dict], str]:
+def cloud_daily_score(item, code, close, support, pattern_score, price_date):
+    # Same component weights, with daily MACD clearly identified as a cloud proxy.
+    status=str(item.get('status') or '')
+    breakout=95 if status=='confirmed' else 80 if status=='true_breakout' else 90 if close>support*1.01 else 95
+    parts={'breakout':breakout, 'pattern':max(0,min(100,pattern_score)), 'macd':None,'volume':None,'chips':40}
+    if PRICE_DB.exists():
+        with sqlite3.connect(PRICE_DB) as con:
+            bars=list(con.execute('SELECT close,volume FROM prices WHERE stock_id=? AND date<=? ORDER BY date DESC LIMIT 65',(code,price_date)))[::-1]
+        closes=[float(b[0]) for b in bars if b[0] is not None]
+        if len(closes)>=35:
+            def ema(values,span):
+                result=[]; e=values[0]; a=2/(span+1)
+                for v in values:
+                    e=a*v+(1-a)*e; result.append(e)
+                return result
+            dif=[a-b for a,b in zip(ema(closes,12),ema(closes,26))]
+            dea=ema(dif,9); h=[a-b for a,b in zip(dif,dea)]
+            parts['macd']=100 if h[-2]<=0<h[-1] else 90 if h[-1]>0 and h[-1]>h[-2] else 70 if h[-1]>h[-2] else 0 if h[-1]<0 and h[-1]<h[-2] else 20
+        if len(bars)>=6 and all(v is not None and float(v)>0 for _,v in bars[-6:]):
+            vr=float(bars[-1][1])/(sum(float(v) for _,v in bars[-6:-1])/5)
+            parts['volume']=45 if vr>=4 else 65 if vr>=2 else 90 if vr>=1.6 else 100 if vr>=1.2 else 70 if vr>=1 else 50 if vr>=.8 else 30
+    feed=load_json(ROOT/'branch_tracker/data/monitor_branch_feed.json',{})
+    stock=next((r for r in feed.get('stocks',[]) if str(r.get('code'))==code),{})
+    if stock.get('data_through')==price_date:
+        b=(stock.get('branches') or [{}])[0]
+        parts['chips']=10 if int(b.get('consecutive_sell_days') or 0)>0 else 80 if b.get('formal_key_branch') else 90 if int(b.get('recent_buy_days_5') or 0)>=2 else 40
+        # Selling is kept negative; a historical grade cannot mask current selling.
+        if parts['chips']!=10:
+            parts['chips']=max(parts['chips'],{'A':100,'B':80,'C':60}.get(str(b.get('historical_grade') or ''),0))
+    weights={'breakout':.35,'pattern':.25,'macd':.20,'volume':.10,'chips':.10}
+    valid=[k for k,v in parts.items() if v is not None and math.isfinite(v)]
+    total=sum(parts[k]*weights[k] for k in valid)/sum(weights[k] for k in valid)
+    parts.update(macd_source='daily_MACD_proxy',price_source_date=price_date,missing=[k for k in weights if parts[k] is None])
+    return total,parts
+
+def build_rows(data: dict, expected_completed_date=None) -> tuple[list[dict], str]:
     latest_trade_date, price_dates, official_closes = latest_price_snapshot()
+
+    if expected_completed_date and latest_trade_date != expected_completed_date:
+        return [], latest_trade_date
 
     # Same stock can have multiple historical tracking entries.
     # Match the local D1-D10 display rule: keep only the latest signal for each code.
@@ -189,8 +228,8 @@ def build_rows(data: dict) -> tuple[list[dict], str]:
     rows=[]
     for code, item in latest_by_code.items():
         signal_date=str(item.get("signal_date") or "")[:10]
-        dday=trading_day_index(signal_date, latest_trade_date)
-        if not 1 <= dday <= 10:
+        dday=int(item.get("tracking_day")) if item.get("lifecycle_stage")=="D" else trading_day_index(signal_date, latest_trade_date)
+        if not 0 <= dday <= 10:
             continue
 
         try:
@@ -199,6 +238,7 @@ def build_rows(data: dict) -> tuple[list[dict], str]:
                 or item.get("confirmed_support")
                 or item.get("candidate_new_support")
                 or item.get("retest_support")
+                or item.get("support")
                 or 0
             )
             # Candidate 現價 always uses the latest official close.
@@ -213,7 +253,7 @@ def build_rows(data: dict) -> tuple[list[dict], str]:
             continue
 
         try:
-            score=float(item.get("composite_score") or 0)
+            score=float(item.get("composite_score") or item.get("score") or 0)
         except Exception:
             score=0.0
 
@@ -222,6 +262,7 @@ def build_rows(data: dict) -> tuple[list[dict], str]:
         if stale_price:
             continue
 
+        score, score_parts = cloud_daily_score(item, code, close, support, score, latest_trade_date)
         rows.append({
             "code":code,
             "name":str(item.get("name") or item.get("code") or ""),
@@ -230,6 +271,9 @@ def build_rows(data: dict) -> tuple[list[dict], str]:
             "support":round(support,4),
             "distance_pct":round(dist,4),
             "score":round(score,2),
+            "score_source":"cloud_daily_snapshot",
+            "score_parts":score_parts,
+            "signal_id":item.get("signal_id") or item.get("tracking_key"),
             "route":str(item.get("route") or ""),
             "status":"優先" if dist <= 3 else "可接受",
             "source_signal_date":signal_date,
@@ -248,24 +292,25 @@ def build_rows(data: dict) -> tuple[list[dict], str]:
 def main():
     now=datetime.now(TAIPEI)
     target=target_trade_date(now)
-    tracking=load_json(TRACKING,{})
-    rows, latest_trade_date=build_rows(tracking)
+    from ghost_state_sync import build_state
+    tracking, completed=build_state(now,is_trade_day)
+    rows, latest_trade_date=build_rows(tracking,completed)
     # A pool is final only on its own target trading day from 08:00 onward.
     # After 13:30, a newly-created next-day pool must remain "updating".
     final=(target == now.date()) and ((now.hour > 8) or (now.hour==8 and now.minute>=0))
     pool={
-        "version":234,
+        "version":241,
         "target_date":target.isoformat(),
         "generated_at":now.isoformat(timespec="seconds"),
-        "source":"GitHub breakout_tracking D1-D10",
+        "source":"GitHub shared lifecycle D0-D10",
         "price_source_date":latest_trade_date,
         "calendar_source":_CALENDAR_SOURCE.get(target.year, "TWSE官方開休市日曆"),
         "finalized":bool(final),
         "rules":{
             "distance":"0-3% priority; 3-5% acceptable; >5% excluded",
             "max_candidates":10,
-            "selection":"latest signal per stock -> D1-D10 by actual TWSE trading days -> distance zone -> composite score -> distance",
-            "d_day_rule":"signal_date=D1；只計算官方交易日；同股重複只留最新 signal_date",
+            "selection":"latest signal per stock -> D0-D10 by actual TWSE trading days -> distance zone -> composite score -> distance",
+            "d_day_rule":"confirmed_date=D0；只計算官方交易日；同股重複只留最新 signal_date",
             "price_guard":"現價一律使用 latest_trade_date 的官方收盤價；舊價或缺價不得進入"
         },
         "rows":rows,
@@ -274,9 +319,10 @@ def main():
 
     # Publish formal seats only on the target trading day at/after 08:30.
     # An after-close next-day preview must NOT overwrite formal seats early.
-    if target == now.date() and ((now.hour > 8) or (now.hour==8 and now.minute>=30)):
+    previous_seats=load_json(SEATS_OUT,{})
+    if target == now.date() and ((now.hour > 8) or (now.hour==8 and now.minute>=30)) and previous_seats.get('date')!=target.isoformat():
         seats={
-            "version":234,
+            "version":241,
             "date":target.isoformat(),
             "generated_at":now.isoformat(timespec="seconds"),
             "codes":[r["code"] for r in rows[:3]],
@@ -289,3 +335,4 @@ def main():
 
 if __name__=="__main__":
     main()
+

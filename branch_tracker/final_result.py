@@ -135,6 +135,12 @@ def main():
                 if code.isdigit():
                     stock_names[code] = str(v or code)
 
+        returned_path = DATA / "monitor_return_pool.json"
+        returned = json.loads(returned_path.read_text(encoding="utf-8")).get("stocks", {}) if returned_path.exists() else {}
+        for code, row in returned.items():
+            if str(code).isdigit() and isinstance(row,dict):
+                stock_names[str(code)] = str(row.get("name") or code)
+
         # Retrospective history. A branch-stock pair may have fewer than 120 rows
         # while the source backfill is still accumulating; never pad missing days.
         hist = defaultdict(dict)
@@ -634,6 +640,8 @@ def main():
             "data_through": latest_day,
             "policy": "persistent_observation_pool",
             "entries": watch_entries,
+            "stocks": returned,
+            "stock_policy": "monitor returns are permanent stock members; broker evidence still requires independent verification",
         }, ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
@@ -669,3 +677,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
