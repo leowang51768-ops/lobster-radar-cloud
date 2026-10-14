@@ -1,7 +1,7 @@
 {
   "version": 244,
   "target_date": "2026-10-15",
-  "generated_at": "2026-10-14T23:42:00+08:00",
+  "generated_at": "2026-10-15T01:37:29+08:00",
   "source": "GitHub shared lifecycle D0-D10",
   "price_source_date": "2026-10-14",
   "calendar_source": "TWSE官方開休市日曆",
@@ -17,7 +17,7 @@
     {
       "code": "4977",
       "name": "眾達-KY",
-      "d": 0,
+      "d": 1,
       "price": 191.0,
       "support": 189.5,
       "distance_pct": 0.7916,
@@ -43,18 +43,18 @@
     {
       "code": "2368",
       "name": "金像電",
-      "d": 0,
+      "d": 1,
       "price": 1260.0,
       "support": 1245.0,
       "distance_pct": 1.2048,
-      "score": 88.72,
+      "score": 89.72,
       "score_source": "cloud_daily_snapshot",
       "score_parts": {
         "breakout": 90,
         "pattern": 80.9,
         "macd": 90,
         "volume": 100,
-        "chips": 90,
+        "chips": 100,
         "macd_source": "daily_MACD_proxy",
         "price_source_date": "2026-10-14",
         "missing": []
@@ -69,7 +69,7 @@
     {
       "code": "6290",
       "name": "良維",
-      "d": 0,
+      "d": 1,
       "price": 292.0,
       "support": 284.0,
       "distance_pct": 2.8169,
@@ -95,7 +95,7 @@
     {
       "code": "3706",
       "name": "神達",
-      "d": 2,
+      "d": 3,
       "price": 84.2,
       "support": 83.946,
       "distance_pct": 0.3026,
@@ -121,7 +121,7 @@
     {
       "code": "3013",
       "name": "晟銘電",
-      "d": 5,
+      "d": 6,
       "price": 97.4,
       "support": 93.9,
       "distance_pct": 3.7274,
@@ -147,7 +147,7 @@
     {
       "code": "3580",
       "name": "友威科",
-      "d": 0,
+      "d": 1,
       "price": 121.0,
       "support": 116.0,
       "distance_pct": 4.3103,
@@ -173,7 +173,7 @@
     {
       "code": "2312",
       "name": "金寶",
-      "d": 0,
+      "d": 1,
       "price": 33.25,
       "support": 31.7,
       "distance_pct": 4.8896,
@@ -199,7 +199,7 @@
     {
       "code": "4958",
       "name": "臻鼎-KY",
-      "d": 7,
+      "d": 8,
       "price": 567.0,
       "support": 550.0,
       "distance_pct": 3.0909,
@@ -225,7 +225,7 @@
     {
       "code": "8046",
       "name": "南電",
-      "d": 8,
+      "d": 9,
       "price": 1430.0,
       "support": 1380.0,
       "distance_pct": 3.6232,
