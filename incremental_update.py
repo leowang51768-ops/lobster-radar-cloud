@@ -1,17 +1,21 @@
 #!/usr/bin/env python3
 """Append one official TWSE + TPEx trade date and keep a rolling six-month price window."""
-import calendar, datetime as dt, json, re, sqlite3, sys
+import argparse, calendar, datetime as dt, json, re, sqlite3, sys
 from pathlib import Path
 
 import requests
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
-from price_integrity import validate_rows
+from price_integrity import assess_rows
 from stock_universe import AI_STOCK_CODES, AI_STOCK_COUNT
 
 DB=Path(__file__).with_name('lobster_tw_6m_prices.sqlite')
-day=dt.date.fromisoformat(sys.argv[1]) if len(sys.argv)>1 else dt.date.today()
+parser=argparse.ArgumentParser()
+parser.add_argument('trade_date', nargs='?')
+parser.add_argument('--allow-partial', action='store_true')
+args=parser.parse_args()
+day=dt.date.fromisoformat(args.trade_date) if args.trade_date else dt.date.today()
 
 def six_months_before(d):
     year=d.year
@@ -73,8 +77,12 @@ otc=parse(get(f"https://www.tpex.org.tw/www/zh-tw/afterTrading/dailyQuotes?date=
 if not tw or not otc: raise SystemExit(f'Not committed: official data incomplete for {day}; TWSE={len(tw)}, TPEx={len(otc)}')
 tw=[row for row in tw if row[2] in AI_STOCK_CODES]
 otc=[row for row in otc if row[2] in AI_STOCK_CODES]
-present={row[2] for row in tw+otc}
-validate_rows(tw + otc, day.isoformat())
+report, valid_rows = assess_rows(tw + otc, day.isoformat())
+if report['usable'] <= 0:
+    raise SystemExit(f'Not committed: no usable tracked prices for {day}')
+present={row[2] for row in valid_rows}
+tw=[row for row in valid_rows if row[1]=='上市']
+otc=[row for row in valid_rows if row[1]=='上櫃']
 
 cutoff=six_months_before(day).isoformat()
 con=sqlite3.connect(DB)
@@ -85,6 +93,9 @@ try:
     con.execute('DELETE FROM incremental_log WHERE date < ?',(cutoff,))
     con.executemany('INSERT OR REPLACE INTO prices VALUES (?,?,?,?,?,?,?,?,?,?)',tw+otc)
     con.execute("INSERT OR REPLACE INTO metadata VALUES ('latest_trade_date',?)",(day.isoformat(),))
+    con.execute("INSERT OR REPLACE INTO metadata VALUES ('latest_missing_codes',?)",(json.dumps(report['missing_codes'], ensure_ascii=False),))
+    con.execute("INSERT OR REPLACE INTO metadata VALUES ('latest_invalid_codes',?)",(json.dumps(report['invalid_codes'], ensure_ascii=False),))
+    con.execute("INSERT OR REPLACE INTO metadata VALUES ('latest_usable_count',?)",(str(report['usable']),))
     con.execute("INSERT OR REPLACE INTO incremental_log VALUES (?,?,?,?)",(day.isoformat(),len(tw),len(otc),dt.datetime.now(dt.timezone.utc).isoformat()))
     con.commit()
 finally:
@@ -93,4 +104,8 @@ finally:
 print(json.dumps({'date':day.isoformat(),'twse_rows':len(tw),'tpex_rows':len(otc),
                   'tracked_universe':AI_STOCK_COUNT,'present_universe':len(present),
                   'retention_cutoff':cutoff,'deleted_old_rows':deleted,
-                  'mode':'fixed AI universe + one-day incremental + rolling six-month retention'},ensure_ascii=False))
+                  'missing_codes':report['missing_codes'],'invalid_codes':report['invalid_codes'],
+                  'mode':'partial-safe official update; missing stocks quarantined; no stale fallback'},ensure_ascii=False))
+
+if (report['missing_codes'] or report['invalid_codes']) and not args.allow_partial:
+    raise SystemExit(2)
