@@ -1,10 +1,10 @@
 {
   "version": 234,
-  "target_date": "2026-10-14",
-  "generated_at": "2026-10-14T17:26:41+08:00",
+  "target_date": "2026-10-15",
+  "generated_at": "2026-10-14T17:33:02+08:00",
   "source": "GitHub breakout_tracking D1-D10",
   "price_source_date": "2026-10-14",
-  "finalized": true,
+  "finalized": false,
   "rules": {
     "distance": "0-3% priority; 3-5% acceptable; >5% excluded",
     "max_candidates": 10,
