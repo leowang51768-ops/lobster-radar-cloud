@@ -1,2 +1,2 @@
-trigger 2026-10-14 17:25 Asia/Taipei
-reason: rebuild ghost candidate pool from latest 2026-10-14 price and radar data
+trigger 2026-10-14 after-close next-day target fix
+reason: rebuild candidate pool for 2026-10-15 with latest 2026-10-14 price data
