@@ -1,2 +1,2 @@
-trigger 2026-10-14 after-close next-day target fix
-reason: rebuild candidate pool for 2026-10-15 with latest 2026-10-14 price data
+trigger 2026-10-14 official-calendar candidate rebuild
+reason: verify TWSE official holiday calendar based next-trading-day selection
