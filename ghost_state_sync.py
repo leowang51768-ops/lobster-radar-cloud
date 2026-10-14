@@ -78,9 +78,17 @@ def build_state(now, is_trade_day, root=ROOT):
     state.update(version=241,updated_at=now.isoformat(timespec='seconds'),
                  completed_through=completed.isoformat(),price_basis='official_completed_session')
     save(root/'ghost_monitor_state.json',state)
+    # Full permanent evidence stays in the cloud ledger; a compact projection
+    # avoids transferring archived multi-branch snapshots on every desktop poll.
+    projection={**state,'stocks':{},'archive':{}}
+    for code,row in state.get('stocks',{}).items():
+        projection['stocks'][code]={k:v for k,v in row.items() if k!='branch'}
+    for sid,row in state.get('archive',{}).items():
+        projection['archive'][sid]={k:row.get(k) for k in ('code','stage','signal_id','confirmed_date','first_seen_date','retired_date','exit_reason')}
+    save(root/'ghost_monitor_projection.json',projection)
     save(root/'branch_tracker/data/monitor_return_pool.json',registry)
     save(root/'ghost_monitor_contract.json',{'version':241,'receiver_ready':True,
-        'events_path':'ghost_monitor_events.json','state_path':'ghost_monitor_state.json',
+        'events_path':'ghost_monitor_events.json','state_path':'ghost_monitor_projection.json',
         'updated_at':now.isoformat(timespec='seconds'),
         'scope':'pattern lifecycle and evidence only; no orders'})
     return {p['signal_id']:p for p in active_picks(state)},completed.isoformat()

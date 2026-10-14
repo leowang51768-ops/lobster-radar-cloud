@@ -28,6 +28,9 @@ class CloudStateTest(unittest.TestCase):
             self.assertEqual(state['stocks']['1234']['stage'],'POOL')
             registry=sync.load(r/'branch_tracker/data/monitor_return_pool.json',{})
             self.assertTrue(registry['stocks']['1234']['continue_branch_tracking'])
+            projection=sync.load(r/'ghost_monitor_projection.json',{})
+            self.assertEqual(projection['version'],241)
+            self.assertNotIn('branch',projection['stocks']['1234'])
             first=registry['updated_at']
             sync.build_state(datetime(2026,10,16,15,tzinfo=now.tzinfo),calendar,r)
             self.assertEqual(sync.load(r/'branch_tracker/data/monitor_return_pool.json',{})['updated_at'],first)
