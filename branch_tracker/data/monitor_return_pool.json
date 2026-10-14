@@ -1,0 +1,86 @@
+{
+  "stocks": {
+    "6770": {
+      "code": "6770",
+      "name": "力積電",
+      "first_returned_date": "2026-10-14",
+      "last_returned_date": "2026-10-14",
+      "last_signal_id": "2026-09-30|6770",
+      "reason": "pattern_invalid",
+      "permanent": true,
+      "continue_branch_tracking": true
+    },
+    "6488": {
+      "code": "6488",
+      "name": "環球晶",
+      "first_returned_date": "2026-10-14",
+      "last_returned_date": "2026-10-14",
+      "last_signal_id": "2026-09-30|6488",
+      "reason": "pattern_invalid",
+      "permanent": true,
+      "continue_branch_tracking": true
+    },
+    "3163": {
+      "code": "3163",
+      "name": "波若威",
+      "first_returned_date": "2026-10-14",
+      "last_returned_date": "2026-10-14",
+      "last_signal_id": "2026-10-02|3163",
+      "reason": "pattern_invalid",
+      "permanent": true,
+      "continue_branch_tracking": true
+    },
+    "6239": {
+      "code": "6239",
+      "name": "力成",
+      "first_returned_date": "2026-10-14",
+      "last_returned_date": "2026-10-14",
+      "last_signal_id": "2026-10-06|6239",
+      "reason": "pattern_invalid",
+      "permanent": true,
+      "continue_branch_tracking": true
+    },
+    "2376": {
+      "code": "2376",
+      "name": "技嘉",
+      "first_returned_date": "2026-10-14",
+      "last_returned_date": "2026-10-14",
+      "last_signal_id": "2026-10-05|2376",
+      "reason": "pattern_invalid",
+      "permanent": true,
+      "continue_branch_tracking": true
+    },
+    "6442": {
+      "code": "6442",
+      "name": "光聖",
+      "first_returned_date": "2026-10-14",
+      "last_returned_date": "2026-10-14",
+      "last_signal_id": "2026-10-07|6442",
+      "reason": "pattern_invalid",
+      "permanent": true,
+      "continue_branch_tracking": true
+    },
+    "4989": {
+      "code": "4989",
+      "name": "榮科",
+      "first_returned_date": "2026-10-14",
+      "last_returned_date": "2026-10-14",
+      "last_signal_id": "2026-10-07|4989",
+      "reason": "pattern_invalid",
+      "permanent": true,
+      "continue_branch_tracking": true
+    },
+    "5443": {
+      "code": "5443",
+      "name": "均豪",
+      "first_returned_date": "2026-10-14",
+      "last_returned_date": "2026-10-14",
+      "last_signal_id": "2026-10-12|5443",
+      "reason": "pattern_invalid",
+      "permanent": true,
+      "continue_branch_tracking": true
+    }
+  },
+  "version": 241,
+  "updated_at": "2026-10-14T21:31:13+08:00"
+}
