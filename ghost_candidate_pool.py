@@ -99,6 +99,24 @@ def next_trade_day(d: date) -> date:
             return x
     raise RuntimeError("40 天內找不到下一交易日")
 
+
+def trading_day_index(signal_date: str, reference_date: str) -> int:
+    """Match local D1-D10 logic: signal day is D1; count only TWSE trading days."""
+    try:
+        start = date.fromisoformat(str(signal_date)[:10])
+        end = date.fromisoformat(str(reference_date)[:10])
+    except Exception:
+        return 1
+    if end <= start:
+        return 1
+    count = 1
+    x = start
+    while x < end:
+        x += timedelta(days=1)
+        if is_trade_day(x):
+            count += 1
+    return count
+
 def target_trade_date(now: datetime) -> date:
     local=now.astimezone(TAIPEI)
 
@@ -149,41 +167,61 @@ def latest_price_snapshot() -> tuple[str, dict[str, str], dict[str, float]]:
 
 def build_rows(data: dict) -> tuple[list[dict], str]:
     latest_trade_date, price_dates, official_closes = latest_price_snapshot()
-    rows=[]
+
+    # Same stock can have multiple historical tracking entries.
+    # Match the local D1-D10 display rule: keep only the latest signal for each code.
+    latest_by_code = {}
     for item in data.values():
         if not isinstance(item, dict):
             continue
-        status=str(item.get("status") or "").strip().lower()
+        code = str(item.get("code") or "")
+        if not code:
+            continue
+        status = str(item.get("status") or "").strip().lower()
         if status in BAD_STATUS:
             continue
-        try:
-            tracking_day=int(item.get("tracking_day"))
-        except Exception:
-            continue
-        dday=tracking_day+1
+        signal_date = str(item.get("signal_date") or "")[:10]
+        prev = latest_by_code.get(code)
+        prev_signal = str(prev.get("signal_date") or "")[:10] if prev else ""
+        if prev is None or signal_date >= prev_signal:
+            latest_by_code[code] = item
+
+    rows=[]
+    for code, item in latest_by_code.items():
+        signal_date=str(item.get("signal_date") or "")[:10]
+        dday=trading_day_index(signal_date, latest_trade_date)
         if not 1 <= dday <= 10:
             continue
-        code=str(item.get("code") or "")
+
         try:
-            support=float(item.get("current_support") or item.get("confirmed_support") or item.get("candidate_new_support") or item.get("retest_support") or 0)
-            # Candidate "現價" must use the official close from the latest
-            # price database session, never breakout_tracking.last_close.
+            support=float(
+                item.get("current_support")
+                or item.get("confirmed_support")
+                or item.get("candidate_new_support")
+                or item.get("retest_support")
+                or 0
+            )
+            # Candidate 現價 always uses the latest official close.
             close=float(official_closes.get(code) or 0)
         except Exception:
             continue
         if support <= 0 or close <= 0:
             continue
+
         dist=(close/support-1.0)*100.0
         if dist < 0 or dist > 5:
             continue
+
         try:
             score=float(item.get("composite_score") or 0)
         except Exception:
             score=0.0
+
         price_source_date=price_dates.get(code, "")
         stale_price=bool(latest_trade_date and price_source_date != latest_trade_date)
         if stale_price:
             continue
+
         rows.append({
             "code":code,
             "name":str(item.get("name") or item.get("code") or ""),
@@ -194,21 +232,18 @@ def build_rows(data: dict) -> tuple[list[dict], str]:
             "score":round(score,2),
             "route":str(item.get("route") or ""),
             "status":"優先" if dist <= 3 else "可接受",
-            "source_signal_date":str(item.get("signal_date") or ""),
+            "source_signal_date":signal_date,
             "source_last_checked_date":str(item.get("last_checked_date") or ""),
             "price_source_date":price_source_date,
         })
-    rows.sort(key=lambda r: (0 if r["distance_pct"] <= 3 else 1, -r["score"], r["distance_pct"], r["code"]))
-    seen=set()
-    out=[]
-    for r in rows:
-        if not r["code"] or r["code"] in seen:
-            continue
-        seen.add(r["code"])
-        out.append(r)
-        if len(out)>=10:
-            break
-    return out, latest_trade_date
+
+    rows.sort(key=lambda r: (
+        0 if r["distance_pct"] <= 3 else 1,
+        -r["score"],
+        r["distance_pct"],
+        r["code"],
+    ))
+    return rows[:10], latest_trade_date
 
 def main():
     now=datetime.now(TAIPEI)
@@ -229,7 +264,8 @@ def main():
         "rules":{
             "distance":"0-3% priority; 3-5% acceptable; >5% excluded",
             "max_candidates":10,
-            "selection":"distance zone -> composite score -> distance",
+            "selection":"latest signal per stock -> D1-D10 by actual TWSE trading days -> distance zone -> composite score -> distance",
+            "d_day_rule":"signal_date=D1；只計算官方交易日；同股重複只留最新 signal_date",
             "price_guard":"現價一律使用 latest_trade_date 的官方收盤價；舊價或缺價不得進入"
         },
         "rows":rows,
