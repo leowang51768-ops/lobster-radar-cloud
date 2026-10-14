@@ -12,10 +12,12 @@ on:
     paths:
       - ".github/lobster-manual-trigger"
   schedule:
-    # 台北時間週一至週五 19:00 讀取盤後資料並分析；20:00 發送 LINE 最終結果。
-    # 20:30 為自動補跑保險：若 20:00 因 GitHub 排程延遲/失敗未完成，20:30 再跑一次。
+    # 台北時間週一至週五 16:30 先抓第一輪盤後資料，提早更新價格與候選池。
+    # 19:00 再確認一次；20:00 發送 LINE 最終結果；20:30 自動補跑保險。
+    # 16:30/19:00 只更新資料與掃描，不發正式 LINE。
     # line_daily_send_state.json 會防止同日重複發送 LINE。
-    # GitHub cron 使用 UTC，所以 19:00 / 20:00 / 20:30 台北 = 11:00 / 12:00 / 12:30 UTC。
+    # GitHub cron 使用 UTC：16:30/19:00/20:00/20:30 台北 = 08:30/11:00/12:00/12:30 UTC。
+    - cron: "30 8 * * 1-5"
     - cron: "0 11 * * 1-5"
     - cron: "0 12 * * 1-5"
     - cron: "30 12 * * 1-5"
@@ -87,9 +89,20 @@ jobs:
             success=0
             for attempt in 1 2 3 4 5 6 7 8; do
               echo "Price update attempt $attempt/8"
-              if python incremental_update.py "$TRADE_DATE"; then
-                success=1
-                break
+              if [ "$attempt" -lt 8 ]; then
+                # First seven attempts still prefer a complete tracked universe.
+                # Valid rows are saved, but any missing stock triggers another retry.
+                if python incremental_update.py "$TRADE_DATE"; then
+                  success=1
+                  break
+                fi
+              else
+                # Final fallback: keep all valid official rows, quarantine only the
+                # missing/invalid stocks, and continue the radar without stale prices.
+                if python incremental_update.py "$TRADE_DATE" --allow-partial; then
+                  success=1
+                  break
+                fi
               fi
               if [ "$attempt" -lt 8 ]; then
                 echo "Official market data not fully available; wait 3 minutes and retry."
@@ -97,7 +110,7 @@ jobs:
               fi
             done
             if [ "$success" -ne 1 ]; then
-              echo "Official price update failed after 8 attempts; no LINE stock notification."
+              echo "Official price update failed after 8 attempts; source/system failure."
               exit 1
             fi
           fi
@@ -106,7 +119,7 @@ jobs:
         if: ${{ steps.market_calendar.outputs.closed != 'true' }}
         run: |
           echo "FAIL_STAGE=資料庫驗證" >> "$GITHUB_ENV"
-          python price_integrity.py
+          python price_integrity.py --allow-partial
           python - <<'PY'
           import os
           import sqlite3
