@@ -1,48 +1,48 @@
 ﻿date,code,status,rows,error
-2026-10-14,1301,failed,0,Source date missing or stale
-2026-10-14,1503,failed,0,Source date missing or stale
+2026-10-14,1301,ok,30,
+2026-10-14,1503,ok,30,
 2026-10-14,1513,ok,30,
 2026-10-14,1514,ok,30,
-2026-10-14,1519,failed,0,Source date missing or stale
-2026-10-14,1560,failed,0,Source date missing or stale
+2026-10-14,1519,ok,30,
+2026-10-14,1560,ok,30,
 2026-10-14,1773,ok,30,
-2026-10-14,2059,failed,0,Source date missing or stale
+2026-10-14,2059,ok,30,
 2026-10-14,2301,ok,30,
-2026-10-14,2303,failed,0,Source date missing or stale
+2026-10-14,2303,ok,30,
 2026-10-14,2308,ok,30,
-2026-10-14,2312,failed,0,Source date missing or stale
+2026-10-14,2312,ok,30,
 2026-10-14,2313,ok,30,
-2026-10-14,2317,failed,0,Source date missing or stale
+2026-10-14,2317,ok,30,
 2026-10-14,2324,ok,30,
-2026-10-14,2330,failed,0,Source date missing or stale
-2026-10-14,2344,failed,0,Source date missing or stale
-2026-10-14,2345,failed,0,Source date missing or stale
+2026-10-14,2330,ok,30,
+2026-10-14,2344,ok,30,
+2026-10-14,2345,ok,30,
 2026-10-14,2355,ok,30,
 2026-10-14,2356,ok,30,
 2026-10-14,2357,ok,30,
-2026-10-14,2359,failed,0,Source date missing or stale
+2026-10-14,2359,ok,30,
 2026-10-14,2360,ok,30,
-2026-10-14,2368,failed,0,Source date missing or stale
-2026-10-14,2369,failed,0,Source date missing or stale
-2026-10-14,2376,failed,0,Source date missing or stale
+2026-10-14,2368,ok,30,
+2026-10-14,2369,ok,30,
+2026-10-14,2376,ok,30,
 2026-10-14,2377,ok,30,
 2026-10-14,2379,ok,30,
-2026-10-14,2382,failed,0,Source date missing or stale
-2026-10-14,2383,failed,0,Source date missing or stale
+2026-10-14,2382,ok,30,
+2026-10-14,2383,ok,30,
 2026-10-14,2385,ok,30,
-2026-10-14,2388,failed,0,Source date missing or stale
+2026-10-14,2388,ok,30,
 2026-10-14,2395,ok,30,
 2026-10-14,2404,ok,30,
-2026-10-14,2408,failed,0,Source date missing or stale
-2026-10-14,2421,failed,0,Source date missing or stale
+2026-10-14,2408,ok,30,
+2026-10-14,2421,ok,30,
 2026-10-14,2441,ok,30,
 2026-10-14,2449,ok,30,
 2026-10-14,2454,ok,30,
 2026-10-14,2467,ok,30,
 2026-10-14,3006,ok,30,
-2026-10-14,3008,failed,0,Source date missing or stale
+2026-10-14,3008,ok,30,
 2026-10-14,3013,ok,30,
-2026-10-14,3014,failed,0,Source date missing or stale
+2026-10-14,3014,ok,30,
 2026-10-14,3015,ok,30,
 2026-10-14,3017,ok,30,
 2026-10-14,3032,ok,30,
@@ -50,117 +50,117 @@
 2026-10-14,3037,ok,30,
 2026-10-14,3044,ok,30,
 2026-10-14,3047,ok,30,
-2026-10-14,3071,failed,0,Source date missing or stale
+2026-10-14,3071,ok,30,
 2026-10-14,3078,ok,30,
 2026-10-14,3081,ok,30,
 2026-10-14,3131,ok,30,
-2026-10-14,3163,failed,0,Source date missing or stale
-2026-10-14,3189,failed,0,Source date missing or stale
+2026-10-14,3163,ok,30,
+2026-10-14,3189,ok,30,
 2026-10-14,3217,ok,30,
 2026-10-14,3231,ok,30,
 2026-10-14,3260,ok,30,
-2026-10-14,3289,failed,0,Source date missing or stale
+2026-10-14,3289,ok,30,
 2026-10-14,3324,ok,30,
 2026-10-14,3325,ok,30,
 2026-10-14,3338,ok,30,
-2026-10-14,3363,failed,0,Source date missing or stale
-2026-10-14,3374,failed,0,Source date missing or stale
+2026-10-14,3363,ok,30,
+2026-10-14,3374,ok,30,
 2026-10-14,3380,ok,30,
 2026-10-14,3406,ok,30,
-2026-10-14,3443,failed,0,Source date missing or stale
-2026-10-14,3483,failed,0,Source date missing or stale
-2026-10-14,3515,failed,0,Source date missing or stale
+2026-10-14,3443,ok,30,
+2026-10-14,3483,ok,30,
+2026-10-14,3515,ok,30,
 2026-10-14,3526,ok,30,
 2026-10-14,3529,ok,30,
-2026-10-14,3532,failed,0,Source date missing or stale
+2026-10-14,3532,ok,30,
 2026-10-14,3533,ok,30,
-2026-10-14,3540,failed,0,Source date missing or stale
+2026-10-14,3540,ok,30,
 2026-10-14,3580,ok,30,
 2026-10-14,3583,ok,30,
-2026-10-14,3587,failed,0,Source date missing or stale
+2026-10-14,3587,ok,30,
 2026-10-14,3605,ok,30,
 2026-10-14,3653,ok,30,
 2026-10-14,3661,ok,30,
-2026-10-14,3665,failed,0,Source date missing or stale
-2026-10-14,3680,failed,0,Source date missing or stale
-2026-10-14,3689,failed,0,Source date missing or stale
+2026-10-14,3665,ok,30,
+2026-10-14,3680,ok,30,
+2026-10-14,3689,ok,30,
 2026-10-14,3693,ok,30,
-2026-10-14,3706,failed,0,Source date missing or stale
-2026-10-14,3711,failed,0,Source date missing or stale
+2026-10-14,3706,ok,30,
+2026-10-14,3711,ok,30,
 2026-10-14,3715,ok,30,
 2026-10-14,4566,ok,30,
-2026-10-14,4585,failed,0,Source date missing or stale
+2026-10-14,4585,ok,30,
 2026-10-14,4903,ok,30,
-2026-10-14,4908,failed,0,Source date missing or stale
-2026-10-14,4938,failed,0,Source date missing or stale
-2026-10-14,4958,failed,0,Source date missing or stale
+2026-10-14,4908,ok,30,
+2026-10-14,4938,ok,30,
+2026-10-14,4958,ok,30,
 2026-10-14,4966,ok,30,
 2026-10-14,4967,ok,30,
 2026-10-14,4977,ok,30,
 2026-10-14,4979,ok,30,
-2026-10-14,4989,failed,0,Source date missing or stale
+2026-10-14,4989,ok,30,
 2026-10-14,5269,ok,30,
 2026-10-14,5274,ok,30,
 2026-10-14,5289,ok,30,
-2026-10-14,5347,failed,0,Source date missing or stale
+2026-10-14,5347,ok,30,
 2026-10-14,5426,ok,30,
 2026-10-14,5443,ok,30,
 2026-10-14,5469,ok,30,
 2026-10-14,5536,ok,30,
-2026-10-14,6117,failed,0,Source date missing or stale
+2026-10-14,6117,ok,30,
 2026-10-14,6125,ok,30,
 2026-10-14,6139,ok,30,
-2026-10-14,6166,failed,0,Source date missing or stale
-2026-10-14,6182,failed,0,Source date missing or stale
-2026-10-14,6187,failed,0,Source date missing or stale
-2026-10-14,6191,failed,0,Source date missing or stale
+2026-10-14,6166,ok,30,
+2026-10-14,6182,ok,30,
+2026-10-14,6187,ok,30,
+2026-10-14,6191,ok,30,
 2026-10-14,6196,ok,30,
-2026-10-14,6203,failed,0,Source date missing or stale
+2026-10-14,6203,ok,30,
 2026-10-14,6215,ok,30,
 2026-10-14,6223,ok,30,
-2026-10-14,6230,failed,0,Source date missing or stale
-2026-10-14,6239,failed,0,Source date missing or stale
+2026-10-14,6230,ok,30,
+2026-10-14,6239,ok,30,
 2026-10-14,6257,ok,30,
 2026-10-14,6269,ok,30,
-2026-10-14,6274,failed,0,Source date missing or stale
+2026-10-14,6274,ok,30,
 2026-10-14,6275,ok,30,
 2026-10-14,6282,ok,30,
-2026-10-14,6290,failed,0,Source date missing or stale
-2026-10-14,6412,failed,0,Source date missing or stale
-2026-10-14,6414,failed,0,Source date missing or stale
+2026-10-14,6290,ok,30,
+2026-10-14,6412,ok,30,
+2026-10-14,6414,ok,30,
 2026-10-14,6426,ok,30,
 2026-10-14,6442,ok,30,
-2026-10-14,6462,failed,0,Source date missing or stale
+2026-10-14,6462,ok,30,
 2026-10-14,6485,ok,30,
-2026-10-14,6488,failed,0,Source date missing or stale
-2026-10-14,6510,failed,0,Source date missing or stale
-2026-10-14,6515,failed,0,Source date missing or stale
-2026-10-14,6530,failed,0,Source date missing or stale
+2026-10-14,6488,ok,30,
+2026-10-14,6510,ok,30,
+2026-10-14,6515,ok,30,
+2026-10-14,6530,ok,30,
 2026-10-14,6531,ok,30,
 2026-10-14,6533,ok,30,
-2026-10-14,6548,failed,0,Source date missing or stale
-2026-10-14,6584,failed,0,Source date missing or stale
+2026-10-14,6548,ok,30,
+2026-10-14,6584,ok,30,
 2026-10-14,6640,ok,30,
 2026-10-14,6643,ok,30,
-2026-10-14,6667,failed,0,Source date missing or stale
-2026-10-14,6669,failed,0,Source date missing or stale
+2026-10-14,6667,ok,30,
+2026-10-14,6669,ok,30,
 2026-10-14,6684,ok,30,
-2026-10-14,6770,failed,0,Source date missing or stale
-2026-10-14,6788,failed,0,Source date missing or stale
+2026-10-14,6770,ok,30,
+2026-10-14,6788,ok,30,
 2026-10-14,6789,ok,30,
-2026-10-14,6805,failed,0,Source date missing or stale
-2026-10-14,6829,failed,0,Source date missing or stale
-2026-10-14,6830,failed,0,Source date missing or stale
+2026-10-14,6805,ok,30,
+2026-10-14,6829,ok,30,
+2026-10-14,6830,ok,30,
 2026-10-14,6933,ok,30,
-2026-10-14,7556,failed,0,Source date missing or stale
+2026-10-14,7556,ok,30,
 2026-10-14,8028,ok,30,
 2026-10-14,8039,ok,30,
 2026-10-14,8046,ok,30,
-2026-10-14,8064,failed,0,Source date missing or stale
+2026-10-14,8064,ok,30,
 2026-10-14,8103,ok,30,
-2026-10-14,8110,failed,0,Source date missing or stale
-2026-10-14,8150,failed,0,Source date missing or stale
-2026-10-14,8210,failed,0,Source date missing or stale
+2026-10-14,8110,ok,30,
+2026-10-14,8150,ok,30,
+2026-10-14,8210,ok,30,
 2026-10-14,8227,ok,30,
 2026-10-14,8299,ok,30,
 2026-10-14,8358,ok,30,
