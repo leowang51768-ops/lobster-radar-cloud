@@ -1,0 +1,56 @@
+name: Ghost Candidate Pool
+
+on:
+  schedule:
+    # Taiwan 23:00-07:30 = UTC 15:00-23:30
+    - cron: '0,30 15-23 * * *'
+    # Taiwan 08:00 and 08:30 = UTC 00:00 and 00:30
+    - cron: '0,30 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ghost-candidate-pool
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Build cloud candidate pool
+        run: python ghost_candidate_pool.py
+
+      - name: Verify outputs
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=json.loads(Path('ghost_candidate_pool.json').read_text(encoding='utf-8'))
+          assert 'target_date' in p and isinstance(p.get('rows'), list)
+          print('candidate target=',p['target_date'],'count=',len(p['rows']))
+          q=Path('today_trading_seats.json')
+          if q.exists():
+              s=json.loads(q.read_text(encoding='utf-8'))
+              print('seats date=',s.get('date'),'codes=',s.get('codes'))
+          PY
+
+      - name: Commit changed cloud outputs
+        run: |
+          git config user.name "ghost-candidate-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add ghost_candidate_pool.json today_trading_seats.json || true
+          if git diff --cached --quiet; then
+            echo "No candidate change."
+            exit 0
+          fi
+          git commit -m "ghost: update candidate pool"
+          git push
