@@ -36,10 +36,16 @@ def next_trade_day(d: date) -> date:
 
 def target_trade_date(now: datetime) -> date:
     local=now.astimezone(TAIPEI)
-    if local.hour >= 23:
+
+    # Candidate-pool date rule:
+    # - After Taiwan market close (13:30), start preparing the NEXT trading day.
+    # - Before close, if today is a trading day, the pool belongs to today.
+    # - On a non-trading day, point to the next trading day.
+    if is_trade_day(local.date()) and (local.hour, local.minute) >= (13, 30):
         return next_trade_day(local.date())
     if is_trade_day(local.date()):
         return local.date()
+
     x=local.date()
     while not is_trade_day(x):
         x += timedelta(days=1)
@@ -131,7 +137,9 @@ def main():
     target=target_trade_date(now)
     tracking=load_json(TRACKING,{})
     rows, latest_trade_date=build_rows(tracking)
-    final=(now.hour > 8) or (now.hour==8 and now.minute>=0)
+    # A pool is final only on its own target trading day from 08:00 onward.
+    # After 13:30, a newly-created next-day pool must remain "updating".
+    final=(target == now.date()) and ((now.hour > 8) or (now.hour==8 and now.minute>=0))
     pool={
         "version":234,
         "target_date":target.isoformat(),
@@ -149,8 +157,9 @@ def main():
     }
     POOL_OUT.write_text(json.dumps(pool,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
 
-    # 08:30 Taiwan and later: publish today's cloud ranking.
-    if (now.hour > 8) or (now.hour==8 and now.minute>=30):
+    # Publish formal seats only on the target trading day at/after 08:30.
+    # An after-close next-day preview must NOT overwrite formal seats early.
+    if target == now.date() and ((now.hour > 8) or (now.hour==8 and now.minute>=30)):
         seats={
             "version":234,
             "date":target.isoformat(),
