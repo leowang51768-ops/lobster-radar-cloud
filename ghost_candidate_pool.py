@@ -289,17 +289,44 @@ def build_rows(data: dict, expected_completed_date=None) -> tuple[list[dict], st
     ))
     return rows[:10], latest_trade_date
 
+def build_daily_scores(tracking, rows, latest_trade_date, completed, target, now):
+    latest,dates,closes=latest_price_snapshot()
+    ranks={r['code']:i+1 for i,r in enumerate(rows)}
+    stocks={}
+    for item in tracking.values():
+        code=str(item.get('code') or '')
+        if not code: continue
+        sid=item.get('signal_id') or item.get('tracking_key')
+        support=float(item.get('current_support') or item.get('confirmed_support') or item.get('candidate_new_support') or item.get('retest_support') or item.get('support') or 0)
+        close=float(closes.get(code) or 0)
+        valid=latest==completed and dates.get(code)==completed and support>0 and close>0
+        score,parts=(cloud_daily_score(item,code,close,support,float(item.get('composite_score') or item.get('score') or 0),completed) if valid else (None,{}))
+        dist=(close/support-1)*100 if valid else None
+        stocks[code]={'signal_id':sid,'score':None if score is None else round(score,2),
+            'score_parts':parts,'score_source':'canonical_daily', 'score_date':completed,
+            'd':item.get('tracking_day'), 'price':close if valid else None,'support':support or None,
+            'distance_pct':None if dist is None else round(dist,4),
+            'eligible':code in ranks,'candidate_rank':ranks.get(code),
+            'exclusion_reason':'' if code in ranks else '日線資料未齊／超出支撐距離／未入前10名'}
+    result={'version':244,'generated_at':now.isoformat(timespec='seconds'),
+        'target_date':target.isoformat(),'score_date':completed,'stocks':stocks,
+        'weights':{'breakout':35,'pattern':25,'macd':20,'volume':10,'chips':10},
+        'macd_basis':'daily','selection':'D0-D10 -> 0-3% priority / 3-5% acceptable -> daily score -> distance -> code'}
+    (ROOT/'ghost_daily_scores.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    return result
+
 def main():
     now=datetime.now(TAIPEI)
     target=target_trade_date(now)
     from ghost_state_sync import build_state
     tracking, completed=build_state(now,is_trade_day)
     rows, latest_trade_date=build_rows(tracking,completed)
+    build_daily_scores(tracking,rows,latest_trade_date,completed,target,now)
     # A pool is final only on its own target trading day from 08:00 onward.
     # After 13:30, a newly-created next-day pool must remain "updating".
     final=(target == now.date()) and ((now.hour > 8) or (now.hour==8 and now.minute>=0))
     pool={
-        "version":241,
+        "version":244,
         "target_date":target.isoformat(),
         "generated_at":now.isoformat(timespec="seconds"),
         "source":"GitHub shared lifecycle D0-D10",
@@ -322,7 +349,7 @@ def main():
     previous_seats=load_json(SEATS_OUT,{})
     if target == now.date() and ((now.hour > 8) or (now.hour==8 and now.minute>=30)) and previous_seats.get('date')!=target.isoformat():
         seats={
-            "version":241,
+            "version":244,
             "date":target.isoformat(),
             "generated_at":now.isoformat(timespec="seconds"),
             "codes":[r["code"] for r in rows[:3]],
