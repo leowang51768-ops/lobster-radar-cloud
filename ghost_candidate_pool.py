@@ -5,6 +5,7 @@ import sqlite3
 from datetime import datetime, timedelta, date
 from pathlib import Path
 from zoneinfo import ZoneInfo
+from urllib.request import Request, urlopen
 
 TAIPEI = ZoneInfo("Asia/Taipei")
 ROOT = Path(__file__).resolve().parent
@@ -13,26 +14,90 @@ POOL_OUT = ROOT / "ghost_candidate_pool.json"
 SEATS_OUT = ROOT / "today_trading_seats.json"
 PRICE_DB = ROOT / "lobster_tw_6m_prices.sqlite"
 
-HOLIDAYS_2026 = {
+# Fallback is used only when the official TWSE calendar cannot be reached.
+# Normal operation reads each year's market open/close schedule directly from TWSE.
+FALLBACK_HOLIDAYS_2026 = {
     "2026-01-01","2026-02-12","2026-02-13","2026-02-16","2026-02-17",
     "2026-02-18","2026-02-19","2026-02-20","2026-02-27","2026-04-03",
     "2026-04-06","2026-05-01","2026-06-19","2026-09-25","2026-09-28",
     "2026-10-09","2026-10-26","2026-12-25",
 }
+_CALENDAR_CACHE = {}
+_CALENDAR_SOURCE = {}
+
 BAD_STATUS = {
     "retest_failed","failed","invalid","expired","cancelled","deleted"
 }
 
+def _fetch_twse_calendar(year: int):
+    if year in _CALENDAR_CACHE:
+        return _CALENDAR_CACHE[year]
+
+    roc_year = year - 1911
+    url = (
+        "https://www.twse.com.tw/rwd/zh/holidaySchedule/holidaySchedule"
+        f"?response=json&queryYear={roc_year}"
+    )
+    req = Request(
+        url,
+        headers={
+            "User-Agent": "Mozilla/5.0 (compatible; ghost-candidate-pool/1.0)",
+            "Accept": "application/json,text/plain,*/*",
+        },
+    )
+    try:
+        with urlopen(req, timeout=30) as resp:
+            payload = json.loads(resp.read().decode("utf-8"))
+        if str(payload.get("stat", "")).lower() != "ok":
+            raise RuntimeError("TWSE holiday schedule stat is not ok")
+
+        closed = set()
+        open_override = set()
+        for row in payload.get("data", []):
+            if not row:
+                continue
+            ds = str(row[0]).strip()
+            name = str(row[1] if len(row) > 1 else "")
+            desc = str(row[2] if len(row) > 2 else "")
+            text = name + " " + desc
+
+            # TWSE explicitly marks start/last trading days and any make-up
+            # trading days as open. Other listed weekday dates are closures.
+            if any(k in text for k in ("開始交易", "最後交易", "補行交易")):
+                open_override.add(ds)
+            else:
+                closed.add(ds)
+
+        _CALENDAR_CACHE[year] = (closed, open_override)
+        _CALENDAR_SOURCE[year] = "TWSE官方開休市日曆"
+        return _CALENDAR_CACHE[year]
+    except Exception:
+        # Safe fallback for the currently deployed 2026 calendar only.
+        # For unknown future years, fail closed instead of guessing.
+        if year == 2026:
+            _CALENDAR_CACHE[year] = (set(FALLBACK_HOLIDAYS_2026), set())
+            _CALENDAR_SOURCE[year] = "2026本機備援日曆"
+            return _CALENDAR_CACHE[year]
+        raise RuntimeError(f"無法取得 {year} TWSE 官方開休市日曆；不猜測交易日")
+
+
 def is_trade_day(d: date) -> bool:
-    return d.weekday() < 5 and d.isoformat() not in HOLIDAYS_2026
+    if d.weekday() >= 5:
+        return False
+    closed, open_override = _fetch_twse_calendar(d.year)
+    ds = d.isoformat()
+    if ds in open_override:
+        return True
+    return ds not in closed
+
 
 def next_trade_day(d: date) -> date:
     x=d
-    for _ in range(20):
+    for _ in range(40):
         x += timedelta(days=1)
         if is_trade_day(x):
             return x
-    return x
+    raise RuntimeError("40 天內找不到下一交易日")
 
 def target_trade_date(now: datetime) -> date:
     local=now.astimezone(TAIPEI)
@@ -146,6 +211,7 @@ def main():
         "generated_at":now.isoformat(timespec="seconds"),
         "source":"GitHub breakout_tracking D1-D10",
         "price_source_date":latest_trade_date,
+        "calendar_source":_CALENDAR_SOURCE.get(target.year, "TWSE官方開休市日曆"),
         "finalized":bool(final),
         "rules":{
             "distance":"0-3% priority; 3-5% acceptable; >5% excluded",
