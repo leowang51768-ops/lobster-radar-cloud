@@ -110,9 +110,19 @@ def update_performance():
         needed={r["code"] for r in snapshots}
         prices={}
         for code in needed:
-            prices[code]={day:(float(close),float(low)) for day,close,low
-                          in con.execute("SELECT date,close,low FROM prices WHERE stock_id=?",
-                                         (code,))}
+            prices[code]={}
+            for day, close, low in con.execute(
+                "SELECT date,close,low FROM prices WHERE stock_id=?", (code,)
+            ):
+                if close is None or low is None:
+                    continue  # Missing official price: keep outcome pending, never fabricate zero.
+                try:
+                    close_value, low_value = float(close), float(low)
+                except (TypeError, ValueError):
+                    continue
+                if not (math.isfinite(close_value) and math.isfinite(low_value)) or close_value <= 0 or low_value <= 0:
+                    continue
+                prices[code][day] = (close_value, low_value)
     results=[]
     for snap in snapshots:
         base=float(snap["baseline_entry"])
