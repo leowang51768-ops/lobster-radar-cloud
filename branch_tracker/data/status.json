@@ -15,7 +15,7 @@
   "complete_collection_days": 4,
   "counts": {
     "ranking": 39536,
-    "history": 127111,
+    "history": 134311,
     "queue": 4225
   },
   "review_stage": "資料累積中",
@@ -30,10 +30,10 @@
   "missing_stocks": [],
   "errors": [],
   "history_errors": [],
-  "history_pairs_ever_fetched": 2119,
+  "history_pairs_ever_fetched": 2239,
   "history_coverage_complete": false,
   "history_coverage_note": "成功抓取不代表完整60交易日；須逐組核對交易日缺口",
   "ranking_coverage_complete": true,
   "errors_total": 0,
-  "database_bytes": 28442624
+  "database_bytes": 29274112
 }
