@@ -1,24 +1,25 @@
 {
   "schema": 1,
   "risk_level": "red",
-  "risk_score": 8,
+  "risk_score": 9,
   "risk_reasons": [
     "費半明顯下跌",
     "NASDAQ明顯下跌",
+    "日經明顯下跌",
     "韓股明顯下跌",
     "出現重大風險新聞"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 -4.5%｜NASDAQ -2.0%｜日經225 -0.1%｜KOSPI -5.9%｜台股加權 +0.6%｜恆生 +0.2%",
+    "⚠ 全球市場風險｜費半 -4.5%｜NASDAQ -2.0%｜日經225 -3.2%｜KOSPI -6.6%｜台股加權 +0.6%｜恆生 +0.2%",
     "⚠ 全球市場風險｜美債10Y 5.19%｜VIX 16.9",
     "⚠ 全球市場風險｜Unprecedented Extreme Imbalance in 40 Years! Wall Street's \"Big Short\" Warns: Signs of U.S. Sto",
     "⚠ 全球市場風險｜美國9月CPI炸裂！費半挫2.2％上演連6跌、台積電ADR摔1.5％ 聯準會升息疑慮又起",
     "⚠ 全球市場風險｜HPE, Dell, Bank of America, State Street, ASML, and More Stocks That Explain Today's Market -- ",
     "⚠ 全球市場風險｜川普「暴雷」台灣砸1400億元包下20年阿拉斯加3成天然氣 經濟部證實了",
-    "⚠ 全球市場風險｜外資持續倒貨 台股多空對決 三大利空恐引爆？專業分析看這裡",
-    "⚠ 全球市場風險｜Although buying initially led the market, shares in the semiconductor sector were sold off foll",
-    "⚠ 全球市場風險｜Hong Kong Stocks End Mixed as AI Concerns, Higher Oil Weigh; Standard Chartered Falls 4%",
-    "⚠ 全球市場風險｜Technology stocks continue to decline; Goldman Sachs: Who stepped in at the top to buy U.S. tec"
+    "⚠ 全球市場風險｜輝達、台積電ADR跌逾3% 通膨數據加深晶片股賣壓",
+    "⚠ 全球市場風險｜貸款1千萬買股票！他曝1年後「資產3370萬」超驚人 網傻眼：超猛爆賺",
+    "⚠ 全球市場風險｜輝達、超微、蘋果爭相下單！美銀：台積電2027年產能有望提前達標 2奈米營收貢獻升至11%",
+    "⚠ 全球市場風險｜外資持續倒貨 台股多空對決 三大利空恐引爆？專業分析看這裡"
   ],
   "markets": {
     "US_SOX": {
@@ -48,13 +49,13 @@
     },
     "JP_NIKKEI": {
       "label": "日經225",
-      "price": 67744.29,
-      "change_pct": 0.0
+      "price": 65555.03,
+      "change_pct": -3.2
     },
     "KR_KOSPI": {
       "label": "KOSPI",
-      "price": 6008.81,
-      "change_pct": -5.8
+      "price": 5637.15,
+      "change_pct": -6.6
     },
     "TW_TAIEX": {
       "label": "台股加權",
@@ -106,6 +107,30 @@
       "risk_score": 0
     },
     {
+      "title": "輝達、台積電ADR跌逾3% 通膨數據加深晶片股賣壓 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiuwJBVV95cUxPay1SeUY0bDYwZy1OTUJDNDNMWVRWV3prNllKY2VsOGJyOTk0NU12ZkVuYnhSaWlTdUR6b0dEYTNTUTNXOXVpV1NXVjZSNTNYb2VJSkhONWR5ZnN4Z1ZPLTlTVDBidllTUV9YNUsyYTMxcTkzNDRDSDg4QjBwTEtSeUJPYW9tLXVqRkFJMFBCa0dkMjVVSjExSzRvU2VwcGlEUHhKakZhd1h4UFlKT25JeTJYN0tFd0tnREcxdUplSVVhdG01OV9ielBCU2h5eHVNNUJVTTdFcmpoNklVcFhUMlFMQ2t2Ui1tNFRDa3V2RWMtMERGNjJ2d0VJRWRmSjJLSE9rcllSY0pZZFFwaVNWbWtRVmN5cWVFWXhLNjlyQ1VqelNEWmVQcllEaW8wcFRUTE5ESE53alZpMHc?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-15T06:21+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "貸款1千萬買股票！他曝1年後「資產3370萬」超驚人 網傻眼：超猛爆賺 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi2AJBVV95cUxQYnJCemt0bGFZZGNHdGY3c1c4VkstVFVVN3dIeXJnc051eXlOTy1oWDFRdmJFY0hCalFMSFBlZk40NzRxeDlZQVBkVEl2TVdiSTdiREJSVlhwaEFUVEVRY2hxVDV1d2t5NElPc01FLTFiN2NPRWVqRVdVbTdMRnZkTllHNDI1ZVprbmtTeTQ5emwwYW1Fb2JFckIzZEQ1dFhBLXUzNE9ZcGxkVnJDcUNOSDJKcm9UZzU2ekx5bk5VQnM4SVlsajFUaHJtVThic2hCY09aTDVLUk4ybGxLREFFZHJ6V0V5T09vdGRRR3U2QjFmZTFyNEVUd0tjLXRHTmY0WWZkc3lhZmVhTExwa3ljamhZVHU1SEc0OFBmRW5OWWdWRWthcDFtXzN5UW9sTmNTREM3VzBVQUl6Uks0TUlkZWl1cllJZzNZV0hfcFRJMHFaSTVPV29SaQ?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-15T06:15+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "輝達、超微、蘋果爭相下單！美銀：台積電2027年產能有望提前達標 2奈米營收貢獻升至11% - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMihgNBVV95cUxNclg2QUtZV3g0aVFFMDhPWW1Gekl5aXFyZ3ZNSFBXVU5iWExkSGdOR3N1dWFIcmZZUktTXzViMllLamhPcFRzSEE1bXpoT0ZKOF9mRXQ5cHNKaURjREpBcmFwLXhPV0FxUjNRVFRaR0I2YjlnR3hRcXlnSEJobGlvdGdXcEFtWnVhSjN5X3NBTE8wckx1UUVGTlRfSFBOblI4S092ZUg0c1hmM0Z1YXhESVlwMHY3ZEFyWnZTSFVESDdSdTJxeFdQYlo2M2I5UXl6VUFEbmJLOFZpalZpa01BWmVnX0QzTmt3Y2dFNWNVM2VZcHVWUm5TaFpZVnR4R0s5NWQxVS1xRTBlSkdRemNmM2JXTUZJVGZ6dVJLdnVRd29rM2JzdzhqX21sNE45STM3OE56Y2dKd1BTbjdFQ2pIZkhOdnYxeFlWVU9NV0l4U1NVang4S3pSMmpFQ0RvTlJjdUx2NUhtTmE1UFFLWG5CYUZHcTFnTlR0OUQyd1ZieXFzcnpNaXc?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-15T06:10+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
       "title": "外資持續倒貨 台股多空對決 三大利空恐引爆？專業分析看這裡 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMilwNBVV95cUxNM0MwTjVPODJMdjJYWGwzYUV2dFBjWTBmdkk0bnZ6QTZHeVVkaDZrWHBCdHVUUGxodnBfelFrRnJHVHcwMHNvMm4yQ19qUnFuM2JKNTZiMTZKbWNXcjNCeExhVmhGM2ltcWk4SEpmZjhzdy1NQ3ZiRlYyTjE5Tk9qVXl3M2t0RmVYd3gwY1V5SGtDWkluT2JuM0F0VkZWMTltYXNrd1FMVWZhRVowRGxzdVFaN0IwYzRMSTJtZTJ1R1RlX0lEZ0xuZjJ5WU5INmdWbXBUbUZZSVk2aGtmZ1UxWlBYS251RFpsd251RTgtWHNhLVBLb3prOEozX042VkFGLURXUTFaVGNuZFZuMGxFMld2c0UzSHpYLVY4NUJYbVBHcFREaHlNUFg0dWtxMFU0RnhuOTQzMjRTanhzYTU4cVlLT0V4RUd4YWpkOVJIamsxMmotOS1EM0lQRkxNclpqRU40dHFJcWtuZ2hTR1JqMXNLdGg1OWtZSWN0Z0NKSkJMLTVkc3B6VERmbVBnOHFWcUVUcTBoYw?oc=5",
       "source": "Yahoo股市",
@@ -144,32 +169,8 @@
       "published_at": "2026-10-14T19:44+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "台股尾盤急殺收漲284點、台積電持平 投顧示警短線恐進區間盤整 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMimgNBVV95cUxQbDUyaDJkNmhPamZDQkoxbUNxMDF2TXFhUnJ5c3plVjdkcTRCcUM5dVpRY3VZMHRVSEZhYkU0aXdqcUM2WFpsQy05QjJnak92RG5EN01RM0xyV2ZaVVRwYzVsd0ZsSTJaSjFXM3NUUHVPbTYtOUoyZTVpNzFpWE5wR3hTVW45ZEUtb2daeW1hbVNLYmVRZ0tvRWdoXzBlOHFxWTRFeFV2SEpucG53TFhoTXczeWY2Sm1NbW9rTE9uNDZjWUxMUUoxOWJnOFVIUldaMl9tV0ZaM1BiMERNZzFfME1GWmloR3lqOVZqdnNhVWFoaGlvM3JYYzVkNUx1TzE2cDJ4LWFCTmNnZkdSWGNUZV9PUU5oNTF3Tm5jVDJMMzJwaUJXanFjMTNfdVZ2QWxTMFlEMXpESXhCNzdCcTBkUVpWNE5XbnloV05HME84cVRrenJTQWFQdWpGeUIwc1Z1ZDlqRVlDUEJJd3F4bWFQZjd2QWgxZHdhSUQ4UHgyUklMRVNXRXp2NjUtSE8tRkMzblRYaFdCTVlYZw?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-14T18:17+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "施羅德拓主動式ETF版圖 00419A聚焦台股AI領域 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMinwJBVV95cUxNSGRHQ05iZU11TU94ek51VEFCNFZzeGMxRHA3UnBJRmhkWG1qcWpmTmU5SExsS2YtaDd2WUNtdzNjZ2VuRmJJVkJyT3lOWkVQdk9xYmVrVlhHV0hWTFRQbnRfZlNJbEEtR2FwMEkxeXBISEpITkZkbWpWOG9KTUVoZVJzM1BneGdmblB5bmYzai00c2kyZGtYSVZpSU44UG1sQkRIT3NQNzFXN21EYXBWXzJ2M1ZEakFjU3dON0s0MHZyUDhVZUVQd0hJbzJaV3hZcVB5UmJYUmtjbllRaEpjNVlHVktRR0gzR3J0dG1jc0ZVeTJoT0xNRDBCc3Vad1d5dVpoek9pMUFBNHFkRXV0czlHaW41ZVRlMnV5alhpNA?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-14T18:09+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "抽中1張爽賺12萬！特力屋、晶心科等3檔台股紅包申購倒數中 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMijANBVV95cUxNZlU2aFZEOTQ3ZTFIYkN5dGlFOXlHWkZnNHl6R1Z5R0N6aE5uT1JqekZlb0E1VUluZUtrQjd1dm1ZelMzTnhWMXhyMFZnY1VRWUQxZTRPaGJuX0FLU25tZnd1eGVRdWhpdExvZzFRaXgxT3ZDWlNHNFJKWndWd2Jaa2xaRTg4Qmtzb3BiSTN2OW1JODlMbndiXzVmUS1pdlZkc1pEY0ZxSjVzUUVmYlcxWkczd1lCVkpvMXZXd1FKVm52M1JHNDdtWFVMRHB5V002LV94Y0pQaU0tU0EyM3JESDBjS2U5WXRGYjRXYnQyWjhlU3cwUndzdFZ4ZE5MM2hUS2dYNVpNR2x0bWJuUHVsb2NCZXhpLWRKZ01hM2tkMW9vWEwwNUp0LXREbnNvY0xmVHZXRjZxcTRVT0ZucFA1TEIxYTRLNDdfaGtyc3dncWtybHpFTmdrTWd1R2dFZmRxOFEyYlIxYXFOUWVhazlJOHdsM0dIcWRGdWxPTmo3blNrNVdfYzJ4aVlkWU8?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-14T17:07+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-15T06:24:20+08:00"
+  "updated_at": "2026-10-15T08:37:24+08:00"
 }
