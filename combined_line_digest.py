@@ -149,7 +149,11 @@ def score_candidates(day, candidates):
 
 def market_date():
     from price_integrity import validate_database
-    return validate_database(BASE / "lobster_tw_6m_prices.sqlite")
+    report = validate_database(BASE / "lobster_tw_6m_prices.sqlite")
+    day = report.get("trade_date")
+    if not isinstance(day, str) or len(day) != 10:
+        raise RuntimeError(f"Invalid verified trade date: {day!r}")
+    return day
 
 
 
