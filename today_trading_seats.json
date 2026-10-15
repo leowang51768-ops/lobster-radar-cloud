@@ -1,22 +1,22 @@
 {
-  "version": 234,
-  "date": "2026-10-14",
-  "generated_at": "2026-10-14T17:26:41+08:00",
+  "version": 244,
+  "date": "2026-10-15",
+  "generated_at": "2026-10-15T08:46:30+08:00",
   "codes": [
-    "6290",
-    "3163",
-    "6239"
+    "4977",
+    "2368",
+    "6290"
   ],
   "standby_codes": [
-    "6770",
-    "4989"
+    "3706",
+    "3013"
   ],
   "name_map": {
+    "4977": "眾達-KY",
+    "2368": "金像電",
     "6290": "良維",
-    "3163": "波若威",
-    "6239": "力成",
-    "6770": "力積電",
-    "4989": "榮科"
+    "3706": "神達",
+    "3013": "晟銘電"
   },
   "source": "ghost_candidate_pool.json",
   "rule": "08:30 cloud top3 + rank4/5 standby; local open positions still have priority when desktop starts"

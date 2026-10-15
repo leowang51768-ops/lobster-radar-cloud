@@ -1,11 +1,11 @@
 {
   "version": 244,
   "target_date": "2026-10-15",
-  "generated_at": "2026-10-15T06:28:58+08:00",
+  "generated_at": "2026-10-15T08:46:30+08:00",
   "source": "GitHub shared lifecycle D0-D10",
   "price_source_date": "2026-10-14",
   "calendar_source": "TWSE官方開休市日曆",
-  "finalized": false,
+  "finalized": true,
   "rules": {
     "distance": "0-3% priority; 3-5% acceptable; >5% excluded",
     "max_candidates": 10,
