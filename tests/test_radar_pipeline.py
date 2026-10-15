@@ -76,3 +76,12 @@ class RadarPipelineTest(unittest.TestCase):
             for name in ['vcp_candidates.csv','n_bottom_watch.csv']:(root/name).write_text('date,code\n')
             with patch.object(d,'BASE',root):out=d.collect('2026-10-15')
             self.assertEqual([r['code'] for r in out],['1503']);self.assertTrue(out[0]['within'])
+
+    def test_post_breakout_failure_retires_d_episode(self):
+        from ghost_lifecycle import reconcile
+        raw={'code':'1503','signal_date':'2026-10-12','tracking_key':'2026-10-12|1503','status':'tracking','support':100,'breakout_close':102}
+        trade=lambda d:d.weekday()<5
+        old=reconcile({}, {'x':raw},{},{},'2026-10-14','2026-10-14',trade)
+        raw.update(status='post_true_retest_failed',resolved_date='2026-10-15')
+        new=reconcile(old, {'x':raw},{},{},'2026-10-15','2026-10-15',trade)
+        self.assertEqual(new['stocks']['1503']['stage'],'POOL')

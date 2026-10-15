@@ -4,7 +4,7 @@ from datetime import date, timedelta
 import hashlib
 import json
 
-BAD = {'invalid', 'failed', 'retest_failed', 'cancelled', 'deleted'}
+BAD = {'invalid', 'failed', 'retest_failed', 'post_true_retest_failed', 'cancelled', 'deleted'}
 
 def sessions_after(start, end, is_trade_day):
     a, b = date.fromisoformat(str(start)[:10]), date.fromisoformat(str(end)[:10])
@@ -168,3 +168,4 @@ def active_picks(state):
                  lifecycle_stage='D', sources=row['sources'])
         result.append(p)
     return result
+
