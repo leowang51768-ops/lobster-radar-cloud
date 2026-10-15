@@ -505,7 +505,7 @@ def make_row(x: pd.DataFrame, i: int, profile: dict, stage: str,
     if not risk_ok:
         action += "｜結構停損無效，僅觀察、不進LINE"
     if not rr_ok:
-        action += "｜上方樞紐推估風報比低於1.5，僅觀察、不進LINE"
+        action += "｜風報比註記交由即時監控評估，不攔截型態通知"
     # Quality now rewards verified structural completeness, not merely the
     # number of contractions.  A 100 score therefore requires continuity,
     # pivot convergence and final-leg volume contraction to all be strong.
@@ -540,7 +540,7 @@ def make_row(x: pd.DataFrame, i: int, profile: dict, stage: str,
         "avg20_turnover": round(float(row.avg20_turnover), 0),
         "ma60": round(ma60, 2), "ma60_5d_change_pct": round(ma_change * 100, 2),
         "quality_score": quality, "action": action,
-        "line_eligible": "1" if risk_ok and rr_ok else "0",
+        "line_eligible": "1" if risk_ok else "0",
         "invalidation": f"收盤跌破頸線下方2%停損價（{stop_price:.2f}）即失效",
     }
 
@@ -715,3 +715,4 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+

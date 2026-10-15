@@ -51,8 +51,8 @@ def store_notification(signal_date, selected):
 
     Same-stock later retests/confirmations do not create a new performance entry.
     """
-    today=datetime.now(ZoneInfo("Asia/Taipei")).date().isoformat()
-    if signal_date != today:
+    from scan_trade_date import resolve_trade_date
+    if signal_date != resolve_trade_date():
         print(f"Historical replay {signal_date}; no new LIVE snapshots")
         return 0
     old=read_rows(SNAPSHOTS)
@@ -167,3 +167,4 @@ def update_performance():
 
 if __name__=="__main__":
     update_performance()
+

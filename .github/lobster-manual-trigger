@@ -1,2 +1,2 @@
-manual trigger 2026-10-14 after workflow resilience fix
-reason: rerun 2026-10-14 official price/radar update; LINE performance tracking must not block GitHub commit
+repair264: fixed-163 radar scans pattern and volume; refresh D1-D10 and retry unsent LINE
+2026-10-15 source-contract repair

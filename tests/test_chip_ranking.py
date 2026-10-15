@@ -47,7 +47,7 @@ class ChipTests(unittest.TestCase):
         pick = dict(code='1234', within=True, risk_ok=True, institutional_available=True, composite_score=bad['score'])
         self.assertEqual(digest.choose([pick]), [pick])
         pick['institutional_available'] = False
-        self.assertEqual(digest.choose([pick]), [])
+        self.assertEqual(digest.choose([pick]), [pick])
 
     def test_retries_only_missing_and_stops_after_three(self):
         calls, sleeps = [], []
@@ -65,8 +65,8 @@ class ChipTests(unittest.TestCase):
         missing = dict(picks[0], institutional_available=False, chip_missing_reason='過期', close=100, stop=90, route='VCP', name='test', stage='test')
         with tempfile.TemporaryDirectory() as tmp, patch.object(digest, 'DIAGNOSTICS', Path(tmp)/'diag.csv'):
             rows = digest.write_diagnostics(DAYS[-1], [missing], [])
-        self.assertIn('過期', rows[0]['exclusion_reasons'])
-        self.assertEqual(rows[0]['line_eligible'], 0)
+        self.assertNotIn('籌碼資料未齊', rows[0]['exclusion_reasons'])
+        self.assertEqual(rows[0]['line_eligible'], 1)
 
     def test_candidate_snapshot_immutable_and_next_open_outcomes(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -93,3 +93,4 @@ class ChipTests(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+

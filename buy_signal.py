@@ -898,7 +898,7 @@ def detect_exit_warnings(market: pd.DataFrame, latest_date: str, state: dict) ->
 
 
 def apply_new_plan_gate(signal: dict | None, setup: dict, x: pd.DataFrame) -> dict | None:
-    """Hard-gate formal buys only by upside room and reward-risk.
+    """Annotate upside room and reward-risk for the downstream monitor.
 
     The former 60MA distance/slope and 20-day relative-strength requirements
     are intentionally removed so an early reversal is not rejected merely
@@ -925,11 +925,12 @@ def apply_new_plan_gate(signal: dict | None, setup: dict, x: pd.DataFrame) -> di
             999.0 if math.isinf(upside_room)
             else round(upside_room * 100, 2)
         ),
-        "new_plan_gate": "通過" if passed else "未通過",
+        "new_plan_gate": "僅註記（交由即時監控評估）",
     }
     signal.update(details)
     setup.update(details)
-    return signal if passed else None
+    # Upside/reward-risk are monitor inputs, not radar pattern/volume vetoes.
+    return signal
 
 def main() -> int:
     market = read_market()
@@ -1128,3 +1129,4 @@ def main() -> int:
 
 if __name__ == "__main__":
     sys.exit(main())
+

@@ -12,8 +12,8 @@ import math
 import os
 import sqlite3
 import urllib.request
-from chip_analysis import load_institutional
 from pathlib import Path
+from stock_universe import AI_STOCK_CODES
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
@@ -101,7 +101,7 @@ def pattern_completeness(candidate):
 
 
 def score_candidates(day, candidates):
-    """40% breakout quality + 25% volume + 25% pattern + 10% institutions."""
+    """Radar-only score: breakout 40 + volume 25 + pattern 25; monitor owns other evidence."""
     # Use the same objective daily close-location measure across all 3 routes.
     with sqlite3.connect(BASE / "lobster_tw_6m_prices.sqlite") as con:
         sessions = [row[0] for row in con.execute("SELECT DISTINCT date FROM prices WHERE date<=? ORDER BY date", (day,))]
@@ -114,7 +114,6 @@ def score_candidates(day, candidates):
             if row:
                 ohlc[code] = tuple(number(x) for x in row)
 
-    inst_cache = load_institutional({r["code"] for r in candidates}, day, sessions)
     for r in candidates:
         op, hi, lo, cl = ohlc.get(r["code"], (0.0, 0.0, 0.0, number(r.get("close"))))
         close_location = clamp((cl - lo) / (hi - lo)) if hi > lo else 0.5
@@ -124,14 +123,10 @@ def score_candidates(day, candidates):
         volume_component = clamp(number(r.get("volume_ratio")) / 2.0)
         pattern_component = pattern_completeness(r)
 
-        inst = inst_cache[r["code"]]
-        institutional_points = inst["score"]
-        r["chip_data_date"] = inst["data_date"]
-        r["chip_summary"] = inst["summary"]
-        r["chip_missing_reason"] = inst["reason"]
-        r["chip_history"] = inst["history"]
-        r["foreign_consecutive_days"] = inst["foreign_days"]
-
+        # No institution/network dependency in radar eligibility or ordering.
+        inst = dict(score=0, data_date='', summary='由即時監控另行評分', reason='雷達僅掃描型態與量價', history=[], foreign_days=0, foreign=None, trust=None, total=None, trust_days=0, available=False)
+        institutional_points = 0
+        r.update(chip_data_date='', chip_summary=inst['summary'],chip_missing_reason=inst['reason'],chip_history=[],foreign_consecutive_days=0)
         r["breakout_score"] = round(breakout_component * 40.0, 1)
         r["volume_score"] = round(volume_component * 25.0, 1)
         r["pattern_score"] = round(pattern_component * 25.0, 1)
@@ -179,12 +174,20 @@ def apply_structure_risk(candidate):
 
 def collect(day):
     candidates = []
+    # Scanner de-duplication must not erase a valid same-day signal on a retry
+    # before the daily digest has actually been delivered.
+    formal_path=BASE/'formal_recommendations.csv'
+    today_formal=set()
+    if formal_path.exists():
+        today_formal={r.get('code') for r in rows('formal_recommendations.csv',day)
+                      if str(r.get('signal_route') or r.get('trend') or '').startswith('破底翻')}
+
     # A break-bottom right-A buy is not itself a neckline breakout.
     # Only date-verified neckline breaks receive the breakout priority.
     for r in rows("candidate_status.csv", day):
         if r.get("pattern") != "破底翻":
             continue
-        formal = r.get("status") == "正式買點"
+        formal = r.get("status") == "正式買點" or (r.get("status") == "同日重複訊號" and r.get("code") in today_formal)
         breakout = r.get("neckline_status") == "當日收盤突破壓力頸線（量比≥1.2）"
         if not (formal or breakout):
             continue
@@ -229,7 +232,7 @@ def collect(day):
             stop=number(r.get("stop_price")), status="僅觀察",
             breakout=breakout, within=number(r.get("distance_to_pivot_pct"),999)<=10 and r.get("line_eligible") == "1",
             entry_lower=None, entry_upper=number(r.get("pivot"))*1.10,
-            source_fail_reasons=("VCP：上方壓力目標風報比低於1.5" if number(r.get("reward_risk_ratio"),-1)>=0 and number(r.get("reward_risk_ratio"),-1)<1.5 else ""),
+            source_fail_reasons="",
         ))
     for r in rows("n_bottom_watch.csv", day):
         if not r.get("stage", "").startswith("突破B點"):
@@ -252,7 +255,7 @@ def collect(day):
             zone_upper=r.get("structure_zone_upper", ""),
             a_low=number(r.get("a_low")), c_low=number(r.get("c_low")),
         ))
-    return [apply_structure_risk(candidate) for candidate in candidates]
+    return [apply_structure_risk(candidate) for candidate in candidates if candidate["code"] in AI_STOCK_CODES]
 
 
 def populate_historical_zones(day, candidates):
@@ -326,7 +329,7 @@ def choose(candidates, limit=MAX_STOCKS):
     seen=set()
     qualified=(r for r in candidates if r.get("risk_ok") is True
                and r.get("within") is True
-               and r.get("institutional_available") is True)
+              )
     for r in sorted(qualified,key=rank):
         if r["code"] in seen:
             continue
@@ -341,8 +344,6 @@ def choose(candidates, limit=MAX_STOCKS):
 def candidate_diagnosis(candidate):
     """Explain disqualification without changing which stocks are selected."""
     reasons = []
-    if candidate.get("institutional_available") is not True:
-        reasons.append("籌碼資料未齊：" + candidate.get("chip_missing_reason", "未取得"))
     close = number(candidate.get("close"))
     lower = candidate.get("entry_lower")
     upper = candidate.get("entry_upper")
@@ -376,7 +377,7 @@ def write_diagnostics(day, candidates, selected):
         excess = round((close/number(upper)-1)*100, 4) if upper is not None and number(upper)>0 and close>number(upper) else ""
         selected_flag = r["code"] in selected_codes and r in selected
         reasons = [] if selected_flag else candidate_diagnosis(r)
-        if not selected_flag and r.get("risk_ok") and r.get("within") and r.get("institutional_available"):
+        if not selected_flag and r.get("risk_ok") and r.get("within"):
             reasons = ["當日同股去重或超出LINE前五檔名額"]
         rows_out.append(dict(date=day, code=r["code"],name=r["name"],route=r["route"],
                              stage=r["stage"],close=r["close"],
@@ -385,7 +386,7 @@ def write_diagnostics(day, candidates, selected):
                              entry_excess_pct=excess,stop_price=r["stop"],
                              stop_distance_pct=r.get("risk_pct") if r.get("risk_pct") is not None else "",
                              risk_ok=int(bool(r.get("risk_ok"))),within_entry=int(bool(r.get("within"))),
-                             line_eligible=int(bool(r.get("risk_ok") and r.get("within") and r.get("institutional_available"))),
+                             line_eligible=int(bool(r.get("risk_ok") and r.get("within"))),
                              institutional_available=int(bool(r.get("institutional_available"))),
                              chip_data_date=r.get("chip_data_date", ""), chip_summary=r.get("chip_summary", ""),
                              chip_missing_reason=r.get("chip_missing_reason", ""),
@@ -412,7 +413,7 @@ def write_diagnostics(day, candidates, selected):
 def format_message(day, selected, count, diagnostic_rows=None):
     lines=[f"🦞 龍蝦雷達｜當日突破候選｜{day}",
            f"今天剛出現突破／收復訊號，先列入觀察，不代表一定要買｜最多{MAX_STOCKS}檔｜掃描候選{count}筆",
-           "排名權重：突破品質40%＋量比25%＋型態完整度25%＋法人籌碼10%（籌碼影響排序；資料未齊暫緩通知）",
+           "雷達只看型態與量價：突破品質40分＋量比25分＋型態完整度25分；綜合評分由即時監控處理",
            "破底翻用B點低點下方2%；VCP用pivot／頸線下方2%；N字底用B點下方2%。停損距離僅顯示、不設8%入選上限；不符試單區者保留CSV。"]
     if diagnostic_rows is not None:
         excluded=[r for r in diagnostic_rows if not r["selected"]]
@@ -421,7 +422,7 @@ def format_message(day, selected, count, diagnostic_rows=None):
         other_count=sum(not ("結構停損無效" in r["exclusion_reasons"] or "超出試單區" in r["exclusion_reasons"] or "低於試單區" in r["exclusion_reasons"]) for r in excluded)
         lines.append(f"排除診斷：{len(excluded)}筆未入選｜停損無效{risk_count}｜試單區外{range_count}｜其他{other_count}（原因可重疊；逐檔詳見line_scan_diagnostics.csv）")
     if not selected:
-        lines.append("當日無同時符合策略買點區、有效結構停損及籌碼資料完整條件的股票；候選保留在CSV。")
+        lines.append("當日無同時符合策略買點區、有效結構停損條件的股票；候選保留在CSV。")
     for i,r in enumerate(selected,1):
         date_label=(f"🚀 突破日：{r['day']}｜當日收盤確認" if r["breakout"]
                     else f"觀察日：{day}｜非當日突破")
@@ -454,8 +455,7 @@ def format_message(day, selected, count, diagnostic_rows=None):
             f"{zone_line}"
             f"｜量比{r['volume_ratio']:.2f}x（破底翻20日基準；VCP／N字底5日基準）"
             f"\n{stop_label}｜{risk_label}"
-            f"\n綜合分數{r.get('composite_score',0):.1f}｜突破{r.get('breakout_score',0):.1f}/40｜量比{r.get('volume_score',0):.1f}/25｜型態{r.get('pattern_score',0):.1f}/25｜法人{r.get('institutional_score',0):.1f}/10"
-            f"\n🧩 籌碼：{r.get('chip_summary', '資料未齊，暫不判讀')}"
+            f"\n綜合分數{r.get('composite_score',0):.1f}｜突破{r.get('breakout_score',0):.1f}/40｜量比{r.get('volume_score',0):.1f}/25｜型態{r.get('pattern_score',0):.1f}/25"
             f"\n結構風報比{rr_label}｜{r['status']}"
         )
     message="\n".join(lines)
@@ -649,8 +649,8 @@ def update_breakout_tracking(day, selected):
     A true breakout remains active through D10 so a later retest of the new
     support (the true-breakout threshold) can be classified.
     """
-    today=datetime.now(ZoneInfo("Asia/Taipei")).date().isoformat()
-    live=(day==today)
+    from scan_trade_date import resolve_trade_date
+    live=(day==resolve_trade_date())
     state=load_breakout_tracking()
 
     confirmed=[]
@@ -669,6 +669,9 @@ def update_breakout_tracking(day, selected):
         pos={d:i for i,d in enumerate(sessions)}
 
         for item in active_before:
+            if str(item.get('code')) not in AI_STOCK_CODES:
+                item.update(status='expired',monitoring_complete=True,resolved_date=day,exit_reason='outside_fixed_163_universe')
+                continue
             signal_day=item.get("signal_date","")
             if not signal_day or signal_day>=day:
                 continue
@@ -909,6 +912,8 @@ def update_breakout_tracking(day, selected):
         payload={
             "signal_type":"當日突破候選追蹤池",
             "generated_at":datetime.now(ZoneInfo("Asia/Taipei")).isoformat(timespec="seconds"),
+            "data_date":day,
+            "as_of_date":day,
             "count":len(active),
             "stocks":active,
         }
@@ -987,13 +992,16 @@ def main():
     confirmed, invalidated, active=update_breakout_tracking(day,selected)
     retest_message=format_retest_message(day,confirmed) if confirmed else ""
 
+    status={'trade_date':day,'data_date':day,'generated_at':datetime.now(ZoneInfo('Asia/Taipei')).isoformat(timespec='seconds'),'selected_codes':[r['code'] for r in selected],'active_count':len(active),'radar_policy':'型態與量價；監控負責綜合評分'}
+    (BASE/'radar_sync_status.json').write_text(json.dumps(status,ensure_ascii=False,indent=2),encoding='utf-8')
+    notify=os.getenv('LINE_NOTIFY_ENABLED','true').strip().lower() in ('1','true','yes')
+    from scan_trade_date import resolve_trade_date
+    if not notify or day != resolve_trade_date():
+        print('RADAR_OUTPUTS_UPDATED: LINE disabled for this data-only/historical run')
+        return 0
     token=os.getenv("LINE_CHANNEL_ACCESS_TOKEN","").strip()
     if not token:
-        print("Combined LINE token missing; preview only")
-        print(breakout_message)
-        if retest_message:
-            print("\n--- SECOND STAGE ---\n"+retest_message)
-        return 0
+        raise RuntimeError('LINE通知已啟用，但缺少LINE_CHANNEL_ACCESS_TOKEN；雷達輸出已產生，通知未成功')
 
     send_state=load_send_state()
     day_state=send_state.setdefault(day,{})
@@ -1034,3 +1042,4 @@ def main():
 
 if __name__=="__main__":
     raise SystemExit(main())
+

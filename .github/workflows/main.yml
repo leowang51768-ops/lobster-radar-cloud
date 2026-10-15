@@ -51,6 +51,9 @@ jobs:
       - name: Verify cross-day session tests
         run: python -m unittest discover -s tests -p test_scan_trade_date.py -v
 
+      - name: Verify radar handoff and notification tests
+        run: python -m unittest discover -s tests -p test_radar_pipeline.py -v
+
       - name: Get trade date
         shell: bash
         env:
@@ -186,12 +189,14 @@ jobs:
           echo "FAIL_STAGE=N字底掃描" >> "$GITHUB_ENV"
           python support_retest_watch.py
 
-      - name: "Send two-stage LINE: breakout candidates and retest confirmations"
-        # 台北 20:00 為正式通知；20:30 為自動補跑。send state 會阻止重複 LINE。
-        if: ${{ steps.market_calendar.outputs.closed != 'true' && ((github.event_name == 'schedule' && (github.event.schedule == '0 12 * * 1-5' || github.event.schedule == '30 12 * * 1-5')) || github.event_name == 'push') }}
+      - name: "Build radar tracking pool and send due LINE notification"
+        id: radar_pipeline
+        continue-on-error: true
+        # Always build tracking outputs; notification gating must not freeze D1-D10.
+        if: ${{ steps.market_calendar.outputs.closed != 'true' }}
         shell: bash
         env:
-          FINMIND_TOKEN: ${{ secrets.FINMIND_TOKEN }}
+          LINE_NOTIFY_ENABLED: ${{ github.event_name == 'workflow_dispatch' || github.event_name == 'push' || (github.event_name == 'schedule' && (github.event.schedule == '0 12 * * 1-5' || github.event.schedule == '30 12 * * 1-5')) }}
           LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
         run: |
           echo "FAIL_STAGE=兩階段LINE通知" >> "$GITHUB_ENV"
@@ -242,6 +247,10 @@ jobs:
             header = next(reader, None)
           assert header and "date" in header and "code" in header, "candidate_status.csv schema invalid"
 
+          sync_status = json.loads(Path('radar_sync_status.json').read_text(encoding='utf-8'))
+          watch = json.loads(Path('breakout_watchlist.json').read_text(encoding='utf-8'))
+          assert sync_status.get('trade_date') == trade_date, 'Radar scan/notification pipeline did not produce current status'
+          assert watch.get('data_date') == trade_date, 'Radar watchlist trade date is stale'
           print(f"HEALTH_OK trade_date={trade_date} rows={rows}")
           PY
 
@@ -252,7 +261,7 @@ jobs:
           git config user.name "lobster-radar-cloud"
           git config user.email "actions@github.com"
 
-          for f in lobster_tw_6m_prices.sqlite fundamental_support.json signal_state.json candidate_status.csv vcp_candidates.csv vcp_early_watch.csv n_bottom_watch.csv line_scan_diagnostics.csv formal_recommendations.csv line_pick_snapshots.csv line_pick_performance.csv breakout_watchlist.json breakout_tracking.json line_daily_send_state.json chip_candidate_snapshots.jsonl chip_candidate_outcomes.csv; do
+          for f in lobster_tw_6m_prices.sqlite fundamental_support.json signal_state.json candidate_status.csv vcp_candidates.csv vcp_early_watch.csv n_bottom_watch.csv line_scan_diagnostics.csv formal_recommendations.csv line_pick_snapshots.csv line_pick_performance.csv breakout_watchlist.json breakout_tracking.json radar_sync_status.json line_daily_send_state.json chip_candidate_snapshots.jsonl chip_candidate_outcomes.csv; do
             if [ -e "$f" ]; then
               git add "$f"
             fi
@@ -282,9 +291,16 @@ jobs:
           echo "Failed to publish radar results after 4 retries."
           exit 1
 
+      - name: Report radar or LINE failure after preserving outputs
+        if: ${{ steps.radar_pipeline.outcome == 'failure' }}
+        run: |
+          echo "FAIL_STAGE=雷達追蹤池／LINE通知" >> "$GITHUB_ENV"
+          echo "Radar/LINE pipeline failed; current scan outputs were preserved when valid. See radar_pipeline logs."
+          exit 1
+
       - name: LINE alert when daily workflow still fails
         # 19:00 的資料收集失敗不通知；20:00/20:30 最終排程或 manual-trigger 補發失敗才發警報。
-        if: ${{ failure() && ((github.event_name == 'schedule' && (github.event.schedule == '0 12 * * 1-5' || github.event.schedule == '30 12 * * 1-5')) || github.event_name == 'push') && steps.market_calendar.outputs.closed != 'true' }}
+        if: ${{ failure() && ((github.event_name == 'schedule' && (github.event.schedule == '0 12 * * 1-5' || github.event.schedule == '30 12 * * 1-5')) || github.event_name == 'push' || github.event_name == 'workflow_dispatch') && steps.market_calendar.outputs.closed != 'true' }}
         env:
           LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
         run: |
@@ -339,3 +355,4 @@ jobs:
           except Exception as e:
               print("Failure alert itself failed:", repr(e))
           PY
+
