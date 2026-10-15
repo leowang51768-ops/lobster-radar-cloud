@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "risk_level": "red",
-  "risk_score": 8,
+  "risk_score": 11,
   "risk_reasons": [
     "費半明顯下跌",
     "NASDAQ明顯下跌",
@@ -10,42 +10,42 @@
     "台股明顯下跌"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 -7.5%｜NASDAQ -2.7%｜日經225 -4.9%｜KOSPI -8.0%｜台股加權 -3.4%｜恆生 -1.2%",
-    "⚠ 全球市場風險｜美債10Y 5.06%｜VIX 17.4",
+    "⚠ 全球市場風險｜費半 -6.7%｜NASDAQ -2.3%｜日經225 -4.9%｜KOSPI -8.0%｜台股加權 -3.4%｜恆生 -1.2%",
+    "⚠ 全球市場風險｜美債10Y 5.08%｜VIX 16.8",
+    "⚠ 全球市場風險｜U.S. Stock Market Update | Sell-off Intensifies: Nasdaq Plunges 1.23%, AI Hardware Sector Slump",
+    "⚠ 全球市場風險｜Southbound Capital Moves | Southbound capital recorded net sales of HKD 5.08 billion; major sel",
+    "⚠ 全球市場風險｜Chip and AI Large Model Stocks Decline; Agricultural Bank of China Hits Record High Against the",
     "⚠ 全球市場風險｜Hong Kong Market Quick Look | All three major indices declined, with the tech index down 2.72%;",
-    "⚠ 全球市場風險｜川普喊台灣20年砸2.5兆買阿拉斯加天然氣 龔明鑫透露：價格非常好",
+    "⚠ 全球市場風險｜中國誠通發展集團(00217.HK)：孫潔辭任非執行董事及董事會主席",
     "⚠ 全球市場風險｜川普連兩天提台灣！自爆「剛與魏哲家通電話」高調喊：我招來偉大的台灣公司台積電",
-    "⚠ 全球市場風險｜台積電法說利多狂炸！全年營收上修44%、2奈米2027年產能翻倍魏哲家：所有的AI業者都與我們合作",
-    "⚠ 全球市場風險｜Global Tech Stocks Slump as AI Rout Intensifies -- Market Talk",
-    "⚠ 全球市場風險｜Zhitong Active Trading via Stock Connect (Hong Kong) | October 15",
-    "⚠ 全球市場風險｜Tencent Holdings Stock Slides 1.3% in Hong Kong",
-    "⚠ 全球市場風險｜〈台積電法說〉證實德州設廠並與Terafab洽談 魏哲家：晶圓廠須由台積電營運"
+    "⚠ 全球市場風險｜台積電全球擴廠：年輕世代看護國神山在美新機會",
+    "⚠ 全球市場風險｜個股概覽 | 個股 - 股市"
   ],
   "markets": {
     "US_SOX": {
       "label": "費半",
-      "price": 11292.228,
-      "change_pct": -7.6
+      "price": 11392.938,
+      "change_pct": -6.6
     },
     "US_NASDAQ": {
       "label": "NASDAQ",
-      "price": 26479.398,
-      "change_pct": -2.6
+      "price": 26575.635,
+      "change_pct": -2.4
     },
     "US_SP500": {
       "label": "S&P500",
-      "price": 7700.46,
-      "change_pct": -1.4
+      "price": 7719.88,
+      "change_pct": -1.2
     },
     "US_DOW": {
       "label": "道瓊",
-      "price": 51902.82,
-      "change_pct": 0.4
+      "price": 52072.56,
+      "change_pct": 0.8
     },
     "VIX": {
       "label": "VIX",
-      "price": 17.39,
-      "change_pct": 3.0
+      "price": 16.8,
+      "change_pct": -0.4
     },
     "JP_NIKKEI": {
       "label": "日經225",
@@ -69,11 +69,35 @@
     },
     "US10Y": {
       "label": "美債10年殖利率",
-      "price": 5.06,
-      "change_pct": -2.4
+      "price": 5.085,
+      "change_pct": -2.0
     }
   },
   "active_news": [
+    {
+      "title": "U.S. Stock Market Update | Sell-off Intensifies: Nasdaq Plunges 1.23%, AI Hardware Sector Slumps - Moomoo",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOcUtrNHJWUi1FTnRDUUpwdG9QVFEtMWZEZGhwRmxQOG5GWTVyWXdwYkZLSU5HbG9MM0hmX1VMdlhXUVg5ZGFfQmxEVjF2bEFOMTliY21fTWc2bGFScEJaVkdiVk5SZEdRQW85UWFkaVJZTEhseElFSEhUZDhjM1NIOFlkbXU2SDdySHB1RmYtWTZVdURvUnZIdnlIQ25XcDlNRDY0N0J6cw?oc=5",
+      "source": "Moomoo",
+      "published_at": "2026-10-15T22:01+08:00",
+      "importance": 5,
+      "risk_score": 4
+    },
+    {
+      "title": "Southbound Capital Moves | Southbound capital recorded net sales of HKD 5.08 billion; major sell-off in AI hardware stocks, with holdings in Yangtze Optical Fibre and Cable (06869) reduced by over HKD 900 million - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxObTZnLW1ETEFXYXl5SzhsSGhCZDlaS0FBTTNKWE13b25YbGRNV2JCUkNyakpxZ3pfWmJrRXprTTZyU3Jwb082VWZmS1N1cU0xcU80OHdza0hTaVZQYWM1NDJZX3RPc2w4NzB5c1BEczFmMG12WHJ3dWhVSW9mUHpfOC1OX3NXb09uY2VMWkx0V25GSHpqV0toRnpnRXAtb1hTSDBGdVlpQWpsR1BoWWlJYTRB?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-15T17:52+08:00",
+      "importance": 5,
+      "risk_score": 4
+    },
+    {
+      "title": "Chip and AI Large Model Stocks Decline; Agricultural Bank of China Hits Record High Against the Trend - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOVVlxX0stX3NVUTBGZGRVaWZVVUJ3VUh6aXNMc0Q5YjcyS0Y1akNSRC1wQ19DeE5wQW9td3IyczJBallQeWI5N0RQNHl0eXQtcUJUOEJEdlhub1o0cmtQZUJVQTdhR01ob3pwb2Z5eHA2WWVHZEVZZ1BFeUh4RFl3LUpiRHNLMzJCU090TzVXYzRYY09TM0Q0c1E4T0xIa2Vo?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-15T19:24+08:00",
+      "importance": 4,
+      "risk_score": 2
+    },
     {
       "title": "Hong Kong Market Quick Look | All three major indices declined, with the tech index down 2.72%; tech and semiconductor stocks weakened, as Baidu fell more than 4% and Tiānshù Zhìxīn dropped nearly 14%; Agricultural Bank of China bucked the trend, risi - 富途牛牛",
       "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQZHFqbG1CWHkxcVNKNGcxUWxqY3NIdU5lOWFvMjIxalIxQnVvMXhBNy1DVXN6UXkyU29NX0ZndHFlZ3dYV21XSjJ5TWYzVldfTDZaOHRtaXJDZHBBcXlBbmxHVEJCekwzd3YzTm9OUU0tSGtzNGFxbTBMbFNwMmZuMkgxNldQX3ZVZmhTYVBGeFlJdGVXeF9YX2Y1YWRCUHJreklkdHNB?oc=5",
@@ -83,10 +107,10 @@
       "risk_score": 2
     },
     {
-      "title": "川普喊台灣20年砸2.5兆買阿拉斯加天然氣 龔明鑫透露：價格非常好 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMipgNBVV95cUxQYWVZR250LU8tNWpMeG9aNUZMSS13ZzQ1Zy1vdXlQbk5neWxINXBwX1h3cEpFNXNNbzVzUDN5Mm81Ujlkd3QxZ3VqRmJ3YkZ4c0ZaaXlEQ0tsX1I3TU5ldVlGSWxwbW1pNFlpY19ZQUFHUWd0bGtGNW9oVVNBNHBsTWlMRUVja1lwTkllQnZ2OUNxX2d3TzhzS19hSnpIODkyZWFGeF9PRmp0MF9kMkI5MWFFdDZjM2JvY3pEOUdiQzhjbWpIQTZIcUNQQW5pMElWcWZPTVZ0ZWkzX3AwNEFGNkxma1lHbmZ2NFhCZVVPelN1VHEyajYyLXhTZmZjbExEalpVRDZtSDFKbk00WE5KNkFwUVRuYjVBLVVkbDlfRTRoSEh0djZjc2ZqdmYxSHU0VTBXdzFDSTBiR2ctVGhtTlBLY0Mzc24tX0hwNGxMMVpaUEgyTzlscVdoVk5iVmdmS1luQ1lGekZkSkFVUDRTNXhwMy1NVGFzN0ZucTlLdFNEdFlzRVpBVnEwYW5BSEdYeGJCTUxiZ0pYSzZfVjVrZFNVQTJIQQ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-15T17:30+08:00",
+      "title": "中國誠通發展集團(00217.HK)：孫潔辭任非執行董事及董事會主席 - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1JYVFlekxoZ1FPOWNkWGR2QUk5eDlWLUpWdlJOc1pnTXo1X2ZWSzFhY0RfOG9GVDBwYXkwbUFzWG1hb3B5Um04QlFyYnRRRmxMbHlKT3d0MXNBcEFreVN1SEZuMDNvNjByX3Bn?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-10-15T22:28+08:00",
       "importance": 3,
       "risk_score": 0
     },
@@ -99,11 +123,27 @@
       "risk_score": 0
     },
     {
-      "title": "台積電法說利多狂炸！全年營收上修44%、2奈米2027年產能翻倍魏哲家：所有的AI業者都與我們合作 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMinARBVV95cUxPTExCT2h4V3Z2YmxXYzh4QVg2bU9SN1FSUEJ1TXp2c1lJeGVGbW8tUHc5U1JzUnFkUWswcTZtY2pjSUR1VUhFVld4QnduLWM4bFBWT2hfMkdjQmtiM3FQMnN2UTlscHVmU0JHY3lZYTdhd19QbHBZeGNZOWJONU54UzU5LVplQV9CY1N5TW5PSGZQSlpOemYzX3JIb2V5eWp5U2F5aklWWTdUWWRoZGdmc0Z1OGRfM0VfTWN2OGVlQndHNXFJY2ozVEU3cDRGNU9hb3NqNU9BWEVXeVYybXNabGI4eE5CeHIwcV91Y1hHSmJ6Q01GZ2RsclhaX1FXVjRZbWN0RVV6UjliYUZTX2xmdFRpVW5rUElLVm1FMURPRjhYRG8yc1l1TVFhb0d0TW9RTUJna3NtYVpzbmZZSF92dFMxcnlZaTVwcjVXZTF5X1dYd1ppTlY0YkRfZFRtdzZZamt1SzhPeHZtcFl1TzdrMm16ZXhQQ0FVNUJ0Y0ZOM0F5cUU1V0cyVTByRTNBQVN6SUswRkhVUko5VFB5bk03bmVvYTRjcDNPVXg1VUFPcy01ZU4taW5nX2Q4Vm5sZ2pDSkxQa25fV2tOVTAyRkZjUF9QMDJLRHFtYy16WXA5ak5VcXFMSHYwOXozTXUzTWd6c2tCV0VscVZTQnBxUFVVWFhvcUEtYkE5cFRYUWxTTkVvTXNRdFdGcEt3WU4?oc=5",
+      "title": "台積電全球擴廠：年輕世代看護國神山在美新機會 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi2AJBVV95cUxPN3RTRXBybjFuV1hyMFNlOXNkNGVDLVR0SzgwLWhvVTNmdnJJWHN3Sk5KSWNpcFZRUWc0YXVYQXM5bUNmczU0TlVwVGhKYWVyUmVUam81cDRwNUpNSDY0dG9UZjBkOHEzLXl2RnN3SV9NV19wU1VBVS1kcUxtd2ZJNFZITm5jcjlZc1lJbTgzQXphRHBlc3BUaVMyZF9maU5MellieE5wS29nMGp3RVMzQ1AxUl9DNE40ZTJhMmZtWkJfeWpfTkxJTzBFSkNmTzhwN0RZaWxWSFFjMHFvQ2g0X2hRYXBzbjZIeWxleEZ3U2ZaMDN0VFJRSGJVdk9uVVBvYWctVEQwZWpXb0JxQnFFd0NsVzlmWmVDdmZnYWlEZWZmU0E4UUNCbDUwU1lnLXNUWWg0Y2dmeGc1a090UWttQ05XaTV1NHpaUDFxZ0M4S2pmMlV3TFdTVA?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-10-15T15:24+08:00",
-      "importance": 3,
+      "published_at": "2026-10-16T00:12+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "個股概覽 | 個股 - 股市 - CMoney",
+      "url": "https://news.google.com/rss/articles/CBMiREFVX3lxTFBfVGtPUmhQeF9nalNLNm9zTGJWQlREWTlFa2dVeEhkNElpN1d0OXlyaFF3U3NaYnBodklvejVEU1YtdkNl?oc=5",
+      "source": "CMoney",
+      "published_at": "2026-10-15T23:45+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "外資狂賣台股3025億元 卻買爆「這1檔」 - 自由財經",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBoWXlYMjZSaThWLS1td3dOZTQtZVNVSUMza3VDOTZ3ckJHbVFrbUQ0RHRhMnJEZ1R1WjJqd1FWNTByYUFHc1phU1hCd0VhVGFDbjVwajNoemgweXlTaDlB0gFkQVVfeXFMTlJqaC1vVmRocXFaMl9paW9CTmZCOVR4VHNmcEFwU2l5Si1Rakw4TGVtQ3k4Z0NQUk1lVzIxQ3lXWUdwTEZSeUJLOFNuTkdueURjeGt1Q2VoRmYyWUhCQVFVMVBDQQ?oc=5",
+      "source": "自由財經",
+      "published_at": "2026-10-15T21:26+08:00",
+      "importance": 2,
       "risk_score": 0
     },
     {
@@ -129,48 +169,8 @@
       "published_at": "2026-10-15T17:01+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "〈台積電法說〉證實德州設廠並與Terafab洽談 魏哲家：晶圓廠須由台積電營運 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiuANBVV95cUxOQ0t4dXFMUS0yV0hOaEt5NE1fTExYcHRORmU0eDQxR3ZqQ0tjLWtJUWpjUEpQN2pCM3JSV1FGTnpHUXNWU2hUamo0TTJzZG5OV3NTUHUwRG9DWUNNRnpOYlNfN0V4dFpPMEpBN2s2ZnRUa3gxblF2dEIza3pjS1d0YVJQQmo1Um1lNzM3NG0wSllvbDhJeDBISW1kOWtmZTVNV244TXdhblJEeG5vQWdCQWJ4ek9rQ0V6YlhuZ0tsalVRNmdsQjFzbnJtdFh2elUtTjNqc1R3R1BHTE5nR2RxRjRjTVM0di1zNk5fX0xOd1ZraWNkSlFpVGNQdlNEYWpHZmEyS0h1WFd6dm5CN0M1ZkhkOEpEY3ZQUFhmVGZGaGRjbTNvOF8wY2I3dEJYV1hLb0ZhbGx4ZHhBYkU3c1dZRXVONnBBeHhRd0ZDN1NhbGhwMENuRGpOTmV0R0VxbzZGcUNSRTZMZVJjZUxMRTJ1QzFZZU8xanE2eXptajJOOG1EWmdIMUUtcVA5Q1V2Qnl4Z19mZGdkdVNNd0VETERBd3d4UEpnWDVFM2drYVhVTzRCMEUzTWxhTQ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-15T16:24+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "【台積電法說會】魏哲家霸氣喊：要拿下所有生意 絕不把好處拱手讓人 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi0ANBVV95cUxOYi02OU03Q1RiVGVRVE9CaDFxa0lQby1ZZFJzS01FUnBCVG5KbXlFWEJSVmhFS0hmUTducGdQS2VLd3VhNWJTSmE1amlMZWdOcm5YRVNCaXM4V2lBLXJubDNVLXhfVWNNV2tfUEhfMnJwUHd6bW1nV2VSa2ktLXJiakNyNXdocVZ0T3pGRWJZTW41STVtT2NON2VYWEV1NExDOVVERndTalF4MnEwVjFmX213czVtV3pWMHRQWnlCTWk4UUptb3dXSm5RTWJrMUxNeG9wZWh3TzVzM1FCSEVtNmNzVDNSajlDamstQ1V0Sm0zNEdzc1pBanV2SF9EcDBOMmFta2pvYnZYVGRLdS1LQTFZUDNkTW43bHFVYnJKa2NNR3lSVTZXRjlCOVZhTU9NYjdJR2VCeVJwMTNuSjN1YXBBUFpSMTZmS1gzNnFnTGk2ZW9yVTByaksycm5wd3ZFei1VVzVDa3RCcENmTFdqWEZtRnlRRktGVmNHVXI1bVBMMGVudVJCdWRtLUo0anlBTWFmNk5JYVNobkhXX0JBNlBUcldzS3BwcWJuWEpwdWp1aTNfUnkzMGFfSHFPbFpKVXh6eU04NFNfenAzTElCag?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-15T15:44+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "【台積電法說會】明天當「全村的希望」？分析師揭「開紅盤」2大前提 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi0ANBVV95cUxOZWVvYndQNFRlYmhKZ1ZMY19ucnZETHJpNEozNldld3YwTHZfSXVzWTRrWDVBWTJuQklKdWpMS1RLVlFETjdhS3NQcDJKS1k5MUNNX1g5UWxVZVZlaGhSY3J4dURFQkdWb1hMSWh5N0RDVlAxRW12YmpDb1phRDNaNDZNZDFOVm5INjJyakRIRlVJMVlaNXVMUTRNVlJ4MUV5U085c0pIWlZiNWRNeU9VdWExclFhYnVEdFdGT3JubEZlal9jVV9jazNRemlQR2QycnBBcnRGWUZsQThNYmxva00yMVdHLWoxSEhTa1VnX0lTREg0anRURFBzc2xTTV9FekR0d08yN0Z4ampYNnRDVHV6OXloeG1aMGVab1hlQ0FjYTAyVTJFTEhPNEwxSU96T1gwd3lNSVZIMkZFUlhwQmE0dUIzUjg1YmZ5dDdWQVRBMkVqTmNKX1VZbVN0SkZDYmRIY3Iya2RzXzZxYzFKYlN3MXBkVUVfb0M0dUgwZC1CdlBxbklielpYbWh4Qi1WNHhwWEtqbk1FZXhLd0swQmt2VFBCUmJucy1yLXIxQ2F5UnV6ZHJTMGpYWU1tTmNFTFF5bmFLU3AyS3lHS2h4ZQ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-15T15:42+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "〈台股盤後〉狂瀉1655點創史上第六大跌點 收46969點摜破月線 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi5gJBVV95cUxQVXB6TTU5dU56bXlaMm1sQUswX2RGeUZ6MXEzUUtKOUNoSEVJZ0dlbzRqa3dsbF9jRW5DbjJIdXk4cFpQbVNrQURuYURaQTdUaFp1VTc4bW1waFdZM1pJVlJiM09SVE5RMENHdWpsY3VsOVR0WjVZYXRMWjc0VlBuaVg2MUJ0Z25vRFZCbUsxMDlLUlhwRFdtUFdRSDFnME9sRGVpZGdoTUl6dDlpVFJ4NWR0Qi1jTEk1M1VKXzF2cnY2Z09nQl8yUEVNVGpmdl8wc3ZJQXB0OFFQQjBsSWRjeXhFVG55aTZXeUNYYkJ3YWRFZnBDbGRjSHhlVndBcllEZTBBZ2hZN3J5WWtieW96V2hqTFRRM3VWX3h2MVhSakRWMUVxWFFVTlUzLXJzbWxXOGdXeXNZd2NQTjRXem42b2c3S1I1anhOTks5WVhXR2NQV3lDajNadC1rcFpMeUJ5c3J3Rkh3?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-15T15:41+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "韓國KOSPI指數為什麼暴跌？近一個月跌超16%的5大原因及後續走勢分析 - TradingKey",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOUzd1U0JJVnUyNXVnUGRrVG9KbVlwbmgxcXE1eG5oM3JLMG1SWmE4cW5GMTcwVlZjQTJnX1lxVE53ZDRPQ2FFT09ZdmdVd2Vza01nNmdLWUZkRUZRMUg1M1o5VDQwdzFudmVpd01jS1lpVFhoVUMyZEJiUFBrZi1Zb3JQMEVNX0pUbzVmcDdoR1E3eUlGMFB2N0hNc3JqYl9qZE9HZEtBa3BVbmt1RjVBOE9iV1JBMUc5ak1n?oc=5",
-      "source": "TradingKey",
-      "published_at": "2026-10-15T15:21+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-15T22:26:33+08:00"
+  "updated_at": "2026-10-16T02:26:36+08:00"
 }
