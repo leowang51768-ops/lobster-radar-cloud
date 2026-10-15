@@ -9,7 +9,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 1
+      "a_age": 2
     },
     "6488": {
       "code": "6488",
@@ -20,7 +20,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 1
+      "a_age": 2
     },
     "3706": {
       "code": "3706",
@@ -252,7 +252,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 1
+      "a_age": 2
     },
     "6239": {
       "code": "6239",
@@ -263,7 +263,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 1
+      "a_age": 2
     },
     "6187": {
       "code": "6187",
@@ -347,7 +347,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 1
+      "a_age": 2
     },
     "6290": {
       "code": "6290",
@@ -423,7 +423,7 @@
       "stage": "D",
       "signal_id": "2026-10-06|3013",
       "confirmed_date": "2026-10-06",
-      "tracking_day": 6,
+      "tracking_day": 7,
       "sources": [
         "branch",
         "monitor",
@@ -567,7 +567,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 1
+      "a_age": 2
     },
     "4989": {
       "code": "4989",
@@ -578,7 +578,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 1
+      "a_age": 2
     },
     "5443": {
       "code": "5443",
@@ -589,7 +589,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 1
+      "a_age": 2
     },
     "4977": {
       "code": "4977",
@@ -804,7 +804,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "1503": {
       "code": "1503",
@@ -815,7 +815,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "1513": {
       "code": "1513",
@@ -826,7 +826,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "1514": {
       "code": "1514",
@@ -837,7 +837,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "1519": {
       "code": "1519",
@@ -848,7 +848,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "1560": {
       "code": "1560",
@@ -859,7 +859,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "1773": {
       "code": "1773",
@@ -870,7 +870,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "2059": {
       "code": "2059",
@@ -881,7 +881,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "2301": {
       "code": "2301",
@@ -892,7 +892,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "2303": {
       "code": "2303",
@@ -903,7 +903,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "2308": {
       "code": "2308",
@@ -914,7 +914,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "2313": {
       "code": "2313",
@@ -925,7 +925,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "2317": {
       "code": "2317",
@@ -936,7 +936,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "2324": {
       "code": "2324",
@@ -947,7 +947,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "2330": {
       "code": "2330",
@@ -958,7 +958,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "2344": {
       "code": "2344",
@@ -969,7 +969,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "2345": {
       "code": "2345",
@@ -980,7 +980,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "2355": {
       "code": "2355",
@@ -991,7 +991,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "2356": {
       "code": "2356",
@@ -1002,7 +1002,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "2357": {
       "code": "2357",
@@ -1013,7 +1013,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "2359": {
       "code": "2359",
@@ -1024,7 +1024,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "2360": {
       "code": "2360",
@@ -1035,7 +1035,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "2369": {
       "code": "2369",
@@ -1046,7 +1046,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "2377": {
       "code": "2377",
@@ -1057,7 +1057,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "2379": {
       "code": "2379",
@@ -1068,7 +1068,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "2382": {
       "code": "2382",
@@ -1079,7 +1079,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "2383": {
       "code": "2383",
@@ -1090,7 +1090,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "2385": {
       "code": "2385",
@@ -1101,7 +1101,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "2388": {
       "code": "2388",
@@ -1112,7 +1112,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "2395": {
       "code": "2395",
@@ -1123,7 +1123,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "2404": {
       "code": "2404",
@@ -1134,7 +1134,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "2408": {
       "code": "2408",
@@ -1145,7 +1145,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "2421": {
       "code": "2421",
@@ -1156,7 +1156,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "2441": {
       "code": "2441",
@@ -1167,7 +1167,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 3
+      "a_age": 4
     },
     "2449": {
       "code": "2449",
@@ -1178,7 +1178,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "2454": {
       "code": "2454",
@@ -1189,7 +1189,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "2467": {
       "code": "2467",
@@ -1200,7 +1200,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "3006": {
       "code": "3006",
@@ -1211,7 +1211,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "3008": {
       "code": "3008",
@@ -1222,7 +1222,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "3014": {
       "code": "3014",
@@ -1233,7 +1233,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "3015": {
       "code": "3015",
@@ -1244,7 +1244,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "3017": {
       "code": "3017",
@@ -1255,7 +1255,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "3032": {
       "code": "3032",
@@ -1266,7 +1266,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "3035": {
       "code": "3035",
@@ -1277,7 +1277,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "3037": {
       "code": "3037",
@@ -1288,7 +1288,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "3044": {
       "code": "3044",
@@ -1299,7 +1299,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "3047": {
       "code": "3047",
@@ -1310,7 +1310,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "3071": {
       "code": "3071",
@@ -1321,7 +1321,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "3078": {
       "code": "3078",
@@ -1332,7 +1332,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "3081": {
       "code": "3081",
@@ -1343,7 +1343,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "3131": {
       "code": "3131",
@@ -1354,7 +1354,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "3189": {
       "code": "3189",
@@ -1365,7 +1365,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "3217": {
       "code": "3217",
@@ -1376,7 +1376,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "3231": {
       "code": "3231",
@@ -1387,7 +1387,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "3260": {
       "code": "3260",
@@ -1398,7 +1398,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "3289": {
       "code": "3289",
@@ -1409,7 +1409,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "3324": {
       "code": "3324",
@@ -1420,7 +1420,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "3325": {
       "code": "3325",
@@ -1431,7 +1431,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "3338": {
       "code": "3338",
@@ -1442,7 +1442,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "3363": {
       "code": "3363",
@@ -1453,7 +1453,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "3374": {
       "code": "3374",
@@ -1464,7 +1464,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "3380": {
       "code": "3380",
@@ -1475,7 +1475,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "3406": {
       "code": "3406",
@@ -1483,7 +1483,7 @@
       "stage": "D",
       "signal_id": "2026-10-05|3406",
       "confirmed_date": "2026-10-05",
-      "tracking_day": 7,
+      "tracking_day": 8,
       "sources": [
         "branch",
         "monitor"
@@ -1530,7 +1530,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "3483": {
       "code": "3483",
@@ -1541,7 +1541,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "3515": {
       "code": "3515",
@@ -1552,7 +1552,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "3526": {
       "code": "3526",
@@ -1563,7 +1563,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "3529": {
       "code": "3529",
@@ -1574,7 +1574,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "3532": {
       "code": "3532",
@@ -1585,7 +1585,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "3533": {
       "code": "3533",
@@ -1596,7 +1596,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "3540": {
       "code": "3540",
@@ -1607,7 +1607,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "3583": {
       "code": "3583",
@@ -1618,7 +1618,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "3587": {
       "code": "3587",
@@ -1629,7 +1629,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "3605": {
       "code": "3605",
@@ -1640,7 +1640,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "3653": {
       "code": "3653",
@@ -1651,7 +1651,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "3661": {
       "code": "3661",
@@ -1662,7 +1662,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "3665": {
       "code": "3665",
@@ -1673,7 +1673,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "3680": {
       "code": "3680",
@@ -1684,7 +1684,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "3689": {
       "code": "3689",
@@ -1695,7 +1695,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "3693": {
       "code": "3693",
@@ -1706,7 +1706,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "3711": {
       "code": "3711",
@@ -1717,7 +1717,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "3715": {
       "code": "3715",
@@ -1728,7 +1728,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "4566": {
       "code": "4566",
@@ -1739,7 +1739,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "4585": {
       "code": "4585",
@@ -1750,7 +1750,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "4903": {
       "code": "4903",
@@ -1761,7 +1761,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "4908": {
       "code": "4908",
@@ -1772,7 +1772,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "4938": {
       "code": "4938",
@@ -1783,7 +1783,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "4966": {
       "code": "4966",
@@ -1794,7 +1794,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "4967": {
       "code": "4967",
@@ -1805,7 +1805,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "4979": {
       "code": "4979",
@@ -1816,7 +1816,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "5269": {
       "code": "5269",
@@ -1827,7 +1827,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "5274": {
       "code": "5274",
@@ -1838,7 +1838,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "5289": {
       "code": "5289",
@@ -1849,7 +1849,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "5347": {
       "code": "5347",
@@ -1860,7 +1860,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "5426": {
       "code": "5426",
@@ -1871,7 +1871,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "5469": {
       "code": "5469",
@@ -1882,7 +1882,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "5536": {
       "code": "5536",
@@ -1893,7 +1893,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "6117": {
       "code": "6117",
@@ -1904,7 +1904,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "6125": {
       "code": "6125",
@@ -1915,7 +1915,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "6139": {
       "code": "6139",
@@ -1926,7 +1926,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "6166": {
       "code": "6166",
@@ -1937,7 +1937,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "6182": {
       "code": "6182",
@@ -1948,7 +1948,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "6191": {
       "code": "6191",
@@ -1959,7 +1959,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "6196": {
       "code": "6196",
@@ -1970,7 +1970,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "6203": {
       "code": "6203",
@@ -1981,7 +1981,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "6215": {
       "code": "6215",
@@ -1992,7 +1992,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "6223": {
       "code": "6223",
@@ -2003,7 +2003,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "6230": {
       "code": "6230",
@@ -2014,7 +2014,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "6257": {
       "code": "6257",
@@ -2072,7 +2072,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "6274": {
       "code": "6274",
@@ -2083,7 +2083,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "6275": {
       "code": "6275",
@@ -2094,7 +2094,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "6282": {
       "code": "6282",
@@ -2105,7 +2105,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "6412": {
       "code": "6412",
@@ -2116,7 +2116,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "6414": {
       "code": "6414",
@@ -2127,7 +2127,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "6426": {
       "code": "6426",
@@ -2138,7 +2138,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "6462": {
       "code": "6462",
@@ -2149,7 +2149,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "6485": {
       "code": "6485",
@@ -2160,7 +2160,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "6510": {
       "code": "6510",
@@ -2171,7 +2171,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "6515": {
       "code": "6515",
@@ -2182,7 +2182,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "6530": {
       "code": "6530",
@@ -2193,7 +2193,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "6531": {
       "code": "6531",
@@ -2204,7 +2204,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "6533": {
       "code": "6533",
@@ -2215,7 +2215,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "6548": {
       "code": "6548",
@@ -2226,7 +2226,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "6584": {
       "code": "6584",
@@ -2237,7 +2237,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "6640": {
       "code": "6640",
@@ -2248,7 +2248,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "6643": {
       "code": "6643",
@@ -2259,7 +2259,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "6667": {
       "code": "6667",
@@ -2270,7 +2270,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 3
+      "a_age": 4
     },
     "6669": {
       "code": "6669",
@@ -2281,7 +2281,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "6684": {
       "code": "6684",
@@ -2292,7 +2292,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "6788": {
       "code": "6788",
@@ -2303,7 +2303,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "6789": {
       "code": "6789",
@@ -2314,7 +2314,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "6805": {
       "code": "6805",
@@ -2325,7 +2325,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "6829": {
       "code": "6829",
@@ -2336,7 +2336,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "6830": {
       "code": "6830",
@@ -2347,7 +2347,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "6933": {
       "code": "6933",
@@ -2358,7 +2358,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "7556": {
       "code": "7556",
@@ -2369,7 +2369,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "8028": {
       "code": "8028",
@@ -2380,7 +2380,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "8039": {
       "code": "8039",
@@ -2391,7 +2391,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "8064": {
       "code": "8064",
@@ -2402,7 +2402,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "8103": {
       "code": "8103",
@@ -2413,7 +2413,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "8110": {
       "code": "8110",
@@ -2424,7 +2424,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "8150": {
       "code": "8150",
@@ -2435,7 +2435,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "8210": {
       "code": "8210",
@@ -2446,7 +2446,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "8227": {
       "code": "8227",
@@ -2457,7 +2457,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "8299": {
       "code": "8299",
@@ -2468,7 +2468,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "8358": {
       "code": "8358",
@@ -2479,7 +2479,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     },
     "8996": {
       "code": "8996",
@@ -2490,7 +2490,7 @@
       "sources": [
         "branch"
       ],
-      "a_age": 2
+      "a_age": 3
     }
   },
   "archive": {
@@ -2745,8 +2745,8 @@
     "02b2c11bba2b6bbc098ce15ec1011861": "2026-10-14T21:53:11+08:00"
   },
   "version": 241,
-  "as_of_date": "2026-10-15",
-  "updated_at": "2026-10-15T23:40:35+08:00",
+  "as_of_date": "2026-10-16",
+  "updated_at": "2026-10-16T01:22:29+08:00",
   "completed_through": "2026-10-15",
   "price_basis": "official_completed_session"
 }

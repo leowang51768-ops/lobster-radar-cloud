@@ -1,6 +1,6 @@
 {
   "version": 244,
-  "generated_at": "2026-10-15T23:40:35+08:00",
+  "generated_at": "2026-10-16T01:22:29+08:00",
   "target_date": "2026-10-16",
   "score_date": "2026-10-15",
   "stocks": {
@@ -19,7 +19,7 @@
       },
       "score_source": "canonical_daily",
       "score_date": "2026-10-15",
-      "d": 6,
+      "d": 7,
       "price": 94.7,
       "support": 93.9,
       "distance_pct": 0.852,
@@ -42,7 +42,7 @@
       },
       "score_source": "canonical_daily",
       "score_date": "2026-10-15",
-      "d": 7,
+      "d": 8,
       "price": 1115.0,
       "support": 1005.0,
       "distance_pct": 10.9453,
