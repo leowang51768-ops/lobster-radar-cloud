@@ -1,7 +1,7 @@
 {
-  "observations_with_horizons": 103668,
+  "observations_with_horizons": 118608,
   "mature_rows": 14670,
-  "pending_or_missing_rows": 88998,
+  "pending_or_missing_rows": 103938,
   "summary_groups": 12115,
   "historical_backfill_included": false,
   "strategy_changes": false,

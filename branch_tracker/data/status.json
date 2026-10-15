@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-14",
+  "date": "2026-10-15",
   "mode": "collection_only",
   "expected_stocks": 166,
   "fixed_stocks": 163,
@@ -11,12 +11,12 @@
   "ranking_limit_per_side": 15,
   "history_target_top_per_side": 3,
   "history_requests_succeeded": 120,
-  "observed_collection_days": 7,
-  "complete_collection_days": 3,
+  "observed_collection_days": 8,
+  "complete_collection_days": 4,
   "counts": {
-    "ranking": 34556,
-    "history": 112711,
-    "queue": 3894
+    "ranking": 39536,
+    "history": 119911,
+    "queue": 4225
   },
   "review_stage": "資料累積中",
   "strategy_changes": false,
@@ -29,17 +29,11 @@
   ],
   "missing_stocks": [],
   "errors": [],
-  "history_errors": [
-    {
-      "code": "6166",
-      "branch": "1650",
-      "error": "<urlopen error _ssl.c:999: The handshake operation timed out>"
-    }
-  ],
-  "history_pairs_ever_fetched": 1879,
+  "history_errors": [],
+  "history_pairs_ever_fetched": 1999,
   "history_coverage_complete": false,
   "history_coverage_note": "成功抓取不代表完整60交易日；須逐組核對交易日缺口",
   "ranking_coverage_complete": true,
-  "errors_total": 1,
-  "database_bytes": 25264128
+  "errors_total": 0,
+  "database_bytes": 27660288
 }
