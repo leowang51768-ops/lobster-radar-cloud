@@ -1,25 +1,25 @@
 {
   "schema": 1,
   "risk_level": "red",
-  "risk_score": 9,
+  "risk_score": 10,
   "risk_reasons": [
     "費半明顯下跌",
     "NASDAQ明顯下跌",
     "日經明顯下跌",
     "韓股明顯下跌",
-    "出現重大風險新聞"
+    "台股明顯下跌"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 -4.5%｜NASDAQ -2.0%｜日經225 -3.2%｜KOSPI -6.6%｜台股加權 +0.6%｜恆生 +0.2%",
+    "⚠ 全球市場風險｜費半 -4.5%｜NASDAQ -2.0%｜日經225 -4.4%｜KOSPI -7.4%｜台股加權 -3.0%｜恆生 -1.6%",
     "⚠ 全球市場風險｜美債10Y 5.19%｜VIX 16.9",
-    "⚠ 全球市場風險｜Unprecedented Extreme Imbalance in 40 Years! Wall Street's \"Big Short\" Warns: Signs of U.S. Sto",
+    "⚠ 全球市場風險｜〈台股開盤〉美通膨升息壓力拉警報 電子哀鴻遍野重挫1400點摜破月線",
     "⚠ 全球市場風險｜美國9月CPI炸裂！費半挫2.2％上演連6跌、台積電ADR摔1.5％ 聯準會升息疑慮又起",
     "⚠ 全球市場風險｜HPE, Dell, Bank of America, State Street, ASML, and More Stocks That Explain Today's Market -- ",
-    "⚠ 全球市場風險｜川普「暴雷」台灣砸1400億元包下20年阿拉斯加3成天然氣 經濟部證實了",
-    "⚠ 全球市場風險｜輝達、台積電ADR跌逾3% 通膨數據加深晶片股賣壓",
-    "⚠ 全球市場風險｜貸款1千萬買股票！他曝1年後「資產3370萬」超驚人 網傻眼：超猛爆賺",
-    "⚠ 全球市場風險｜輝達、超微、蘋果爭相下單！美銀：台積電2027年產能有望提前達標 2奈米營收貢獻升至11%",
-    "⚠ 全球市場風險｜外資持續倒貨 台股多空對決 三大利空恐引爆？專業分析看這裡"
+    "⚠ 全球市場風險｜連2天提台灣！川普點名台積電：不久前才與魏哲家通話",
+    "⚠ 全球市場風險｜Global stocks plunged as capital returned to U.S. Treasuries! The 10-year yield fell to a three",
+    "⚠ 全球市場風險｜台積電股民注意！法說會前股價挨刀下殺70元 外媒揭近4次財報「3次不漲」驚人紀錄",
+    "⚠ 全球市場風險｜312億元台股ETF股利今發放 00919配發金額最多",
+    "⚠ 全球市場風險｜【Hot台股】台達電7天狂洩23%...網無奈「最新市場聖誕樹」 分析師勸：先觀望"
   ],
   "markets": {
     "US_SOX": {
@@ -49,23 +49,23 @@
     },
     "JP_NIKKEI": {
       "label": "日經225",
-      "price": 65555.03,
-      "change_pct": -3.2
+      "price": 64760.42,
+      "change_pct": -4.4
     },
     "KR_KOSPI": {
       "label": "KOSPI",
-      "price": 5637.15,
-      "change_pct": -6.6
+      "price": 5586.41,
+      "change_pct": -7.4
     },
     "TW_TAIEX": {
       "label": "台股加權",
-      "price": 48625.83,
-      "change_pct": 0.6
+      "price": 47173.39,
+      "change_pct": -3.0
     },
     "HK_HSI": {
       "label": "恆生",
-      "price": 24314.17,
-      "change_pct": 0.2
+      "price": 23955.58,
+      "change_pct": -1.6
     },
     "US10Y": {
       "label": "美債10年殖利率",
@@ -75,12 +75,12 @@
   },
   "active_news": [
     {
-      "title": "Unprecedented Extreme Imbalance in 40 Years! Wall Street's \"Big Short\" Warns: Signs of U.S. Stock Market Bubble Are Becoming Increasingly Pronounced - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNSGg2RDhhblJzQy1pUENNMVhSMnFOXzNhNzR5OVRTbHVCd0FsR1pnRHlrVHBmN0gwYW1aNTBjUEJKRF8zS05jM3A0TEh2and1b19seGc5M004UEYtUGl3aWE4cS1mdE9UeHhfbW1qR1E3WFdzUktoTVZRRGkzeTQ1eXVyOGJteUt3OWhnZ1hBY0VZR0xPU1VNcDBSWDBUbzFBXzlZYWVqOA?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-14T08:53+08:00",
-      "importance": 5,
-      "risk_score": 4
+      "title": "〈台股開盤〉美通膨升息壓力拉警報 電子哀鴻遍野重挫1400點摜破月線 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMipwNBVV95cUxQZC1wY2hFYW5iNmk4akZWWkwtaWhTVmVZdms1YXhhSnE4eUFFWm50dEJPN3FILUtUSXVyRnJWM2I4NXRoTUpuaGNnbkZlSWlIMnpraEdPZnlocVZSWHg1RlBvMHBmZ01OT216Ri01T2lRMVFUQVphWFRYTGpQN3VDZEIwOXhZOE16Z214a2d0MHNFSG9QR1QxbXNISFo1Vi1tcmc2c3NsOEtjc3JoU1FScGd6cFpEaE1VV1B1aWp3bVBhWjhhUTJtc2hQLVlzX2xCX3lZbnlrMVZLOXc5WUpkWnhlYzNYNl9ReThtVi1WTWpiXzV5OGl6T3pIOGloZ0RZcEh1RjlqZWt2R19pVWxkeVZ1VDRHc3RnZERRSy0xczk1cENrNXV1YVU4aFhJY19VYk53UWpCUlBJb3Y0VTdsRmJHTk9hRzh3aUZwZHFha0djZUdkeEp5UG5MbXMxa2hZQ3NOZlgxNnlfc0NVclZqdXhfS3pvOThYTjZpTktqQWNiaUdIWUV0SEEyVkRVMVJiYlVFQTNaUXNTWEdNcFNRbFNtbUwwWWc?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-15T11:22+08:00",
+      "importance": 4,
+      "risk_score": 2
     },
     {
       "title": "美國9月CPI炸裂！費半挫2.2％上演連6跌、台積電ADR摔1.5％ 聯準會升息疑慮又起 - Yahoo股市",
@@ -99,78 +99,78 @@
       "risk_score": 2
     },
     {
-      "title": "川普「暴雷」台灣砸1400億元包下20年阿拉斯加3成天然氣 經濟部證實了 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMitgNBVV95cUxOMU9KREpfdERLNlk1UWhHOXFCS1JjQkNjUUF3Vjc3elpKdEVqQ3NueHpidW5uTktUSzlYSVdjZFR5anRTY0dsaGNDNEt6THpQek00R0FkdGhDLWFGanlQdXFWYnhPSE5TWjdSOGQ2SnliUmFfR0lUZ3FPMlNDQnBzN3l6SWpUdjFnby1ZSHNOMlZFSnU5c3JaQzcxbWYzTVV4SzNfOHBNLVR6ZXI5eDZmaXY1LXhjalRDMU9XdW1OYnp4WWlsRTU3bGlKRVNJdGEwc3JEOFFwdmNZMjlmdThkQ0RkT3hncmpFc0JMRWJMN1lYN0R2cjZrMGNXV05CeTg3VGhSejd2ci1MS2ZVeU9fU201aXVtci1iUUFxbi1NVVJCNGJFNlFVNkhzUU1XcW1QTWNyWmh4djlqT0xtZmQxU0t4cjZtTUJUTEQyMWJiSnF1bExMRzRZYzFQeUs5alpveDFjb3Qzd1FJWWRKVWtwcGg0b3lMT2tiWkpxZEE1WG8wVWRHdVRKbkhXdlJKTmstUUd3TUl4bHItemJOUnI5dWZQQzBuVUdMOG15V2ZjTjNaQzNaOFE?oc=5",
+      "title": "連2天提台灣！川普點名台積電：不久前才與魏哲家通話 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi4AJBVV95cUxQZ3JSQ0p6SHRxdEp3UmcwNzQ3SmthZDczTV9zNFZkY1FWTkdyc2IyaUI3U0F6MnpXYkF6UTZySi1qT3Q1S3cxYmN0OGNsSGlFUUdnQ3J2eWdpYjdxaUZ6UkluV1gtMUVFYmU3bWVfekV5WUp2a0M3blRYNHd2SmFXX0JMbWw1MzhpQU4xaHp2Mnh5WTVyQkc2WDZ6T1pSOU9pV2pEbW5kN3poZGdiZE5xVkNMemV0LWhpT2hmcXZ3NDRmZFFOOFdfYkZZSzRYMmJLSlAxcWFURnJCSnRTVHdSQkctb2QyRUpOUXhCTjhEQ2dnVjZQWjFjSUU0SGU2RXZCdDRrZ0FDbG1vU3RTcjlCX0NhV2xzYi16SGFyTThuQXpPdVdJTFlxdnNKU1RIcVFaMlFkWDhBb2c1ZXJvV1UzaTJjRFpaNWFaVW1sdW5tVUE2SVBzSHNrNjZnN09sdG1l?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-10-14T12:39+08:00",
+      "published_at": "2026-10-15T13:00+08:00",
       "importance": 3,
       "risk_score": 0
     },
     {
-      "title": "輝達、台積電ADR跌逾3% 通膨數據加深晶片股賣壓 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiuwJBVV95cUxPay1SeUY0bDYwZy1OTUJDNDNMWVRWV3prNllKY2VsOGJyOTk0NU12ZkVuYnhSaWlTdUR6b0dEYTNTUTNXOXVpV1NXVjZSNTNYb2VJSkhONWR5ZnN4Z1ZPLTlTVDBidllTUV9YNUsyYTMxcTkzNDRDSDg4QjBwTEtSeUJPYW9tLXVqRkFJMFBCa0dkMjVVSjExSzRvU2VwcGlEUHhKakZhd1h4UFlKT25JeTJYN0tFd0tnREcxdUplSVVhdG01OV9ielBCU2h5eHVNNUJVTTdFcmpoNklVcFhUMlFMQ2t2Ui1tNFRDa3V2RWMtMERGNjJ2d0VJRWRmSjJLSE9rcllSY0pZZFFwaVNWbWtRVmN5cWVFWXhLNjlyQ1VqelNEWmVQcllEaW8wcFRUTE5ESE53alZpMHc?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-15T06:21+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "貸款1千萬買股票！他曝1年後「資產3370萬」超驚人 網傻眼：超猛爆賺 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi2AJBVV95cUxQYnJCemt0bGFZZGNHdGY3c1c4VkstVFVVN3dIeXJnc051eXlOTy1oWDFRdmJFY0hCalFMSFBlZk40NzRxeDlZQVBkVEl2TVdiSTdiREJSVlhwaEFUVEVRY2hxVDV1d2t5NElPc01FLTFiN2NPRWVqRVdVbTdMRnZkTllHNDI1ZVprbmtTeTQ5emwwYW1Fb2JFckIzZEQ1dFhBLXUzNE9ZcGxkVnJDcUNOSDJKcm9UZzU2ekx5bk5VQnM4SVlsajFUaHJtVThic2hCY09aTDVLUk4ybGxLREFFZHJ6V0V5T09vdGRRR3U2QjFmZTFyNEVUd0tjLXRHTmY0WWZkc3lhZmVhTExwa3ljamhZVHU1SEc0OFBmRW5OWWdWRWthcDFtXzN5UW9sTmNTREM3VzBVQUl6Uks0TUlkZWl1cllJZzNZV0hfcFRJMHFaSTVPV29SaQ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-15T06:15+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "輝達、超微、蘋果爭相下單！美銀：台積電2027年產能有望提前達標 2奈米營收貢獻升至11% - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMihgNBVV95cUxNclg2QUtZV3g0aVFFMDhPWW1Gekl5aXFyZ3ZNSFBXVU5iWExkSGdOR3N1dWFIcmZZUktTXzViMllLamhPcFRzSEE1bXpoT0ZKOF9mRXQ5cHNKaURjREpBcmFwLXhPV0FxUjNRVFRaR0I2YjlnR3hRcXlnSEJobGlvdGdXcEFtWnVhSjN5X3NBTE8wckx1UUVGTlRfSFBOblI4S092ZUg0c1hmM0Z1YXhESVlwMHY3ZEFyWnZTSFVESDdSdTJxeFdQYlo2M2I5UXl6VUFEbmJLOFZpalZpa01BWmVnX0QzTmt3Y2dFNWNVM2VZcHVWUm5TaFpZVnR4R0s5NWQxVS1xRTBlSkdRemNmM2JXTUZJVGZ6dVJLdnVRd29rM2JzdzhqX21sNE45STM3OE56Y2dKd1BTbjdFQ2pIZkhOdnYxeFlWVU9NV0l4U1NVang4S3pSMmpFQ0RvTlJjdUx2NUhtTmE1UFFLWG5CYUZHcTFnTlR0OUQyd1ZieXFzcnpNaXc?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-15T06:10+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "外資持續倒貨 台股多空對決 三大利空恐引爆？專業分析看這裡 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMilwNBVV95cUxNM0MwTjVPODJMdjJYWGwzYUV2dFBjWTBmdkk0bnZ6QTZHeVVkaDZrWHBCdHVUUGxodnBfelFrRnJHVHcwMHNvMm4yQ19qUnFuM2JKNTZiMTZKbWNXcjNCeExhVmhGM2ltcWk4SEpmZjhzdy1NQ3ZiRlYyTjE5Tk9qVXl3M2t0RmVYd3gwY1V5SGtDWkluT2JuM0F0VkZWMTltYXNrd1FMVWZhRVowRGxzdVFaN0IwYzRMSTJtZTJ1R1RlX0lEZ0xuZjJ5WU5INmdWbXBUbUZZSVk2aGtmZ1UxWlBYS251RFpsd251RTgtWHNhLVBLb3prOEozX042VkFGLURXUTFaVGNuZFZuMGxFMld2c0UzSHpYLVY4NUJYbVBHcFREaHlNUFg0dWtxMFU0RnhuOTQzMjRTanhzYTU4cVlLT0V4RUd4YWpkOVJIamsxMmotOS1EM0lQRkxNclpqRU40dHFJcWtuZ2hTR1JqMXNLdGg1OWtZSWN0Z0NKSkJMLTVkc3B6VERmbVBnOHFWcUVUcTBoYw?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-15T00:05+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Although buying initially led the market, shares in the semiconductor sector were sold off following ASML's earnings report, turning the market negative. - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNaHkyU1lNT2IwVVlkaGNXbXlOVmlkclptX2UwLUM1RFUtR1pPNlRNYVp0QXROaVhGbXJ5aEM5OFJxT20zbUZTQWJudUhFeXZBZm9BaS1xc0FhUmZBdnpYNERqVDA5alZnUU1KU0JuSGlVVzZVYzVZRlQyZl9SVmZvXzVTUmFmcGdyMGROb0taa19VemozYUV6bzdlTHgxcUx1MFo0N0V3RVlFRjRRV0FOcw?oc=5",
+      "title": "Global stocks plunged as capital returned to U.S. Treasuries! The 10-year yield fell to a three-week low, with October poised to record its strongest performance in 12 years. - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPNHdYQVFUQ0FhSUtDWnF1aXlhUXZlVzJEV3lhemp5NExWcjloVXpkU3o4c1A5VXlrN0xkMU82WG9CX1FHTkhVNnZoUmx6RWI0OFVxSk1ocF84U0N3MHZCTk5pU3RHMUdxV2tyMVNHblJWMHlLSldVMDhYZDFKWTdLcWdHWE8tX2xSaEVPUmZHMnAyUnBwbGo2ZUhQMzRSNDlQclh5NjF5blY?oc=5",
       "source": "富途牛牛",
-      "published_at": "2026-10-14T23:21+08:00",
+      "published_at": "2026-10-15T12:27+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "Hong Kong Stocks End Mixed as AI Concerns, Higher Oil Weigh; Standard Chartered Falls 4% - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNd2Y4THRsSGM1X1NwQW5CTXVtLVplb2ZXdXNWQjFvYmoySHAyaW1sS1hUZDZMS1dIOHJ3ZHBhSGZXMFB1S2RLVV8wbVRJWS1lS1VTZ0kzVEs2WElvTHNFYXBTaEpBcS03cnNtYkF4TGJ2N2Voc1BQSFdPUWNXYU5BMm1YejZDY01JMmxtYi1EY2dJMnFHaUdDMFQtYw?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-14T23:17+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Technology stocks continue to decline; Goldman Sachs: Who stepped in at the top to buy U.S. tech shares? - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOUkhEekZhYktQYVZreGRNaE5HdkREQ25DQjlPd3ZtYTdNVzhQX0I5aUI1QU9lWFR5RlZfcC1hSXkzUC1YcDZiWTNXZklOdWEtOUV5YTZoSmhFbHBYT3U4STV5QXZQRmZiLXZuVV85R2ZWR2J4Z0VJMkpZZU1MQUFoaXZHbzFBVEFmcEZWVHA5YzduT2dkUFgtSTFUd1dvOElUMHcwU3MtZXBzTFNvalE?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-14T21:05+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "〈台幣〉台積電法說前夕市場觀望 匯市高低洗盤1.5角微升1.2分 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi-gJBVV95cUxOY202VndTcWk0bkpOSGhzODVydDBPV0Q5SkxNZ1FOMVN2d0YtMmJUSVZna0JMa2YtNVNOai1hR09MS0lOTzZKeHVNVUx0aUlBVVozc29JaUNmcDRaLXVEU2NIQ3dFVlk0Zlh3WmFoVi13U0xrN3Q4NWhzN1pDb3RGMGNRYkt6U3dyWml0UVJ4REJrc21NY2RxVVJ3LWotZzlnVHNKSm1WRlF5M2VuaFYxcjJfc2N4MGIxb0ZTQjF5d255ZGU2cEdyUVFPMk1aZzdZSVFQZEE3TjU4NmktYkhBeVBnc3NWODlSN1EyVUJIb29meEZ0WDZjZVprZ0ItTXh2U0pDelR4bkdka0tMbmZocmR5S1hRYjR4Zkh5Nzl3NW95UkJMY1gza0pkV21UaFA4aU13MFdEMDFHVDlDbHlRQV9SNUdBS290aklDLWoySFB4WDJ6NjhCbkhheDdmTGs1WUpTRUI0OC1abmNWRTh1ZnlYRzE0QUQ1SFE?oc=5",
+      "title": "台積電股民注意！法說會前股價挨刀下殺70元 外媒揭近4次財報「3次不漲」驚人紀錄 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi5gNBVV95cUxOSllfZkhLanRLY0JlcVhjMlZiOG9HVEtyZmFDQVNHSWhIZ0tRRVRNenc3RURoQThYZXhIUC1pcGMzVk16QldrUUNrM2JuZjNJdm1pMEJvamJoOUlKaW93REVRUkIyVEpRdlNOR3RpQ1Q1LXpEODEyTk9WLWxGdTF4VVJtZVhVaWFhYUlEZ0JmaGdNT0tES2dQeno2bUpPY2RsTHYwUlB3V1VfTlV2MHVROEIxajRDRlY5a292UWJ5amVyU2J3cjVqU1JxckdYM1pvSWo1VjUwdk9WWTNPdnFyMXlFcFpWSGk4MUVEQk04a3hQeDZJb1pDQXl4QjB6c1BPMVowT19wWXRXYlctSjRZT21STWhBa3dGbGxOaWZOSVpPTWRhQjhXWE56MmZKWjRwbGhxVWZ4X1MyenU4MC1UNkg1dVRZSkxvSVMxOTN6elRhX0pZbjJRS1dUNTdnb1Q3by0ta0JKZjNhZV9yVG5relJoampJbjM2WlY1cVBoUHoyTUl1S2VZTmhCS0RuRk53ZFNhenNna2hESW9KSl8wYkRkWlI2MWJldW1HaThMTHJiZXM1LTJRV19vQm4temhWN1hWZGhEVzNxQnFoUzdtX3lsOFBLeWdhdlctX3l1NExXbDBzWHc?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-10-14T19:44+08:00",
+      "published_at": "2026-10-15T12:02+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "312億元台股ETF股利今發放 00919配發金額最多 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMinwJBVV95cUxPQl9EcnJKckdrSnVGd09scFZnSl8xSmRGMG9fb2FGWUFmS011dTNTTHYtRFFiMkxucndveF81T3F3VjlZM3RiNGZITm1zelRzWlJZaFFMMnc2bldNdGEtZmUwdElRaFp1SHR4Y0VrdjR1VGxnby10cGk0X1d5N2I4bU5SLUluVGFkY3k1ZFR0WmFhQlptVlVhcmhiVnhaalFZaERQTVo1dlN3aGRNMzZxM0kzQTlPM1JjOWd1MkN1UFZmeF9xS2FVWnNUMGtVcGY5azVheC1faFNEX0YzS3NyQWRndU9iV08tNEhmb2xYRFhTTmRPbHRnWTFMU1JmVC10UHpVYWd1SUhLS1lvNWFHRlpiN0tnS010NjJzX3RyMA?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-15T11:51+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "【Hot台股】台達電7天狂洩23%...網無奈「最新市場聖誕樹」 分析師勸：先觀望 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMizANBVV95cUxOcG9aSEFITmtfOVBNMjk5ZFNpODQ0Znp2R1dYYkhYT1Y5WGtiWC1zd195cEdKb20wbGIwN1FlbzNaRUN5cWtCamRfSS12UTBTM3ZJVUdTdS1aOUs1NXpGZXFfR0ZDMThpX1NwLTRfOVlvTE9JQVlLUlFMY1FpeWhLOGNOblhEaGQ3Qk01S1hRZ19nUVlXYzlLcmhhbldRVmN5YldkREVsRFAxNi1QOWpsVXFoTUFpNHl3YmZxZzdJaFVsVTRnSXdXZV9nczhCcnd1ME4tbmFHSVNHM3RMSFp3YnFteE5sYUE1M0VKUFVYQVN6Y3BkTEY5WmtnaFhyUVpSdmxmRG9WVVEyTm4tY3Y2OGRlV25WdjZ0cWJFeHVfdmtnb3g1TDhHNFFyWnJVN3NpaXNYZXlrYXl2ZEVWaHJ1eFg2bVZJQUJZVjR4NFdzdmN2am9LX082NVhFNkozQ2hWOFlkeHhzRWJWdGxrbHZsc2NySWJnZDJMRmhsbnkwX0xPUWNVZWg0VVFDWXpJd2lTVmtYVlUzX2lNeVF2cU1ZcVZUSG43Z0x1Z19rejhEX3Y3N0luMzE1cDU1aEhtVnpEWDlsWVF2bnRHamZl?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-15T11:51+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股崩跌至4萬6！「面板大廠」出現甜甜價、大噴22萬張奪成交王「塑化大廠」連6漲30.34%後慘摔跌停 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiqgNBVV95cUxNZ0NHa0xNaWxXQ3IxTDdqcExqOXFjVS1ES2hOOWs4cHB3Z1RXZUJIXzl3aHM5dGowQ241WE12T1dmaFVsaVB6TUN4LU1FMXhvWUJRb0Ita2xlSWFtdjd2V2VpaFMyRkZsNUlqRnBQSHNycWJ3ZUctRE9xV29ZSG56dHdVd0hxUllmc1YxaWhuX1ZaM28wamY5S3FWUWtuWmJBTWJvbTdmQ1MwZ3FaNWtLZGNLdTFpTTMwMUg1dS1mZUlTUV9TQkVsVFp5NmFuUllLd0trSGtDcHROaFpnOGxieDc4ZzRYQ2RpWWJKQ1RpbDZ0VWtiN3dsRnVnaWR5SkdzYTBIbXpZQUJFNHlWM1BMUW5BZDc0VzE2QXlJRHpxUHBPZGhld1BROU5uczFOLW90MFFycnp2OFNaNi1XbDVJTFhZZ3V3TVUwRlY3TXhLN05NZ09jbVdjTW95YkpualU4NVJJYTktUW1yeUdKai1Ca1lqRk5ncjQwalVrNnpGcVk2c0pXcy1XdzlLTWFQVTNTQ0UweC05eHhNOXRzWWVjMVpEOVRaQWNvS3c?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-15T11:45+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股挫逾1600點、5兆元市值秒蒸發！等同少掉一家台達電 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi9gJBVV95cUxOdUx1MUkwX2dpNGduOThxTjA0R2JnRElMZEdmbWRuZFhkOVB3MU90STQ3QlhBVDBIMWhmRXc1TUY3Z3FCTmx1eUZNVWQ1WXZ3SkRXeUVqUUhhOTZCVENKRWZMYlVMUlhqTG5JMFFIdnpPY3hwblA1aURGYk9KSnE4YzdYYjlsZk16YTdsbE5KcDlOaXI5VTNIR0xwX2JiNVhCNDhWcGNLN2JyRkZxWDg1VUtnM0pDSXJsZUFOR1BxdU5jWnFpMHBNUlk1b0NraFRza0tyMzZwUjQxaWNwWkNrQ3d6Ml9XRXNieDBtUHRwaWVjLVhpVUhMVHByUWExSDNYcVB5SWdGNHZYVERtLU0wMElmWDI4OVdnNFVHYUdCbnQtME16eFVpMHhWYkZDWTVhaHV1VnZRMjJvb3RxTXVpWkl1ZXdDWWMxejVyNDBQZTJMUW4waGhmU2MwSlhfbFV2NU1Lb0VraWhRa2NJWmM3MEhtRWx0UQ?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-15T11:36+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "渣打攜手摩根大通推跨境股票質押 台股引資添新管道 - 鉅亨網",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9fTnR5Tkppb05FTkRHSVhwTHFCZVdwWGtxa0E4QjRrU21SREFlTm1JOUlLdmNNWXJTZkgteGduU0F5NUpfY1puRFg3clBtUEE?oc=5",
+      "source": "鉅亨網",
+      "published_at": "2026-10-15T11:01+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股遭空襲重挫1300點 多家內資看好權王下午法說穩信心 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi9gJBVV95cUxQQkVJcmJiUlBnR3pOYW1VWGVRQmpwaTRVTl9jNnBva280RHhuYWlKdDM5ZVhRWkZuTzZKNkp0UnExalNSRlhBUEc1a1l3c2k1VkxmQjlFcHhuVkxBS0J2X01sb191aUl5TEtQZ01UdVlzRno5MWhmYlBMekF4bHpfNTFGYmNzZ1F2akI3WWtJWEgySlVkQ3BEZEtSaDI2amZrbXEtZkJQNlpOWVhRN0pUUlR6amItcHZQS2hGbUFqNElLam9GS2dRZjRnZTRHaWhZSjFRZnNpWFpyMGMwYi01MHFhdDNRM0dYUENCOUx6ZEgtRDVQNU9MS1ZIb0NWZ1F3aDBmdUZiSk1SUnM0T09BMGJaZkRZTzduRHAwdFo0cExETGItTGd0VnBKQ2FIZU9BZE1GcGVud1R2Q2lWbjhYN1hiNzJIS0JSZmlWLUMtX3lfR2I5cmhFTExsR29pcjFkWHM1UnhOa0NCOUhqd0o1a0FSckhLUQ?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-15T11:00+08:00",
       "importance": 2,
       "risk_score": 0
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-15T08:37:24+08:00"
+  "updated_at": "2026-10-15T13:06:56+08:00"
 }
