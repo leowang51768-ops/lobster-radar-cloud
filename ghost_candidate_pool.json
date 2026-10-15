@@ -1,7 +1,7 @@
 {
   "version": 244,
   "target_date": "2026-10-16",
-  "generated_at": "2026-10-15T21:38:04+08:00",
+  "generated_at": "2026-10-15T22:26:20+08:00",
   "source": "GitHub shared lifecycle D0-D10",
   "price_source_date": "2026-10-15",
   "calendar_source": "TWSE官方開休市日曆",
@@ -21,14 +21,14 @@
       "price": 94.7,
       "support": 93.9,
       "distance_pct": 0.852,
-      "score": 71.95,
+      "score": 76.95,
       "score_source": "cloud_daily_snapshot",
       "score_parts": {
         "breakout": 95,
         "pattern": 82.8,
         "macd": 20,
         "volume": 100,
-        "chips": 40,
+        "chips": 90,
         "macd_source": "daily_MACD_proxy",
         "price_source_date": "2026-10-15",
         "missing": []

@@ -1,18 +1,18 @@
 {
   "version": 244,
-  "generated_at": "2026-10-15T21:38:04+08:00",
+  "generated_at": "2026-10-15T22:26:20+08:00",
   "target_date": "2026-10-16",
   "score_date": "2026-10-15",
   "stocks": {
     "3013": {
       "signal_id": "2026-10-06|3013",
-      "score": 71.95,
+      "score": 76.95,
       "score_parts": {
         "breakout": 95,
         "pattern": 82.8,
         "macd": 20,
         "volume": 100,
-        "chips": 40,
+        "chips": 90,
         "macd_source": "daily_MACD_proxy",
         "price_source_date": "2026-10-15",
         "missing": []
@@ -29,13 +29,13 @@
     },
     "3406": {
       "signal_id": "2026-10-05|3406",
-      "score": 67.65,
+      "score": 73.65,
       "score_parts": {
         "breakout": 80,
         "pattern": 86.6,
         "macd": 20,
         "volume": 100,
-        "chips": 40,
+        "chips": 100,
         "macd_source": "daily_MACD_proxy",
         "price_source_date": "2026-10-15",
         "missing": []
