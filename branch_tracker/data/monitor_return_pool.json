@@ -79,8 +79,108 @@
       "reason": "pattern_invalid",
       "permanent": true,
       "continue_branch_tracking": true
+    },
+    "3706": {
+      "code": "3706",
+      "name": "神達",
+      "first_returned_date": "2026-10-15",
+      "last_returned_date": "2026-10-15",
+      "last_signal_id": "2026-10-12|3706",
+      "reason": "pattern_invalid",
+      "permanent": true,
+      "continue_branch_tracking": true
+    },
+    "8046": {
+      "code": "8046",
+      "name": "南電",
+      "first_returned_date": "2026-10-15",
+      "last_returned_date": "2026-10-15",
+      "last_signal_id": "2026-10-01|8046",
+      "reason": "pattern_invalid",
+      "permanent": true,
+      "continue_branch_tracking": true
+    },
+    "4958": {
+      "code": "4958",
+      "name": "臻鼎-KY",
+      "first_returned_date": "2026-10-15",
+      "last_returned_date": "2026-10-15",
+      "last_signal_id": "2026-10-02|4958",
+      "reason": "pattern_invalid",
+      "permanent": true,
+      "continue_branch_tracking": true
+    },
+    "6187": {
+      "code": "6187",
+      "name": "萬潤",
+      "first_returned_date": "2026-10-15",
+      "last_returned_date": "2026-10-15",
+      "last_signal_id": "2026-10-05|6187",
+      "reason": "pattern_invalid",
+      "permanent": true,
+      "continue_branch_tracking": true
+    },
+    "6290": {
+      "code": "6290",
+      "name": "良維",
+      "first_returned_date": "2026-10-15",
+      "last_returned_date": "2026-10-15",
+      "last_signal_id": "2026-10-14|6290",
+      "reason": "pattern_invalid",
+      "permanent": true,
+      "continue_branch_tracking": true
+    },
+    "2368": {
+      "code": "2368",
+      "name": "金像電",
+      "first_returned_date": "2026-10-15",
+      "last_returned_date": "2026-10-15",
+      "last_signal_id": "2026-10-14|2368",
+      "reason": "pattern_invalid",
+      "permanent": true,
+      "continue_branch_tracking": true
+    },
+    "4977": {
+      "code": "4977",
+      "name": "眾達-KY",
+      "first_returned_date": "2026-10-15",
+      "last_returned_date": "2026-10-15",
+      "last_signal_id": "2026-10-14|4977",
+      "reason": "pattern_invalid",
+      "permanent": true,
+      "continue_branch_tracking": true
+    },
+    "2312": {
+      "code": "2312",
+      "name": "金寶",
+      "first_returned_date": "2026-10-15",
+      "last_returned_date": "2026-10-15",
+      "last_signal_id": "2026-10-14|2312",
+      "reason": "pattern_invalid",
+      "permanent": true,
+      "continue_branch_tracking": true
+    },
+    "3580": {
+      "code": "3580",
+      "name": "友威科",
+      "first_returned_date": "2026-10-15",
+      "last_returned_date": "2026-10-15",
+      "last_signal_id": "2026-10-14|3580",
+      "reason": "pattern_invalid",
+      "permanent": true,
+      "continue_branch_tracking": true
+    },
+    "6257": {
+      "code": "6257",
+      "name": "矽格",
+      "first_returned_date": "2026-10-15",
+      "last_returned_date": "2026-10-15",
+      "last_signal_id": "2026-09-30|6257",
+      "reason": "D10_complete",
+      "permanent": true,
+      "continue_branch_tracking": true
     }
   },
   "version": 241,
-  "updated_at": "2026-10-14T21:53:29+08:00"
+  "updated_at": "2026-10-15T21:38:04+08:00"
 }
