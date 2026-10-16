@@ -12,13 +12,13 @@
     "⚠ 全球市場風險｜費半 -4.7%｜NASDAQ -2.1%｜日經225 +1.4%｜KOSPI -5.7%｜台股加權 +0.3%｜恆生 -0.5%",
     "⚠ 全球市場風險｜美債10Y 5.10%｜VIX 20.0",
     "⚠ 全球市場風險｜Southbound Capital Flows | Southbound capital recorded net sales of HK$3.568 billion; increased",
+    "⚠ 全球市場風險｜星期一慘了！台指期夜盤崩跌1144點 台積電期貨同步跳水",
     "⚠ 全球市場風險｜Tesla, SpaceX, CoreWeave, Lam Research, Netflix, Strategy, and More Stocks That Explain Today's",
     "⚠ 全球市場風險｜Stocks mostly bounce back after rout fuelled by AI angst",
     "⚠ 全球市場風險｜Traders maintain expectations that the Federal Reserve will hold rates steady in October; U.S. ",
     "⚠ 全球市場風險｜全球半導體巨頭入列 低成本ETF如何配置台積電、三星、艾司摩爾",
     "⚠ 全球市場風險｜美股費半連8跌續挫200點！特斯拉「飛天車」逆勢衝、記憶體又倒地 台積電ADR摔1.7％",
-    "⚠ 全球市場風險｜億達中國(03639.HK)9月合約銷售金額約0.61億元",
-    "⚠ 全球市場風險｜HKEX Releases \"T+1\" Implementation Roadmap: Timeline Pushed Back to 2028 as Market Requires Tim"
+    "⚠ 全球市場風險｜億達中國(03639.HK)9月合約銷售金額約0.61億元"
   ],
   "markets": {
     "US_SOX": {
@@ -80,6 +80,14 @@
       "published_at": "2026-10-16T17:54+08:00",
       "importance": 5,
       "risk_score": 4
+    },
+    {
+      "title": "星期一慘了！台指期夜盤崩跌1144點 台積電期貨同步跳水 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi4AJBVV95cUxONUdRRndOWnlRbkhvUS14SjJsUEEtMjBSR2R6NUpnUHRNRC02Rm8yX2lkaVZRdTJXYVAweEZXWWk0ZjdqVFdFbjlaWEpBaDB1X3VSVDRWdFdlSUVLNmdaQkI4dVgyelUxT2pKX0xwSGI1dzdOdE1FRXFRSGZqOXF2X2UwR2UwdVlmTk1ST2tZOU5yZDBLQmZGMXU2eDNWdzEwNGYwMnN3N0ZDMndhQkMxaXRHaGU4VjZ5TFNnMFRmaHhQYk5KcndTdUtoSkMzWlc3Z1NGRWZTWFhLeUpEQUIzMFFkU184S0FqQmV5VnhJNHlwODJOSVZYVmxNN3E3TDJTYUZVLUtjOVRWbk1HcXBOaWFDMURwRHZPSUZQSDc5OWhqZ3BwNGpJWm5vQi1EeTVibFp4YXNWNWhJV3ZJZDNDNnZucEZOaEREMkppNW9wdDV1cnoyRmtPUEhKZ1ZlR1Bt?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-17T06:33+08:00",
+      "importance": 2,
+      "risk_score": 0
     },
     {
       "title": "Tesla, SpaceX, CoreWeave, Lam Research, Netflix, Strategy, and More Stocks That Explain Today's Market -- Barrons.com - Moomoo",
@@ -160,16 +168,8 @@
       "published_at": "2026-10-16T18:48+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "Tesla, SpaceX, CoreWeave, Netflix, and More Stocks That Explain Today's Market -- Barrons.com - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOZ0xFVXlsVGtoQ045TndjeEhLcUR5b2VBb05Wdm9qZldUUDc3eXM1TWFUa2tDcWhYcVVLSU9IQkYzZ2pxODhoSDJPcTBKSi16S0Y0SERnalFiZWFiY2VjLVQtd3d6RFJ6WkotbUlTdFhGMG9DM240VXN1QjNVckV1LVdkcERfZXdGS3c4OE5LM0hNalM1dkZTakxUdnVTRXktZG45Vzg1azVuQW52?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-16T18:28+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-17T05:47:56+08:00"
+  "updated_at": "2026-10-17T07:56:08+08:00"
 }
