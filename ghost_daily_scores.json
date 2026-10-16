@@ -1,6 +1,6 @@
 {
   "version": 244,
-  "generated_at": "2026-10-16T23:10:30+08:00",
+  "generated_at": "2026-10-17T00:58:10+08:00",
   "target_date": "2026-10-19",
   "score_date": "2026-10-16",
   "stocks": {
@@ -75,13 +75,13 @@
     },
     "3406": {
       "signal_id": "2026-10-05|3406",
-      "score": 73.65,
+      "score": 64.65,
       "score_parts": {
         "breakout": 80,
         "pattern": 86.6,
         "macd": 20,
         "volume": 100,
-        "chips": 100,
+        "chips": 10,
         "macd_source": "daily_MACD_proxy",
         "price_source_date": "2026-10-16",
         "missing": []
