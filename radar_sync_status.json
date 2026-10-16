@@ -1,8 +1,12 @@
 {
-  "trade_date": "2026-10-15",
-  "data_date": "2026-10-15",
-  "generated_at": "2026-10-15T23:35:38+08:00",
-  "selected_codes": [],
-  "active_count": 0,
+  "trade_date": "2026-10-16",
+  "data_date": "2026-10-16",
+  "generated_at": "2026-10-16T21:26:35+08:00",
+  "selected_codes": [
+    "2312",
+    "2377",
+    "6531"
+  ],
+  "active_count": 3,
   "radar_policy": "型態與量價；監控負責綜合評分"
 }

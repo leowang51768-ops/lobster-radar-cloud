@@ -5864,10 +5864,31 @@
       "support_lower": 109.5,
       "support_upper": 109.5,
       "support_source": "近5日低點"
+    },
+    "2312": {
+      "Price Action": "PriceAction:2026-10-16:20日破底翻強攻",
+      "name": "金寶",
+      "support_lower": 30.3,
+      "support_upper": 30.3,
+      "support_source": "近5日低點"
+    },
+    "6269": {
+      "Price Action": "PriceAction:2026-10-16:20日破底翻強攻",
+      "name": "台郡",
+      "support_lower": 60.3,
+      "support_upper": 60.3,
+      "support_source": "近5日低點"
+    },
+    "6531": {
+      "破底翻": "破底翻:2026-10-15:876.0-878.0",
+      "name": "愛普*",
+      "support_lower": 876.0,
+      "support_upper": 878.0,
+      "support_source": "A點：破底前60日重複收盤價支撐區"
     }
   },
-  "updated_at": "2026-10-15T15:35:27.059971+00:00",
-  "latest_trade_date": "2026-10-15",
+  "updated_at": "2026-10-16T13:26:17.585805+00:00",
+  "latest_trade_date": "2026-10-16",
   "layer1_candidate_count": 187,
   "stage_counts": {
     "正式試單": 1,
@@ -5898,11 +5919,11 @@
   },
   "strategy_version": "龍蝦買點-v14-破底翻+PriceAction",
   "four_point_rule": "已取消",
-  "candidate_count": 37,
-  "formal_buy_signal_count": 0,
+  "candidate_count": 41,
+  "formal_buy_signal_count": 3,
   "route_counts": {
-    "破底翻": 33,
-    "Price Action": 4
+    "破底翻": 35,
+    "Price Action": 6
   },
   "exit_warning_keys": {
     "突破後站穩:2026-09-16:69.90:假突破觀察": "2026-09-18",
