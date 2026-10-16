@@ -179,6 +179,38 @@
       "reason": "D10_complete",
       "permanent": true,
       "continue_branch_tracking": true
+    },
+    "3374": {
+      "code": "3374",
+      "name": "精材",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-10-16T19:22:59+08:00",
+      "reason": "manual_add"
+    },
+    "8039": {
+      "code": "8039",
+      "name": "台虹",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-10-16T19:22:59+08:00",
+      "reason": "manual_add"
+    },
+    "6531": {
+      "code": "6531",
+      "name": "愛普*",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-10-16T19:22:59+08:00",
+      "reason": "manual_add"
+    },
+    "1301": {
+      "code": "1301",
+      "name": "台塑",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-10-16T19:22:59+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
