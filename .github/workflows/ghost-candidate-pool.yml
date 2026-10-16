@@ -1,86 +1,12 @@
-name: Ghost Candidate Pool
-
+name: Ghost Candidate Pool (Retired)
+# Local Ghost 286 owns candidates; historical files are preserved.
 on:
-  push:
-    paths:
-      - 'lobster_tw_6m_prices.sqlite'
-      - 'breakout_tracking.json'
-      - '.github/ghost-candidate-trigger'
-      - 'ghost_monitor_events.json'
-      - 'ghost_lifecycle.py'
-      - 'ghost_state_sync.py'
-      - 'ghost_candidate_pool.py'
-      - 'ghost_tests/**'
-      - 'branch_tracker/data/monitor_branch_feed.json'
-      - '.github/workflows/ghost-candidate-pool.yml'
-  workflow_run:
-    workflows: ["Lobster Daily Price Update", "Independent Branch Evidence Tracking"]
-    types: [completed]
-  schedule:
-    # Taiwan 23:00-07:30 = UTC 15:00-23:30
-    - cron: '0,30 15-23 * * *'
-    # Taiwan 08:00 and 08:30 = UTC 00:00 and 00:30
-    - cron: '0,30 0 * * *'
   workflow_dispatch:
-
 permissions:
-  contents: write
-
-concurrency:
-  group: ghost-candidate-pool
-  cancel-in-progress: false
-
+  contents: read
 jobs:
-  build:
-    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+  retired:
+    if: ${{ false }}
     runs-on: ubuntu-latest
-    timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-
-      - name: Verify shared lifecycle
-        run: python -m unittest discover -s ghost_tests -v
-
-      - name: Build cloud candidate pool
-        run: python ghost_candidate_pool.py
-
-      - name: Verify outputs
-        run: |
-          python - <<'PY'
-          import json
-          from pathlib import Path
-          p=json.loads(Path('ghost_candidate_pool.json').read_text(encoding='utf-8'))
-          assert 'target_date' in p and isinstance(p.get('rows'), list)
-          print('candidate target=',p['target_date'],'count=',len(p['rows']))
-          q=Path('today_trading_seats.json')
-          if q.exists():
-              s=json.loads(q.read_text(encoding='utf-8'))
-              print('seats date=',s.get('date'),'codes=',s.get('codes'))
-          PY
-
-      - name: Commit changed cloud outputs
-        run: |
-          git config user.name "ghost-candidate-bot"
-          git config user.email "actions@users.noreply.github.com"
-          git add ghost_candidate_pool.json ghost_daily_scores.json today_trading_seats.json ghost_monitor_state.json ghost_monitor_projection.json ghost_monitor_contract.json branch_tracker/data/monitor_return_pool.json
-          if git diff --cached --quiet; then
-            echo "No candidate change."
-            exit 0
-          fi
-          git commit -m "ghost: update candidate pool"
-          for attempt in 1 2 3; do
-            if git push; then exit 0; fi
-            # Refresh inputs and recompute rather than overwriting another job's files.
-            git fetch origin main
-            git reset --hard origin/main
-            python ghost_candidate_pool.py
-            git add ghost_candidate_pool.json ghost_daily_scores.json today_trading_seats.json ghost_monitor_state.json ghost_monitor_projection.json ghost_monitor_contract.json branch_tracker/data/monitor_return_pool.json
-            git diff --cached --quiet && exit 0
-            git commit -m "ghost: reconcile updated inputs"
-          done
-          exit 1
-
+      - run: echo "Retired; use local Ghost."
