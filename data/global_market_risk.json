@@ -9,42 +9,42 @@
     "出現重大風險新聞"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 -4.3%｜NASDAQ -2.3%｜日經225 +1.4%｜KOSPI -5.7%｜台股加權 +0.3%｜恆生 -0.5%",
-    "⚠ 全球市場風險｜美債10Y 5.11%｜VIX 20.6",
+    "⚠ 全球市場風險｜費半 -4.7%｜NASDAQ -2.1%｜日經225 +1.4%｜KOSPI -5.7%｜台股加權 +0.3%｜恆生 -0.5%",
+    "⚠ 全球市場風險｜美債10Y 5.10%｜VIX 20.0",
     "⚠ 全球市場風險｜Southbound Capital Flows | Southbound capital recorded net sales of HK$3.568 billion; increased",
     "⚠ 全球市場風險｜Tesla, SpaceX, CoreWeave, Lam Research, Netflix, Strategy, and More Stocks That Explain Today's",
+    "⚠ 全球市場風險｜Stocks mostly bounce back after rout fuelled by AI angst",
     "⚠ 全球市場風險｜Traders maintain expectations that the Federal Reserve will hold rates steady in October; U.S. ",
     "⚠ 全球市場風險｜全球半導體巨頭入列 低成本ETF如何配置台積電、三星、艾司摩爾",
     "⚠ 全球市場風險｜美股費半連8跌續挫200點！特斯拉「飛天車」逆勢衝、記憶體又倒地 台積電ADR摔1.7％",
-    "⚠ 全球市場風險｜HKEX Releases \"T+1\" Implementation Roadmap: Timeline Pushed Back to 2028 as Market Requires Tim",
-    "⚠ 全球市場風險｜外資連8賣台股461億元 權王台積電遭倒貨2.2萬張最多、大砍0050",
-    "⚠ 全球市場風險｜The decline in U.S. Treasury yields drove a rebound in European equities, with the pan-European"
+    "⚠ 全球市場風險｜億達中國(03639.HK)9月合約銷售金額約0.61億元",
+    "⚠ 全球市場風險｜HKEX Releases \"T+1\" Implementation Roadmap: Timeline Pushed Back to 2028 as Market Requires Tim"
   ],
   "markets": {
     "US_SOX": {
       "label": "費半",
-      "price": 11181.795,
-      "change_pct": -4.2
+      "price": 11137.287,
+      "change_pct": -4.6
     },
     "US_NASDAQ": {
       "label": "NASDAQ",
-      "price": 26068.979,
-      "change_pct": -2.4
+      "price": 26140.033,
+      "change_pct": -2.0
     },
     "US_SP500": {
       "label": "S&P500",
-      "price": 7639.9,
-      "change_pct": -1.0
+      "price": 7659.44,
+      "change_pct": -0.8
     },
     "US_DOW": {
       "label": "道瓊",
-      "price": 51864.9,
-      "change_pct": 0.4
+      "price": 52002.41,
+      "change_pct": 0.8
     },
     "VIX": {
       "label": "VIX",
-      "price": 20.61,
-      "change_pct": 25.2
+      "price": 19.99,
+      "change_pct": 21.4
     },
     "JP_NIKKEI": {
       "label": "日經225",
@@ -68,8 +68,8 @@
     },
     "US10Y": {
       "label": "美債10年殖利率",
-      "price": 5.108,
-      "change_pct": 0.4
+      "price": 5.098,
+      "change_pct": 0.2
     }
   },
   "active_news": [
@@ -86,6 +86,14 @@
       "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNY1pJVmVxS2cwMlRLRmZEUFlEVHo5XzFoZDdiTWFaNVVPQnd5ZDV1OVpsXzJreU9FUnMzVGJFYkxSNm1tcmtLRkhXeVBXQkJxMG4xMFpMdmVPN09ORjRMemt0Mkp6RVAyTW9qSzZNQ0NwempoaElCd0pxb2hBSldpekhUdl92c3I5NWdwT2ZBYXl0TkE2NWw3WWhoQU5ZNFFUZjNnaTNhc2MzbWFCcHByMXltdkYwcnlI?oc=5",
       "source": "Moomoo",
       "published_at": "2026-10-17T00:30+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Stocks mostly bounce back after rout fuelled by AI angst - Macau Business",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPblprSk1fZTVWRnkzcVRfSzRiUGRUb01aeVJlbzBCV0cwRDdZaGdyRE54N3lLbm5nSEVYSGpzU0RjLXV6ZXFwWjF4cnBGeHJTYS1DOTRvQmFDNTVZSWpRTy1EUE16ZU14Ql9fVHhRV1J3ajFFQ0o0OXNEMG1tbDQyVVNTbkFlajJxcUQ4?oc=5",
+      "source": "Macau Business",
+      "published_at": "2026-10-16T23:20+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -110,6 +118,14 @@
       "url": "https://news.google.com/rss/articles/CBMihgNBVV95cUxQVjBZRlpEMDFtWE1nZmhvZ29iekdmQWtFbkdvNl83X0d6R0V6QndrRVVfanNyajk4eUtIQmNKTVpxM3QtVXc3OEdYOU1OcW1nam5MR29Ha1lXQnZMM2xGdExKajFlRkdzam5jYmNnLVRLVWZVSGQtTURrLUhBVmhFenJDN18xZXYxNnFlNV9ETkt4cDZGR1h4T0RhTU5XWlJ3TEgtWXRsZUlEMEpmSlpPa3NaZHFhNWhRMGdkV04xRjhWemNlZ24wVlNpYzlIbWJBWnhjTURGNElSV255TmFwNWlhNldyeU9UMDFyeEJLOTdZaFIzdUMxWFNvS2pjbFhUcHZKdE9MVzRxWmU1VVUwel9PUGM3MWVCY1NvcFg1SHoxS0g2S1lnWEo3d3d3R2ZBSEtlQjhMYU9TYXRpX1ZhY2I4a0hPNzZaNUItaTR5bWw4dW5jR3VaSlB6RWVxaXJyeUl6c3g0MEkyTnk2N1dLTi1JT1J0cnBhTC1jUVJCSnFGRHpUQ0E?oc=5",
       "source": "Yahoo股市",
       "published_at": "2026-10-16T22:26+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "億達中國(03639.HK)9月合約銷售金額約0.61億元 - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1QdTNLNVBqSUlvZ2FFT2VibU5OWmNNd25HRkxYRERfdG1fb1o5ZmtOZGJhZ0wxRGxQaW9JeUQxTzR2eEJjcXAxVUpoOVZxa3JDNmNjcnhKZGhaeEFwZVdLLWxZcy02MGRfRXlj?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-10-16T21:01+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -146,30 +162,14 @@
       "risk_score": 0
     },
     {
-      "title": "外資提款不手軟台股反攻有援軍！PCB、衛星股雙引擎扛轎撐住4萬7｜Yahoo財經掃描 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi6ANBVV95cUxOZzdLdy0yc21ITm1jQ1J5SmMtbjdaMHU3WXVoV1hxdjIxbFRmTExQUFI5aGNqRHpzLXA1N3JETW8xdHYyaGJzQm11bmpza21TMV9hV0RPaG1TelEzTmYxT3FRcVVZWTFWQi1PTVdaX0xKMXhwOWhUZE96SzR3SXVybnBKQXFmc1hSM0Y5eWFZSHBCSWx3Tk80MEp3RzV4MVVBXzhnTkROaE5KUk85ajhnNXlDUjlfSlc5NlMzblZZdWFqYU5hQVlMVkVqWjhyU3dHajRSZ0xWOTZxdl9Xak02QkFhUmdXdE1ENms0TTE3eFJyR09YSUd2TV8tQ21hNFZuLTFXekdiOHF5NmxSRm1ES05RVEZnQ24zOHJiYVB5b0pQdkNSOUNWYndrY1pEVDh4UDhQZS1rWnhMRTI4cWNMX1dmQWh6cUFUYjB0NUJjZFZsaU1FRXNuek55d1lvVEU1OWNvYnFTTFpVZTR6ZGZ3QTBQd0ViOF9hOGR0TmY3Z01fZjhXMUFabjdoTm1sZjhKWWkxakE3aG5CQVlDTFVUTzBGdU83d0xoY1lHRjhXRmdaak5rSUJtWDFsd1hwMXU5ZVh6NzltLVcxRFVQcmFhZzFjV2ZlcnZtQXJRamQ1UmkwbFhBMkdJQQ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-16T17:09+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "政府積極推動亞資中心！賴清德：先留資、再引資 持續壯大金融市場 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMipANBVV95cUxPYnNidW4tc0pQNU9mSmZlMzN2OU5UMzFOTzRhYndzZDVPenk2emdsbTg1eFNYSVZpUzVBemxoTXpUeWt4amt5TDRPSEoyYWFMNThzRmQ0d3RIeXl2V1lhVng3b19OLXBKNFg2cVdkVGtXVmVacXBIWWt5dUhna2R5bmtYSU1OTlI2a3d2bF9KWFhuNjhzZzY3ZlpPYUs0Q0xDc1NGcWhDWkUzZmRlVVAyd3VxQXMyYlI4S3d5bFJnbS0yZDBBeVBtNkVESlUzY3J0T1l4aVRqOXdkM01LLVhNLU1HckxETGhxYW0wTjdLZHlnbVVBOXE4d1dhTzNKQ3lVODlwUG44WHc4T0E3TTZZMC1sb21KMGlKUGhVUkRGSVo5NmdRNlZPLU43dGxPX0ZrWUFzZHY5N205TGhYOUo1Z0IwVzkyYW9peXN3UUFWajM3ZFR1YW9lamFuTURITm84VlhsSlRsVy1UUGdKZWZveUtJN19NVWRTbnBwNTM5U0hHb3JieVd2MlMzRl9kdFJHUjlPbjFRWk9DYXJQNlBZVTZIQmU?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-16T16:58+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Korean stock market volatility prompts regulatory action: The Ministry of Finance says fundamentals remain solid and is strengthening market-wide monitoring. - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOOHNYUEhOblhUUHpkVktiZDBhZThMQklIcDY2U1JUQk1YMGVBaEpBSG5GUlZWWlh6TXJ1cGRsNTBpTldNY04talBDSHR1RXRmOE11Yno3YThzZGhLNUEwMExXZThCdmgtYnkyVTgxOFVOTFNUNm56Yjk5SEhwX1A2MERMeHJxRUwxdlFGQnhXUUFoaHQxekF2N0RYSGF2SnZ2YlZnTGdEeFdFUE5JWFRXU2tzUDlrQQ?oc=5",
+      "title": "Tesla, SpaceX, CoreWeave, Netflix, and More Stocks That Explain Today's Market -- Barrons.com - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOZ0xFVXlsVGtoQ045TndjeEhLcUR5b2VBb05Wdm9qZldUUDc3eXM1TWFUa2tDcWhYcVVLSU9IQkYzZ2pxODhoSDJPcTBKSi16S0Y0SERnalFiZWFiY2VjLVQtd3d6RFJ6WkotbUlTdFhGMG9DM240VXN1QjNVckV1LVdkcERfZXdGS3c4OE5LM0hNalM1dkZTakxUdnVTRXktZG45Vzg1azVuQW52?oc=5",
       "source": "富途牛牛",
-      "published_at": "2026-10-16T16:23+08:00",
+      "published_at": "2026-10-16T18:28+08:00",
       "importance": 2,
       "risk_score": 0
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-17T02:55:09+08:00"
+  "updated_at": "2026-10-17T05:47:56+08:00"
 }
