@@ -1,4 +1,4 @@
-name: Lobster Daily Price Update
+name: Official Prices for Branch Tracking
 
 on:
   workflow_dispatch:
@@ -7,16 +7,8 @@ on:
         description: "Optional trade date YYYY-MM-DD for manual testing"
         required: false
         type: string
-  # One-purpose push trigger used only when we intentionally touch the trigger file.
-  push:
-    paths:
-      - ".github/lobster-manual-trigger"
+  # Official prices only; radar and LINE are retired.
   schedule:
-    # 台北時間週一至週五 16:30 先抓第一輪盤後資料，提早更新價格與候選池。
-    # 19:00 再確認一次；20:00 發送 LINE 最終結果；20:30 自動補跑保險。
-    # 16:30/19:00 只更新資料與掃描，不發正式 LINE。
-    # line_daily_send_state.json 會防止同日重複發送 LINE。
-    # GitHub cron 使用 UTC：16:30/19:00/20:00/20:30 台北 = 08:30/11:00/12:00/12:30 UTC。
     - cron: "30 8 * * 1-5"
     - cron: "0 11 * * 1-5"
     - cron: "0 12 * * 1-5"
@@ -51,9 +43,6 @@ jobs:
       - name: Verify cross-day session tests
         run: python -m unittest discover -s tests -p test_scan_trade_date.py -v
 
-      - name: Verify radar handoff and notification tests
-        run: python -m unittest discover -s tests -p test_radar_pipeline.py -v
-
       - name: Get trade date
         shell: bash
         env:
@@ -77,7 +66,7 @@ jobs:
 
       - name: Market closed notice
         if: ${{ steps.market_calendar.outputs.closed == 'true' }}
-        run: echo "TWSE closed on $TRADE_DATE; skip market scan and LINE stock notification without failure."
+        run: echo "TWSE closed on $TRADE_DATE; skip official price update without failure."
 
       - name: Update official TWSE and TPEx prices with auto retry
         if: ${{ steps.market_calendar.outputs.closed != 'true' }}
@@ -150,209 +139,20 @@ jobs:
           assert required.issubset(set(cols)), f"Unexpected prices schema: {cols}"
           PY
 
-      # Keep each strategy's scanner and formal performance bookkeeping, but
-      # suppress their individual stock broadcasts. One combined digest below
-      # is the sole LINE stock-list sender (maximum five distinct tickers).
-      - name: Evaluate integrated Lobster buy points (CSV and tracking only)
-        if: ${{ steps.market_calendar.outputs.closed != 'true' }}
-        shell: bash
-        env:
-          LINE_CHANNEL_ACCESS_TOKEN: ""
-        run: |
-          echo "FAIL_STAGE=破底翻及正式買點掃描" >> "$GITHUB_ENV"
-          python buy_signal.py
-
-      - name: Scan VCP stages (CSV only)
-        if: ${{ steps.market_calendar.outputs.closed != 'true' }}
-        shell: bash
-        env:
-          LINE_CHANNEL_ACCESS_TOKEN: ""
-        run: |
-          echo "FAIL_STAGE=VCP三階段掃描" >> "$GITHUB_ENV"
-          python vcp_scan.py
-
-      - name: Scan early volatility-contraction observations (CSV only, LINE disabled)
-        if: ${{ steps.market_calendar.outputs.closed != 'true' }}
-        shell: bash
-        env:
-          LINE_CHANNEL_ACCESS_TOKEN: ""
-        run: |
-          echo "FAIL_STAGE=初步波動收縮觀察掃描" >> "$GITHUB_ENV"
-          python vcp_early_watch.py
-
-      - name: Scan N-bottom observations (CSV and tracking only)
-        if: ${{ steps.market_calendar.outputs.closed != 'true' }}
-        shell: bash
-        env:
-          LINE_CHANNEL_ACCESS_TOKEN: ""
-        run: |
-          echo "FAIL_STAGE=N字底掃描" >> "$GITHUB_ENV"
-          python support_retest_watch.py
-
-      - name: "Build radar tracking pool and send due LINE notification"
-        id: radar_pipeline
-        continue-on-error: true
-        # Always build tracking outputs; notification gating must not freeze D1-D10.
-        if: ${{ steps.market_calendar.outputs.closed != 'true' }}
-        shell: bash
-        env:
-          LINE_NOTIFY_ENABLED: ${{ github.event_name == 'workflow_dispatch' || github.event_name == 'push' || (github.event_name == 'schedule' && (github.event.schedule == '0 12 * * 1-5' || github.event.schedule == '30 12 * * 1-5')) }}
-          LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
-        run: |
-          echo "FAIL_STAGE=兩階段LINE通知" >> "$GITHUB_ENV"
-          python combined_line_digest.py
-
-      - name: Update daily LINE pick performance (5 10 20 sessions)
-        if: ${{ steps.market_calendar.outputs.closed != 'true' }}
-        continue-on-error: true
-        shell: bash
-        run: |
-          echo "FAIL_STAGE=LINE推薦績效更新" >> "$GITHUB_ENV"
-          python line_pick_tracking.py
-
-      - name: Performance tracking warning
+      - name: Save official prices for branch tracking
         if: ${{ steps.market_calendar.outputs.closed != 'true' }}
         shell: bash
         run: |
-          echo "LINE績效追蹤屬附加功能；即使該步驟失敗，也不得阻止當日官方價格、雷達結果與候選資料寫回 GitHub。"
-
-      - name: Final health check
-        if: ${{ steps.market_calendar.outputs.closed != 'true' }}
-        run: |
-          echo "FAIL_STAGE=最終健康檢查" >> "$GITHUB_ENV"
-          python - <<'PY'
-          import csv
-          import json
-          import os
-          import sqlite3
-          from pathlib import Path
-
-          trade_date = os.environ["TRADE_DATE"]
-          db = Path("lobster_tw_6m_prices.sqlite")
-          assert db.exists(), "Database missing at final health check"
-
-          con = sqlite3.connect(db)
-          rows = con.execute("SELECT COUNT(*) FROM prices WHERE date=?", (trade_date,)).fetchone()[0]
-          con.close()
-          assert rows > 0, f"No official price rows for {trade_date}"
-
-          state = Path("signal_state.json")
-          assert state.exists(), "signal_state.json missing"
-          json.loads(state.read_text(encoding="utf-8"))
-
-          candidates = Path("candidate_status.csv")
-          assert candidates.exists(), "candidate_status.csv missing"
-          with candidates.open("r", encoding="utf-8-sig", newline="") as f:
-            reader = csv.reader(f)
-            header = next(reader, None)
-          assert header and "date" in header and "code" in header, "candidate_status.csv schema invalid"
-
-          sync_status = json.loads(Path('radar_sync_status.json').read_text(encoding='utf-8'))
-          watch = json.loads(Path('breakout_watchlist.json').read_text(encoding='utf-8'))
-          assert sync_status.get('trade_date') == trade_date, 'Radar scan/notification pipeline did not produce current status'
-          assert watch.get('data_date') == trade_date, 'Radar watchlist trade date is stale'
-          print(f"HEALTH_OK trade_date={trade_date} rows={rows}")
-          PY
-
-      - name: Commit updated database and signal state
-        if: ${{ steps.market_calendar.outputs.closed != 'true' }}
-        run: |
-          echo "FAIL_STAGE=結果寫回GitHub" >> "$GITHUB_ENV"
-          git config user.name "lobster-radar-cloud"
+          git config user.name "lobster-price-maintenance"
           git config user.email "actions@github.com"
-
-          for f in lobster_tw_6m_prices.sqlite fundamental_support.json signal_state.json candidate_status.csv vcp_candidates.csv vcp_early_watch.csv n_bottom_watch.csv line_scan_diagnostics.csv formal_recommendations.csv line_pick_snapshots.csv line_pick_performance.csv breakout_watchlist.json breakout_tracking.json radar_sync_status.json line_daily_send_state.json chip_candidate_snapshots.jsonl chip_candidate_outcomes.csv; do
-            if [ -e "$f" ]; then
-              git add "$f"
-            fi
-          done
-
-          if git diff --cached --quiet; then
-            echo "No database, candidate-status, or signal-state changes to commit."
-            exit 0
-          fi
-
-          git commit -m "Update official prices candidates and buy signals ${TRADE_DATE}"
-
-          # 全球新聞台也會更新同一個 repo。先同步遠端再推送，避免兩條工作流同時 commit 時造成 non-fast-forward。
+          git add lobster_tw_6m_prices.sqlite
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Update official prices for branch tracking ${TRADE_DATE}"
           for attempt in 1 2 3 4; do
-            git pull --rebase origin "${GITHUB_REF_NAME}" || {
-              echo "git pull --rebase failed on attempt $attempt"
-              git rebase --abort || true
-              sleep 10
-              continue
-            }
-            if git push origin "HEAD:${GITHUB_REF_NAME}"; then
+            if git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}"; then
               exit 0
             fi
-            echo "git push conflict on attempt $attempt; retry after refreshing remote"
+            git rebase --abort || true
             sleep 10
           done
-          echo "Failed to publish radar results after 4 retries."
           exit 1
-
-      - name: Report radar or LINE failure after preserving outputs
-        if: ${{ steps.radar_pipeline.outcome == 'failure' }}
-        run: |
-          echo "FAIL_STAGE=雷達追蹤池／LINE通知" >> "$GITHUB_ENV"
-          echo "Radar/LINE pipeline failed; current scan outputs were preserved when valid. See radar_pipeline logs."
-          exit 1
-
-      - name: LINE alert when daily workflow still fails
-        # 19:00 的資料收集失敗不通知；20:00/20:30 最終排程或 manual-trigger 補發失敗才發警報。
-        if: ${{ failure() && ((github.event_name == 'schedule' && (github.event.schedule == '0 12 * * 1-5' || github.event.schedule == '30 12 * * 1-5')) || github.event_name == 'push' || github.event_name == 'workflow_dispatch') && steps.market_calendar.outputs.closed != 'true' }}
-        env:
-          LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
-        run: |
-          python - <<'PY'
-          import json
-          import os
-          import urllib.request
-          from datetime import datetime
-          from zoneinfo import ZoneInfo
-          from pathlib import Path
-
-          trade_date = os.environ.get("TRADE_DATE", "unknown")
-          state_path = Path("line_daily_send_state.json")
-          if state_path.exists():
-              try:
-                  sent_state = json.loads(state_path.read_text(encoding="utf-8"))
-                  if (sent_state.get(trade_date) or {}).get("daily_result_sent"):
-                      print("Daily LINE result already sent; suppress duplicate backup failure alert")
-                      raise SystemExit(0)
-              except SystemExit:
-                  raise
-              except Exception as e:
-                  print("Could not read LINE send state:", repr(e))
-
-          token = os.environ.get("LINE_CHANNEL_ACCESS_TOKEN", "").strip()
-          if not token:
-              print("LINE token missing; cannot send failure alert")
-              raise SystemExit(0)
-
-          stage = os.environ.get("FAIL_STAGE", "unknown")
-          now = datetime.now(ZoneInfo("Asia/Taipei")).strftime("%Y-%m-%d %H:%M")
-          text = (
-              "🚨 龍蝦系統執行失敗\n"
-              f"交易日：{trade_date}\n"
-              f"失敗階段：{stage}\n"
-              f"時間：{now}\n"
-              "系統已完成內建重試，但仍未恢復。請檢查 GitHub Actions。"
-          )
-          payload = json.dumps({"messages": [{"type": "text", "text": text}]}, ensure_ascii=False).encode("utf-8")
-          req = urllib.request.Request(
-              "https://api.line.me/v2/bot/message/broadcast",
-              data=payload,
-              headers={
-                  "Authorization": f"Bearer {token}",
-                  "Content-Type": "application/json; charset=UTF-8",
-              },
-              method="POST",
-          )
-          try:
-              with urllib.request.urlopen(req, timeout=20) as resp:
-                  print("Failure alert LINE status:", resp.status)
-          except Exception as e:
-              print("Failure alert itself failed:", repr(e))
-          PY
-
