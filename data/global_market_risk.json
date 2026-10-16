@@ -1,49 +1,50 @@
 {
   "schema": 1,
   "risk_level": "red",
-  "risk_score": 6,
+  "risk_score": 8,
   "risk_reasons": [
     "費半明顯下跌",
+    "NASDAQ明顯下跌",
     "韓股明顯下跌",
     "出現重大風險新聞"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 -2.9%｜NASDAQ -1.1%｜日經225 +1.4%｜KOSPI -5.7%｜台股加權 +0.3%｜恆生 -0.5%",
-    "⚠ 全球市場風險｜美債10Y 5.08%｜VIX 16.1",
+    "⚠ 全球市場風險｜費半 -4.3%｜NASDAQ -2.3%｜日經225 +1.4%｜KOSPI -5.7%｜台股加權 +0.3%｜恆生 -0.5%",
+    "⚠ 全球市場風險｜美債10Y 5.11%｜VIX 20.6",
     "⚠ 全球市場風險｜Southbound Capital Flows | Southbound capital recorded net sales of HK$3.568 billion; increased",
+    "⚠ 全球市場風險｜Tesla, SpaceX, CoreWeave, Lam Research, Netflix, Strategy, and More Stocks That Explain Today's",
+    "⚠ 全球市場風險｜Traders maintain expectations that the Federal Reserve will hold rates steady in October; U.S. ",
     "⚠ 全球市場風險｜全球半導體巨頭入列 低成本ETF如何配置台積電、三星、艾司摩爾",
+    "⚠ 全球市場風險｜美股費半連8跌續挫200點！特斯拉「飛天車」逆勢衝、記憶體又倒地 台積電ADR摔1.7％",
     "⚠ 全球市場風險｜HKEX Releases \"T+1\" Implementation Roadmap: Timeline Pushed Back to 2028 as Market Requires Tim",
     "⚠ 全球市場風險｜外資連8賣台股461億元 權王台積電遭倒貨2.2萬張最多、大砍0050",
-    "⚠ 全球市場風險｜The decline in U.S. Treasury yields drove a rebound in European equities, with the pan-European",
-    "⚠ 全球市場風險｜台股大漲他苦嘆「套2年完全沒賺到」 網勸：全砍改買這1檔",
-    "⚠ 全球市場風險｜外資提款不手軟台股反攻有援軍！PCB、衛星股雙引擎扛轎撐住4萬7｜Yahoo財經掃描",
-    "⚠ 全球市場風險｜政府積極推動亞資中心！賴清德：先留資、再引資 持續壯大金融市場"
+    "⚠ 全球市場風險｜The decline in U.S. Treasury yields drove a rebound in European equities, with the pan-European"
   ],
   "markets": {
     "US_SOX": {
       "label": "費半",
-      "price": 11347.465,
-      "change_pct": -2.8
+      "price": 11181.795,
+      "change_pct": -4.2
     },
     "US_NASDAQ": {
       "label": "NASDAQ",
-      "price": 26389.78,
-      "change_pct": -1.2
+      "price": 26068.979,
+      "change_pct": -2.4
     },
     "US_SP500": {
       "label": "S&P500",
-      "price": 7713.63,
-      "change_pct": 0.0
+      "price": 7639.9,
+      "change_pct": -1.0
     },
     "US_DOW": {
       "label": "道瓊",
-      "price": 52301.32,
-      "change_pct": 1.4
+      "price": 51864.9,
+      "change_pct": 0.4
     },
     "VIX": {
       "label": "VIX",
-      "price": 16.1,
-      "change_pct": -2.2
+      "price": 20.61,
+      "change_pct": 25.2
     },
     "JP_NIKKEI": {
       "label": "日經225",
@@ -67,8 +68,8 @@
     },
     "US10Y": {
       "label": "美債10年殖利率",
-      "price": 5.077,
-      "change_pct": -0.2
+      "price": 5.108,
+      "change_pct": 0.4
     }
   },
   "active_news": [
@@ -81,10 +82,34 @@
       "risk_score": 4
     },
     {
+      "title": "Tesla, SpaceX, CoreWeave, Lam Research, Netflix, Strategy, and More Stocks That Explain Today's Market -- Barrons.com - Moomoo",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNY1pJVmVxS2cwMlRLRmZEUFlEVHo5XzFoZDdiTWFaNVVPQnd5ZDV1OVpsXzJreU9FUnMzVGJFYkxSNm1tcmtLRkhXeVBXQkJxMG4xMFpMdmVPN09ORjRMemt0Mkp6RVAyTW9qSzZNQ0NwempoaElCd0pxb2hBSldpekhUdl92c3I5NWdwT2ZBYXl0TkE2NWw3WWhoQU5ZNFFUZjNnaTNhc2MzbWFCcHByMXltdkYwcnlI?oc=5",
+      "source": "Moomoo",
+      "published_at": "2026-10-17T00:30+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Traders maintain expectations that the Federal Reserve will hold rates steady in October; U.S. stocks show divergent performance, with the Nasdaq 100 poised to fall more than 3.5% this week. - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQblVWcXdoZEZwN190NlRQZmtpVFpLQzI1dGFUa3hLVWVTWDQ4Rmt4Yzd0azJZenZuYzB6d2o5Z21rWS0wWGh5cTJpMTFkbmpaQ1lHa3UyZUdqV3NqeHU2SHhzRUJ3RE80TkZLRWE5ZzNvUm9NZF9vY19zcFFFSzg0SWdFVE53RkktVElYdnZXbTA3anc1eG9HNEtmQm5vWFhueVNMcTc4NFFRa1JacmdDb2ZxQQ?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-16T23:09+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
       "title": "全球半導體巨頭入列 低成本ETF如何配置台積電、三星、艾司摩爾 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMijwNBVV95cUxQemJKaGZjSWRaRGFfUkQ4X21DV1VnV0FUQ1VOc240THdJTVB6Vi1hNFlTQ2JfTDI4SWd2eHVFRmN4REJsVDZBckUycF8zVjdTNnRiVkxkYjNVbGJJN0hGOU5pUk0ybi1oTzJSWG1qSkZnSng5eS0wR3RNVmszNU1Mb2J5TzQtY29zT2RpWG5EVVg4bXpXVjkwRGk0RHFkcFBGQjlYUF9mOVBNa3pxNGdCVTB2aFl4Z3dGUi1xUmkxREtqYWVnVGNjYzVFaVg3ZmMyMGNhSG13OUdfV040RlJiSjk3ZGtrcFREcUFtS3ltWGJER1F2UFF3OVRUeFN6LVRvRFdjV1hhT3gwZmtQMURYTG1wekF5cGpBVERFdE5DcnB2YmM2ZV9qMS1CNFRraF9jNkR6bXBTYXFXa0Q5OGRSeWFGVXJwWlllbFZyZnJoXzlhZ0dBWDFJSEM5YThkOVltUFE4RUZaUVp2RG10dlhOV05BZHpnWlpXcllqTHZLX3N4c1dQQUlhNTlucmstbzg?oc=5",
       "source": "Yahoo股市",
       "published_at": "2026-10-16T22:40+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "美股費半連8跌續挫200點！特斯拉「飛天車」逆勢衝、記憶體又倒地 台積電ADR摔1.7％ - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMihgNBVV95cUxQVjBZRlpEMDFtWE1nZmhvZ29iekdmQWtFbkdvNl83X0d6R0V6QndrRVVfanNyajk4eUtIQmNKTVpxM3QtVXc3OEdYOU1OcW1nam5MR29Ha1lXQnZMM2xGdExKajFlRkdzam5jYmNnLVRLVWZVSGQtTURrLUhBVmhFenJDN18xZXYxNnFlNV9ETkt4cDZGR1h4T0RhTU5XWlJ3TEgtWXRsZUlEMEpmSlpPa3NaZHFhNWhRMGdkV04xRjhWemNlZ24wVlNpYzlIbWJBWnhjTURGNElSV255TmFwNWlhNldyeU9UMDFyeEJLOTdZaFIzdUMxWFNvS2pjbFhUcHZKdE9MVzRxWmU1VVUwel9PUGM3MWVCY1NvcFg1SHoxS0g2S1lnWEo3d3d3R2ZBSEtlQjhMYU9TYXRpX1ZhY2I4a0hPNzZaNUItaTR5bWw4dW5jR3VaSlB6RWVxaXJyeUl6c3g0MEkyTnk2N1dLTi1JT1J0cnBhTC1jUVJCSnFGRHpUQ0E?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-16T22:26+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -143,32 +168,8 @@
       "published_at": "2026-10-16T16:23+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "台股重返4萬7！ 三大法人仍賣678億 投信大買「這檔」3.6萬張 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiwAJBVV95cUxQRE1xcThtb01wQ29Nc0dnUnVxRzdLcE40MVM5YUhGS1RsajAxSVk3aFZfUU9jckNqVmtvUGJ2YmQ4X2hOc1Z1OW11T0pxR1pWVl9ZaUFrZzhNZVVqRzN5TkVfUUlQUERRYXFhNFpjR0ZuTEdQb2pDQ2U0dU1hS1J2dElRbmdwNHhsWFhteWNqZmhvOWhLWlZjNE93OUp4cDFyS3R2M3p3MTZTbDB6SUJfYXItNC1FUDI5bE5JMUZMeUpjVWJySkN5OWo5Z2w2UlB1aUdPaTFiZzl6QlBaSFAtb3Q1WkNpUklId1ZyRmVyS3ItckJPNG9GU1dIY1dBMm5zMDlyRk13eE1TNWVLcmYzT3VZTEJxOWtsYS1lbG82d0NGc1FsUFJEMXdQMC15d1hOcWVVUktwdHFWXzNXTnk4cw?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-16T16:04+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "〈台股盤後〉台積電休息 PCB、玻纖布題材強勁 終場漲141點站回4萬7 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi_wJBVV95cUxNNDBTdkNPVkk0cVY1a2lwTW42UXJQcTM3dUlMOXZIa3pEc2VORnhSdncxSURYVmJkcmdjRDRXdUEwYmUyQkdSWFRqUHMxNnNqN2lxeHl4bF9ybUdlSDBQam81MTZxdXlKZjN1NEpVNFZNMzd4REJoY2RsNm5MZ2RvNFJnckNpc1lfSTBUbkVmNy00T29XMEtiTVNPbm9XSUFjVjN4bE5Dc1pKdHhJbHY5Nm9EMWF1SEtkczRmbkJyNWNPV09Uajc3SGdsNGY3UWVRNUUtYjBORDNZeHRZbDZPcThJS09VblFZZHpPczAwUW14cXdtbFVxS0dKelh3dHBtSVViZU5qY2ZZZ2U3YkZLemxpRkZiMFRpdUJJcmFndFFFZ1FUb1kzLWZkdE13SV9QN3VsUUtXNW5VYjJOa3UwQ3ROb3VUV0dlYjViMFA1SEptLXpTeG1TX3M0NGlrRkFYWks4VmpQMWpacTBJX0ZpMy04MXQzNXI0Vy16T3F3bw?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-16T15:32+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "【Follow法人】外資再提款台積電539億元 反手掃貨4萬張中鋼、2萬張鴻海 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMirwNBVV95cUxNNkRyTE1LRnA4T3lQV09VM2tFYnV1R25LX3UtU0I0bjd1amR3VGFRdUg4NlJwYnFjWmFSckJCSE1FN2hrNEtPMUxmZUlkSHd3dHl6bTVnWWhva1pNamI0N3pmcTV3VTIzQWNiNnVjU01UcjNoTHBqNG5ZeG0tbDZoZk0wTDAwRE9iVURQWExRUTlRcHJKSEQwZG1Bck03TUVOV19HTjg0TUktY1RiUHhpMGdOU2piZTVZZEFOa3VNMFREbUdabE14al90dFEtX3ZiS0pWUjBZZDlUVnRiRjEtUS12NWhPU0YzNFhfbXF3ZnVpaVA4UFRFMXlTZXYyWjlNR1M2MmpXWHFiem1mb2V4YUI0bklUM0NfeDR4cWhIZFdrQ3g5b1RNanVhZU0yZU9yODBxeTdFTHdoVFQxLUdpRTdvbEVpTkJGYVU0aS1wMEVybEc5aGd5bE93MDBLcmtJOUtlQkVlYTVlYmpYRTM3aklfMk4tcFR2V05CVUJELXlsLWNDMlRIMFp4Z3c0UlZMZHZnUkJVR0NwZEh6a2twU3J3cDVlekRlZ0xLMmJDSQ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-16T15:21+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-16T23:30:04+08:00"
+  "updated_at": "2026-10-17T02:55:09+08:00"
 }
