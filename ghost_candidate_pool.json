@@ -1,9 +1,9 @@
 {
   "version": 244,
   "target_date": "2026-10-19",
-  "generated_at": "2026-10-16T19:32:20+08:00",
+  "generated_at": "2026-10-16T21:26:59+08:00",
   "source": "GitHub shared lifecycle D0-D10",
-  "price_source_date": "2026-10-15",
+  "price_source_date": "2026-10-16",
   "calendar_source": "TWSE官方開休市日曆",
   "finalized": false,
   "rules": {
@@ -13,5 +13,110 @@
     "d_day_rule": "confirmed_date=D0；只計算官方交易日；同股重複只留最新 signal_date",
     "price_guard": "現價一律使用 latest_trade_date 的官方收盤價；舊價或缺價不得進入"
   },
-  "rows": []
+  "rows": [
+    {
+      "code": "2312",
+      "name": "金寶",
+      "d": 0,
+      "price": 32.65,
+      "support": 31.7,
+      "distance_pct": 2.9968,
+      "score": 80.82,
+      "score_source": "cloud_daily_snapshot",
+      "score_parts": {
+        "breakout": 90,
+        "pattern": 73.3,
+        "macd": 90,
+        "volume": 90,
+        "chips": 40,
+        "macd_source": "daily_MACD_proxy",
+        "price_source_date": "2026-10-16",
+        "missing": []
+      },
+      "signal_id": "2026-10-16|2312",
+      "route": "N字底",
+      "status": "優先",
+      "source_signal_date": "2026-10-16",
+      "source_last_checked_date": "2026-10-16",
+      "price_source_date": "2026-10-16"
+    },
+    {
+      "code": "2377",
+      "name": "微星",
+      "d": 0,
+      "price": 161.5,
+      "support": 159.0,
+      "distance_pct": 1.5723,
+      "score": 76.5,
+      "score_source": "cloud_daily_snapshot",
+      "score_parts": {
+        "breakout": 90,
+        "pattern": 66.0,
+        "macd": 90,
+        "volume": 65,
+        "chips": 40,
+        "macd_source": "daily_MACD_proxy",
+        "price_source_date": "2026-10-16",
+        "missing": []
+      },
+      "signal_id": "2026-10-16|2377",
+      "route": "N字底",
+      "status": "優先",
+      "source_signal_date": "2026-10-16",
+      "source_last_checked_date": "2026-10-16",
+      "price_source_date": "2026-10-16"
+    },
+    {
+      "code": "3013",
+      "name": "晟銘電",
+      "d": 7,
+      "price": 95.0,
+      "support": 93.9,
+      "distance_pct": 1.1715,
+      "score": 64.95,
+      "score_source": "cloud_daily_snapshot",
+      "score_parts": {
+        "breakout": 95,
+        "pattern": 82.8,
+        "macd": 20,
+        "volume": 30,
+        "chips": 40,
+        "macd_source": "daily_MACD_proxy",
+        "price_source_date": "2026-10-16",
+        "missing": []
+      },
+      "signal_id": "2026-10-06|3013",
+      "route": "N字底",
+      "status": "優先",
+      "source_signal_date": "2026-10-06",
+      "source_last_checked_date": "2026-10-16",
+      "price_source_date": "2026-10-16"
+    },
+    {
+      "code": "6531",
+      "name": "愛普*",
+      "d": 0,
+      "price": 882.0,
+      "support": 878.0,
+      "distance_pct": 0.4556,
+      "score": 54.62,
+      "score_source": "cloud_daily_snapshot",
+      "score_parts": {
+        "breakout": 95,
+        "pattern": 57.5,
+        "macd": 0,
+        "volume": 30,
+        "chips": 40,
+        "macd_source": "daily_MACD_proxy",
+        "price_source_date": "2026-10-16",
+        "missing": []
+      },
+      "signal_id": "2026-10-16|6531",
+      "route": "破底翻",
+      "status": "優先",
+      "source_signal_date": "2026-10-16",
+      "source_last_checked_date": "2026-10-16",
+      "price_source_date": "2026-10-16"
+    }
+  ]
 }
