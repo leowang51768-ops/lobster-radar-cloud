@@ -5887,7 +5887,7 @@
       "support_source": "A點：破底前60日重複收盤價支撐區"
     }
   },
-  "updated_at": "2026-10-16T13:26:17.585805+00:00",
+  "updated_at": "2026-10-16T15:09:50.096461+00:00",
   "latest_trade_date": "2026-10-16",
   "layer1_candidate_count": 187,
   "stage_counts": {
@@ -5920,7 +5920,7 @@
   "strategy_version": "龍蝦買點-v14-破底翻+PriceAction",
   "four_point_rule": "已取消",
   "candidate_count": 41,
-  "formal_buy_signal_count": 3,
+  "formal_buy_signal_count": 0,
   "route_counts": {
     "破底翻": 35,
     "Price Action": 6
