@@ -1,11 +1,11 @@
 {
   "version": 244,
-  "target_date": "2026-10-16",
-  "generated_at": "2026-10-16T10:28:46+08:00",
+  "target_date": "2026-10-19",
+  "generated_at": "2026-10-16T19:27:45+08:00",
   "source": "GitHub shared lifecycle D0-D10",
   "price_source_date": "2026-10-15",
   "calendar_source": "TWSE官方開休市日曆",
-  "finalized": true,
+  "finalized": false,
   "rules": {
     "distance": "0-3% priority; 3-5% acceptable; >5% excluded",
     "max_candidates": 10,
@@ -13,32 +13,5 @@
     "d_day_rule": "confirmed_date=D0；只計算官方交易日；同股重複只留最新 signal_date",
     "price_guard": "現價一律使用 latest_trade_date 的官方收盤價；舊價或缺價不得進入"
   },
-  "rows": [
-    {
-      "code": "3013",
-      "name": "晟銘電",
-      "d": 7,
-      "price": 94.7,
-      "support": 93.9,
-      "distance_pct": 0.852,
-      "score": 76.95,
-      "score_source": "cloud_daily_snapshot",
-      "score_parts": {
-        "breakout": 95,
-        "pattern": 82.8,
-        "macd": 20,
-        "volume": 100,
-        "chips": 90,
-        "macd_source": "daily_MACD_proxy",
-        "price_source_date": "2026-10-15",
-        "missing": []
-      },
-      "signal_id": "2026-10-06|3013",
-      "route": "N字底",
-      "status": "優先",
-      "source_signal_date": "2026-10-06",
-      "source_last_checked_date": "2026-10-15",
-      "price_source_date": "2026-10-15"
-    }
-  ]
+  "rows": []
 }

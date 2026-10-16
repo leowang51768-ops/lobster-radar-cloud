@@ -446,10 +446,10 @@
         "status": "confirmed",
         "status_label": "🟢 回測確認",
         "created_date": "2026-10-06",
-        "last_checked_date": "2026-10-15",
+        "last_checked_date": "2026-10-07",
         "true_breakout_threshold": 96.9,
         "last_low": 93.7,
-        "last_close": 94.7,
+        "last_close": 96.3,
         "last_volume": 4384685.0,
         "tracking_day": 1,
         "resolved_date": "2026-10-07",
@@ -2746,7 +2746,7 @@
   },
   "version": 241,
   "as_of_date": "2026-10-16",
-  "updated_at": "2026-10-16T10:28:46+08:00",
-  "completed_through": "2026-10-15",
+  "updated_at": "2026-10-16T19:27:45+08:00",
+  "completed_through": "2026-10-16",
   "price_basis": "official_completed_session"
 }
