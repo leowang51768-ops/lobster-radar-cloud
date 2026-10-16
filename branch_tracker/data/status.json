@@ -10,12 +10,12 @@
   "source_blocked": false,
   "ranking_limit_per_side": 15,
   "history_target_top_per_side": 3,
-  "history_requests_succeeded": 120,
+  "history_requests_succeeded": 17,
   "observed_collection_days": 8,
   "complete_collection_days": 4,
   "counts": {
     "ranking": 39536,
-    "history": 134311,
+    "history": 135331,
     "queue": 4225
   },
   "review_stage": "資料累積中",
@@ -29,11 +29,312 @@
   ],
   "missing_stocks": [],
   "errors": [],
-  "history_errors": [],
-  "history_pairs_ever_fetched": 2239,
+  "history_errors": [
+    {
+      "code": "2308",
+      "branch": "9600",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2312",
+      "branch": "003800380038004b",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2312",
+      "branch": "0039003600320043",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2312",
+      "branch": "8440",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2312",
+      "branch": "9189",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2313",
+      "branch": "8880",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2317",
+      "branch": "8960",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2317",
+      "branch": "9200",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2324",
+      "branch": "1440",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2324",
+      "branch": "6162",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2330",
+      "branch": "0039004100380031",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2330",
+      "branch": "1360",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2330",
+      "branch": "1480",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2344",
+      "branch": "6160",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2344",
+      "branch": "8960",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2345",
+      "branch": "1360",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2355",
+      "branch": "003900320030004d",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2356",
+      "branch": "1020",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2356",
+      "branch": "1560",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2356",
+      "branch": "1650",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2357",
+      "branch": "0039004100300030",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2357",
+      "branch": "8580",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2359",
+      "branch": "0039004100390055",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2359",
+      "branch": "1040",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2359",
+      "branch": "7003",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2360",
+      "branch": "003900380030006c",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2360",
+      "branch": "1440",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2360",
+      "branch": "8890",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2368",
+      "branch": "1560",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2369",
+      "branch": "0038003400350041",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2369",
+      "branch": "0039003100380041",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2369",
+      "branch": "6452",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2376",
+      "branch": "0039004100380031",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2376",
+      "branch": "1440",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2376",
+      "branch": "9200",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2377",
+      "branch": "0039003600320043",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2377",
+      "branch": "0039004200310068",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2377",
+      "branch": "7792",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2377",
+      "branch": "9200",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2379",
+      "branch": "1590",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2379",
+      "branch": "1650",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2379",
+      "branch": "9359",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2382",
+      "branch": "6480",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2382",
+      "branch": "8880",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2382",
+      "branch": "9600",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2383",
+      "branch": "1470",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2383",
+      "branch": "9200",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2385",
+      "branch": "8440",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2385",
+      "branch": "8520",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2388",
+      "branch": "9604",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2395",
+      "branch": "1042",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2395",
+      "branch": "1650",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2404",
+      "branch": "0039003800310049",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2404",
+      "branch": "1560",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2408",
+      "branch": "0039004100300030",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2408",
+      "branch": "1650",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2408",
+      "branch": "8560",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2421",
+      "branch": "9600",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2441",
+      "branch": "0039004100360031",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "2441",
+      "branch": "0039004100390052",
+      "error": "History date or numeric mismatch"
+    }
+  ],
+  "history_pairs_ever_fetched": 2256,
   "history_coverage_complete": false,
   "history_coverage_note": "成功抓取不代表完整60交易日；須逐組核對交易日缺口",
   "ranking_coverage_complete": true,
-  "errors_total": 0,
-  "database_bytes": 29274112
+  "errors_total": 103,
+  "database_bytes": 29380608
 }
