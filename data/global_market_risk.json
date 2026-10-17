@@ -11,13 +11,13 @@
     "⚠ 全球市場風險｜費半 -4.7%｜NASDAQ -2.1%｜日經225 +1.4%｜KOSPI -5.7%｜台股加權 +0.3%｜恆生 -0.5%",
     "⚠ 全球市場風險｜美債10Y 5.10%｜VIX 20.0",
     "⚠ 全球市場風險｜法說強調「晶圓需求極其強勁」！台積電目標價調升至3300元、EPS同步上修",
+    "⚠ 全球市場風險｜施羅德首檔主動式ETF登場 聚焦台灣半導體與AI概念股",
     "⚠ 全球市場風險｜外資拋售韓股市值比重為台股4倍 這些層面凸顯台灣展韌性",
     "⚠ 全球市場風險｜周末精選｜台積電日賺85億仍跌！魏哲家自嘲「早知道」 法說13大重點一次掌握",
     "⚠ 全球市場風險｜蘋果iPhone 18傳下月量產！備貨規模驚人 台積電、鴻海等5大台廠迎拉貨潮",
     "⚠ 全球市場風險｜台股季線保衛戰開打！「週年慶來了」台積電、聯發科等指標股迎打折潮分析師：別錯過、1年才1次",
     "⚠ 全球市場風險｜台股強強滾》全民瘋買ETF 3大投信管理費年收171億",
-    "⚠ 全球市場風險｜台股狂飆谷月涵示警「已進末升段」！謝金河籲股民注意2件事",
-    "⚠ 全球市場風險｜台股不妙！美股重挫台指期夜盤狂殺1144點 下周一恐回測甚至跌破46K"
+    "⚠ 全球市場風險｜台股狂飆谷月涵示警「已進末升段」！謝金河籲股民注意2件事"
   ],
   "markets": {
     "US_SOX": {
@@ -81,6 +81,14 @@
       "risk_score": 0
     },
     {
+      "title": "施羅德首檔主動式ETF登場 聚焦台灣半導體與AI概念股 - 自由時報",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9oQUVDQmFSaWRzX25sSFlRZzBqMXA1OHBmeEhSZEZLQ0JkTi1TSlIzQmxqLW5kSVRFYTZVY0cwZnhsTEdFWFBoT19OTHA4Nl9yTnlOalFaU00?oc=5",
+      "source": "自由時報",
+      "published_at": "2026-10-18T02:43+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
       "title": "外資拋售韓股市值比重為台股4倍 這些層面凸顯台灣展韌性 - 自由時報",
       "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE13VkRYYkpVVkFuRGlzQ2x4VjFLWndrVVNUdDNfQlNWdnVJV2ZyaWNENEtPNHNzVjhNVU1JeUhpaXc2LXRuY2hIa3BRdXZoQmR1VTFzazhSSjU?oc=5",
       "source": "自由時報",
@@ -137,6 +145,14 @@
       "risk_score": 0
     },
     {
+      "title": "Wall Street prices in the midterm elections: Democratic factor surges 20%, while broader market remains stuck in a “blind spot” - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNWENYWEdJLVJISFhKellFQjVjTlBHenJ5MHRhVzNta1p1WUMwanl0OWZQNW9FX3JKMERkT0oyb0VnYXFFSWxHa1BwdjE4UEsxbTBlazRyU0V1MzY0THpkaDRUclZNbVVZUEtwWHFyNVB6VDlDZXBOTGtBNHdQMzhMQnlkME84ZjJjemFTXy16c0g0Uk05TDlCR0FNakQtck1sMjFIVGRfRW12ZHZqa3l5cg?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-17T10:43+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
       "title": "台積電目標價炸裂喊5000元！外資史上最狂估價出爐 看好AI需求、未來兩年營收飆40％ - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMi3gNBVV95cUxPeHd4Mk1hT21EeGVLYldwT3RXQjVMZDV2Z3lIQnkyLUR6Nk43YnV6Ny0zZ0U4VlVIcU94TXFtalo2dk03TklZb25CZ1R0ZVFEcTlUQ0dPazRQR2t2UUtwZkNxbnZVSFhEd1Fhb1BLX3J0cGtzQ2c5NFlWTENjeFJIdTRJZmFGdEdXTjdhRzNBTFRYNDVyLU9hc0VXNF9OdFdPT3g3aHBkenJ5eFBhcEtaV1lDQkJaZF9GRnJfUVdsTVYtTVlybE1FSlNTSlIzQTFwVU54NGw1b0ZzTU1QTm9QeFFTMUZDYlFqc29SRWtxaEMzOHFBRnRtMkxvbDg5TF81X0Jtd28wMGV6TDFVcm5pbEo3ejhaU0tzLTNub3pEc2VTbDNqeWh3RkVYc0UzbnB5a20za194cFlIQVFOV1FBbEUyZERjSXZZM2c3QmgyOHF4OV9tQXVNU0V1Zm51SmJ5RFBORkhFZjV1R0FfWFN3TEdZcmhuS0x1cno4NXVzdUxPWUZoWTJCQ2JxWVJLUGk2c2N4V0FucE40cHpuNUNlbTZ6MXVxTTZ3Nk1Uazl1QThJbko2c2JkNWhmTkROYTR1LUk4OHlnRVBWMmFwZW1kLVhrd3VCaEVEcTRCMWR3?oc=5",
       "source": "Yahoo股市",
@@ -145,14 +161,14 @@
       "risk_score": 0
     },
     {
-      "title": "星期一恐慘了！台指期夜盤崩跌1144點 台積電期貨同步跳水 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi4AJBVV95cUxONUdRRndOWnlRbkhvUS14SjJsUEEtMjBSR2R6NUpnUHRNRC02Rm8yX2lkaVZRdTJXYVAweEZXWWk0ZjdqVFdFbjlaWEpBaDB1X3VSVDRWdFdlSUVLNmdaQkI4dVgyelUxT2pKX0xwSGI1dzdOdE1FRXFRSGZqOXF2X2UwR2UwdVlmTk1ST2tZOU5yZDBLQmZGMXU2eDNWdzEwNGYwMnN3N0ZDMndhQkMxaXRHaGU4VjZ5TFNnMFRmaHhQYk5KcndTdUtoSkMzWlc3Z1NGRWZTWFhLeUpEQUIzMFFkU184S0FqQmV5VnhJNHlwODJOSVZYVmxNN3E3TDJTYUZVLUtjOVRWbk1HcXBOaWFDMURwRHZPSUZQSDc5OWhqZ3BwNGpJWm5vQi1EeTVibFp4YXNWNWhJV3ZJZDNDNnZucEZOaEREMkppNW9wdDV1cnoyRmtPUEhKZ1ZlR1Bt?oc=5",
+      "title": "台積電法說會、經部擬赴德州設產業園區、外資單日賣超破紀錄 本周大事回顧 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi3wNBVV95cUxQNU01QjZicTdTbW1TMlg1V3A4ZEowQlJHTkJzay1jUU1oR3ZfNXpLRDk1ZnBUSFdFZ1hGczh5ZXVTYVdIdElJaFlUeEMzZm9IUzUxY0RvdENwWFdDdFliXzh4YkNHZHdoMDY1aVhKbDlLY0s1bUdfYi1CUjV3UENPNW5PcTMzLUlLWUtGbU1MaFgtM2VUZzNidzNvMDlWNjNUZUZja0loa082U2FtMlRKWUhaa2EtR3hQX0F2YkFGMlFTTGp6bUZ0TV91NER6d0FYRF83UDJFVkpTZU1qekpUcVJXZW14Mm9FWm5QUllKMEhBTFA1eDFOdDIzUU9mal8yckoybDg1blBGeXg3VlY1cm9DVzAtcTY0cXF1dEN4NXJ4SXBzQ3VwU0ZXRjhRMU5DMmMzQ21LVHlzaFZ2RDAxVzQ5aERvTXR0Mzc2WklmaFgzWWNfRUdFTElIYVRGMnQyOGxITW4yUXJUeVNWckdad25jRkNndFBnWHE5SXN5QUR3aTl1YnlVa0NDZW4ta094OXV0aGlJMnNEUk82eVQ0MjRFdWxYcTN2NXdTcE4zbmczTlZtMjc0YnBMdXJieDFnLTV3WHFnQWVONkJ3Z01pX2ZVaF9sWGVXUjBtNGxfcw?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-10-17T06:33+08:00",
+      "published_at": "2026-10-17T09:35+08:00",
       "importance": 2,
       "risk_score": 0
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-18T05:29:17+08:00"
+  "updated_at": "2026-10-18T07:18:28+08:00"
 }
