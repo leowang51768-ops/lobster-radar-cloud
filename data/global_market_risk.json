@@ -11,13 +11,13 @@
     "⚠ 全球市場風險｜費半 -4.7%｜NASDAQ -2.1%｜日經225 +1.4%｜KOSPI -5.7%｜台股加權 +0.3%｜恆生 -0.5%",
     "⚠ 全球市場風險｜美債10Y 5.10%｜VIX 20.0",
     "⚠ 全球市場風險｜法說強調「晶圓需求極其強勁」！台積電目標價調升至3300元、EPS同步上修",
+    "⚠ 全球市場風險｜外資拋售韓股市值比重為台股4倍 這些層面凸顯台灣展韌性",
     "⚠ 全球市場風險｜周末精選｜台積電日賺85億仍跌！魏哲家自嘲「早知道」 法說13大重點一次掌握",
     "⚠ 全球市場風險｜蘋果iPhone 18傳下月量產！備貨規模驚人 台積電、鴻海等5大台廠迎拉貨潮",
     "⚠ 全球市場風險｜台股季線保衛戰開打！「週年慶來了」台積電、聯發科等指標股迎打折潮分析師：別錯過、1年才1次",
     "⚠ 全球市場風險｜台股強強滾》全民瘋買ETF 3大投信管理費年收171億",
-    "⚠ 全球市場風險｜台股不妙！美股重挫台指期夜盤狂殺1144點 下周一恐回測甚至跌破46K",
-    "⚠ 全球市場風險｜Wall Street prices in the midterm elections: Democratic factor surges 20%, while broader market",
-    "⚠ 全球市場風險｜台積電目標價炸裂喊5000元！外資史上最狂估價出爐 看好AI需求、未來兩年營收飆40％"
+    "⚠ 全球市場風險｜台股狂飆谷月涵示警「已進末升段」！謝金河籲股民注意2件事",
+    "⚠ 全球市場風險｜台股不妙！美股重挫台指期夜盤狂殺1144點 下周一恐回測甚至跌破46K"
   ],
   "markets": {
     "US_SOX": {
@@ -81,6 +81,14 @@
       "risk_score": 0
     },
     {
+      "title": "外資拋售韓股市值比重為台股4倍 這些層面凸顯台灣展韌性 - 自由時報",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE13VkRYYkpVVkFuRGlzQ2x4VjFLWndrVVNUdDNfQlNWdnVJV2ZyaWNENEtPNHNzVjhNVU1JeUhpaXc2LXRuY2hIa3BRdXZoQmR1VTFzazhSSjU?oc=5",
+      "source": "自由時報",
+      "published_at": "2026-10-17T21:58+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
       "title": "周末精選｜台積電日賺85億仍跌！魏哲家自嘲「早知道」 法說13大重點一次掌握 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMizgNBVV95cUxPb2VPZDFFLWtlV2lKNm9XRkkxSkpwNW9sTWxoeXZPNzBneGdYajQ2dkhrR1ZuQTI1bmlSVmZCU2VUUGcybFFfc3owVi1IbU8tbDEtd2pxVUhxbFlXLUhMX29URzJaRFpCQ0gyc2t2YV9rdE5vRHBjU1R0NDRzWVRlbEFkOE5EaTdnSHpmcWZtWHloM2lvMXVWbTd0UDlpY0Z3NWExR3o4UVltWEhEamFMM2ZPOGNBQ3lkc01YR1Rxa1lhOHZDazY4TzhIbWZFOGJlNFBoRFJBTGU1blRLR1lIcklJanZTRVlwRzRRdzRBMTd3Y2Z5c0RwdkVCVDRmTnhrdzdRRldvYWZlUW5lVzFqZy1mZzNmTFFmblJRMFNnYmk4cC0zNVZZamdCYTM2WjBYRmNqTGgwR3kwd3dvUjRKUmpmSUxqMHlJOWxTd1NhNTl6Yjh1TFN3UWVVTEZwc19jNG5OdmlUNTZZWkY3NUxKOS0tRnpyT1kzYUd4aG9SU2RKbVpVZFgxNjB2TWtVWEkzNUVNZjdCaGNZZ19xSlpnd2k2dmFSYWNJVWljYS1ybE1vc0txTUhfWTdaNzVIS1l0aXR3T2lXaUk2bVZhSFE?oc=5",
       "source": "Yahoo股市",
@@ -109,6 +117,14 @@
       "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1rX1ZWOUNCNFQ3a1VzMU8wYnNQRnRDSXY3dTFWa3JicDYtcjlTenV4bU9Zem95V0laWEdiRXNmLXZmNDcwMWJMNUl6eVp4c2lSZXE3ZGlCa3c?oc=5",
       "source": "自由時報",
       "published_at": "2026-10-17T12:16+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股狂飆谷月涵示警「已進末升段」！謝金河籲股民注意2件事 - 自由時報",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5vYkVKU0ZpXzhCSHR3QXFlTmpyVWplQ3JpRTA5RjMwcE4zc1d5WHZ1MGxqYU42QnFybFUxUU1BU1FQUGNrMU9lNUQtbkRXV0drM0pMcUM4a2U?oc=5",
+      "source": "自由時報",
+      "published_at": "2026-10-17T12:03+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -146,5 +162,5 @@
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-18T01:06:48+08:00"
+  "updated_at": "2026-10-18T03:16:44+08:00"
 }
