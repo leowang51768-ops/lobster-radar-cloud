@@ -12,13 +12,13 @@
     "⚠ 全球市場風險｜費半 -4.7%｜NASDAQ -2.1%｜日經225 +1.4%｜KOSPI -5.7%｜台股加權 +0.3%｜恆生 -0.5%",
     "⚠ 全球市場風險｜美債10Y 5.10%｜VIX 20.0",
     "⚠ 全球市場風險｜Southbound Capital Flows | Southbound capital recorded net sales of HK$3.568 billion; increased",
-    "⚠ 全球市場風險｜星期一慘了！台指期夜盤崩跌1144點 台積電期貨同步跳水",
+    "⚠ 全球市場風險｜AI崩盤還沒底？ 小摩示警 「這次跟7月不一樣」",
+    "⚠ 全球市場風險｜台積電法說會、經部擬赴德州設產業園區、外資單日賣超破紀錄 本周大事回顧",
+    "⚠ 全球市場風險｜星期一恐慘了！台指期夜盤崩跌1144點 台積電期貨同步跳水",
     "⚠ 全球市場風險｜Tesla, SpaceX, CoreWeave, Lam Research, Netflix, Strategy, and More Stocks That Explain Today's",
     "⚠ 全球市場風險｜Stocks mostly bounce back after rout fuelled by AI angst",
     "⚠ 全球市場風險｜Traders maintain expectations that the Federal Reserve will hold rates steady in October; U.S. ",
-    "⚠ 全球市場風險｜全球半導體巨頭入列 低成本ETF如何配置台積電、三星、艾司摩爾",
-    "⚠ 全球市場風險｜美股費半連8跌續挫200點！特斯拉「飛天車」逆勢衝、記憶體又倒地 台積電ADR摔1.7％",
-    "⚠ 全球市場風險｜億達中國(03639.HK)9月合約銷售金額約0.61億元"
+    "⚠ 全球市場風險｜全球半導體巨頭入列 低成本ETF如何配置台積電、三星、艾司摩爾"
   ],
   "markets": {
     "US_SOX": {
@@ -82,7 +82,23 @@
       "risk_score": 4
     },
     {
-      "title": "星期一慘了！台指期夜盤崩跌1144點 台積電期貨同步跳水 - Yahoo股市",
+      "title": "AI崩盤還沒底？ 小摩示警 「這次跟7月不一樣」 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMilwJBVV95cUxOeHZ5bWk4ZFNsbG9jck4wNW5YZzlsVmxBd2RsMDJWdmxyQ0pkMXZUTm4yd0RfMm9tbWlVbDVfSks1OG54dWw1bWo0Sk0xWWtfdUtJWkk3RExyUDViREszY0FVN1AyVWRrZVJ5eHgzN2JvRmJCamQzVTdkOEtSWDc4aENZandwLTNwb29TbU15UmY1UE85VGctZzhzaTg1M3NEQWxDRHI5Z3lFSHVuNVNSd3pHX1JpbktrbWl1cmVyN3NtdXc4cmNla1MtTXE3S1pYRTZiMFY2OFJWYWFwbWViVlVnbFBlb1dIcWhfZHh3THJnR01lcVZfckdTb0IyUzNodmZqS1NhWHQ1WmRmYzZTeTBZbnRGVkU?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-16T10:07+08:00",
+      "importance": 5,
+      "risk_score": 4
+    },
+    {
+      "title": "台積電法說會、經部擬赴德州設產業園區、外資單日賣超破紀錄 本周大事回顧 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi3wNBVV95cUxQNU01QjZicTdTbW1TMlg1V3A4ZEowQlJHTkJzay1jUU1oR3ZfNXpLRDk1ZnBUSFdFZ1hGczh5ZXVTYVdIdElJaFlUeEMzZm9IUzUxY0RvdENwWFdDdFliXzh4YkNHZHdoMDY1aVhKbDlLY0s1bUdfYi1CUjV3UENPNW5PcTMzLUlLWUtGbU1MaFgtM2VUZzNidzNvMDlWNjNUZUZja0loa082U2FtMlRKWUhaa2EtR3hQX0F2YkFGMlFTTGp6bUZ0TV91NER6d0FYRF83UDJFVkpTZU1qekpUcVJXZW14Mm9FWm5QUllKMEhBTFA1eDFOdDIzUU9mal8yckoybDg1blBGeXg3VlY1cm9DVzAtcTY0cXF1dEN4NXJ4SXBzQ3VwU0ZXRjhRMU5DMmMzQ21LVHlzaFZ2RDAxVzQ5aERvTXR0Mzc2WklmaFgzWWNfRUdFTElIYVRGMnQyOGxITW4yUXJUeVNWckdad25jRkNndFBnWHE5SXN5QUR3aTl1YnlVa0NDZW4ta094OXV0aGlJMnNEUk82eVQ0MjRFdWxYcTN2NXdTcE4zbmczTlZtMjc0YnBMdXJieDFnLTV3WHFnQWVONkJ3Z01pX2ZVaF9sWGVXUjBtNGxfcw?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-17T09:30+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "星期一恐慘了！台指期夜盤崩跌1144點 台積電期貨同步跳水 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMi4AJBVV95cUxONUdRRndOWnlRbkhvUS14SjJsUEEtMjBSR2R6NUpnUHRNRC02Rm8yX2lkaVZRdTJXYVAweEZXWWk0ZjdqVFdFbjlaWEpBaDB1X3VSVDRWdFdlSUVLNmdaQkI4dVgyelUxT2pKX0xwSGI1dzdOdE1FRXFRSGZqOXF2X2UwR2UwdVlmTk1ST2tZOU5yZDBLQmZGMXU2eDNWdzEwNGYwMnN3N0ZDMndhQkMxaXRHaGU4VjZ5TFNnMFRmaHhQYk5KcndTdUtoSkMzWlc3Z1NGRWZTWFhLeUpEQUIzMFFkU184S0FqQmV5VnhJNHlwODJOSVZYVmxNN3E3TDJTYUZVLUtjOVRWbk1HcXBOaWFDMURwRHZPSUZQSDc5OWhqZ3BwNGpJWm5vQi1EeTVibFp4YXNWNWhJV3ZJZDNDNnZucEZOaEREMkppNW9wdDV1cnoyRmtPUEhKZ1ZlR1Bt?oc=5",
       "source": "Yahoo股市",
       "published_at": "2026-10-17T06:33+08:00",
@@ -152,24 +168,8 @@
       "published_at": "2026-10-16T19:26+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "The decline in U.S. Treasury yields drove a rebound in European equities, with the pan-European index on track for its best weekly performance since August. - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQYkNHUmhsOFJ0YmItc3FEZXEzMFgyOXVWTzk4QmhKMUlXUnFXWlRJS3lHOFg1R0oxQ3AzdEt0YVpsTEdYLTIwZG5ycUlSRnUtc2ZFUHZKTnhXUXpZV1NQT2ZCOUlBMG9SU2x4R2pmWUVUTnR0TjRFNnRFdXltZ2JMaHRScC1kN29xaUhyUndvWENOVDlQTjNfTS1ZTQ?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-16T19:19+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股大漲他苦嘆「套2年完全沒賺到」 網勸：全砍改買這1檔 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi6gJBVV95cUxOaXltZEpzZ3ZHaktKREQ3UkRlNjRrdmswM01ZclBKQ2k5amk1U2M1YUd0enZORFNDQThya0JXUFRkMGxSYnJQcWl6TE9XMjV1X0xfSVhKLTZJc0xEZjBjXzRSREF0cTNISjdIXzV0XzhCMDdOWGNkQ1FjdGlucGhYQXptdF8yajNnZ3l0R2w3WlhMei11eHB1djFJbWVjZDV3OWdtTHQzMDIwU3NtRWtmTlRzYl9qWHR2WFViajZfOGhqeGNxbmtZTlBXdzNnUlpLTEZlMjBUOWpIQWtpTEtTQ1k4Q0w2NkJFaUZUR1dIT05jcXlLb050ZnhqRWhnNk9lbzg3TzdZYnE0V3FoWlBsb1JuOEItaHEzSmxrT3dmU2UtM1M2dUJOZnQ2S19RWWZJVmhtUGhuRUxGTUROdjROb2NqRHdsRXByNVJmRU1sd2lVRVAwSnZuajNPck1nR0hYcHlUQy1DYW5YZw?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-16T18:48+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-17T07:56:08+08:00"
+  "updated_at": "2026-10-17T10:00:55+08:00"
 }
