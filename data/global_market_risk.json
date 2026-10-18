@@ -10,14 +10,14 @@
   "ticker": [
     "⚠ 全球市場風險｜費半 -4.7%｜NASDAQ -2.1%｜日經225 +1.4%｜KOSPI -5.7%｜台股加權 +0.3%｜恆生 -0.5%",
     "⚠ 全球市場風險｜美債10Y 5.10%｜VIX 20.0",
+    "⚠ 全球市場風險｜科技持股集中、台股回檔震盪大！配置00998A增添金融抗震力 掌握日本升息商機",
+    "⚠ 全球市場風險｜台股周一新增6檔「關禁閉」！飆股大甲、蔚華科、「這光通訊廠」全在名單上",
+    "⚠ 全球市場風險｜存股族思維大洗牌！台股ETF瘋「不配息」 這檔黑馬8個月狂吸2000億",
+    "⚠ 全球市場風險｜抽中現賺12.8萬！台股3檔股票開放申購 這天截止快卡位",
+    "⚠ 全球市場風險｜抽中現賺12.8萬！台股3檔股票開放申購 這天截止快卡位 | TVBS",
+    "⚠ 全球市場風險｜台指期夜盤下殺逾千點 台股本周開盤陷46k保衛戰",
     "⚠ 全球市場風險｜費半連8跌！法人：台股周一面臨季線保衛戰 待反彈再調節不要開盤砍在「阿呆谷」",
-    "⚠ 全球市場風險｜個股概覽 | 個股 - 股市",
-    "⚠ 全球市場風險｜恐慌殺盤不用怕？台股面臨季線保衛戰專家揭「2重要訊號」止跌 台積電長線買點曝光",
-    "⚠ 全球市場風險｜台股一周狂殺2202點！宜鼎、萬潤等10檔逆勢吸金 法人喊基本面「完全沒問題」",
-    "⚠ 全球市場風險｜台股頻創高人人都賺錢？他看一排「獲利文」滿頭問號 釣出苦主：已虧90萬",
-    "⚠ 全球市場風險｜下一個6年三條線繼續分流 2027房市、租金、台股進入新階段",
-    "⚠ 全球市場風險｜施羅德首檔主動式ETF登場 聚焦台灣半導體與AI概念股",
-    "⚠ 全球市場風險｜外資拋售韓股市值比重為台股4倍 這些層面凸顯台灣展韌性"
+    "⚠ 全球市場風險｜個股概覽 | 個股 - 股市"
   ],
   "markets": {
     "US_SOX": {
@@ -73,6 +73,54 @@
   },
   "active_news": [
     {
+      "title": "科技持股集中、台股回檔震盪大！配置00998A增添金融抗震力 掌握日本升息商機 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMizwNBVV95cUxNMVQ1aGY0NWNrN0FMOGFFb09lZTBuWi1wc2tpVHN4XzMwM2pKR20wRTZHdmVjbUFqX3FNdWpod24yTWRHWGY0OHRfRDBGdjdlWndLdWhmSUVYZDYzZkZpLXNsaDBjdk5CdklnTFNmd3lOQjUtY0RHOUFLYVFrTS1xV1V5Uk9pMEJ1TGpLclRTMExEWWJVS0M5aEV1dkRwUnZQVUdxVzVnWTV2LW16SkljTmxTZFVXamF2UmtpRU4yQ2FZS2I5SmFMZm43YUdjQXRyN0k1dk8zenphRFh5RXU5bHNCTHhyNk93dkdOQzlVWTZDMGZFZ3BuTlE2OGJKMmlQeG02Q0VCV2tqQU9EVUE0RjZObzV6RmdDUWdPMTVpVkZnWXhFSzJzcUs0cHBNa0FyNG5oazlwYVVuaWp6TVBGbnh5WHJ4cnh2R3BVd0ozaklpT255Ulo5ckg5T0dzUEtzaXdLU095OFBlUzRDbXZkbk1udUVDV1RtWE00ZkVXSXVWemR1eW9HUm5MZnV2NzZMN3YxNUoxNnFZOXcyTkZreUhwTFpCLXNUSC1NTG52M216SXJXWmVDSGdlUjdPM2trdWFDQlFjQjlXdDVieFQw?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-18T17:26+08:00",
+      "importance": 4,
+      "risk_score": 2
+    },
+    {
+      "title": "台股周一新增6檔「關禁閉」！飆股大甲、蔚華科、「這光通訊廠」全在名單上 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiogJBVV95cUxNd1dTOW1Fa1FtNHdLaUc1QmpyRnZXdGNvZktDVVR1RVNWVzBEWE1TYVRFaEpCUXUtc1k0S2VJeWN5R3VDV1FYalVFWGpLamRnNUpYUU44VWhjVkJuX2JiQkR4Und0Nnp5dnZUem84dHFMZExqT3I0dEpYbG5oX0J6bnhWb05KdWZTQXZ6cm5oMGIzaXJvdmp2YkJWMXZfWlBZX19iNnJRQXp4Z1BYRGQ1blZoM05kRnE1OFpuSlVqMk5mMFl4akduQnpNeTFGMU13bXNfdVlaMEVCQWVjNnA4aXphR0ZaSU1TaEJhV0duZ1k0ejUwYXVSQmpSWGpJUVZJM1pXMy1rXzgtMElITThjUlNRd3FnRWhyUkxBS1VoLXhXZw?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-18T17:10+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "存股族思維大洗牌！台股ETF瘋「不配息」 這檔黑馬8個月狂吸2000億 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi_gJBVV95cUxOemNQX2l4OEFmUDJLZmR1M1AxZ0hUclJUZFd3VFFHRzZpb2I4ZFVfVlQ0Wl85U1NKUm9tYXgyZ1Y0b2gzTzViNm0yZUZWaVNJVTdjRjR4WjZ3LUphQ1JJTXh2Y3ZmVnpQMU5fSGxJZTJKQnpTaXlJTmJlTlZBNTRXX3NZc3BJeVNSOUtjMDJrMWlCeGJfUHRicjVkekpMYzYtaHdTdFRDaXNoRjBKT0pvYzhlVUwxT01ZY3pkWVhIWng2WWRGUXp3czYyQVk2TFZFbTE1MWNCRWR2WnlUR0d4bXgtVDRJdWdUcU1mT3E2cFJ2TmQ0eWNOR3JjSzlOOUFCcTd6QmxWYjNEclROQnhWTXdpb0Fqbm52bm9Ed20ydFo5RVViX0J4MG5GSGo1bjZDVUhJS2F3Y3MybVhiQzRPdTU1NlB5NjJxaHd3SnRZdllSQi05eUViNHA0MkNabUlSa1FCWWJFWEU2VDhvSWhDN1cxcTNMeDJfNHkxY2tB?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-18T16:30+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "抽中現賺12.8萬！台股3檔股票開放申購 這天截止快卡位 - TVBS新聞網",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5QWC1mdHc1RWY5b3AxbjJZaDNpZk5udkt2aGZydHZhdU9uN2FxNEk1djc5QzVWTFBGU2JraVNGZUNDMnVic1l1ZE5oX1dZWTQ?oc=5",
+      "source": "TVBS新聞網",
+      "published_at": "2026-10-18T15:22+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "抽中現賺12.8萬！台股3檔股票開放申購 這天截止快卡位 | TVBS - LINE TODAY",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE95R3pOT0xCVTJCM2s2bl9fUGpJcURHTGxkbWNjWElDbUlrYzRnVUZVWlhrR1lGQWpVcFR4djRILXNZVWNENlRuT3BFcGxFRWVON29WakhB?oc=5",
+      "source": "LINE TODAY",
+      "published_at": "2026-10-18T15:22+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台指期夜盤下殺逾千點 台股本周開盤陷46k保衛戰 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiygJBVV95cUxNcDNVTjAwSEVHVjhXN25FdVlydDdITHBvOXFnQ3loYkREaWpfSzFRckhnZHpyei1pTEVrZnNKQ1pjcUR1UmEtLXNlLVRQTGdjdmo1NERwWnRHd2lnbWpsak43WkU4Z1hEZHdiZHVjM1hXSjZSR1ByYW5iTUVrY3RGOEpGakV6cEd0UWVXMmZacUVrTUQ5bmxMLWdRZXVRenJfZXphdTlmb0RtRjB2RjgzcmJlWWlPVTRHTFlWWkplVXUtRTRaQ2xkN0N5SlB4N1kxRU1Bc0ltdTZuSWp2TVVqckdjNC1wM1RTdE1uSjBQN3R4UTFSMDg0S0x5NmdScDhJVWZ3enZjQlZEc2VYcUI2eGIwd0ludmRYUEdnWi1tWVp3SUNrcm5VQlRmZkJ3ZTBBVzJjYmx4RlVMMk90SVF4UXRzVFdLSDhKX3c?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-18T13:10+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
       "title": "費半連8跌！法人：台股周一面臨季線保衛戰 待反彈再調節不要開盤砍在「阿呆谷」 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMisgNBVV95cUxOUWRVVVFMNldmX01JNEdrQmNyS1J6N25BNDFibTVkTVhZYjJRemNvSGlvWEdXNndINGZQZGx0dldFX0toeWRIZDZfZ2RzaXloc1BYbXl6cUczX2lkREF6MTVpdlJwaDN3ZFFsSmo4Z2lCNjRlc2RSanFadDhpYWdFRFk3RWRCbTAtdTE4V0VaUmY2YWlVX2tIUkdtWkhlTWlxbE1iSkFIaXE2NXJwTlZxWE5ibzBfMVBwQnU2OGtRdF9jcWhGMXhTQTVSTjRaOXdsZ2RQcDJ0cjdPaDdnUW5pMjJWblhWUVFsdlE5cGdfb0U1UkFYRWVxNnFmM21zaEZHMVd4aENLZVdBQlBYcUt1eDNWbWpEdkVZOGlEdTBZVHpxVUh4QTJwSk1SMHpyc0doc0QtOThDckUzMmhYVXRudWd6ajRZUjN0d0lIWDVySm5xeHNuTkFmdW9WSWxlR0pNZDRPbFhVb3NzRHR2Z0lWVnhoUTBBVjk2WEF4eEtwdU5UTmxJa3VQanlHZHVOSDUtN2pmUGFBbXJULW1oQURZNjljaHVIcnFnUHZncjg2WXBsUQ?oc=5",
       "source": "Yahoo股市",
@@ -97,6 +145,14 @@
       "risk_score": 0
     },
     {
+      "title": "Will the Memory Market Face a 'Red Ocean' by 2029? South Korean Finance Minister States Semiconductor Boom to Last at Least Until Next Year - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOQ0lwUHdYLTVJNU9nTjlKWVRKeFkwREZwQ2hGalV3XzhjUDNkMVo5RXZYQVJvY3NfM0pZVDl6S0FQT3VTVTc3aXNJb0UydGZzOGpINWc0SjVUU3Z5QzhLd0IxM2dKSTlLYTd0OXFLRWVsVU9XdmxVQzltSlZXWE1Sc3BvTVJuQkRCd2ZNWkFEVFhoejU2?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-18T09:46+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
       "title": "台股一周狂殺2202點！宜鼎、萬潤等10檔逆勢吸金 法人喊基本面「完全沒問題」 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMi8AJBVV95cUxPWmphMTFkOGI1NUhLVzI3VC11UEdpYXFZczRydm9Va1VfdVJFVU84dXdSR01rR1hYb3BvdFlHZTB5dEtIUEZwUElxZFc4dzJFWHJmX193d1lub25DaDBkdlZWRmhYel9EVDB2eEcwODhqQmh5aUpSUjNBX25MWldaelFTcEFsN2ZKTkxkSVdJYmlUWktQZkR6R2xHeVR4VXdWbnNCb1Q4dFlCQ1AyTHhhV25UbkRpZkJJdFBpSGNQSGFtU0dMd0VoaUF3cXN3dzBBbll3UjloVTJoOVFvelZUVHhBZlFHak9YTndxQVRIa0l2UHVkaC1YNU12Wk5KdFlWa2ZzX05sTG9JcHM1Yk56QVFKWEcxMUhHQnQ2aVE4MV9NWkJXTG05TEZ1ZHJ3VTRDRTFUY1VMcG8zN0xfTDBEa296NzVwdkFucVNoVVBGYjEwYjRIeGs0dWNtWDZOTURPOUMwRWNicms5SHdXWFJtRw?oc=5",
       "source": "Yahoo股市",
@@ -111,64 +167,8 @@
       "published_at": "2026-10-18T08:38+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "下一個6年三條線繼續分流 2027房市、租金、台股進入新階段 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMigwNBVV95cUxNcU5KSGpZYzhYR1BNamttNU1laUU1MDZfNlV4aHotd0dGSG5vNGZVNXVmZjFjSkxwRzR0d0dnSlp6MFBpYkNiUEJXQThZMEhkeWNiUWJvaFdQblRQakZua2Q1WGJ2VHdhZzMwT3FhcHdtOXNVX0hFS2xiOEFacExJVXVVWVdFd3VvcHdaRGJDdkpkYzhpVkFvUnlfZERLMkFRc2tjbktIQWJuYW9kZEp3UTlHUHFzcm95UFFXcmlpSmQ1UkNrdlBqZ0xrdmZTNF9IUGNNUEI5YjJnOFgzR3hBNDY3ckpoNlROR19MZ2IwRnRYbWczWDFud1JIaG9fMlBiQ3I1X0RGbElLSy05bEpBNWo1MTNHVGJFOVJwY19iTTRqTkx0Q0EyLU5mWml1RVVGcGFSNHplcWlaOFF3eEl6UVV5QXlaT1VrM2FGQy1vbFVFWDd5aC1ha3NHUkFxSHVFVkFJSnFsejg3WG5VR2EzZGZhQzc0UUIxVnZ2UmxjTkN6ZXM?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-18T08:14+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "施羅德首檔主動式ETF登場 聚焦台灣半導體與AI概念股 - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9oQUVDQmFSaWRzX25sSFlRZzBqMXA1OHBmeEhSZEZLQ0JkTi1TSlIzQmxqLW5kSVRFYTZVY0cwZnhsTEdFWFBoT19OTHA4Nl9yTnlOalFaU00?oc=5",
-      "source": "自由時報",
-      "published_at": "2026-10-18T02:43+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "外資拋售韓股市值比重為台股4倍 這些層面凸顯台灣展韌性 - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE13VkRYYkpVVkFuRGlzQ2x4VjFLWndrVVNUdDNfQlNWdnVJV2ZyaWNENEtPNHNzVjhNVU1JeUhpaXc2LXRuY2hIa3BRdXZoQmR1VTFzazhSSjU?oc=5",
-      "source": "自由時報",
-      "published_at": "2026-10-17T21:58+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股躍升全球第四大市場 台灣人真的變有錢了嗎？ - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE56QVYtR0Vsa1NMQ1FGSDhuQW1DcDBoU191U0xfMWFvSjR3ZF9fY2piRzl0eG1BMDBmbXJjbGNYNndyQXFJdFc5ekRneXIwMVV0VUlMUEU0cDI?oc=5",
-      "source": "自由時報",
-      "published_at": "2026-10-17T20:50+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "周末精選｜台積電日賺85億仍跌！魏哲家自嘲「早知道」 法說13大重點一次掌握 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMizgNBVV95cUxPb2VPZDFFLWtlV2lKNm9XRkkxSkpwNW9sTWxoeXZPNzBneGdYajQ2dkhrR1ZuQTI1bmlSVmZCU2VUUGcybFFfc3owVi1IbU8tbDEtd2pxVUhxbFlXLUhMX29URzJaRFpCQ0gyc2t2YV9rdE5vRHBjU1R0NDRzWVRlbEFkOE5EaTdnSHpmcWZtWHloM2lvMXVWbTd0UDlpY0Z3NWExR3o4UVltWEhEamFMM2ZPOGNBQ3lkc01YR1Rxa1lhOHZDazY4TzhIbWZFOGJlNFBoRFJBTGU1blRLR1lIcklJanZTRVlwRzRRdzRBMTd3Y2Z5c0RwdkVCVDRmTnhrdzdRRldvYWZlUW5lVzFqZy1mZzNmTFFmblJRMFNnYmk4cC0zNVZZamdCYTM2WjBYRmNqTGgwR3kwd3dvUjRKUmpmSUxqMHlJOWxTd1NhNTl6Yjh1TFN3UWVVTEZwc19jNG5OdmlUNTZZWkY3NUxKOS0tRnpyT1kzYUd4aG9SU2RKbVpVZFgxNjB2TWtVWEkzNUVNZjdCaGNZZ19xSlpnd2k2dmFSYWNJVWljYS1ybE1vc0txTUhfWTdaNzVIS1l0aXR3T2lXaUk2bVZhSFE?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-17T18:08+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "蘋果iPhone 18傳下月量產！備貨規模驚人 台積電、鴻海等5大台廠迎拉貨潮 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMipANBVV95cUxPX1RPb2hhMnhFVXR4WExaYk9fdF9xQ2JoblJTRVo2RVN3YzBLR2RWWTc3Z3JxWjZLWVE5SlVWNEFHUTlnRmFKYllXLXJ2Q2NoWkQ4RFBrXzgtX3BxRFQ0SGZkLW5oeHhrNktESDlQckE5Mll5YWdVLWdtRWM2UFhEWTYxUTYwdGxKNkV2TzlTNHczdHJuQkkzQUVoM0sydEwybWVrQjZ4ZHUwUWdoVUNBQ1dTbmZxaFJkTHBCQjF2MVBFTkZRT2V6YjNlc0VuV2pUeDJ1dGtRcE96SHUtRFFoQzN4cktRX2J1QXlXdUhfNm9MRjEtSGI5RENmTThDaHg2aHE3M1dINkl5aERKcE5Na1BINU1GQUhDdHB3eE1Bb1FQbXpGSW9uSzJYWFdJWWQ0TG9pQk1QYjdvRTFQd3ZkS2lKYUdvRldiRW9PSDRzV1NpX3BBZkdhM2xETWJmbzJ5al9xVVVLZEc4Qi1VeFRTbmJYQmZ5UXlKV285Q3dNc1VtcWoyVkRmb2VpRjlucEVYaktLZjBWU0xocy1xWnF3UzFyN00?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-17T17:40+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "蘇威元：智聯服務營收創高本益比8.6倍 搶攻台積電擴廠 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi6gJBVV95cUxNLUtyQllxMlVueGFCSFc2LVNMQW1Nd3lpbWVrSHlkX3I3Q09FR2s4N0dTV0ZDaHFvQXNabHdBOFJuLUIzWnJpUHNDWnFGazM1OVBsQVFLcTdYU2pDNk5HbWxrdTVNYUUwdUVDRkVfUE5xeHhyUVdZTFlvakppWDROUFpNRDh5d082aWJsclRPanZnSXF0c2lCQ2VNZHJFSkFaSHhOX2U3RHQxdDVZVzk2VDhhekNMZExuQVFrVHZ4YXJLVnRmajNkTHhWWFN4VHV2d0ZRdFhZQ2dPSHNEaUxZYTFwYVJzZDQySXhydmp6Ui1obXhGS2tmRjE3WHEySDJWaWpFYVJyXzJod2hhTjliWHA1UWFqd3lnME02MXB1NnlkUkVOeEJDeVcwcWlfVTd3YVNNOW95aVMyVmNCSUxYTVY5YU5mcmwwUzlhdXFlVzF6SnF0SXZqWTloeC1RUHRfUDlPN0s0cFZkZw?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-17T17:13+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-18T13:48:22+08:00"
+  "updated_at": "2026-10-18T17:55:24+08:00"
 }
