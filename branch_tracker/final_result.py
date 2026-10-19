@@ -24,6 +24,7 @@ DATA = Path(__file__).resolve().parent / "data"
 DB = DATA / "branches.sqlite"
 TARGET_SESSIONS = 120  # compatibility field; analysis uses six calendar months
 HISTORY_MONTHS = 6
+from branch_tracker.backfill import append_dated_raw_evidence
 
 def history_start(day):
     d = date.fromisoformat(day)
@@ -570,6 +571,8 @@ def main():
                 "branches": rows[:10],
             })
 
+        append_dated_raw_evidence(db, monitor_feed, stock_names, latest_day)
+
         complete_pairs = sum(r["history_days"] >= r["available_price_sessions"] and r["available_price_sessions"] > 0 for r in influence_rows)
         result = {
             "generated_at": datetime.now(ZoneInfo("Asia/Taipei")).isoformat(timespec="seconds"),
@@ -677,4 +680,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

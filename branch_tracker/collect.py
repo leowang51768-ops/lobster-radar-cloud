@@ -19,6 +19,7 @@ from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
+from branch_tracker.backfill import ensure_attempts, plan_history, record_attempt, finish_attempt
 HOST = 'https://concords.moneydj.com'
 
 
@@ -172,6 +173,7 @@ def open_db(path):
     CREATE TABLE IF NOT EXISTS stock_status(day TEXT,code TEXT,status TEXT,rows INTEGER,error TEXT,PRIMARY KEY(day,code));
     CREATE TABLE IF NOT EXISTS official_prices(day TEXT,code TEXT,close REAL,volume REAL,PRIMARY KEY(day,code));
     ''')
+    ensure_attempts(db)
     return db
 
 
@@ -262,9 +264,10 @@ def collect(args):
             # Do not keep hitting the same source on access denial/rate limiting.
             if isinstance(e,urllib.error.HTTPError) and e.code in (403,429) or isinstance(e,RuntimeError):
                 stop = True; break
-    queue = db.execute('SELECT code,branch,broker,name,url FROM queue WHERE (last_attempt IS NULL OR last_attempt<?) ORDER BY COALESCE(last_success,\'\'),first_seen,code,branch LIMIT ?',(day,args.history_budget)).fetchall() if not stop else []
+    queue = plan_history(db,day,args.history_budget,attempt_day=taipei_today) if not stop else []
     history_ok = 0
     for code,b,broker,name,url in queue:
+        record_attempt(db,taipei_today,code,b,broker)
         try:
             html,_ = fetch.get(url+'&C=3')
             records = parse_history(html,code,b,broker,day)
@@ -273,9 +276,12 @@ def collect(args):
                 for date,buy,sell,total,net in records:
                     db.execute('INSERT OR REPLACE INTO history VALUES(?,?,?,?,?,?,?,?,?)',(date,code,b,broker,buy,sell,total,net,stamp))
                 db.execute('UPDATE queue SET last_attempt=?,last_success=?,error=NULL WHERE code=? AND branch=? AND broker=?',(day,day,code,b,broker))
+                finish_attempt(db,taipei_today,code,b,broker)
             history_ok += 1
         except Exception as e:
-            with db: db.execute('UPDATE queue SET last_attempt=?,error=? WHERE code=? AND branch=? AND broker=?',(day,str(e)[:250],code,b,broker))
+            with db:
+                db.execute('UPDATE queue SET last_attempt=?,error=? WHERE code=? AND branch=? AND broker=?',(day,str(e)[:250],code,b,broker))
+                finish_attempt(db,taipei_today,code,b,broker,str(e)[:250])
             if isinstance(e,urllib.error.HTTPError) and e.code in (403,429) or isinstance(e,RuntimeError):
                 stop = True; break
     statuses = db.execute('SELECT code,status,rows,error FROM stock_status WHERE day=? ORDER BY code',(day,)).fetchall()
@@ -289,7 +295,9 @@ def collect(args):
     report['history_errors']=history_errors
     report['history_pairs_ever_fetched']=db.execute('SELECT COUNT(*) FROM queue WHERE last_success IS NOT NULL').fetchone()[0]
     report['history_coverage_complete']=False
-    report['history_coverage_note']='成功抓取不代表完整60交易日；須逐組核對交易日缺口'
+    report['history_coverage_note']='按個股實際交易日缺口排序補抓；來源每頁最多60筆，較早缺口仍保留待補，缺筆不當零交易'
+    report['history_retry_policy']={'max_attempts_per_pair_per_day':3,'retry_delay_seconds':900,'source_history_row_limit':60}
+    report['history_attempts_today']=db.execute('SELECT COALESCE(SUM(attempts),0) FROM history_attempts WHERE day=?',(taipei_today,)).fetchone()[0]
     report['ranking_coverage_complete']=good==len(universe)
     report['status']='partial'
     report['errors_total']=db.execute('SELECT COUNT(*) FROM queue WHERE error IS NOT NULL').fetchone()[0]
@@ -308,4 +316,3 @@ if __name__ == '__main__':
     parser.add_argument('--history-budget',type=int,default=60)
     parser.add_argument('--delay',type=float,default=1.5)
     raise SystemExit(collect(parser.parse_args()))
-

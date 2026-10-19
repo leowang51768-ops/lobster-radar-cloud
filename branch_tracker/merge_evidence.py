@@ -2,15 +2,20 @@
 """Merge a preserved collector DB into the remote DB without dropping rows."""
 import sqlite3
 import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 TABLES = {'ranking': 'collected_at', 'history': 'collected_at',
-          'queue': 'last_attempt', 'stock_status': None, 'official_prices': None}
+          'history_attempts': 'last_at', 'queue': 'last_attempt', 'stock_status': None, 'official_prices': None}
 
 
 def merge(source, destination):
     with sqlite3.connect(source) as src, sqlite3.connect(destination) as dst:
         if src.execute('PRAGMA integrity_check').fetchone()[0] != 'ok':
             raise RuntimeError('Preserved evidence database is corrupt')
+        from branch_tracker.backfill import ensure_attempts
+        ensure_attempts(src)
+        ensure_attempts(dst)
         for table, stamp in TABLES.items():
             info = dst.execute(f'PRAGMA table_info({table})').fetchall()
             columns = [r[1] for r in info]
@@ -18,6 +23,8 @@ def merge(source, destination):
             updates = [c for c in columns if c not in keys]
             cols = ','.join(columns)
             assignments = ','.join(f'{c}=excluded.{c}' for c in updates)
+            if table == 'history_attempts':
+                assignments = 'attempts=MAX(history_attempts.attempts,excluded.attempts),last_at=MAX(history_attempts.last_at,excluded.last_at),error=CASE WHEN excluded.last_at>=history_attempts.last_at THEN excluded.error ELSE history_attempts.error END'
             if stamp:
                 condition = f"COALESCE(excluded.{stamp},'') > COALESCE({table}.{stamp},'')"
                 if table == 'queue':
