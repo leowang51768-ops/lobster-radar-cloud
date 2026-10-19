@@ -1,49 +1,47 @@
 {
   "schema": 1,
   "risk_level": "red",
-  "risk_score": 7,
+  "risk_score": 3,
   "risk_reasons": [
-    "費半明顯下跌",
-    "NASDAQ明顯下跌",
     "出現重大風險新聞"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 -3.8%｜NASDAQ -2.1%｜日經225 -0.6%｜KOSPI +3.9%｜台股加權 -0.6%｜恆生 -0.5%",
-    "⚠ 全球市場風險｜美債10Y 5.10%｜VIX 18.3",
+    "⚠ 全球市場風險｜費半 -1.4%｜NASDAQ -0.7%｜日經225 -0.6%｜KOSPI +3.9%｜台股加權 -0.6%｜恆生 -0.5%",
+    "⚠ 全球市場風險｜美債10Y 5.14%｜VIX 18.3",
     "⚠ 全球市場風險｜AI狂燒錢會崩盤？他憂台積電、0050「重演2008悲劇」 網反問：是不是有誤解",
+    "⚠ 全球市場風險｜Taiwan Semiconductor Manufacturing Co Ltd(TSM)股票10月19日盤中上漲3.17%：釋放什麼訊號？",
+    "⚠ 全球市場風險｜Although the market opened with selling pressure following the drop in U.S. semiconductor stock",
+    "⚠ 全球市場風險｜快狗打車擬1元出售中國內地業務，四年累計虧損超26億元",
+    "⚠ 全球市場風險｜台股反彈訊號來了？美股科技股反攻、台積電ADR同步走高 台指期夜盤逼近47K",
     "⚠ 全球市場風險｜Lee Jae-myung: Measures to stabilize the stock market will be introduced at an appropriate time",
     "⚠ 全球市場風險｜64萬多人注意！5檔台股ETF換股 國巨、富邦金、國泰金等被踢",
-    "⚠ 全球市場風險｜台股會一路殺回4萬點？新手加碼2檔ETF遇回檔心慌 網友：放眼長期",
-    "⚠ 全球市場風險｜台股回檔7％！ 立委關切「限空令救市」 金管會回應了",
-    "⚠ 全球市場風險｜Institutional Insights | Morgan Stanley: The U.S. stock market correction is nearing its end; p",
-    "⚠ 全球市場風險｜看好台積電還會漲！外媒喊「頂級投資標的」 曝下一波上漲行情",
-    "⚠ 全球市場風險｜三大法人賣超900億 台股只跌289 網：不容小覷"
+    "⚠ 全球市場風險｜台股回檔7％！ 立委關切「限空令救市」 金管會回應了"
   ],
   "markets": {
     "US_SOX": {
       "label": "費半",
-      "price": 11137.287,
-      "change_pct": -3.8
+      "price": 11418.108,
+      "change_pct": -1.4
     },
     "US_NASDAQ": {
       "label": "NASDAQ",
-      "price": 26140.033,
-      "change_pct": -2.2
+      "price": 26519.754,
+      "change_pct": -0.8
     },
     "US_SP500": {
       "label": "S&P500",
-      "price": 7659.44,
-      "change_pct": -1.0
+      "price": 7711.71,
+      "change_pct": -0.4
     },
     "US_DOW": {
       "label": "道瓊",
-      "price": 52002.41,
-      "change_pct": -0.4
+      "price": 52061.34,
+      "change_pct": -0.2
     },
     "VIX": {
       "label": "VIX",
-      "price": 18.34,
-      "change_pct": -8.2
+      "price": 18.28,
+      "change_pct": -8.6
     },
     "JP_NIKKEI": {
       "label": "日經225",
@@ -67,8 +65,8 @@
     },
     "US10Y": {
       "label": "美債10年殖利率",
-      "price": 5.102,
-      "change_pct": 0.0
+      "price": 5.136,
+      "change_pct": 0.8
     }
   },
   "active_news": [
@@ -79,6 +77,38 @@
       "published_at": "2026-10-19T11:36+08:00",
       "importance": 5,
       "risk_score": 4
+    },
+    {
+      "title": "Taiwan Semiconductor Manufacturing Co Ltd(TSM)股票10月19日盤中上漲3.17%：釋放什麼訊號？ - TradingKey",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNbGZqc2pIdVVLbXdpeEd1ZWpDUjl6Y0tycWpLYTVrcUtNWDZGUWFzSGdEQVNsd3NnOTVHd0l4QjdvRFZsZ29namFqclJsdDdXSFdlSFZNLWJjVDVvRkdfMHV3MjZ0bml5UXE3ajgtbmFXLUxEMlBYSkJCcHhNWTJVcFdPRVV4UVhvUWpPT3U3WUR2LWtv?oc=5",
+      "source": "TradingKey",
+      "published_at": "2026-10-19T23:16+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Although the market opened with selling pressure following the drop in U.S. semiconductor stocks, strong buying on dips supported a recovery. - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPWEprNjlKQy1oVVJ4VDFHMzV6X3Z6WXVOVWZTOFc2V0l1anRiaENfYTB3Y0YxbTFseEV4TlBMRkEtUUNRcjBQQUxERzNkc25teUlPVFVKZVhBWGZ6UC16TzUyS3BiNnM4bUh6WXc5LVQ3ZktOcHpJQVBITHlDeTNnenREWkhRZlZoTG04em9QdnIyZ3NJMHpsMFpUSFlLRXgzcjE3Vk5ySUFWMGJ5N1RZ?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-19T23:07+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "快狗打車擬1元出售中國內地業務，四年累計虧損超26億元 - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1Wb1NfNzlucngxVnFMeGhHQXlHTi1QV2w3aE1KSGJQc1NndkRvSlNhd3NWNFFJaWFZU0Y1aTQwWGh4TC02OTViWGhhdGdpWmRqUzVuTU5HZmJpbnZfOENBUWRJUTB0MnJYRnEw?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-10-19T22:43+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股反彈訊號來了？美股科技股反攻、台積電ADR同步走高 台指期夜盤逼近47K - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiwwNBVV95cUxPeUtyZnF1Wm8yWHpvd2JrNy03V25RdDRodTkyQzdFMzMwU3BtUmR4MEQ5MHo2TU5WZDZlRGZzLUN6Y0JaUG1wYUI5dGJOSHc1c1gtdWVWLVZkM0RCS2FOYVk4LXBNSHUtU013UlVGRkNpeF9jaksxaGpqRXBKTVlvdF91TTRnX1FzaTl0dzFUZ3gxTWdyTm5lU3BOSXpubDRzeHRhNVVwR1VLWDBLR290aVNjM3J4cXBFdlFLaHpvcDNUOTNidEM1TGpQYUZVQmZnY3dFcU5nUGtsNW5MT0lfU2dxQmNpVkxxbUl2Q2RpcFdxY1VIVE9uakNLZHpMb2oyM25GUG5VWndWWlNzMnZaT1M5azk2STAwdHlEYzJWLUY3bDdFVlRzc2ZpV180QTEtZml6a0RGMXFpMFVVYlN3S1M0SmFENWtvMVNlRWU0Rmx4OXY3UXFYUmZSSnM0TEF4VHhxaDZ4YTNyQ1p4UUpOYkwxWFRSRHkxQS0yb3FMQi15SS1yUDg5TklOT2NtUVExSmt4RFl5TnhUSnBXdjdWeUl5cG8tek51aENscHN2NGVyMVlOUG11Y1NpbUFpTlhGVUZF?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-19T22:35+08:00",
+      "importance": 2,
+      "risk_score": 0
     },
     {
       "title": "Lee Jae-myung: Measures to stabilize the stock market will be introduced at an appropriate time to prevent significant fluctuations in the property market. - 富途牛牛",
@@ -97,18 +127,18 @@
       "risk_score": 0
     },
     {
-      "title": "台股會一路殺回4萬點？新手加碼2檔ETF遇回檔心慌 網友：放眼長期 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMihwNBVV95cUxNZnFYS21SVjVBWlhncWl5cGNERFM4bWc3MWY1RkFTQWQyRUhSSlROTjBUMWFPdjRLcW1Sa1VuM0ExSk55OUhmSHp3dWRxS0VqdG9aQ3JYaHhfT1hRTzhWNHJhNDgwZzFMd3Y0RlBfRW5aVE0wb2F2QS1FTXV1QmdaN3Mxd2syejJfRFJNUU9GLWZsTVBIT0ZScXI3RjN0T29SWURqbWZtMmtWbmNQTlB4bm1Zc0cyUDhkZ1ZiZTQtd1RJcThnTlU5Z3VUdjl1NnNwRWwwX2dFdXotandtb2NZRk14WWRoVHZtd2RuNDhpaTIydFdoTmNaRW9Ld0VjTHQtWVV4TGpBN0hTWDBLaUlBX3dZeWlpVVpad3UySU52Rm9BVnZxQzRiWGZxVFJYVkYxd1JsYnR4WGtXLXo1NjBWekxUWnY2ajVGamlRWVNmLURnSzI3clRFeW94VWJsUkk0SE5OUmFIME5rRGpDenh1VTlidnlUYW01RHBDOHg1WFM1YndkR3VZ?oc=5",
+      "title": "台股回檔7％！ 立委關切「限空令救市」 金管會回應了 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMixgJBVV95cUxNd3EwbjdhaE9HRnFYczJiLU00UnJBaGtPN0l3ejF2UHU2SlBIcUUyQmR4Y3JBWkVYdU1xRE5penBpWGR3UTZHbGdldTd5MXBLODRPajBjZnFrVTJsc0oyazdPaVFac2RUWHpETXBCSG1WeXJrOUZOT1R6T3VOUXQtc05lRkNOeV9OeVp4WGFweElYakRPanFoZHB0NW4yNmpwX0JwS3l0RjhfbEdVWVRGTUxzcEZCWFREWkpCTk9FYXhzTXduVTVrOTFSQXNYY0lBNmx4c2RjMHROeklqdEE2Q3pSTXYtYVpZRHBlWEFRb2I3UVI4TlQ0eTY2UUM4Q2dlOXRRckx2eFYtamZBaG1fYnVubnN2LUFTRFRacjE3alplbzk1c0drTjhGNTNOeGRCMVJySVVrS3hkMkZYeEtyVWpMVzViQQ?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-10-19T17:35+08:00",
+      "published_at": "2026-10-19T17:36+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "台股回檔7％！ 立委關切「限空令救市」 金管會回應了 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMixgJBVV95cUxNd3EwbjdhaE9HRnFYczJiLU00UnJBaGtPN0l3ejF2UHU2SlBIcUUyQmR4Y3JBWkVYdU1xRE5penBpWGR3UTZHbGdldTd5MXBLODRPajBjZnFrVTJsc0oyazdPaVFac2RUWHpETXBCSG1WeXJrOUZOT1R6T3VOUXQtc05lRkNOeV9OeVp4WGFweElYakRPanFoZHB0NW4yNmpwX0JwS3l0RjhfbEdVWVRGTUxzcEZCWFREWkpCTk9FYXhzTXduVTVrOTFSQXNYY0lBNmx4c2RjMHROeklqdEE2Q3pSTXYtYVpZRHBlWEFRb2I3UVI4TlQ0eTY2UUM4Q2dlOXRRckx2eFYtamZBaG1fYnVubnN2LUFTRFRacjE3alplbzk1c0drTjhGNTNOeGRCMVJySVVrS3hkMkZYeEtyVWpMVzViQQ?oc=5",
+      "title": "台股會一路殺回4萬點？新手加碼2檔ETF遇回檔心慌 網友：放眼長期 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMihwNBVV95cUxNZnFYS21SVjVBWlhncWl5cGNERFM4bWc3MWY1RkFTQWQyRUhSSlROTjBUMWFPdjRLcW1Sa1VuM0ExSk55OUhmSHp3dWRxS0VqdG9aQ3JYaHhfT1hRTzhWNHJhNDgwZzFMd3Y0RlBfRW5aVE0wb2F2QS1FTXV1QmdaN3Mxd2syejJfRFJNUU9GLWZsTVBIT0ZScXI3RjN0T29SWURqbWZtMmtWbmNQTlB4bm1Zc0cyUDhkZ1ZiZTQtd1RJcThnTlU5Z3VUdjl1NnNwRWwwX2dFdXotandtb2NZRk14WWRoVHZtd2RuNDhpaTIydFdoTmNaRW9Ld0VjTHQtWVV4TGpBN0hTWDBLaUlBX3dZeWlpVVpad3UySU52Rm9BVnZxQzRiWGZxVFJYVkYxd1JsYnR4WGtXLXo1NjBWekxUWnY2ajVGamlRWVNmLURnSzI3clRFeW94VWJsUkk0SE5OUmFIME5rRGpDenh1VTlidnlUYW01RHBDOHg1WFM1YndkR3VZ?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-10-19T17:33+08:00",
+      "published_at": "2026-10-19T17:35+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -129,46 +159,14 @@
       "risk_score": 0
     },
     {
-      "title": "三大法人賣超900億 台股只跌289 網：不容小覷 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMipwJBVV95cUxONGo2V2FDb05xenMxdjRUenlteEdscFctZmUzZi1FYjY0WC15VXBxQkwzckk4enp0TnNGa3dIVkVlM2JCV3ZBTF9zVE5kZTluUFdDYUQyQ3JtME9uVXlXUHdBN3dPZ3VRbUxGVGJKRHRYNDVkcTBsVm1ZSWxTTTE4NnVhYmpzLU9FRE5QdktGd1lHLVM2OEcxRXdKWUkxNldNZm5mOTRmUGVtelBrSGlxV3FEZnJYeVktYkFaMGltMHVqdWpaYkNwZjdyMjR4ZWN2UEEwY19vN1UyczFuZHQwWnZVb3pZUW1GNzZMV2ZMYmZKUERKd1Rqd0VFZUJZck9kSXRIVFdJaUJ5T2tqRUU1elZqN3VCbmE2RkV1VlJxSlJYbUpWTE9Z?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-19T16:00+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "三大法人賣超台股899.54億元 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPN01VLW1tODNOZGZPaTJIOEhDVldpYTFSMEp0eEs1cF92X3VXZEctemIza1dLMlY3UlpJQmdReDhXV3VQOEc3enNfOHRUMmpkQndKVl85MkhWQ0ZnaWRub2NvT0k1M3lRWkZ0bk5XNXZrWmVFSVc3RWpmaDdFRVBsY1hlb05XR1RPLUpMdXBKYjRMOXB5X1BCd0ZMdEF0NGREdHowVm5jQnNRSWpYemRpVGdXWDRiSnJjNEpzYUJLdHNwcEFhSjAwUEtaQlZTM2stRktYYURjVW9aV0U?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-19T15:09+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股震盪ETF人氣不減！「不配息0050」人氣超車00981A 單周增近4萬人 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMijwNBVV95cUxNYnBIa2pkMXV6RS1yMWVkUUJKYUFRLXlWaDB1cFJNNTVxamtYOU94VUFNTWRRNU1VVVVobUYtUnR1VXdSM2JhUnE3ZmVNd0FVRXBoNTExNWNVVTNTb1BOZE8yRnh2S2tEYkZHcVhLUk9PSzRHelJyTFlvajNHMUcwVVRJX0Y5R1BQcjlpWGdhY3dSaV8wVXZPNE1ZY0JyVGFMNmpGc1RtSHFhTE5XemFmSkdZNXBBbnQxUlNxVG52VHNXQ3RuYkdzUWlxZjdrUXBKYXlKc3dVUmd2QkNoaWc4RkhLQVg4aVJJQzFsYUhaX3hreHhqUW1TdWNacXdoaDlaa1l3R0EtemdxNldBZGNzUDkwX2ttQU9RSzFaOWo0aVF3VGRSXzVuMDl4R19DdlMwTmpWTjNLTF8xZ3VZczRNVnExWko0YzIzZVo5MGxFR1FFbVhFbmR5STc3YnJOX09MVVFSd3lqOXhsTVFKcUlpTjIwMU9nb2lWem9OcUI4TG9PWXgxOF9vaFJndXh2RDQ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-19T14:55+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Market capitalization shrinks by nearly ¥40 trillion, leaving only one-third of its former value: Kioxia falls from Japan’s top spot as AI storage narrative faces dual backlash - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQMVd4R0p5U3R6ZXdobThLQ1BsUTZPbTVVeXlhUmtzcl9wQUZmU1hYZmNjd3h0VmlaS3pNOHVrcjRpM0NoUUpQRE5kaVE4RE1lLWlLM3VkTzlGOUhiSk1iN2dDbnJKbEpSZFdDSUJoaUVGZ19SckNjeVdSak1BTGJLcU1abEJnU1RUaW5lSFlwQmZpOTNUUFU4YmRlQ28tdVlhUFBrQ1FLYlpuNnE3MXZDSA?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-19T14:43+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "〈台股盤後〉台積電尾盤急拉 跌289點收46822點守住季線關 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi2AJBVV95cUxNYktHVHFjeHJVN3NpalBubnNmVGZsbk9ybjJfYXJ5MUw2a0o0YThjWUFLdExuUlU4RWdtVjFRRWNveW5wWlpQT1l5ZU4yV2w5cGM0OVdOOWRjSzVOSk5JOGRuN3poVlZmTFR4VnVpTV92NnZDdk1RcnBtNmtWQmxQVUkweGswSFBUSmtoZGN3TXBWeHVFbGpuZElUMUt4RXJVSXFwZnZvbzNCZjM1bDZBd0gtdDdBY0VGSDRGVFVSVUNEbHFsTTRrYV9xcGJBVmJtaDV1MVdULVp2SnVaYndxRVdVay1YSnRZRE53ME1XVXdJTGcwN3ZSVE9qOUdaR2RjaXowbHF2Um1XY0VZY0c0eVk4cVppSHZheWlZaGh3VjVITDJXUlczZEdxRWFwZlR6VnNpZDFISFV0MVVEbDdZWTlkZ0x3cTByclNZdHlva1hOOTdIS1lFdg?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-19T14:35+08:00",
+      "title": "Hong Kong and Chinese Mainland Enterprises Go Global Together: Bringing Enormous Opportunities to Global Talent in the UK - Macau Business",
+      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPLXlfdW5rc3NiZWhXMWFqdHR4RFpzR2NnNWdiU3IzZk56a1lmME5QTkJCbFV3b2ZxbW5XQXNlcVd1eUN4ZVhzaU1lNkxQd2EzRUhfc3daQmMzMkU2T3MwOXZTRW1aanFXaE9jeDhVMmlybVRTSURvMlY2Wno5dVp5N05UMm1zTElPNDlqbEdhUXhzb1lrSnBSbmZaYmdqeTNNRmx4S094NlRqRWZuWVRpS3N6QjFKLVZMaEJwVHBIVnZReHJjQUduekFnMi1hS3Fhd0pua1NKNl9RRFNKUzR0ZA?oc=5",
+      "source": "Macau Business",
+      "published_at": "2026-10-19T16:47+08:00",
       "importance": 2,
       "risk_score": 0
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-19T21:28:57+08:00"
+  "updated_at": "2026-10-20T03:25:18+08:00"
 }
