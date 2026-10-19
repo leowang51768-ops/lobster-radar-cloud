@@ -227,6 +227,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-10-19T08:50:32+08:00",
       "reason": "manual_add"
+    },
+    "2610": {
+      "code": "2610",
+      "name": "華航",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-10-19T08:51:32+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
