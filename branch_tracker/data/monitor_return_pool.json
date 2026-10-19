@@ -235,6 +235,22 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-10-19T08:51:32+08:00",
       "reason": "manual_add"
+    },
+    "1802": {
+      "code": "1802",
+      "name": "台玻",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-10-19T14:18:17+08:00",
+      "reason": "manual_add"
+    },
+    "5880": {
+      "code": "5880",
+      "name": "合庫金",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-10-19T14:18:17+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
