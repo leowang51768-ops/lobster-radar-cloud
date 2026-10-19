@@ -7,16 +7,16 @@
     "NASDAQ明顯下跌"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 -4.7%｜NASDAQ -2.1%｜日經225 +1.4%｜KOSPI +2.0%｜台股加權 +0.3%｜恆生 -0.5%",
+    "⚠ 全球市場風險｜費半 -4.7%｜NASDAQ -2.1%｜日經225 -1.8%｜KOSPI +0.5%｜台股加權 -1.3%｜恆生 -0.5%",
     "⚠ 全球市場風險｜美債10Y 5.10%｜VIX 20.0",
     "⚠ 全球市場風險｜科技持股集中、台股回檔震盪大！配置00998A增添金融抗震力 掌握日本升息商機",
     "⚠ 全球市場風險｜〈台股盤前要聞〉經濟部擬赴德州設立產業園區、中經院三度上修今年GDP至12.16%",
-    "⚠ 全球市場風險｜〈財經週報-看盤焦點〉台股高檔震盪未撼動基本面 AI規格升級接棒",
-    "⚠ 全球市場風險｜台積電法說全球關注！外媒曝最大考驗 股價想噴要先過這關",
-    "⚠ 全球市場風險｜破天荒！韓媒：三星將採台積電3奈米製程 為輝達生產下一代HBM基底裸片",
-    "⚠ 全球市場風險｜〈台股風向球〉AI供應鏈遭外資提款壓力驟增 等待摸底訊號",
-    "⚠ 全球市場風險｜Goldman Sachs presents a \"shocking chart\": Either the bond market is \"excessively pessimistic\" ",
-    "⚠ 全球市場風險｜台股週一剉咧等？專家喊先做好3件事：看持股、控風險、等訊號"
+    "⚠ 全球市場風險｜日月光崩4%、台達電挫2%！台積電重摔30元至2390元台股慘綠開低跌867點丟了47000點大關",
+    "⚠ 全球市場風險｜外資提款5862億 台股沒崩誰在接？ 專家揭5大觀察重點",
+    "⚠ 全球市場風險｜有1000萬買台積電0050、還是雙北捷運宅收租？放5年買誰最穩…五面向拆解最佳解方：正向金流源源不絕",
+    "⚠ 全球市場風險｜股票質押200萬買台積電ETF！利率4％該歐印還是分批？投資人勸先想清楚",
+    "⚠ 全球市場風險｜台積電展現頂尖AI投資實力 執行長魏哲家看旺晶片需求",
+    "⚠ 全球市場風險｜台指期夜盤跌千點 台股4萬7保衛戰"
   ],
   "markets": {
     "US_SOX": {
@@ -46,18 +46,18 @@
     },
     "JP_NIKKEI": {
       "label": "日經225",
-      "price": 65324.29,
-      "change_pct": 1.4
+      "price": 64184.35,
+      "change_pct": -1.8
     },
     "KR_KOSPI": {
       "label": "KOSPI",
-      "price": 5668.05,
-      "change_pct": 2.0
+      "price": 5579.95,
+      "change_pct": 0.4
     },
     "TW_TAIEX": {
       "label": "台股加權",
-      "price": 47111.26,
-      "change_pct": 0.2
+      "price": 46491.68,
+      "change_pct": -1.4
     },
     "HK_HSI": {
       "label": "恆生",
@@ -88,10 +88,50 @@
       "risk_score": 0
     },
     {
-      "title": "〈財經週報-看盤焦點〉台股高檔震盪未撼動基本面 AI規格升級接棒 - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE03ZDNXUkliYXo1ZDZ0MTM4U1FDalBGc1BNdTE0VHR4TWVVd0oxZHF3X05jMkItNUYyQThmMVZzcnMxSmFrMWtLYmVjTVZkZ1J6QUtrSTZzY3k?oc=5",
-      "source": "自由時報",
-      "published_at": "2026-10-19T04:34+08:00",
+      "title": "日月光崩4%、台達電挫2%！台積電重摔30元至2390元台股慘綠開低跌867點丟了47000點大關 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi0ANBVV95cUxPY1pYVEMtSDhHSk5veUlLcnRvbVVLSmJ2b1BEUTV2bldrWXIyOUZLZWhCa1VXemJrbE5Xd252T2tFR0dXNGNadXlORE5ma0lHbmw3V2wzaHRVUXZZV1BldUQ4QlBCNzhWclJMUnk2eDY4dWRDbmRaQW44MmowQ3ZtWV9QSXhXaTNCbVJSU3djbE5wSHF6dmpJeHZLeVAtcUttcG0yWjNlSGxKTFkxWUY4dncwRlJ5ZnA2QmpyUW82emhSMEMwN2hKS0dRUkotRGp0REFhSEdNNU41X2dRcUxhblo0RXVpOW9sZTliQm9JbzUwdEd2OENtYzQ5enVSZmNQSXdnRk5FZ3FoZG5uYk4tdUhJQVpVLTFHMzNuMW1hWmhKdlh3dnZmeVhPcEI1N2t2S1VjYnlIQ1NhaXdsaXQ1MWRyQkZCZ2RRVWZqQ09qV0RnUkMtNEVkMUxWc0xlTk1GbGt0Q2ZaM3VFeFh4MTRYUDlPV1F4b3hHWUJvdTJ3OVFhY0gzZ0FQVFFmSXVxdUFFcy1Ib2J4NFZmYWJkSG9obWMwOUlNNDRiaFpGeXVMSmVGNEZYemRrRUlFR2pMdTltTk9kNC1VckJ1dmtxRXEyaQ?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-19T09:18+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "外資提款5862億 台股沒崩誰在接？ 專家揭5大觀察重點 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi1AJBVV95cUxQYV95eTltS00waU05ZG5KekJHdGZHWnEzRGhGTFpDUmtHTkJhNXAzY2xtMDUzR2s0MWVXVDd2MHBGbUFIZk9GeF9fS0xjMWdtcWVnVnJhT2ZlQmJOR2RJY19wd1ZpVHF5cVotNWM3MG9QQzBWM2xxRllpcWdESmN4RFJpeTFuOGpiOU1IdTlkemEtS001cE9salVkVWk4dFVMSnBuZC1vSlZMTEtVS0lsTk0wRS1SaDFLeU5CX1ZUY0ItcUoxVHlMZVcwRUhfOUJyTnk1YlBaelREbEJIUDNnX0o4Q2szQmVPcEdEOVdYdl8xazh3Ni1lZWVTRkF6aUZRWGtkUE9VRE0zdjZrelI4d3RQaUZDUDRjcEJ2a2VNakFvVnhlX25VR3FWeW82SjB5aDNHVWtuM3hRYk9IeVFuVHUxWVFZSVlOYzVLbzZHckNyNnhw?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-19T09:07+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "有1000萬買台積電0050、還是雙北捷運宅收租？放5年買誰最穩…五面向拆解最佳解方：正向金流源源不絕 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi0wRBVV95cUxOaTJoLWxVLXFDWkZ4ZFVYWVhGR2YyTkljREU5ZUV0dHlGNkx3eGJyWGRxZ2JoajNNNnpnd3VlWDdpdkhTWTE5aW9Sd1ctTXlCaTYzY3pyWlRwbHlmamdjX2cycjBTckd6UnROWTlROGY0VzhjSHlmV3dZU0F5MWZ3a2Y1NXhpR2hXa3NFRmNidUFOU2hTOEFtb0pZekVJc0tMamFXQkNiT19JYmlyaC1zVXE5TFpHQzFIaUdJSTNka1RKcGNqZ1c5OGxuWnpLVkJXQmQyTWhkMmJRVkpmbzB6R1VnVUl2b3R6Qms1b1o2SVRNYUJzOFQ2dVlFak9vYTVRUzc2NHVQN1VuUW1ueEpBU2lDQ2h1b2ZINV82dGZpRVVQVVJZWnc0TUJFVm5vckUtOFdBZFhGeDZ6dVJqaWJpYm8xalJpZkZPajNoSXA2cHVucC1sd1hpcjI0eVdXOUhaNjAyZ0szQTdxTUJ6RHNFLWlLTERIUUdFeDM4M0FRUktJV0dJOGdVdTdZa1pXRkxFNTNQQ0pRaWFkcDE3RHNlN2lVcDRWUGV6NjRsWVVyWHNkLTNLUzhNRS1aUTJGWXJwYkcyQzlJLVJ6WU8zWjZxV185Ukt4dTM4QUR2bmtyNk5JRWpPa3Y3YVgwOGVSbEhOaG9DTzVHWUlCdWJ6MElIaGNEb0FQbmdyWi1ka2w3dlo5TFYwemt0ZzJ2U2lKcjZmTEZKNTF3U3hzQi1HVFhZY1AtMTZZZjFYclZTdzVROXoxZUxpYlQ3bmFpLWl2T2NDQTNV?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-19T08:48+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "股票質押200萬買台積電ETF！利率4％該歐印還是分批？投資人勸先想清楚 - UDN",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5iSkJWUFpyNGJPMEJmVkRpeTBlMHI0YVRTRXREOHVabmFHaDl6STFtS1pzYXBWajg4clA3dW15QlNhMkNiYXVCTUpTNG5zbUNWT2x30gFYQVVfeXFMUGUzbm14M2R1YjVrNmhWcGRtdDVreHB0VUY4XzlnMWFXdjVBSDdFSUFzYWRvWC1GOVp6UWp0aEdUV3dNNlJ1RGJsUUZSWDNaVWZRZmtfRjZ2Yw?oc=5",
+      "source": "UDN",
+      "published_at": "2026-10-19T08:36+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台積電展現頂尖AI投資實力 執行長魏哲家看旺晶片需求 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi8wJBVV95cUxOWGtaSHZtUlZ6WU03bENPS0RPbWRza1ZIX1dpYVc2SF9jeFFXOFhlb20xanhjZUwwOTBHVFUyU29yLWJzR0F2Qkgwdkx4aTVZOGpXLWVzOWd2TnYza0VrdnZaQ1pnSm56QnJobldhZlM2ZUtSS2c4WkpzNmFEUTJ1ZVUzUEhjeEdvUnhYazJRemZYTGd2Y29PR2NYS19wOUlVc2RvYzYyaWRfMmtfYXYtckExNGVQV1JWTlowZGFlb1ZFYm05T0dtTW11RFZlUHZSTzNVMjFESERucjM2UGdWbzhoRVk2WklkOWs4cGpTcVpXSFlmZ0NjQ250Ynp2Z09nMnkwZ3lYNGFSLTYxeWxmRnA5clpMWno0ZWNtOU93VHBUTDgzS1lXbGZSRFVya1FyaFdSN2ZsQXRZeC1qXzFuSGVGTDZwRTU0OHdxakI4ZDFVSlhiMGYzMzJtaW9VcmFoUGp4bGxOa0tOZ3JBSUNwRkVsRQ?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-19T07:40+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台指期夜盤跌千點 台股4萬7保衛戰 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxOaW95NG5naXkyNkRHZzRqeEVOblJxUEwwOHZrTzE4aC0weEVNX1cteXBoR2FqUWhoQ19FSXJ6X3lwOVpKMjdfbnRjSGxjNjV2U2xLMnVyOW9DaW96YWdmSFVQYnptanFzY183SmtFM0xNTEFsSi03UlFDQlQxWFBzczdxcDNJUVdFU2RzV3BoZEJhQm5Bd3c5TnhDSG9XTWtMRkFVZmxia0loNjYzOVIxMnhYQ3ZUU1AzaHRXMk1ueExhdW1mcGs0TVZhcUpjaWNkSUFIVWJWa3NqNV9Qc3JNVV84eTJJbEZZcmFGb28xRTF2WDMxbFVrTDc4bHUydHZZ?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-19T04:10+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -120,54 +160,14 @@
       "risk_score": 0
     },
     {
-      "title": "Goldman Sachs presents a \"shocking chart\": Either the bond market is \"excessively pessimistic\" or the stock market is \"overly optimistic,\" with cloud computing giants facing another 15% decline! - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNb0t3MnRYUDRSR0lPRVBwUGg3ZU1CVEs5WEFaT1c0LTJIVklIZHhDaDlleFFTLTFKajFTcVdCUW1BM19JeGVpaHdObU1FZ2NINzBodmk3VU5xNnRtVEY1RGpKVE1CU0MwclloVV91ZGx6ODNJQWluNkZvVjdpRHBlZXlnRVZuenZwS3N3ZmQwemVwLTd2OTZmbm1EWjFZZER4dlZTZGtscEQ?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-18T22:10+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
       "title": "台股週一剉咧等？專家喊先做好3件事：看持股、控風險、等訊號 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMi0gJBVV95cUxNRHF0SzN6LUhBSC02LTVfOC03YVlobXZWWHNsUng2Uk8zZW14MU1meXpsTmRwTnlTc2trcW45bGdWSDJCUGdEQWtWQURiWkk5M0lERUcyQm9fSk4wc002WDNmWGlTcjNqUm1XUWhYTlRwcVlRdDJUQ0ZteGZmb0p0aEE4aGlmRTlpaDF0M3Q4NzJ3alhRRUdsai0tM2dHRDZ6ZDJCaWJDQ3E2QTJpalc2dklKb0lMQVVkdmZIbTl4OHdKdTMzSnRDeFNucVB1YXU4RXk3Ykd6Sm9iZFBQc01qOHVoVlNIR3lyeDFScjVJNmU5eDVCSHJ1OFEycUY2TTFRMjRlUHNYVk5mS29PQTVfX0FGcDRKZEpjNHNLalg0R3RfdDZkaHVFQmlTTDNwcTkwSHFWNDdfRWw1VnNWVTRQcS1tTjhoQkJkaktNMS03NFdqQQ?oc=5",
       "source": "Yahoo股市",
       "published_at": "2026-10-18T21:44+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "台股週跌2202點！分析師葉良超選入8檔「抗跌個股」布局 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMizwJBVV95cUxOWHNxNkZnWjdzWmIxczQ5TG8xb3I2YmxPRjU4WE1mZlFpMmptSGlhVUpkMjVTMjVTLVBLdzNsYXNOZDFDSWlPWTZteFBhdTVxNXBjbXQyYkZjRVMwdXhoYVl6MHdfMk5CSkNLMEl1RlRnaHJuOGNZdFRfT09LdFZYRWJQcUc0T181dUhXa1Qxa2xyR1NCZ2FyRVJrZzJOS0Rjb1haVFFhWi1McFVOMDg1b1dhUDJyNGgzMjVXOGRJQ0h6STFTdlZIcWZ4aWc5OWlzV29CeVNmcFdoN19YbFdnTkNCR3pKeFhVYVpJaEdxUXlJM2VwRlc3OXh6aW0wak5Qd3JXaW52S0Q1LVM5NEpTd3A1Q0I5dHBzbGxwdFBFSl9yR2hMeGFNZE81MlFxdFljdzZlV3FzclplZHBKMktEazZEQVRfYmtoQ1o0V29xVQ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-18T21:02+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "韓媒：三星將委託台積電3奈米製程生產記憶體 以符合輝達要求 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMilwNBVV95cUxOME9vMHZBRmZ6TlJnS1RDOFdWQ21pWVVMeEtQX1ktb2xEeDcxQnlMUVpvQ3o2Uy1yblV3SlBWLU00TmhCaUdIaHQyVWczX0NXTnZhWU1GTDlUYlZrS0lQMlFSUVo4SlNhcU9XMFltSGdYNkFzaGMzdHJodmlhbExNQWJ0RmdEZmZqeXkxZGkzbXNjOS1haXZSRjA3TWFMS0g5eW01ZWZpcW1XSERJT3lndHJmaU5qWDNwc1NIYVEzMmNCMTBEOVROcTY3cEFET3RNcXkyZ2hpR1l2OUgxclBmcEtWdzFQTUJxaWxmXzVNcHdoeTNPdWNyeTBjY3RhZHdFbXNMdzYtM3V0MUFYbHZvYXIyNnR0U2pWT3N1UG82RzVTUmdJQzBZdDdhVXJqcXR0RGpkMFN3M1A4aXNKTkx5RnRaWVF5b2EyNEU0Sm9wcEE5QTdrd1VnbWg1ODFWRlp4QWZzUmhKY0JrcFVkWEszdGwwTzRnendqdExsaXFFYTNZa0E5UW1PZ0szdnRFUDc3ODgtcTVXaw?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-18T20:19+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "費半連8跌！法人：台股周一面臨季線保衛戰 待反彈再調節不要開盤砍在「阿呆谷」 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMisgNBVV95cUxOUWRVVVFMNldmX01JNEdrQmNyS1J6N25BNDFibTVkTVhZYjJRemNvSGlvWEdXNndINGZQZGx0dldFX0toeWRIZDZfZ2RzaXloc1BYbXl6cUczX2lkREF6MTVpdlJwaDN3ZFFsSmo4Z2lCNjRlc2RSanFadDhpYWdFRFk3RWRCbTAtdTE4V0VaUmY2YWlVX2tIUkdtWkhlTWlxbE1iSkFIaXE2NXJwTlZxWE5ibzBfMVBwQnU2OGtRdF9jcWhGMXhTQTVSTjRaOXdsZ2RQcDJ0cjdPaDdnUW5pMjJWblhWUVFsdlE5cGdfb0U1UkFYRWVxNnFmM21zaEZHMVd4aENLZVdBQlBYcUt1eDNWbWpEdkVZOGlEdTBZVHpxVUh4QTJwSk1SMHpyc0doc0QtOThDckUzMmhYVXRudWd6ajRZUjN0d0lIWDVySm5xeHNuTkFmdW9WSWxlR0pNZDRPbFhVb3NzRHR2Z0lWVnhoUTBBVjk2WEF4eEtwdU5UTmxJa3VQanlHZHVOSDUtN2pmUGFBbXJULW1oQURZNjljaHVIcnFnUHZncjg2WXBsUQ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-18T18:09+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股周一新增6檔「關禁閉」！飆股大甲、蔚華科、「這光通訊廠」全在名單上 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiogJBVV95cUxNd1dTOW1Fa1FtNHdLaUc1QmpyRnZXdGNvZktDVVR1RVNWVzBEWE1TYVRFaEpCUXUtc1k0S2VJeWN5R3VDV1FYalVFWGpLamRnNUpYUU44VWhjVkJuX2JiQkR4Und0Nnp5dnZUem84dHFMZExqT3I0dEpYbG5oX0J6bnhWb05KdWZTQXZ6cm5oMGIzaXJvdmp2YkJWMXZfWlBZX19iNnJRQXp4Z1BYRGQ1blZoM05kRnE1OFpuSlVqMk5mMFl4akduQnpNeTFGMU13bXNfdVlaMEVCQWVjNnA4aXphR0ZaSU1TaEJhV0duZ1k0ejUwYXVSQmpSWGpJUVZJM1pXMy1rXzgtMElITThjUlNRd3FnRWhyUkxBS1VoLXhXZw?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-18T17:10+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-19T07:18:10+08:00"
+  "updated_at": "2026-10-19T09:20:18+08:00"
 }
