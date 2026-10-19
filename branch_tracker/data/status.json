@@ -15,7 +15,7 @@
   "complete_collection_days": 1,
   "counts": {
     "ranking": 44636,
-    "history": 171273,
+    "history": 178473,
     "queue": 4536
   },
   "review_stage": "資料累積中",
@@ -30,10 +30,16 @@
   "missing_stocks": [],
   "errors": [],
   "history_errors": [],
-  "history_pairs_ever_fetched": 2856,
+  "history_pairs_ever_fetched": 2976,
   "history_coverage_complete": false,
-  "history_coverage_note": "成功抓取不代表完整60交易日；須逐組核對交易日缺口",
+  "history_coverage_note": "按個股實際交易日缺口排序補抓；來源每頁最多60筆，較早缺口仍保留待補，缺筆不當零交易",
+  "history_retry_policy": {
+    "max_attempts_per_pair_per_day": 3,
+    "retry_delay_seconds": 900,
+    "source_history_row_limit": 60
+  },
+  "history_attempts_today": 120,
   "ranking_coverage_complete": true,
   "errors_total": 0,
-  "database_bytes": 35151872
+  "database_bytes": 36032512
 }
