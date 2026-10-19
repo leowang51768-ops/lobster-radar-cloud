@@ -219,6 +219,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-10-19T08:49:52+08:00",
       "reason": "manual_add"
+    },
+    "2313": {
+      "code": "2313",
+      "name": "華通",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-10-19T08:50:32+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
