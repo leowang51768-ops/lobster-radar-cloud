@@ -6,42 +6,42 @@
     "出現重大風險新聞"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 -1.4%｜NASDAQ -0.7%｜日經225 -0.6%｜KOSPI +3.9%｜台股加權 -0.6%｜恆生 -0.5%",
-    "⚠ 全球市場風險｜美債10Y 5.14%｜VIX 18.3",
+    "⚠ 全球市場風險｜費半 -2.3%｜NASDAQ -1.1%｜日經225 -0.6%｜KOSPI +1.8%｜台股加權 -0.6%｜恆生 -0.5%",
+    "⚠ 全球市場風險｜美債10Y 5.14%｜VIX 18.4",
     "⚠ 全球市場風險｜AI狂燒錢會崩盤？他憂台積電、0050「重演2008悲劇」 網反問：是不是有誤解",
-    "⚠ 全球市場風險｜Taiwan Semiconductor Manufacturing Co Ltd(TSM)股票10月19日盤中上漲3.17%：釋放什麼訊號？",
+    "⚠ 全球市場風險｜U.S. stock market closing | AI trading rebounds, with the Nasdaq up over 1%",
     "⚠ 全球市場風險｜Although the market opened with selling pressure following the drop in U.S. semiconductor stock",
     "⚠ 全球市場風險｜快狗打車擬1元出售中國內地業務，四年累計虧損超26億元",
     "⚠ 全球市場風險｜台股反彈訊號來了？美股科技股反攻、台積電ADR同步走高 台指期夜盤逼近47K",
+    "⚠ 全球市場風險｜Stock Market Today: Dow Futures Drop, S&P 500, Nasdaq 100 Rise as Scott Bessent Links September",
     "⚠ 全球市場風險｜Lee Jae-myung: Measures to stabilize the stock market will be introduced at an appropriate time",
-    "⚠ 全球市場風險｜64萬多人注意！5檔台股ETF換股 國巨、富邦金、國泰金等被踢",
-    "⚠ 全球市場風險｜台股回檔7％！ 立委關切「限空令救市」 金管會回應了"
+    "⚠ 全球市場風險｜64萬多人注意！5檔台股ETF換股 國巨、富邦金、國泰金等被踢"
   ],
   "markets": {
     "US_SOX": {
       "label": "費半",
-      "price": 11418.108,
-      "change_pct": -1.4
+      "price": 11316.343,
+      "change_pct": -2.2
     },
     "US_NASDAQ": {
       "label": "NASDAQ",
-      "price": 26519.754,
-      "change_pct": -0.8
+      "price": 26430.887,
+      "change_pct": -1.0
     },
     "US_SP500": {
       "label": "S&P500",
-      "price": 7711.71,
-      "change_pct": -0.4
+      "price": 7690.73,
+      "change_pct": -0.6
     },
     "US_DOW": {
       "label": "道瓊",
-      "price": 52061.34,
-      "change_pct": -0.2
+      "price": 51966.03,
+      "change_pct": -0.4
     },
     "VIX": {
       "label": "VIX",
-      "price": 18.28,
-      "change_pct": -8.6
+      "price": 18.44,
+      "change_pct": -7.8
     },
     "JP_NIKKEI": {
       "label": "日經225",
@@ -51,7 +51,7 @@
     "KR_KOSPI": {
       "label": "KOSPI",
       "price": 5768.01,
-      "change_pct": 3.8
+      "change_pct": 1.8
     },
     "TW_TAIEX": {
       "label": "台股加權",
@@ -79,10 +79,10 @@
       "risk_score": 4
     },
     {
-      "title": "Taiwan Semiconductor Manufacturing Co Ltd(TSM)股票10月19日盤中上漲3.17%：釋放什麼訊號？ - TradingKey",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNbGZqc2pIdVVLbXdpeEd1ZWpDUjl6Y0tycWpLYTVrcUtNWDZGUWFzSGdEQVNsd3NnOTVHd0l4QjdvRFZsZ29namFqclJsdDdXSFdlSFZNLWJjVDVvRkdfMHV3MjZ0bml5UXE3ajgtbmFXLUxEMlBYSkJCcHhNWTJVcFdPRVV4UVhvUWpPT3U3WUR2LWtv?oc=5",
-      "source": "TradingKey",
-      "published_at": "2026-10-19T23:16+08:00",
+      "title": "U.S. stock market closing | AI trading rebounds, with the Nasdaq up over 1% - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNNTMwVG5xOVZfY2ozM2tmWWdqMktGcEFaMUJDbnF0MU9zeGhrcWtDcE5jUEhTaHZweU9NTjRJTi1wZHE1Z3ZpVWRYZTNLY2Zxbk1KUWY1OU5hN1dvbEI1bEZabk80MVMySks2S183Y3BYeFpGQnN5aGxlUU9hZDZidmpnLTJwVGVkVlRrWlc3OWRVOFlyaTJGVlF2UnllamNIdnBsLQ?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-20T06:48+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -111,6 +111,14 @@
       "risk_score": 0
     },
     {
+      "title": "Stock Market Today: Dow Futures Drop, S&P 500, Nasdaq 100 Rise as Scott Bessent Links September Inflation to 'Energy Shock'— RCAT, ESLT, STLD in Focus (UPDATED) - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMimgJBVV95cUxQLXEwbV9Cem5lbVdNOThZN2x6Z0dVOW51LV9BeU51T1VLOTU4bjRDZzFqNjZNMklqR3FzTkZnM2M2QThyVXN4azFPMVd4SlJ3NURCOXUtWXRYc2dxLVV1OFN4QXlfZzRLWHFPVGpzYmk0Tkk4eTVUdzFWeElqemE0Um5COVNCLU4xZWx0aDI4VUZwaXUxR0gtUGtVNTh4YTBvYzI3cEEwRzBlV2J4MEZObXZCSlU0eWNLQ3JXdERkbGM2X0c0ZW5LZGVqYWNLaWdzRkZ3ZmFQa1MzelZZNWVVQU9PdWZHc1BRMFRXYm5ZczEzREU4VkszWml3S1ljcENHQXZTQTFBeVAzZjBfN1NYOU5tOWViZFgwbmc?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-10-19T20:23+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
       "title": "Lee Jae-myung: Measures to stabilize the stock market will be introduced at an appropriate time to prevent significant fluctuations in the property market. - 富途牛牛",
       "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQTk5fZTBUb1g0Ti1nZU1XRHRhOWZFZWNFWEY4c1otTW5xTlozRFphSWl1TVU1LTBlY0RUd3piSm1PeFNkNUp6cTFKM1h1bHZkT3JYU1NGSmhtSHVMbkJoRkhHSEpCSXB3LUltT1VESlJUenRtUjNZcS1JU04xcGVwS1FueFFaTGpMTWg1ODNJSVhBRlBhM3BZWlBhZ1g1aEthZUE?oc=5",
       "source": "富途牛牛",
@@ -135,6 +143,14 @@
       "risk_score": 0
     },
     {
+      "title": "台積電熊本二廠2028年底生產3奈米 JASM設備投資總額將超過230億美元 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMimANBVV95cUxNaXFqb1g0THlhYUdWNFJjV3hianVUVC1wM0pMRmxkUkhQTlJKXy1Ja2hwUFZOZUV3TFpoZnFZOGVSanFMVnRxdUtZS0UzNUJzTkd4YzliSDB2LWxZRVQ3SGF1V1JlZmhZUW5WUWxJMk1jaFo4VDVhbDJTYUsxREtBWHQxeS05bEJwWTB4YURrcnhvYUIySjI5aW9qa1ltUmQ5M3Z5eVg5cE54YkxMV3pNaVR3UTdqa1B2b0FJWXRvNWctdG11emtfUllzQVBrS3NCM1VXNDN1ejdqQWk5TTNvYVViMGY0YnlMbXA4MDlaamJqZGplTWRuZXlWYTltVWJWRWhNb0pCRV9pLTMzSEpQMHZuVEctNmsyTUU1Y2czRThlZG5hNVBUU0F3YmhQYTQ3d2NBM3owSWJoQVpvcDI0NU40VUhHa0szbnBQbG1XSTNFN21aUGI1QWI4N2V5VmJ4QVZ4bHdxSE8wd0ZvZi1lTVRNVTR2ZmwzZVBuYklSN1BIbzIyU2xmbi1MWTNaVzdCaS15aXVWVHQ?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-19T17:36+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
       "title": "台股會一路殺回4萬點？新手加碼2檔ETF遇回檔心慌 網友：放眼長期 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMihwNBVV95cUxNZnFYS21SVjVBWlhncWl5cGNERFM4bWc3MWY1RkFTQWQyRUhSSlROTjBUMWFPdjRLcW1Sa1VuM0ExSk55OUhmSHp3dWRxS0VqdG9aQ3JYaHhfT1hRTzhWNHJhNDgwZzFMd3Y0RlBfRW5aVE0wb2F2QS1FTXV1QmdaN3Mxd2syejJfRFJNUU9GLWZsTVBIT0ZScXI3RjN0T29SWURqbWZtMmtWbmNQTlB4bm1Zc0cyUDhkZ1ZiZTQtd1RJcThnTlU5Z3VUdjl1NnNwRWwwX2dFdXotandtb2NZRk14WWRoVHZtd2RuNDhpaTIydFdoTmNaRW9Ld0VjTHQtWVV4TGpBN0hTWDBLaUlBX3dZeWlpVVpad3UySU52Rm9BVnZxQzRiWGZxVFJYVkYxd1JsYnR4WGtXLXo1NjBWekxUWnY2ajVGamlRWVNmLURnSzI3clRFeW94VWJsUkk0SE5OUmFIME5rRGpDenh1VTlidnlUYW01RHBDOHg1WFM1YndkR3VZ?oc=5",
       "source": "Yahoo股市",
@@ -149,24 +165,8 @@
       "published_at": "2026-10-19T16:52+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "看好台積電還會漲！外媒喊「頂級投資標的」 曝下一波上漲行情 - 自由財經",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5fLWZTRE1oTDgzdWZGUHFVWWh6dU5GSU5xNTZ0dEZ5THFvam5Od2FkRHNiV3JzdHlPRUJ1QUVvTUZJOGxMbzRUVE5iUk53SGM0bDVGaW0yejFpeURKcUI40gFkQVVfeXFMT1lFRkM5M0tZcjctNVBkWUVGakc0LUVZLXhiYUF1eUIzWjF0OXNyeUxlYnNYQVhHSkdnekljaC1HUmszS0RYMkNCRzJ5YVdHSG5LZjUySERJMkRPRklVaFlYSmdydQ?oc=5",
-      "source": "自由財經",
-      "published_at": "2026-10-19T16:47+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Hong Kong and Chinese Mainland Enterprises Go Global Together: Bringing Enormous Opportunities to Global Talent in the UK - Macau Business",
-      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPLXlfdW5rc3NiZWhXMWFqdHR4RFpzR2NnNWdiU3IzZk56a1lmME5QTkJCbFV3b2ZxbW5XQXNlcVd1eUN4ZVhzaU1lNkxQd2EzRUhfc3daQmMzMkU2T3MwOXZTRW1aanFXaE9jeDhVMmlybVRTSURvMlY2Wno5dVp5N05UMm1zTElPNDlqbEdhUXhzb1lrSnBSbmZaYmdqeTNNRmx4S094NlRqRWZuWVRpS3N6QjFKLVZMaEJwVHBIVnZReHJjQUduekFnMi1hS3Fhd0pua1NKNl9RRFNKUzR0ZA?oc=5",
-      "source": "Macau Business",
-      "published_at": "2026-10-19T16:47+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-20T03:25:18+08:00"
+  "updated_at": "2026-10-20T06:56:37+08:00"
 }
