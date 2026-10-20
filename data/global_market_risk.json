@@ -6,42 +6,42 @@
     "韓股明顯下跌"
   ],
   "ticker": [
-    "全球市場正常｜費半 +1.9%｜NASDAQ +1.1%｜日經225 -1.3%｜KOSPI -2.0%｜台股加權 -1.1%｜恆生 -0.8%",
-    "全球市場正常｜美債10Y 5.12%｜VIX 17.5",
+    "全球市場正常｜費半 +1.3%｜NASDAQ +1.1%｜日經225 -1.3%｜KOSPI -3.7%｜台股加權 -1.1%｜恆生 -0.8%",
+    "全球市場正常｜美債10Y 5.12%｜VIX 17.3",
+    "全球市場正常｜〈台股盤前要聞〉台灣美光罷工危機升溫、外銷訂單連19紅、股匯雙殺再現",
+    "全球市場正常｜〈財經週報-投資觀點〉台股站上全球第4的背後 台灣人真的變有錢了嗎？",
     "全球市場正常｜美股晶片股重挫衝擊韓股 三星電子、SK 海力士盤中跌逾 7",
-    "全球市場正常｜European Chip Stocks Resume Fall After Day of Respite -- Market Talk",
     "全球市場正常｜Kuaishou Technology Stock Slips 2.0% in Hong Kong",
     "全球市場正常｜U.S. AI chip-related stocks fell collectively in pre-market trading, with AMD and Intel droppin",
     "全球市場正常｜台股飆漲掀出走潮 基金經理人辭職自操盤賺私房錢",
     "全球市場正常｜Tech in focus as stock markets retreat; oil surges",
-    "全球市場正常｜微泰醫療－Ｂ(02235.HK)：中國證監會就公司實施H股全流通出具備案通知書",
-    "全球市場正常｜中國聯通黨組副書記、總經理簡勤履新國家數據集團黨組書記、董事長"
+    "全球市場正常｜微泰醫療－Ｂ(02235.HK)：中國證監會就公司實施H股全流通出具備案通知書"
   ],
   "markets": {
     "US_SOX": {
       "label": "費半",
-      "price": 11348.29,
-      "change_pct": 1.8
+      "price": 11283.812,
+      "change_pct": 1.4
     },
     "US_NASDAQ": {
       "label": "NASDAQ",
-      "price": 26428.83,
-      "change_pct": 1.2
+      "price": 26424.816,
+      "change_pct": 1.0
     },
     "US_SP500": {
       "label": "S&P500",
-      "price": 7710.75,
+      "price": 7712.57,
       "change_pct": 0.6
     },
     "US_DOW": {
       "label": "道瓊",
-      "price": 52445.83,
-      "change_pct": 0.8
+      "price": 52495.88,
+      "change_pct": 1.0
     },
     "VIX": {
       "label": "VIX",
-      "price": 17.49,
-      "change_pct": -5.2
+      "price": 17.31,
+      "change_pct": -6.2
     },
     "JP_NIKKEI": {
       "label": "日經225",
@@ -51,7 +51,7 @@
     "KR_KOSPI": {
       "label": "KOSPI",
       "price": 5552.74,
-      "change_pct": -2.0
+      "change_pct": -3.8
     },
     "TW_TAIEX": {
       "label": "台股加權",
@@ -71,18 +71,26 @@
   },
   "active_news": [
     {
-      "title": "美股晶片股重挫衝擊韓股 三星電子、SK 海力士盤中跌逾 7 - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1pNEhZamJ3QV92dHVrbzlXMHBVWkdSejNLU2EtS1lRS1pfaThoRHUxUWx6ZnM5dFl0U1NMWWtueG1FbUVFdVY4LUUxaVVPMVViTEFXR3FHdU0?oc=5",
-      "source": "自由時報",
-      "published_at": "2026-10-21T00:47+08:00",
+      "title": "〈台股盤前要聞〉台灣美光罷工危機升溫、外銷訂單連19紅、股匯雙殺再現 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMisgNBVV95cUxOX1JtZGhEY3JvYjVrVUtxV1VOVjZmeFpJRWp1VzkzVWIyVkJuX2t1ZFJRZEZHQ05mUm1xMUVpVkd4ckVPdkJ1TkJKYXRjMFYxRGpvSlJoMkpuMi1MTWNSYUdEOHVISEdXTTlFUU1xdk1BSFFXckdqSWx5dXZOYXh1VGZZN0hIYzlNeUJ3SHNDdDB3dDJwRUZQS2FMbzJUN0NiVnRXRUhNdEg3cDg0TzhERGNLSDFTbDJwbjN5bEZ0UDBjQm4zUjVIRjR4TWczUVQ3VGF1cTBoeURJeDJNdEFXZ0VMMXdYTUI4Z1BsU1hCdkltXzlwSklfc0VFZ0ZoOVRVQ1dpTURTZ0poRUpzN2tIY1ludlRZQkhJUzA5RklkdWlWdXIwRXdNRVgzeUR3bHMwLTNoODNYLVNKdVlKWDBibVhBOEIyUWNaTUFQN2FmVDdHbXcySGRQcDQtOEtMSFkxTm1rZWFmWEdaUE1vNTdOWmMwVHVRaHpKT19yQXZ1cF8tSGhPNGZLSHZCTXlraVhHUnprQ00zMDd4TW56aHhTaFA3d3hjY0Z4Ri1rZnZsVWpGQQ?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-21T05:10+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "European Chip Stocks Resume Fall After Day of Respite -- Market Talk - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPTVg1Q3N4NGRmMGdlNzRQeDVkQmdWUkJMX2pMS0FabDlfZndKa2NQYndoRHpCR2IyZnJaUTBCcGYtYkNUbFd1elhtcnpNSEVjcEY5Vm84Q3kyYTFOUHVQVGk0WW4yZkNaeVc3MW1WVTNDeFR3WDVSRkxTaHpZeTlpeVVHRlNRQUtwWFo3UVVHQ3JWejByV3ZYSUhqbzhlX21GeHlxandB?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-20T23:58+08:00",
+      "title": "〈財經週報-投資觀點〉台股站上全球第4的背後 台灣人真的變有錢了嗎？ - 自由時報",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1CU2hxQkJLekJycTdqNHNvZnVfRU0tcjlaSlRHRFJQYzFTRzRwV1QzNmVZN1FMZmZUSW1FZ0V0X1ktRk1RSU1uQXFQbXg5cXpON0tTRmNHdmQ?oc=5",
+      "source": "自由時報",
+      "published_at": "2026-10-21T01:18+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "美股晶片股重挫衝擊韓股 三星電子、SK 海力士盤中跌逾 7 - 自由時報",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1pNEhZamJ3QV92dHVrbzlXMHBVWkdSejNLU2EtS1lRS1pfaThoRHUxUWx6ZnM5dFl0U1NMWWtueG1FbUVFdVY4LUUxaVVPMVViTEFXR3FHdU0?oc=5",
+      "source": "自由時報",
+      "published_at": "2026-10-21T00:47+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -127,6 +135,14 @@
       "risk_score": 0
     },
     {
+      "title": "中國衞生集團(00673.HK)：蔣莉獲委任為獨立非執行董事 - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5kQmNvbTFoWm82SF9RNURBSlNwVHB3ck5PcFRlemVhUEFKOFF4VXduZ2pTVjBNSnM1OVFXTkNscFVIV3dxV3RXTE1vWC0zdmY5Rk1lMFU2OXFYOWREdW5yTl9iTjlEdnktaGRj?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-10-20T19:45+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
       "title": "中國聯通黨組副書記、總經理簡勤履新國家數據集團黨組書記、董事長 - TradingView",
       "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE0zX3VxbGRBdzFELU4yaG9lcjRDaFdKOG0xeThRVS1Kb1BDS1lVSHdlZ0JQQUpya3ZrLVAwVTRUOFJhTDJCSWpSQlpHcU9LSHlVVk9rbGZCM1JsaFpGLW9UTFdoOEpCTkdsdURz?oc=5",
       "source": "TradingView",
@@ -149,24 +165,8 @@
       "published_at": "2026-10-20T18:03+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "中國波頓(03318.HK)10月20日耗資45.54萬港元回購14.8萬股 - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1fZTVZNXI5M1FIQWFweHprOGptRmVjRlBxX0d2NG5BZEdLU2hzQi1Dc0ZtTmJRX3F6S1pqWTcwRFN1RjhKTm0wQ1RWZm42TENRc3RxdXdvUk9Fd3ZCdWR1aUg2dVJEbGgzM3d3?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-10-20T17:34+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "外資十連砍台股V轉沒力摔529點！緯創拉半根漲停「光學雙雄」亮燈放閃領族群開趴｜Yahoo財經掃描 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMixwRBVV95cUxPWnJ5QndtUlZsbFBpbmNSQnU1WUZMWTVWVGZUS040cEhQOVNZTkVlRjdRNThxTmJPblg2MzQyVmI1ay1IRGhTU2R3cVZkNEVDMnlTdTNwYzV6aEJSamtaOFRQelZNZXR5TUVXWHhQcnVPLWRvVkRFQTU2QVhXTWJfREFhUXdydUduc0xuZjhFN09xTVhGNWR6clpsVVVKbDhEenRjMHE0azJTZUNEQ1BESDFBS180Z3IwOWVvZFlQWTdiSThrN0hsZXVvTE1FMGYxXzdFem9zYUF5X2VmOC0yRlNLTFRiM1FYb2t2RHJTcllnTkZjdDBwTjVSSWJqNjFOQkRCMnBYNS1SLUZudl9WYUlrUTZURDJwc0dKUXRzSTRrYXZkY2haNGNTWjZ0R3pPZGlYTlIzNFNxTkFNX0IwUlBjbW9jQ0x3NThFelE5bEVDQjItVVZuMkFwMlFSbmJBeG1KNjIza3BnNGdkMFJXTlB5aDlvSHRxLWFBMTY0eXJHMVBZNGpEVDRtTDdoX0pJeXpUN3hjNFFoN3RDUURXRjN2cThrc3RGam9jS2l1WW9TT3ZiX3B1akRCd2pUaUI4MHVhd3hkX05HNTFtYWxQeUpOVzg0ZFI1ZXpqWWVHNTZoSnVqcHpiQUtodUJkQ1JhR3BGTEtudmNWSGZMUFZ5c2pjUVhwNzBxdEhLbE0xbERlZUkzS1pSX203dzI4eVZzcmRGZkthOFlPVGl6a3V1bm95YURSQXg3N3FEN3JSXzZvajU5WENn?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-20T17:12+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-21T03:35:07+08:00"
+  "updated_at": "2026-10-21T06:35:09+08:00"
 }
