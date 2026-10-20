@@ -6,16 +6,16 @@
     "出現重大風險新聞"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 -2.3%｜NASDAQ -1.1%｜日經225 -0.6%｜KOSPI +1.8%｜台股加權 -0.6%｜恆生 -0.5%",
+    "⚠ 全球市場風險｜費半 -2.3%｜NASDAQ -1.1%｜日經225 -1.1%｜KOSPI -1.6%｜台股加權 -0.5%｜恆生 +0.5%",
     "⚠ 全球市場風險｜美債10Y 5.14%｜VIX 18.4",
-    "⚠ 全球市場風險｜AI狂燒錢會崩盤？他憂台積電、0050「重演2008悲劇」 網反問：是不是有誤解",
+    "⚠ 全球市場風險｜Market Chatter: Nvidia Leaning Towards Using Taiwan Semiconductor Process in New Memory Chips",
+    "⚠ 全球市場風險｜通膨+AI融資雙重暴擊！台股早盤下挫下跌超800點陷46K保衛戰，5天崩近3千點！台股在加速崩盤？",
+    "⚠ 全球市場風險｜圖解》爸爸把台積電股票送給兒子，免繳證交稅還要報贈與稅？股票買賣、贈與課稅差在哪，3 種證明一張圖看懂",
+    "⚠ 全球市場風險｜Tech Stocks Stage a Sharp Rebound! Wall Street Buzzes: Upcoming Earnings to Test the Strength o",
+    "⚠ 全球市場風險｜美兩大交易所延長期權交易 輝達、台積電入列強化亞洲時區布局",
     "⚠ 全球市場風險｜U.S. stock market closing | AI trading rebounds, with the Nasdaq up over 1%",
-    "⚠ 全球市場風險｜Although the market opened with selling pressure following the drop in U.S. semiconductor stock",
-    "⚠ 全球市場風險｜快狗打車擬1元出售中國內地業務，四年累計虧損超26億元",
-    "⚠ 全球市場風險｜台股反彈訊號來了？美股科技股反攻、台積電ADR同步走高 台指期夜盤逼近47K",
-    "⚠ 全球市場風險｜Stock Market Today: Dow Futures Drop, S&P 500, Nasdaq 100 Rise as Scott Bessent Links September",
-    "⚠ 全球市場風險｜Lee Jae-myung: Measures to stabilize the stock market will be introduced at an appropriate time",
-    "⚠ 全球市場風險｜64萬多人注意！5檔台股ETF換股 國巨、富邦金、國泰金等被踢"
+    "⚠ 全球市場風險｜中英對照讀新聞》Nvidia CEO on AI market turmoil: ‘All of this is going to pass’ 輝達執行長談AI市場震盪：「這一切都將過去」",
+    "⚠ 全球市場風險｜Global Equities Roundup: Market Talk"
   ],
   "markets": {
     "US_SOX": {
@@ -45,23 +45,23 @@
     },
     "JP_NIKKEI": {
       "label": "日經225",
-      "price": 64916.7,
-      "change_pct": -0.6
+      "price": 64217.37,
+      "change_pct": -1.0
     },
     "KR_KOSPI": {
       "label": "KOSPI",
-      "price": 5768.01,
-      "change_pct": 1.8
+      "price": 5575.87,
+      "change_pct": -1.6
     },
     "TW_TAIEX": {
       "label": "台股加權",
-      "price": 46822.08,
-      "change_pct": -0.6
+      "price": 46602.33,
+      "change_pct": -0.4
     },
     "HK_HSI": {
       "label": "恆生",
       "price": 24186.83,
-      "change_pct": -0.6
+      "change_pct": 0.6
     },
     "US10Y": {
       "label": "美債10年殖利率",
@@ -71,18 +71,66 @@
   },
   "active_news": [
     {
-      "title": "AI狂燒錢會崩盤？他憂台積電、0050「重演2008悲劇」 網反問：是不是有誤解 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMixgJBVV95cUxQZUFYS0ctVjM4dTNocjRGMkRULWt5MjdvRm9zUTZheHM4WDVHVmZoc1Rab1paMndGdG4zQjdheHBMZnBDX1VPME1rcmM1Q29KSktJUFdtMTlYSUVnVU01MHR3bFhtUHdGSzd3Q3VCbERKcE9OTTRXQWpNSTd4X054cmo0NzhqeFRaQnpQeTF4TzVoZWo3bmFuZ2FkMXJDVE1vel9aeWloV21YMC1FZ01CS1lCbTNEVUt0N0FIb00yemtINlRoZlBlbGU2Ym5IRF9BdHVCU0prMERPX0puX2JuN2o2cU9BM3N2SXdveFBQalFhdVNvOV9LMXFIOHRWcmpxUjV1eXZINXp6Y2VwQnRDajJITER0RVFlZG5UZGxFMnlCY01zd1hwaVVMSEJ0bDQzOERsbnJEazZpWF83Z2VOREp2SUNCdw?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-19T11:36+08:00",
+      "title": "Market Chatter: Nvidia Leaning Towards Using Taiwan Semiconductor Process in New Memory Chips - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOYW8yeUFFUHZFdUpUSTFFWVFnTFZXMTJ0b2EyUTJrN0tVZ2hQbXBnTkJOUHZPeXFpdHJYZElJZEF3UWFRVnNkOTV2Q3FITWFLSVloRWpXcWhOMTlwMTFPQ2lhTDhXTFZaVDVEQ0VHVU10RmJnOEpQOG4xSFNvVEJGanRQUzlJejJpOXZoTUFWdnhxZHpaTUV4ZzRXaDRvZ0ttZXZ4TG44ZWJwLU9rbnhqOVNXRXAxTG9HeVE?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-19T17:55+08:00",
       "importance": 5,
       "risk_score": 4
+    },
+    {
+      "title": "通膨+AI融資雙重暴擊！台股早盤下挫下跌超800點陷46K保衛戰，5天崩近3千點！台股在加速崩盤？ - TOP1markets",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPYmZYMTdjaW9xd29jN24tbk0zSHZFSl9ZQkE1LTdCNTJERHhucW9renhOYzdkMldUQUY5dnByRUxUMnBlUlV0QjdSNllEUkdFRUNVd2E2dlczOXl3d3IyOXNQNTRjSEQzekRtVmxEZUdLS3VzUVFrRFpHdEV2R29DMlYweEpEdUx4aHZRdlVCVm1yRDRid1BDUlpFMGxFRmMtdm1uRjNNeDQydw?oc=5",
+      "source": "TOP1markets",
+      "published_at": "2026-10-19T10:17+08:00",
+      "importance": 5,
+      "risk_score": 4
+    },
+    {
+      "title": "圖解》爸爸把台積電股票送給兒子，免繳證交稅還要報贈與稅？股票買賣、贈與課稅差在哪，3 種證明一張圖看懂 - 風傳媒",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5aU1ZmM05VSmI3SFhaMHZuaV85cGtpRmtOSGMzbjZWMVhmNUg5Ul9BSWJ0U1VLZnFEYkMtRjNkR3VRbWNHR3cycGNNVkloLTN6?oc=5",
+      "source": "風傳媒",
+      "published_at": "2026-10-20T08:30+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Tech Stocks Stage a Sharp Rebound! Wall Street Buzzes: Upcoming Earnings to Test the Strength of the AI Trade - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOeFpLMWhMalhPdWlHbW5IeTMyckwzQUNsbS1JTHgxQmtVMWxqREpVa3MyNG5ZQmctb296eXdUOS03WDN0SmdyYS1Ya1BaeERsakFDRzJsX0QtY2poQ0NWWG9hbXVXaGRSN1F2X1pNR1FwWXhUSU1oV2w5b0lpRHNGZGtvVENBWS1hWmFtZDZmZUpxNW9ZRXZPeWdURTczNS02VURIbTNlaw?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-20T08:13+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "美兩大交易所延長期權交易 輝達、台積電入列強化亞洲時區布局 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiogNBVV95cUxPVmNmNFZzeUNvV3dsUnZQZndSOHJDbnF3REZ2UFRMTEdMOFN2cTRoblZhdXFjaWFFUUpSU2hXNUlYcmM3b3ZRZjNwS1Z4dUt5NHQzaUJkbUZ6b3E4MFdVdjYxRlIyNHFlZTlCVV9PNmwxSmYzdXF1Ry1lby1CcFNubHFmM0hRSjduVlFnZVlXaXNQTVBaVzlrTDZJdEo3aG5PS1AxMlNoMC11aU1nSFJiUnV1R2VweHl0VmRxUUQwdHd3SHhCRUprc1lrTVRyNVI1eG5YRWpsRmdOYzNHSTBwSFFzcWZHcDJOMWU2bGlIbkduWUV4b1VMSkhTMElhQy1wamkwbnRZU3M4VjZtQ1ZEa2U2RGo5b180aWJEWlNYdVkwUVdsWTkwRW9xWVRyWDExWGdQY2d1dkx3ZmR6My1JYk4tczdncXRLY2lkU0tBZWwzNFY3U1JoNWRPNkxjMVJPNHdDSGR5UllpQmVKZk1RRW1PUDAyaTdWTDRmbFQyZ0JTT1VLS1pTQURBdlI4aGtXSVlXSGtET2dESDhVdms4Yndn?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-20T08:11+08:00",
+      "importance": 2,
+      "risk_score": 0
     },
     {
       "title": "U.S. stock market closing | AI trading rebounds, with the Nasdaq up over 1% - 富途牛牛",
       "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNNTMwVG5xOVZfY2ozM2tmWWdqMktGcEFaMUJDbnF0MU9zeGhrcWtDcE5jUEhTaHZweU9NTjRJTi1wZHE1Z3ZpVWRYZTNLY2Zxbk1KUWY1OU5hN1dvbEI1bEZabk80MVMySks2S183Y3BYeFpGQnN5aGxlUU9hZDZidmpnLTJwVGVkVlRrWlc3OWRVOFlyaTJGVlF2UnllamNIdnBsLQ?oc=5",
       "source": "富途牛牛",
       "published_at": "2026-10-20T06:48+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "中英對照讀新聞》Nvidia CEO on AI market turmoil: ‘All of this is going to pass’ 輝達執行長談AI市場震盪：「這一切都將過去」 - 自由時報",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5tRV9oQVkxLU9LdFFlbGwwX21kLWNwa09teUpENDlBc2lJVzg5T1lGSF9FVlhuTFJwa29KN29zUnl0NjRZWUU0TUR3bjdmcnNoRVNRTjJUTmdvajZXejdGN3h30gFiQVVfeXFMTm1FX2hBWTEtT0t0UWVsbDBfbWQtY3BrT215SkQ0OUFzaUlXODlPWUZIX0VWWG5MUnBrb0o3b3NSeXQ2NFlZRTRNRHduN2Zyc2hFU1FOMlROZ29qNld6N0Y3eHc?oc=5",
+      "source": "自由時報",
+      "published_at": "2026-10-20T05:30+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Global Equities Roundup: Market Talk - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOQi1ja0hIRE5XRkFZeEtmOHpJVU94cFIzUHc4WHlzM01ZLVRrT25TRmhRem1rUzlTcnUwWmZmejJ1LXA3bjloUTZOS20tb1U1Z1lhLWlIUE96aGJwRjRzN0IzZ0JQRktseS16cHpmT3dKMk1tdEE0d0ZkVE1PTkxYckNKbHE?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-20T00:27+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -117,56 +165,8 @@
       "published_at": "2026-10-19T20:23+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "Lee Jae-myung: Measures to stabilize the stock market will be introduced at an appropriate time to prevent significant fluctuations in the property market. - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQTk5fZTBUb1g0Ti1nZU1XRHRhOWZFZWNFWEY4c1otTW5xTlozRFphSWl1TVU1LTBlY0RUd3piSm1PeFNkNUp6cTFKM1h1bHZkT3JYU1NGSmhtSHVMbkJoRkhHSEpCSXB3LUltT1VESlJUenRtUjNZcS1JU04xcGVwS1FueFFaTGpMTWg1ODNJSVhBRlBhM3BZWlBhZ1g1aEthZUE?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-19T18:33+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "64萬多人注意！5檔台股ETF換股 國巨、富邦金、國泰金等被踢 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMihANBVV95cUxPM3hnRVNLeFVMaXFDVGpNN1N6dnpWNkI5TWc2cDUxYWtReUZzcmI5emdWdEJwT1hkb25zcWoyLWZGdDhRSHNJTVNYc3J1NDlodmFJOFV6SHYzVWNFN2pEQW01SWgyQTc0WS1iV2thMVp4LWg1NWl4RzdJemFmX1EydHBBZWZDbDdiSGhudk5LQnFuTDVfeGZIdmg3aTd0RFgxbDFWc2xWel8xX1FtOHFQNmhBQzVkYWs5RVNBR2hjdmhydWtLN21TV08tQm5fTUVZdFVKaGxJc2VrMEdMUWo4TUVrTGtkb0dqcXgyaXdPaW1BNk1pWXQ1WHp5VUs4R3c2elZhdFdiYzRib3RYZ0NUdnRpMmFibUJlN0FQdGhTQ3pKdHQ5NUZmVEVQaDN3cjBCVy14TTBCRjFoSFlxQkx3UzljUThROFNrcXBKUHBwN2dxdlFtV0pmYlVpblRod0kxMDVjS1prU2J6SG9KMklxeWVwVkk5bWN3QUo1V3dHLVhuZG9D?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-19T18:04+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股回檔7％！ 立委關切「限空令救市」 金管會回應了 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMixgJBVV95cUxNd3EwbjdhaE9HRnFYczJiLU00UnJBaGtPN0l3ejF2UHU2SlBIcUUyQmR4Y3JBWkVYdU1xRE5penBpWGR3UTZHbGdldTd5MXBLODRPajBjZnFrVTJsc0oyazdPaVFac2RUWHpETXBCSG1WeXJrOUZOT1R6T3VOUXQtc05lRkNOeV9OeVp4WGFweElYakRPanFoZHB0NW4yNmpwX0JwS3l0RjhfbEdVWVRGTUxzcEZCWFREWkpCTk9FYXhzTXduVTVrOTFSQXNYY0lBNmx4c2RjMHROeklqdEE2Q3pSTXYtYVpZRHBlWEFRb2I3UVI4TlQ0eTY2UUM4Q2dlOXRRckx2eFYtamZBaG1fYnVubnN2LUFTRFRacjE3alplbzk1c0drTjhGNTNOeGRCMVJySVVrS3hkMkZYeEtyVWpMVzViQQ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-19T17:36+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台積電熊本二廠2028年底生產3奈米 JASM設備投資總額將超過230億美元 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMimANBVV95cUxNaXFqb1g0THlhYUdWNFJjV3hianVUVC1wM0pMRmxkUkhQTlJKXy1Ja2hwUFZOZUV3TFpoZnFZOGVSanFMVnRxdUtZS0UzNUJzTkd4YzliSDB2LWxZRVQ3SGF1V1JlZmhZUW5WUWxJMk1jaFo4VDVhbDJTYUsxREtBWHQxeS05bEJwWTB4YURrcnhvYUIySjI5aW9qa1ltUmQ5M3Z5eVg5cE54YkxMV3pNaVR3UTdqa1B2b0FJWXRvNWctdG11emtfUllzQVBrS3NCM1VXNDN1ejdqQWk5TTNvYVViMGY0YnlMbXA4MDlaamJqZGplTWRuZXlWYTltVWJWRWhNb0pCRV9pLTMzSEpQMHZuVEctNmsyTUU1Y2czRThlZG5hNVBUU0F3YmhQYTQ3d2NBM3owSWJoQVpvcDI0NU40VUhHa0szbnBQbG1XSTNFN21aUGI1QWI4N2V5VmJ4QVZ4bHdxSE8wd0ZvZi1lTVRNVTR2ZmwzZVBuYklSN1BIbzIyU2xmbi1MWTNaVzdCaS15aXVWVHQ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-19T17:36+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股會一路殺回4萬點？新手加碼2檔ETF遇回檔心慌 網友：放眼長期 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMihwNBVV95cUxNZnFYS21SVjVBWlhncWl5cGNERFM4bWc3MWY1RkFTQWQyRUhSSlROTjBUMWFPdjRLcW1Sa1VuM0ExSk55OUhmSHp3dWRxS0VqdG9aQ3JYaHhfT1hRTzhWNHJhNDgwZzFMd3Y0RlBfRW5aVE0wb2F2QS1FTXV1QmdaN3Mxd2syejJfRFJNUU9GLWZsTVBIT0ZScXI3RjN0T29SWURqbWZtMmtWbmNQTlB4bm1Zc0cyUDhkZ1ZiZTQtd1RJcThnTlU5Z3VUdjl1NnNwRWwwX2dFdXotandtb2NZRk14WWRoVHZtd2RuNDhpaTIydFdoTmNaRW9Ld0VjTHQtWVV4TGpBN0hTWDBLaUlBX3dZeWlpVVpad3UySU52Rm9BVnZxQzRiWGZxVFJYVkYxd1JsYnR4WGtXLXo1NjBWekxUWnY2ajVGamlRWVNmLURnSzI3clRFeW94VWJsUkk0SE5OUmFIME5rRGpDenh1VTlidnlUYW01RHBDOHg1WFM1YndkR3VZ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-19T17:35+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Institutional Insights | Morgan Stanley: The U.S. stock market correction is nearing its end; prepare to allocate to risk assets. - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPR3pKbHVCSnd0MEIwRHV3TG1GN2hDZjVBRzgzUFdKN2RuWUR3U3lna2dEakladm5GbS03UWsyVzh1aEtuOVNJblRlOEhlWVRPVUEyYVNvclkwS2xxbmVuUk01YUJzNklObFJNWTRBSXdZdy1aaHZVenpTVmJzUmkwWlRnTVlOcWRGeDRwcXc0Nmllc1hBTE93T1RWTnBaRUhxM2c0S0trbUdLdE5jYkkyTHpZTWM?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-19T16:52+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-20T06:56:37+08:00"
+  "updated_at": "2026-10-20T09:22:01+08:00"
 }
