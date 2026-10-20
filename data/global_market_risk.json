@@ -6,42 +6,42 @@
     "韓股明顯下跌"
   ],
   "ticker": [
-    "全球市場正常｜費半 +1.6%｜NASDAQ +1.1%｜日經225 -1.3%｜KOSPI -2.0%｜台股加權 -1.1%｜恆生 -0.8%",
-    "全球市場正常｜美債10Y 5.14%｜VIX 18.8",
-    "全球市場正常｜中國澱粉(03838.HK)10月20日耗資35萬港元回購207.5萬股",
-    "全球市場正常｜Hong Kong Market Snapshot | All three major indices declined, with the tech index down 1.52%; t",
-    "全球市場正常｜AI創富效果驚人！今年台股漲7成　股票、基金占家庭資產近3成",
-    "全球市場正常｜外資又狂倒795億！ 台股再跌529點 網哀：還要賣多久",
-    "全球市場正常｜台股不只5萬點？張錫估2028年挑戰7萬點 台積電看5千元",
-    "全球市場正常｜【Follow法人】外資仍砍近萬張台積電再賣超3萬張友達 反手敲進緯創逾3萬張",
-    "全球市場正常｜近6萬人搶搭除息行情！0056狂吸近300億元 超越00919、00878",
-    "全球市場正常｜台指期夜盤早示警！台股狂瀉529點殺破46300 台積電收2405元"
+    "全球市場正常｜費半 +2.0%｜NASDAQ +1.4%｜日經225 -1.3%｜KOSPI -2.0%｜台股加權 -1.1%｜恆生 -0.8%",
+    "全球市場正常｜美債10Y 5.11%｜VIX 17.9",
+    "全球市場正常｜台股飆漲掀出走潮 基金經理人辭職自操盤賺私房錢",
+    "全球市場正常｜Tech in focus as stock markets retreat; oil surges",
+    "全球市場正常｜微泰醫療－Ｂ(02235.HK)：中國證監會就公司實施H股全流通出具備案通知書",
+    "全球市場正常｜中國聯通黨組副書記、總經理簡勤履新國家數據集團黨組書記、董事長",
+    "全球市場正常｜中國財險(02328.HK)擬10月30日舉行董事會會議以審批三季度業績",
+    "全球市場正常｜高雄台積電驚傳嚴重工安！4工人疑鷹架倒塌墜落 3人OHCA急送醫搶命",
+    "全球市場正常｜中國鐵塔(00788.HK)首三季度淨利潤108.17億元 同比增長24.2%",
+    "全球市場正常｜中國波頓(03318.HK)10月20日耗資45.54萬港元回購14.8萬股"
   ],
   "markets": {
     "US_SOX": {
       "label": "費半",
-      "price": 11316.343,
-      "change_pct": 1.6
+      "price": 11362.435,
+      "change_pct": 2.0
     },
     "US_NASDAQ": {
       "label": "NASDAQ",
-      "price": 26430.887,
-      "change_pct": 1.2
+      "price": 26494.043,
+      "change_pct": 1.4
     },
     "US_SP500": {
       "label": "S&P500",
-      "price": 7690.73,
-      "change_pct": 0.4
+      "price": 7724.29,
+      "change_pct": 0.8
     },
     "US_DOW": {
       "label": "道瓊",
-      "price": 51966.03,
-      "change_pct": 0.0
+      "price": 52496.0,
+      "change_pct": 1.0
     },
     "VIX": {
       "label": "VIX",
-      "price": 18.75,
-      "change_pct": 1.6
+      "price": 17.86,
+      "change_pct": -3.2
     },
     "JP_NIKKEI": {
       "label": "日經225",
@@ -65,11 +65,83 @@
     },
     "US10Y": {
       "label": "美債10年殖利率",
-      "price": 5.136,
-      "change_pct": 0.8
+      "price": 5.106,
+      "change_pct": -0.6
     }
   },
   "active_news": [
+    {
+      "title": "台股飆漲掀出走潮 基金經理人辭職自操盤賺私房錢 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi5AJBVV95cUxNaTNieXlnbzh0cEpMVG1xeThSSWR1SVFzVlppejg5cF9VSF9oWnZsa0VST19pUTZIYm5PSngzYmkzRlFrUFpjdnBtV0hmV0lWQWhmdjk0ZTEzc2VRTWpNQ2JsT1A2YjRoRHBhVlgtVGFfV1B1b3p6dXpBeFRLMDZBT2c5ajR4Q0hBWE5zMjh0LXlZV1N0dkRYWFd1YTJBMXF3Y1M3VmE0Qmd3czQ5dXVzdXRwdlNBYUlUR25MWVZJLVZweTdBS3FmWEhWR3hGSUpabE1kZVpnaWRSYUNfT0RyaUhxLTdkYUROQ0pCeXlvc3NPUFp0SHFHbHZHdkhMUl9sS2RwNEVnZTMyNXRSQ3g4U2RMR2o4eFMxOXBDcG1RSWh0Ry1nWDBXQmdOamM1eGZOV1ZoMkNHZkVUX01iaXFzY2I3S216ZUF1a2VXTW1DQVhBVnVVbGhBWkVpU1I5bllfblBnUA?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-20T22:16+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Tech in focus as stock markets retreat; oil surges - Macau Business",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQWXZlSE1kdHdSaWw5S2NaRXJiRUJXT1NzRWI4TEhXM1FQS25qVXdnUUFZMkNvWWdFWUFHNGFIUFR5YjJSR0QzQ3ZsVGVKRWxoSVM2b0ZNZkdfMjAwejctTUl3SHBIMkszUU0xVlBhaVBkbjJyZjN1N1hQek5EdkotMTV3?oc=5",
+      "source": "Macau Business",
+      "published_at": "2026-10-20T20:42+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "微泰醫療－Ｂ(02235.HK)：中國證監會就公司實施H股全流通出具備案通知書 - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE92T1ZPcGZyMjZvUzBOU21VM2dDT041U2FoN19WZGZ5NW45WTlObF9telh5RC13b1liTmJIMjZpdVJaWjlWd2Z3bTdRUXRSSWFIYlpyMFl0MkU5bGZjMTZ2U05HamtJZHI3UFcw?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-10-20T20:23+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "中國聯通黨組副書記、總經理簡勤履新國家數據集團黨組書記、董事長 - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE0zX3VxbGRBdzFELU4yaG9lcjRDaFdKOG0xeThRVS1Kb1BDS1lVSHdlZ0JQQUpya3ZrLVAwVTRUOFJhTDJCSWpSQlpHcU9LSHlVVk9rbGZCM1JsaFpGLW9UTFdoOEpCTkdsdURz?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-10-20T19:35+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "中國財險(02328.HK)擬10月30日舉行董事會會議以審批三季度業績 - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBCTmZ2OWlOMWV2Q1lXYWRPc1lXV194Z2ZEZlhQTUtDbGhtTzgtMXRrMUtjM3pNZm1IeW45U05veTd5a3hza2RWVTR2QTM2a0d4eHNzR1VEOUIzRk1iQWtRV2l6ZWZ4M2xmQmpr?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-10-20T18:47+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "高雄台積電驚傳嚴重工安！4工人疑鷹架倒塌墜落 3人OHCA急送醫搶命 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMingNBVV95cUxONkZldTh2ZXNEVDFiSjRINkJodWVjRVlCWjI1N2NoUlZZUG1FQ2hsUnJ1R0JjckVnc2lzb0JmNUFZTU9nRU5RbDgyY2dyU2dmb3JxTWttbjBrVTZjZWUxS3oxdmRHZXc0TW5FWnNIbVJUaUR2YjhrdXYwMGRSQlp2ZFJkZ3BQVjNGU3VpclpScWRBSjFuY0NvcFYtSkRZTjRnVnZTMHJ3WEFyM3RDcC0tMU1ZYkVFU2NjOHRKVWJYRllub1k4bzVTQWh5NkkzVUtHNVpsZjZ1bEh1dzRWT2pFNEd4aFBlZDJsb3FkV1U0QV90TEVONmNTZ1RrcF9MdDJsQWcwMTEzNEVpNU5ITEhYN2E4U3YzS2hzMTNSTzZPaDNkU21pS2Z1cDRwZkFFYUR5ZFBkbDBYczlpMzZKMmdDZHQ2d3VhZUZ1MU9tTE9DbGIzWUJKLUtHUTR4ZEFQSnhPTjFBdGNxamFYTXlVLUc0WnBIQlV5VW9iaHowZXV6bEFYa3N2Um1OZ0d2eFpCY2R2TGllZlBDTHBDQllxU1E?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-20T18:30+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "中國鐵塔(00788.HK)首三季度淨利潤108.17億元 同比增長24.2% - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1iQi1uYlQydHYxYlFNWm1sU0RvTEItNVF6dnNZQXpMYzhRVk5IemIwN2NfT0pqeDNzUU5zb2FpcWw5NXNtQ0NYNURKOVQ0VHdCaGUzQ2lWaFBmNHR0dDAwaUdHUlloQXdTendn?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-10-20T18:03+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "中國波頓(03318.HK)10月20日耗資45.54萬港元回購14.8萬股 - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1fZTVZNXI5M1FIQWFweHprOGptRmVjRlBxX0d2NG5BZEdLU2hzQi1Dc0ZtTmJRX3F6S1pqWTcwRFN1RjhKTm0wQ1RWZm42TENRc3RxdXdvUk9Fd3ZCdWR1aUg2dVJEbGgzM3d3?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-10-20T17:34+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "外資十連砍台股V轉沒力摔529點！緯創拉半根漲停「光學雙雄」亮燈放閃領族群開趴｜Yahoo財經掃描 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMixwRBVV95cUxPWnJ5QndtUlZsbFBpbmNSQnU1WUZMWTVWVGZUS040cEhQOVNZTkVlRjdRNThxTmJPblg2MzQyVmI1ay1IRGhTU2R3cVZkNEVDMnlTdTNwYzV6aEJSamtaOFRQelZNZXR5TUVXWHhQcnVPLWRvVkRFQTU2QVhXTWJfREFhUXdydUduc0xuZjhFN09xTVhGNWR6clpsVVVKbDhEenRjMHE0azJTZUNEQ1BESDFBS180Z3IwOWVvZFlQWTdiSThrN0hsZXVvTE1FMGYxXzdFem9zYUF5X2VmOC0yRlNLTFRiM1FYb2t2RHJTcllnTkZjdDBwTjVSSWJqNjFOQkRCMnBYNS1SLUZudl9WYUlrUTZURDJwc0dKUXRzSTRrYXZkY2haNGNTWjZ0R3pPZGlYTlIzNFNxTkFNX0IwUlBjbW9jQ0x3NThFelE5bEVDQjItVVZuMkFwMlFSbmJBeG1KNjIza3BnNGdkMFJXTlB5aDlvSHRxLWFBMTY0eXJHMVBZNGpEVDRtTDdoX0pJeXpUN3hjNFFoN3RDUURXRjN2cThrc3RGam9jS2l1WW9TT3ZiX3B1akRCd2pUaUI4MHVhd3hkX05HNTFtYWxQeUpOVzg0ZFI1ZXpqWWVHNTZoSnVqcHpiQUtodUJkQ1JhR3BGTEtudmNWSGZMUFZ5c2pjUVhwNzBxdEhLbE0xbERlZUkzS1pSX203dzI4eVZzcmRGZkthOFlPVGl6a3V1bm95YURSQXg3N3FEN3JSXzZvajU5WENn?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-20T17:12+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
     {
       "title": "中國澱粉(03838.HK)10月20日耗資35萬港元回購207.5萬股 - TradingView",
       "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBZZlZSeWZSYnNxQWdDYTdyUk02VnpZd2hfOVBjTEtTZDR5Ul9UUjVGU3ZJUFZCZ3lBb0EwYmNtMnlYZS1haDNzdUNRV3BpcDYwR0hidVQyUjlBMHg3R3NQZ055UHdQX19FYTF3?oc=5",
@@ -79,18 +151,10 @@
       "risk_score": 0
     },
     {
-      "title": "Hong Kong Market Snapshot | All three major indices declined, with the tech index down 1.52%; tech‑related and gold stocks fell, as Alibaba dropped more than 3% and Zijin Gold International slid over 9%; meanwhile, most pharmaceutical and robotics‑relate - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQY2xtR1MtZUVuSS1YZmJfdjNSd29fMV9lVUVVbGdicFJGblAzNE0yNVh5MnN1b0FZQkxOOGF1ZEFnSm1MS200UlJtMFlnb3IxdUE4Ny16RGVkNzZOWHRPVlJWX3F4VDVxSDZyVGE2LVFfajF4a2pUclBzbXNqLXp3LWZsQXF5SkFwRVRCcXlITEdScTFZUjZlaUtBRVlyLXViUUZ2QjVRaHZZZw?oc=5",
+      "title": "Hong Kong Stocks Close (Oct 20) | Hang Seng Index closes down 1.32%; domestic and international catalysts ignite interest in Physical AI; Hansoh Pharmaceutical (03692) surges over 8%, leading blue-chip gains - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPTjVPQUFSYW9fU3lPVXBBbkRqNF8wMnlMWlFjb0x4Y2FkdG95VV9UcExYWVpiczBieVpHb2ItVVMtRkFiaHAwd0ZYQVZqYm1DWEJra3A4N2pnUjhEbmpLOW5UeS14M25SNkhNMGlReHpON0dvZXJ4SmkxLXpyLW92RDhWUHhzT1lGZ3kxYjRYOG1RbE90NWtlU0dKZw?oc=5",
       "source": "富途牛牛",
-      "published_at": "2026-10-20T16:22+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "AI創富效果驚人！今年台股漲7成　股票、基金占家庭資產近3成 - ETtoday財經雲",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE45aUpfVzVRUTZaRzE4XzFzcnVTWFFid1htcU1felMtMjI0S0NuV3lyVWdRbFZDOU1BUF9WYUxEOHYtR0dIbi1QYW9vZzg3a0pySmfSAVBBVV95cUxQbDBmVEF1WUpKWEoycFJQVEQ1dmpjUk5aSzVWUk9GREhsb05EbmNHckpQOTRaeWg3SjBhVjFEckhZWFFqUW9TNndXaU11UmtIeA?oc=5",
-      "source": "ETtoday財經雲",
-      "published_at": "2026-10-20T16:12+08:00",
+      "published_at": "2026-10-20T16:25+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -101,72 +165,8 @@
       "published_at": "2026-10-20T15:48+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "台股不只5萬點？張錫估2028年挑戰7萬點 台積電看5千元 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi4gJBVV95cUxQS0o0ZFVwcW54TERNRUZvdFFWenBWaHdHQ3VMTkV5RVJMWWlyR3NaVHZuM3JZbEhRck5LTnR0VzRLeE0tN0RKZ0Z6MU5xd29CcVM5UGRCc1ltSGNPMzVVbjZtMVlkaGx3b0Z5M2o5ajQ0VHpIT3ZvU08tTkpiR3hPUnIwdjZ4QzdueU51WkFRU29EZTg1dU1NRWhyWHdiVTZrVWxPN3hNaHhrNWRILTVkNG5RVWxScjVNaXVKblJwTTBRcnphdy12U2RFc1F5THRvc0IwcVVucHJiUzE4VlNVb2l4ZXlYcUZBVV9XV2dSZkFDcGZZUmVNamFJZW41MVlReGIzTDNCNDhzcHVLVXFFbzlOcmlMc0EtZHBPblVsVkhTdW5TdTc4Wnk2U3VucW0zVnRPbXEzZzdVRFppdHF3cXhWTTdnU3ZLb1liVlRsYXZES0RYMER1OTBrWE5nQlVFeHc?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-20T15:38+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "【Follow法人】外資仍砍近萬張台積電再賣超3萬張友達 反手敲進緯創逾3萬張 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMizwNBVV95cUxNOThpVzFudXRVcVo5QktiYlRUZ2Z3N2J6M3NfOVlTTXdzZ0dwcnVjYWZ3akgyd2tlUWhOQ0VyYUwxZmhRQklhYV9PNWhQX0hFM1Q5blM3RG8yazBYRlF0VjQ3NkdwX1RMSmQ4bUFKaVFoRm5tWXFhYU5QQXFubnh3TjlLNjh5cFhzeXF4TzY4c25MSHVsX3NfaUJvWmVnT05xU0U0bFB2VVY5NXZORG4ybWR2d3NpNFdjcFBudmVpUXBzRkJnWjFKNVNmU3pOeHpjNjFnOUtWZXNyRTJjUDdhRmFNRlFCaFVUNVpubE1ITVA0a2lKZU9FM1pTcHA1aklNYmYwVm90R3hqWlU2NlBNV293SGhfRFdncGxYclgwbGptblpvdG9QcGRxNzNHajBiX3pacjQ2NmtZN0xoZm9vVlVWWmxpUnR3Szhod3REQlY2VF9YeXNYbk9NWGpVWVlGazZlZDFBOEJXdVhEUEFHa05rcVU2WUszeUIwWDl1RVBYeWZzZXhSVDdlNk9FaUJOSGZISmFZM0g0N0NhMFd1UUhDZlVSRWN0ajV2Z3hvZ3RVaHU1dXZCLVlHYkFCWUVvZWRzd0wxdzFhSE9ubWRV?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-20T15:01+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "近6萬人搶搭除息行情！0056狂吸近300億元 超越00919、00878 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMizAJBVV95cUxPSGh1WTVVbXQ2TzJ5czRybmJwWVFXMDRUM0Z5T0J2NUtTdVQ1MXhsYUJERFB0Sjl6VWR3MWFNTEFvVjlTWVVrcklsV19GeEVZdHlFbXBscllnVGxiQjh4ZzZvREd2cTdvU1ZTdzA4SlE3SlRVVVZrU24xMlJ1bTA1OU5aUWN4dHNJNVVZazdyb2puTm5TOHdwdmRwLXRqSk81M1ltZkFWdlN6LTlYT2w0UXVrMkprR2NKTWs1UkltRlphNGgzRVpZbXlHQ0w2c1RRelQ1VkNTTDBabjNoeWZMeDJsX3F0YVlFOEE1UDhkeGJkS3E3YjJWLWdSeC12MHRTcDI4S2ppUTFPOXRBWkdkWGFvVHZibmc0Zk1HR0FIZHFxZXJXMDlCemRuWUdDVlcxVy1xRFMzd1dOX0lNcjd4TnVJN2staWIyR0RWTA?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-20T14:39+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台指期夜盤早示警！台股狂瀉529點殺破46300 台積電收2405元 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi3gJBVV95cUxOX28wa3hyUUZPcXpSUXFoVmNQdENualVSVmRrMTM1cVVxWXRKQ0pNTThOVHFwVV9nOFpCVkRGTzc5dTl2cjQ2SldNUlRNNXdSUWtTTjlsOW5ERm4zUThUaVVKVzg1NGE3MEtKWW9sdWJNUmpocHVhRU40U2ZvSEFhNVcwemRycXB2SzZqZGFHRFh6cjd0OGN2R2hoUlVrWlFiTlY3aWtmLTZRcEwxbFIwTTczdnd6SUxYR053bXVjcnFLSlNmR09uY2JoM1lUOTc0dGtaR2lnbUNlRHZxSUQtbEdBUWdxMnAyUERFbXl5eHdBakNQT28tOUotaHIxUGdxUUxDZ19YY2s3M20wTWxYSFJ5TjZ5dHZ1a0pJTkdNQk5FeTMxcjF6ckRNb09vTnVYOWlESkhjX1pKM0RXYXprRU4wZFNFR19WVlRtVlpWQnZub0cwTzV6blRXeFBoUQ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-20T14:08+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股慘跌529點！台積電跌15元、聯發科、鴻海挫逾1% 台達電淪重災區大跌2.13% - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiogNBVV95cUxPVENUZWp6T2VQWEN3d0hyWWdVWFlTbUVQQlhpVXhsNVFaSVRTRXBRMGNOcVF1bTZ6Wk1pMHlvWmVJY1pjenlpcTdfRzJobGx2MUZiaWdBNTV6SGdBQkNxOVUwNjduVWRwQjJ3RXI5dFhWa0FrZE53d1M4dVlDV0dlczNFRG15eDdlem5DZXFoSUVtcXNCVjBXWkVoUGNPNk1OOHJ2am55MkJHeExwX3ZyUUlnYmFrSVA1bWJfMDZHUGdfNDhUTmUwVTh2WUZTTTUxejhkaGpzTVd2TTZ6UmVkQUd3azFSNzh6TEVndHR5MmlxLWYteXFjOUhCSkE3ZUZJaFQ3Ym02YTBPVS1FNE03SS1tUFExUzBhTlV1RW43MGZxVVFBLVphSWN6T1VBcjlLS19jRGRsM1dmMjZCcUVpSHBabF96SFlqTV9hYk9DWDZSazlJMnRaVWdwZUlfRVNwT2JCUGp0TU1oOUtBUExHZmtnaFQybEFkeF9Vb2FaY09Ta3REai1fUjRJcWhpOWNCekd0R2tYTkwwU2ZlWmpjemxR?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-20T14:01+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Catalytic developments are frequent in the field of physics-based AI, boosting the robotics sector on the Hong Kong stock market and sending Yiwu Shijie's share price soaring. - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNMm43bHJlOE1SVldFTF84WXZyeHB6QllDTUtmMGZHX0NaV2d1c0U0NEpNTDNzMlNOVU9ib200Z3FvbUZfbnZ5ZnBxN1JlVEYtR000TkNScF85cjYwc2lmTGpvSkxIZTRpNWtIemtpNnNxZXd0WlBBY3B4M25vVkJFazkxX2VxcFJ5ZHlobWJfY3Y0V213akFXcUVCaXVuNjZPa0pfWXo5RTR2Q2ZL?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-20T13:39+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股下殺近4千點！ 杜金龍坦言已買「這1檔」揭3大止跌訊號 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi6wJBVV95cUxQTWUyU19ZcHZob2l6TXIxeHpRSGQtQnhaeFR6cVVNYnoxc2tzM3dMVmNPYzg0aEZocEd5VFFaQ3dWNUhjcmxHMDUwYllpMmxoMms0SjQ1a3pmTHpWRWpmS2NQTlhVVFkzc0lfQnlFbXNIdDl2WXFqWFp5RjhQVW9CNWswaU5DZ05RRkxZaElMQVI4alBIV1AzUlRkRERqRnQyNG1JLVFqVXp3WG9yS3otdzFweW45QU9QRmY0a0J1VHlzWjk4aHpJY0Rnay1ReVhrb01LbmtlcXZnWklyTERxVGN0YTl3ZTRsSDd0aExHanBkUjFHb0VzVHA3VVNYdk5QaWtUamItOXA0UHVIMWhCQnhFaE1Vcm1qTmw2QUhtWEVjbGZnMzV2MFFUbEhWcTI0cjg0MGttalFhWTVXN3RPNmFfNFRiMkNKV3MtVTNfMmY5Y29YRVlPdTloQzVMeDRlS0tZQU9Gc3NzM1k?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-20T12:10+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "three major indices declined, with the tech index down 1.21%; tech stocks weakened, as Alibaba fell more than 3% - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOc0x3YnExc3p1WThUNXY2VE5FdkdOLWh0NTFjYXBianU1YjR5c3Nlc0ZPcnhnYndqX2ZCUm41bTR1S2VncU9TYlpWbXo3SXhTLWJBVWxCdjRPOVgwOXFHNDNaS3lid2hGZ29XVmJfNTktSmhhdWxibnFVenBQcXVqTFJaNU5YMnFUdGUyY3ZNYlJtTXFIS3MwTWJvaXVfaWViQVhDT1N3Sy0?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-20T12:10+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-20T19:26:44+08:00"
+  "updated_at": "2026-10-20T23:42:59+08:00"
 }
