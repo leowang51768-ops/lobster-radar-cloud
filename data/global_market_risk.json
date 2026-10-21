@@ -6,42 +6,42 @@
     "出現重大風險新聞"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 +1.6%｜NASDAQ +0.9%｜日經225 +0.8%｜KOSPI -0.6%｜台股加權 +1.3%｜恆生 -2.2%",
-    "⚠ 全球市場風險｜美債10Y 5.15%｜VIX 17.3",
+    "⚠ 全球市場風險｜費半 +1.7%｜NASDAQ +1.0%｜日經225 +0.8%｜KOSPI -0.6%｜台股加權 +1.3%｜恆生 -2.2%",
+    "⚠ 全球市場風險｜美債10Y 5.15%｜VIX 16.7",
     "⚠ 全球市場風險｜Hong Kong Stock Market Open | Hang Seng Index Opens 1.14% Higher; Computing Hardware Stocks Ral",
     "⚠ 全球市場風險｜GTJAI Assists Mashreq Bank in Successfully Issuing Its First Dim Sum Bonds, Marking GTJAI's Fir",
+    "⚠ 全球市場風險｜〈台股盤前要聞〉輝達DSX POD AI工廠6台廠入列合作夥伴、外資終止連十賣",
+    "⚠ 全球市場風險｜〈財經週報-投資觀點〉台股站上全球第4的背後 台灣人真的變有錢了嗎？",
+    "⚠ 全球市場風險｜Global Energy Roundup: Market Talk",
     "⚠ 全球市場風險｜SpaceX狂飆12%帶飛美股！台積電ADR、鴻海ADR齊漲2% 台指期夜盤一度漲逾400點",
-    "⚠ 全球市場風險｜中國食品(00506.HK)獲執行董事唐強增持20萬股",
-    "⚠ 全球市場風險｜中國澱粉(03838.HK)10月21日耗資122.86萬港元回購726萬股",
-    "⚠ 全球市場風險｜浦江中國(01417.HK)完成配售合共3300萬股 淨籌1.3億港元",
-    "⚠ 全球市場風險｜圖解丨南下資金大幅減持騰訊和中國移動",
-    "⚠ 全球市場風險｜外資中止連10賣！台股期現貨齊翻多 買超友達、鴻海及南亞各逾2萬張"
+    "⚠ 全球市場風險｜SpaceX's total market value rises to $2.22 trillion, surpassing Taiwan Semiconductor",
+    "⚠ 全球市場風險｜中國食品(00506.HK)獲執行董事唐強增持20萬股"
   ],
   "markets": {
     "US_SOX": {
       "label": "費半",
-      "price": 11498.351,
+      "price": 11505.556,
       "change_pct": 1.6
     },
     "US_NASDAQ": {
       "label": "NASDAQ",
-      "price": 26671.932,
+      "price": 26702.857,
       "change_pct": 1.0
     },
     "US_SP500": {
       "label": "S&P500",
-      "price": 7749.4,
+      "price": 7757.17,
       "change_pct": 0.8
     },
     "US_DOW": {
       "label": "道瓊",
-      "price": 52711.75,
-      "change_pct": 1.4
+      "price": 52856.09,
+      "change_pct": 1.8
     },
     "VIX": {
       "label": "VIX",
-      "price": 17.26,
-      "change_pct": -0.2
+      "price": 16.68,
+      "change_pct": -3.6
     },
     "JP_NIKKEI": {
       "label": "日經225",
@@ -87,10 +87,42 @@
       "risk_score": 2
     },
     {
+      "title": "〈台股盤前要聞〉輝達DSX POD AI工廠6台廠入列合作夥伴、外資終止連十賣 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMimANBVV95cUxPc09fUlAxbjVLRmtaX0ZXVHB3elhudnFCaGNqMVFXc3NwbGtLcklISTNRWVk5OWFaWEQ0SmIxNko2NWZTX2dxRGp1TGdoR2hIdjgwNkxSZTdraWYtS2Z3dGFZZXpvXzF0Ty1CRlFNWWtoRm5UOHd1SFBBeUlYazE1SXhBY08tN1ZsWnZKLXlXWDRqc1lyUWJvbEhOdC1kSmN1cWFQdV9RZ3dac1A1ampZaDRTb2UwRHhsVVl6N1N4eEktcXVJVXVPcG05UW9sNjRfSTdqZ3Z2VWk5cUg0UWJwdWhaTGpJd2FFZVM0cmZfM3VkWS03cDQ5WHpvQTN0NlRGaGp1dld3UTh2RkpnTzNTT2lVVUJSMmFLYlp3bnRaOWtlT3ZNRDJGVDgtRHdkZWNXeVBLYk9FUF9xREZpY0V1a1hTNk9MWkYwNXRkdzJ5SHdidFdjVHp4dWZPVlNDRVlEWVJXb1BVUVpqdG10cTRaYWkxdTJNdmpKaHk1MDBWanVTRElxRXBIYldwaXFSVVhKbDZRbmRCZE8?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-22T05:10+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "〈財經週報-投資觀點〉台股站上全球第4的背後 台灣人真的變有錢了嗎？ - 自由時報",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1CU2hxQkJLekJycTdqNHNvZnVfRU0tcjlaSlRHRFJQYzFTRzRwV1QzNmVZN1FMZmZUSW1FZ0V0X1ktRk1RSU1uQXFQbXg5cXpON0tTRmNHdmQ?oc=5",
+      "source": "自由時報",
+      "published_at": "2026-10-22T04:33+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Global Energy Roundup: Market Talk - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQNEs1bi1pZUVfVHo2QTdQMk1yUmVLeXBzUW02T1gtRzdKa1FNQmRDS0t2ZjF2cFdldHpVT0c1YlFOYjgtVVBLU3FXRjVVZzk3ZXFyc2NMUDRkY2dDemIxMHZ6LW1FQXl3SE9pSWpNS0N4RUo4bnhUVENna0pPLUx5VW93?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-21T23:36+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
       "title": "SpaceX狂飆12%帶飛美股！台積電ADR、鴻海ADR齊漲2% 台指期夜盤一度漲逾400點 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMizAJBVV95cUxQQk5ZSXU2dHBHeVUyalhoTVd2eFR0d0JPTDZFV3JOenFmbFBITDUtRG5pdEU1bk9EVTNLQmRGOExsOXdkYlA2X0pYalZQb1FLcmZqQ21zYmNFc2RlSmNsTHpWSTJPWi1Za1BEaGh4V2JDeGc1Wnl5UW5Cc3VDdnlJQ2J3R2ZnZFVodUYzQXlpd1JyU2lfY1ZyOFRtY3AxQkJTTmc2UjFaMVJQbGdkcjlHczhaNjBXTFJyVUZOQjB6R3NuTlNLZ3lydjlMZTJjeTB0eXhGd3Y3QVgyd1ZDNWszWnZfd0ppVUw1Zml1bUJ3dEs2NzZhLXpXZDI3ZmNza3VMOWs3RGFJWkFBaHpJTkJrUHhaTjRKRGNWQm1YVG1WcDVYRl9SZWRRYTdsYVdPVThLSDdiU3VhQjRvakFCMzcxcFpCcmZvb1Z0eEZwXw?oc=5",
       "source": "Yahoo股市",
       "published_at": "2026-10-21T22:58+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "SpaceX's total market value rises to $2.22 trillion, surpassing Taiwan Semiconductor - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOcnNjZURWc2NqSDE4Z1U3TTBZY0FiR21TLTFyTlFjV1Z5eGxXMFY0U2E0THpjeGxUb0p1OW8tcmN3Z2RyV0xlM3pQbVFaLTlUR0kzYUxSYzlJdTVQaDBMRHoxXzBSOUZnUklSZzBvc1VBOEx5VzJvaHQyeGtaM0pTcUl5TFpqOGlPRTVwQzNiQ0x3M2tOOVRCTg?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-21T22:11+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -133,40 +165,8 @@
       "published_at": "2026-10-21T17:17+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "台股漲594點！ PCB、被動元件開趴 「7檔」亮燈收漲停 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiqgJBVV95cUxPY3NXZzhZSm05Vm82R3FQNGpyNEFBRUlrOUZhdTJ2NFAyQ2dOTWlqLW1FMS1peGdkMnRIV0Q0cm5BVW1XcGVTeU5FZ2JfRWF1QzJGVFVWVDYxNS0zUFpSU1NfU0xuU0RKTjU2VXltbGQxOWN1dWlBel9lakE1aGx0amozWWxNTXNKREcxOHVzenNuOVhkYUhBanhMVjV0Vjg1U2lzTDNXMFdERXRaTk9WMkgyR3IxLUN1MWJ4WUZlZ0lZcXNrdk1PdkU3Z1pHS1dWTTJIVWM3Zy1nR2Z5NFh6OUNlN1NUUVJOb2I2SW1UdWk0REJuS3JxSTJxVnNpUmxSS2hGaUU3OElFdkZ4ajJEcVZENHRKX2ZOZWZzeDR2VVdIVTNfcXB6SXdn?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-21T17:03+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Multibagger stock: PC Jeweller shares jump 5% after surging 40% in 2 weeks | Q2 beat, bulk deal in focus | Key levels - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPanJMWHBoOTFSYWRFcE94cTAzZGw4VEpKSjB5RHkybjIyWXpnVTlpQmxkTENpek1FWmNkcktWU2tkQkdBS0NpLUVkRHd2MUhhQjJUbDY2ckp1RHZVUkFza3lSaHh4ZUNTSUhPbFJiOUZ0OF82RlZiMl9RLUEtdVZwZEVPc2NzVC1rNXhlaVNQemZfUUtQbEgzekpDU3gyUEhqWDQ2ZXd4czNUdlM2N0dkTWQyc3lPUFVIcmVBWXhCQmhINFktLW1JUXJFQmFmUHlIS2xhNm1WQTVrYTJCSV9lWlluSmtLS2FMNWo5Y3RyNlFoT1JIb0RSTQ?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-10-21T16:57+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "中國旺旺(00151.HK)10月21日耗資601.28萬港元回購211.3萬股 - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBzZnA0NGJXUUJuZFJHOTVpWmpSZmcyMWk0RWZINUFCUFNId1Uzb2pZQ3FWTWFmMEJCdTJpNFphTXFnZ3poSzh5XzBiaHlEb01oR3ozNkp5OEwtajhpTTBQZ0UtNnlmaDJqY1lF?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-10-21T16:54+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "智中國際(06063.HK)擬更名為\"中國乳業有限公司\" - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5VQTE0X291eUZwOEVXVHBYQlJNLUZtN0ZyZWxUSWs3RnlScXBGTWV1VllvS0hneEdJWF9FV2VlRWVJT1hSbEQ5bHdsSmVLTjlfWUFtMGhGUzFUbHA2bXowNHNoQTZjQkZTZ053?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-10-21T16:44+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-22T03:21:55+08:00"
+  "updated_at": "2026-10-22T06:27:59+08:00"
 }
