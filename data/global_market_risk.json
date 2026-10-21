@@ -1,21 +1,19 @@
 {
   "schema": 1,
   "risk_level": "green",
-  "risk_score": 1,
-  "risk_reasons": [
-    "韓股明顯下跌"
-  ],
+  "risk_score": 0,
+  "risk_reasons": [],
   "ticker": [
-    "全球市場正常｜費半 +1.3%｜NASDAQ +1.1%｜日經225 -1.3%｜KOSPI -3.7%｜台股加權 -1.1%｜恆生 -0.8%",
+    "全球市場正常｜費半 +1.3%｜NASDAQ +1.1%｜日經225 +1.8%｜KOSPI -0.2%｜台股加權 -1.1%｜恆生 -0.8%",
     "全球市場正常｜美債10Y 5.12%｜VIX 17.3",
     "全球市場正常｜〈台股盤前要聞〉台灣美光罷工危機升溫、外銷訂單連19紅、股匯雙殺再現",
+    "全球市場正常｜S&P 500 Could Hit 8,300 By May 2027, Says Morgan Stanley Investment Chief Predicting ‘Final Inn",
     "全球市場正常｜〈財經週報-投資觀點〉台股站上全球第4的背後 台灣人真的變有錢了嗎？",
     "全球市場正常｜美股晶片股重挫衝擊韓股 三星電子、SK 海力士盤中跌逾 7",
     "全球市場正常｜Kuaishou Technology Stock Slips 2.0% in Hong Kong",
     "全球市場正常｜U.S. AI chip-related stocks fell collectively in pre-market trading, with AMD and Intel droppin",
     "全球市場正常｜台股飆漲掀出走潮 基金經理人辭職自操盤賺私房錢",
-    "全球市場正常｜Tech in focus as stock markets retreat; oil surges",
-    "全球市場正常｜微泰醫療－Ｂ(02235.HK)：中國證監會就公司實施H股全流通出具備案通知書"
+    "全球市場正常｜Tech in focus as stock markets retreat; oil surges"
   ],
   "markets": {
     "US_SOX": {
@@ -45,13 +43,13 @@
     },
     "JP_NIKKEI": {
       "label": "日經225",
-      "price": 64075.42,
-      "change_pct": -1.2
+      "price": 65194.95,
+      "change_pct": 1.8
     },
     "KR_KOSPI": {
       "label": "KOSPI",
-      "price": 5552.74,
-      "change_pct": -3.8
+      "price": 5758.7,
+      "change_pct": -0.2
     },
     "TW_TAIEX": {
       "label": "台股加權",
@@ -75,6 +73,14 @@
       "url": "https://news.google.com/rss/articles/CBMisgNBVV95cUxOX1JtZGhEY3JvYjVrVUtxV1VOVjZmeFpJRWp1VzkzVWIyVkJuX2t1ZFJRZEZHQ05mUm1xMUVpVkd4ckVPdkJ1TkJKYXRjMFYxRGpvSlJoMkpuMi1MTWNSYUdEOHVISEdXTTlFUU1xdk1BSFFXckdqSWx5dXZOYXh1VGZZN0hIYzlNeUJ3SHNDdDB3dDJwRUZQS2FMbzJUN0NiVnRXRUhNdEg3cDg0TzhERGNLSDFTbDJwbjN5bEZ0UDBjQm4zUjVIRjR4TWczUVQ3VGF1cTBoeURJeDJNdEFXZ0VMMXdYTUI4Z1BsU1hCdkltXzlwSklfc0VFZ0ZoOVRVQ1dpTURTZ0poRUpzN2tIY1ludlRZQkhJUzA5RklkdWlWdXIwRXdNRVgzeUR3bHMwLTNoODNYLVNKdVlKWDBibVhBOEIyUWNaTUFQN2FmVDdHbXcySGRQcDQtOEtMSFkxTm1rZWFmWEdaUE1vNTdOWmMwVHVRaHpKT19yQXZ1cF8tSGhPNGZLSHZCTXlraVhHUnprQ00zMDd4TW56aHhTaFA3d3hjY0Z4Ri1rZnZsVWpGQQ?oc=5",
       "source": "Yahoo股市",
       "published_at": "2026-10-21T05:10+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "S&P 500 Could Hit 8,300 By May 2027, Says Morgan Stanley Investment Chief Predicting ‘Final Innings’ Of Stock Market Correction - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMikgJBVV95cUxPY2hsOU5GSERSRF9sT1luQ3BJNl9SVTdpalFpd25Vd1NVYlNhSVMyRVBZZWJuZVBiUl9LU01McUNSVkp6S3lSVXk3OC1GM3lPOURQY1kyZW5HSWlCTXY5eVBrV1NhNUlXVWNGR1JFeFpNdm15a21FT2FsMXR5Y24yYVVfajNKSXZqQ2p0UllGNHZDY09mZU1pUExKT19BUVNuM204LUoxdEtwaXB0dnNwS0ktWTFkYmtILUFlWjBrWFhfZVoxd3NYYmhDMmlVOGg3ZGdaQm5CZS02dEJ3QnZCU2VYaHVuclQ0LVMyWmV4Mk0wSHlBaW1BVjNId2tVZEFrVWoxQXpmdDR4WWtZa1B3Uy13?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-10-21T01:24+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -157,16 +163,8 @@
       "published_at": "2026-10-20T18:47+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "中國鐵塔(00788.HK)首三季度淨利潤108.17億元 同比增長24.2% - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1iQi1uYlQydHYxYlFNWm1sU0RvTEItNVF6dnNZQXpMYzhRVk5IemIwN2NfT0pqeDNzUU5zb2FpcWw5NXNtQ0NYNURKOVQ0VHdCaGUzQ2lWaFBmNHR0dDAwaUdHUlloQXdTendn?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-10-20T18:03+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-21T06:35:09+08:00"
+  "updated_at": "2026-10-21T08:50:28+08:00"
 }
