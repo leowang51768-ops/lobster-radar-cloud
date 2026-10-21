@@ -6,42 +6,42 @@
     "出現重大風險新聞"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 +1.0%｜NASDAQ +0.8%｜日經225 +0.8%｜KOSPI -0.6%｜台股加權 +1.3%｜恆生 -2.2%",
-    "⚠ 全球市場風險｜美債10Y 5.12%｜VIX 16.7",
-    "⚠ 全球市場風險｜JPMorgan US Market Morning Brief: Technical Strategy Warnings and Multi-Sector Stock Rating Upd",
+    "⚠ 全球市場風險｜費半 +1.6%｜NASDAQ +0.9%｜日經225 +0.8%｜KOSPI -0.6%｜台股加權 +1.3%｜恆生 -2.2%",
+    "⚠ 全球市場風險｜美債10Y 5.15%｜VIX 17.3",
+    "⚠ 全球市場風險｜Hong Kong Stock Market Open | Hang Seng Index Opens 1.14% Higher; Computing Hardware Stocks Ral",
+    "⚠ 全球市場風險｜GTJAI Assists Mashreq Bank in Successfully Issuing Its First Dim Sum Bonds, Marking GTJAI's Fir",
+    "⚠ 全球市場風險｜SpaceX狂飆12%帶飛美股！台積電ADR、鴻海ADR齊漲2% 台指期夜盤一度漲逾400點",
+    "⚠ 全球市場風險｜中國食品(00506.HK)獲執行董事唐強增持20萬股",
     "⚠ 全球市場風險｜中國澱粉(03838.HK)10月21日耗資122.86萬港元回購726萬股",
     "⚠ 全球市場風險｜浦江中國(01417.HK)完成配售合共3300萬股 淨籌1.3億港元",
     "⚠ 全球市場風險｜圖解丨南下資金大幅減持騰訊和中國移動",
-    "⚠ 全球市場風險｜外資中止連10賣！台股期現貨齊翻多 買超友達、鴻海及南亞各逾2萬張",
-    "⚠ 全球市場風險｜台股漲594點！ PCB、被動元件開趴 「7檔」亮燈收漲停",
-    "⚠ 全球市場風險｜中國旺旺(00151.HK)10月21日耗資601.28萬港元回購211.3萬股",
-    "⚠ 全球市場風險｜智中國際(06063.HK)擬更名為\"中國乳業有限公司\""
+    "⚠ 全球市場風險｜外資中止連10賣！台股期現貨齊翻多 買超友達、鴻海及南亞各逾2萬張"
   ],
   "markets": {
     "US_SOX": {
       "label": "費半",
-      "price": 11431.186,
-      "change_pct": 1.0
+      "price": 11498.351,
+      "change_pct": 1.6
     },
     "US_NASDAQ": {
       "label": "NASDAQ",
-      "price": 26631.504,
-      "change_pct": 0.8
+      "price": 26671.932,
+      "change_pct": 1.0
     },
     "US_SP500": {
       "label": "S&P500",
-      "price": 7735.65,
-      "change_pct": 0.6
+      "price": 7749.4,
+      "change_pct": 0.8
     },
     "US_DOW": {
       "label": "道瓊",
-      "price": 52548.63,
-      "change_pct": 1.2
+      "price": 52711.75,
+      "change_pct": 1.4
     },
     "VIX": {
       "label": "VIX",
-      "price": 16.74,
-      "change_pct": -3.2
+      "price": 17.26,
+      "change_pct": -0.2
     },
     "JP_NIKKEI": {
       "label": "日經225",
@@ -65,18 +65,42 @@
     },
     "US10Y": {
       "label": "美債10年殖利率",
-      "price": 5.115,
-      "change_pct": 0.0
+      "price": 5.146,
+      "change_pct": 0.6
     }
   },
   "active_news": [
     {
-      "title": "JPMorgan US Market Morning Brief: Technical Strategy Warnings and Multi-Sector Stock Rating Updates - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPbk1MVzBRUFFSYkVwUDZlRlYwLXJ1V3hKUTJzY0Rhb2lSX3YxYmtmM1YtN21vNXNMV1N3VzRfdjcyNF9rNDVTVE5sWEpibXFhdU5HUURqQ1ZHb2xua2tzQktzMUFDaldOa3hOblhsb2dEUjBQX0ZHMEtSaVdnQ1E0MXZGck1BcWxKS0tIYWpsalMtWXltQzg1Q1lQbDFyUndwRlE5Y0FLblJsS1NFVzBGWWlqNA?oc=5",
+      "title": "Hong Kong Stock Market Open | Hang Seng Index Opens 1.14% Higher; Computing Hardware Stocks Rally, Lenovo Group (00992) Up Over 6% - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQbWI3c3RJd1NiS0xyaHFTdTJIellFaUYxUmc2U3h1NHJtRFZoSzJCTHU1YkhWTlNsY2MwMjlpMVptdTEzZnV1U3Z5V1QwcUR4dGhmc2dFRUpPdUd5cnB4My1QSUR4T1RjejdvT1pxSVFhbVU4OUxLN0pobXRZNnZZOWp3WmlJa2lVcXQwaDV6dGpDYnRYRGsxX2t3?oc=5",
       "source": "富途牛牛",
-      "published_at": "2026-10-21T00:26+08:00",
+      "published_at": "2026-10-21T09:46+08:00",
       "importance": 5,
       "risk_score": 4
+    },
+    {
+      "title": "GTJAI Assists Mashreq Bank in Successfully Issuing Its First Dim Sum Bonds, Marking GTJAI's First Bond Business in the Middle East Market - 亞太商訊 - Quamnet",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE05cjU2SFhrUGJuSWR3MUhXcVJmdXdta3piUWdfaWR4QVZjcVVUU2VBc0RjNWIyclplazlIQXcycnE3ZDQwOVpGZmhPNkZLMWdfd2tGRXBiY0FhTEtlLWVz?oc=5",
+      "source": "Quamnet",
+      "published_at": "2026-10-21T19:00+08:00",
+      "importance": 4,
+      "risk_score": 2
+    },
+    {
+      "title": "SpaceX狂飆12%帶飛美股！台積電ADR、鴻海ADR齊漲2% 台指期夜盤一度漲逾400點 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMizAJBVV95cUxQQk5ZSXU2dHBHeVUyalhoTVd2eFR0d0JPTDZFV3JOenFmbFBITDUtRG5pdEU1bk9EVTNLQmRGOExsOXdkYlA2X0pYalZQb1FLcmZqQ21zYmNFc2RlSmNsTHpWSTJPWi1Za1BEaGh4V2JDeGc1Wnl5UW5Cc3VDdnlJQ2J3R2ZnZFVodUYzQXlpd1JyU2lfY1ZyOFRtY3AxQkJTTmc2UjFaMVJQbGdkcjlHczhaNjBXTFJyVUZOQjB6R3NuTlNLZ3lydjlMZTJjeTB0eXhGd3Y3QVgyd1ZDNWszWnZfd0ppVUw1Zml1bUJ3dEs2NzZhLXpXZDI3ZmNza3VMOWs3RGFJWkFBaHpJTkJrUHhaTjRKRGNWQm1YVG1WcDVYRl9SZWRRYTdsYVdPVThLSDdiU3VhQjRvakFCMzcxcFpCcmZvb1Z0eEZwXw?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-21T22:58+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "中國食品(00506.HK)獲執行董事唐強增持20萬股 - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBueWl3QnBybEhLU0pfYXM5ZC13a0FpeHhYUzVVNTNPeUhsckNERm9SX0ljakRPUXI3Z0N2bkZtakx3MklEUVZYSlhWcVFaUjB2dXY2TlpGcDBqT3U0SUkwaHZUS21Yb25lVFIw?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-10-21T21:46+08:00",
+      "importance": 2,
+      "risk_score": 0
     },
     {
       "title": "中國澱粉(03838.HK)10月21日耗資122.86萬港元回購726萬股 - TradingView",
@@ -119,6 +143,14 @@
       "risk_score": 0
     },
     {
+      "title": "Multibagger stock: PC Jeweller shares jump 5% after surging 40% in 2 weeks | Q2 beat, bulk deal in focus | Key levels - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPanJMWHBoOTFSYWRFcE94cTAzZGw4VEpKSjB5RHkybjIyWXpnVTlpQmxkTENpek1FWmNkcktWU2tkQkdBS0NpLUVkRHd2MUhhQjJUbDY2ckp1RHZVUkFza3lSaHh4ZUNTSUhPbFJiOUZ0OF82RlZiMl9RLUEtdVZwZEVPc2NzVC1rNXhlaVNQemZfUUtQbEgzekpDU3gyUEhqWDQ2ZXd4czNUdlM2N0dkTWQyc3lPUFVIcmVBWXhCQmhINFktLW1JUXJFQmFmUHlIS2xhNm1WQTVrYTJCSV9lWlluSmtLS2FMNWo5Y3RyNlFoT1JIb0RSTQ?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-10-21T16:57+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
       "title": "中國旺旺(00151.HK)10月21日耗資601.28萬港元回購211.3萬股 - TradingView",
       "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBzZnA0NGJXUUJuZFJHOTVpWmpSZmcyMWk0RWZINUFCUFNId1Uzb2pZQ3FWTWFmMEJCdTJpNFphTXFnZ3poSzh5XzBiaHlEb01oR3ozNkp5OEwtajhpTTBQZ0UtNnlmaDJqY1lF?oc=5",
       "source": "TradingView",
@@ -133,40 +165,8 @@
       "published_at": "2026-10-21T16:44+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "台股21日反彈收漲594點 記憶體滿血復活華邦電收漲4.6% - 理財周刊",
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE91WjdyeDREZ2d1c1V6cGpGRTllV1FfeFRjYkxWWkxxTkl6cExDaW1ZcC1naDVHbGp2V3RLX2Vya2c3YmxYcUVCTHlRMGk1MjhzdzRpT2tTUGYyNEs4eHRzRTZNaXRvbGw0dVVPcFlzQQ?oc=5",
-      "source": "理財周刊",
-      "published_at": "2026-10-21T16:11+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Why is stock market rising today? Sensex surges 829 points, Nifty rises 1% - Key factors driving Dalal Street explained - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxQam5zUEcxWkhQc0R1elVGMGlwU2VqVFVoZXFMQ1lqam1ycXBLZjN4S3BoaHl5MUVXMkFNdm5ZeGVoZm5ScFdpdXhmOTRsWTVfN2h6UmJvUlJxa2lSb1U1TDBsTEZsZGQxQVB4MVlNbmRSRjVKN3NoR1FQY1lLMlViLXgycFQ5b3U5cXJYeHNFQm14TjRndDVWZkpwZEFsT29PNmZaWUZCdzVobkVaQ0NmMGhGTU9SdWdSOXpnRWM2TTVDazFKRDFXQ0ptaDZrXzVidHFoVEItbHdXRmQyNWI1NkxoeU1UUWVBLXBoWTNjZHFQTWhhQUNIN3lNcjNaS0U?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-10-21T16:07+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "三大法人只買5億 台股大漲594點 網驚：要軋了 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMisAJBVV95cUxQRkdCem9VLTBraEhtaHNyM2hQNWxyVFpVcmIydHNocy1JUnFIMUwwRGxvYmhfVVJxR3pZMTFVTU43bktSTldwc0dlS0FKaHo5RE1qdDlLcDNMQXA0TkplRncyOVZUZ3NFR2NWQ2ZPejAtYWJ4RDNVNHRZUU1IR0hkMGRTNkItN2RMQS1mVWtubElIV1kzdEV4UVU4akd6X3BMOU96azd3YkFXSjVMNUJrS1BOc0kzWDd0OGQ4dmxpZlhremZjdHhwWDRWa3lVSUlMdUhieHRNN0Rzel9LSFYyaFQwbGxabjdidXg4X0hFUlI3MEtLY2k1WFYyRDBXNEhwdmFrb2doQXVPSENTR0VGYmJBbmR5SlNid0p4R2hFTXhHYkt2OU95bS1aV1RqVC1M?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-21T16:05+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "〈台股盤後〉台指期結算甩尾漲594.84點 收46887.77點重新站回5日線 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi7gJBVV95cUxPeFg1ZUhHQnIydGV2bVRwZGhybHllSkh5VDhybkg4NHdRVFpSLTBlN25iWUpEbUp2RWZTTjhZTHhQc1BMb050cXlQWUZoR0l4M0tIc2taSXBQQUlKcGViMFk3ZWJWWlRxYUZRVkxIcHEzakdTa0lWc3ZVeDBxSWRmR0xYdTBPX0dOcV92SE1sTS11VjJueVQzWUt3ekhYdElVU1ViemVYM1JDaHB0TnNvblB3c0pueW1nVURoVWZwcjNDN0ZzZjA1SkM5SkMxVmd4N2lpVlFZcElQS2FWY2g1b3YzUmNLNVRER1A3MjZ5SFBtR05Sb3hmN0IwLVZ5RmU5S0N1ajhjeVN1R0VGMENoM1RiVEZZNHdhWDdMNW1zWDhyeXJDT0V4R2R4bnBtcUZOeU1FQ3JGN1F2STlOSVRscXJobV9Dd2UzVXJhcVJ1djZua2Z6NTRDLVk5bUE5cFZSNjcxT2ptcVlxQ3N4MHc?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-21T15:41+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-21T23:20:32+08:00"
+  "updated_at": "2026-10-22T03:21:55+08:00"
 }
