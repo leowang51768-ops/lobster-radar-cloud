@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-20",
+  "date": "2026-10-21",
   "mode": "collection_only",
   "expected_stocks": 170,
   "fixed_stocks": 163,
@@ -11,12 +11,12 @@
   "ranking_limit_per_side": 15,
   "history_target_top_per_side": 3,
   "history_requests_succeeded": 120,
-  "observed_collection_days": 11,
-  "complete_collection_days": 3,
+  "observed_collection_days": 12,
+  "complete_collection_days": 4,
   "counts": {
-    "ranking": 54836,
-    "history": 221634,
-    "queue": 5144
+    "ranking": 59936,
+    "history": 228834,
+    "queue": 5397
   },
   "review_stage": "資料累積中",
   "strategy_changes": false,
@@ -30,7 +30,7 @@
   "missing_stocks": [],
   "errors": [],
   "history_errors": [],
-  "history_pairs_ever_fetched": 3696,
+  "history_pairs_ever_fetched": 3816,
   "history_coverage_complete": false,
   "history_coverage_note": "按個股實際交易日缺口排序補抓；來源每頁最多60筆，較早缺口仍保留待補，缺筆不當零交易",
   "history_retry_policy": {
@@ -38,8 +38,8 @@
     "retry_delay_seconds": 900,
     "source_history_row_limit": 60
   },
-  "history_attempts_today": 240,
+  "history_attempts_today": 360,
   "ranking_coverage_complete": true,
   "errors_total": 0,
-  "database_bytes": 44195840
+  "database_bytes": 46673920
 }
