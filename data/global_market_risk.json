@@ -9,42 +9,42 @@
     "出現重大風險新聞"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 -4.8%｜NASDAQ -1.8%｜日經225 -2.6%｜KOSPI -0.3%｜台股加權 -1.8%｜恆生 -3.9%",
-    "⚠ 全球市場風險｜美債10Y 4.95%｜VIX 20.2",
+    "⚠ 全球市場風險｜費半 -4.9%｜NASDAQ -1.6%｜日經225 -2.6%｜KOSPI -0.3%｜台股加權 -1.8%｜恆生 -3.9%",
+    "⚠ 全球市場風險｜美債10Y 4.95%｜VIX 19.0",
     "⚠ 全球市場風險｜Southbound Capital Flows | Southbound capital recorded net sales of HK$9.218 billion; mainland ",
     "⚠ 全球市場風險｜台股大跌近700點！千金股海嘯第一排 5檔跌停",
     "⚠ 全球市場風險｜Tiger Brokers Clinches Best Retail Broker in Singapore at SIAS Investors' Choice Awards 2026 - ",
     "⚠ 全球市場風險｜專家看台積電法說「已確認訊號」！半導體晶片需求仍強 盤點「8檔ETF」規模、績效雙成長",
+    "⚠ 全球市場風險｜Stocks retreat as tech mood sours, oil prices jump",
+    "⚠ 全球市場風險｜Why This JPMorgan Strategist Thinks the Stock Market's Tailspin Might Have Run Its Course",
     "⚠ 全球市場風險｜U.S. Stock Market Movements | Chip Stocks Decline Broadly; Intel (INTC.US) Falls Over 5%",
-    "⚠ 全球市場風險｜JPMorgan: The sell-off in US stocks may be nearing its end, with semiconductors serving as a ke",
-    "⚠ 全球市場風險｜Tesla, SpaceX, CoreWeave, Netflix, and More Stocks That Explain Today's Market -- Barrons.com",
-    "⚠ 全球市場風險｜Stock Market Today: S&P 500, Dow Jones, Nasdaq 100 Futures Drop Following Asian Market Sell-off"
+    "⚠ 全球市場風險｜PC Jeweller stock defies market gloom, rises 90% in 2026: Can it hit Rs.27 after breaking Rs.20"
   ],
   "markets": {
     "US_SOX": {
       "label": "費半",
-      "price": 10747.609,
+      "price": 10731.978,
       "change_pct": -4.8
     },
     "US_NASDAQ": {
       "label": "NASDAQ",
-      "price": 25959.248,
-      "change_pct": -1.8
+      "price": 26008.86,
+      "change_pct": -1.6
     },
     "US_SP500": {
       "label": "S&P500",
-      "price": 7647.34,
-      "change_pct": -0.8
+      "price": 7663.43,
+      "change_pct": -0.6
     },
     "US_DOW": {
       "label": "道瓊",
-      "price": 52771.0,
-      "change_pct": 0.6
+      "price": 52867.98,
+      "change_pct": 0.8
     },
     "VIX": {
       "label": "VIX",
-      "price": 20.17,
-      "change_pct": 21.0
+      "price": 19.03,
+      "change_pct": 14.0
     },
     "JP_NIKKEI": {
       "label": "日經225",
@@ -106,10 +106,34 @@
       "risk_score": 0
     },
     {
+      "title": "Stocks retreat as tech mood sours, oil prices jump - Macau Business",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOUmN2QVNFWW9ZV3hTeFhkLTRwUmFMYTloc045VEd1SGpwNkRfN3RDZ0FQRUMxbkYxTEtualk1WUZWaE8weWxuNmQ2Y1U3WElQVU1pYXBXZ1J5RURNQjNNYmVjZGUxWXg1bG93d0hRZnhNYXhsaHl2dC1vQl9jLXI2RGJxZXk?oc=5",
+      "source": "Macau Business",
+      "published_at": "2026-10-22T23:43+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Why This JPMorgan Strategist Thinks the Stock Market's Tailspin Might Have Run Its Course - Moomoo",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQY0pQdXA0NGtMRElQMVVHM0FES3Z5QU1qczVhd1JHUG5CazZPUC1IU1B1Y1MtTWhIdzZRM1NCdVp0dnhVYmg4T0I4Zml4Y2J6ZGVBQnhoUUlvTlk3VG5ra3l1M25TUkxPTFByT1BfWWtjUUFQbWFueFFTbE9nRmZibEp6bVRoUjJkak1uSUxSRG5lWDNaZ3FyTFRYNWV5cVFBRjdsSUhDY1lHbHM1Q3NtM2VR?oc=5",
+      "source": "Moomoo",
+      "published_at": "2026-10-22T23:22+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
       "title": "U.S. Stock Market Movements | Chip Stocks Decline Broadly; Intel (INTC.US) Falls Over 5% - 富途牛牛",
       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPT3M1LVRzSVRWNHN5M05RM1lMbXoyUEYyWnR0dWVRT0dkRHlEVURZS0VnMDN4SUlCRDZGRVpPX1QybHBDeUgtOWozMGNOcXFzbS1JdDNEWTF2dFh5REJMUWRkeG5DSUYwRDBKeUtTUEtJT1RNaGJNN3Z2TFllZmRmRVRaQVFlVUFkRVRYVHFqNEo5YmZLcGZpNWpVb1NVcVJDVTZXeEQ1d05VR1NTNFE?oc=5",
       "source": "富途牛牛",
       "published_at": "2026-10-22T22:26+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "PC Jeweller stock defies market gloom, rises 90% in 2026: Can it hit Rs.27 after breaking Rs.20 resistance? Expert view - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxOZ1FFOUNwWWtUUFF0djc4N1N1V2FfMHlXS0o4Y0lvS1RMU09YalNEQ2hTM092NTJ6Z0ZEMVcyZkNySnZMVWgzQWdJNzk1eG12UVM2cTR5ZnU5Y25TdjVrelhsYlJIT2JkQzdKMm16WWotQy1lQjRHTnc3VE1YaVYzV2l2c0lUM3VDTVUyYWR3QnZFd2Q1TlhpUkpXaENfd1k4enBILUIyd3h6NThiRVFFQ0gxbUtFcnE3RWdxSlhyRDZUR1dyVFVtTWlBeDJBbkxBSGlTVm4yVTVKMldVdmdTU3BQTU05OTBVN2U3Nm9Hb3ZySWRYYUVDdm4wQjBLSVFV?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-10-22T21:46+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -144,32 +168,8 @@
       "published_at": "2026-10-22T19:45+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "Meta and Tesla Lay Bare Stock Market's Biggest AI Puzzle -- Barrons.com - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQSkxqaS1mNUFmVEhNSkplU2ZDZC1TYmdzOHh0bUhNUGhaMW0yMmVjeHFZTnlhZHBNcjFISF80VnJDS0FMeG5jTkpTTEtDSTlVeTZrX0xDNWpWb01DcFJkV3dqRFJSbExLOGZ5WndJdlNFTlNDcU1adExuNFQ3NEZwSWxjeHkxa2lPYjgwMXZCdmtRODhKbEdz?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-22T19:44+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股該「脫鉤颱風假」嗎？金管會回應了 - TVBS新聞網",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5RQVdBVmRCaEVEYWRzRnR0THU5dUg0X3hrWV9xNm4yMmhYVms5VEcyc0pHZ3lVZlZQTno2YlMzLU9sYnBpQXBjVHlsTTV4YzA?oc=5",
-      "source": "TVBS新聞網",
-      "published_at": "2026-10-22T19:33+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Tesla, SpaceX, Meta, IBM, and More Stocks That Explain Today's Market -- Barrons.com - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQekxkNzBVLTRDSVZTaDZyZ1M1bXVNd2dDcmJHUXluNGZMa1ZsLVBUS0pRT0kyc1hYSFZBQjdaMjBlUkcwZVV4bTVrcW1YWFNCT092Vm9sS2JZbTc4NUlZdXBEM1ZwVUUtUFZYdEF2X2hQdUJBSHRrWUliNFh3QnlhRDlyS2tXM2pYVWVxemIxNU9rTWpPSFJuU1lzSGhYWHhG?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-22T19:11+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-23T03:16:56+08:00"
+  "updated_at": "2026-10-23T06:21:55+08:00"
 }
