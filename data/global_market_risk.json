@@ -1,21 +1,19 @@
 {
   "schema": 1,
-  "risk_level": "red",
-  "risk_score": 3,
-  "risk_reasons": [
-    "出現重大風險新聞"
-  ],
+  "risk_level": "green",
+  "risk_score": 0,
+  "risk_reasons": [],
   "ticker": [
-    "⚠ 全球市場風險｜費半 +1.7%｜NASDAQ +1.0%｜日經225 +0.8%｜KOSPI -0.6%｜台股加權 +1.3%｜恆生 -2.2%",
-    "⚠ 全球市場風險｜美債10Y 5.15%｜VIX 16.7",
-    "⚠ 全球市場風險｜Hong Kong Stock Market Open | Hang Seng Index Opens 1.14% Higher; Computing Hardware Stocks Ral",
-    "⚠ 全球市場風險｜GTJAI Assists Mashreq Bank in Successfully Issuing Its First Dim Sum Bonds, Marking GTJAI's Fir",
-    "⚠ 全球市場風險｜〈台股盤前要聞〉輝達DSX POD AI工廠6台廠入列合作夥伴、外資終止連十賣",
-    "⚠ 全球市場風險｜〈財經週報-投資觀點〉台股站上全球第4的背後 台灣人真的變有錢了嗎？",
-    "⚠ 全球市場風險｜Global Energy Roundup: Market Talk",
-    "⚠ 全球市場風險｜SpaceX狂飆12%帶飛美股！台積電ADR、鴻海ADR齊漲2% 台指期夜盤一度漲逾400點",
-    "⚠ 全球市場風險｜SpaceX's total market value rises to $2.22 trillion, surpassing Taiwan Semiconductor",
-    "⚠ 全球市場風險｜中國食品(00506.HK)獲執行董事唐強增持20萬股"
+    "全球市場正常｜費半 +1.7%｜NASDAQ +1.0%｜日經225 -0.3%｜KOSPI +2.4%｜台股加權 +1.3%｜恆生 -2.2%",
+    "全球市場正常｜美債10Y 5.15%｜VIX 16.7",
+    "全球市場正常｜GTJAI Assists Mashreq Bank in Successfully Issuing Its First Dim Sum Bonds, Marking GTJAI's Fir",
+    "全球市場正常｜美元盤整待聯準會決議 美國科技股領漲、中國市場承壓",
+    "全球市場正常｜〈台股盤前要聞〉輝達DSX POD AI工廠6台廠入列合作夥伴、外資終止連十賣",
+    "全球市場正常｜〈財經週報-投資觀點〉台股站上全球第4的背後 台灣人真的變有錢了嗎？",
+    "全球市場正常｜US Stock Market Movement | Popular Chinese ADRs Decline Broadly; XPeng Inc. (XPEV.US) Falls 6%",
+    "全球市場正常｜SpaceX狂飆12%帶飛美股！台積電ADR、鴻海ADR齊漲2% 台指期夜盤一度漲逾400點",
+    "全球市場正常｜中國食品(00506.HK)獲執行董事唐強增持20萬股",
+    "全球市場正常｜中國澱粉(03838.HK)10月21日耗資122.86萬港元回購726萬股"
   ],
   "markets": {
     "US_SOX": {
@@ -45,13 +43,13 @@
     },
     "JP_NIKKEI": {
       "label": "日經225",
-      "price": 64621.24,
-      "change_pct": 0.8
+      "price": 64441.29,
+      "change_pct": -0.2
     },
     "KR_KOSPI": {
       "label": "KOSPI",
-      "price": 5735.66,
-      "change_pct": -0.6
+      "price": 5684.29,
+      "change_pct": 2.4
     },
     "TW_TAIEX": {
       "label": "台股加權",
@@ -71,20 +69,20 @@
   },
   "active_news": [
     {
-      "title": "Hong Kong Stock Market Open | Hang Seng Index Opens 1.14% Higher; Computing Hardware Stocks Rally, Lenovo Group (00992) Up Over 6% - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQbWI3c3RJd1NiS0xyaHFTdTJIellFaUYxUmc2U3h1NHJtRFZoSzJCTHU1YkhWTlNsY2MwMjlpMVptdTEzZnV1U3Z5V1QwcUR4dGhmc2dFRUpPdUd5cnB4My1QSUR4T1RjejdvT1pxSVFhbVU4OUxLN0pobXRZNnZZOWp3WmlJa2lVcXQwaDV6dGpDYnRYRGsxX2t3?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-21T09:46+08:00",
-      "importance": 5,
-      "risk_score": 4
-    },
-    {
       "title": "GTJAI Assists Mashreq Bank in Successfully Issuing Its First Dim Sum Bonds, Marking GTJAI's First Bond Business in the Middle East Market - 亞太商訊 - Quamnet",
       "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE05cjU2SFhrUGJuSWR3MUhXcVJmdXdta3piUWdfaWR4QVZjcVVUU2VBc0RjNWIyclplazlIQXcycnE3ZDQwOVpGZmhPNkZLMWdfd2tGRXBiY0FhTEtlLWVz?oc=5",
       "source": "Quamnet",
       "published_at": "2026-10-21T19:00+08:00",
       "importance": 4,
       "risk_score": 2
+    },
+    {
+      "title": "美元盤整待聯準會決議 美國科技股領漲、中國市場承壓 - 商傳媒",
+      "url": "https://news.google.com/rss/articles/CBMi-wJBVV95cUxPREJNRkRCYzNSWGd1aUZjOHhYaHZWQnJvTWUyYkNfYWJpUTlrQ1ZyQU40M0VoMjZhRXBJcmZYdGEzUFNqbHJQZVVIekNmSkx4Q0I4aU9xZ1NURTN6bUh5d19LQllFNFpBcHV6TFdDanRodzFMbGlxZlFfWElDRnBIUVpUMHd0WUotTW1zbk1RUGxjQ2gybzRpcW92T2RKU1cwMF8wamdkMDhkZEx3M1VsMTRGOUdLUGNxeTgxWF9Ob1FYOWdNcjRBU25ITnNPTGxabU0yb2hHVzloZ2dYa3FJaHpYUVZxNXp3aVdsTGhLbFRUOFBZMVNDcV8zM21wTjBlZUtQcHVPSDNKU2tyQlBJQUpoNjdtVzdKX2dBYzNsWEwzQU4xeGFmTWJtY1dNcXlrcE5IbC1hdWF5VDFhckR3cVVhTFRtQjhReHhXWnZCWmIxYmxkR042RXpsMnFlcFNLR0lUZHhRcW04T1RMaTZlQ1lWVUI5ZXR4Njhz?oc=5",
+      "source": "商傳媒",
+      "published_at": "2026-10-22T06:51+08:00",
+      "importance": 2,
+      "risk_score": 0
     },
     {
       "title": "〈台股盤前要聞〉輝達DSX POD AI工廠6台廠入列合作夥伴、外資終止連十賣 - Yahoo股市",
@@ -103,10 +101,10 @@
       "risk_score": 0
     },
     {
-      "title": "Global Energy Roundup: Market Talk - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQNEs1bi1pZUVfVHo2QTdQMk1yUmVLeXBzUW02T1gtRzdKa1FNQmRDS0t2ZjF2cFdldHpVT0c1YlFOYjgtVVBLU3FXRjVVZzk3ZXFyc2NMUDRkY2dDemIxMHZ6LW1FQXl3SE9pSWpNS0N4RUo4bnhUVENna0pPLUx5VW93?oc=5",
+      "title": "US Stock Market Movement | Popular Chinese ADRs Decline Broadly; XPeng Inc. (XPEV.US) Falls 6% - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNcTkzRXloZzFwQ1VNYkhraFJpYW51VkRjbVAwaG1lSWY1T2lzNU5IU1B2V3ZMNVRaZ3ZKeFdwdjVoVS1iSl9RekdoUkFwd3pHNGRaUWlGX0RoZHBCSUhpRzVOWnRWaTYtZ3VTYnJrVmFYcERDbVZURGJRbWtaN2RXbTRCd1E2TXI4X0dnZElab2p5QkRrYi1BTFJ0SjMwUk5GWGozamhIcEJ2TmFIemc4?oc=5",
       "source": "富途牛牛",
-      "published_at": "2026-10-21T23:36+08:00",
+      "published_at": "2026-10-21T23:05+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -115,14 +113,6 @@
       "url": "https://news.google.com/rss/articles/CBMizAJBVV95cUxQQk5ZSXU2dHBHeVUyalhoTVd2eFR0d0JPTDZFV3JOenFmbFBITDUtRG5pdEU1bk9EVTNLQmRGOExsOXdkYlA2X0pYalZQb1FLcmZqQ21zYmNFc2RlSmNsTHpWSTJPWi1Za1BEaGh4V2JDeGc1Wnl5UW5Cc3VDdnlJQ2J3R2ZnZFVodUYzQXlpd1JyU2lfY1ZyOFRtY3AxQkJTTmc2UjFaMVJQbGdkcjlHczhaNjBXTFJyVUZOQjB6R3NuTlNLZ3lydjlMZTJjeTB0eXhGd3Y3QVgyd1ZDNWszWnZfd0ppVUw1Zml1bUJ3dEs2NzZhLXpXZDI3ZmNza3VMOWs3RGFJWkFBaHpJTkJrUHhaTjRKRGNWQm1YVG1WcDVYRl9SZWRRYTdsYVdPVThLSDdiU3VhQjRvakFCMzcxcFpCcmZvb1Z0eEZwXw?oc=5",
       "source": "Yahoo股市",
       "published_at": "2026-10-21T22:58+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "SpaceX's total market value rises to $2.22 trillion, surpassing Taiwan Semiconductor - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOcnNjZURWc2NqSDE4Z1U3TTBZY0FiR21TLTFyTlFjV1Z5eGxXMFY0U2E0THpjeGxUb0p1OW8tcmN3Z2RyV0xlM3pQbVFaLTlUR0kzYUxSYzlJdTVQaDBMRHoxXzBSOUZnUklSZzBvc1VBOEx5VzJvaHQyeGtaM0pTcUl5TFpqOGlPRTVwQzNiQ0x3M2tOOVRCTg?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-21T22:11+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -165,8 +155,16 @@
       "published_at": "2026-10-21T17:17+08:00",
       "importance": 2,
       "risk_score": 0
+    },
+    {
+      "title": "Asian Semiconductor and Korean Themes Lead as Global X China Electric Vehicle ETF Falls 4.40% #新时空 - YouTube",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5QZjQ0d0xlQTFNRDA2NXlmWjRPM2taeDdjalNjLUdZT01CbURnN1NBeFFhVG5hVTdmT1RiMkRlTmtUV3FDd24zUy0xeWEzV3ZqZjFjVm1tdXpYQ2tF?oc=5",
+      "source": "YouTube",
+      "published_at": "2026-10-21T17:08+08:00",
+      "importance": 2,
+      "risk_score": 0
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-22T06:27:59+08:00"
+  "updated_at": "2026-10-22T08:46:36+08:00"
 }
