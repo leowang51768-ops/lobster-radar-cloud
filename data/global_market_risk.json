@@ -9,42 +9,42 @@
     "出現重大風險新聞"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 -3.8%｜NASDAQ -1.1%｜日經225 -2.6%｜KOSPI -0.3%｜台股加權 -1.8%｜恆生 -3.9%",
-    "⚠ 全球市場風險｜美債10Y 5.01%｜VIX 19.2",
+    "⚠ 全球市場風險｜費半 -4.8%｜NASDAQ -1.8%｜日經225 -2.6%｜KOSPI -0.3%｜台股加權 -1.8%｜恆生 -3.9%",
+    "⚠ 全球市場風險｜美債10Y 4.95%｜VIX 20.2",
+    "⚠ 全球市場風險｜Southbound Capital Flows | Southbound capital recorded net sales of HK$9.218 billion; mainland ",
     "⚠ 全球市場風險｜台股大跌近700點！千金股海嘯第一排 5檔跌停",
     "⚠ 全球市場風險｜Tiger Brokers Clinches Best Retail Broker in Singapore at SIAS Investors' Choice Awards 2026 - ",
+    "⚠ 全球市場風險｜專家看台積電法說「已確認訊號」！半導體晶片需求仍強 盤點「8檔ETF」規模、績效雙成長",
+    "⚠ 全球市場風險｜U.S. Stock Market Movements | Chip Stocks Decline Broadly; Intel (INTC.US) Falls Over 5%",
+    "⚠ 全球市場風險｜JPMorgan: The sell-off in US stocks may be nearing its end, with semiconductors serving as a ke",
     "⚠ 全球市場風險｜Tesla, SpaceX, CoreWeave, Netflix, and More Stocks That Explain Today's Market -- Barrons.com",
-    "⚠ 全球市場風險｜Stock Market Today: S&P 500, Dow Jones, Nasdaq 100 Futures Drop Following Asian Market Sell-off",
-    "⚠ 全球市場風險｜薔琵颱風假放定了？台積電跌35元 分析師：等長假回來漲",
-    "⚠ 全球市場風險｜台股震盪逾千點！兇手抓到了？分析師點名「7檔潛力股」有望迎反彈",
-    "⚠ 全球市場風險｜Meta and Tesla Lay Bare Stock Market's Biggest AI Puzzle -- Barrons.com",
-    "⚠ 全球市場風險｜台股該「脫鉤颱風假」嗎？金管會回應了"
+    "⚠ 全球市場風險｜Stock Market Today: S&P 500, Dow Jones, Nasdaq 100 Futures Drop Following Asian Market Sell-off"
   ],
   "markets": {
     "US_SOX": {
       "label": "費半",
-      "price": 10859.719,
-      "change_pct": -3.8
+      "price": 10747.609,
+      "change_pct": -4.8
     },
     "US_NASDAQ": {
       "label": "NASDAQ",
-      "price": 26141.148,
-      "change_pct": -1.0
+      "price": 25959.248,
+      "change_pct": -1.8
     },
     "US_SP500": {
       "label": "S&P500",
-      "price": 7665.89,
-      "change_pct": -0.6
+      "price": 7647.34,
+      "change_pct": -0.8
     },
     "US_DOW": {
       "label": "道瓊",
-      "price": 52741.55,
-      "change_pct": 0.4
+      "price": 52771.0,
+      "change_pct": 0.6
     },
     "VIX": {
       "label": "VIX",
-      "price": 19.21,
-      "change_pct": 15.2
+      "price": 20.17,
+      "change_pct": 21.0
     },
     "JP_NIKKEI": {
       "label": "日經225",
@@ -68,11 +68,19 @@
     },
     "US10Y": {
       "label": "美債10年殖利率",
-      "price": 5.011,
-      "change_pct": -2.6
+      "price": 4.953,
+      "change_pct": -3.8
     }
   },
   "active_news": [
+    {
+      "title": "Southbound Capital Flows | Southbound capital recorded net sales of HK$9.218 billion; mainland investors continued to reduce holdings in AI hardware stocks, offloading nearly HK$1.7 billion worth of Alibaba (09988) - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQcm1TRzQ5OGlSWmNhWkNFcDBIM3hLckxxVGM1VDRJa2FVRHhFbmxMYkVSajQtclFRWXpRcXZoUUxoYlJlc1hrcFVFQ0FwYkZPZGExTERtczB2ZVZ1R1VrNWFaVW9zZkQ2WU5oYzZQY2NkMUQ1ZDdrbjZsREttY21xS0pvVVBjQUpFVnZtOURCdUd3ZmRXb1p3cEJwMER3R3lIMS1JVUlLUHhDQ2JHaDBLaA?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-22T17:53+08:00",
+      "importance": 5,
+      "risk_score": 4
+    },
     {
       "title": "台股大跌近700點！千金股海嘯第一排 5檔跌停 - 自由時報",
       "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE52LUpLSm1DTXd4ZXpOQnZNcUlHMTFsMjNieVRQWURVR2I3cjludW15OGM3Nm1ZRDc3UTA2Rk9jV1pQQUNucUtkaTlUQmcwOUZ1SEM2Tkc5dHc?oc=5",
@@ -90,6 +98,30 @@
       "risk_score": 4
     },
     {
+      "title": "專家看台積電法說「已確認訊號」！半導體晶片需求仍強 盤點「8檔ETF」規模、績效雙成長 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMikgNBVV95cUxObHNtd3JHbWFGRndnelB5ZXo1ZEhLRmZaZ3JubmYtWHdPVEpLRk5DYXk1T1RBdkNfS1pWS1k0NzlNaEctb0pnejQ4WXVpbzN6WDhhbE91aUJUV3RLWmFCQXhlYUgtQlRxRmtMemhHd2ttY2Z6a1IwRHkyaDZXRnlyWWlCWTFNcDFHbDdBbl9uWnlfc3gxZG1XUmFabERoNFlSVXVKaEpLZWlwNlo1Zjk3Smk0ejVUMDN3eHVuYXRaN0NVNWMtMEE2WU5teks4VjY1Zy1NVjN2RG9QU2pCMUZDaFo1WElZSzRvYXBJX01CcU0wRDhPNVNsR2FjRkd0NGpwdW80cVZGMmQxMUtiX2ZLU1NOQXdrQVN5MVFmdHdiSENYdlJVbU5GYzBNeWJXTHI2ZjVfa1R5YXJ5VlZrb1hDcVBab2VYNnI4aEhMNEhMdDZIMUtJWkpmVFlkSHBVNkdYVmhGYkJMb2VuVm5Pd0JNSndudkVJZXZkMEhaR3JndUN6OHFsLWF5RDJOMUdhdHBYbFE?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-22T23:55+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "U.S. Stock Market Movements | Chip Stocks Decline Broadly; Intel (INTC.US) Falls Over 5% - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPT3M1LVRzSVRWNHN5M05RM1lMbXoyUEYyWnR0dWVRT0dkRHlEVURZS0VnMDN4SUlCRDZGRVpPX1QybHBDeUgtOWozMGNOcXFzbS1JdDNEWTF2dFh5REJMUWRkeG5DSUYwRDBKeUtTUEtJT1RNaGJNN3Z2TFllZmRmRVRaQVFlVUFkRVRYVHFqNEo5YmZLcGZpNWpVb1NVcVJDVTZXeEQ1d05VR1NTNFE?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-22T22:26+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "JPMorgan: The sell-off in US stocks may be nearing its end, with semiconductors serving as a key barometer. - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQcUpsSGNUOUI0TW84b3BtLWNEWm9SZXVmMW1CbVpUZzRyb3JSUzFIaHpWSUlGYUtfSHgwa1B0NUc3TjlyS0RDVXZqV0lnMmZEV1J5M29abXR0SW9CZUYwdWt5RmJDTzBPZm1PaExpbU9zSzdnSi1yOXNUb1d4eGdIRWZNUGtkN3hZSV9uSllGQzN5UzJoMDhN?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-22T21:20+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
       "title": "Tesla, SpaceX, CoreWeave, Netflix, and More Stocks That Explain Today's Market -- Barrons.com - Moomoo",
       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQWFZjaHVQWG1rQzhMc2pTcVBHcWRWRFFQemoxZldkNEhaQ05Rdnhvem9QVWNLS2NUWDdvVmUyVjhCUmdJXzBFLWwtenVxcGVQdHhlUElPT25YdmFlSlhlRWd1V2JwR2tjRnBnbXgzYU02Tnl2UmNJVHNheTg0aWN5NHREd3lLVjI1NTdFOWxqZ2hLakdyUUtUOG14VXFPSWIyY0hsUkEtRXdGZ3U4N0E?oc=5",
       "source": "Moomoo",
@@ -102,14 +134,6 @@
       "url": "https://news.google.com/rss/articles/CBMiqwJBVV95cUxOWWF4VHdHR3VfZXhwVjNzODRhUG93MC16RFZqMDYyZVJ2QnFteng5WVdlM2hxLURkOUZaVUxPeE10bGFhbnByTDQyVU1yMkN2Ykhqb1pIRm8zWGMxdGR2MC1TT2Y2VG9pSTdHRVZBUE5rWjF2b09BLVZ4TFRTRFFidEIxOUR4eU5PMGlQZ2FVUU05ZlBQNFprekV2RzJmbGxSRVpuTlRfYlo2eDhleGxQNTVDQm5wenFzVzhvZW5mSXhNUm5WMVUzejg3Z0p5bHRzeUx2RWRWaWFtSWhfTXE2NXhXUURINXh3V0x0YzVrWGNEUjQ5c09VOHoyeEhVNzJRS1J0UGR0YmkxcDUydTQ0WGxWMmJDbnZPQ1RFOWJJaFdzQ1dKcWFnWEI2SQ?oc=5",
       "source": "TradingView",
       "published_at": "2026-10-22T20:37+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "薔琵颱風假放定了？台積電跌35元 分析師：等長假回來漲 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi_wJBVV95cUxPVFllWnQzNVAyM1k0YlgyQ3JrZzFIT1Z3MnByXzJDSVBHVVdNdTBReHIwMzcwT1kza0o1YWpaSjZpLS1tbi1qdWFSZkhfdlVwZHctMnVXTHdsTV9JN1F6enZZOFNTYUxubmxQTFFoaXlwcndQc2xIZjh6LXY2cWltSHcxY3ZkR25Kd2tCSjNLcVlUUThkVnBxU1RUMUstWnV2dmJJelpQWU9idWVGSk1lcEdhLXZuVUw4Vy1xTTlSZ2dzdzRXNXVDa0lrRXhCbGg1cmtuOW1PTGpPNF8xQ0JZLXdybXNDaGx6ek13ajFKSlYyWm1LVzZ0bzU2R0pMVmlzR3Q0X2x3QV8ydjZ4OENjVG91S2JTQ1RGeFhCUW9QTDdha2FIYzU4MlFzWHFTRmZoZ0MtRlFkclF2RldqQzh1T0w3Q0NvN0ZZMFVCclQzalFQdDZDZnJVcnNwMXBZdXdtcTN2SzFyWXkzeTBjYS1IaDhqTy1tSWw4VXYwWjZPaw?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-22T20:12+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -144,32 +168,8 @@
       "published_at": "2026-10-22T19:11+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "Stock Market: Will S&P 500 Open Up or Down Today? - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUzZPNnU2anlMRzR3djEyaE12b20yMDVLcmhNSG9YYTFXTkx3VGJpMmxZMENNSVhLUlh5UGZoS1NHSElnUGJNOWU2elh4bWFMdmc1VHhObjJ4Snh3XzJrQVNzTEFKMGV4STJZcXF0WmpYblloQUw4SFFvaXowRkVQRHo0SlFkTlFLMXQ2ZmVXZ0h6Z2dqSktEa1RXZjJBcUtkYV9iUjVEbmc?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-10-22T18:55+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "凍資台股8千億「吸金怪獸」漢測上櫃一個月就庫藏股自救！明起買回自家股票30萬股 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMijwRBVV95cUxPY000WFowdm51NG9QQ1JYaHRPUjhnQmI3OWRfeG14YXRya0NrWE1MdkxkN2FQX3J4dC1vZEdmNnBVOVdGVkthdTZqUHZrRnBuc2ZyWTZvakFNbkRJRGhtQWtRbEgzQk85QldjdFFRTmFhUmRrSWpHcVdxM0t6NWRkTWN4NEI3SlY3MTgzNDgybHJ3QzNQTElqZm43dzJaLWlRMThzNkN1LTZQUEY1WWg5Zm5XLS1FTU1iOWVxZjNjUENIZmlfb3Fhem5hRU4xc2lGbFhBUXVoR2czeV9mYXVSXzluWExPYktWbWk2WkEyeFQ5MTZ2YWtvc0NFSXQ5SkNySzMwdWZLUkZ5MGJxS05aa2haUHdDMzhZanI0Q0hjdzNNNWtXLUwzRXhPczVFajRGYWpFUDJlbjFVZS1EeEhUdTlSZTRoTHpZTFNVWjVOMGhScGt5blV5QXpKeFFYV1dVb01fSXM2MzdGU19uZkdZb2xGRkZHOXlKWGgzWjI3UVFFRE9NZVpncTR0UU9MYjRpMEFuQXVWb3N3Qlg2cjJzUF8ySWFGMkdEOURvS3FhaHhoYVE4Nm5uNU5lWFU4c29ibmdNbXZGTUR1U2k0dWNva2N3aXBUTWZxY2J2WnVTczVubVZZal8xaXc4cmFlWEM0YUJpV1JYYzUxaTdyZ0oxREhFWHRtQTVtV2NtQWxGcw?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-22T18:54+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "中國澱粉(03838.HK)10月22日耗資220萬港元回購1300萬股 - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1GdjV6ZmNRM2FMR1p6YWd4blprOE9KQXhOc3V1dDlhM2g5R0RiRUYzajl5Tm4zcG5abXZqS3BfS1VfWVpkakFNQkJGV0M0R1dTMDAxYXN2YXpUa1Vub0V3Z3pqakY5V3Yxdnk4?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-10-22T18:11+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-22T23:21:58+08:00"
+  "updated_at": "2026-10-23T03:16:56+08:00"
 }
