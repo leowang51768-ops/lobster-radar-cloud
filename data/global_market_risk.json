@@ -3,45 +3,45 @@
   "risk_level": "red",
   "risk_score": 3,
   "risk_reasons": [
-    "原油超過100美元／桶：WTI原油 102.25美元／桶、布蘭特原油 111.31美元／桶"
+    "原油超過100美元／桶：WTI原油 103.43美元／桶、布蘭特原油 111.81美元／桶"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 -5.7%｜NASDAQ -2.4%｜日經225 -0.3%｜KOSPI -3.2%｜台股加權 +0.0%｜恆生 -2.4%",
-    "⚠ 全球市場風險｜美債10Y 4.99%｜VIX 19.3｜WTI原油 102.25美元 +2.8%（超過100美元警戒）｜布蘭特原油 111.31美元 -1.6%（超過100美元警戒）",
+    "⚠ 全球市場風險｜費半 -6.1%｜NASDAQ -2.7%｜日經225 -0.3%｜KOSPI -3.2%｜台股加權 +0.0%｜恆生 -2.4%",
+    "⚠ 全球市場風險｜美債10Y 4.98%｜VIX 20.0｜WTI原油 103.43美元 +4.0%（超過100美元警戒）｜布蘭特原油 111.81美元 -1.2%（超過100美元警戒）",
     "⚠ 全球市場風險｜油價觀察｜〈能源盤後〉沙國能源設施遇襲、阿美要求員工撤離 Brent原油飆4%創5個月新高",
     "⚠ 全球市場風險｜油價觀察｜油輪運輸成本飆升創紀錄 美輸亞洲原油訂單銳減半數",
     "⚠ 全球市場風險｜Hong Kong Stock Market Update | AI Hardware Stocks Decline Again as Meta’s HK$825 Billion Spend",
+    "⚠ 全球市場風險｜Institutions Forecast Rush in Exports by Lithium Battery Firms, with Q4 Sales Expected to Maint",
     "⚠ 全球市場風險｜只要台積電破月線「就買進這檔」？ 他喊全力做多：勝率逾6成",
+    "⚠ 全球市場風險｜台股破季線免驚？ 他喊「分批買到半年線」：拉回不買沒道理",
     "⚠ 全球市場風險｜台股震盪新手嚇到！ 他抱2檔ETF憂問「會下殺到4萬」內行勸寬心：刪掉APP",
-    "⚠ 全球市場風險｜台股跌破季線原因找到了？陳龍喊「5萬點前最後洗盤」 預測下周報復性上漲",
-    "⚠ 全球市場風險｜首度因颱風喊卡！台積電宣布取消運動會 魏哲家發信公布每人加碼發3萬元特別獎金",
-    "⚠ 全球市場風險｜被動元件還能起舞！「這檔」逢台股震盪下殺轉機來了 法人送暖：評價緊追日韓同業"
+    "⚠ 全球市場風險｜首度因颱風喊卡！台積電宣布取消運動會 魏哲家發信公布每人加碼發3萬元特別獎金"
   ],
   "markets": {
     "US_SOX": {
       "label": "費半",
-      "price": 10851.468,
-      "change_pct": -5.6
+      "price": 10808.0,
+      "change_pct": -6.0
     },
     "US_NASDAQ": {
       "label": "NASDAQ",
-      "price": 26052.535,
-      "change_pct": -2.4
+      "price": 25979.764,
+      "change_pct": -2.8
     },
     "US_SP500": {
       "label": "S&P500",
-      "price": 7646.12,
-      "change_pct": -1.4
+      "price": 7631.38,
+      "change_pct": -1.6
     },
     "US_DOW": {
       "label": "道瓊",
-      "price": 52306.48,
+      "price": 52285.04,
       "change_pct": -1.0
     },
     "VIX": {
       "label": "VIX",
-      "price": 19.32,
-      "change_pct": 1.6
+      "price": 20.0,
+      "change_pct": 5.0
     },
     "JP_NIKKEI": {
       "label": "日經225",
@@ -65,18 +65,18 @@
     },
     "US10Y": {
       "label": "美債10年殖利率",
-      "price": 4.992,
-      "change_pct": 0.8
+      "price": 4.984,
+      "change_pct": 0.6
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 102.25,
-      "change_pct": 2.8
+      "price": 103.43,
+      "change_pct": 4.0
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 111.31,
-      "change_pct": -1.6
+      "price": 111.81,
+      "change_pct": -1.2
     }
   },
   "active_news": [
@@ -89,10 +89,26 @@
       "risk_score": 4
     },
     {
+      "title": "Institutions Forecast Rush in Exports by Lithium Battery Firms, with Q4 Sales Expected to Maintain Upward Momentum - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQd2EyNE5Rd0w3ZlcwUzhsTUl5VlBfNUdzMTNLMW9aa1NRRkJBRzYyWkRUTF9VdGswb0l5T01aNUZCOFdEN1kwMnVRVFBnaS1CMFFFMXAtOFkyekg1V2VjZjB4TDgwRk9HeERzRU1GQTRQQnY3NE5aZEx3WVdmc1RsSXdlNFVCMTE1NEVHNHJtZHJFVm5Vdk1HUmZEQ3RZQnVoVjRDMktIVFBSakhlOS1rMmJ3?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-23T16:50+08:00",
+      "importance": 3,
+      "risk_score": 4
+    },
+    {
       "title": "只要台積電破月線「就買進這檔」？ 他喊全力做多：勝率逾6成 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMi9AJBVV95cUxPd2xLeGkxTGJOZl9JdHFXMEtjbUdvM0UwcE5QXzZvbFhacFRPTjdORmc5M0hPVllsSExobTBfY2h5NGpPVVVWUjN6ek9wQ0ZJY1FTME5uNDdMZ2xyaTNzV0w5VmlEZlZrTHdaUTVmWXU0NnNkU2ZqSldlQ3pDbFVLMlRncGlJQVZONHhkcWE1Rjh0cEtURkhHMmxMV0Eyb1pFQjhNdmt5aW5rRGdmLXRWTTBnSWtpalU1Znl1djlrOVk1MjVOcUo5MmRRN1lselZvLVJoSDFsbzlTNm9VUlNtUHN1UEUzUjV0RFJyLXhYTUtKbXE0OVVlal9XcFlxZlFkS0dvUjFTbUxfYXJuVGlMZ09nbVIxUVByVC16a1Jkb0txbW9WMUNaRU5GbmtHbmRoRTlZbVp4ZW91bmhRa3R2V0VrUWROU0E3dzF2R2pTWkc4VnZJSTlHWkFRTHE4cmJsQ2VaS2hWc0xMWVB5QVQ2ZWU1eUY?oc=5",
       "source": "Yahoo股市",
       "published_at": "2026-10-23T22:15+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股破季線免驚？ 他喊「分批買到半年線」：拉回不買沒道理 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi8wJBVV95cUxPX19TbzhwT2YwVU5ERFdGdlVyMkFIYU9mNG5pRzUxVnA3OGRpSVhWaDdxQ0oxMU11TjMzOTN6akRzeVZrUjl6c0JuZHJzTldRbElWeGUwYnFZVFdkRUVtOXd5RDQwSVV6czZTYk16cUVRaWV3TUl3elpIcmtsaXkxVU9fYWU4RUJCUXJ1cHZvbEpGelBYeWV6Z2RORUcyRVZ6UzRNZ21ka0R3cWNpWjN0STB5ZzhMa0loUkdKYXdrNjMzTENuSmJNUnNaeVB6elprbUpOVFFxSW1STlhmRzB5TlRodHFIUXhrYl9CY0VCRWU3RTF4aXRRUk82TUk4MUNFejNhTmI3YXFkVnA0dTM3V3pnYlZpbG1UeE8yTS1NZ01aRnBKYUkzOThSXzBmdFVFelVHZDkzYjllVlBJWUFpSXZycjhZRmZ1blJXbnhuQ0dSTS1mVUM2V09fOENMdzlGTWt6V25GSkl2NWxnb1RqLXZGdw?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-23T21:33+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -105,26 +121,10 @@
       "risk_score": 0
     },
     {
-      "title": "台股跌破季線原因找到了？陳龍喊「5萬點前最後洗盤」 預測下周報復性上漲 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiyANBVV95cUxOdnB5YldkWFpFTlJtd3hFVWRnTDV6RXN0bUtKNmg0UVJDZVNGRW5NVXhDNGxjSTE3TmcxVzlLQzlfRW1JSHhnTlctS1dLcnZ6Q2JXd01UVVhnTjNRdGtuUE8tVnJ2cjk4cGJXeU5jT1hCTEl2ZnJ0QWhIeV9XNkp4LTg1YU05a3dZMWdPVDNEQmlaeW5lcEZYZHAtcGgzY0cwRnEwQXhNLVVackxzVmUwUWd6MXBpUDdIQkRkYTJ5TVd2UEhMN2lDV2hVYXBpclRjZFFLYUNJZWhmVHVBZ0NDNWF0N3EtcEVqM0hHWTZSdmpEMlVBemhxRDNDejZFQWZFdEZmUDQyV3YyenNZZkd4WTAycTRxZi0ySmFjalpNMHpBQnVmWEdZYU1mLVFXVVQxYmltQU9GdlA5UTI4WFhGZXdrTi13aDBkZlBJS1FhT0s2T3JFWTN5T2txM3RDbUVMX1kxUGN5LVBmWDhieFZncXlyeEE0TTJFUTlpRVNmSzNmZFBkM1hSNU9oQllmcVFqX0phVUNtVXktd1cwSU1GTVJhNHF3WHFSWURxX1dfdmg2d2ltWU55eG5XTHlHa3Fkb3p6b2pqd0M?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-23T20:30+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
       "title": "首度因颱風喊卡！台積電宣布取消運動會 魏哲家發信公布每人加碼發3萬元特別獎金 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMivANBVV95cUxOUUQ0a0JkbVBFbGxLNmRRTlpnUzBHT29jd21Wbk5mb21zbGItQzZFUzljNHM4VnVkZWo4UHM0OTEyUWkxY2Z2dUZONXE5REhBbTZ6LS1GZkEyWWFjYWVSSEZPbXFTUkY2cW1RU2ZtTVo3cXNCZ0JkU0ZUSHhEbzk0VXZzd2xxeTVJNXY3S0pUREltWXRYTExvUkZUSGhYOHVNN093T0xZR2xrTFgzVjZEUjU4SHRtVExCbXgyRGV6Nzh1MGZRSkJjbTAzcXExYWRVRlN0b09SYkNyX2ZTUTBSeFp6cWtTby03bXpDeVNGM3BDSGt5dUNaNXhlVi1sNG9fT2pOR1V3alVhaGJYWkZHS1dUY3owODZLaVpBNTM3bXpNTjZMSVJYejd3cl9KZGdVRkR5OUJmOUZQRkd4VXFFMms1b3Nncmg1U2ZJUnpiVVgxU3ZQSGo3ZkxILTNXOUZxaTV4T2NhcWE2eGhGQ0h4dTREcktKNUlZQWJnRFVtdGUwU2RSMXNpUTZxbnZNcUtFYVJjQTFNZ2pyWmNibndLQ0xjeVNacGtVaWxhVmVxdmFnSlY3ckRmdXZIdXM?oc=5",
       "source": "Yahoo股市",
       "published_at": "2026-10-23T20:27+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "被動元件還能起舞！「這檔」逢台股震盪下殺轉機來了 法人送暖：評價緊追日韓同業 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi7ANBVV95cUxOaW12VUlHMGdsT3dNSXZMeTd1N2xENm1fcFpYTWs3S19FSncyd3Vrcl9ZVmI1ZFdWMTgyVEtYSG5MZkZ0ZlZyVUl6TG1idi14MjZYZ3JmWmluTkNlYktlbkpjeGNBQmZPMW5rRERiMmtEM2Uzc2sxNzFPZFdGMnhhVGRfWXdWZ05ZenY1ekowYnhkcDRUQlIwb2luUG9hMVFNRXhmVnpyNDlUR1k4OVh6M0tDNjN1RmhQR196WHlMN0RVZmJabTdfQkdnRUJHTTVGRTJKV1pFQnRpYzFJUEtyaTFIVFhaNm42c2RTeHVfSldpaDJldWZkYkttYUNBTkZtNEhYak5KWjFEN0VBNDNDN2JSTUVmaG4wLUgxbFNyeERreHlDbXVHVno4TFNEdjJsS2NWbDh4cHJ5UHlpYzZscVVXbGlMa0tDRmsyYmZIYjFnVzZ0OS1KdENyQUp4TzU2eW8ySVdvMGtncmlHaFRJMmhmWFVVWFRuWlhlMjR4NXpIMHA3WmllTk1XVHp4Ty1ISnF6UHpCOXhGaXFCa1NwcnhDREJDVEtNWXd1d0x2LUF0ZlJIZkZUMmxQajNhQzF5d25NVjdlSGlkRzZqT3ZJRUhpVHNRLU9LaE1tdlVxa2Z3TTBXemZXV05Nakg?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-23T20:10+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -137,6 +137,14 @@
       "risk_score": 0
     },
     {
+      "title": "Gold dips below $4,000 as deepening stock rout fuels volatility - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOUi0ydXBrSENodzJDck5UQjZvdUtzelZsQlV1cHF0Z29xZms3YVk2aUplaktPWkZNbUd0SkJCWEQ2OFY4WXByckRlbmJPaWptbGdmM3l5aEF5VV9TXzVUc3p1ZGN2dlRHelNmUFJfdlk2aVBuZy1RTVVqWDdEOVdKZlMwZ29wWkNRd0lrWXhzdm9MMTFpckdCUzVmQUNmSmxPNlVvMVJjaDNMSjJkUXBZXzFxbWhBSFhTM2pxdVpfaFZ4Zw?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-10-23T18:18+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
       "title": "史上最大包！台積電「員工運動會大紅包」每人平均領3萬元 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMilANBVV95cUxPNkR4X0ZES0NrbjJYRkZUWUFTb00xLUtnWnk0ZjlIQ1l4U1ZtV2txTmlpVWhTbWc0cFpyZ3Y5YnpqUGlucEtib1ZXc2xSRUZEZ3lfc0JvWS1Uc2R0bkJXb0NiN0hwZnEyQ2tjaXo4TGo5eVdTLVZTVmFrX2xfa1ZIWGxjRGV3cnl4cjdRS05CeU1lTUVEVDduUTdnbmswZ2t2T09RaHZfU2NWM0RLQklZOEpIdHZKTHFEWkZEVlVsLXdnMFFaam5qT0h4cHZqanJzQ3I2eDVQakhsQUNhNWpnZlBRVmEzeU5NbkY0XzhYYlA2NDR3Y1kzQjc2LUNCM25DQnBaREdSMFNEMGZ1M29RcFpnUHRlRV95di1oaVNPam9FMkMtbnZET1lhUXB4X0RORUVCQ0diLWg5eE5iVjVIdUtmNm82WEttLVQ0YndoSTRMZEpRc05IcDVweFRMa3VMUmo4REJqV1VOVnBlQlhjcWtURVF0d1FuUDFZRFhUaXNMdkM3WTNEM0pEVVRUajgxS3Nmdw?oc=5",
       "source": "Yahoo股市",
@@ -145,34 +153,26 @@
       "risk_score": 0
     },
     {
+      "title": "AI融資成本暴增，費半狂瀉逼近年線！下週台股開盤要崩？ - TOP1markets",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPNUtIWm1xS0ltZ3Ywd0gyMk9uYmx4bmtLUERIZ2hLSjZtOHhWdWRCdy1Pa1pGU0xKcER1RjlIeTFpVGs2NkxUMUc3WEI0SjZ2XzdQbFhHMmc5cjFvQ2ZRY0U5TC1kaXVWcEZ5WXRIa3ZqcC04WjNCVDNtZDFKWDBoNEJQNVMwNU5PTWs3NnU4TTlKUC0yeWRfZFZEdHhja09yc0MtdFFfT25hSVVIbWdJd3YxY0MycGpwZ2NSRA?oc=5",
+      "source": "TOP1markets",
+      "published_at": "2026-10-23T17:54+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股殺到剩4萬6千點！郭哲榮突喊「4天後大逆轉」 點名這6檔 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi7AJBVV95cUxOTU5lRTllZWxvcW9vdUI4OW9MQmlhcnJBV2xZekxyMDZPYnMyazJNMHpMbFZmU0wxUUEwSjNMUlZYems1MHhhZEZOM0RzYXhscG9NQUg1YWJlazFCTXZKX1QwNFJEUFlNNHRoSi0yYkhrY3FWdE1lck9VMnBHN3FWanRvTGRXZUlaSy01NGt0cEE2R1ozcG1oQXR0M3R3aWtxX0JSUWNTQ2doSmRPdS15clZyN0xWcGEzX2IwWFVuWVBrbUgwdlFOcks5bWxiMlZ4LTVPbWc2N0Z3cmhxb2pXS1diMlY3THZIOUNuYS05UUFwSEZTZkJEMmFJX1VaSkRKX19uUW9QR0pTbUdSNkhGZFZlaUVCSEpsY1JMVEVLM3RBYzh4RGlDX0pCUFp3RUxwNXg1bG00VEtaTjMyVUVMb3duM0V2RjVzZGtHZ2NFbFFLUzNVb2pMZlNPWUJCNmR3eHJkQ0lhcEt1T2U2?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-23T17:40+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
       "title": "台積電打折賣、華經飆漲停！台股31檔撿便宜 連假後別慌 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMi6gJBVV95cUxQWDBjNURSTTNXU2F1QUpuWkxwTDBXVV9IenVDNlRJazRwWWtlYk5vLTdPN2hNc0VSTGkyQVBKRXBBejB5Z1hOQ01LSmhlc3NyaVhCV0UyLWhLVVVUX1lJc0E5aENxVmRzRVFYTVZScVVkeXRZNTB2XzNUWEVVRUxfeFFvTHhmMWFrWG12TVhyZjJGMFhiRTZTRndYSmRTbERyeUFSSHdOQ01lYjBqNTF5ZGVSMnp2ZnlvTUJXcXhNd1Eyd3k3SXN1dGRqakpRaENSN0VwUFVrQWxxQzM2UjdPRmtIWC02RU9hNTE4TExrWloxX193VkNTb0tlNUtYeGxPcnFJQjJyendpN0F4XzFSODBFS1gtUFRSel91YmdYeHlFLUN2TUR3a0xBckV3Z0VfaUJwOTJVUjdodl9yVmtGSzFsSFFqVlM1Nm56YkZMb193bTFsTWxZRG12WUp6M3ljNjd4b3czY3gyQQ?oc=5",
       "source": "Yahoo股市",
       "published_at": "2026-10-23T17:13+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "European Chip Stocks Mixed After Sharp Thursday Selloff -- Market Talk - Moomoo",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOdzFfbm1aOXVodVBDWGgtRTNvWGpPYkc2eEtCeGdaUXcxRy04dkVSQ2hoVE8wNVlqS2pRSGRvN0lyUmRqY05WX3FRSHdpMEJfWENJMGl3OGlJVEdqRGtzbXJEcUtGOFcxVmoySENpcUh6elJDelFLZjNHUEhla1JMYXBwcE9MM0p3Qkw3QWRmRExwYTNDQ3M2QnFBY01zbjduYjVIUlNra2VHc1BfNDk0NXJWTW9FV3M?oc=5",
-      "source": "Moomoo",
-      "published_at": "2026-10-23T16:55+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Hansoh Pharmaceutical Group Stock Rallies 3.6% in Hong Kong - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPdFNodlBaTG9YLWQtaUpTS0Q0SVFzQ0QzdUN1U0hyZkljOHVSYVdVdVQ2am9GbkdDVmRuQ3JuZkg1S2d5VDFTZWZneXc0SVFFYm54c2E2dDdPVmdIdFlUMUY4emJhU3FHVEpEUzVXRFhGM0FNeEg1RnpDVnFndmZEcmx4UVI0TlBPbGdtbEY2VXMtNzBkNkhwNkZVaUJLOFVEbGs0?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-23T16:31+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Xiaomi Stock Advances 3.9% in Hong Kong - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOMFFEOTNXSG1zNzZUNEhtNDJqVEFxVzBRUl85NkdxNnpNVnhMZVdyeV81Y2NvbGxCaEFfWXFEZEFZSG9OQmh6MF9WNHAxc3NoWXVUUFBUSktKUXpwRThEeWpjbVl1QmRURURpeTZRTVRjb21VOU13ZDVpcU5NUDRuQjZpd0xSazBB?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-23T16:31+08:00",
       "importance": 2,
       "risk_score": 0
     }
@@ -192,6 +192,6 @@
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-23T23:03:50+08:00",
-  "checked_at": "2026-10-23T23:03:50+08:00"
+  "updated_at": "2026-10-24T03:04:14+08:00",
+  "checked_at": "2026-10-24T03:04:14+08:00"
 }
