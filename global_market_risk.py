@@ -17,7 +17,8 @@ MARKETS={
 "US_SOX":("費半","^SOX"),"US_NASDAQ":("NASDAQ","^IXIC"),"US_SP500":("S&P500","^GSPC"),
 "US_DOW":("道瓊","^DJI"),"VIX":("VIX","^VIX"),"JP_NIKKEI":("日經225","^N225"),
 "KR_KOSPI":("KOSPI","^KS11"),"TW_TAIEX":("台股加權","^TWII"),"HK_HSI":("恆生","^HSI"),
-"US10Y":("美債10年殖利率","^TNX")}
+"US10Y":("美債10年殖利率","^TNX"),
+"WTI_OIL":("WTI原油","CL=F"),"BRENT_OIL":("布蘭特原油","BZ=F")}
 NEWS_QUERIES=[
 "global stock market OR Wall Street OR semiconductor market",
 "Taiwan stock market OR 台股 OR 台積電 OR 金管會 OR 經濟部",
@@ -101,6 +102,19 @@ def collect_news():
             r["importance"]=score;r["risk_score"]=risk;rows.append(r)
     rows.sort(key=lambda r:(r["risk_score"],r["importance"],r["published_at"]),reverse=True)
     return rows[:18]
+def collect_oil_watch():
+    """Oil headlines are observation-only; they never change the risk score."""
+    rows=[];seen=set();cutoff=now_tw()-timedelta(hours=30)
+    for r in google_news_rss("crude oil Brent WTI price inflation OR 原油 油價 通膨"):
+        title=str(r.get("title") or "").strip()
+        if not contains_any(title,["oil","crude","brent","WTI","原油","油價"]):continue
+        if not str(r.get("url") or "").startswith("http") or title.lower() in seen:continue
+        try: dt=datetime.fromisoformat(r["published_at"])
+        except (ValueError,TypeError,KeyError):continue
+        if dt<cutoff:continue
+        seen.add(title.lower());rows.append(r)
+        if len(rows)==3:break
+    return rows
 def q(m,key):
     v=(m.get(key) or {}).get("change_pct")
     return float(v) if isinstance(v,(int,float)) and math.isfinite(float(v)) else None
@@ -122,7 +136,7 @@ def compute_risk(markets,news):
     elif len(negative)>=3:pts+=2;reasons.append("多則市場負面消息同時發酵")
     return ("red" if pts>=3 else "green"),pts,reasons[:5]
 def signed(v):return "—" if v is None else f"{v:+.1f}%"
-def ticker_lines(markets,news,level):
+def ticker_lines(markets,news,level,oil_watch=()):
     parts=[]; mtxt=[]
     for k in ["US_SOX","US_NASDAQ","JP_NIKKEI","KR_KOSPI","TW_TAIEX","HK_HSI"]:
         m=markets.get(k) or {}
@@ -131,7 +145,15 @@ def ticker_lines(markets,news,level):
     tnx=markets.get("US10Y") or {};vix=markets.get("VIX") or {};aux=[]
     if tnx.get("price") is not None:aux.append(f"美債10Y {tnx['price']:.2f}%")
     if vix.get("price") is not None:aux.append(f"VIX {vix['price']:.1f}")
+    for k in ("WTI_OIL","BRENT_OIL"):
+        oil=markets.get(k) or {}
+        price=oil.get("price")
+        if isinstance(price,(int,float)) and math.isfinite(price):
+            aux.append(f"{oil.get('label') or k} {price:.2f}美元 {signed(oil.get('change_pct'))}")
     if aux:parts.append("｜".join(aux))
+    for n in oil_watch[:2]:
+        title=re.sub(r"\s+-\s+[^-]{1,45}$","",n["title"]).strip()
+        if title:parts.append("油價觀察｜"+title[:80])
     for n in news[:8]:
         title=re.sub(r"\s+-\s+[^-]{1,45}$","",n["title"]).strip()
         if title:parts.append(title[:95])
@@ -148,9 +170,9 @@ def load_old():
     try:return json.loads(OUT.read_text(encoding="utf-8"))
     except Exception:return {}
 def main():
-    markets=market_snapshot();news=collect_news();level,score,reasons=compute_risk(markets,news)
+    markets=market_snapshot();news=collect_news();oil_watch=collect_oil_watch();level,score,reasons=compute_risk(markets,news)
     payload={"schema":1,"risk_level":level,"risk_score":score,"risk_reasons":reasons,
-      "ticker":ticker_lines(markets,news,level),"markets":compact_market(markets),"active_news":news[:12],
+      "ticker":ticker_lines(markets,news,level,oil_watch),"markets":compact_market(markets),"active_news":news[:12],"oil_watch":oil_watch,
       "source_note":"全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。"}
     old=load_old(); comparable_old={k:old.get(k) for k in payload.keys()}
     changed=comparable_old!=payload
