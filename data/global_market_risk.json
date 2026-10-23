@@ -3,45 +3,45 @@
   "risk_level": "red",
   "risk_score": 3,
   "risk_reasons": [
-    "原油超過100美元／桶：WTI原油 103.43美元／桶、布蘭特原油 111.81美元／桶"
+    "原油超過100美元／桶：WTI原油 103.44美元／桶、布蘭特原油 111.66美元／桶"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 -6.1%｜NASDAQ -2.7%｜日經225 -0.3%｜KOSPI -3.2%｜台股加權 +0.0%｜恆生 -2.4%",
-    "⚠ 全球市場風險｜美債10Y 4.98%｜VIX 20.0｜WTI原油 103.43美元 +4.0%（超過100美元警戒）｜布蘭特原油 111.81美元 -1.2%（超過100美元警戒）",
+    "⚠ 全球市場風險｜費半 -6.3%｜NASDAQ -2.8%｜日經225 -0.3%｜KOSPI -3.2%｜台股加權 +0.0%｜恆生 -2.4%",
+    "⚠ 全球市場風險｜美債10Y 4.99%｜VIX 19.4｜WTI原油 103.44美元 +4.0%（超過100美元警戒）｜布蘭特原油 111.66美元 -1.3%（超過100美元警戒）",
+    "⚠ 全球市場風險｜油價觀察｜〈能源盤後〉中東戰火 阿聯酋漏油 利比亞減產 多重供應風險推升油價創近6個月新高",
     "⚠ 全球市場風險｜油價觀察｜〈能源盤後〉沙國能源設施遇襲、阿美要求員工撤離 Brent原油飆4%創5個月新高",
-    "⚠ 全球市場風險｜油價觀察｜油輪運輸成本飆升創紀錄 美輸亞洲原油訂單銳減半數",
+    "⚠ 全球市場風險｜From Year-to-Date Highs to Valuation Trough: South Korean Stocks’ Forward P/E Ratio Hits Lowest",
     "⚠ 全球市場風險｜Hong Kong Stock Market Update | AI Hardware Stocks Decline Again as Meta’s HK$825 Billion Spend",
     "⚠ 全球市場風險｜Institutions Forecast Rush in Exports by Lithium Battery Firms, with Q4 Sales Expected to Maint",
-    "⚠ 全球市場風險｜只要台積電破月線「就買進這檔」？ 他喊全力做多：勝率逾6成",
-    "⚠ 全球市場風險｜台股破季線免驚？ 他喊「分批買到半年線」：拉回不買沒道理",
-    "⚠ 全球市場風險｜台股震盪新手嚇到！ 他抱2檔ETF憂問「會下殺到4萬」內行勸寬心：刪掉APP",
-    "⚠ 全球市場風險｜首度因颱風喊卡！台積電宣布取消運動會 魏哲家發信公布每人加碼發3萬元特別獎金"
+    "⚠ 全球市場風險｜個股概覽 | 個股 - 股市",
+    "⚠ 全球市場風險｜哈佛大學2.2兆捐贈基金重押AI股 台積電與SpaceX成布局核心",
+    "⚠ 全球市場風險｜只要台積電破月線「就買進這檔」？ 他喊全力做多：勝率逾6成"
   ],
   "markets": {
     "US_SOX": {
       "label": "費半",
-      "price": 10808.0,
-      "change_pct": -6.0
+      "price": 10779.464,
+      "change_pct": -6.4
     },
     "US_NASDAQ": {
       "label": "NASDAQ",
-      "price": 25979.764,
+      "price": 25955.342,
       "change_pct": -2.8
     },
     "US_SP500": {
       "label": "S&P500",
-      "price": 7631.38,
-      "change_pct": -1.6
+      "price": 7623.68,
+      "change_pct": -1.8
     },
     "US_DOW": {
       "label": "道瓊",
-      "price": 52285.04,
-      "change_pct": -1.0
+      "price": 52215.16,
+      "change_pct": -1.2
     },
     "VIX": {
       "label": "VIX",
-      "price": 20.0,
-      "change_pct": 5.0
+      "price": 19.45,
+      "change_pct": 2.2
     },
     "JP_NIKKEI": {
       "label": "日經225",
@@ -65,21 +65,29 @@
     },
     "US10Y": {
       "label": "美債10年殖利率",
-      "price": 4.984,
-      "change_pct": 0.6
+      "price": 4.988,
+      "change_pct": 0.8
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 103.43,
+      "price": 103.44,
       "change_pct": 4.0
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 111.81,
-      "change_pct": -1.2
+      "price": 111.66,
+      "change_pct": -1.4
     }
   },
   "active_news": [
+    {
+      "title": "From Year-to-Date Highs to Valuation Trough: South Korean Stocks’ Forward P/E Ratio Hits Lowest Level Among Major Global Markets in Nearly Two Decades - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQeFJkcUdqQTVmWHR3a3ViNGEyYUQ4Nm44a2dEXzFqODFkaExJcHU0Tk5remJvQUhtTXRsZWxHWUdLR0x0cWU0TWhGYzAteF9ib3Z3Smd4ejhOdFFDWDlHUThYenBvWHNoZHFhLWcteUR1WUVPN1VCY1hkeG0yWVhPU0NxSmlIWmJQMk1XYjJKQldmUVFYdGRSaXFvblRmYzZa?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-23T18:35+08:00",
+      "importance": 5,
+      "risk_score": 4
+    },
     {
       "title": "Hong Kong Stock Market Update | AI Hardware Stocks Decline Again as Meta’s HK$825 Billion Spending Pledge Sparks Credit Concerns; Market Reassesses AI Investment Returns and Financing Pressures - 富途牛牛",
       "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNNnliNXFpZzhxT096bHQzS3R1U01JWVY0aWVGcEVNRTQ5aFdxb190NmVJaDRHZU1tNEtxU2FSSm1MOUxwTnhxYmp4UkNQakhiWG1CNEtwV0VaQlM5aU15MkxYVGQzSHZiTHBmZGc1Ym9maHdOMjhQbGVlNDYyMGlNb0pSc0xhMUZvYkEzdnlfejRkWVd5eGhxY1BBSDJqRm45U0FIekF4Y1M?oc=5",
@@ -97,18 +105,26 @@
       "risk_score": 4
     },
     {
-      "title": "只要台積電破月線「就買進這檔」？ 他喊全力做多：勝率逾6成 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi9AJBVV95cUxPd2xLeGkxTGJOZl9JdHFXMEtjbUdvM0UwcE5QXzZvbFhacFRPTjdORmc5M0hPVllsSExobTBfY2h5NGpPVVVWUjN6ek9wQ0ZJY1FTME5uNDdMZ2xyaTNzV0w5VmlEZlZrTHdaUTVmWXU0NnNkU2ZqSldlQ3pDbFVLMlRncGlJQVZONHhkcWE1Rjh0cEtURkhHMmxMV0Eyb1pFQjhNdmt5aW5rRGdmLXRWTTBnSWtpalU1Znl1djlrOVk1MjVOcUo5MmRRN1lselZvLVJoSDFsbzlTNm9VUlNtUHN1UEUzUjV0RFJyLXhYTUtKbXE0OVVlal9XcFlxZlFkS0dvUjFTbUxfYXJuVGlMZ09nbVIxUVByVC16a1Jkb0txbW9WMUNaRU5GbmtHbmRoRTlZbVp4ZW91bmhRa3R2V0VrUWROU0E3dzF2R2pTWkc4VnZJSTlHWkFRTHE4cmJsQ2VaS2hWc0xMWVB5QVQ2ZWU1eUY?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-23T22:15+08:00",
+      "title": "個股概覽 | 個股 - 股市 - CMoney",
+      "url": "https://news.google.com/rss/articles/CBMiREFVX3lxTFBfVGtPUmhQeF9nalNLNm9zTGJWQlREWTlFa2dVeEhkNElpN1d0OXlyaFF3U3NaYnBodklvejVEU1YtdkNl?oc=5",
+      "source": "CMoney",
+      "published_at": "2026-10-24T03:03+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "台股破季線免驚？ 他喊「分批買到半年線」：拉回不買沒道理 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi8wJBVV95cUxPX19TbzhwT2YwVU5ERFdGdlVyMkFIYU9mNG5pRzUxVnA3OGRpSVhWaDdxQ0oxMU11TjMzOTN6akRzeVZrUjl6c0JuZHJzTldRbElWeGUwYnFZVFdkRUVtOXd5RDQwSVV6czZTYk16cUVRaWV3TUl3elpIcmtsaXkxVU9fYWU4RUJCUXJ1cHZvbEpGelBYeWV6Z2RORUcyRVZ6UzRNZ21ka0R3cWNpWjN0STB5ZzhMa0loUkdKYXdrNjMzTENuSmJNUnNaeVB6elprbUpOVFFxSW1STlhmRzB5TlRodHFIUXhrYl9CY0VCRWU3RTF4aXRRUk82TUk4MUNFejNhTmI3YXFkVnA0dTM3V3pnYlZpbG1UeE8yTS1NZ01aRnBKYUkzOThSXzBmdFVFelVHZDkzYjllVlBJWUFpSXZycjhZRmZ1blJXbnhuQ0dSTS1mVUM2V09fOENMdzlGTWt6V25GSkl2NWxnb1RqLXZGdw?oc=5",
+      "title": "哈佛大學2.2兆捐贈基金重押AI股 台積電與SpaceX成布局核心 - 自由時報",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE51cmFIM0VyUk5aTWFzemZtanVqaGtuM1pFLUNISG1HZ29Wdl9KS08zVmNzWHppc1NBMUVlYl8tNG9MS0R3ajJLZlM2ajlReXdOVmVXc0RIZ0k?oc=5",
+      "source": "自由時報",
+      "published_at": "2026-10-24T01:39+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "只要台積電破月線「就買進這檔」？ 他喊全力做多：勝率逾6成 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi9AJBVV95cUxPd2xLeGkxTGJOZl9JdHFXMEtjbUdvM0UwcE5QXzZvbFhacFRPTjdORmc5M0hPVllsSExobTBfY2h5NGpPVVVWUjN6ek9wQ0ZJY1FTME5uNDdMZ2xyaTNzV0w5VmlEZlZrTHdaUTVmWXU0NnNkU2ZqSldlQ3pDbFVLMlRncGlJQVZONHhkcWE1Rjh0cEtURkhHMmxMV0Eyb1pFQjhNdmt5aW5rRGdmLXRWTTBnSWtpalU1Znl1djlrOVk1MjVOcUo5MmRRN1lselZvLVJoSDFsbzlTNm9VUlNtUHN1UEUzUjV0RFJyLXhYTUtKbXE0OVVlal9XcFlxZlFkS0dvUjFTbUxfYXJuVGlMZ09nbVIxUVByVC16a1Jkb0txbW9WMUNaRU5GbmtHbmRoRTlZbVp4ZW91bmhRa3R2V0VrUWROU0E3dzF2R2pTWkc4VnZJSTlHWkFRTHE4cmJsQ2VaS2hWc0xMWVB5QVQ2ZWU1eUY?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-10-23T21:33+08:00",
+      "published_at": "2026-10-23T22:15+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -121,10 +137,18 @@
       "risk_score": 0
     },
     {
-      "title": "首度因颱風喊卡！台積電宣布取消運動會 魏哲家發信公布每人加碼發3萬元特別獎金 - Yahoo股市",
+      "title": "首度因颱風喊卡！台積電取消運動會 魏哲家發信宣布每人加碼發3萬特別獎金 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMivANBVV95cUxOUUQ0a0JkbVBFbGxLNmRRTlpnUzBHT29jd21Wbk5mb21zbGItQzZFUzljNHM4VnVkZWo4UHM0OTEyUWkxY2Z2dUZONXE5REhBbTZ6LS1GZkEyWWFjYWVSSEZPbXFTUkY2cW1RU2ZtTVo3cXNCZ0JkU0ZUSHhEbzk0VXZzd2xxeTVJNXY3S0pUREltWXRYTExvUkZUSGhYOHVNN093T0xZR2xrTFgzVjZEUjU4SHRtVExCbXgyRGV6Nzh1MGZRSkJjbTAzcXExYWRVRlN0b09SYkNyX2ZTUTBSeFp6cWtTby03bXpDeVNGM3BDSGt5dUNaNXhlVi1sNG9fT2pOR1V3alVhaGJYWkZHS1dUY3owODZLaVpBNTM3bXpNTjZMSVJYejd3cl9KZGdVRkR5OUJmOUZQRkd4VXFFMms1b3Nncmg1U2ZJUnpiVVgxU3ZQSGo3ZkxILTNXOUZxaTV4T2NhcWE2eGhGQ0h4dTREcktKNUlZQWJnRFVtdGUwU2RSMXNpUTZxbnZNcUtFYVJjQTFNZ2pyWmNibndLQ0xjeVNacGtVaWxhVmVxdmFnSlY3ckRmdXZIdXM?oc=5",
       "source": "Yahoo股市",
       "published_at": "2026-10-23T20:27+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "HK Stock Market Moves | China East Education (00667) Rises Nearly 6% in Early Trading - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPakt2M2M5WGE4NGpwU0ZpSmZTcmItSXNhQVg2UEZfTmxEYXFvOE81WnBuTzJncTZBYXZKYVBZbmVKTXZHQ1pJb2dUb1hhS1ZzclltV3JSQkxINEI2ZnRuS1BqTHM3c2V0M1dkeXM2dnd4LWVRNHdWbWJZUnp0dWUwZ0VfeTJEX2J4OVlaOUJJUVlGZEg5a3FJQkZWN2o1WENNUlRqRWFFVQ?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-23T19:24+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -151,33 +175,15 @@
       "published_at": "2026-10-23T18:00+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "AI融資成本暴增，費半狂瀉逼近年線！下週台股開盤要崩？ - TOP1markets",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPNUtIWm1xS0ltZ3Ywd0gyMk9uYmx4bmtLUERIZ2hLSjZtOHhWdWRCdy1Pa1pGU0xKcER1RjlIeTFpVGs2NkxUMUc3WEI0SjZ2XzdQbFhHMmc5cjFvQ2ZRY0U5TC1kaXVWcEZ5WXRIa3ZqcC04WjNCVDNtZDFKWDBoNEJQNVMwNU5PTWs3NnU4TTlKUC0yeWRfZFZEdHhja09yc0MtdFFfT25hSVVIbWdJd3YxY0MycGpwZ2NSRA?oc=5",
-      "source": "TOP1markets",
-      "published_at": "2026-10-23T17:54+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股殺到剩4萬6千點！郭哲榮突喊「4天後大逆轉」 點名這6檔 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi7AJBVV95cUxOTU5lRTllZWxvcW9vdUI4OW9MQmlhcnJBV2xZekxyMDZPYnMyazJNMHpMbFZmU0wxUUEwSjNMUlZYems1MHhhZEZOM0RzYXhscG9NQUg1YWJlazFCTXZKX1QwNFJEUFlNNHRoSi0yYkhrY3FWdE1lck9VMnBHN3FWanRvTGRXZUlaSy01NGt0cEE2R1ozcG1oQXR0M3R3aWtxX0JSUWNTQ2doSmRPdS15clZyN0xWcGEzX2IwWFVuWVBrbUgwdlFOcks5bWxiMlZ4LTVPbWc2N0Z3cmhxb2pXS1diMlY3THZIOUNuYS05UUFwSEZTZkJEMmFJX1VaSkRKX19uUW9QR0pTbUdSNkhGZFZlaUVCSEpsY1JMVEVLM3RBYzh4RGlDX0pCUFp3RUxwNXg1bG00VEtaTjMyVUVMb3duM0V2RjVzZGtHZ2NFbFFLUzNVb2pMZlNPWUJCNmR3eHJkQ0lhcEt1T2U2?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-23T17:40+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台積電打折賣、華經飆漲停！台股31檔撿便宜 連假後別慌 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi6gJBVV95cUxQWDBjNURSTTNXU2F1QUpuWkxwTDBXVV9IenVDNlRJazRwWWtlYk5vLTdPN2hNc0VSTGkyQVBKRXBBejB5Z1hOQ01LSmhlc3NyaVhCV0UyLWhLVVVUX1lJc0E5aENxVmRzRVFYTVZScVVkeXRZNTB2XzNUWEVVRUxfeFFvTHhmMWFrWG12TVhyZjJGMFhiRTZTRndYSmRTbERyeUFSSHdOQ01lYjBqNTF5ZGVSMnp2ZnlvTUJXcXhNd1Eyd3k3SXN1dGRqakpRaENSN0VwUFVrQWxxQzM2UjdPRmtIWC02RU9hNTE4TExrWloxX193VkNTb0tlNUtYeGxPcnFJQjJyendpN0F4XzFSODBFS1gtUFRSel91YmdYeHlFLUN2TUR3a0xBckV3Z0VfaUJwOTJVUjdodl9yVmtGSzFsSFFqVlM1Nm56YkZMb193bTFsTWxZRG12WUp6M3ljNjd4b3czY3gyQQ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-23T17:13+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "oil_watch": [
+    {
+      "title": "〈能源盤後〉中東戰火 阿聯酋漏油 利比亞減產 多重供應風險推升油價創近6個月新高 - 鉅亨網",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBiTVV3aWZIM1JLMGdKUGpibXZDU2pjZktwSElOUGt3YnBocUxTWTFLVmlMUUdXbHlKZWpLQ2tiZnREX253UU9qaHZpLVltdzA?oc=5",
+      "source": "鉅亨網",
+      "published_at": "2026-10-24T05:09+08:00"
+    },
     {
       "title": "〈能源盤後〉沙國能源設施遇襲、阿美要求員工撤離 Brent原油飆4%創5個月新高 - 鉅亨網",
       "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5uMkp6ZkZaLUR4dVlXS0RzcGZUX2ZZd3BTbHo5QmI2WjNXamxKcXkwbHYxY2ItczBNWFVKOXd1bkQyUXhRSWE5N0t0Wmd2Q2M?oc=5",
@@ -192,6 +198,6 @@
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-24T03:04:14+08:00",
-  "checked_at": "2026-10-24T03:04:14+08:00"
+  "updated_at": "2026-10-24T05:59:08+08:00",
+  "checked_at": "2026-10-24T05:59:08+08:00"
 }
