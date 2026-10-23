@@ -1,24 +1,23 @@
 {
   "schema": 1,
   "risk_level": "red",
-  "risk_score": 7,
+  "risk_score": 6,
   "risk_reasons": [
     "費半明顯下跌",
     "韓股明顯下跌",
-    "港股明顯下跌",
     "出現重大風險新聞"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 -4.9%｜NASDAQ -1.6%｜日經225 -1.6%｜KOSPI -6.7%｜台股加權 -1.8%｜恆生 -3.9%",
+    "⚠ 全球市場風險｜費半 -4.9%｜NASDAQ -1.6%｜日經225 -0.6%｜KOSPI -4.1%｜台股加權 +0.0%｜恆生 -2.4%",
     "⚠ 全球市場風險｜美債10Y 4.95%｜VIX 19.0",
     "⚠ 全球市場風險｜Southbound Capital Flows | Southbound capital recorded net sales of HK$9.218 billion; mainland ",
-    "⚠ 全球市場風險｜台股大跌近700點！千金股海嘯第一排 5檔跌停",
-    "⚠ 全球市場風險｜Cryptocurrency market activity cools while tokenized stock trading heats up, with on-chain tran",
-    "⚠ 全球市場風險｜Top 20 by trading volume | Apple hits a new all-time high against the market trend, with its ma",
-    "⚠ 全球市場風險｜Meta Tumbles 6% on AI Spending Fears, 10-Year Yield Falls Below 5%: Stock Market Today",
-    "⚠ 全球市場風險｜專家看台積電法說「已確認訊號」！半導體晶片需求仍強 盤點「8檔ETF」規模、績效雙成長",
-    "⚠ 全球市場風險｜Why This JPMorgan Strategist Thinks the Stock Market's Tailspin Might Have Run Its Course",
-    "⚠ 全球市場風險｜U.S. Stock Market Movements | Chip Stocks Decline Broadly; Intel (INTC.US) Falls Over 5%"
+    "⚠ 全球市場風險｜Short-selling activity in the Hong Kong stock market is accelerating, with the number of Tencen",
+    "⚠ 全球市場風險｜Hong Kong Stock Market Midday Review | All three major indices rose, with the tech index up 0.8",
+    "⚠ 全球市場風險｜台股要崩了？陳嘉偉示警：大盤恐下探22500點 曝「唯一獲利方法」",
+    "⚠ 全球市場風險｜外資千億爆砍後接「4天空窗期」...台股玩完了？野村曬數據搖頭：還有戲",
+    "⚠ 全球市場風險｜科技股崩跌拖累！Meta加碼支出引爆美股費半重挫 日韓股齊挫、台股今休市躲過一劫",
+    "⚠ 全球市場風險｜Global Forex and Fixed Income Roundup: Market Talk",
+    "⚠ 全球市場風險｜國家隊撒170億元出手護盤！友達打頭陣 國巨、聯電、台積電全進補貨名單"
   ],
   "markets": {
     "US_SOX": {
@@ -48,23 +47,23 @@
     },
     "JP_NIKKEI": {
       "label": "日經225",
-      "price": 61921.35,
-      "change_pct": -1.6
+      "price": 62536.26,
+      "change_pct": -0.6
     },
     "KR_KOSPI": {
       "label": "KOSPI",
-      "price": 5353.85,
-      "change_pct": -6.6
+      "price": 5502.42,
+      "change_pct": -4.0
     },
     "TW_TAIEX": {
       "label": "台股加權",
       "price": 46041.43,
-      "change_pct": -1.8
+      "change_pct": 0.0
     },
     "HK_HSI": {
       "label": "恆生",
-      "price": 22934.68,
-      "change_pct": -4.0
+      "price": 23092.21,
+      "change_pct": -2.4
     },
     "US10Y": {
       "label": "美債10年殖利率",
@@ -82,12 +81,60 @@
       "risk_score": 4
     },
     {
-      "title": "台股大跌近700點！千金股海嘯第一排 5檔跌停 - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE52LUpLSm1DTXd4ZXpOQnZNcUlHMTFsMjNieVRQWURVR2I3cjludW15OGM3Nm1ZRDc3UTA2Rk9jV1pQQUNucUtkaTlUQmcwOUZ1SEM2Tkc5dHc?oc=5",
-      "source": "自由時報",
-      "published_at": "2026-10-22T11:44+08:00",
-      "importance": 5,
-      "risk_score": 4
+      "title": "Short-selling activity in the Hong Kong stock market is accelerating, with the number of Tencent shares sold short more than quadrupling over the past two weeks. - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQYlhTbEg2aVFfUWREYjRZS1lFdldJaXVLTFExeE5iR0xNY1FXbW9fbUVoX3JLeUVmRzN0UVZMRDJxOHVqc0ZKUzEwV1F6ZG53TTZQNWdKN1prVTljSm9Uc0VMTXIzZ2NCUmNPV21INTBPMERrSm8wSFVEUkw5aEVlVVJDOWZkNHU0anZRWnhrM3dnYmZCZFgwRUMyb1UzaWM?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-23T13:02+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Hong Kong Stock Market Midday Review | All three major indices rose, with the tech index up 0.86%; new-energy vehicle stocks advanced, with Xiaomi gaining over 5% and BYD and Li Auto both rising more than 4%; CATL climbed more than 4%. - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQc3haR3FEMjB1U3hjbXJ6NFktYTNOUjA1WlZqRy1aT0ZFVWNJWGpMcEtaV0w1Qm5Jck02WmVCQ3hNUTlNTDE3OXhoeGFiQ1NKVWlDcnlINlczY1pabmttQVBlUFRRMXlIRmJRandzTkhKMkxJNVRycmxWMVVNaDNXcVlmblhrazVyYmU1Nk91T2VHVTlIZFlJOHdNV1l6QkZrVmtFeG1R?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-23T12:08+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股要崩了？陳嘉偉示警：大盤恐下探22500點 曝「唯一獲利方法」 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMivwJBVV95cUxQbjdqYUtIVjQ1UXJ2WkZXc0xiVThXd1M3RFNYcnN4LUtYUUJBd0F3TlhGTG9Zd0hVWkN3ZVhnWVlVTTN4WEczUmRRNnVxRGhieGNVSmRsWllaLTJTNVBacGs3VUVEdzNpN0pMMEZueXFsRmhWNkotRGg0SUc0c3dkTlpQWUo3QjI4cWJ3R1RGdXozUXVjR2JGbzVxYUhYV1VYN1JTNG5pRHlRTWVsaVd5bTAzRElQNm9nS1A2QV8xT1NGQm1DTF9rNkZiUkcwMmtOOFUtX09FLVJMUWZpdzVZeTBISU55MVpSWWNVTzNtcElSdUllVmFOQWEzalhLODZUakZpWkhzMndVeDBpekZQcTRIUHcxMkpYaXcxQUNCdGJJa2E2a01nY0lnTzVnZFhzQ01yODVDeXJlWkg2WW5R?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-23T11:43+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "外資千億爆砍後接「4天空窗期」...台股玩完了？野村曬數據搖頭：還有戲 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi0ANBVV95cUxPUl9ta1BuOVZEY0EyREtTRnRQV19iVEFnSHRCREpYdmZSa090ekdwN3hhMXZ0anZEczZETU5KbnhuVDJEOW1tY0JJdnFJU1lWdkFRdGJ0SWE5cWlLaDBrZXlWWVZySkZYZm5zTlJEQXhrZnd5RFhGTmRwNXM2dnpXWUxhd1VKU3Q5ejREaDlSa0dVRjhFNW9TYnNqbjFhcEswR3F5cmFnTGx5by1aNWdYNVJ6T1RRWjBlaW9pNnVydnd4QlVOWmtJLWRUNzBlYV91Mi1NTDJhOXU0S0JMNWd1Zk96X2ZUUkRTS3h2SGdBRlRDSTJZakFqRFdzNXNZb1RERDltRFdOYXdXU2pJRHcwcHlqbVQzaWU5OTVhMWtQakpVUzBQZUE2YVB0bEhVcDZ3amlHLWdwbnBXdU4xa1M2VlVzRWRPQWtsR25mLVFkREcwZ2lmWXJmakZ3SEV5N0VnQWNuRWd3NjZpc3djYUNzZzlKOTJEMGtwbWRWZmsyRXhoYkttamZqMFYzYUxiRllUdTRoRFFiZS1VbXpYOUpqNTNGQVhJM2ItYW9JZWlBallXRkM2TWZlT3pSaW9XeVl0bWFuQWZUV1VNUlFKTFMtdw?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-23T11:10+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "科技股崩跌拖累！Meta加碼支出引爆美股費半重挫 日韓股齊挫、台股今休市躲過一劫 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi5gNBVV95cUxOUHNfdjJ5QVB4RkxSTnhBck1VbWFEQjZCejFyYlhFMG1FQjRGWVhaNThYMkhYeFRVeFlTUXVDU3pBQlRlMU9QYjZucnhVRTRyelBYOU9EaDluZkd5LVBsR3dfRHZmRjVUZEIwUUJFSjVYSk5pQmdya2UxM240ZjB0ZUtacS1Pb2ZTNXZ2cy10eHJnT2ZUaWNoM0ZncFo3RzFwRlNXejZHRHVMVElMV0plQ0VKWUhUOW56NkJSNmFrcWJZZE9GYTh1bTFUR1VJUWZhMzNKUV9IQkJld1AwaVptMHk5SkVuVXFFSFJkSDc1U0ViTjdqRVRsLVBsSjlHcng2X2JIV1JHWDJ0QWUzX2x6dGNFVWUxUk9WUEhpa1dubEg0b0RfMGNEbk11U3U3akRnNHc1eGxQeUhTazR1TnlpeWhfcUp5X01ZNktkdjF2RmZqdl9BLXNFQm83SDJrSGxYamstQnRyMk9sczg2MlI1bHMtYUsxblZHa0NhREhCZUk3RUFaYk5veXFRUWdfQ2FraGxKc2NIUU0waUJRdzRsMVJ6VVVMUDNMaWpyeE42dDlCaEU4dlNHUFZ1bFNaNk02dGo3VmxoX19fZkRFVWtrZnBENEpVRUw2S1V1MWh0el9DY0pITHc?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-23T10:33+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Global Forex and Fixed Income Roundup: Market Talk - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNY1JFdVdOZk8zWUJDWm1lQTlIRk9RcEljMmNVQk1FTFlLelhWeFVpb3cxZDZkek1hSHRreXRiMWFCUkdTTWlFSGtFSDdWc0g5MldlODItajR2bk5TT2tSMW1Hd3J2UkNUcnpZcUxIMkx1OTQwMTVHXy1zRWhYOEVvazkta3R5emllOW56ZDVYQlVQVE1mOXFv?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-23T09:49+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "國家隊撒170億元出手護盤！友達打頭陣 國巨、聯電、台積電全進補貨名單 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMitANBVV95cUxQN01hWnlxVUpKV3dHd1Z2bnZLNzNxMmkxZ3c0XzdHUWJCOTlIa0NWalR3Ylg5MEZXVnBzOVN0TW16WHhyenFTQ0h6b0VoWnlQTUVEMVlyUUNHWGhtTlNka3h1RHh3ZVBFU2RBZVFWUWJUcXdHN213NkpFQTdZNDk4X2c0VXRIeno3ZS1peGFrOG1TRjRDY3hLMzRVLWFJUTlzZ1dOSjBBcEdQemg0X1ZPS0dyRW5kNnNENklwRXhVRjNGRVBSUGx0TXFqZjRwaVBMczlYdHhRd0xlajBlME0yNnptOUxVY1dUZEtMTGU2Tkk4bGhYMnUyNGZkVU5zTWdsNDJ1aUxlb2FZbWZBZVkyM2tvM2hSWEJmRDZRMzV1XzM4OTlYZVJpY3BGalNkTks0VHFRSUhQUnktcEExR0ROV2Z0b1NWWTZtWlZMVE1sdVUxSm5XMU5oS056Q0QwZDltNHpld0hzbF85Z1hES3N5aC15a1RSdDVsVlpzLWJtYUhOX2xBNmFFX0dxTGVjRDl2MzE0NFhZUFBiNEZnVTcwZ1RRcU1ya3JrQTRSLTRzd2R1NmU2?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-23T08:42+08:00",
+      "importance": 2,
+      "risk_score": 0
     },
     {
       "title": "Cryptocurrency market activity cools while tokenized stock trading heats up, with on-chain transaction volume exceeding $37 billion in the third quarter - 富途牛牛",
@@ -114,62 +161,14 @@
       "risk_score": 0
     },
     {
-      "title": "專家看台積電法說「已確認訊號」！半導體晶片需求仍強 盤點「8檔ETF」規模、績效雙成長 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMikgNBVV95cUxObHNtd3JHbWFGRndnelB5ZXo1ZEhLRmZaZ3JubmYtWHdPVEpLRk5DYXk1T1RBdkNfS1pWS1k0NzlNaEctb0pnejQ4WXVpbzN6WDhhbE91aUJUV3RLWmFCQXhlYUgtQlRxRmtMemhHd2ttY2Z6a1IwRHkyaDZXRnlyWWlCWTFNcDFHbDdBbl9uWnlfc3gxZG1XUmFabERoNFlSVXVKaEpLZWlwNlo1Zjk3Smk0ejVUMDN3eHVuYXRaN0NVNWMtMEE2WU5teks4VjY1Zy1NVjN2RG9QU2pCMUZDaFo1WElZSzRvYXBJX01CcU0wRDhPNVNsR2FjRkd0NGpwdW80cVZGMmQxMUtiX2ZLU1NOQXdrQVN5MVFmdHdiSENYdlJVbU5GYzBNeWJXTHI2ZjVfa1R5YXJ5VlZrb1hDcVBab2VYNnI4aEhMNEhMdDZIMUtJWkpmVFlkSHBVNkdYVmhGYkJMb2VuVm5Pd0JNSndudkVJZXZkMEhaR3JndUN6OHFsLWF5RDJOMUdhdHBYbFE?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-22T23:55+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
       "title": "Why This JPMorgan Strategist Thinks the Stock Market's Tailspin Might Have Run Its Course - Moomoo",
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQY0pQdXA0NGtMRElQMVVHM0FES3Z5QU1qczVhd1JHUG5CazZPUC1IU1B1Y1MtTWhIdzZRM1NCdVp0dnhVYmg4T0I4Zml4Y2J6ZGVBQnhoUUlvTlk3VG5ra3l1M25TUkxPTFByT1BfWWtjUUFQbWFueFFTbE9nRmZibEp6bVRoUjJkak1uSUxSRG5lWDNaZ3FyTFRYNWV5cVFBRjdsSUhDY1lHbHM1Q3NtM2VR?oc=5",
       "source": "Moomoo",
       "published_at": "2026-10-22T23:22+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "U.S. Stock Market Movements | Chip Stocks Decline Broadly; Intel (INTC.US) Falls Over 5% - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPT3M1LVRzSVRWNHN5M05RM1lMbXoyUEYyWnR0dWVRT0dkRHlEVURZS0VnMDN4SUlCRDZGRVpPX1QybHBDeUgtOWozMGNOcXFzbS1JdDNEWTF2dFh5REJMUWRkeG5DSUYwRDBKeUtTUEtJT1RNaGJNN3Z2TFllZmRmRVRaQVFlVUFkRVRYVHFqNEo5YmZLcGZpNWpVb1NVcVJDVTZXeEQ1d05VR1NTNFE?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-22T22:26+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "JPMorgan: The sell-off in US stocks may be nearing its end, with semiconductors serving as a key barometer. - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQcUpsSGNUOUI0TW84b3BtLWNEWm9SZXVmMW1CbVpUZzRyb3JSUzFIaHpWSUlGYUtfSHgwa1B0NUc3TjlyS0RDVXZqV0lnMmZEV1J5M29abXR0SW9CZUYwdWt5RmJDTzBPZm1PaExpbU9zSzdnSi1yOXNUb1d4eGdIRWZNUGtkN3hZSV9uSllGQzN5UzJoMDhN?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-22T21:20+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Stock Market Today: S&P 500, Dow Jones, Nasdaq 100 Futures Drop Following Asian Market Sell-off, Middle East Tensions— NFLX, SPCX, SMCI in Focus (UPDATED) - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMiqwJBVV95cUxOWWF4VHdHR3VfZXhwVjNzODRhUG93MC16RFZqMDYyZVJ2QnFteng5WVdlM2hxLURkOUZaVUxPeE10bGFhbnByTDQyVU1yMkN2Ykhqb1pIRm8zWGMxdGR2MC1TT2Y2VG9pSTdHRVZBUE5rWjF2b09BLVZ4TFRTRFFidEIxOUR4eU5PMGlQZ2FVUU05ZlBQNFprekV2RzJmbGxSRVpuTlRfYlo2eDhleGxQNTVDQm5wenFzVzhvZW5mSXhNUm5WMVUzejg3Z0p5bHRzeUx2RWRWaWFtSWhfTXE2NXhXUURINXh3V0x0YzVrWGNEUjQ5c09VOHoyeEhVNzJRS1J0UGR0YmkxcDUydTQ0WGxWMmJDbnZPQ1RFOWJJaFdzQ1dKcWFnWEI2SQ?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-10-22T20:37+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股震盪逾千點！兇手抓到了？分析師點名「7檔潛力股」有望迎反彈 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMimgNBVV95cUxOWWdiSXdid2RQRC1Da3pHeURPTnE5WDZzaUZ3dlY5WFB2TlVFT1MxQ3Fmbm43anRNX3BDN0xYdGUwNjh0WXFVYl9TT2ZzTkFfS25vdW9FMlBlVU9tdEJ1OEE4RjhHaTRKQ0ZtQW9sV2pUZHBhZHY0ZmpUQVFOVzQxOHotUEJ4dzBDV19rMjFxU0U3dHYyUWIyOE1JbzdmeVJPNk1BM0txTkgxcUdZUEl1Y05qMy1wLW4yaTlzUmI2NEk5a2RQdnl5OVVhdjRSbGd6NzR1VXRaR01kbjQzNFVSbC1FV0l6bUFYQUE1WWZmUFBUbGNZLTJFb2Z1MDdVOTBqNHlaakFndEdQMUJVV3Vnd0lvV3lIaHNHTWx3NXJPMWJ5dWhpbk5fRlVoellpNTFrZEEtVDlVbW5IV1lKbGVkZmxLYU1mMzQ1Vi1waHRhQ3FUbTJ5OHhLYWJWaGc3Z1RRczlJQlJ2cFBMUWVIQTYycFM0NzJGenBZcHZ4eDNpdFFkMXJJYUZseC1pRThHYU5uWnBFd2NkTEtZQQ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-22T19:45+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Meta and Tesla Lay Bare Stock Market's Biggest AI Puzzle -- Barrons.com - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQSkxqaS1mNUFmVEhNSkplU2ZDZC1TYmdzOHh0bUhNUGhaMW0yMmVjeHFZTnlhZHBNcjFISF80VnJDS0FMeG5jTkpTTEtDSTlVeTZrX0xDNWpWb01DcFJkV3dqRFJSbExLOGZ5WndJdlNFTlNDcU1adExuNFQ3NEZwSWxjeHkxa2lPYjgwMXZCdmtRODhKbEdz?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-22T19:44+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-23T08:44:05+08:00"
+  "updated_at": "2026-10-23T13:23:43+08:00"
 }
