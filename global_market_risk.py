@@ -120,6 +120,13 @@ def q(m,key):
     return float(v) if isinstance(v,(int,float)) and math.isfinite(float(v)) else None
 def compute_risk(markets,news):
     pts=0; reasons=[]
+    oil_over_100=[]
+    for key in ("WTI_OIL","BRENT_OIL"):
+        quote=markets.get(key) or {};price=quote.get("price")
+        if isinstance(price,(int,float)) and math.isfinite(price) and price>100:
+            oil_over_100.append(f"{quote.get('label') or key} {price:.2f}美元／桶")
+    if oil_over_100:
+        return "red",max(pts,3),["原油超過100美元／桶："+"、".join(oil_over_100)]
     for key,th,add,label in [
         ("US_SOX",-2.5,2,"費半明顯下跌"),("US_NASDAQ",-2.0,2,"NASDAQ明顯下跌"),
         ("JP_NIKKEI",-2.0,1,"日經明顯下跌"),("KR_KOSPI",-2.0,1,"韓股明顯下跌"),
@@ -149,7 +156,8 @@ def ticker_lines(markets,news,level,oil_watch=()):
         oil=markets.get(k) or {}
         price=oil.get("price")
         if isinstance(price,(int,float)) and math.isfinite(price):
-            aux.append(f"{oil.get('label') or k} {price:.2f}美元 {signed(oil.get('change_pct'))}")
+            zone="常態參考區" if 70<=price<=80 else "高於常態，觀察" if 80<price<=100 else "超過100美元警戒" if price>100 else "觀察"
+            aux.append(f"{oil.get('label') or k} {price:.2f}美元 {signed(oil.get('change_pct'))}（{zone}）")
     if aux:parts.append("｜".join(aux))
     for n in oil_watch[:2]:
         title=re.sub(r"\s+-\s+[^-]{1,45}$","",n["title"]).strip()
