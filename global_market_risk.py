@@ -153,10 +153,19 @@ def main():
       "ticker":ticker_lines(markets,news,level),"markets":compact_market(markets),"active_news":news[:12],
       "source_note":"全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。"}
     old=load_old(); comparable_old={k:old.get(k) for k in payload.keys()}
-    if comparable_old==payload:
-        print("no material change");return 0
-    payload["updated_at"]=now_tw().isoformat(timespec="seconds")
+    changed=comparable_old!=payload
+    now=now_tw()
+    checked_at=old.get("checked_at") or old.get("updated_at")
+    try: last_check=datetime.fromisoformat(checked_at)
+    except (ValueError,TypeError): last_check=None
+    # Heartbeat once an hour even if headlines and the traffic light did not change.
+    # Never certify a successful check when market feeds are unavailable.
+    healthy=sum(q(markets,k) is not None for k in MARKETS)>=3
+    if not changed and (not healthy or last_check and now-last_check<timedelta(hours=1)):
+        print("no material change; heartbeat not due or feeds unavailable");return 0
+    payload["updated_at"]=now.isoformat(timespec="seconds") if changed else old.get("updated_at",now.isoformat(timespec="seconds"))
+    payload["checked_at"]=now.isoformat(timespec="seconds") if healthy else old.get("checked_at","")
     OUT.write_text(json.dumps(payload,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
-    print(f"updated: risk={level} news={len(news)} reasons={reasons}")
+    print(f"updated: risk={level} news={len(news)} reasons={reasons} heartbeat={healthy}")
     return 0
 if __name__=="__main__":raise SystemExit(main())
