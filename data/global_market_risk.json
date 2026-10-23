@@ -4,21 +4,21 @@
   "risk_score": 7,
   "risk_reasons": [
     "費半明顯下跌",
-    "日經明顯下跌",
+    "韓股明顯下跌",
     "港股明顯下跌",
     "出現重大風險新聞"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 -4.9%｜NASDAQ -1.6%｜日經225 -2.6%｜KOSPI -0.3%｜台股加權 -1.8%｜恆生 -3.9%",
+    "⚠ 全球市場風險｜費半 -4.9%｜NASDAQ -1.6%｜日經225 -1.6%｜KOSPI -6.7%｜台股加權 -1.8%｜恆生 -3.9%",
     "⚠ 全球市場風險｜美債10Y 4.95%｜VIX 19.0",
     "⚠ 全球市場風險｜Southbound Capital Flows | Southbound capital recorded net sales of HK$9.218 billion; mainland ",
     "⚠ 全球市場風險｜台股大跌近700點！千金股海嘯第一排 5檔跌停",
-    "⚠ 全球市場風險｜Tiger Brokers Clinches Best Retail Broker in Singapore at SIAS Investors' Choice Awards 2026 - ",
+    "⚠ 全球市場風險｜Cryptocurrency market activity cools while tokenized stock trading heats up, with on-chain tran",
+    "⚠ 全球市場風險｜Top 20 by trading volume | Apple hits a new all-time high against the market trend, with its ma",
+    "⚠ 全球市場風險｜Meta Tumbles 6% on AI Spending Fears, 10-Year Yield Falls Below 5%: Stock Market Today",
     "⚠ 全球市場風險｜專家看台積電法說「已確認訊號」！半導體晶片需求仍強 盤點「8檔ETF」規模、績效雙成長",
-    "⚠ 全球市場風險｜Stocks retreat as tech mood sours, oil prices jump",
     "⚠ 全球市場風險｜Why This JPMorgan Strategist Thinks the Stock Market's Tailspin Might Have Run Its Course",
-    "⚠ 全球市場風險｜U.S. Stock Market Movements | Chip Stocks Decline Broadly; Intel (INTC.US) Falls Over 5%",
-    "⚠ 全球市場風險｜PC Jeweller stock defies market gloom, rises 90% in 2026: Can it hit Rs.27 after breaking Rs.20"
+    "⚠ 全球市場風險｜U.S. Stock Market Movements | Chip Stocks Decline Broadly; Intel (INTC.US) Falls Over 5%"
   ],
   "markets": {
     "US_SOX": {
@@ -48,13 +48,13 @@
     },
     "JP_NIKKEI": {
       "label": "日經225",
-      "price": 62907.84,
-      "change_pct": -2.6
+      "price": 61921.35,
+      "change_pct": -1.6
     },
     "KR_KOSPI": {
       "label": "KOSPI",
-      "price": 5533.77,
-      "change_pct": -0.4
+      "price": 5353.85,
+      "change_pct": -6.6
     },
     "TW_TAIEX": {
       "label": "台股加權",
@@ -90,26 +90,34 @@
       "risk_score": 4
     },
     {
-      "title": "Tiger Brokers Clinches Best Retail Broker in Singapore at SIAS Investors' Choice Awards 2026 - 全球企業動態 - Quamnet",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE4zN0RnT3ZNaUtXeTdWdDJ2bUstTFhZRXlFMkVaaHNTaWtmT2xISjVsbHR5aUdRTEVYRF9mekU0UkxwMnd5RUU2cGhvQTdqTEVKaTBJTlhFX0FGcXc0T0NB?oc=5",
-      "source": "Quamnet",
-      "published_at": "2026-10-22T14:00+08:00",
-      "importance": 3,
-      "risk_score": 4
+      "title": "Cryptocurrency market activity cools while tokenized stock trading heats up, with on-chain transaction volume exceeding $37 billion in the third quarter - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOTzJrRVVYQ1pLYU0wSjFKdk9UeGJ6QVQzVG5IeXpBRVlxUGtMc00tRnNZWkFYQk9oQW9MREpMcS0xU1kyT2sxVWxNQkF0czBmSXd3QVR0cGxIZEt0ZTZLa1ZyTDlIUmo3LWN6Y1FEcXV1dzllYl8telIwVGloY25LN2NTUFBkbUdNb2xTSlpjTm1PdUg3TWlYbzRKNUo4aHVNX0U0cmZ4RXJRd1RyLVdWVG1fZFVfTXdGOUE?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-23T07:21+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Top 20 by trading volume | Apple hits a new all-time high against the market trend, with its market cap closing in on NVIDIA; SpaceX faces a wave of 1.3 billion shares becoming tradable, sending its stock down 9%; Moderna's melanoma vaccine data was leak - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQdzhvbFNtUUE2bEhLZUt3cV9QSXNGRmFmcDZyZFZ3UmlZWjNYVmVYbG9SZzdadGdRWmRvcHFGSmx3dnVpRXVMbS1MaTJtS3F6YjloeWN4dENiSXJZcFdyME9OeThnUlJxb3ZDZTlVUlM2cEVkYWgxVG01RURYX3pCQlh0aTloWEh3ZXV6LXNhUE43UQ?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-23T05:37+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Meta Tumbles 6% on AI Spending Fears, 10-Year Yield Falls Below 5%: Stock Market Today - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPaXJrU2EwaUpacVJNVm9oVFk2azRVYUxNNlRnUjFQUi0xcTZ6V0xVX1l3SFdQQ1ljaC1xWG1FY1UtSVNpNEMyTnFnNnNYY0dtYU9aRVhlME1jV2dOLVlVVWQxT0V3SU1SeFJSc3pURFpNcy1MekcwYmQ2Sm9SVzlWSDMxZ0FSWEZnZ0RvN0pQNmdkMUZ3YnVyQi03QmEwNWtCZTd2Ml9jdnZZQVV1VTVhRjFvVE1VN2I1NzFIeXNXM2owQXpaT2cxRXVMVGNQS3M0M1ZOSlQ3OA?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-10-23T01:26+08:00",
+      "importance": 2,
+      "risk_score": 0
     },
     {
       "title": "專家看台積電法說「已確認訊號」！半導體晶片需求仍強 盤點「8檔ETF」規模、績效雙成長 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMikgNBVV95cUxObHNtd3JHbWFGRndnelB5ZXo1ZEhLRmZaZ3JubmYtWHdPVEpLRk5DYXk1T1RBdkNfS1pWS1k0NzlNaEctb0pnejQ4WXVpbzN6WDhhbE91aUJUV3RLWmFCQXhlYUgtQlRxRmtMemhHd2ttY2Z6a1IwRHkyaDZXRnlyWWlCWTFNcDFHbDdBbl9uWnlfc3gxZG1XUmFabERoNFlSVXVKaEpLZWlwNlo1Zjk3Smk0ejVUMDN3eHVuYXRaN0NVNWMtMEE2WU5teks4VjY1Zy1NVjN2RG9QU2pCMUZDaFo1WElZSzRvYXBJX01CcU0wRDhPNVNsR2FjRkd0NGpwdW80cVZGMmQxMUtiX2ZLU1NOQXdrQVN5MVFmdHdiSENYdlJVbU5GYzBNeWJXTHI2ZjVfa1R5YXJ5VlZrb1hDcVBab2VYNnI4aEhMNEhMdDZIMUtJWkpmVFlkSHBVNkdYVmhGYkJMb2VuVm5Pd0JNSndudkVJZXZkMEhaR3JndUN6OHFsLWF5RDJOMUdhdHBYbFE?oc=5",
       "source": "Yahoo股市",
       "published_at": "2026-10-22T23:55+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Stocks retreat as tech mood sours, oil prices jump - Macau Business",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOUmN2QVNFWW9ZV3hTeFhkLTRwUmFMYTloc045VEd1SGpwNkRfN3RDZ0FQRUMxbkYxTEtualk1WUZWaE8weWxuNmQ2Y1U3WElQVU1pYXBXZ1J5RURNQjNNYmVjZGUxWXg1bG93d0hRZnhNYXhsaHl2dC1vQl9jLXI2RGJxZXk?oc=5",
-      "source": "Macau Business",
-      "published_at": "2026-10-22T23:43+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -130,26 +138,10 @@
       "risk_score": 0
     },
     {
-      "title": "PC Jeweller stock defies market gloom, rises 90% in 2026: Can it hit Rs.27 after breaking Rs.20 resistance? Expert view - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxOZ1FFOUNwWWtUUFF0djc4N1N1V2FfMHlXS0o4Y0lvS1RMU09YalNEQ2hTM092NTJ6Z0ZEMVcyZkNySnZMVWgzQWdJNzk1eG12UVM2cTR5ZnU5Y25TdjVrelhsYlJIT2JkQzdKMm16WWotQy1lQjRHTnc3VE1YaVYzV2l2c0lUM3VDTVUyYWR3QnZFd2Q1TlhpUkpXaENfd1k4enBILUIyd3h6NThiRVFFQ0gxbUtFcnE3RWdxSlhyRDZUR1dyVFVtTWlBeDJBbkxBSGlTVm4yVTVKMldVdmdTU3BQTU05OTBVN2U3Nm9Hb3ZySWRYYUVDdm4wQjBLSVFV?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-10-22T21:46+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
       "title": "JPMorgan: The sell-off in US stocks may be nearing its end, with semiconductors serving as a key barometer. - 富途牛牛",
       "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQcUpsSGNUOUI0TW84b3BtLWNEWm9SZXVmMW1CbVpUZzRyb3JSUzFIaHpWSUlGYUtfSHgwa1B0NUc3TjlyS0RDVXZqV0lnMmZEV1J5M29abXR0SW9CZUYwdWt5RmJDTzBPZm1PaExpbU9zSzdnSi1yOXNUb1d4eGdIRWZNUGtkN3hZSV9uSllGQzN5UzJoMDhN?oc=5",
       "source": "富途牛牛",
       "published_at": "2026-10-22T21:20+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Tesla, SpaceX, CoreWeave, Netflix, and More Stocks That Explain Today's Market -- Barrons.com - Moomoo",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQWFZjaHVQWG1rQzhMc2pTcVBHcWRWRFFQemoxZldkNEhaQ05Rdnhvem9QVWNLS2NUWDdvVmUyVjhCUmdJXzBFLWwtenVxcGVQdHhlUElPT25YdmFlSlhlRWd1V2JwR2tjRnBnbXgzYU02Tnl2UmNJVHNheTg0aWN5NHREd3lLVjI1NTdFOWxqZ2hLakdyUUtUOG14VXFPSWIyY0hsUkEtRXdGZ3U4N0E?oc=5",
-      "source": "Moomoo",
-      "published_at": "2026-10-22T21:09+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -168,8 +160,16 @@
       "published_at": "2026-10-22T19:45+08:00",
       "importance": 2,
       "risk_score": 0
+    },
+    {
+      "title": "Meta and Tesla Lay Bare Stock Market's Biggest AI Puzzle -- Barrons.com - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQSkxqaS1mNUFmVEhNSkplU2ZDZC1TYmdzOHh0bUhNUGhaMW0yMmVjeHFZTnlhZHBNcjFISF80VnJDS0FMeG5jTkpTTEtDSTlVeTZrX0xDNWpWb01DcFJkV3dqRFJSbExLOGZ5WndJdlNFTlNDcU1adExuNFQ3NEZwSWxjeHkxa2lPYjgwMXZCdmtRODhKbEdz?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-22T19:44+08:00",
+      "importance": 2,
+      "risk_score": 0
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-23T06:21:55+08:00"
+  "updated_at": "2026-10-23T08:44:05+08:00"
 }
