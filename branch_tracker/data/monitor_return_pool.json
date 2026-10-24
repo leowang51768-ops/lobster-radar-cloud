@@ -363,6 +363,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-10-24T15:59:13+08:00",
       "reason": "manual_add"
+    },
+    "1605": {
+      "code": "1605",
+      "name": "1605",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-10-24T15:59:39+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
