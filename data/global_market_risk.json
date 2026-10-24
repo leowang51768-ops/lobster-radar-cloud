@@ -9,13 +9,13 @@
     "⚠ 全球市場風險｜費半 -6.3%｜NASDAQ -2.8%｜日經225 -0.3%｜KOSPI -3.2%｜台股加權 +0.0%｜恆生 -2.4%",
     "⚠ 全球市場風險｜美債10Y 4.99%｜VIX 19.4｜WTI原油 103.44美元 +4.0%（超過100美元警戒）｜布蘭特原油 111.66美元 -1.3%（超過100美元警戒）",
     "⚠ 全球市場風險｜油價觀察｜〈能源盤後〉中東戰火 阿聯酋漏油 利比亞減產 多重供應風險推升油價創近6個月新高",
-    "⚠ 全球市場風險｜油價觀察｜〈能源盤後〉沙國能源設施遇襲、阿美要求員工撤離 Brent原油飆4%創5個月新高",
+    "⚠ 全球市場風險｜油價觀察｜中東地緣緊張推升油價 市場憂通膨；歐元因PMI數據疲軟走跌",
     "⚠ 全球市場風險｜From Year-to-Date Highs to Valuation Trough: South Korean Stocks’ Forward P/E Ratio Hits Lowest",
     "⚠ 全球市場風險｜Hong Kong Stock Market Update | AI Hardware Stocks Decline Again as Meta’s HK$825 Billion Spend",
     "⚠ 全球市場風險｜Institutions Forecast Rush in Exports by Lithium Battery Firms, with Q4 Sales Expected to Maint",
     "⚠ 全球市場風險｜個股概覽 | 個股 - 股市",
-    "⚠ 全球市場風險｜哈佛大學2.2兆捐贈基金重押AI股 台積電與SpaceX成布局核心",
-    "⚠ 全球市場風險｜只要台積電破月線「就買進這檔」？ 他喊全力做多：勝率逾6成"
+    "⚠ 全球市場風險｜只要台積電破月線「就買進這檔」？ 他喊全力做多：勝率逾6成",
+    "⚠ 全球市場風險｜24日台積電運動會取消 基層員工「每人加發3萬元獎金」"
   ],
   "markets": {
     "US_SOX": {
@@ -108,15 +108,7 @@
       "title": "個股概覽 | 個股 - 股市 - CMoney",
       "url": "https://news.google.com/rss/articles/CBMiREFVX3lxTFBfVGtPUmhQeF9nalNLNm9zTGJWQlREWTlFa2dVeEhkNElpN1d0OXlyaFF3U3NaYnBodklvejVEU1YtdkNl?oc=5",
       "source": "CMoney",
-      "published_at": "2026-10-24T03:03+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "哈佛大學2.2兆捐贈基金重押AI股 台積電與SpaceX成布局核心 - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE51cmFIM0VyUk5aTWFzemZtanVqaGtuM1pFLUNISG1HZ29Wdl9KS08zVmNzWHppc1NBMUVlYl8tNG9MS0R3ajJLZlM2ajlReXdOVmVXc0RIZ0k?oc=5",
-      "source": "自由時報",
-      "published_at": "2026-10-24T01:39+08:00",
+      "published_at": "2026-10-24T05:02+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -129,10 +121,26 @@
       "risk_score": 0
     },
     {
+      "title": "24日台積電運動會取消 基層員工「每人加發3萬元獎金」 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi3gJBVV95cUxPYnp4ek16TDBndGJ3Z1BnSFg0azB0ZXdpNTBSMmRSQ2RjV3JTYlVTNEtyX1BTYXVtWUpXcVp2bllxclZ4ZTV6RWw1TnRXcFNBWnBNOFlyZlNWVmdiaHROakZQalFON0JfSU1QcW5JYXhEZGN6RHJ5RjljNzRuSUN0T0hHbG92dFJ0V0Mwcng2aUo1Ulp0XzliRTl6dXRMMm55TzRYMG9LNzRjUkNZTUp4Rjc2NFdkdG1xQzNudU82M1p3WmlZN0JDanF1Tm4tRDhUbjZ2X0R0TlJPWEFtbm11Q1diUGU0aHVJZHFiLVFfRWozQjNxVm1FMXlKc3dacVdTeDdLbUdMRGpqZFgydEh4QmJVUWlVbk94eENWWkVSVU5lUlFPcGR4SElDVkJUaEtWQ1lld0ZrWVNXbHI2X2FBZ2xYQUg1NDc2enNXOEFTMmRmbXFkX2NVWGNpS1piQQ?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-23T22:11+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
       "title": "台股震盪新手嚇到！ 他抱2檔ETF憂問「會下殺到4萬」內行勸寬心：刪掉APP - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMilwNBVV95cUxNQXJKT25hSGY5c2hBRGJfMVEwMkx3aUlhVTh0eWRTNlp6bTFZWFpEUXZGdEwyUWtvVGcxSGRreXhJWW9QLWg4RFhZRTc4X3ZGd0NpU1N1WGtmMTFGX0JxM28tdW8wbXlYWHNHVDJjbDVTN1NFNmlSRDRuV0k3WjV0YWw1OFVYRzVZOEx1aFRBUTRQaWItWndURXlwNWtoLUR5OWRfdkV3WGFOWjNqaEJqQVRNbzZ2bjdneUxzQ3R5S2JPWGNKVkVWa0tqZ0RkYWtFeUR3TTJhTElyTk0yRjJhYm1Xem9xWVlFS0h1dHpmdnNTYklQdU9UVE1kTU9jQU1jd0szQ0w5bVFzd2tEeFoycDdzLTJDTHNIMXRzcWR2djZlMEdFY2JJbzV6dGRfZEVQUGpVUjBXUTFla0hpbHRfMHA1R1BycWNETzN3U3pEdTY2S1N0R01RSjVtWUVJdnFPY1ViS1RMVlBGMm1ERUJUY1RXNjI4Y2xRRUY1X0toS0R3Nk5SMFVsc244SXM0TS0xdEd4eGJhZw?oc=5",
       "source": "Yahoo股市",
       "published_at": "2026-10-23T21:23+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Stock Market Today: S&P 500, Nasdaq 100, Dow Jones Futures Fall Ahead of Global PMI Data—Western Digital, Newmont, Crown Castle in Focus (UPDATED) - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMiowJBVV95cUxNZzY1UkZRUDBULW9FZW9rYzYtUmM5V0FoRlQxMjBlY2I2VFpyUFpjZ1RBcktRRXJaNVVoeXotN0FYb1FDZ2VwaVQtLUdONXJ1THBaNmhVRTZEY21ubDhOUGlreTc3VHhVbE1oSW9fQndNT0UzRHNaRnJaZGFqb2tkMDZuQ0dUOUxOa2VwRXNWSlRiRmtieFJnSjJYSVVRWEFaNWRwd2tzVDRReE9HUmJDV09OaTRpcDVyZXRTWkZYZEFpeVFVVkdPXzh2bm11Z0Y2LUR6M25Rc2hWTkYxQnVpV0V6Z3IzMnNTbl9XMEl0Y3FjaTItYWhGVUt6aVJNenRBWlRFTkEtOWQyNklSekVLN2k0aC00STRNTkZQcVZWeF81cUk?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-10-23T20:50+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -167,37 +175,29 @@
       "published_at": "2026-10-23T18:18+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "史上最大包！台積電「員工運動會大紅包」每人平均領3萬元 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMilANBVV95cUxPNkR4X0ZES0NrbjJYRkZUWUFTb00xLUtnWnk0ZjlIQ1l4U1ZtV2txTmlpVWhTbWc0cFpyZ3Y5YnpqUGlucEtib1ZXc2xSRUZEZ3lfc0JvWS1Uc2R0bkJXb0NiN0hwZnEyQ2tjaXo4TGo5eVdTLVZTVmFrX2xfa1ZIWGxjRGV3cnl4cjdRS05CeU1lTUVEVDduUTdnbmswZ2t2T09RaHZfU2NWM0RLQklZOEpIdHZKTHFEWkZEVlVsLXdnMFFaam5qT0h4cHZqanJzQ3I2eDVQakhsQUNhNWpnZlBRVmEzeU5NbkY0XzhYYlA2NDR3Y1kzQjc2LUNCM25DQnBaREdSMFNEMGZ1M29RcFpnUHRlRV95di1oaVNPam9FMkMtbnZET1lhUXB4X0RORUVCQ0diLWg5eE5iVjVIdUtmNm82WEttLVQ0YndoSTRMZEpRc05IcDVweFRMa3VMUmo4REJqV1VOVnBlQlhjcWtURVF0d1FuUDFZRFhUaXNMdkM3WTNEM0pEVVRUajgxS3Nmdw?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-23T18:00+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "oil_watch": [
     {
       "title": "〈能源盤後〉中東戰火 阿聯酋漏油 利比亞減產 多重供應風險推升油價創近6個月新高 - 鉅亨網",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBiTVV3aWZIM1JLMGdKUGpibXZDU2pjZktwSElOUGt3YnBocUxTWTFLVmlMUUdXbHlKZWpLQ2tiZnREX253UU9qaHZpLVltdzA?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1leWdLRjRJUmxfeEFGMmUwS0c4cHRvSVJzVndoaGRMLVY2WlNza0loRGhmQ2N0eWl3UTllVEhtNjgtbkE4VmE2a0RrRQ?oc=5",
       "source": "鉅亨網",
       "published_at": "2026-10-24T05:09+08:00"
+    },
+    {
+      "title": "中東地緣緊張推升油價 市場憂通膨；歐元因PMI數據疲軟走跌 - 蕃新聞",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE8xUnhhSWRnbGlHTE1Zc29wUGY3U3JJMzgxMEFOU1MxeV9fMmI3cWplYTRwRGlTV0RNOE1lU0gxeTV1ZlhVT0RRaHpsMEdmOEFuSnc?oc=5",
+      "source": "蕃新聞",
+      "published_at": "2026-10-24T06:48+08:00"
     },
     {
       "title": "〈能源盤後〉沙國能源設施遇襲、阿美要求員工撤離 Brent原油飆4%創5個月新高 - 鉅亨網",
       "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5uMkp6ZkZaLUR4dVlXS0RzcGZUX2ZZd3BTbHo5QmI2WjNXamxKcXkwbHYxY2ItczBNWFVKOXd1bkQyUXhRSWE5N0t0Wmd2Q2M?oc=5",
       "source": "鉅亨網",
       "published_at": "2026-10-23T09:46+08:00"
-    },
-    {
-      "title": "油輪運輸成本飆升創紀錄 美輸亞洲原油訂單銳減半數 - Life 生活網",
-      "url": "https://news.google.com/rss/articles/CBMi3AJBVV95cUxOR2szT2piSWsxX0RoSUVzRHhyMlhyMmlaWU1udjRjcU5UaWFmOEFzN3d5RE1sSnlKSEV1cVljck9GLW1Cb21JVGZjclhQV2FSNjlDMTRwNFc2SW5EbmVkNTFWYVU5N3pBc2hVcW1mRVZ3MWQ1TTV6RDhDVElnN3QxSzhjX2lIRGVOWVp2Ul90WmFUZlhtb3d4Wjlpa3IwZ2hXRDE2RlcyVWk0Y1ZVX09KVkZqb3N1aDlKcFhVaFMyejJaa3NoQVE3M01ldk5yMFBCREgyRzZESUt2clRpY2U1T3gtY2ZpX19RLWR3ZFpvWWVDQjlJZTNITUE4SlYyWk5ZSkd4bERCM19ldkxLdjNnUzBWeFRLUkREVXFrZ0NyNHdnTXF2S3BKek9MbGFDV0RLbFc5V0hZSVhiQnZDWEtsOGlnVFQwUlZPNHFOZXRiSU9zMktkZ19oSkdtQW0?oc=5",
-      "source": "Life 生活網",
-      "published_at": "2026-10-23T09:22+08:00"
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-24T05:59:08+08:00",
-  "checked_at": "2026-10-24T05:59:08+08:00"
+  "updated_at": "2026-10-24T08:15:12+08:00",
+  "checked_at": "2026-10-24T08:15:12+08:00"
 }
