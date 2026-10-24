@@ -483,6 +483,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-10-24T16:06:43+08:00",
       "reason": "manual_add"
+    },
+    "2206": {
+      "code": "2206",
+      "name": "2206",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-10-24T16:07:09+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
