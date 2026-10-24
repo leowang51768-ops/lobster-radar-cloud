@@ -691,6 +691,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-10-24T16:18:42+08:00",
       "reason": "manual_add"
+    },
+    "8926": {
+      "code": "8926",
+      "name": "8926",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-10-24T16:19:03+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
