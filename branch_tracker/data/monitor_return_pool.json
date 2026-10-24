@@ -419,6 +419,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-10-24T16:02:44+08:00",
       "reason": "manual_add"
+    },
+    "1905": {
+      "code": "1905",
+      "name": "1905",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-10-24T16:03:11+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
