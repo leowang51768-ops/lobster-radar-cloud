@@ -507,6 +507,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-10-24T16:08:03+08:00",
       "reason": "manual_add"
+    },
+    "5522": {
+      "code": "5522",
+      "name": "5522",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-10-24T16:08:32+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
