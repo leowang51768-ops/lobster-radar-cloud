@@ -715,6 +715,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-10-24T16:19:50+08:00",
       "reason": "manual_add"
+    },
+    "2454": {
+      "code": "2454",
+      "name": "2454",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-10-24T16:20:11+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
