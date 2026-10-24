@@ -915,6 +915,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-10-24T16:29:41+08:00",
       "reason": "manual_add"
+    },
+    "7805": {
+      "code": "7805",
+      "name": "7805",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-10-24T16:30:09+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
