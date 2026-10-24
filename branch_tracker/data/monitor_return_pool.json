@@ -579,6 +579,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-10-24T16:12:04+08:00",
       "reason": "manual_add"
+    },
+    "2891": {
+      "code": "2891",
+      "name": "2891",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-10-24T16:12:30+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
