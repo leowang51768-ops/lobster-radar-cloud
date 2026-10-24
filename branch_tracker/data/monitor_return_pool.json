@@ -251,6 +251,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-10-19T14:18:17+08:00",
       "reason": "manual_add"
+    },
+    "1101": {
+      "code": "1101",
+      "name": "1101",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-10-24T15:51:38+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
