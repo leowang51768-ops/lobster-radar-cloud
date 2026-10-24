@@ -707,6 +707,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-10-24T16:19:27+08:00",
       "reason": "manual_add"
+    },
+    "2330": {
+      "code": "2330",
+      "name": "2330",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-10-24T16:19:50+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
