@@ -539,6 +539,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-10-24T16:09:50+08:00",
       "reason": "manual_add"
+    },
+    "2707": {
+      "code": "2707",
+      "name": "2707",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-10-24T16:10:16+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
