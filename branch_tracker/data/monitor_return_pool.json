@@ -627,6 +627,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-10-24T16:14:53+08:00",
       "reason": "manual_add"
+    },
+    "9917": {
+      "code": "9917",
+      "name": "9917",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-10-24T16:16:00+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
