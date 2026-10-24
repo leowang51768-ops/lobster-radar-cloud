@@ -299,6 +299,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-10-24T15:54:45+08:00",
       "reason": "manual_add"
+    },
+    "1303": {
+      "code": "1303",
+      "name": "1303",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-10-24T15:55:37+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
