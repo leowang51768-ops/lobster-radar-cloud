@@ -3,19 +3,19 @@
   "risk_level": "red",
   "risk_score": 3,
   "risk_reasons": [
-    "原油超過100美元／桶：WTI原油 103.44美元／桶、布蘭特原油 111.66美元／桶"
+    "原油超過100美元／桶：WTI原油 103.27美元／桶、布蘭特原油 111.70美元／桶"
   ],
   "ticker": [
     "⚠ 全球市場風險｜費半 -6.3%｜NASDAQ -2.8%｜日經225 -0.3%｜KOSPI -3.2%｜台股加權 +0.0%｜恆生 -2.4%",
-    "⚠ 全球市場風險｜美債10Y 4.99%｜VIX 19.4｜WTI原油 103.44美元 +4.0%（超過100美元警戒）｜布蘭特原油 111.66美元 -1.3%（超過100美元警戒）",
-    "⚠ 全球市場風險｜油價觀察｜〈能源盤後〉中東戰火 阿聯酋漏油 利比亞減產 多重供應風險推升油價創近6個月新高",
+    "⚠ 全球市場風險｜美債10Y 4.99%｜VIX 19.4｜WTI原油 103.27美元 +3.8%（超過100美元警戒）｜布蘭特原油 111.70美元 -1.3%（超過100美元警戒）",
     "⚠ 全球市場風險｜油價觀察｜中東地緣緊張推升油價 市場憂通膨；歐元因PMI數據疲軟走跌",
+    "⚠ 全球市場風險｜油價觀察｜〈能源盤後〉中東戰火 阿聯酋漏油 利比亞減產 多重供應風險推升油價創近6個月新高",
     "⚠ 全球市場風險｜From Year-to-Date Highs to Valuation Trough: South Korean Stocks’ Forward P/E Ratio Hits Lowest",
-    "⚠ 全球市場風險｜Hong Kong Stock Market Update | AI Hardware Stocks Decline Again as Meta’s HK$825 Billion Spend",
     "⚠ 全球市場風險｜Institutions Forecast Rush in Exports by Lithium Battery Firms, with Q4 Sales Expected to Maint",
-    "⚠ 全球市場風險｜個股概覽 | 個股 - 股市",
-    "⚠ 全球市場風險｜只要台積電破月線「就買進這檔」？ 他喊全力做多：勝率逾6成",
-    "⚠ 全球市場風險｜24日台積電運動會取消 基層員工「每人加發3萬元獎金」"
+    "⚠ 全球市場風險｜台股10月震盪 8檔台股ETF規模與績效逆勢成長",
+    "⚠ 全球市場風險｜費半暴跌、台股周二開盤迎震撼教育？專家揭「持股健檢攻略」 7檔ETF優劣勢一次掌握",
+    "⚠ 全球市場風險｜薔琵攪局！台積電運動會首度因颱風取消 魏哲家釋喜訊：基層員工每人「發3萬獎金」",
+    "⚠ 全球市場風險｜個股概覽 | 個股 - 股市"
   ],
   "markets": {
     "US_SOX": {
@@ -70,13 +70,13 @@
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 103.44,
-      "change_pct": 4.0
+      "price": 103.27,
+      "change_pct": 3.8
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 111.66,
-      "change_pct": -1.4
+      "price": 111.7,
+      "change_pct": -1.2
     }
   },
   "active_news": [
@@ -89,14 +89,6 @@
       "risk_score": 4
     },
     {
-      "title": "Hong Kong Stock Market Update | AI Hardware Stocks Decline Again as Meta’s HK$825 Billion Spending Pledge Sparks Credit Concerns; Market Reassesses AI Investment Returns and Financing Pressures - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNNnliNXFpZzhxT096bHQzS3R1U01JWVY0aWVGcEVNRTQ5aFdxb190NmVJaDRHZU1tNEtxU2FSSm1MOUxwTnhxYmp4UkNQakhiWG1CNEtwV0VaQlM5aU15MkxYVGQzSHZiTHBmZGc1Ym9maHdOMjhQbGVlNDYyMGlNb0pSc0xhMUZvYkEzdnlfejRkWVd5eGhxY1BBSDJqRm45U0FIekF4Y1M?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-23T13:13+08:00",
-      "importance": 5,
-      "risk_score": 4
-    },
-    {
       "title": "Institutions Forecast Rush in Exports by Lithium Battery Firms, with Q4 Sales Expected to Maintain Upward Momentum - 富途牛牛",
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQd2EyNE5Rd0w3ZlcwUzhsTUl5VlBfNUdzMTNLMW9aa1NRRkJBRzYyWkRUTF9VdGswb0l5T01aNUZCOFdEN1kwMnVRVFBnaS1CMFFFMXAtOFkyekg1V2VjZjB4TDgwRk9HeERzRU1GQTRQQnY3NE5aZEx3WVdmc1RsSXdlNFVCMTE1NEVHNHJtZHJFVm5Vdk1HUmZEQ3RZQnVoVjRDMktIVFBSakhlOS1rMmJ3?oc=5",
       "source": "富途牛牛",
@@ -105,10 +97,50 @@
       "risk_score": 4
     },
     {
+      "title": "台股10月震盪 8檔台股ETF規模與績效逆勢成長 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMisAJBVV95cUxQd01wREtzYWlNRC03U0RXME5zTXNmWU1TSWVPcGJVbzhFSGlCcFdoZXFqZTZpNHdZN2dQOU9iR0cxZkxRM2NnMkVpaFBENjRSbE9Zcldmc1JPaFBpWDBGMl96UnY2ZTZNZ3ZFYTdzdm84OW1YeVVWWnJuNTJBYUM0SHdPQ1RqcjdNV1hVcjlSZEF3VDdZemFucDV6WDdFVDhLM2xwOW1Xb3lSdk1JTXduMDhFM0pYVGVVb2ZTWGdTMTQzSXlqMkRBTjlhelVqdWV4OWNJMmpkZ3EwWlFKZkY5RFMyRmJJYl9kcEZvQTJnZDJfdGR1Tjd1Nk12RWFXSEd6a0ZuVTBCek9fLTNwNEw2dzRrY3hBWEtWZjZaR3dkYnNVdFlIUzM0LTljUFA2Y3lq?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-24T09:05+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "費半暴跌、台股周二開盤迎震撼教育？專家揭「持股健檢攻略」 7檔ETF優劣勢一次掌握 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMitgNBVV95cUxQX0tKZUxVQXlWb05hS0ZwR2xCSTQwTEdvekEtUG5nNG90dm5QOHNueVM4ZE50UE9UYnB0dlZITW8zbjRfc3k3QTJhWTJYTHB5cjNhaFRkcXd3TENGMGk4QzhFTmRMNG1UdEJBSVpxanpNOGh1QjBNU3hHYUZEWU9JdjNLdDJJUUN0NHN5SGlrOVhBenRNWjNOV1k1NVRsVE10UkFHcm9ITXh1SnZfMXJMcGNrWmJFSDJrM0h3UFdPWldQNFN3ZW50V1NTSXVHYjVnZzlRWTNmcEhydFZhSjJvb3VDbXpqaWRWZGJaQ0d2Z0RNMER1R0o4MlVKS1psUnppY2ZQMll0aHhlVUs2Qm1md1FYZTRsV2V4MHhTdjByeUl5WTFjeGl4X3UwOHM3MDF6ZWZlYk8xRkVTTlB5Mi1OeXRkbnNLMzROWFV6N2o5bG1iS2NFNkJkaDF1T0o5XzRRQjgzOTlDUHlFMGZWUW8wRTNNazZROW9uOE9XdFJQNXlXSE53THFWYUZtSnJSUGl3VE9SbDVpdVpaeW1ybEZNajItRXMySFFtejBRVTh5T2ZpZERMaFE?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-24T08:53+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "薔琵攪局！台積電運動會首度因颱風取消 魏哲家釋喜訊：基層員工每人「發3萬獎金」 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi7gNBVV95cUxON3NWbUhkdVNGdmtwZFRIa19kY1A0WWFHRnFBd1BqNVJIUHBpMGVwcHFoOUlGcEF6cDJ6QTJOZGFZYlR4ZnRxT2tMQmNEeU9YSkZXdWFDaXRVRURBaXNWYXVpWFlkSjYwMmVjSURzbGpGZXN1NUZmMWp4TDBrek10LUE3V0RDQm10ZUFsaS16QlgzNmNuMEtRaVUyRGJNRXlKQnA3a2RQRHFyN0JUeXNmbU1icklveFFqUzIyeE1QTmRjd2E3dEpEY3lmUWEtVmg4MnFwcVFscldQNzh6Mi14bWE3dlVYdmJabVpzNVlZU3NuMlVBRWUzUUM2bUVSTTNLcmxCMlEzQXRablhLRktMNmNsQ1drYjBJdmw2TUFab1h6TDJqWHE4aEZOSUZrcWlaQ1oyMzhzUHNoLTl4em94NG5OUUF0LWxnYUNOWGZLQmhkWG1fWWpSRDFRQi1xaXl1N3g4dG9CNXZjajhtZ1gyNWcwNUZvQUpxZmxyck9aTTdWenBHNDFqT0l6VGVGVzdQbDZ1cXI4TW4zcm44eXhfQW12QlNRWEcyM2E0MDNSTWpxWFJwVkVodXVLaXFHNXZoT0llTDZYdHdUZzZTNER4azlTbThrMkc1RUJRY0ZycTdDRHdyLXdPSWNYVlFFdw?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-24T07:30+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
       "title": "個股概覽 | 個股 - 股市 - CMoney",
       "url": "https://news.google.com/rss/articles/CBMiREFVX3lxTFBfVGtPUmhQeF9nalNLNm9zTGJWQlREWTlFa2dVeEhkNElpN1d0OXlyaFF3U3NaYnBodklvejVEU1YtdkNl?oc=5",
       "source": "CMoney",
       "published_at": "2026-10-24T05:02+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Update: Surge in oil prices drags down equity markets; most stocks decline in midday trading - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPb29SYTF3bUhZV1UxM2tjRWFUOFo2dmJWa3llMHZSZ3dSZ2tXdVF1T1YtNkJQdU1CN3NhS1Z1Z1MwZzZlaDM2THRIY1NGUTBuRGp0eXVMQW9lTUhmaVE2dW95cUxheFRCM1Q5VW5BaTVlMmxEU3F2bWR5X3RWNHZkOVdGUE1NN3ZzUC1tQ1V4VjMxLVJuN2djWm5HRGM1b2hYVlE?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-24T02:47+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台積電ADR、聯電ADR攜手漲2%！美股四大指數漲跌互見 道瓊崩跌800點、費半強噴逾1% - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMivwNBVV95cUxNMDAya201WkJETnUzdlIyUXRYUFM0MUVzdFdrM05iRzBOUEhubjlXSWh5TmFBeUpUTGxCZWlIR2VIWUk4RUxad1AxZTl2TXFoNWx2MWxJQ0VYRFBTa0s1T252c0pZMFF2ajhfelZZSl9tX2pxdXpXcWpmbVZGMnhjOHdKU2hYQTdTYWxYdXdoVzVRZWJrMWZwNktDSWZaTktNU0Frb0p3OE5Xd0hVc0JIZVQ2S21wTFZPSWxzclVMY2NzdFh0YUhRVEVUVTZXYzlvdFdsQnJKVzl5T1NFTy1tMXBPZjZCbENleHVPZ0xzc1V0VEd3TUEwTG00RGxqT2xFNnJNdC1Uem1zNk1USktoc1NvME9aWHp5dXV4ai0za1lfcklvNmpoUzRHT2hSbDlvbk5kUlJSN1Joem9JT2ZBTzRGSS04ZjdEZDNjenVGb3Q2TjJHNmo0eVpiRlh5VjJWT2NBMnU4WndGSlUxWUVrMWNEemhDXzJNckdOSWxvR1hZRUhzRThNbHdBSl9WQ1B2Y1dtLU90eXdVWUVQdndFc1FENTUyNVNIWjBvV3dvSHBrby1ONXVjRzFZSjZ6bkk?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-23T23:10+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -129,75 +161,37 @@
       "risk_score": 0
     },
     {
-      "title": "台股震盪新手嚇到！ 他抱2檔ETF憂問「會下殺到4萬」內行勸寬心：刪掉APP - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMilwNBVV95cUxNQXJKT25hSGY5c2hBRGJfMVEwMkx3aUlhVTh0eWRTNlp6bTFZWFpEUXZGdEwyUWtvVGcxSGRreXhJWW9QLWg4RFhZRTc4X3ZGd0NpU1N1WGtmMTFGX0JxM28tdW8wbXlYWHNHVDJjbDVTN1NFNmlSRDRuV0k3WjV0YWw1OFVYRzVZOEx1aFRBUTRQaWItWndURXlwNWtoLUR5OWRfdkV3WGFOWjNqaEJqQVRNbzZ2bjdneUxzQ3R5S2JPWGNKVkVWa0tqZ0RkYWtFeUR3TTJhTElyTk0yRjJhYm1Xem9xWVlFS0h1dHpmdnNTYklQdU9UVE1kTU9jQU1jd0szQ0w5bVFzd2tEeFoycDdzLTJDTHNIMXRzcWR2djZlMEdFY2JJbzV6dGRfZEVQUGpVUjBXUTFla0hpbHRfMHA1R1BycWNETzN3U3pEdTY2S1N0R01RSjVtWUVJdnFPY1ViS1RMVlBGMm1ERUJUY1RXNjI4Y2xRRUY1X0toS0R3Nk5SMFVsc244SXM0TS0xdEd4eGJhZw?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-23T21:23+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Stock Market Today: S&P 500, Nasdaq 100, Dow Jones Futures Fall Ahead of Global PMI Data—Western Digital, Newmont, Crown Castle in Focus (UPDATED) - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMiowJBVV95cUxNZzY1UkZRUDBULW9FZW9rYzYtUmM5V0FoRlQxMjBlY2I2VFpyUFpjZ1RBcktRRXJaNVVoeXotN0FYb1FDZ2VwaVQtLUdONXJ1THBaNmhVRTZEY21ubDhOUGlreTc3VHhVbE1oSW9fQndNT0UzRHNaRnJaZGFqb2tkMDZuQ0dUOUxOa2VwRXNWSlRiRmtieFJnSjJYSVVRWEFaNWRwd2tzVDRReE9HUmJDV09OaTRpcDVyZXRTWkZYZEFpeVFVVkdPXzh2bm11Z0Y2LUR6M25Rc2hWTkYxQnVpV0V6Z3IzMnNTbl9XMEl0Y3FjaTItYWhGVUt6aVJNenRBWlRFTkEtOWQyNklSekVLN2k0aC00STRNTkZQcVZWeF81cUk?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-10-23T20:50+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "首度因颱風喊卡！台積電取消運動會 魏哲家發信宣布每人加碼發3萬特別獎金 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMivANBVV95cUxOUUQ0a0JkbVBFbGxLNmRRTlpnUzBHT29jd21Wbk5mb21zbGItQzZFUzljNHM4VnVkZWo4UHM0OTEyUWkxY2Z2dUZONXE5REhBbTZ6LS1GZkEyWWFjYWVSSEZPbXFTUkY2cW1RU2ZtTVo3cXNCZ0JkU0ZUSHhEbzk0VXZzd2xxeTVJNXY3S0pUREltWXRYTExvUkZUSGhYOHVNN093T0xZR2xrTFgzVjZEUjU4SHRtVExCbXgyRGV6Nzh1MGZRSkJjbTAzcXExYWRVRlN0b09SYkNyX2ZTUTBSeFp6cWtTby03bXpDeVNGM3BDSGt5dUNaNXhlVi1sNG9fT2pOR1V3alVhaGJYWkZHS1dUY3owODZLaVpBNTM3bXpNTjZMSVJYejd3cl9KZGdVRkR5OUJmOUZQRkd4VXFFMms1b3Nncmg1U2ZJUnpiVVgxU3ZQSGo3ZkxILTNXOUZxaTV4T2NhcWE2eGhGQ0h4dTREcktKNUlZQWJnRFVtdGUwU2RSMXNpUTZxbnZNcUtFYVJjQTFNZ2pyWmNibndLQ0xjeVNacGtVaWxhVmVxdmFnSlY3ckRmdXZIdXM?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-23T20:27+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "HK Stock Market Moves | China East Education (00667) Rises Nearly 6% in Early Trading - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPakt2M2M5WGE4NGpwU0ZpSmZTcmItSXNhQVg2UEZfTmxEYXFvOE81WnBuTzJncTZBYXZKYVBZbmVKTXZHQ1pJb2dUb1hhS1ZzclltV3JSQkxINEI2ZnRuS1BqTHM3c2V0M1dkeXM2dnd4LWVRNHdWbWJZUnp0dWUwZ0VfeTJEX2J4OVlaOUJJUVlGZEg5a3FJQkZWN2o1WENNUlRqRWFFVQ?oc=5",
+      "title": "American Express Stock Falls as Company Plans to Cut 5% of Global Jobs -- Barrons.com - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPWXpDeVZmSHIwSGNmeFBkY1ZDVFRGVXRYemlQNm1VYlJhSjRDbWMwUzhKM2FsVk5RczRxTjFZbWNlTE9yaDh0TENnU1QydWh1R3RIbGhyRWNHVF9OQXZDQkQ2WXBUOVltS19Wclp0Sk5CQ2xjbDY3N1EzdHNJTnpjd2dWdGpnYXBhOW1BNWczUWljcDk1aXowR2hWN0VXUQ?oc=5",
       "source": "富途牛牛",
-      "published_at": "2026-10-23T19:24+08:00",
+      "published_at": "2026-10-23T22:04+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "South Korea's stock market has become the first trillion-dollar market to fall below a price-to-earnings ratio of 5. - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPR203ckRFQ2xPWjBSUVFSZ2JPN2t1Q05hREh5QnBrYkRzMHNXUXRiNERjODRWSmJXSGctSHdiaGpMX0h4YjQwS3NiOW02TU5idXFWbDM3ZWJuQndzckIzcFFsN0ViSW1IV1VmSG5yVno3RXVSSGNVSklkWGtkLWRvQk12a1RwVHRvaUpVS0t1elR1T0VMRDBPR2haRGQzZnBUSkE?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-23T18:34+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Gold dips below $4,000 as deepening stock rout fuels volatility - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOUi0ydXBrSENodzJDck5UQjZvdUtzelZsQlV1cHF0Z29xZms3YVk2aUplaktPWkZNbUd0SkJCWEQ2OFY4WXByckRlbmJPaWptbGdmM3l5aEF5VV9TXzVUc3p1ZGN2dlRHelNmUFJfdlk2aVBuZy1RTVVqWDdEOVdKZlMwZ29wWkNRd0lrWXhzdm9MMTFpckdCUzVmQUNmSmxPNlVvMVJjaDNMSjJkUXBZXzFxbWhBSFhTM2pxdVpfaFZ4Zw?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-10-23T18:18+08:00",
+      "title": "台股破季線免驚？ 他喊「分批買到半年線」：拉回不買沒道理 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi8wJBVV95cUxPX19TbzhwT2YwVU5ERFdGdlVyMkFIYU9mNG5pRzUxVnA3OGRpSVhWaDdxQ0oxMU11TjMzOTN6akRzeVZrUjl6c0JuZHJzTldRbElWeGUwYnFZVFdkRUVtOXd5RDQwSVV6czZTYk16cUVRaWV3TUl3elpIcmtsaXkxVU9fYWU4RUJCUXJ1cHZvbEpGelBYeWV6Z2RORUcyRVZ6UzRNZ21ka0R3cWNpWjN0STB5ZzhMa0loUkdKYXdrNjMzTENuSmJNUnNaeVB6elprbUpOVFFxSW1STlhmRzB5TlRodHFIUXhrYl9CY0VCRWU3RTF4aXRRUk82TUk4MUNFejNhTmI3YXFkVnA0dTM3V3pnYlZpbG1UeE8yTS1NZ01aRnBKYUkzOThSXzBmdFVFelVHZDkzYjllVlBJWUFpSXZycjhZRmZ1blJXbnhuQ0dSTS1mVUM2V09fOENMdzlGTWt6V25GSkl2NWxnb1RqLXZGdw?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-23T21:33+08:00",
       "importance": 2,
       "risk_score": 0
     }
   ],
   "oil_watch": [
     {
+      "title": "中東地緣緊張推升油價 市場憂通膨；歐元因PMI數據疲軟走跌 - 商傳媒",
+      "url": "https://news.google.com/rss/articles/CBMiiwNBVV95cUxQQjJuX29yMWFIZGhMbGdCSG5LdGsxQ3NLTFFGTVVoZmVDTmRaekFlVlEtZHdESTZTY2Z3eXl1MmlxTXNhV2gtaDRUOVZ6ZnNSMEJEUk5NUXRnejhXbDV2OVdBVjhtZGFtejV0eU5fcFNKOGliR1hVS21jdnhHS1gwTlhURUg0V184S1NMRUlaWWJyWUVaTG5aMXR1bmY0OEV0ZWwtM1A0eUtpTElGcnBSZFNSaThtbnNwRmlEN3lRNk40dzFYZ0xsNHhSVVo4bnBMemVDRG9PSDk2TTdicjlleHdXMW92UEp3c2YzeUZILWx0NDFocUlxakJIaEZxU1VPZW1pWUdHQ256OXNVbVc4UGNGX0MzV1hKcGY0RkFNZVVPSnFTeEYwbVdjMUp5anREZ2Vvbk9sREpTMWNmN2lENFlOcEJscGFpeEk3aTRPczFqWXl0OTJBUUUzZENfQTdqN3F6bkM0cnBmaXVjYzg3VTJaZUNxQVpwek0wOWlRZzdiSm5xMHJhMDhyaw?oc=5",
+      "source": "商傳媒",
+      "published_at": "2026-10-24T06:48+08:00"
+    },
+    {
       "title": "〈能源盤後〉中東戰火 阿聯酋漏油 利比亞減產 多重供應風險推升油價創近6個月新高 - 鉅亨網",
       "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1leWdLRjRJUmxfeEFGMmUwS0c4cHRvSVJzVndoaGRMLVY2WlNza0loRGhmQ2N0eWl3UTllVEhtNjgtbkE4VmE2a0RrRQ?oc=5",
       "source": "鉅亨網",
       "published_at": "2026-10-24T05:09+08:00"
-    },
-    {
-      "title": "中東地緣緊張推升油價 市場憂通膨；歐元因PMI數據疲軟走跌 - 蕃新聞",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE8xUnhhSWRnbGlHTE1Zc29wUGY3U3JJMzgxMEFOU1MxeV9fMmI3cWplYTRwRGlTV0RNOE1lU0gxeTV1ZlhVT0RRaHpsMEdmOEFuSnc?oc=5",
-      "source": "蕃新聞",
-      "published_at": "2026-10-24T06:48+08:00"
-    },
-    {
-      "title": "〈能源盤後〉沙國能源設施遇襲、阿美要求員工撤離 Brent原油飆4%創5個月新高 - 鉅亨網",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5uMkp6ZkZaLUR4dVlXS0RzcGZUX2ZZd3BTbHo5QmI2WjNXamxKcXkwbHYxY2ItczBNWFVKOXd1bkQyUXhRSWE5N0t0Wmd2Q2M?oc=5",
-      "source": "鉅亨網",
-      "published_at": "2026-10-23T09:46+08:00"
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-24T08:15:12+08:00",
-  "checked_at": "2026-10-24T08:15:12+08:00"
+  "updated_at": "2026-10-24T12:37:15+08:00",
+  "checked_at": "2026-10-24T12:37:15+08:00"
 }
