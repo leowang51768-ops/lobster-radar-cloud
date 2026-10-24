@@ -819,6 +819,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-10-24T16:24:54+08:00",
       "reason": "manual_add"
+    },
+    "2347": {
+      "code": "2347",
+      "name": "2347",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-10-24T16:25:17+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
