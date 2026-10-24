@@ -403,6 +403,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-10-24T16:01:53+08:00",
       "reason": "manual_add"
+    },
+    "1907": {
+      "code": "1907",
+      "name": "1907",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-10-24T16:02:19+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
