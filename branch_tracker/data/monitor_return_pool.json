@@ -467,6 +467,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-10-24T16:05:46+08:00",
       "reason": "manual_add"
+    },
+    "2207": {
+      "code": "2207",
+      "name": "2207",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-10-24T16:06:14+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
