@@ -811,6 +811,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-10-24T16:24:32+08:00",
       "reason": "manual_add"
+    },
+    "3702": {
+      "code": "3702",
+      "name": "3702",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-10-24T16:24:54+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
