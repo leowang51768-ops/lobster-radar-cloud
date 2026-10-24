@@ -987,6 +987,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-10-24T16:35:00+08:00",
       "reason": "manual_add"
+    },
+    "7714": {
+      "code": "7714",
+      "name": "7714",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-10-24T16:35:24+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
