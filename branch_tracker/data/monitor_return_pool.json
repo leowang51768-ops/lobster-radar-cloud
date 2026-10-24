@@ -683,6 +683,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-10-24T16:18:19+08:00",
       "reason": "manual_add"
+    },
+    "6505": {
+      "code": "6505",
+      "name": "6505",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-10-24T16:18:42+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
