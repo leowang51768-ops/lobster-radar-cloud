@@ -851,6 +851,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-10-24T16:26:24+08:00",
       "reason": "manual_add"
+    },
+    "2317": {
+      "code": "2317",
+      "name": "2317",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-10-24T16:26:53+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
