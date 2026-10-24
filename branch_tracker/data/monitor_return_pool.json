@@ -379,6 +379,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-10-24T16:00:08+08:00",
       "reason": "manual_add"
+    },
+    "1608": {
+      "code": "1608",
+      "name": "1608",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-10-24T16:00:34+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
