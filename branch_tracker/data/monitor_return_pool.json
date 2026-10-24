@@ -587,6 +587,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-10-24T16:12:30+08:00",
       "reason": "manual_add"
+    },
+    "2912": {
+      "code": "2912",
+      "name": "2912",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-10-24T16:12:58+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
