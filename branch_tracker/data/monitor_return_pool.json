@@ -947,6 +947,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-10-24T16:32:35+08:00",
       "reason": "manual_add"
+    },
+    "1736": {
+      "code": "1736",
+      "name": "1736",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-10-24T16:33:00+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
