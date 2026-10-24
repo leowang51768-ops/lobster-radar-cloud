@@ -883,6 +883,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-10-24T16:28:04+08:00",
       "reason": "manual_add"
+    },
+    "5478": {
+      "code": "5478",
+      "name": "5478",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-10-24T16:28:27+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
