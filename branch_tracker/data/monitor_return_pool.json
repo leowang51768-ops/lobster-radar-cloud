@@ -259,6 +259,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-10-24T15:51:38+08:00",
       "reason": "manual_add"
+    },
+    "1102": {
+      "code": "1102",
+      "name": "1102",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-10-24T15:52:46+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
