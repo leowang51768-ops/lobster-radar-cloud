@@ -307,6 +307,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-10-24T15:55:37+08:00",
       "reason": "manual_add"
+    },
+    "1326": {
+      "code": "1326",
+      "name": "1326",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-10-24T15:56:29+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
