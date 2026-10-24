@@ -547,6 +547,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-10-24T16:10:16+08:00",
       "reason": "manual_add"
+    },
+    "2727": {
+      "code": "2727",
+      "name": "2727",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-10-24T16:10:47+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
