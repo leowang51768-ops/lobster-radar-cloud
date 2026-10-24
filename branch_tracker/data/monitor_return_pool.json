@@ -907,6 +907,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-10-24T16:29:17+08:00",
       "reason": "manual_add"
+    },
+    "8932": {
+      "code": "8932",
+      "name": "8932",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-10-24T16:29:41+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
