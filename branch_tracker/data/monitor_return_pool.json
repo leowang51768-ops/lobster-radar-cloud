@@ -979,6 +979,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-10-24T16:34:37+08:00",
       "reason": "manual_add"
+    },
+    "6690": {
+      "code": "6690",
+      "name": "6690",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-10-24T16:35:00+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
