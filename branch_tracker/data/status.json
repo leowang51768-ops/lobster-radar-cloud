@@ -1,10 +1,10 @@
 {
   "date": "2026-10-22",
   "mode": "collection_only",
-  "expected_stocks": 170,
+  "expected_stocks": 171,
   "fixed_stocks": 163,
-  "supplemental_stocks": 7,
-  "covered_stocks": 170,
+  "supplemental_stocks": 8,
+  "covered_stocks": 171,
   "coverage_complete": true,
   "status": "partial",
   "source_blocked": false,
@@ -12,11 +12,11 @@
   "history_target_top_per_side": 3,
   "history_requests_succeeded": 120,
   "observed_collection_days": 13,
-  "complete_collection_days": 5,
+  "complete_collection_days": 1,
   "counts": {
-    "ranking": 65036,
-    "history": 286375,
-    "queue": 5628
+    "ranking": 65066,
+    "history": 293575,
+    "queue": 5634
   },
   "review_stage": "資料累積中",
   "strategy_changes": false,
@@ -30,7 +30,7 @@
   "missing_stocks": [],
   "errors": [],
   "history_errors": [],
-  "history_pairs_ever_fetched": 4776,
+  "history_pairs_ever_fetched": 4896,
   "history_coverage_complete": false,
   "history_coverage_note": "按個股實際交易日缺口排序補抓；來源每頁最多60筆，較早缺口仍保留待補，缺筆不當零交易",
   "history_retry_policy": {
@@ -38,8 +38,8 @@
     "retry_delay_seconds": 900,
     "source_history_row_limit": 60
   },
-  "history_attempts_today": 240,
+  "history_attempts_today": 360,
   "ranking_coverage_complete": true,
   "errors_total": 0,
-  "database_bytes": 54968320
+  "database_bytes": 55816192
 }
