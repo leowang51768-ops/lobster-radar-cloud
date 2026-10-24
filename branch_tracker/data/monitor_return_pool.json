@@ -315,6 +315,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-10-24T15:56:29+08:00",
       "reason": "manual_add"
+    },
+    "1402": {
+      "code": "1402",
+      "name": "1402",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-10-24T15:57:02+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
