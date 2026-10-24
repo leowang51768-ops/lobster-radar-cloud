@@ -515,6 +515,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-10-24T16:08:32+08:00",
       "reason": "manual_add"
+    },
+    "2603": {
+      "code": "2603",
+      "name": "2603",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-10-24T16:08:57+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
