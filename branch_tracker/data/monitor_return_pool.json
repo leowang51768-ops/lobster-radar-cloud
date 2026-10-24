@@ -355,6 +355,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-10-24T15:58:49+08:00",
       "reason": "manual_add"
+    },
+    "1504": {
+      "code": "1504",
+      "name": "1504",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-10-24T15:59:13+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
