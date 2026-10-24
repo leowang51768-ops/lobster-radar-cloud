@@ -8,14 +8,14 @@
   "ticker": [
     "⚠ 全球市場風險｜費半 -6.3%｜NASDAQ -2.8%｜日經225 -0.3%｜KOSPI -3.2%｜台股加權 +0.0%｜恆生 -2.4%",
     "⚠ 全球市場風險｜美債10Y 4.99%｜VIX 19.4｜WTI原油 103.27美元 +3.8%（超過100美元警戒）｜布蘭特原油 111.70美元 -1.3%（超過100美元警戒）",
-    "⚠ 全球市場風險｜油價觀察｜中東地緣緊張推升油價 市場憂通膨；歐元因PMI數據疲軟走跌 - 商傳媒",
+    "⚠ 全球市場風險｜油價觀察｜中東地緣緊張推升油價 市場憂通膨；歐元因PMI數據疲軟走跌",
     "⚠ 全球市場風險｜油價觀察｜布蘭特原油價格週展望：胡塞襲擊沙烏地後結算116.72美元，WTI 103.27美元 – 看漲120美元，看跌108美元",
+    "⚠ 全球市場風險｜台股再強也別全押！0050、全球ETF怎麼配？專家揭資產配置關鍵",
     "⚠ 全球市場風險｜〈財經週報-台股熱點〉蘋果供應鏈吹反攻號角 大立光重返2800元關卡",
     "⚠ 全球市場風險｜台股只跌4%、韓股慘崩40%！達人看清了「不會是我們要補跌 」網：第四法人還有錢",
     "⚠ 全球市場風險｜擊敗主動式ETF！今年台股最飆基金竟是「它」 報酬率狂衝96%",
     "⚠ 全球市場風險｜台積電獲利連6季創新高！股價卻不漲反跌 外媒揭市場擔憂",
-    "⚠ 全球市場風險｜台灣水庫、水壩將串連 共享水資源 珍珠串計畫 卓揆：保障台灣晶片、農業",
-    "⚠ 全球市場風險｜英特爾非技術落後台積電 坦言硬傷在規模與設備"
+    "⚠ 全球市場風險｜台灣水庫、水壩將串連 共享水資源 珍珠串計畫 卓揆：保障台灣晶片、農業"
   ],
   "markets": {
     "US_SOX": {
@@ -80,6 +80,14 @@
     }
   },
   "active_news": [
+    {
+      "title": "台股再強也別全押！0050、全球ETF怎麼配？專家揭資產配置關鍵 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi6gJBVV95cUxOemJjNUhOcWdiVXVvNE1fRFZiRjFWS2pGRU0wUHQ2RVgwRVZzZ2IxbnY5LU1mN01lbnFJc05EWVF5YmNtWXZIX1VMekVjaGhCQ2dnY2lIM3dZV1QtcWNtUl9UOUJuRk45ZXdiWnk3dzNHcFMydGt4VmVQc2dlbG1PdlVNWUtXbFhMNjhUeFJaRTQ5YVZvMklfMDZ1aVAteDdac0llamVfV1lGT3VlcDVibTBHS1k3QU5MMjBIbUxlTkpFbk8tNUdtNTRha2M2YXNLX0pLcmduTUQtTVFtUTVHdDNIM0FoR3pMdENkMU0tWHRJbV9ZdlF4T2FpbHZ6alJMallJWXdRVzhfY0s3M1ZGVTZqWUY0Z21Bd0szc1hmZmZ3bTF0MktIay12dTFaekxFanNUcUpiMTFtbnpDdVhvX2lHUlZPMlJXMk91ckpyTHBZQ0VoVU5LY0d1Rmw2eDhGYzdldmoxay0zQQ?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-25T07:10+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
     {
       "title": "〈財經週報-台股熱點〉蘋果供應鏈吹反攻號角 大立光重返2800元關卡 - 自由時報",
       "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE03a25pTHVWTXVjQXlhZmJDWUZxOVNOa1h4SURZb3JycVg4NTZIaTBkOTZvaHlOVER6anpaUmV2b3FLckhNWldvSXJWVEVEel9OcTEtUE1MYVI?oc=5",
@@ -167,22 +175,14 @@
       "published_at": "2026-10-24T14:15+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "台股跌到不想看！他打算刪App等2年再看賺賠 網曝真實經驗 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi9wJBVV95cUxPcFNfVjdGTWhpSXdTODAxTXJUaFRsT1Z0TjlpbHdkTThZOUwwZU5jVVBJeEx6NHNKNEwydFFjMkRqNmZXSnRaNnY0ZGlCWldsLWJ0NUMxSjM5dmVPTmVUeEU2YXpPckRmRTk1YUZYOEJ3VUw1djh2aVZJcG1jNXpKNFpJWTFKdFJGMmhPc0JpQlJtTVJtMmtFWHJjWllzRVp2ZHlBMVpvMnFtSG11QzVlZXlGQVl0SXFqYUVkWXhJd3FuWFFUcEFQWjNHejROaXh6U2dHWWRxeGpwZDBsaENLd29xNHN3ZXdxTEREeEU3dTloVkQ5dktvMVVPUE03LVFIdDBZRU1kSTRLaDNvTFkzcmE4dkZXcllnR2FWU2JDM2lfN2k2c0ZXdGZvSHg3aVpSeVVXdm9qT29YZXpVTnYyVmNGYjhjeDRpdXh4MUxpUjFsOUhyX0JOX0lpaWxWTk9neTVZXzR5NU9yaHhSWVJuVWw0dHJTTlU?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-24T14:07+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "oil_watch": [
     {
-      "title": "中東地緣緊張推升油價 市場憂通膨；歐元因PMI數據疲軟走跌 - 商傳媒 - SUN MEDIA",
-      "url": "https://news.google.com/rss/articles/CBMiiwNBVV95cUxQQjJuX29yMWFIZGhMbGdCSG5LdGsxQ3NLTFFGTVVoZmVDTmRaekFlVlEtZHdESTZTY2Z3eXl1MmlxTXNhV2gtaDRUOVZ6ZnNSMEJEUk5NUXRnejhXbDV2OVdBVjhtZGFtejV0eU5fcFNKOGliR1hVS21jdnhHS1gwTlhURUg0V184S1NMRUlaWWJyWUVaTG5aMXR1bmY0OEV0ZWwtM1A0eUtpTElGcnBSZFNSaThtbnNwRmlEN3lRNk40dzFYZ0xsNHhSVVo4bnBMemVDRG9PSDk2TTdicjlleHdXMW92UEp3c2YzeUZILWx0NDFocUlxakJIaEZxU1VPZW1pWUdHQ256OXNVbVc4UGNGX0MzV1hKcGY0RkFNZVVPSnFTeEYwbVdjMUp5anREZ2Vvbk9sREpTMWNmN2lENFlOcEJscGFpeEk3aTRPczFqWXl0OTJBUUUzZENfQTdqN3F6bkM0cnBmaXVjYzg3VTJaZUNxQVpwek0wOWlRZzdiSm5xMHJhMDhyaw?oc=5",
-      "source": "商傳媒 - SUN MEDIA",
-      "published_at": "2026-10-24T06:48+08:00"
+      "title": "中東地緣緊張推升油價 市場憂通膨；歐元因PMI數據疲軟走跌 - 行銷人",
+      "url": "https://news.google.com/rss/articles/CBMi4AJBVV95cUxONmdxQkZDdE9yWVUxeW45VWM1VmdQRnZpYk0tTV95cHZqelcwbHNBN285WnFZX3dqNF9MYm40YnBaaV9XLVFmTmxubFkyb2hKSkZ1TUF3UTNwSlpUOXRNeWpuNVU1UHI5bURhdEFQWTZYcFZfR1VKU0ZXWXNjNVRtZ3o5Mm95eXlXMXhoQ05pM2dmZ3A0ZE5jUm1HbG1zYzNudDZEQ1VvQXBhQWoteVpsNmgtbXB1WlNzUFlvWHM4U1pmX0M4bzhtT0Vob2djNTZoZ3hiU2hPbnV2MHZiQTZfQ3VnRnlPcXFiV2NISUN1N0ZKMHRIOG1BZ18yek10dXh6R3BjUHVyTUxXSDU2MXRfRm40eGcxTjNtbFlDcWNzMzlvWElmZjFTXzJEb0R3X0R6VXkxUE55YXp5dDR1Y1dtYm1QLXAzVTZzay1PbDBhZ3Y4a3pJa2JmenFJVm5OV3Az?oc=5",
+      "source": "行銷人",
+      "published_at": "2026-10-24T07:35+08:00"
     },
     {
       "title": "布蘭特原油價格週展望：胡塞襲擊沙烏地後結算116.72美元，WTI 103.27美元 – 看漲120美元，看跌108美元 - FinanceFeeds",
@@ -192,6 +192,6 @@
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-25T05:21:54+08:00",
-  "checked_at": "2026-10-25T05:21:54+08:00"
+  "updated_at": "2026-10-25T07:23:00+08:00",
+  "checked_at": "2026-10-25T07:23:00+08:00"
 }
