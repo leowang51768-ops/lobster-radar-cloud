@@ -843,6 +843,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-10-24T16:26:01+08:00",
       "reason": "manual_add"
+    },
+    "2480": {
+      "code": "2480",
+      "name": "2480",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-10-24T16:26:24+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
