@@ -291,6 +291,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-10-24T15:54:22+08:00",
       "reason": "manual_add"
+    },
+    "1210": {
+      "code": "1210",
+      "name": "1210",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-10-24T15:54:45+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
