@@ -779,6 +779,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-10-24T16:23:01+08:00",
       "reason": "manual_add"
+    },
+    "2412": {
+      "code": "2412",
+      "name": "2412",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-10-24T16:23:22+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
