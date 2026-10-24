@@ -9,13 +9,13 @@
     "⚠ 全球市場風險｜費半 -6.3%｜NASDAQ -2.8%｜日經225 -0.3%｜KOSPI -3.2%｜台股加權 +0.0%｜恆生 -2.4%",
     "⚠ 全球市場風險｜美債10Y 4.99%｜VIX 19.4｜WTI原油 103.27美元 +3.8%（超過100美元警戒）｜布蘭特原油 111.70美元 -1.3%（超過100美元警戒）",
     "⚠ 全球市場風險｜油價觀察｜中東地緣緊張推升油價 市場憂通膨；歐元因PMI數據疲軟走跌 - 商傳媒",
-    "⚠ 全球市場風險｜油價觀察｜〈能源盤後〉中東戰火 阿聯酋漏油 利比亞減產 多重供應風險推升油價創近6個月新高",
+    "⚠ 全球市場風險｜油價觀察｜布蘭特原油價格週展望：胡塞襲擊沙烏地後結算116.72美元，WTI 103.27美元 – 看漲120美元，看跌108美元",
+    "⚠ 全球市場風險｜〈財經週報-台股熱點〉蘋果供應鏈吹反攻號角 大立光重返2800元關卡",
     "⚠ 全球市場風險｜台股只跌4%、韓股慘崩40%！達人看清了「不會是我們要補跌 」網：第四法人還有錢",
     "⚠ 全球市場風險｜擊敗主動式ETF！今年台股最飆基金竟是「它」 報酬率狂衝96%",
     "⚠ 全球市場風險｜台積電獲利連6季創新高！股價卻不漲反跌 外媒揭市場擔憂",
-    "⚠ 全球市場風險｜英特爾非技術落後台積電 坦言硬傷在規模與設備",
-    "⚠ 全球市場風險｜颱風假台股該不該開盤？政大教授點出交易真相 網友反問：誰要當韭菜",
-    "⚠ 全球市場風險｜中國聯通：已在蘋果直營店/授權店安排駐店員，協助iPhone Duo購機用户開通eSIM"
+    "⚠ 全球市場風險｜台灣水庫、水壩將串連 共享水資源 珍珠串計畫 卓揆：保障台灣晶片、農業",
+    "⚠ 全球市場風險｜英特爾非技術落後台積電 坦言硬傷在規模與設備"
   ],
   "markets": {
     "US_SOX": {
@@ -81,6 +81,14 @@
   },
   "active_news": [
     {
+      "title": "〈財經週報-台股熱點〉蘋果供應鏈吹反攻號角 大立光重返2800元關卡 - 自由時報",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE03a25pTHVWTXVjQXlhZmJDWUZxOVNOa1h4SURZb3JycVg4NTZIaTBkOTZvaHlOVER6anpaUmV2b3FLckhNWldvSXJWVEVEel9OcTEtUE1MYVI?oc=5",
+      "source": "自由時報",
+      "published_at": "2026-10-25T01:00+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
       "title": "台股只跌4%、韓股慘崩40%！達人看清了「不會是我們要補跌 」網：第四法人還有錢 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMi7AJBVV95cUxObmd1YjZfemRoaFBEOF9FZ0FrT2RvN2hjTEM1aW14QkEtZ2VuOGlDV3Z6cEEwQVVqVUZzS2hIRHFvd0E4VXpBQkFsbW1SU0I4bTFxTDFzdzRfZ0YzNjNJUjNEY2JCakJJemxOX0p3YmFIMndZMjFTYjcxcjdHZDJvQkVqUU1iVTZGZTVXZEpNN3I1Z0ttUFZKVV9MeWk2dHpSb194UG12MFBpTlVjZldhOEdYN0k0ZWpaZE9qLWZ0U3VNMW1aTGdDTFdEc1BQeWEydzlSZVd2a0NDcVl0T0IyUG1iN2htdWpKcDc3V0xxS0xyc0JHb0dDVTA3VWpweUpMeUJFOEZ1dzFrVDFTMWNIWDg5cGlDUkw1WXNIajktQ2RxTXBnME1pNmtqQWgzTDVEM1JXdWVxanFISHMyTnJXekN4bjhPOVp4V3ZTRjZlNjVjYUR2VjdBZnBuTTJRWkZLOUxnQjBwdHhlREl0?oc=5",
       "source": "Yahoo股市",
@@ -101,6 +109,14 @@
       "url": "https://news.google.com/rss/articles/CBMi_wJBVV95cUxPY0w2VHZKWFNpSGNST1FQYTctM2pwWEZib3dmX0g1OFpUUWxYb2tPd1U0Nnh1WkwzQlZYaWlqNFc0eUxHV0NGbV9aNS1aWDBVZ3JFWXdySE5KNllObDVNSThUaWxKUGdPbFdkaDdTNGZhQlI2RVZqZXZpNzVTRDR5MDI5UF9ROGFISFhmTGFMMEtueUp4VkRleVFXMzJoZ0ZoNVM2YUp1T3llYkJvWnZLU2pPU2YyalIxRGU4ZVBXMk9xRkRYUzRISERReHNvaHpxeW44RUtUWGpydG05RHFIT0F0N3RJVEozczNIYjNUZE1ic3hkX1QxU3hPMVcyRkRtZjlhRy1yRU4zbk1jZzlQeWM4cUg2U0s3ckJzUmtNbFVvMW1uaXlDRXhwUDhYdVNNQmZ6eFJlaEdQcHljZnpsNG1GSHVhaUhFMmN5cS1IQlJXem5JbFJkQlNjdzRYR0tMQmpGYThUZnVSZExaa1hFOHhtdnI1aWlYWDlJeVdRbw?oc=5",
       "source": "Yahoo股市",
       "published_at": "2026-10-24T20:00+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台灣水庫、水壩將串連 共享水資源 珍珠串計畫 卓揆：保障台灣晶片、農業 - 自由時報",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE0wN0VnUHNZbnhZWWpEdEJWYkZSVkx0dTVQSnI2ZkpSa3htdldsVTZUYWN4cmdYdi1RcTJzOTJSUDhldFpUek1NcVM5bzhGUG9wcExPN3cyUU0?oc=5",
+      "source": "自由時報",
+      "published_at": "2026-10-24T18:37+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -159,22 +175,6 @@
       "published_at": "2026-10-24T14:07+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "台股回檔是進場時機？他想「歐印正二、0050」拚財富自由 過來人勸：跌破七月低點再買 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi1gJBVV95cUxPUVBhTTl0QTFQVk9XaXBGTVUwZ0dZemYwb3A1V0ppRVlydEZjNTg3RTM5RThnRFlZNHhXTkxmem8yaFhXNm5jb1RYaW5UWDZDcThzU0dpa0hOVTc5Z1BZeHlGcV9MYi10ZHMyUHVpYUJrOEZNNEk1MzBwWXJwcWxqNDRMLWVQUnI1clBWdEdnQlhxUExyd3ZpTHFJSGxaTUlUOERuM0JfbU9KWEh0WFdHMG95emR1VHVibEtoX2FOMEo3R3V1NXhfSGQ1eE9ocFU4QWs4QTRJSGhGQ1NxUV8xVjNuMHRFc3h6R0Qtb08tZm1FXy1rcUxVOHByeTI0QjRNalFrODdVdXJXMjZYMEhpOS1kTVp0Y3lYcG5PVF9QOU43NU1PLWUzMWdqWVhNWnBMNnJZOHVEb1UzYi1SRTQzVjJDaHczUGxHb2YxcXJsdF9IU1dLbWc?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-24T12:16+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "薔琵攪局、台積電運動會取消！ 魏哲家照發「小禮物」金額再創新高 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMimANBVV95cUxNZ2NYMUlSUFBTSHBpZFZmNGhHQUhXMWdBc0EzNXF3MGtnaXdJVV9rWU9PeFlNM19oNFF2RUNKbEcxdjliVDdnRUF6cGtsSWMtVkhEQUZ0dzc3R2hpWUJsYk1KbzlWMURvNEc4NzF5ekxlR3d5ZmtaNWZ1QWExOVQwQXp1QncwblpKZDNWa2ZFSGlwNUpLUnFpZjJJTlo0cTJyQXFodEFKYVlER0ZRdFpLN0o1UlEyNG1GMTZKMGp1RExEVXB1dEktaVc2VWJkZHhXdWVjVzdMM0pTSkpRT2ljTkZsdkhvbWhFejRndVMtbTFvV0k4bS1ZeF9PbjlSTFRkYlc2ZDFlVThjbXhKYnVTVUtINXVMZHVINjFQYWJjek9lSk5XLUJSUm5HbjZxODBsM0J3UU4xczZlZmhpOWl4c21HY044SWZaSmF0dXhGWkFpczg1Y2V1UmE3ZGdXWEpVbmZwZU56U0Z6eWttR2FBSUNZYW10N3BpUk1UcGFJQ2tlVm5vNEpSaGdUNzk2amJsV0d1SE93eUc?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-24T12:03+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "oil_watch": [
@@ -185,12 +185,6 @@
       "published_at": "2026-10-24T06:48+08:00"
     },
     {
-      "title": "〈能源盤後〉中東戰火 阿聯酋漏油 利比亞減產 多重供應風險推升油價創近6個月新高 - 鉅亨網",
-      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1leWdLRjRJUmxfeEFGMmUwS0c4cHRvSVJzVndoaGRMLVY2WlNza0loRGhmQ2N0eWl3UTllVEhtNjgtbkE4VmE2a0RrRQ?oc=5",
-      "source": "鉅亨網",
-      "published_at": "2026-10-24T05:09+08:00"
-    },
-    {
       "title": "布蘭特原油價格週展望：胡塞襲擊沙烏地後結算116.72美元，WTI 103.27美元 – 看漲120美元，看跌108美元 - FinanceFeeds",
       "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBWWjJMeWk1Z1o3MC1tc3NfME5fZ3Q3TmF0bmRSR3ZkOVlkSjNHNXBiLThIMmpLR21SQXZCR0dpRjk0TnlFOEdlWWVxNy0tQXFmT1IwbXpDRkZLOXlpb0NNU3lQYW9rQUhGdGxUTE5WMnYzUThGMlU0bm9qM3hoRHc?oc=5",
       "source": "FinanceFeeds",
@@ -198,6 +192,6 @@
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-25T00:35:30+08:00",
-  "checked_at": "2026-10-25T02:57:33+08:00"
+  "updated_at": "2026-10-25T05:21:54+08:00",
+  "checked_at": "2026-10-25T05:21:54+08:00"
 }
