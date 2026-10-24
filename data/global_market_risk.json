@@ -10,12 +10,12 @@
     "⚠ 全球市場風險｜美債10Y 4.99%｜VIX 19.4｜WTI原油 103.27美元 +3.8%（超過100美元警戒）｜布蘭特原油 111.70美元 -1.3%（超過100美元警戒）",
     "⚠ 全球市場風險｜油價觀察｜中東地緣緊張推升油價 市場憂通膨；歐元因PMI數據疲軟走跌 - 商傳媒",
     "⚠ 全球市場風險｜油價觀察｜〈能源盤後〉中東戰火 阿聯酋漏油 利比亞減產 多重供應風險推升油價創近6個月新高",
+    "⚠ 全球市場風險｜台股只跌4%、韓股慘崩40%！達人看清了「不會是我們要補跌 」網：第四法人還有錢",
     "⚠ 全球市場風險｜擊敗主動式ETF！今年台股最飆基金竟是「它」 報酬率狂衝96%",
     "⚠ 全球市場風險｜台積電獲利連6季創新高！股價卻不漲反跌 外媒揭市場擔憂",
     "⚠ 全球市場風險｜英特爾非技術落後台積電 坦言硬傷在規模與設備",
     "⚠ 全球市場風險｜颱風假台股該不該開盤？政大教授點出交易真相 網友反問：誰要當韭菜",
-    "⚠ 全球市場風險｜中國聯通：已在蘋果直營店/授權店安排駐店員，協助iPhone Duo購機用户開通eSIM",
-    "⚠ 全球市場風險｜哈佛校務基金狂押AI！75％持股集中5大企業 台積電、SpaceX都入列"
+    "⚠ 全球市場風險｜中國聯通：已在蘋果直營店/授權店安排駐店員，協助iPhone Duo購機用户開通eSIM"
   ],
   "markets": {
     "US_SOX": {
@@ -81,6 +81,14 @@
   },
   "active_news": [
     {
+      "title": "台股只跌4%、韓股慘崩40%！達人看清了「不會是我們要補跌 」網：第四法人還有錢 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi7AJBVV95cUxObmd1YjZfemRoaFBEOF9FZ0FrT2RvN2hjTEM1aW14QkEtZ2VuOGlDV3Z6cEEwQVVqVUZzS2hIRHFvd0E4VXpBQkFsbW1SU0I4bTFxTDFzdzRfZ0YzNjNJUjNEY2JCakJJemxOX0p3YmFIMndZMjFTYjcxcjdHZDJvQkVqUU1iVTZGZTVXZEpNN3I1Z0ttUFZKVV9MeWk2dHpSb194UG12MFBpTlVjZldhOEdYN0k0ZWpaZE9qLWZ0U3VNMW1aTGdDTFdEc1BQeWEydzlSZVd2a0NDcVl0T0IyUG1iN2htdWpKcDc3V0xxS0xyc0JHb0dDVTA3VWpweUpMeUJFOEZ1dzFrVDFTMWNIWDg5cGlDUkw1WXNIajktQ2RxTXBnME1pNmtqQWgzTDVEM1JXdWVxanFISHMyTnJXekN4bjhPOVp4V3ZTRjZlNjVjYUR2VjdBZnBuTTJRWkZLOUxnQjBwdHhlREl0?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-24T21:45+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
       "title": "擊敗主動式ETF！今年台股最飆基金竟是「它」 報酬率狂衝96% - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMi4gJBVV95cUxPX3BCM3gyMUpXTVM0MkMtNjQ5bmFhNkpYWC1vOE5NSy1jTm1IS04tSkNCOTlpMWMxbTBMTTJFUmpCelh4Zk9yYU9yZ3NOWk1XVnFadzNDSnlMbWdGVkVqcFlhVmJ0UHEzQjdqT21wWEtJeU1qSXV3b0dPdG1fOGs4MklzV3gzMEJsX0U2WVhGSGFKQmw3aFNpV0Y5Z29mSlI0d0cweUhEUkRVM2c0Z2RwdXdfM3djaXJEa2g1a3djRm1TNFdQdjFpdXJlLTBaa1VFYVd1TnpCQWc4MUFWVDNkSGFRUDg5aXhBU0NHZkotSGh3cVdFLS13V3VSelpPLWQxcEgxVWtlX2lYaUVLd3N2bUFOT3MtZ085S1RHTVQxdl83RmNPeE85TGpXczZVbGphcVZRdS1Id21XLU12MXlLdnlLWVdxYVF5dkFIQkJqcjBJa1hkeExCM2J6djlIR1gwLUE?oc=5",
       "source": "Yahoo股市",
@@ -137,26 +145,18 @@
       "risk_score": 0
     },
     {
+      "title": "今年來台股基金最旺冠居亞股 中小、科技績效近翻倍 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi5gJBVV95cUxOZ1puWlZSREFBVmlQNm5JMWdqZ1ZCUW5nX05zYnoyRjYzQmhTU0tXc25yT0JYMUhfSGRDcV93N2ZBRC1aM1hicFkwSnlqY2tsWC1Ka1VRYjFOYjBnUWNEd2x3Yl9TX0w1X1JaN1E0UVlLLXdvSHFzZ0FNNmppTkZhaC1nUHIxOXduSFFWQXRoMHVKWUpmT2lYZUpJN1NXM2M0MmpSR0dXMm94SEgwWWdRc2dlZFVadDhhbm0xTVMyOXM3UkdEYlpoUEtpQVFhb3UwMkg0SVRiNzRWSkxRSXBTcFJPeVBUY1VKRUN5dndINFZsNDRZQTl1Y1ZYSDlYVGVZT1RhUEEwbG01aF94YzN2TmYxWHR5STNoLXVoRlFHOTljUHJ5V2htclhWVkVXU3l2aTFFeVJVWGlhaFpjRnNnQWJudEZGeW02dEpxZW9VSHFMQzYxdFJBcS1ieU1jRmZnclZ1b1FR?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-24T14:15+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
       "title": "台股跌到不想看！他打算刪App等2年再看賺賠 網曝真實經驗 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMi9wJBVV95cUxPcFNfVjdGTWhpSXdTODAxTXJUaFRsT1Z0TjlpbHdkTThZOUwwZU5jVVBJeEx6NHNKNEwydFFjMkRqNmZXSnRaNnY0ZGlCWldsLWJ0NUMxSjM5dmVPTmVUeEU2YXpPckRmRTk1YUZYOEJ3VUw1djh2aVZJcG1jNXpKNFpJWTFKdFJGMmhPc0JpQlJtTVJtMmtFWHJjWllzRVp2ZHlBMVpvMnFtSG11QzVlZXlGQVl0SXFqYUVkWXhJd3FuWFFUcEFQWjNHejROaXh6U2dHWWRxeGpwZDBsaENLd29xNHN3ZXdxTEREeEU3dTloVkQ5dktvMVVPUE03LVFIdDBZRU1kSTRLaDNvTFkzcmE4dkZXcllnR2FWU2JDM2lfN2k2c0ZXdGZvSHg3aVpSeVVXdm9qT29YZXpVTnYyVmNGYjhjeDRpdXh4MUxpUjFsOUhyX0JOX0lpaWxWTk9neTVZXzR5NU9yaHhSWVJuVWw0dHJTTlU?oc=5",
       "source": "Yahoo股市",
       "published_at": "2026-10-24T14:07+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "今年來台股基金最旺冠居亞股 中小、科技績效近翻倍 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi5gJBVV95cUxOZ1puWlZSREFBVmlQNm5JMWdqZ1ZCUW5nX05zYnoyRjYzQmhTU0tXc25yT0JYMUhfSGRDcV93N2ZBRC1aM1hicFkwSnlqY2tsWC1Ka1VRYjFOYjBnUWNEd2x3Yl9TX0w1X1JaN1E0UVlLLXdvSHFzZ0FNNmppTkZhaC1nUHIxOXduSFFWQXRoMHVKWUpmT2lYZUpJN1NXM2M0MmpSR0dXMm94SEgwWWdRc2dlZFVadDhhbm0xTVMyOXM3UkdEYlpoUEtpQVFhb3UwMkg0SVRiNzRWSkxRSXBTcFJPeVBUY1VKRUN5dndINFZsNDRZQTl1Y1ZYSDlYVGVZT1RhUEEwbG01aF94YzN2TmYxWHR5STNoLXVoRlFHOTljUHJ5V2htclhWVkVXU3l2aTFFeVJVWGlhaFpjRnNnQWJudEZGeW02dEpxZW9VSHFMQzYxdFJBcS1ieU1jRmZnclZ1b1FR?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-24T13:23+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "企業獲利穩健 外資偏愛台股 - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBpRU9EZ0F5djk4RHZrR0tOaF81MURZaTlzYWpySW1NSFhMOWVrbDg4Si1nQ3lQczZoT1o4RTlsaVdpX3REN2pXVWRSTGpvZFItYjJXRkU0a1U?oc=5",
-      "source": "自由時報",
-      "published_at": "2026-10-24T13:13+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -198,6 +198,6 @@
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-24T21:15:14+08:00",
-  "checked_at": "2026-10-24T21:15:14+08:00"
+  "updated_at": "2026-10-25T00:35:30+08:00",
+  "checked_at": "2026-10-25T00:35:30+08:00"
 }
