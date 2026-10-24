@@ -963,6 +963,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-10-24T16:33:48+08:00",
       "reason": "manual_add"
+    },
+    "5903": {
+      "code": "5903",
+      "name": "5903",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-10-24T16:34:11+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
