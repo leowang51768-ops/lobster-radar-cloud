@@ -8,14 +8,14 @@
   "ticker": [
     "⚠ 全球市場風險｜費半 -6.3%｜NASDAQ -2.8%｜日經225 -0.3%｜KOSPI -3.2%｜台股加權 +0.0%｜恆生 -2.4%",
     "⚠ 全球市場風險｜美債10Y 4.99%｜VIX 19.4｜WTI原油 103.27美元 +3.8%（超過100美元警戒）｜布蘭特原油 111.70美元 -1.3%（超過100美元警戒）",
-    "⚠ 全球市場風險｜油價觀察｜中東地緣緊張推升油價 市場憂通膨；歐元因PMI數據疲軟走跌",
     "⚠ 全球市場風險｜油價觀察｜布蘭特原油價格週展望：胡塞襲擊沙烏地後結算116.72美元，WTI 103.27美元 – 看漲120美元，看跌108美元",
     "⚠ 全球市場風險｜台股再強也別全押！0050、全球ETF怎麼配？專家揭資產配置關鍵",
+    "⚠ 全球市場風險｜半導體爭霸戰1》台積電稱霸全球 他示警台灣3年後恐掉隊",
     "⚠ 全球市場風險｜〈財經週報-台股熱點〉蘋果供應鏈吹反攻號角 大立光重返2800元關卡",
     "⚠ 全球市場風險｜台股只跌4%、韓股慘崩40%！達人看清了「不會是我們要補跌 」網：第四法人還有錢",
+    "⚠ 全球市場風險｜〈財經週報-投資趨勢〉主動台股ETF蔚為風潮策略推陳出新最近常聽到的「掩護性買權」究竟是什麼？",
     "⚠ 全球市場風險｜擊敗主動式ETF！今年台股最飆基金竟是「它」 報酬率狂衝96%",
-    "⚠ 全球市場風險｜台積電獲利連6季創新高！股價卻不漲反跌 外媒揭市場擔憂",
-    "⚠ 全球市場風險｜台灣水庫、水壩將串連 共享水資源 珍珠串計畫 卓揆：保障台灣晶片、農業"
+    "⚠ 全球市場風險｜台積電獲利連6季創新高！股價卻不漲反跌 外媒揭市場擔憂"
   ],
   "markets": {
     "US_SOX": {
@@ -89,6 +89,14 @@
       "risk_score": 0
     },
     {
+      "title": "半導體爭霸戰1》台積電稱霸全球 他示警台灣3年後恐掉隊 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi7gJBVV95cUxPU3pNYWhvZFlTYTNRXzc4aHJjN19mamFBMWdYaVdVUEdaS19IZ09zVnZpNDhWVnNlT1RZU1p1bzJ5bjU0d1c2OC1Sc3JDS3F2YTdadE16cnNmdjQ3ekYxcHdwekJTalNid0gxYzY3VTJZNmNSR1VnYU54X05hREhWUXAyTHl3T09vRUtoNnpXVEotRlFtVVJ4c2xDZW41dFBxWXBlZEpCbTh2ZnI5bDBzV0doclNUdGRzYnRyWkd6SzNmbGFvUDJqS19NQ1B4RE5uUmVjX0Jfb1VIelpWeDR0cGVjSnBUWnFVWEFHcWY2Z3NzQlZNVUYxeVoyZnYzMDhSdHRpeWFsdlE3bVR6cUFRa2JNR3RFMElDQ2RadVJJM3Yzek53WGVCcmNVYm5RdWc4eHZDMkt6b3hRVTliakt0dFUyVzd5bmNFOUltc3k2YWtjeVdIQlpBbjZ2Q2VXRXdvU0pwZEczVVF5MTY1a2c?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-25T06:30+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
       "title": "〈財經週報-台股熱點〉蘋果供應鏈吹反攻號角 大立光重返2800元關卡 - 自由時報",
       "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE03a25pTHVWTXVjQXlhZmJDWUZxOVNOa1h4SURZb3JycVg4NTZIaTBkOTZvaHlOVER6anpaUmV2b3FLckhNWldvSXJWVEVEel9OcTEtUE1MYVI?oc=5",
       "source": "自由時報",
@@ -101,6 +109,14 @@
       "url": "https://news.google.com/rss/articles/CBMi7AJBVV95cUxObmd1YjZfemRoaFBEOF9FZ0FrT2RvN2hjTEM1aW14QkEtZ2VuOGlDV3Z6cEEwQVVqVUZzS2hIRHFvd0E4VXpBQkFsbW1SU0I4bTFxTDFzdzRfZ0YzNjNJUjNEY2JCakJJemxOX0p3YmFIMndZMjFTYjcxcjdHZDJvQkVqUU1iVTZGZTVXZEpNN3I1Z0ttUFZKVV9MeWk2dHpSb194UG12MFBpTlVjZldhOEdYN0k0ZWpaZE9qLWZ0U3VNMW1aTGdDTFdEc1BQeWEydzlSZVd2a0NDcVl0T0IyUG1iN2htdWpKcDc3V0xxS0xyc0JHb0dDVTA3VWpweUpMeUJFOEZ1dzFrVDFTMWNIWDg5cGlDUkw1WXNIajktQ2RxTXBnME1pNmtqQWgzTDVEM1JXdWVxanFISHMyTnJXekN4bjhPOVp4V3ZTRjZlNjVjYUR2VjdBZnBuTTJRWkZLOUxnQjBwdHhlREl0?oc=5",
       "source": "Yahoo股市",
       "published_at": "2026-10-24T21:45+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "〈財經週報-投資趨勢〉主動台股ETF蔚為風潮策略推陳出新最近常聽到的「掩護性買權」究竟是什麼？ - 自由時報",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE80UjlSXzFuVVpQQUlnZWM5aXI2aVFoWGV6NG1fUmYtN2M3NWF3eEFqVmM1Vl9nbkl4S21LWkFjYjFfRVhMdF9fVHZwZ0N5clctQUJYQzBUbkg?oc=5",
+      "source": "自由時報",
+      "published_at": "2026-10-24T21:29+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -159,31 +175,9 @@
       "published_at": "2026-10-24T15:50+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "台積電Q3獲利新高股價卻跌 市場聚焦AI需求隱憂 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMixgJBVV95cUxQVHlKYTZJTTVqeWNNdWRRNHZGZ1c3OUlncHZJdGpjXzZaN2J6SzBreFBQNl9QenAtc09iMDlIeE8xZGY5aXBiM3VBUHEyc3J1V1ZZcTBzNEI4alp5d2JSR1ltMXBNMGtuWmhsam9rS3M2OVdPamtMcVZXS0R3ckI5cHpVMzduOWFEak1EQnhxdy1QemVWWUhVQkxEaHJVdW5yRC1ZQVJOMzJpN1JIcnFwRHRVdUJobEZDV2JOZTd1LS1DTmNUd3k4OUUzVXJSWWt6LUZQTDRNcUR4ckFmVFdEQXhydFZEOGNLcWZmc29zLTN5bGpLS2RnQVR4bDNCbFh1U1hET1hZc2VuOWJfdE10elU5NURackxUalh4anlKT1lUZDlQRE9iMVpMajhCdnprZVpMUUt1cWJYNXJIUXBXZWNtV2ZvUQ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-24T14:45+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "今年來台股基金最旺冠居亞股 中小、科技績效近翻倍 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi5gJBVV95cUxOZ1puWlZSREFBVmlQNm5JMWdqZ1ZCUW5nX05zYnoyRjYzQmhTU0tXc25yT0JYMUhfSGRDcV93N2ZBRC1aM1hicFkwSnlqY2tsWC1Ka1VRYjFOYjBnUWNEd2x3Yl9TX0w1X1JaN1E0UVlLLXdvSHFzZ0FNNmppTkZhaC1nUHIxOXduSFFWQXRoMHVKWUpmT2lYZUpJN1NXM2M0MmpSR0dXMm94SEgwWWdRc2dlZFVadDhhbm0xTVMyOXM3UkdEYlpoUEtpQVFhb3UwMkg0SVRiNzRWSkxRSXBTcFJPeVBUY1VKRUN5dndINFZsNDRZQTl1Y1ZYSDlYVGVZT1RhUEEwbG01aF94YzN2TmYxWHR5STNoLXVoRlFHOTljUHJ5V2htclhWVkVXU3l2aTFFeVJVWGlhaFpjRnNnQWJudEZGeW02dEpxZW9VSHFMQzYxdFJBcS1ieU1jRmZnclZ1b1FR?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-24T14:15+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "oil_watch": [
-    {
-      "title": "中東地緣緊張推升油價 市場憂通膨；歐元因PMI數據疲軟走跌 - 行銷人",
-      "url": "https://news.google.com/rss/articles/CBMi4AJBVV95cUxONmdxQkZDdE9yWVUxeW45VWM1VmdQRnZpYk0tTV95cHZqelcwbHNBN285WnFZX3dqNF9MYm40YnBaaV9XLVFmTmxubFkyb2hKSkZ1TUF3UTNwSlpUOXRNeWpuNVU1UHI5bURhdEFQWTZYcFZfR1VKU0ZXWXNjNVRtZ3o5Mm95eXlXMXhoQ05pM2dmZ3A0ZE5jUm1HbG1zYzNudDZEQ1VvQXBhQWoteVpsNmgtbXB1WlNzUFlvWHM4U1pmX0M4bzhtT0Vob2djNTZoZ3hiU2hPbnV2MHZiQTZfQ3VnRnlPcXFiV2NISUN1N0ZKMHRIOG1BZ18yek10dXh6R3BjUHVyTUxXSDU2MXRfRm40eGcxTjNtbFlDcWNzMzlvWElmZjFTXzJEb0R3X0R6VXkxUE55YXp5dDR1Y1dtYm1QLXAzVTZzay1PbDBhZ3Y4a3pJa2JmenFJVm5OV3Az?oc=5",
-      "source": "行銷人",
-      "published_at": "2026-10-24T07:35+08:00"
-    },
     {
       "title": "布蘭特原油價格週展望：胡塞襲擊沙烏地後結算116.72美元，WTI 103.27美元 – 看漲120美元，看跌108美元 - FinanceFeeds",
       "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBWWjJMeWk1Z1o3MC1tc3NfME5fZ3Q3TmF0bmRSR3ZkOVlkSjNHNXBiLThIMmpLR21SQXZCR0dpRjk0TnlFOEdlWWVxNy0tQXFmT1IwbXpDRkZLOXlpb0NNU3lQYW9rQUhGdGxUTE5WMnYzUThGMlU0bm9qM3hoRHc?oc=5",
@@ -192,6 +186,6 @@
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-25T07:23:00+08:00",
-  "checked_at": "2026-10-25T07:23:00+08:00"
+  "updated_at": "2026-10-25T09:18:36+08:00",
+  "checked_at": "2026-10-25T09:18:36+08:00"
 }
