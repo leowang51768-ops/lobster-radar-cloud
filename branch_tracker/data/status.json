@@ -10,12 +10,12 @@
   "source_blocked": false,
   "ranking_limit_per_side": 15,
   "history_target_top_per_side": 3,
-  "history_requests_succeeded": 119,
+  "history_requests_succeeded": 120,
   "observed_collection_days": 13,
   "complete_collection_days": 0,
   "counts": {
     "ranking": 67446,
-    "history": 353078,
+    "history": 360278,
     "queue": 6114
   },
   "review_stage": "資料累積中",
@@ -41,14 +41,8 @@
       "error": "Source date missing or stale"
     }
   ],
-  "history_errors": [
-    {
-      "code": "8039",
-      "branch": "9863",
-      "error": "<urlopen error _ssl.c:999: The handshake operation timed out>"
-    }
-  ],
-  "history_pairs_ever_fetched": 5891,
+  "history_errors": [],
+  "history_pairs_ever_fetched": 6011,
   "history_coverage_complete": false,
   "history_coverage_note": "按個股實際交易日缺口排序補抓；來源每頁最多60筆，較早缺口仍保留待補，缺筆不當零交易",
   "history_retry_policy": {
@@ -56,8 +50,8 @@
     "retry_delay_seconds": 900,
     "source_history_row_limit": 60
   },
-  "history_attempts_today": 120,
+  "history_attempts_today": 240,
   "ranking_coverage_complete": false,
-  "errors_total": 1,
-  "database_bytes": 64114688
+  "errors_total": 0,
+  "database_bytes": 64962560
 }
