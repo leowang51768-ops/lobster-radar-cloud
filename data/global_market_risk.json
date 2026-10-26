@@ -3,45 +3,45 @@
   "risk_level": "red",
   "risk_score": 3,
   "risk_reasons": [
-    "原油超過100美元／桶：WTI原油 102.24美元／桶、布蘭特原油 111.18美元／桶"
+    "原油超過100美元／桶：WTI原油 101.25美元／桶、布蘭特原油 110.27美元／桶"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 +4.0%｜NASDAQ +0.9%｜日經225 -0.8%｜KOSPI -1.2%｜台股加權 +0.0%｜恆生 +1.2%",
-    "⚠ 全球市場風險｜美債10Y 4.98%｜VIX 18.3｜WTI原油 102.24美元 -1.0%（超過100美元警戒）｜布蘭特原油 111.18美元 -0.5%（超過100美元警戒）",
+    "⚠ 全球市場風險｜費半 +3.3%｜NASDAQ +0.6%｜日經225 -0.8%｜KOSPI -1.2%｜台股加權 +0.0%｜恆生 +1.2%",
+    "⚠ 全球市場風險｜美債10Y 4.99%｜VIX 18.4｜WTI原油 101.25美元 -2.0%（超過100美元警戒）｜布蘭特原油 110.27美元 -1.3%（超過100美元警戒）",
     "⚠ 全球市場風險｜油價觀察｜油價飆升至每桶 117 美元 美國中東增軍事活動引市場憂",
     "⚠ 全球市場風險｜油價觀察｜油價衝擊加劇通膨壓力 加拿大央行本週料升息、聯準會十二月行動受矚",
     "⚠ 全球市場風險｜Bernstein Analyzes Crowding in AI Hardware Trades: Chips and Network Equipment Become Capital H",
+    "⚠ 全球市場風險｜Market Chatter: Saudi Aramco Nears $10 Billion Loan With Global Banks",
+    "⚠ 全球市場風險｜長線有撐 台股跌破季線先別慌",
+    "⚠ 全球市場風險｜AI Is Surprisingly Profitable. What That Means for the Stock Market. -- Barrons.com",
     "⚠ 全球市場風險｜台股明天開盤有戲？美股迎科技股買氣回溫全面飆漲 台積電ADR漲逾2%",
-    "⚠ 全球市場風險｜個股概覽 | 個股 - 股市",
-    "⚠ 全球市場風險｜每月存3000元「該買0050還台積電？」 眾狂推這檔：會感謝自己",
-    "⚠ 全球市場風險｜台股週二面臨補跌考驗！專家曝「週年慶降價布局名單」",
-    "⚠ 全球市場風險｜Bitmine Immersion Technologies (BMNR) Announces ETH Holdings Reach 6.05 Million Tokens, and Tot"
+    "⚠ 全球市場風險｜每月存3000元「該買0050還台積電？」 眾狂推這檔：會感謝自己"
   ],
   "markets": {
     "US_SOX": {
       "label": "費半",
-      "price": 11164.936,
-      "change_pct": 4.0
+      "price": 11083.47,
+      "change_pct": 3.2
     },
     "US_NASDAQ": {
       "label": "NASDAQ",
-      "price": 26247.19,
-      "change_pct": 1.0
+      "price": 26169.38,
+      "change_pct": 0.6
     },
     "US_SP500": {
       "label": "S&P500",
-      "price": 7687.48,
-      "change_pct": 0.4
+      "price": 7676.77,
+      "change_pct": 0.2
     },
     "US_DOW": {
       "label": "道瓊",
-      "price": 52366.81,
+      "price": 52361.58,
       "change_pct": -1.0
     },
     "VIX": {
       "label": "VIX",
-      "price": 18.31,
-      "change_pct": -5.8
+      "price": 18.39,
+      "change_pct": -5.4
     },
     "JP_NIKKEI": {
       "label": "日經225",
@@ -65,18 +65,18 @@
     },
     "US10Y": {
       "label": "美債10年殖利率",
-      "price": 4.984,
+      "price": 4.986,
       "change_pct": 0.0
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 102.24,
-      "change_pct": -1.0
+      "price": 101.25,
+      "change_pct": -2.0
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 111.18,
-      "change_pct": -0.4
+      "price": 110.27,
+      "change_pct": -1.2
     }
   },
   "active_news": [
@@ -89,18 +89,34 @@
       "risk_score": 4
     },
     {
-      "title": "台股明天開盤有戲？美股迎科技股買氣回溫全面飆漲 台積電ADR漲逾2% - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMipwNBVV95cUxQU1BEYlhrVHFyOGRfZ2tlVV9wTURPNDN4cWpCWWd0dFhSSk1EZTNBWmYwLXcwM2pac01oVHhRX1lHMFl3WkhyRWk2OV93UktrekJha2lFRDhxallpMGpLMC1PUktZU3lUQVFwbF9WVlhJQXVNTE5ka1llZjhhQUdNS2tvTFdJLXJrNWhjdzRsT1FvR2FRY3ViVllSaVdOSEJDajJSeEFJMmJONFBqT1oxdndzVEwxZEc5S0FJQ1VlRDk5UDF3NG4tNFdudW1OdzJGd21rOF9Kbm05ZmJWejNzeWF4Tk8tVXpiWkhONkVadUpoNzdib0tuSFpMX3Y3TkhyalhlRVdXcExDUmEwcWItemsxX25qX0NnZVhiYjlMQnAyMU1tYTVhWngwNUw2SDFfc2xSYlBBazVlUk9ibHhFTzFkUm8zeUh4SDQ2ajRVTENUVC1VdWp6bjRRS2xLY0hPQzI3VnJHeHBWZzExdk9odnJMSUdTZDgxUEh0NmRyM3VRbEk3MzczdkVtZ3NDOXlQS3FwVkwzeFctSEtnd1dEWnhVNERDS1E?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-26T23:45+08:00",
+      "title": "Market Chatter: Saudi Aramco Nears $10 Billion Loan With Global Banks - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQOGZfZjY1Y2dpcXVJZk81LS14dGROLUx0MkkzWEh6OVhEQ3FxUHJZTVpfTldBREhyOE1rNXBZRERmZC1Nc3V3b2d4ckVoZVlQMzNjQWtHODJOMi0xN1NRTENrckc4UFF6X2FGQ3IyRExiUHRXZVVzbkhLTmdmdmZrXzFlSFRwaFRMZ0ZwTkZqcVh1MldZQmFrQ2NvS2FldGc2WnVPVlJHcw?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-27T03:52+08:00",
+      "importance": 4,
+      "risk_score": 2
+    },
+    {
+      "title": "長線有撐 台股跌破季線先別慌 - 自由時報",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5WQ2c3NVkxV0Y1bUdyQXdST21XbGt2YVZiVWc5VUVuZTRRay1ZTlh6cGpKeWpqVVBqb00xRDZzN1BUTkNpQ2lmcDlWWjlNRU9mQk94ZUIybWs?oc=5",
+      "source": "自由時報",
+      "published_at": "2026-10-27T04:39+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "個股概覽 | 個股 - 股市 - CMoney",
-      "url": "https://news.google.com/rss/articles/CBMiREFVX3lxTFBfVGtPUmhQeF9nalNLNm9zTGJWQlREWTlFa2dVeEhkNElpN1d0OXlyaFF3U3NaYnBodklvejVEU1YtdkNl?oc=5",
-      "source": "CMoney",
-      "published_at": "2026-10-26T23:35+08:00",
+      "title": "AI Is Surprisingly Profitable. What That Means for the Stock Market. -- Barrons.com - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPem1JczEwUGh5RzlBUG9vS3VGd0xqQ3R3eGpDYnZLMnQyTjYtcFRodEJUWTNnNk9oRlM5LVBxX3E4TW43Nm1FckNvX05PZmRWVTQ0dDJkdlhMT2dYVVZySnIybjhNeDBqY1J5UklPR051NWVuTUhPUDQ2c3Bjc2ZmeTIxUHB2WjZsSU9fQloydWxHbmQxcDF4Q1ZzV3hERUVFQUR5YQ?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-27T02:03+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股明天開盤有戲？美股迎科技股買氣回溫全面飆漲 台積電ADR漲逾2% - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMipwNBVV95cUxQU1BEYlhrVHFyOGRfZ2tlVV9wTURPNDN4cWpCWWd0dFhSSk1EZTNBWmYwLXcwM2pac01oVHhRX1lHMFl3WkhyRWk2OV93UktrekJha2lFRDhxallpMGpLMC1PUktZU3lUQVFwbF9WVlhJQXVNTE5ka1llZjhhQUdNS2tvTFdJLXJrNWhjdzRsT1FvR2FRY3ViVllSaVdOSEJDajJSeEFJMmJONFBqT1oxdndzVEwxZEc5S0FJQ1VlRDk5UDF3NG4tNFdudW1OdzJGd21rOF9Kbm05ZmJWejNzeWF4Tk8tVXpiWkhONkVadUpoNzdib0tuSFpMX3Y3TkhyalhlRVdXcExDUmEwcWItemsxX25qX0NnZVhiYjlMQnAyMU1tYTVhWngwNUw2SDFfc2xSYlBBazVlUk9ibHhFTzFkUm8zeUh4SDQ2ajRVTENUVC1VdWp6bjRRS2xLY0hPQzI3VnJHeHBWZzExdk9odnJMSUdTZDgxUEh0NmRyM3VRbEk3MzczdkVtZ3NDOXlQS3FwVkwzeFctSEtnd1dEWnhVNERDS1E?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-26T23:45+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -125,14 +141,6 @@
       "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE80UEZraFFCZllDUVd0NGU1UnlseGJjaXVmU252Z1U0X2NPRFpDVmdZUTlNWFo1LUxZXzBTQ0g2d1VCaV9tTGdFYkRaX2hxLVE5ejdqcnRHZlFDdVUwNy1Z?oc=5",
       "source": "Quamnet",
       "published_at": "2026-10-26T21:00+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "長庚醫院擁1.46萬張台積電 3年大賺4.5倍 - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE90WlUyTk9WYjM0NWZTcVdNdGRDUEhSSVRjYk5wM0ExN1hFR2M3Rnp2YzBmVzNqS0pqSUxWemt6NlR6SEU1c0taQVhFT1dLaWlvZDhUa1IwSHQ?oc=5",
-      "source": "自由時報",
-      "published_at": "2026-10-26T20:17+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -167,14 +175,6 @@
       "published_at": "2026-10-26T17:04+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "Henderson Land Development Stock Advances 1.9% in Hong Kong - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOSE5ucGVPUThnRFN5WkhGaFRGZ1JxTmExZlFLM3hsSG9GNHVialVPOEdyYm4tUWJUSV9mdUE5RnlHM1JlajZMblA1WjhCS3A2Z0dnUTJvNW0wRFRzQ0lCQUROOGUwaXpkbWtRLV9zT3d5RTFma3phdUZyYnBlOV9Tb19zcGpTd3N6VG1xVzVLdDgwNVM3RHdCcDN5TE42UkhVWWpj?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-26T16:32+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "oil_watch": [
@@ -192,6 +192,6 @@
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-27T01:23:12+08:00",
-  "checked_at": "2026-10-27T01:23:12+08:00"
+  "updated_at": "2026-10-27T05:41:26+08:00",
+  "checked_at": "2026-10-27T05:41:26+08:00"
 }
