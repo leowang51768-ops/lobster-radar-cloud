@@ -3,19 +3,19 @@
   "risk_level": "red",
   "risk_score": 3,
   "risk_reasons": [
-    "原油超過100美元／桶：WTI原油 101.96美元／桶、布蘭特原油 110.38美元／桶"
+    "原油超過100美元／桶：WTI原油 101.80美元／桶、布蘭特原油 110.40美元／桶"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 -6.3%｜NASDAQ -2.8%｜日經225 -0.3%｜KOSPI -3.2%｜台股加權 +0.0%｜恆生 -2.4%",
-    "⚠ 全球市場風險｜美債10Y 4.99%｜VIX 19.4｜WTI原油 101.96美元 -1.3%（超過100美元警戒）｜布蘭特原油 110.38美元 -5.4%（超過100美元警戒）",
+    "⚠ 全球市場風險｜費半 -6.3%｜NASDAQ -2.8%｜日經225 +0.2%｜KOSPI +0.4%｜台股加權 +0.0%｜恆生 -2.4%",
+    "⚠ 全球市場風險｜美債10Y 4.99%｜VIX 19.4｜WTI原油 101.80美元 -1.4%（超過100美元警戒）｜布蘭特原油 110.40美元 -5.4%（超過100美元警戒）",
     "⚠ 全球市場風險｜油價觀察｜中東地緣緊張推升油價 市場憂通膨；歐元因PMI數據疲軟走跌",
+    "⚠ 全球市場風險｜油價觀察｜油價飆升至每桶 117 美元 美國中東增軍事活動引市場憂",
+    "⚠ 全球市場風險｜台股樂觀指數創新高！42%國人靠「股票基金獲利」翻轉家庭財務",
     "⚠ 全球市場風險｜外資狂賣台股免驚 中長布局不吃虧",
+    "⚠ 全球市場風險｜颱風假台股開不開? 券商公會這樣說",
     "⚠ 全球市場風險｜外資重砍台股後怎麼走？ 歷史數據顯示科技市值型反彈強勢",
     "⚠ 全球市場風險｜China Hongqiao Buys Back 0.24% of Shares for HK$449.7 Million",
-    "⚠ 全球市場風險｜Retail investors pull back, but household stock demand remains strong: Goldman Sachs",
-    "⚠ 全球市場風險｜外資買超曇花一現？台股開高翻黑 新台幣32.5元關卡再受考驗",
-    "⚠ 全球市場風險｜台股處置新制3箭 10日起「關禁閉期」縮短",
-    "⚠ 全球市場風險｜台積電目標價喊5000元！投信豪撒184億掃貨 「記憶體這檔」入列00935、00881狂搶2萬張封王"
+    "⚠ 全球市場風險｜史上最大差距》台股衝4萬7新高 港股摔到2萬3"
   ],
   "markets": {
     "US_SOX": {
@@ -45,13 +45,13 @@
     },
     "JP_NIKKEI": {
       "label": "日經225",
-      "price": 62693.16,
-      "change_pct": -0.4
+      "price": 62790.76,
+      "change_pct": 0.2
     },
     "KR_KOSPI": {
       "label": "KOSPI",
-      "price": 5550.3,
-      "change_pct": -3.2
+      "price": 5554.57,
+      "change_pct": 0.4
     },
     "TW_TAIEX": {
       "label": "台股加權",
@@ -70,21 +70,37 @@
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 101.96,
-      "change_pct": -1.2
+      "price": 101.8,
+      "change_pct": -1.4
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 110.38,
+      "price": 110.4,
       "change_pct": -5.4
     }
   },
   "active_news": [
     {
+      "title": "台股樂觀指數創新高！42%國人靠「股票基金獲利」翻轉家庭財務 - Yahoo新聞",
+      "url": "https://news.google.com/rss/articles/CBMi-wJBVV95cUxNZVdoMWFrQTJ5QldVOUhGUHJmSk9kUnlxcHhtNHYtY3F2YzNOaG5hWTVRVjBnT21FajAxRU16S3h0cDJzbzZkM1hodHNKZlFIaEZnU0xUdm9fVGZYNUYteUtOOWxPaVNQTnhKOHdRZzV3VURaaFZKNHQ2Zk5WTlpGOWlVZEIwd2xid2lEd2FRR2Z2dlplMEg1cDhIZVh4ZlJKZXk3UGFPY0JEcWxCT3RHVHJ6X3VmSGIzVTRGOTJpb2tsQ1JqXzRGamJwQk1MQlJHVnoteVhsbHRxdnp4SElPTmVRVE9TTkxfLWJ0bEloakZaYjJXeUs0LXFjYXhfd0pLdzd3aVN6VndsQXYtcUFrQXZGanphMTh4NENNUmM2NUpiMzJickNXNi1qQ3NHMy1MNFVuaTVOUUNjUVVYMzNvVlAySDFxRnpSRmtUY3NGSTZ0Rm11NFpsQ2ExQm1OZEV5ZGZ3RnNEdFBMS0JEcFRia1ZBdDhzNkRpODhn?oc=5",
+      "source": "Yahoo新聞",
+      "published_at": "2026-10-26T08:34+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
       "title": "外資狂賣台股免驚 中長布局不吃虧 - 自由時報",
       "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9oZUtncE9uT21IZE1vX21hMmk0RkZLNUlyd2J1Um1MVEtDOExzMUt0UTNaT1V0ZERWZWJTMTZYNUNqblZuRXNmMDRCbTlOMEFLOTFkb2dGUXA?oc=5",
       "source": "自由時報",
-      "published_at": "2026-10-26T04:32+08:00",
+      "published_at": "2026-10-26T05:52+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "颱風假台股開不開? 券商公會這樣說 - 自由時報",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBxVWdxSVBwLVZsNE1uejl5THNDQ3hsUGNDLXh0SnllbDVnd0RfQmNVNFVsLWJfb0IyOUJrWGkxbGsyTjRURzJaQWttQ2JKLVN0Q25fbmNONk0?oc=5",
+      "source": "自由時報",
+      "published_at": "2026-10-26T05:09+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -105,10 +121,10 @@
       "risk_score": 0
     },
     {
-      "title": "Retail investors pull back, but household stock demand remains strong: Goldman Sachs - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOUmg3ZHNCY0gxdVp0RVNJcmc1NlhHNVktNHpOWGRUQzZqSkFHZnAzbS16UTNzd0l4VVBaYjNQMjV6U2l6UWM5dmQ1TlRqZUQ0SE9Zc0s5Y3ozSGVOcTVEXzlsN1dId0dzTXFJZWVXWmdDMTZoZU13UW5paHNqQW9lUGpybEZoSVBET2g0VWExWWVOX3FlbFdDdjJlc1RTbUtJQmR1eXVDcHpuWVJUZEw5TWFKZWpCVXFsUWNfY0Y3eDNQeUZpcWRHNjZhRGt4YTBvMEk5VFRmdDZOeklf?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-10-25T22:53+08:00",
+      "title": "史上最大差距》台股衝4萬7新高 港股摔到2萬3 - 自由時報",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFB5aV95MjdWX1l3RzIxcmRSSmRvWmVRWS1ldTZZMmhUNm1CS1VVRjdDTnlSRnVGZm41dHg5OFVSM2gxS2o2LXUzZ1BIV05oZWhSNlBtNDMyUEI?oc=5",
+      "source": "自由時報",
+      "published_at": "2026-10-25T21:32+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -117,14 +133,6 @@
       "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBHbU1Kb2xPV0d4cS1mVWxnaFh5ZzRxVzBoamJzOEtjdjU1NXlIMXY0NF8tQ0xSZnhhcXBVQ2MxaXJHcmttd0lHYzNrcWx1aXp4YVdOQU5tLUk?oc=5",
       "source": "自由時報",
       "published_at": "2026-10-25T20:54+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股處置新制3箭 10日起「關禁閉期」縮短 - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9WTWNQRzJXWEZ0X2tiVHBLNEp1RjhaY0h1TEN5WDcySzZDRV9MRWVwUUVOdVkzTlE2dGh0dEVxT1dTaUxsRlBTOWpYREN0UFZsZWYzdXpzOUE?oc=5",
-      "source": "自由時報",
-      "published_at": "2026-10-25T19:38+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -153,10 +161,10 @@
       "risk_score": 0
     },
     {
-      "title": "台股重挫近3800點！「財經作家」罕見不敢逢低買 點出「這訊號」最令人不安 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi7gJBVV95cUxQa25Ra0lvZGRYa3ZyN0pfbTM2MU5wci1Hczlsdll2SnE1RGFaTktZS29sRm83ZmExRlRZQ1ktU2gyYV9YMUVOdk0tM0luem12ZThvRHJ4T2t0Q3U4aEkxOHdfSTVON29MRkhSTkpxWDI0X3J2b1pjWl9OeDZzWnFhWUZtTUdFQW5NbEllVTdTQXN4VGxSZjM4N0FKekhnYndWYTdLNnF5SlRTaWRELU40b3hiTkkyeHFIUzh1QVR6WXlad3pMVS0zUUEzblRUTDAzUFNDZWQzNUJ3Yl8tZnktaUpPb2FrTFA3UndhZ3g5Zi1veXE3cGNkYWlJNDhmc2RBM3R1Z09nWFY1Wld4bXhxaTl4SUdTOVJhYmJGMlFaWUJHcC1sNXpVRUtocTkyQk1Cckx4UTFLaUstUjk0eTd4QmxOam1Hd3g5RjBNcTYyM0ZGQ1BpN1R3NmE5a1c4UXgyQW42TW5DQ1pmWElTaHc?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-25T16:20+08:00",
+      "title": "全民瘋台股 證券交易員年薪增幅17％奪冠 - 自由時報",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE55RWgxczJMMDNITE9ud1ZON25XOFVqZVhzeGZFQk96VHNseWNlTjNhN3pYMnlWRnpPR1hCVExKRWh6TkZFaGhQa19OSnhGT1lxc1hIdFNzT2o?oc=5",
+      "source": "自由時報",
+      "published_at": "2026-10-25T17:44+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -167,14 +175,6 @@
       "published_at": "2026-10-25T13:58+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "對護國神山投信任票 台積電高階經理人現贈與節稅潮 - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE90Z0tWM1hONnVIcFJvOVF5dzFIT1AzODByZ0cwU0dVQU9OcVdwMFR3bHRxeVJMRFQyVVpJMDBJdWdYaUMwTDA5ME10emN5czE0Z211TU1qTl8?oc=5",
-      "source": "自由時報",
-      "published_at": "2026-10-25T13:57+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "oil_watch": [
@@ -183,9 +183,21 @@
       "url": "https://news.google.com/rss/articles/CBMiOkFVX3lxTE11MERtS2dFUkl6bEJUTllNTDA5U3pRcnhWZWRpbjJuN25RSVgzQjhJMU03RndmaHoyNnc?oc=5",
       "source": "ENN台灣電報",
       "published_at": "2026-10-25T15:09+08:00"
+    },
+    {
+      "title": "油價飆升至每桶 117 美元 美國中東增軍事活動引市場憂 - Life 生活網",
+      "url": "https://news.google.com/rss/articles/CBMi1wJBVV95cUxNV0JyWDczR3pRRnpXSTNOeHA2eE4yRWM1Q0dfNjVfUDhzTVUyc2ZHQTRtems2MHJSNUhpSzU4OXU1Q3dpMHZtODg0eTJFTnNqLUtFS2luQl9lWl9FQ19NWWhlc0NtTU02Y20xOEdwZDFpWk1PQWlRUEgtOUZIaXdYSF9FVkltb0x4WDAxc2JjcUZzcWpqUnBQRGVtaFp3Xzh1QTd2VXBVR3VQd1FUcDhlYV8tYmtlNFM5NU5kTzFsWGdCVUVraF91Vk9Dc0l3MHlOejBXdk1NMEZpR3JweFAwMlR1S1N4U3BtbUNEY29PZjZVNlBLaW43WE5hSnR3M3hiNk95R3JkUWtucWdlRkh4d01UYnFnMDhZU1BGa2hKMFF5eVgxTHdRbDNGSFIxbXJBdmRMa3lYMGZiRkFydEpTRWVndUlHT0N6QnFaWjFIZjFnalluTnRn?oc=5",
+      "source": "Life 生活網",
+      "published_at": "2026-10-26T06:56+08:00"
+    },
+    {
+      "title": "油價衝擊加劇通膨壓力 加拿大央行本週料升息、聯準會十二月行動受矚 - Life 生活網",
+      "url": "https://news.google.com/rss/articles/CBMimgNBVV95cUxQMDFscWFDb1R5ZzNVNlRCd1NmejRXc0RZQjJkTTJ6Q0ZOVDNNLWcyX3pIUFNGU255OW5OenBxTjEybWNnbXB5c1ZqdnBZeWEzeGZhN0VrQUl5SHRmVi12RDVvenlKTktIVmdKLUVCWTBuY2NUVmlCNkRVc0xDYkxfbk1KTGNuT2lKQXZkYjE5LUQ0eS16dmJQemlLR0V5d0I0NE0yZU9SUmpsd3Z6YURUc29aaDFXOV9qdzFLam1FbDlSYzJqR21aYXpCejU2X2FwbkotcUFYaG9EaERUNGZuTi1pdkE0N0dFTk5hdmtxTk5uWmVLUXU4aHhlQWpES1I0eFZ1REN5aEVRZFYyajdJY1Q5QUFpTXk1VzI2UGNkc3JYOUpBTElIbFNQM1ZVYnFWZVFibUptYktQSG9QZHdOSVIyR01LRzNPX3B3T2FQLU54U0QtMTRUbXpEcEVXU2Z1MnpPZWhadDAxczVJSkxGTUl1NmlDanhrRDdSWm5hSS16QUlPMmx5WmlrMXdZcjZLMGE4VEp2Q3FNZw?oc=5",
+      "source": "Life 生活網",
+      "published_at": "2026-10-26T06:41+08:00"
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-26T06:49:07+08:00",
-  "checked_at": "2026-10-26T06:49:07+08:00"
+  "updated_at": "2026-10-26T08:45:04+08:00",
+  "checked_at": "2026-10-26T08:45:04+08:00"
 }
