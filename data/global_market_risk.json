@@ -3,19 +3,19 @@
   "risk_level": "red",
   "risk_score": 3,
   "risk_reasons": [
-    "原油超過100美元／桶：WTI原油 100.23美元／桶、布蘭特原油 109.83美元／桶"
+    "原油超過100美元／桶：WTI原油 100.08美元／桶、布蘭特原油 109.55美元／桶"
   ],
   "ticker": [
     "⚠ 全球市場風險｜費半 +6.5%｜NASDAQ +2.0%｜日經225 +1.7%｜KOSPI +1.6%｜台股加權 +0.1%｜恆生 -0.2%",
-    "⚠ 全球市場風險｜美債10Y 4.99%｜VIX 17.5｜WTI原油 100.23美元 -1.5%（超過100美元警戒）｜布蘭特原油 109.83美元 -5.2%（超過100美元警戒）",
+    "⚠ 全球市場風險｜美債10Y 4.99%｜VIX 17.5｜WTI原油 100.08美元 -1.6%（超過100美元警戒）｜布蘭特原油 109.55美元 -5.4%（超過100美元警戒）",
     "⚠ 全球市場風險｜Southbound capital records net sales of HKD 1.238 billion; AI hardware stocks face renewed sell",
     "⚠ 全球市場風險｜Anthropic is racing toward the largest IPO in its history, while Hong Kong‑listed \"AI model duo",
+    "⚠ 全球市場風險｜China SCE Group Holdings (01966) recorded a total deposited market value of HK$25.5718 million,",
     "⚠ 全球市場風險｜The Federal Reserve's decision this week will focus less on interest rates and more on whether ",
+    "⚠ 全球市場風險｜女股神財報前賣「超微、台積電」！大舉布局「這產業」",
     "⚠ 全球市場風險｜The PC market has suffered its worst Q3 in 20 years—can Intel and AMD turn things around with s",
     "⚠ 全球市場風險｜台積電ADR勁揚近2%！美股漲多跌少「費半噴2%、特斯拉飆3%」 台指期夜盤一度強漲600點",
-    "⚠ 全球市場風險｜Wall Street remains bullish, with more than 70% upside potential—can memory‑chip stocks sound t",
-    "⚠ 全球市場風險｜AI-related stocks poised to extend rebound; dividend leaders report strong earnings | Tonight's",
-    "⚠ 全球市場風險｜European Chip Stocks Rise as Anthropic's IPO Prospectus Reinvigorates AI Trade -- Market Talk"
+    "⚠ 全球市場風險｜Wall Street remains bullish, with more than 70% upside potential—can memory‑chip stocks sound t"
   ],
   "markets": {
     "US_SOX": {
@@ -70,13 +70,13 @@
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 100.23,
+      "price": 100.08,
       "change_pct": -1.6
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 109.83,
-      "change_pct": -5.2
+      "price": 109.55,
+      "change_pct": -5.4
     }
   },
   "active_news": [
@@ -97,11 +97,27 @@
       "risk_score": 4
     },
     {
+      "title": "China SCE Group Holdings (01966) recorded a total deposited market value of HK$25.5718 million, with shareholders depositing 624 million shares into HSBC Bank Hong Kong. - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPZVcwYkptOWlOUzhwUW5oRHM4anl4NFhmUVBPUldyWmNXT01YQ0VpVGRKd2tyRkNGWDdOT1FiTVVxWjBYd25nTklPSmxzZ1dxVmY1d2IycGdKejV1OVVSOUtuTXFwcHNFSDI4cjBIZlJwVWJJdjg5S2EtTWxmVnJIT3duX0xmZU1UMnBWdHJ5ejM3ZG1OaUY3SmtZcmh6Ni1fOURBM1EyT0p1VFE?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-27T08:13+08:00",
+      "importance": 4,
+      "risk_score": 2
+    },
+    {
       "title": "The Federal Reserve's decision this week will focus less on interest rates and more on whether Chairman Powell will \"explain\" to the market. - 富途牛牛",
       "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQVExaZWRGck5ydkp5dms3Z1JpYW1TanR6d0tvWGYxZkNCaGoyMjR3dEpyWHc4cFVITTg3UFRWSUJyZE9POUh6WHVnYUx1SkdzUWcwQlNiUFdnNmNUdV90SmJtTHdiVzRueHNTOTkyNkJFQ2RxNTZiZnF2T21YV1pxM2R6WW4zZTV2cHRuLU1fYlYzVldhd09vSmdUWllYdUVD?oc=5",
       "source": "富途牛牛",
       "published_at": "2026-10-27T08:05+08:00",
       "importance": 3,
+      "risk_score": 0
+    },
+    {
+      "title": "女股神財報前賣「超微、台積電」！大舉布局「這產業」 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMixAJBVV95cUxNcUEzWFFXbkJKbXJVUk83cEhhajNWSmdHSGlEMEc1T1hCemNOdGJCeUpkenN0UVFiTExhc2xpa1c3UXR5ZzRoeF9tM1RORkpibEtfSUhVVlExXzMtYmlJN3BjbVJsUzZfTmlpMzRkR0xBaGJIZGJxbVhuZWZ3OEtsTFpTN2hTbFlLMWVXRktac21FbUNvcWFOSVc1VHJJR3JRekNhRnRXSnhaaV9QX2ZnejF4VnIxQ3hJV1gtY25VeThHWnltVnFqeHBxdlk2ODd0Z21GeTdoeWhEYkJHVU9GU09mNlBnd29udEZmZ1ZYa29pcmRwcG9XYk9lbV93dFFERUY1N0VtUkRzT1pUSjduSXFoN29jOFQtNUxITHRkSkRKTjlodmtVcXV6bmdqeHFwazAzRl82SVBoNXU3eHFucDBJY0k?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-28T06:44+08:00",
+      "importance": 2,
       "risk_score": 0
     },
     {
@@ -129,6 +145,14 @@
       "risk_score": 0
     },
     {
+      "title": "China Hongqiao Group Stock Climbs 1.3% in Hong Kong - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNeFN0czhmRkg4U0FYUVpvRnRrRkhiTGNFdGtPekhXWGpZSGc2cmhNTHR4VzhwUlEtUGRKSzZsUUxXNGRPZ29xOUVEVTlHLXJJb3FwSTRDS21VOUVwTTBIX0JFdWlKb2Vrek1tX2hva2xaUlktR0s3RjVpb3k4LUZmblQ4WTlxcWh2MmgzdVhxelBoY25LR3lhVw?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-27T22:13+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
       "title": "AI-related stocks poised to extend rebound; dividend leaders report strong earnings | Tonight's Highlights - 富途牛牛",
       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPMloyd2laZERlTThTXzJ6ZmhLOUhnUkhsdDFlMHN2UDJRcGw5TVZHU3F2c3dBcTdDN1hEZWZJU181Y05lOU5QdllGb0ZWUFk0eGZyOFpMc0x6Wk9EdkNFbkMzbFFVaVA5S2w0TkdxX2NCNUx6SENXRzZGdU8wTVV2bGE2bldwbGp6N1FobUNjMk1ucWwybmZjTWpycnRsbHAwdTdETGtqU0N0TVVPeXc?oc=5",
       "source": "富途牛牛",
@@ -151,34 +175,10 @@
       "published_at": "2026-10-27T19:18+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "200萬定存想All in股市！新手猶豫0050還是台積電 過來人曝進場策略 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMigwNBVV95cUxObm1XdjVMTTdVTkdRbkVRRkEwWnMza2RZaTRDcE95ck4zNDJ6b2E4eUJycFJIbVNudmc3ZGtuRHBBZC0xLXJPb2U3dHp4MmNJdHVTdEh3Y18xbXpWYW9JaFVFWUY0cFRTNzhKeTlvTTlzMG0wUl9XZmZVbVlUQ2xKVFJUZEVtem02WVFzSWVGLTZYbGVEQ1czcWdsbWRUSnM2QlMzUHZQZm9YU2hMYTdSYWQyWVYwUE9ZczlLQlJUUmdxOHM5OVNUSlVUTG9jOWtHdVNFSDVKTWRKamVKOVF4b2JmcTRUdUlaM3hGc2VycmJOb3lKbXN2V19zX3Z0WjRsb3lrMGlEeEIyY1I2S0xRaDZjZHUxWDRkOUtYeWxIU3JxVjV3ZU5vd1VUWDFHV3VJcHpIZmM0VlJrQTNtOGRPV2FxaVBKVG1rUU92U2RTQWpNaWozeWRoUDVXNXRJYWxyZnNSaXpVQS1wWEI3Y0FDY3VxV2lSRXlQMkszUHRMWHVpNDQ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-27T18:15+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台積尾盤拉一把！機器人出拳、記憶體補血台股震盪900點收紅保住46000點大關｜Yahoo財經掃描 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMingRBVV95cUxORjFQbkhRTnhkLTdKNk1OQW5NSm5jM1VWNEpoNFgtNC13YklqNFJCWUZzc2E1ZEV4S0NCdzI4MFdfZ1NWVjM1ZjdOSnQzWVAzY2t0WTBqS0JHT1JHVDVwUDRNYm1rOGU2d1gwYmxyZjc4bE9NZHdsaVRPZW9CS1lGbmJTQ2JIaHFJLVRCbko2UUtyNGZVRmZua2dzZlFGbG04Z05TTFc4MkdMOXVXZU9vNGpkeWd0SExEU29pbkpQcjdsbTk3T1JZRnQwenptOHVCcGJuVUx2M19maktRTzhuOEgxVTFPeU1tTXB5VnNKNkgzMm9sZ2lzQVFhbmxKclhxWG5VaDhWelprR2lUeXdsNFQxZWJ0dkJuTVRpYVl1X0VqOWo2amJldm41azBoVi1ZRHZCYVhoWF9sbFlyUWZQYmFjbG5QZGRxZ2FzQ3ZfUTI4WlZHX09Qblg0RVJ5VGZkTFVTMWlEdUhCM04yUW4wMnptVzg5U0VETjEzODQ3REl5eXRUbWd3UmRuVDVqcnA5Y3JiQVRzSkpBZjJ4WmtUajNEQ3h2N3ZELWNnQndwUERqQkd2c1plUDVUSUhNdENWc3d4UDE4ZTZLVjJnREl1ZlRMMHE0dTVFSGhyTGlsUDdqR2hYdGRKVEl4dkw3WW92SGJxLVhiSzJuZ01QZlB6S0pELUFHVGxISWctLUlFQ3R0VjJpclBmYVN3Ri0tQQ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-27T17:16+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Goldman Sachs: AI Reshapes Market Pricing, Semiconductor Sector Influence Surpasses Oil Prices - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOTjdlUkxMQ29MUjdURV9HN2YyVUFWcjkyb3I5QlBtcTRIdThzSmoxaTRLNzRSdGlRTnI1NS1iMU9GWFFzLVFCT19rWWprOTRyTHFMbmd6LXNvSjlwZ2VtRmJOSUFtWDNETHVvUzBIZlpSNnlQbXJBdDBucWQ2ZXZLdnFtb3VwdWVHdFJXZFcwb0R1WjczMjExd0lfV0NXSGxCR3djUWtaMkwwam02dU80ZTQ3cU8wbFI3aFFGRjY3ODMydw?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-27T16:58+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "oil_watch": [],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-28T04:38:19+08:00",
-  "checked_at": "2026-10-28T04:38:19+08:00"
+  "updated_at": "2026-10-28T07:58:44+08:00",
+  "checked_at": "2026-10-28T07:58:44+08:00"
 }
