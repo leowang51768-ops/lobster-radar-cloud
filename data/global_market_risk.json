@@ -3,45 +3,45 @@
   "risk_level": "red",
   "risk_score": 3,
   "risk_reasons": [
-    "原油超過100美元／桶：WTI原油 100.96美元／桶、布蘭特原油 109.94美元／桶"
+    "原油超過100美元／桶：WTI原油 100.28美元／桶、布蘭特原油 109.67美元／桶"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 +3.3%｜NASDAQ +0.6%｜日經225 +1.7%｜KOSPI +1.6%｜台股加權 +0.1%｜恆生 -0.2%",
-    "⚠ 全球市場風險｜美債10Y 4.99%｜VIX 18.1｜WTI原油 100.96美元 -0.8%（超過100美元警戒）｜布蘭特原油 109.94美元 -5.1%（超過100美元警戒）",
-    "⚠ 全球市場風險｜Bernstein Analyzes Crowding in AI Hardware Trades: Chips and Network Equipment Become Capital H",
-    "⚠ 全球市場風險｜Market Chatter: Saudi Aramco Nears $10 Billion Loan With Global Banks",
+    "⚠ 全球市場風險｜費半 +6.3%｜NASDAQ +2.2%｜日經225 +1.7%｜KOSPI +1.6%｜台股加權 +0.1%｜恆生 -0.2%",
+    "⚠ 全球市場風險｜美債10Y 4.99%｜VIX 17.6｜WTI原油 100.28美元 -1.4%（超過100美元警戒）｜布蘭特原油 109.67美元 -5.3%（超過100美元警戒）",
     "⚠ 全球市場風險｜The Federal Reserve's decision this week will focus less on interest rates and more on whether ",
-    "⚠ 全球市場風險｜Stock Market Today: Dow Jones, S&P 500, Nasdaq 100 Futures Rise After Trump Rules Out Iran Stri",
-    "⚠ 全球市場風險｜China Mengniu Dairy Stock Sheds 2.5% in Hong Kong",
-    "⚠ 全球市場風險｜亞股失血潮！台股遭外資甩賣最慘 全球超級央行周市場觀望",
-    "⚠ 全球市場風險｜Hong Kong Market Quick Look | All three major indices declined, with the tech index down 1.48%;",
-    "⚠ 全球市場風險｜【10月台股ETF風雲榜】瑤池金母00981A慘跌末段班 五檔跌10%最兇"
+    "⚠ 全球市場風險｜The PC market has suffered its worst Q3 in 20 years—can Intel and AMD turn things around with s",
+    "⚠ 全球市場風險｜台積電ADR勁揚近2%！美股漲多跌少「費半噴2%、特斯拉飆3%」 台指期夜盤一度強漲600點",
+    "⚠ 全球市場風險｜Wall Street remains bullish, with more than 70% upside potential—can memory‑chip stocks sound t",
+    "⚠ 全球市場風險｜Tech firms track Wall St rally on mixed day for stock markets",
+    "⚠ 全球市場風險｜European Chip Stocks Rise as Anthropic's IPO Prospectus Reinvigorates AI Trade -- Market Talk",
+    "⚠ 全球市場風險｜中國澱粉(03838.HK)10月27日耗資173.8萬港元回購1000萬股",
+    "⚠ 全球市場風險｜遠東商銀系統測試釀資料外洩！金管會開罰200萬"
   ],
   "markets": {
     "US_SOX": {
       "label": "費半",
-      "price": 11083.47,
-      "change_pct": 3.2
+      "price": 11461.44,
+      "change_pct": 6.4
     },
     "US_NASDAQ": {
       "label": "NASDAQ",
-      "price": 26169.38,
-      "change_pct": 0.6
+      "price": 26516.541,
+      "change_pct": 2.2
     },
     "US_SP500": {
       "label": "S&P500",
-      "price": 7676.77,
-      "change_pct": 0.2
+      "price": 7731.33,
+      "change_pct": 1.4
     },
     "US_DOW": {
       "label": "道瓊",
-      "price": 52361.58,
-      "change_pct": -1.0
+      "price": 52456.27,
+      "change_pct": 0.4
     },
     "VIX": {
       "label": "VIX",
-      "price": 18.09,
-      "change_pct": -1.6
+      "price": 17.57,
+      "change_pct": -4.4
     },
     "JP_NIKKEI": {
       "label": "日經225",
@@ -65,37 +65,21 @@
     },
     "US10Y": {
       "label": "美債10年殖利率",
-      "price": 4.986,
+      "price": 4.988,
       "change_pct": 0.0
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 100.96,
-      "change_pct": -0.8
+      "price": 100.28,
+      "change_pct": -1.4
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 109.94,
-      "change_pct": -5.0
+      "price": 109.67,
+      "change_pct": -5.2
     }
   },
   "active_news": [
-    {
-      "title": "Bernstein Analyzes Crowding in AI Hardware Trades: Chips and Network Equipment Become Capital Hubs, While Memory Stocks Diverge - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQaW83SGJ6YmNuZWJ3cG1oSncyNFlaSWNPRG9FY2FmOWtmWWJWV1pFOTV1NElOM3RJeUFybUhFVnZRS25QdlRmLWV0bTFOWXBtNElqMXFJbTR4TDl1YTZJcjFDTEpPWVVMTWRXcG4ydUxXRV83SjhYNU9pc01HV2RCdW1FcDk5cmN5UTBnVjFhWnQ1V09zWDFIdFRmNFlGM3djUGR4V2s1dnBEdWZzazJB?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-26T23:06+08:00",
-      "importance": 5,
-      "risk_score": 4
-    },
-    {
-      "title": "Market Chatter: Saudi Aramco Nears $10 Billion Loan With Global Banks - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQOGZfZjY1Y2dpcXVJZk81LS14dGROLUx0MkkzWEh6OVhEQ3FxUHJZTVpfTldBREhyOE1rNXBZRERmZC1Nc3V3b2d4ckVoZVlQMzNjQWtHODJOMi0xN1NRTENrckc4UFF6X2FGQ3IyRExiUHRXZVVzbkhLTmdmdmZrXzFlSFRwaFRMZ0ZwTkZqcVh1MldZQmFrQ2NvS2FldGc2WnVPVlJHcw?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-27T03:52+08:00",
-      "importance": 4,
-      "risk_score": 2
-    },
     {
       "title": "The Federal Reserve's decision this week will focus less on interest rates and more on whether Chairman Powell will \"explain\" to the market. - 富途牛牛",
       "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQVExaZWRGck5ydkp5dms3Z1JpYW1TanR6d0tvWGYxZkNCaGoyMjR3dEpyWHc4cFVITTg3UFRWSUJyZE9POUh6WHVnYUx1SkdzUWcwQlNiUFdnNmNUdV90SmJtTHdiVzRueHNTOTkyNkJFQ2RxNTZiZnF2T21YV1pxM2R6WW4zZTV2cHRuLU1fYlYzVldhd09vSmdUWllYdUVD?oc=5",
@@ -105,11 +89,83 @@
       "risk_score": 0
     },
     {
-      "title": "Stock Market Today: Dow Jones, S&P 500, Nasdaq 100 Futures Rise After Trump Rules Out Iran Strike — ITUB, NON, CLS in Focus (UPDATED) - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMijwJBVV95cUxORzdwakFtLXRJZjFQUmtFeGRaQWNFanl3VDRmQlhUbUZpSGxDeU9pQl9BWnhyMVAwUnZ4alJva2pZTEg4Tm9GNndkalptVVRhTGFlX1hxNVNIelFtTllyb3hONGJxVTRhVG43cnpIUGt6SlBGdmpMX2dEbmxPUE53T2huU2t2Q053S1pIbVlZcS1ZaEZHclF0YjNObXVKSDVDeEFBYkZoNURBQVpVbmkxUnpVcG5ld3Rjc2IxSEt6ajEyWXplWE9XZDlDUjU5RVRNVDFyS3NsZEFQSFNWZkhHSVR2QlhMXzRrMml2bGU2LXNJSkU2S3JOTWpiYmJCcF9BT3lwbFlEdU5yMUpTWExn?oc=5",
+      "title": "The PC market has suffered its worst Q3 in 20 years—can Intel and AMD turn things around with servers and AI? - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNa0t2QkUxUUZkSnJ5d1NNRFlPSnhwcVlsaEZ1ODl2bGItTloxcnNEaDJtYXBMMkNZT3pTV0FlNzd1eVJPd0JrX01HZkZjd2FBTDZaM3VWem5FMHBtNi1IbGRVOXFGNTBEdVQzLWtKWnVkNEQzVnV6UUFjYnFneEVMbE5wNy1CVi1kMGRpWG5nbC1MUQ?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-27T23:34+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台積電ADR勁揚近2%！美股漲多跌少「費半噴2%、特斯拉飆3%」 台指期夜盤一度強漲600點 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiiANBVV95cUxOTDRsZTQyV0pGQVZYblQtckFNRFdBS0pqdVRocFVWWUZUR2x4Q2xRLWdHWTFLSEFPdnVNZFVCcDVaMkJVVFUtVDJSUXVDSnM5WElMTlU2OU5kRHR3ZnZpVHJSdGpWd3pXY2RUTXRlM1RtWkhrZ1lxN2ZSRHctdFhmcHYyd1BldnN6dEx2Yng2X2VPb3pyaU12MVQxdzNNbnQzSVlwQmcxb21uVWlraDk3aUJWNkdUS1lCUEwwVEZmcTNfdmVoaTVQcnZmSnQweENfeWdzYkV4Z1lLQUxxbUpxUnZHYkhORDJ0RUduOThHN1NFVjFLVGlhbWtyZzhVcmcwTU1sbnRWZkh6THQyM2pDTkN0enhaNV9wY2w0SFJCV0hIRERQOUUzSzhESlpCNHpBT01WcnRsS2tjQm9xY19MdXJ6ZWpENUxEa3lSM25uMzZmS0FFRkdvcnVQSndkMDZwQXlEVGhkczV0aGtFRENMQnZ6OG5PY2Q5TGt0aTNfZ3FmbHVJUVAybg?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-27T22:50+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Wall Street remains bullish, with more than 70% upside potential—can memory‑chip stocks sound the charge for a comeback? - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNRUR2clNycWFKQUFUQUdzanV6YjVFQ0dLcTlGblNRdFh0WjZLRG1zYWtjUVA2XzNXTmxCMmxfaDZ4dDZQYVpacVA3Z0F6SGhacU9NS1lJMXlsSmVxVGVmYlZubkNFRm00LUR3RGVwcE1jZG51Um5hazg5MWE4aERJLUVQV1hvTldxV0NSc2RKNUhNR1d0M0tFODZoVnRHNVg5X2ZyRGJPa1A?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-27T22:36+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Tech firms track Wall St rally on mixed day for stock markets - Macau Business",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPMXZ1NHFxb21KdUwxN25NaHFYNVJJal9kZ1pSQ2FNQU9NVVNTNUZZSDhCZ0dZZU85NmZfNnZFSE1EMVdzU3ZPcEVrS295bEh2Ylg4bHBKa1RiZzRBaVBmbzZ3MGdJNVJ3X25sQklCdFRWUjZnWDl4M0kxMUJzSVFrdmU0b3ZxRm5icmJGMnlNR0RuZw?oc=5",
+      "source": "Macau Business",
+      "published_at": "2026-10-27T21:41+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "European Chip Stocks Rise as Anthropic's IPO Prospectus Reinvigorates AI Trade -- Market Talk - Moomoo",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQaUU0bFdIVGdMQkpoeFUzS0hsSm1IM3pidk9fYWdPNFI3QXhEQ0lNc1lsU1BnbEx1a0JJTS1jeGp4eVZPcHRheHhZejBya1A0Q0VSb1FNNC1aRWhycmVOWjBCeEtaeFlTMk1YaGNmZmVMUU9IYzF3S3hJT0ttZTg2ODI2ZkdESl81TTA3MEFtWDhTaDVuczhuT3QxSW8zdnY4RDgyaUk5TXNyUGpjUnZvRm9MaXZCWl9BUHc?oc=5",
+      "source": "Moomoo",
+      "published_at": "2026-10-27T19:37+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "中國澱粉(03838.HK)10月27日耗資173.8萬港元回購1000萬股 - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1FMlQ5aE92bEhOWEZUdmpjUzZkSGxLbmc4TzRkcW9JSlpxWjV1YVJ6NVhncnJBZkpyOHM1d0J0QTlRQzF6aE8xZEZaMGoyUXdSdWp2dHBab3ZOUk1VMWZRMWhhZjFYY0JOQnJj?oc=5",
       "source": "TradingView",
-      "published_at": "2026-10-26T20:31+08:00",
-      "importance": 3,
+      "published_at": "2026-10-27T19:18+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "遠東商銀系統測試釀資料外洩！金管會開罰200萬 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMixAJBVV95cUxPdWw1MmpqZVFTM3hYd0JNZGFaTWtnZTUxQTcwUEs2MXJUc091TWtoTFZyUURPZ01MNDRWQ0haVUNncFh4ci1ZOGdKYWE5LUpHOEhONXhpb01VRkFwUWx4NWlZc2phTTVTdEZkS2w3SWk2aHBVV2sxYUZINVBxbG5vUjhFR2hNTTlzQ0VnNUxUTnlyY3pPb3ZOSDVtSTFtUndCUEVrUlZIMGFDT3UxZVBYMFpmZVllUmRoTmtfcFQ5d2puMlZ6NDVaSGJaNE9FX05aM05YMkp0WTZ5cThuT2ZQQ0dUaUROQ2RIYlpyOHg1ZWZ4Y3A5QVZ6VVVpNmpyUlg0NWd1dVdEbElrXy14ZzRLd25PcEZ6MUlVblQwYllvUjNEaWtWLXU3TzhGVHhsbWUxMkFsZDBUOTYwMzNqWVRaeFZ3LWw?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-27T19:10+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "200萬定存想All in股市！新手猶豫0050還是台積電 過來人曝進場策略 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMigwNBVV95cUxObm1XdjVMTTdVTkdRbkVRRkEwWnMza2RZaTRDcE95ck4zNDJ6b2E4eUJycFJIbVNudmc3ZGtuRHBBZC0xLXJPb2U3dHp4MmNJdHVTdEh3Y18xbXpWYW9JaFVFWUY0cFRTNzhKeTlvTTlzMG0wUl9XZmZVbVlUQ2xKVFJUZEVtem02WVFzSWVGLTZYbGVEQ1czcWdsbWRUSnM2QlMzUHZQZm9YU2hMYTdSYWQyWVYwUE9ZczlLQlJUUmdxOHM5OVNUSlVUTG9jOWtHdVNFSDVKTWRKamVKOVF4b2JmcTRUdUlaM3hGc2VycmJOb3lKbXN2V19zX3Z0WjRsb3lrMGlEeEIyY1I2S0xRaDZjZHUxWDRkOUtYeWxIU3JxVjV3ZU5vd1VUWDFHV3VJcHpIZmM0VlJrQTNtOGRPV2FxaVBKVG1rUU92U2RTQWpNaWozeWRoUDVXNXRJYWxyZnNSaXpVQS1wWEI3Y0FDY3VxV2lSRXlQMkszUHRMWHVpNDQ?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-27T18:15+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "[Market Data Insight] Institutional activity declines markedly; Ziyang East Road seat accumulates RMB 122 million in Dayang Electric Motor shares - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPVEx1dzJFYmFyUWxUNmZ2ZjNRaDIyYW5valcxeU8zRHRWX3NRYlk0R0drQWNFcElIYlBvb19BWFNUOFc0RFdBSTMtaGJwaW5pX0E3MWdfNzJubjlpM2R6bFkxQjVRemdGV3dwSElLNlBUakg3a2x4dTdfSWZLdnJkQ2cyU2hqNWR6Q2VGeE1Sa1U0M2NNeTh3eEw5RWFEbDJKNnFUQUNITzJkT2xpbnFPN1luWDhGbmFfdVFqSg?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-27T17:42+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台積尾盤拉一把！機器人出拳、記憶體補血台股震盪900點收紅保住46000點大關｜Yahoo財經掃描 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMingRBVV95cUxORjFQbkhRTnhkLTdKNk1OQW5NSm5jM1VWNEpoNFgtNC13YklqNFJCWUZzc2E1ZEV4S0NCdzI4MFdfZ1NWVjM1ZjdOSnQzWVAzY2t0WTBqS0JHT1JHVDVwUDRNYm1rOGU2d1gwYmxyZjc4bE9NZHdsaVRPZW9CS1lGbmJTQ2JIaHFJLVRCbko2UUtyNGZVRmZua2dzZlFGbG04Z05TTFc4MkdMOXVXZU9vNGpkeWd0SExEU29pbkpQcjdsbTk3T1JZRnQwenptOHVCcGJuVUx2M19maktRTzhuOEgxVTFPeU1tTXB5VnNKNkgzMm9sZ2lzQVFhbmxKclhxWG5VaDhWelprR2lUeXdsNFQxZWJ0dkJuTVRpYVl1X0VqOWo2amJldm41azBoVi1ZRHZCYVhoWF9sbFlyUWZQYmFjbG5QZGRxZ2FzQ3ZfUTI4WlZHX09Qblg0RVJ5VGZkTFVTMWlEdUhCM04yUW4wMnptVzg5U0VETjEzODQ3REl5eXRUbWd3UmRuVDVqcnA5Y3JiQVRzSkpBZjJ4WmtUajNEQ3h2N3ZELWNnQndwUERqQkd2c1plUDVUSUhNdENWc3d4UDE4ZTZLVjJnREl1ZlRMMHE0dTVFSGhyTGlsUDdqR2hYdGRKVEl4dkw3WW92SGJxLVhiSzJuZ01QZlB6S0pELUFHVGxISWctLUlFQ3R0VjJpclBmYVN3Ri0tQQ?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-27T17:16+08:00",
+      "importance": 2,
       "risk_score": 0
     },
     {
@@ -119,66 +175,10 @@
       "published_at": "2026-10-27T16:49+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "亞股失血潮！台股遭外資甩賣最慘 全球超級央行周市場觀望 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiigNBVV95cUxOaFNoRExobXZWVTE3ZURCT3NYcl85cW43R3hOT3FObV9UdHFUb0F0WVhPR2FZb01aZzA0YlF5MDhqb09Zb2pEZXltVXdrakNmZVpQX2VNYkI2dFY5WmZISXhyLTE0NlY5SWpXaHY5dngyZWRtYjJBd29hbURuakVjWFp6MzBaZ0FGX3JIR1Z1T29XWjJZSlV5aTlleUpIVkRBX2swNURHcW1qeC1ER0J0ZVFZdVJmZTBOdGpqLTNGLUU0SURraVlzNUhjYmplLXI4VktDci1NdmZSUFF2ZEFsYU5mYVdfSG1ITl84a0xob1hwMEtnRUVGUWV0NDVTdGtRXzZ4cVdiM3NFWFkwMGhTMzVOd2ZWc0RQdDE5UExGMnBaQmN1MG9ONWlJWmd3QzRJYnAtZC1sWHh3aXRvN2lHcllacmdQZ3c5dE12eGxuYTlUNzcxbE1XZHVmVFNHMF8xU2RJOTR6OUVJZW9IaW56T2VLVjcza3ZNVWtIWDhud2tWbWNYTW9vNTdn?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-27T16:42+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Hong Kong Market Quick Look | All three major indices declined, with the tech index down 1.48%; tech stocks fell, as Xiaomi dropped nearly 5% and Meituan slipped nearly 3%; HSBC Holdings tumbled more than 5% after reporting earnings; Zhipu surged nea - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNU0JuZ00yZHZ5M0J4S1pZazFyMHRPZmZzQUhzVzVmWS1ELTQ3dUtlYmR4dVBCU0JNWjA0WFpNWU50R1dMeV9hc3UzMF9TWkZ3R1djOVJQYmplQ2wwRW9panNlQUx6SnRzcVYxWE85QjFMMHFuUVRTUGxnOG9VRS12UEQ4c3JiVV9RTEVvNU04RTBhQ2dFTUdYa05tNExEek10cDRHQmJn?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-27T16:23+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "【10月台股ETF風雲榜】瑤池金母00981A慘跌末段班 五檔跌10%最兇 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi9gJBVV95cUxNWHk2ZTJ6QWZrQ2RJOHl6U0hJYlpoU3pyUHBmVkdUQ3RRZGdiVUxlRzJja25OMkdIY1ZRV3FXQUlybnJ3cUtZWkQxVjAzdDlVVS1USkd0dWZqRzh5U2wyeDFZQzg3LVUzZ3R5THg0dVh6TEJDM3dCeHQyaTNlamsycVBjaWp4Q1o4MFdWTUdaOGpqVVBBMEExOWRjVnNCQ0Q5dHZYYkJlUnlMVkp3a25sVFdYZDlaSlpOdWdXak1pQWl6eDVEczYzcm13REg2Y3FOc1dNN2RibkVCWk4xYmxFRE9SN21xY084NEtLS2gxeVc5dVFuRkx5dEx2TUFENG9VM1VJQTk0RlU3TGVFVnV5a1JadVlaWG9GUU5mT0JRc1BuVUFnc2JQR1J0Qm05c1hCRVdpa0dLMy1Gb3k2dnRPLU9JYkptcU9NQ3MyNmtEZWpNMzNncTl2dzJnRzN6T1BhWGltWHZQa3dSaHlYYVk3eGZBaTR5Zw?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-27T16:13+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "〈台股盤後〉機器人、記憶體題材熱夯 開高走低小漲54點守住4萬6 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMihANBVV95cUxOUzQzQS14a3ViUDQ1SW1wVVhLQlRpdXVXTmVZZERrM284QWFHY3VnRnRrNTZJRVBHN2hPRFNOTlN0bjZ3QXRWZzJZVEdSYnZnZGp1ZW5xOXRlc0tLNmxlYjZoeFF0YXNxTUlZQnp3clJUWUQ5Y00tODN0Q213UHpISGNjR2d1YjktM2lIYl9yUE9KRUVTSmlxRmRoNC1PU3czUG5pMUhEQ1pLbHZZdDJMN251MHQyUmFiVTdnRU9xMVE4amY2SmJkTFhwVk5ZUDZjZUFUeTRHR0lzQ1E2MzNmRUlWMlJYdHNOMVZVRUZBU19wdE9KZkUyOEgyNmM2U3dLSkx1MWpwTHp6MDllekZhMmY5MXFIOEpwMWlibGkyd0I4VUh0X0UyNlV6OG04eW5oWFlwMlhLYVRtUmJSOW44UThkVEx1MUxwQnBZVDhKclNzdHhRYlhGU3R6bU1KOVQtNUxKZjVSajk5N2YzMU5XZlRGVVZfWXBOYmVWS1VVZ0FiZmZf?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-27T15:25+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Asian Stocks Mixed as Market Weighs Anthropic's IPO While Watching Fed Meeting -- Update - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQNmZpRWZlSU1yZDlYNVY2YjJVcXZMeGhPUUZwcnBheVBDSm5tRG5EN0xjWWJSb2s1RTFSSVowMmJCd19zZUpLTnFRZDBzWWFpLWpqc19YR2JCTkZTbnJJYTY4SWozdU9GYm9kUkFvZ0JEeEIxSHJhQkR5d3RQZzFkWVhOenNtaFdpM3Zaa1RHNmpyMFdCOEtZM0VUdW1MS29yY3c?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-27T14:51+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股震盪收漲54點！46K失而復得 「這檔記憶體」噴7% - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiswJBVV95cUxNZTBOU1VJRUZ2NkhhUFRuYjBLUmR1RG9HQ29HVmJSYmlVUGdkNHE0OE1qbGxlTm5QaHpYT3BlOHFhYmtZNDNPVGx3RnRzUmJRU0lWT0RtbThVbnNRTVBVLVBDazh4Y3pfbHlyOW4tdkFIYlJWcU80bUpXWVc1c09jWF9mX0xvekptYnZOYkp6STZNX3cxVzRfaWdTelhSc2o0WWZqOE5pLWgyZ0VReGRweE1LczRmZ3h2ejFVN182QVUyVU9WU1N6TVFlcG1PMzdpcnNZS0RGcThGLWFZQmFxaWNZc2ZsM2dkNzdsbWlnTGhvU01BYWhHQ2xTaWZ1a2ZfTzhRWkh5cHkxU1VxbHhPQWphazg0VmpqOFJKM0cwSG9CY3VhREYyc2VVQlk2UVRfWnpz?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-27T14:27+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "早盤衝漲5百點後卻震盪翻黑！台股終場驚險收紅小漲54點 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi9AJBVV95cUxQOWRDZ2NsZnVMaWEtOE9kUkVncHlPcGQ3N19ibHBoSFRxVWljRi1wMTZ1XzBOS0dOODRrckVDOTZMVFpTUHpwUXEwX3pYVHBYZXozRy1teTd3WFZzTk15MFQxcUhVd2pTQ1dtc2pua2FCVjl2d09wWjRRZWVaRENHNkJQbzE3RGRQNzJRNUpMRFdpQlh3SWZyZkV0OFZIUWI3N2tManhQUFduZDhQNDNlbHhSY0d0bmVJUXYtM201OVZOUnpoN1ZneHFxSXRxVjVxYVgtOU00bWx4LWJTNmt4c0R6bnA0OXd2eFhDTXZuOXRyUUI2WC1yVlBYdnNYdDZiT2NvTlRtVkI1aVB3RzVQeEMyNlNhVlFuTk1yZmpReHVXdzZNeno1eXY1QVRZUlR4TTY5Nm02SjYxT1FkQjRPU1l5VmRyY2JmTXExdGNkNms5cTY2bldwb1FYVEE3a05hd3dyVG1aeGJwT1hOLVpwejItZjc?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-27T14:11+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "oil_watch": [],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-27T18:56:58+08:00",
-  "checked_at": "2026-10-27T18:56:58+08:00"
+  "updated_at": "2026-10-28T00:07:39+08:00",
+  "checked_at": "2026-10-28T00:07:39+08:00"
 }
