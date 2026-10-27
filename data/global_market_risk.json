@@ -3,19 +3,19 @@
   "risk_level": "red",
   "risk_score": 3,
   "risk_reasons": [
-    "原油超過100美元／桶：WTI原油 101.25美元／桶、布蘭特原油 110.27美元／桶"
+    "原油超過100美元／桶：WTI原油 101.17美元／桶、布蘭特原油 110.05美元／桶"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 +3.3%｜NASDAQ +0.6%｜日經225 -0.8%｜KOSPI -1.2%｜台股加權 +0.0%｜恆生 +1.2%",
-    "⚠ 全球市場風險｜美債10Y 4.99%｜VIX 18.4｜WTI原油 101.25美元 -2.0%（超過100美元警戒）｜布蘭特原油 110.27美元 -1.3%（超過100美元警戒）",
-    "⚠ 全球市場風險｜油價觀察｜油價飆升至每桶 117 美元 美國中東增軍事活動引市場憂",
-    "⚠ 全球市場風險｜油價觀察｜油價衝擊加劇通膨壓力 加拿大央行本週料升息、聯準會十二月行動受矚",
+    "⚠ 全球市場風險｜費半 +3.3%｜NASDAQ +0.6%｜日經225 +1.6%｜KOSPI +2.6%｜台股加權 +0.0%｜恆生 +1.2%",
+    "⚠ 全球市場風險｜美債10Y 4.99%｜VIX 18.4｜WTI原油 101.17美元 -0.6%（超過100美元警戒）｜布蘭特原油 110.05美元 -0.6%（超過100美元警戒）",
     "⚠ 全球市場風險｜Bernstein Analyzes Crowding in AI Hardware Trades: Chips and Network Equipment Become Capital H",
     "⚠ 全球市場風險｜Market Chatter: Saudi Aramco Nears $10 Billion Loan With Global Banks",
-    "⚠ 全球市場風險｜長線有撐 台股跌破季線先別慌",
-    "⚠ 全球市場風險｜AI Is Surprisingly Profitable. What That Means for the Stock Market. -- Barrons.com",
-    "⚠ 全球市場風險｜台股明天開盤有戲？美股迎科技股買氣回溫全面飆漲 台積電ADR漲逾2%",
-    "⚠ 全球市場風險｜每月存3000元「該買0050還台積電？」 眾狂推這檔：會感謝自己"
+    "⚠ 全球市場風險｜The Federal Reserve's decision this week will focus less on interest rates and more on whether ",
+    "⚠ 全球市場風險｜連假過後台股恐「摜破半年線」？法人籲「8檔」勿接刀",
+    "⚠ 全球市場風險｜【神山護國軍1】睽違3個月！台積電股東人數再寫316萬人歷史新高",
+    "⚠ 全球市場風險｜台積電、聯發科怎麼撿？杜金龍教戰「零股買法」：這檔大跌就買開盤價",
+    "⚠ 全球市場風險｜Anthropic IPO提振AI股！美股收紅、費半強漲304點 台積電ADR上揚1.4%",
+    "⚠ 全球市場風險｜逆勢台股震盪瘋買氣！「這檔黑馬股」搭避險題材＋股東紀念品吸金…週量增比飆327.07% 預估EPS曝光"
   ],
   "markets": {
     "US_SOX": {
@@ -45,13 +45,13 @@
     },
     "JP_NIKKEI": {
       "label": "日經225",
-      "price": 62189.65,
-      "change_pct": -0.8
+      "price": 63188.95,
+      "change_pct": 1.6
     },
     "KR_KOSPI": {
       "label": "KOSPI",
-      "price": 5469.47,
-      "change_pct": -1.2
+      "price": 5694.58,
+      "change_pct": 2.6
     },
     "TW_TAIEX": {
       "label": "台股加權",
@@ -70,13 +70,13 @@
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 101.25,
-      "change_pct": -2.0
+      "price": 101.17,
+      "change_pct": -0.6
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 110.27,
-      "change_pct": -1.2
+      "price": 110.05,
+      "change_pct": -0.6
     }
   },
   "active_news": [
@@ -97,10 +97,74 @@
       "risk_score": 2
     },
     {
-      "title": "長線有撐 台股跌破季線先別慌 - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5WQ2c3NVkxV0Y1bUdyQXdST21XbGt2YVZiVWc5VUVuZTRRay1ZTlh6cGpKeWpqVVBqb00xRDZzN1BUTkNpQ2lmcDlWWjlNRU9mQk94ZUIybWs?oc=5",
+      "title": "The Federal Reserve's decision this week will focus less on interest rates and more on whether Chairman Powell will \"explain\" to the market. - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQVExaZWRGck5ydkp5dms3Z1JpYW1TanR6d0tvWGYxZkNCaGoyMjR3dEpyWHc4cFVITTg3UFRWSUJyZE9POUh6WHVnYUx1SkdzUWcwQlNiUFdnNmNUdV90SmJtTHdiVzRueHNTOTkyNkJFQ2RxNTZiZnF2T21YV1pxM2R6WW4zZTV2cHRuLU1fYlYzVldhd09vSmdUWllYdUVD?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-27T08:05+08:00",
+      "importance": 3,
+      "risk_score": 0
+    },
+    {
+      "title": "連假過後台股恐「摜破半年線」？法人籲「8檔」勿接刀 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMixgJBVV95cUxNS2hIWThHQ2FKQVljbjdSMzZnLXVZVmk2RmwtRDYwQjNINEZxQnJORWktMXlTNUZ5MFdJZWV2ejhBY0o0dEczRWNENEZ4VXA4X2VFV0dZMUw1VmpESmJZUVFfS1VaRmhYX0E3dTdNU3dBTFBycERJWTAzSEdETFdvTnJHdVBSaTVKbFc2Z2ZsLVpQWWRseHU2SEJIOGc2Wnd2OC1uNUtfaFp4WG1ZUEZlTVNjcWZoZ0pUZ19PVnNkX25EQ095TGlpT0tabG5JdDNmeGlEMWpiTkE2WkJ1Z043bTVDbWYyOWIwcFFBNHd4SzBmWGh2c0tOandCMEhYemtOUWY3TlNPY3NsMkJCc1BHb1gwZzFSOXdSdHkwVER4M3h0dEZPSkxGZ2hVSmRZa21HVzNuUzlQMldoZHMwTi1RckdZTWF5Zw?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-27T08:41+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "【神山護國軍1】睽違3個月！台積電股東人數再寫316萬人歷史新高 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMipgNBVV95cUxQVG56WFpEU0N5cFROQTN3djNFQ0F1akxNa1BUMllvVTFHcm5rUVV1dDlxbWxCbWwwXzVwandZVF9NdURCZGFFVWZwTjJwNWZWOXRkMWp6c1dTWlFwNzFIbHlwdy1yRDItTXdzQXlmdlhTaTJ4bFZPS1g2U2xrTS15b3RmWlpsYW4tVmxob00wZFVDV0UtblJuOGJsZzBQQnhSSkczTEhGem56SGRuaEJNOWFHMFl0TV90S1pzQWRoQ2I2MVg0YmFOeERXM0h5bjlLUmIzMEJGMjQ0UmFaQ2w0RUhwWEp6aEhFWFZDa1JSR1hEUUZZMk5Qdk9abDBQbHpBNFBvM01hWmRDcWFoVDROOGVLUGpWa2tnRU5pWUxwcEQxSUJJQ2FITmk0YVFDUG5RWkszdWstb2ZPUU5sVlB3cFhrWTM2SjRkOHkxLWd6blYyeC1WNEtwZ1QyODF6YVkxWWFnYTJOUFFpd1lFbkZMbXdDMXE3cGh2TEVtZjg3Nmh4UXZhbncwU1NobnNJOUtCSEhTNWFORWV6Yy15OGRmNVRIazlYdw?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-27T08:33+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台積電、聯發科怎麼撿？杜金龍教戰「零股買法」：這檔大跌就買開盤價 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMipANBVV95cUxOTzZWdE9WamVocVRyU1NhM1ZlVi1aM1hUVTIzOFNIMm1OaWEwYWJkN3lQV1VXeVBtQ2dzRTc1WnJCRXJES2NNWVpFbUJOTnJWeUpaTTVLRllCemZYSFNuTVR2M1NUX01pYkVETllJQ0V4UmxiU2p0TGRjRTk4SjhrblREdVd2SGItcV9fYTV3RW42TmlJUkljeHNqUkgzVFVUeVplSEZ4ZmV0RmtlRlE4Xy1OSm5wWjNQN3JtVXU5TGVIWmJSRjlUa1g1SWNqODBZb0RvOEczS3dFaEN3ZFdldnlKSjYzZDJlUDRVWFZMNElEdzJYMENaUHczcVZMbGlrdFowR0NRRkVZY1BJTVplVjFhRmJrbWlBZHBtLUpsb3F5clBzMjJOWUl0THU5Q25IVTI1SUNsektaMHFxR25lTFRnOHFEbFNHZEZqNW4wRVNPWkExYXJGVE5XM19vTTF3US1RQzB1U213LUVUX1ZoeTlkUi1ZTEd4TUM5Q1FmZTRaMGkzVnVKWFBNM2ZvdGNDRWFQdDFNVEZ3MWp1RDUzMW9IRng?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-27T07:40+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Anthropic IPO提振AI股！美股收紅、費半強漲304點 台積電ADR上揚1.4% - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiyAJBVV95cUxPWV9uaXB2UFpheFJMVGNNUHJxdW9WRzBaZF9qbzkzSmc5SGt2aVZabFZKeWUzX1FjbHdjRjZGS3RtVjVYMDhtZ2lZMUgwck1EYjRoeXZWZHNHeE9mbVhOd0tHcVYydW9sWnViYUVqYXI5OFRqSEUzWE1ULUh6bmN0Q2RTS1ZtR0JSTk5QdnlmS1N2SEI0ZEhQWEtfOU5ReTVzZWVXcmZ2cnA1dXZHMUtkWG1PLUN6M3NMdzdEM3NiNDhCdnpaLXR4cDIyTk5TVXFaMjd2eGJWcEtWcHRTdTR3Nk5xUE9kcG1SanRNamtkT2MxTjVlZ19yUlBjdWVPakhFYjFIajZZWDhwNWpvSWxzN01XWkMtQlI4Y1IyT2cza3ZnTUYzYnhObWxZdnRDXzYtM2JOTHQ4Zk9KQ2dUbkhOWUlpOFFSN3Bk?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-27T07:15+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "逆勢台股震盪瘋買氣！「這檔黑馬股」搭避險題材＋股東紀念品吸金…週量增比飆327.07% 預估EPS曝光 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi2ANBVV95cUxNWmpiZERsRlcyMUhSUF9YemlXcG9ZMXhJWkhwbi1GQXU0RzZ5RFZXOFl3U1ljZ21RUTY2cTlRZlJnVGtpUzMxMWJIUkpORnlVVmZobk5mVUtQSkhjRWJTUi1vanNVdUJSUkFBdTN2aUpwT2djVDZsa2huUnRndDlkS3Bka3c1eUI4cWF3ZEgzTVZ6ZnRmS3dkWEhhQ0lzLUV3Z0lVdVNXdXFXaXczMDZqREZ6U0JtZWJZUnYtc0Q4a1UwMDJXTDVRVnNoSWNYeThhUXdoc0hFUGRUaXBWV2pHel9BWWU5QmhQQWJCOTZkdkRJYU9YYkdUNXZhQjBEV0ZqT2Zxa3RiYXZ5amJyNzNYOFdROU1EVjhRbUhIc2xOTUVKM3lUZWs3UlhsSjZUZ3oxOXZZd2ZhMlNTdXZaSlVMSXZ0al9IOG51SHV4VDBaOE1ZYll5RE9fbkRFY3pZdGxjaEpheXVJSmt4UWh4UEhSNjBLSmF3dmVuTmlpNmtZaWU0NHV1MW85bDBJTDZtTEV5TlJvZjkyUDRyay1WMkc3R3luR0dnNnpZUXF4MDR2WG9ERXNBejY4dkNMYk8tcndKNUtfQl9wLUNIMmVZS2ZiN3NXSEF3dERn?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-27T07:00+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "個股概覽 | 個股 - 股市 - CMoney",
+      "url": "https://news.google.com/rss/articles/CBMiREFVX3lxTFBfVGtPUmhQeF9nalNLNm9zTGJWQlREWTlFa2dVeEhkNElpN1d0OXlyaFF3U3NaYnBodklvejVEU1YtdkNl?oc=5",
+      "source": "CMoney",
+      "published_at": "2026-10-27T06:09+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "〈台股盤前要聞〉美光罷工危機解除、四大公股投信整併案拍板 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiigNBVV95cUxOcjR1VVFPcnJRdWZzOVV0Q2gzaUZaMmdJaHF5WmJzMG82R09rbTVhRzlRYnByODBfX0dhXzlaN0VHOUtiZDY4dVYxTGtaeGlMdy1DUDBSRnd5cFRKS29HcnFsM1J4WXhMbTVPd0J1emh6THVIOU1IZTJtenV2MHVXNENOUGpvMXMtNkZTSUNoZHBadi1SRGowUGNBMWtfYWVmd2x6SHpNb3RLQjNNbU9DWWgtWE1NdE5jbFZLaUVvRG5GQy1WcjYtdE90Y1dQaS10a1FQclZiSGtPUmhJdG5GZnVtZFpHQkItNDdGM0xtRzhBb1dmUlgzMHd6Xy1RM0hQdnN0emticGY2OWM1NmRqbUxfV2xSTUFIYUQ0Qmc0cmFjaTRsWXBENS13bGl0dF9XVEJROEhVY0cwY0ZpRUI4ZS1tQ1UxVHJNVXFlNno2ZEdvMUhnalNRTWQ3eHU4WFl2NGdVd0NBUk1HckZobDlFNEJnTEcxOXlTRXZXU0NrNEpXVGtDbVF6eUpR?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-27T05:10+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台積電蟬聯繳稅王 貢獻國庫近2千億元 - 自由時報",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE0tcDZNUndJcXc1cng5STZXUHRyY25aSTh5QXdBSW5nZlpRb0JtUjNwOUJHbVowUm4xdThsczhmd2hOM3N0ZmZIZ2RIMnljSGV6S1BaeWhMX3k?oc=5",
       "source": "自由時報",
-      "published_at": "2026-10-27T04:39+08:00",
+      "published_at": "2026-10-27T02:24+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -111,87 +175,10 @@
       "published_at": "2026-10-27T02:03+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "台股明天開盤有戲？美股迎科技股買氣回溫全面飆漲 台積電ADR漲逾2% - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMipwNBVV95cUxQU1BEYlhrVHFyOGRfZ2tlVV9wTURPNDN4cWpCWWd0dFhSSk1EZTNBWmYwLXcwM2pac01oVHhRX1lHMFl3WkhyRWk2OV93UktrekJha2lFRDhxallpMGpLMC1PUktZU3lUQVFwbF9WVlhJQXVNTE5ka1llZjhhQUdNS2tvTFdJLXJrNWhjdzRsT1FvR2FRY3ViVllSaVdOSEJDajJSeEFJMmJONFBqT1oxdndzVEwxZEc5S0FJQ1VlRDk5UDF3NG4tNFdudW1OdzJGd21rOF9Kbm05ZmJWejNzeWF4Tk8tVXpiWkhONkVadUpoNzdib0tuSFpMX3Y3TkhyalhlRVdXcExDUmEwcWItemsxX25qX0NnZVhiYjlMQnAyMU1tYTVhWngwNUw2SDFfc2xSYlBBazVlUk9ibHhFTzFkUm8zeUh4SDQ2ajRVTENUVC1VdWp6bjRRS2xLY0hPQzI3VnJHeHBWZzExdk9odnJMSUdTZDgxUEh0NmRyM3VRbEk3MzczdkVtZ3NDOXlQS3FwVkwzeFctSEtnd1dEWnhVNERDS1E?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-26T23:45+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "每月存3000元「該買0050還台積電？」 眾狂推這檔：會感謝自己 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi2gJBVV95cUxQaGViU2wyTU54TFg2YTkwSlY2Rjg1b0JKNHV6OTVQLW9kSnQ5Rk83TFNFaDhKZHk3LUhYLTJUWU5ua1d3Z0JaQkhXZXVkVmtFN0ZDbzctcS15b05XcXM2b3M2Mk9HXzRVcG51N19HTW13VE5KeC16UjRxUFk0dTNIRDVocjJLenBGQnBsWWJTbG1WYTUzYXNybHVfdDRNRzdmNE5ZWUtZbmdqY21aUmJOS052bU11YTFfTE4yVlBwMGlfTUItbHE3V29ScUxVUDE4MmxNSGsxWkU2SmdVdmFYbGxNMG02T1VyQjRoM3VKRnE3T2VDbnpNbEtmSTJ6dE1JXzJxMXZHQUE2c0tlS1RWbnR5LVAtUVRqWW9PMFNMWFR4ZE9kekE0YURNcjg1NkpIcWJ6aGxiNzZfX29jbU5GYzZENDlYd213eURTMm9DcFgxbFZVQ1BqVjBn?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-26T22:00+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股週二面臨補跌考驗！專家曝「週年慶降價布局名單」 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi5gJBVV95cUxPVm1QQjZCWG9Cc2VYMUkzVGNrZS1lQ2N3S01nVHIwcVJ2VzVoaVRINDJqbU5wdU12b3JRRHFfeTM2UHVjVklWVHQ1MlhkaG9hMFo2d1hUZ1o2LVNzUWVjTGVGRnFOdTIydHZjVkdfZ3o1SEIxRXFuZFZBME9QRGVGUXlpWG5iVzdwblN4c0RKU0lUTmJtak1vLUQydUFZYWJ1U3c3Q09uX0tMZklFMVh5NExIV3YybnByYnh6ZTVHMmpOdEpkNE5TSVNBYTJCcWNtWHhOQVBxcXh4U28ybjhlY1lUNVllUlgwb1J3R3BmVGlkOGNQNURxY0N4WlhoNy1SNEtZUEJ3bHRBenA5c0x3dktubkNoVmV4OXowUmNyVmF2TlFLaUd0N2NSOUszUENqY3J2WXU3VTItRmpUcEVNNjJSdVBQbW5veUZnWGhtRnJXcTFYTmhkaTNfaHl5cTRuNG1CaE5n?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-26T21:08+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Bitmine Immersion Technologies (BMNR) Announces ETH Holdings Reach 6.05 Million Tokens, and Total Crypto and Total Cash & Marketable Securities Holdings of $15 Billion - 全球企業動態 - Quamnet",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE80UEZraFFCZllDUVd0NGU1UnlseGJjaXVmU252Z1U0X2NPRFpDVmdZUTlNWFo1LUxZXzBTQ0g2d1VCaV9tTGdFYkRaX2hxLVE5ejdqcnRHZlFDdVUwNy1Z?oc=5",
-      "source": "Quamnet",
-      "published_at": "2026-10-26T21:00+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股月跌3700點! 連假前夜盤再瀉 週二面臨補跌壓力?週二開盤剉咧等 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiqANBVV95cUxQdUFTUHhGcFZ5Qi1TX1JKd3FQaVpRZGhYbEVnTDFHUUtoYkRHMXRaZEN3bEs4OVNvMmxuUjQyU0o4WFdJTVNfQXNlQ1JyQk9DMTJySkdUTVlydGpQZ1VXMDl5V1lTR29Jejd5SXJweFF3Q203WkhFMmNDWU90eGViODRCSWItTDFSZG84R2k2U3VqUWxUMElNUGhTV0lKNjRja2pXcFhnR2phdTZCN3dWekhKbmRPVnFTRDc0dWRZSldwZ1UyRWNYQzV2cW43OEpIb3FvNjhZd2E0c0xnY3VxMno5VVc4LUtoaHpOaVAteXpzSFJhS0Zfa01UTHZ2cUhkSHpIMzlqQXp4U0FXNnJIXzhaNEp0U191V21MbkdiZFN3cldhUWkxQWlMOUZZdmRlWDNQaHQ1UjgyeFh4Mzc3WjAzM3ZmVkEwZlZpSEJCYkZxWHhsRlhIcEs2b0lRYzJCaVRJUllhdGVSQmRuZ3A4ckZpcW5XUEZsQjBVclVlZXg2M0FRdzY3Z2NLLUtWVmRZWkc0QTdLaFd1SzlRUEExSXlLOUhIRVdz?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-26T20:16+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股大跌1069點！三大法人殺近3千億元卻136億元「搶這檔」 外資、自營商掃瘋了…群創、仁寶也中 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiuwNBVV95cUxQTDNVV1NUb3lCZ3Bma2pHb2VSV0ZxUUEtaUdJRThuSXVORHVFLWlSUERtbEhSdHkxcFhvWk85V0d5cWZLbTVKd09VeldURjF3eGpfRWktLV9KWjFaNXBZRjJvNm1aTVlOVWd0WVpJaGhkcUpaNlF2QXRfQzdLcF9kdV9nelgyd1VHajEtRlpuNEU1Y1VnaExneUZOMVp1Y3RHVG9wX2hQdl83YmtqT0lWeUZVS0tab2g4aXdtS3FFUHhRWHEtaHptOVBscGNVRERuZ3VRWEdPNnlXZVZoV1ZfLU9SOGtYSW4tYXp5NDI4UHZ4c0dybl82a29pOWszOTZIWnVhTlNEQ3NSQjdCZHM5OXlOQUJFN0I5WDFrbHkxYTR3Vmlsb2h0UDJ6aWR1TmNpMTltdlBtWTlZVzFSQ1ZNcEtqUkgzSVVwRUJNb2plX1A1bHVSM2RYcFZsVDluNTFzQ2N1Rjc5aFRVSnpOVDFmMHNldi1WN2t1OVBuMnE3bjJYZ2dyZ3ZhbzA5REtaTHVJUGlzVHpsbHBGZk5JS2ZUNHU0TmpIYUJxX3lQeGNjYUxnR1VuY0pIVkw3RQ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-26T19:10+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Stock Market: Will S&P 500 Open Up or Down Today? - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPaEtVSlBJc2FnMmdoTW1adGxsdkVVZlhMVFZhY1lvY2VLcGdvQW1oOXAxM1pEVTJxUDF5MmFJOEdRY3RUNkFHVTEzOHJOTXlmcEVEU3F0TWN2MmhuSWxrWDd1b0kwX3dYZGZYSElSQWdlbkZ0QnlZVGVsenRqMHlVZUFwdmota3oyeEdtVW9hRTdTU3pVZlhjV2xGV0NSX0RUZERvNGxsUjM?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-10-26T17:54+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Meituan Stock Advances 3.3% in Hong Kong - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPNWRfMkRoakxIVzJZQXNWQkw3d3FyU0hnNDEwUEdtckVDQjdQWmppdG11QXVGTEdhaDFJV0Nrd2FNam5aVkpoZnJLODJHTndFeFVEbFBNNjQ3ZzdZUVI4MU5waThDS0NfNDMxNzQwRXZkOGU3TjFkZGxkUnFOdERPSmRVME1fOHBwOHc?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-26T17:04+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
-  "oil_watch": [
-    {
-      "title": "油價飆升至每桶 117 美元 美國中東增軍事活動引市場憂 - Life 生活網",
-      "url": "https://news.google.com/rss/articles/CBMi1wJBVV95cUxNV0JyWDczR3pRRnpXSTNOeHA2eE4yRWM1Q0dfNjVfUDhzTVUyc2ZHQTRtems2MHJSNUhpSzU4OXU1Q3dpMHZtODg0eTJFTnNqLUtFS2luQl9lWl9FQ19NWWhlc0NtTU02Y20xOEdwZDFpWk1PQWlRUEgtOUZIaXdYSF9FVkltb0x4WDAxc2JjcUZzcWpqUnBQRGVtaFp3Xzh1QTd2VXBVR3VQd1FUcDhlYV8tYmtlNFM5NU5kTzFsWGdCVUVraF91Vk9Dc0l3MHlOejBXdk1NMEZpR3JweFAwMlR1S1N4U3BtbUNEY29PZjZVNlBLaW43WE5hSnR3M3hiNk95R3JkUWtucWdlRkh4d01UYnFnMDhZU1BGa2hKMFF5eVgxTHdRbDNGSFIxbXJBdmRMa3lYMGZiRkFydEpTRWVndUlHT0N6QnFaWjFIZjFnalluTnRn?oc=5",
-      "source": "Life 生活網",
-      "published_at": "2026-10-26T06:56+08:00"
-    },
-    {
-      "title": "油價衝擊加劇通膨壓力 加拿大央行本週料升息、聯準會十二月行動受矚 - Life 生活網",
-      "url": "https://news.google.com/rss/articles/CBMimgNBVV95cUxQMDFscWFDb1R5ZzNVNlRCd1NmejRXc0RZQjJkTTJ6Q0ZOVDNNLWcyX3pIUFNGU255OW5OenBxTjEybWNnbXB5c1ZqdnBZeWEzeGZhN0VrQUl5SHRmVi12RDVvenlKTktIVmdKLUVCWTBuY2NUVmlCNkRVc0xDYkxfbk1KTGNuT2lKQXZkYjE5LUQ0eS16dmJQemlLR0V5d0I0NE0yZU9SUmpsd3Z6YURUc29aaDFXOV9qdzFLam1FbDlSYzJqR21aYXpCejU2X2FwbkotcUFYaG9EaERUNGZuTi1pdkE0N0dFTk5hdmtxTk5uWmVLUXU4aHhlQWpES1I0eFZ1REN5aEVRZFYyajdJY1Q5QUFpTXk1VzI2UGNkc3JYOUpBTElIbFNQM1ZVYnFWZVFibUptYktQSG9QZHdOSVIyR01LRzNPX3B3T2FQLU54U0QtMTRUbXpEcEVXU2Z1MnpPZWhadDAxczVJSkxGTUl1NmlDanhrRDdSWm5hSS16QUlPMmx5WmlrMXdZcjZLMGE4VEp2Q3FNZw?oc=5",
-      "source": "Life 生活網",
-      "published_at": "2026-10-26T06:41+08:00"
-    }
-  ],
+  "oil_watch": [],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-27T05:41:26+08:00",
-  "checked_at": "2026-10-27T05:41:26+08:00"
+  "updated_at": "2026-10-27T08:48:22+08:00",
+  "checked_at": "2026-10-27T08:48:22+08:00"
 }
