@@ -10,12 +10,12 @@
   "source_blocked": false,
   "ranking_limit_per_side": 15,
   "history_target_top_per_side": 3,
-  "history_requests_succeeded": 120,
+  "history_requests_succeeded": 119,
   "observed_collection_days": 15,
   "complete_collection_days": 0,
   "counts": {
     "ranking": 82480,
-    "history": 404429,
+    "history": 411569,
     "queue": 7133
   },
   "review_stage": "資料累積中",
@@ -43,119 +43,9 @@
   ],
   "history_errors": [
     {
-      "code": "4979",
-      "branch": "1650",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "4979",
-      "branch": "8560",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "4979",
-      "branch": "9101",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "4979",
-      "branch": "9363",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "4989",
-      "branch": "6381",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "5269",
-      "branch": "5850",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "5289",
-      "branch": "6160",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "5426",
-      "branch": "9362",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "5426",
-      "branch": "9893",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "5443",
-      "branch": "0039004100360039",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "5469",
-      "branch": "0035003800350052",
-      "error": "History date or numeric mismatch"
-    },
-    {
       "code": "5478",
-      "branch": "003900380033005a",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "5522",
       "branch": "1650",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "5522",
-      "branch": "9661",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "5871",
-      "branch": "1590",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "5871",
-      "branch": "8440",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "5871",
-      "branch": "9362",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "5880",
-      "branch": "0039003100330052",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "5880",
-      "branch": "0039004100300030",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "5880",
-      "branch": "0039004100390068",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "5880",
-      "branch": "8960",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "5903",
-      "branch": "0039004100300030",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "5903",
-      "branch": "1650",
-      "error": "History date or numeric mismatch"
+      "error": "The read operation timed out"
     },
     {
       "code": "5904",
@@ -341,9 +231,119 @@
       "code": "6584",
       "branch": "5850",
       "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "6640",
+      "branch": "0037003000300066",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "6640",
+      "branch": "0038003800340043",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "6640",
+      "branch": "003900310038004a",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "6643",
+      "branch": "0039004100380046",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "6667",
+      "branch": "003900380039004c",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "6684",
+      "branch": "8560",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "6684",
+      "branch": "9874",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "6690",
+      "branch": "0039003800310047",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "6690",
+      "branch": "0039004100300030",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "6690",
+      "branch": "1440",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "6690",
+      "branch": "8440",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "6690",
+      "branch": "9268",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "6789",
+      "branch": "0035003300380045",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "6789",
+      "branch": "8840",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "6829",
+      "branch": "8880",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "6830",
+      "branch": "0039004100390058",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "6919",
+      "branch": "0039004100380046",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "6919",
+      "branch": "1470",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "6919",
+      "branch": "1480",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "6919",
+      "branch": "9268",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "6919",
+      "branch": "9359",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "6919",
+      "branch": "9676",
+      "error": "History date or numeric mismatch"
     }
   ],
-  "history_pairs_ever_fetched": 6745,
+  "history_pairs_ever_fetched": 6864,
   "history_coverage_complete": false,
   "history_coverage_note": "按個股實際交易日缺口排序補抓；來源每頁最多60筆，較早缺口仍保留待補，缺筆不當零交易",
   "history_retry_policy": {
@@ -351,8 +351,8 @@
     "retry_delay_seconds": 900,
     "source_history_row_limit": 60
   },
-  "history_attempts_today": 240,
+  "history_attempts_today": 360,
   "ranking_coverage_complete": false,
-  "errors_total": 88,
-  "database_bytes": 74698752
+  "errors_total": 66,
+  "database_bytes": 75620352
 }
