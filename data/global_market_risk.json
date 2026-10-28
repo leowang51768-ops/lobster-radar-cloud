@@ -3,45 +3,45 @@
   "risk_level": "red",
   "risk_score": 3,
   "risk_reasons": [
-    "原油超過100美元／桶：WTI原油 103.44美元／桶、布蘭特原油 112.43美元／桶"
+    "原油超過100美元／桶：WTI原油 101.94美元／桶、布蘭特原油 110.44美元／桶"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 +4.5%｜NASDAQ +1.1%｜日經225 +1.1%｜KOSPI +9.9%｜台股加權 +2.0%｜恆生 -0.5%",
-    "⚠ 全球市場風險｜美債10Y 5.04%｜VIX 17.3｜WTI原油 103.44美元 +3.5%（超過100美元警戒）｜布蘭特原油 112.43美元 -1.3%（超過100美元警戒）",
+    "⚠ 全球市場風險｜費半 +5.4%｜NASDAQ +1.4%｜日經225 +1.1%｜KOSPI +9.9%｜台股加權 +2.0%｜恆生 -0.5%",
+    "⚠ 全球市場風險｜美債10Y 5.04%｜VIX 16.9｜WTI原油 101.94美元 +2.0%（超過100美元警戒）｜布蘭特原油 110.44美元 -3.0%（超過100美元警戒）",
+    "⚠ 全球市場風險｜油價觀察｜布蘭特原油價格：聯準會決策日霍塞拉斯塔努拉聲明後達115.59美元 – 看漲120美元，看跌108美元",
     "⚠ 全球市場風險｜油價觀察｜Middle East Peace Talks Ease Supply Concerns; Oil Prices Fall Nearly 2%",
+    "⚠ 全球市場風險｜期貨交易保證金衝破兆元！台股長多效應投資人鎖定股票商品操作| 股市要聞| 股市",
+    "⚠ 全球市場風險｜Micron, SK Hynix, Google, Microsoft, Vertiv, Wendy's, Enphase, and More Stocks That Explain Tod",
     "⚠ 全球市場風險｜台股要出大事了？陳嘉偉警告反彈939點「是逃命的」 台積電季線下彎、空頭大屠殺剛開始",
-    "⚠ 全球市場風險｜否認32.5元防線！楊金龍：股市與颱風假配合金管會 台幣波動大必進場",
-    "⚠ 全球市場風險｜大都會投信發表One MIM新品牌 投資長喊：7480億美元AUM應援 不漏接台股黃金行情",
-    "⚠ 全球市場風險｜中國置業投資(00736.HK)：李金彪獲委任為執行董事",
-    "⚠ 全球市場風險｜台積電鳳凰城廠周邊工業區需大量資金投入 「大地主」來台灣尋金主",
-    "⚠ 全球市場風險｜台積電聯發科雙引擎催下去！台股大漲939點收復4萬7失土電子族群揪團衝鋒｜Yahoo財經掃描",
-    "⚠ 全球市場風險｜台股大漲939點！ 網見三大法人買賣驚：散戶急惹"
+    "⚠ 全球市場風險｜瑞浦蘭鈞(00666.HK)H股全流通申請完成向中國證監會備案",
+    "⚠ 全球市場風險｜Hong Kong Stocks Rise on Tech Rally; Standard Chartered Jumps 8%",
+    "⚠ 全球市場風險｜The AI Boom Is Starting to Break Time-tested Stock-market Signals"
   ],
   "markets": {
     "US_SOX": {
       "label": "費半",
-      "price": 11584.725,
-      "change_pct": 4.6
+      "price": 11684.0,
+      "change_pct": 5.4
     },
     "US_NASDAQ": {
       "label": "NASDAQ",
-      "price": 26467.115,
-      "change_pct": 1.2
+      "price": 26549.852,
+      "change_pct": 1.4
     },
     "US_SP500": {
       "label": "S&P500",
-      "price": 7737.47,
+      "price": 7743.98,
       "change_pct": 0.8
     },
     "US_DOW": {
       "label": "道瓊",
-      "price": 52508.92,
+      "price": 52475.1,
       "change_pct": 0.2
     },
     "VIX": {
       "label": "VIX",
-      "price": 17.33,
-      "change_pct": -1.0
+      "price": 16.91,
+      "change_pct": -3.4
     },
     "JP_NIKKEI": {
       "label": "日經225",
@@ -65,21 +65,37 @@
     },
     "US10Y": {
       "label": "美債10年殖利率",
-      "price": 5.04,
+      "price": 5.045,
       "change_pct": 1.0
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 103.44,
-      "change_pct": 3.6
+      "price": 101.94,
+      "change_pct": 2.0
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 112.43,
-      "change_pct": -1.2
+      "price": 110.44,
+      "change_pct": -3.0
     }
   },
   "active_news": [
+    {
+      "title": "期貨交易保證金衝破兆元！台股長多效應投資人鎖定股票商品操作| 股市要聞| 股市 - UDN",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBQYlRiR09HRHdEYnBzZGxKaEhKUVZYdmNuN3dXRGh0TUV1Q0RfVHRURzExMGI5NEFFek5sVy1fMjVNb1gwNE8tbnZvVmxlY3lp?oc=5",
+      "source": "UDN",
+      "published_at": "2026-10-29T03:33+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Micron, SK Hynix, Google, Microsoft, Vertiv, Wendy's, Enphase, and More Stocks That Explain Today's Market -- Barrons.com - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOZ2EzVzJKNjlleDJOc3BZNUgxSFRhTk55LXlxbFdyU1BIcXBGUEhZNWZCc3lkMjZhSS1Pby1ra3JnYk9GMXNVR2FvRXhObUtGRkNZeTJ3djhsNHY2RGEwZ3ZNVnp5SWFXSkRZVENLc25GWlRTRkhmcnJpUU1mTTJJZWZfSl9Bb0s3blU3NnRQcHM3bzlKUmRNdElkY3ZzRDRtdXJmOA?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-29T00:35+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
     {
       "title": "台股要出大事了？陳嘉偉警告反彈939點「是逃命的」 台積電季線下彎、空頭大屠殺剛開始 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMi_ANBVV95cUxQenJwZ3JfUHdTSlpWWFlFdjk5eF9KZjh6WjhGOVhUUVU5SUk4MjB3dHY2WW5BY1BWYnEyWllnZW84NGpEOVVlWXAtSnhNN0l5b1dYMV9sZWRJclVtRkpUOTlKM01KZElnc2VlWF9fUm50S1NjSjVWOWpqemo3Vy0xNnVCak1pUFE3cXJPcjc1cU0xcXNJSm15LWFGLTM0cFMxelVodEZFb0c0MlFqZi1QdlVOVkt2bF9XT3R6SGxhcS1QZnZwcGEtUXprRTVTRk9RckE4c2l5OXVpS0lYd3R0Z0Rjdi1TWjN1cFZqN1B0bEhaOTZwbktiLXM4aUtlQUZwaFAtdVRRb3B6eTB3RmJra3pVN3lDM3dkZDB2N0hfdXVUTnJRWElQdmxCaXVtZmkxUXJUQXNzVWpTZm9NbWlpeDBIR3JkSWw4a254dWl3OFVPUVpYVnRTb3QtWGttaFQ1aUZ0MTRidnNlOXBhSXZHYm11NzJqS19TZ2hvdEh5R0pqbVNNV1dsci0zenFXZ1d3TVpBbUFKLU9TNHpfdEhSbWhSalpQcExHY3lQWFZtNkYwaFNDczFvVGhsendVb3FjdXJyeXFDTGZhcTNWUGtfc1pKR1E0aEo2UDhlMmgteFBacExLTEViZkhMZEY4ZE9Sb2JtNnZSZjVHendm?oc=5",
@@ -89,10 +105,26 @@
       "risk_score": 0
     },
     {
-      "title": "否認32.5元防線！楊金龍：股市與颱風假配合金管會 台幣波動大必進場 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiqANBVV95cUxNQUhHQUFKZUZQdlJjVGI3WEMwRUppUHYzclFReWRvZWs2SEctakFpNjlhd3E0RElaM1VuVVE4dkZpdTkwQjhVNUF2V1lOUDlRaUNVYl8yYmU5ZnhMeVhrVFB0MU84cER4NjM5eW1wMjhRX3JkMXU1R2xpdDFJVnpHU3VGV3hIX0wydjRDR2dnNFFNNTdfSkFaQU5FamkwQ2lhVF81TGZPOXhMU1J3TTRaNWRGOWpuS1VjZVpVMWktLVhyRTZ1YjU4N3BLUnljLTVKcDZuZTZlbVFxQ0JuTHVqVU5fdUsyamZBV2Y0VXo2RE5TNGFKcXlRdFBoMEgydFhzcXh0SHpuQllLb3hSUE9hYkk0SDNneW1fRTZTcVl1Yk5KNHVKcnpNX1NER3VjVUJ4eGktRHBKdkhUUVFaQm5tdW9PU1p6eUx6aHFYeTQ2WnNNM2tSLUE0dldaMGZ3dG1yMUhFb0FmQ0htZ2F5bXRXSFhrZ1pGOVhhZnJTMHpiUjBMWFBoRTRsUm1FTnRyZTMtTVZFR2RIY3JzR01Yb1NtOEpqWS1aSHlK?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-28T19:49+08:00",
+      "title": "瑞浦蘭鈞(00666.HK)H股全流通申請完成向中國證監會備案 - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE83ZThkUC1BMjFOT0hwNFVHSFNtSlE5eHYwT2k1MW5VeG43NEo5YndFcDM3MWtqdHhzN0g5UmtScXFDTE91YjdoMThEVzVOOUFDZFFDNzlncUEzU0hycEVYczdDa3Q3TTVDT21B?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-10-28T22:49+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Hong Kong Stocks Rise on Tech Rally; Standard Chartered Jumps 8% - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOSDIxejZxeTFIdk84SHM0bHRNMzNtTnR5ZDdxZkFLdmNPdkRlcjgzVFk3ZDk3MVNSQmlodmFueUozX3NVUzhzem1fVGFEdFRQY2xrNklqSld5TnA2WFFQRjVscWxaSG83dG11dElST19PMXFjRmVkdVljV1M5MHM5bTZubWlDUkdUTkdEelFpNWx5OVZnUWxabnB5OUh4MWpoQ2l2cVZ3?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-28T19:31+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "The AI Boom Is Starting to Break Time-tested Stock-market Signals - Moomoo",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNa0g1RE13UUZaVmxTQVBhVVl2YlY0YmlwX04zSnlYckFTLVl5QlFEazREcmNXRVBRQmptLVZFd1V5RzRGQ2JEWm1ONUplVVpZbUMxeWhYcVRLX2RFLUpMWkE1aDNvWVJMVDFQSEVxUjRhZ21qOERkZEt2TktYUG1rNzNzNmdQNmtsR0ZLRmpvMGZrX01sMzRmZkJDSm96eXk3?oc=5",
+      "source": "Moomoo",
+      "published_at": "2026-10-28T19:25+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -137,47 +169,21 @@
       "risk_score": 0
     },
     {
-      "title": "〈台股盤後〉電子股領軍CCL、記憶體走揚 強彈939點重返47000點大關 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi9gJBVV95cUxPandZRHZlQlRucHBfZmJWRzMyR1dHUmc4Vkd2VUxZd041MmFMQjl2Z1pyLXh6ZlNWOUQxbzRWdURXZk5LUThUZGdOc1VoQVZCTDFGTklNX3hrcl96ekZIYUpHcU8xOEVDTFp3RTJLdTRHcXpoZlg0QUNZemdMVTFNZXNrOU1NMExUS1pGdThsT3FORjZuN2E0RzhWb3FKYVpJQkZTUEN2a01qd2YzQ3ZnckRXRUhXUC1iamJaOTNQc3dYVHQ2bzVVaktPbThmVUFON0tTb2V0YTg5RWhSanRtdktHOVJKR0gtb05HOERRSFdyQjFKemZaa0dTLTE2LVc1OE54OXpfd2UxenRwcjRpekp0Ykw4aTVHWGM4ZE1nX1hPWUo0dW5Ta0lVeUZzMkhiLWJxTm9HM2s0NUd3eE9hUW9NeTB0VHZkYm1NcHNHR19sWnlJVE1kNmNRRWxJT3B1ZlFBWjM5dnBoUElaRUVNcG8taXdoQQ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-28T15:45+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
       "title": "台股28日指數收復47000點關卡 金控股國泰金帶頭收漲1.32% - 理財周刊",
       "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5sSU04ekl5U3pQemY3TjF2UkY2S2pGZkF4MlFwNlV0bVhjeE5LakMwcV9iZ3k3NDdJcUNRa2J3SnY3SWlUVWdzZWttQ3dhSU9QN1lYWl9nM096MDQ3MWJsUHFGd2VkLV9Nb1BxcGxhSQ?oc=5",
       "source": "理財周刊",
       "published_at": "2026-10-28T15:26+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "台股強彈800點該衝了？ 分析師揭「破底翻」關鍵：緊盯3訊號 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi4gJBVV95cUxOMS0zdHNHZXVIUS1JLVpfUGJNZWtxQzVUSl9xMFc5Z1p0bExNbnRHclRSOGkzUHIxb3hGSUVMS0N0M2drcVA4Sjh2R0c4Y1c3dV9JUTlSOGFYcVZJUE5tbV9ab3YzREhIX0hyVng3WnF1YW95Sy0yMTRZRl95NnotMWUzMm5QMXBRbmxZRDlhMUdSSmFtR2JINDNxanh0RmdqRkk3THJxTENaMjk1NW1NSnZlcmF4WTFVOUJzSTZ2SVpDTFVaTUd1aGFQYkFxVl9acGM2TzdWaWxZWFZiQ0JuYm1vZUZKS25ob1B6T2pQVmk4REFuNGRLcTEwQ2YtVE9YcFlGSVgxMXRxT3BtUENia1dxRThNbEVWejNTLU1FNDlhbkQzdjQ1cGs4TWVaV2haSW8zVlVXS3oxaV9Hb1IzWllFX0xRelBEYWtNdkw5d3ViMXBfcFR4U2thd1k5NHo5MkE?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-28T13:12+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "中國海外發展(00688.HK)第三季度營收328億元 經營溢利達19.5億元 - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE15RXZnVHEzMzVpOF83TzBic19JT0NTVENxajlTaDdpYnVWRzlvWlN1Y0g3dDVhSUN6UEJVQkRheVhtWFViYmZaYTRuakg1aUJ6U3ZTN1BsQVpJTVZlalk3UDkxeGtsQW82WU8w?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-10-28T12:12+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "捶心肝！28萬散戶昨砍在阿呆谷 台股今飆908點 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiuwJBVV95cUxPN3dVZU8xSVQtOG84Sm5kNUJhRFJFRWlDeFVUdkN2Mk1ORFZhVjNKVlpQY1V5bWNnS3Y3SUxzUlNnVGtUd3FPTUFwcFpNNGh1c3g0Nl9KYWF6LWpfQk9iaHYwRUlCV1FrYnNqNjlqMmtiVjUxY2MzZWRqc1N6bXpJZDRaWjZnMURXV1pqVzZkNVFEcVozXzFKc255UUR1TmNrQ3dsZU8wNndCUFlXOEhkb1JJLVotT1A2OHlmOV9fb1NYVEhudEVIN2E4aTk2eFBJSVdEZUJmRDhVMHdCVUxXNnFXWlJENlBhSTc1NGRvZ2NsVEhpQ2Y4SnU2VkFmTGdzVTZMcVllTFNrUTZ5SnNXdnRtcjRyVFBBT2VvVzRIdzJwczZ4RHlwemRSbmpfRHVhLTJtZUJlNE5YMzg?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-28T11:55+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "oil_watch": [
+    {
+      "title": "布蘭特原油價格：聯準會決策日霍塞拉斯塔努拉聲明後達115.59美元 – 看漲120美元，看跌108美元 - FinanceFeeds",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQLUpyTmNyM2M1bEd3N1ZLWHczdWljX0dMNFZKUEFsNGt4RFduQ2ZuX1dnMU5WNkpBSVdnQms0Sk16bjF6aXg3R3djQmUzNmtJTTE5bThHakZoTFJCOU50RWp6NEhKOHhvUFZqVjBuS1BKaEhUdEhxTjNSamZ1U3RJRV9EZGdBb2NCV1FYOUcxaWRhY0YxdU9xZHlYVTZWS1pPSjZ0ZFU4MFNmRXRWZVB2Q2VHX1Uwdk5YRF9DOHBR?oc=5",
+      "source": "FinanceFeeds",
+      "published_at": "2026-10-28T17:26+08:00"
+    },
     {
       "title": "Middle East Peace Talks Ease Supply Concerns; Oil Prices Fall Nearly 2% - VOCO News",
       "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5oTjBDVC03NzJsOTN2ZmFuc2FvcWhuVGZReENad1dtNlhLRFZPRDdBZ0syQXV6LXpmWmdwQ1Z5UUJseW1ONFgwTzRUTHlfWndueWxyQmp5ZGRQUTBmVWRxUmhDeGtRSEFJcmVqSTVZM0JBRWJkQlZwMkd3cw?oc=5",
@@ -186,6 +192,6 @@
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-29T00:33:55+08:00",
-  "checked_at": "2026-10-29T00:33:55+08:00"
+  "updated_at": "2026-10-29T05:16:15+08:00",
+  "checked_at": "2026-10-29T05:16:15+08:00"
 }
