@@ -10,12 +10,12 @@
   "source_blocked": false,
   "ranking_limit_per_side": 15,
   "history_target_top_per_side": 3,
-  "history_requests_succeeded": 119,
+  "history_requests_succeeded": 120,
   "observed_collection_days": 15,
   "complete_collection_days": 0,
   "counts": {
     "ranking": 82480,
-    "history": 397229,
+    "history": 404429,
     "queue": 7133
   },
   "review_stage": "資料累積中",
@@ -42,11 +42,6 @@
     }
   ],
   "history_errors": [
-    {
-      "code": "1717",
-      "branch": "9625",
-      "error": "HTTP Error 500: Internal Server Error"
-    },
     {
       "code": "4979",
       "branch": "1650",
@@ -341,9 +336,14 @@
       "code": "6548",
       "branch": "9853",
       "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "6584",
+      "branch": "5850",
+      "error": "History date or numeric mismatch"
     }
   ],
-  "history_pairs_ever_fetched": 6625,
+  "history_pairs_ever_fetched": 6745,
   "history_coverage_complete": false,
   "history_coverage_note": "按個股實際交易日缺口排序補抓；來源每頁最多60筆，較早缺口仍保留待補，缺筆不當零交易",
   "history_retry_policy": {
@@ -351,8 +351,8 @@
     "retry_delay_seconds": 900,
     "source_history_row_limit": 60
   },
-  "history_attempts_today": 120,
+  "history_attempts_today": 240,
   "ranking_coverage_complete": false,
-  "errors_total": 89,
-  "database_bytes": 73936896
+  "errors_total": 88,
+  "database_bytes": 74698752
 }

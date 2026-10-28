@@ -1,2 +1,4 @@
 ﻿code,name,branch_name,branch,broker,latest_day,consecutive_buy_days,consecutive_sell_days,streak_net_lots,streak_est_net_amount,recent_sell_lots,sellback_pct,status,direction,price_5d_pct,price_20d_pct,not_extended,historical_grade,historical_d10_samples,historical_d10_win_pct,historical_d10_avg_return_pct,stealth_score
+2454,2454,台新,0039004200300030,9B00,2026-10-28,5,0,415.0,1743505000,0.0,0.0,buying,🟢加碼,2.05,-19.87,True,C,25,56.0,3.1,79.7
 2303,聯電,中國信託,6160,6160,2026-10-28,8,1,1737.0,229717000,4005.0,230.57,selling,🔴轉賣,0.79,-16.88,True,C,31,61.29,2.17,87.9
+2357,華碩,永豐金-匯立,0039004100380031,9A00,2026-10-28,5,3,45.0,44012000,39.0,86.67,selling,🔴轉賣,0.71,3.67,True,C,32,62.5,2.02,74.0
