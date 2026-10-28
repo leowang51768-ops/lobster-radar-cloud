@@ -3,19 +3,19 @@
   "risk_level": "red",
   "risk_score": 3,
   "risk_reasons": [
-    "原油超過100美元／桶：WTI原油 100.08美元／桶、布蘭特原油 109.55美元／桶"
+    "原油超過100美元／桶：WTI原油 101.24美元／桶、布蘭特原油 110.78美元／桶"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 +6.5%｜NASDAQ +2.0%｜日經225 +1.7%｜KOSPI +1.6%｜台股加權 +0.1%｜恆生 -0.2%",
-    "⚠ 全球市場風險｜美債10Y 4.99%｜VIX 17.5｜WTI原油 100.08美元 -1.6%（超過100美元警戒）｜布蘭特原油 109.55美元 -5.4%（超過100美元警戒）",
+    "⚠ 全球市場風險｜費半 +6.5%｜NASDAQ +2.0%｜日經225 +1.6%｜KOSPI +9.7%｜台股加權 +1.6%｜恆生 -0.4%",
+    "⚠ 全球市場風險｜美債10Y 4.99%｜VIX 17.5｜WTI原油 101.24美元 -0.5%（超過100美元警戒）｜布蘭特原油 110.78美元 -4.3%（超過100美元警戒）",
     "⚠ 全球市場風險｜Southbound capital records net sales of HKD 1.238 billion; AI hardware stocks face renewed sell",
-    "⚠ 全球市場風險｜Anthropic is racing toward the largest IPO in its history, while Hong Kong‑listed \"AI model duo",
-    "⚠ 全球市場風險｜China SCE Group Holdings (01966) recorded a total deposited market value of HK$25.5718 million,",
-    "⚠ 全球市場風險｜The Federal Reserve's decision this week will focus less on interest rates and more on whether ",
-    "⚠ 全球市場風險｜女股神財報前賣「超微、台積電」！大舉布局「這產業」",
-    "⚠ 全球市場風險｜The PC market has suffered its worst Q3 in 20 years—can Intel and AMD turn things around with s",
-    "⚠ 全球市場風險｜台積電ADR勁揚近2%！美股漲多跌少「費半噴2%、特斯拉飆3%」 台指期夜盤一度強漲600點",
-    "⚠ 全球市場風險｜Wall Street remains bullish, with more than 70% upside potential—can memory‑chip stocks sound t"
+    "⚠ 全球市場風險｜【Hot台股】法說變法會？旺宏翻黑跌逾2%...網哭「價最低牆最厚」 分析師歎：綠色趴趴熊",
+    "⚠ 全球市場風險｜台股一早狂飆821點！杜金龍「點名10檔」聯發科領軍衝高 記憶體、CCL布局曝光",
+    "⚠ 全球市場風險｜台股強彈743點還沒完？台積電CoWoS傳漲價2成 葉育碩揭「關鍵靠山」",
+    "⚠ 全球市場風險｜台股強彈723點！台積電漲20元 「這檔記憶體」衝5%",
+    "⚠ 全球市場風險｜AI熱潮帶動！台股大漲712點 台積電開盤價曝光",
+    "⚠ 全球市場風險｜颱風假台股照樣開盤？沈伯洋提脫鉤 央行楊金龍：很多挑戰",
+    "⚠ 全球市場風險｜【Yahoo早盤】逼近4萬7！台股絕地反攻漲近900點 分析師陳石輝：樂看收紅"
   ],
   "markets": {
     "US_SOX": {
@@ -35,7 +35,7 @@
     },
     "US_DOW": {
       "label": "道瓊",
-      "price": 52377.57,
+      "price": 52377.6,
       "change_pct": 0.4
     },
     "VIX": {
@@ -45,23 +45,23 @@
     },
     "JP_NIKKEI": {
       "label": "日經225",
-      "price": 63268.37,
-      "change_pct": 1.8
+      "price": 64278.74,
+      "change_pct": 1.6
     },
     "KR_KOSPI": {
       "label": "KOSPI",
-      "price": 5638.34,
-      "change_pct": 1.6
+      "price": 5998.84,
+      "change_pct": 9.6
     },
     "TW_TAIEX": {
       "label": "台股加權",
-      "price": 46096.23,
-      "change_pct": 0.2
+      "price": 46838.94,
+      "change_pct": 1.6
     },
     "HK_HSI": {
       "label": "恆生",
-      "price": 23041.32,
-      "change_pct": -0.2
+      "price": 23124.96,
+      "change_pct": -0.4
     },
     "US10Y": {
       "label": "美債10年殖利率",
@@ -70,13 +70,13 @@
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 100.08,
-      "change_pct": -1.6
+      "price": 101.24,
+      "change_pct": -0.6
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 109.55,
-      "change_pct": -5.4
+      "price": 110.78,
+      "change_pct": -4.4
     }
   },
   "active_news": [
@@ -89,96 +89,96 @@
       "risk_score": 4
     },
     {
-      "title": "Anthropic is racing toward the largest IPO in its history, while Hong Kong‑listed \"AI model duopoly\" stocks have both risen, with Zhipu surging more than 10%. - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOS0J5bVZDa0huUlhSREFvM2VzbzV1Uzk1VDRWNnc0VThIRk5oNlVUaWpWdDRXaUQ2YXk0SUJlNGhhTFVDeC1jWl9idzQ0XzJjNWl3NC1ncWVlMG50TzhfejJiNWpfam0xa01QbDBHQ0N2TEFFNmE1WmdDT1A4Ry1fTEhrRlZ5WWxBczVmRDY0NUZFOUNjcHREQnRndkltWndKY1E?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-27T10:03+08:00",
-      "importance": 5,
-      "risk_score": 4
-    },
-    {
-      "title": "China SCE Group Holdings (01966) recorded a total deposited market value of HK$25.5718 million, with shareholders depositing 624 million shares into HSBC Bank Hong Kong. - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPZVcwYkptOWlOUzhwUW5oRHM4anl4NFhmUVBPUldyWmNXT01YQ0VpVGRKd2tyRkNGWDdOT1FiTVVxWjBYd25nTklPSmxzZ1dxVmY1d2IycGdKejV1OVVSOUtuTXFwcHNFSDI4cjBIZlJwVWJJdjg5S2EtTWxmVnJIT3duX0xmZU1UMnBWdHJ5ejM3ZG1OaUY3SmtZcmh6Ni1fOURBM1EyT0p1VFE?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-27T08:13+08:00",
-      "importance": 4,
-      "risk_score": 2
-    },
-    {
-      "title": "The Federal Reserve's decision this week will focus less on interest rates and more on whether Chairman Powell will \"explain\" to the market. - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQVExaZWRGck5ydkp5dms3Z1JpYW1TanR6d0tvWGYxZkNCaGoyMjR3dEpyWHc4cFVITTg3UFRWSUJyZE9POUh6WHVnYUx1SkdzUWcwQlNiUFdnNmNUdV90SmJtTHdiVzRueHNTOTkyNkJFQ2RxNTZiZnF2T21YV1pxM2R6WW4zZTV2cHRuLU1fYlYzVldhd09vSmdUWllYdUVD?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-27T08:05+08:00",
-      "importance": 3,
-      "risk_score": 0
-    },
-    {
-      "title": "女股神財報前賣「超微、台積電」！大舉布局「這產業」 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMixAJBVV95cUxNcUEzWFFXbkJKbXJVUk83cEhhajNWSmdHSGlEMEc1T1hCemNOdGJCeUpkenN0UVFiTExhc2xpa1c3UXR5ZzRoeF9tM1RORkpibEtfSUhVVlExXzMtYmlJN3BjbVJsUzZfTmlpMzRkR0xBaGJIZGJxbVhuZWZ3OEtsTFpTN2hTbFlLMWVXRktac21FbUNvcWFOSVc1VHJJR3JRekNhRnRXSnhaaV9QX2ZnejF4VnIxQ3hJV1gtY25VeThHWnltVnFqeHBxdlk2ODd0Z21GeTdoeWhEYkJHVU9GU09mNlBnd29udEZmZ1ZYa29pcmRwcG9XYk9lbV93dFFERUY1N0VtUkRzT1pUSjduSXFoN29jOFQtNUxITHRkSkRKTjlodmtVcXV6bmdqeHFwazAzRl82SVBoNXU3eHFucDBJY0k?oc=5",
+      "title": "【Hot台股】法說變法會？旺宏翻黑跌逾2%...網哭「價最低牆最厚」 分析師歎：綠色趴趴熊 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMikgRBVV95cUxQdnhONDJfa2txR0tJb3prd21DeW9FZDkxYXdkbE9Gb3FkMXI3TDk0TUZDeDIzRGE4UDVIUDA5cmFCckp5RjVDV1dVckZPQUlueDRiNFJ4MGQtb0dfS3dpU2c5eHRDeEliN1dJTmowOXR1clZ0aE1QSG1FVGpPN1pZRE1zZ0t1aXVqRWdBUXpSWWRVcGxyZWNGUHB0dmhsRGlpdjFNOThhalN3ZTZLdXN6SFBxZ3NoTkJDM2lRQ2ExSXhuWWltWFpvNHkxLXpWZi15X2NycURKZE5BQUxKUWJiYld1TGxfT3BFR3ctN3B6by1xbEN0bDlNQy1CcWVhX3NjWE1KNWxKdHEyWTEyQVdiRjN5RWlLYW85LUdwV3hxejE1Z1FrU25vczdSeFJoTERCZW1kcTUtOU10elN0a2pSbHZFRVhYaXZsM0xZeW1fQ1QtV3NHbHFldTIxN0o0UlNXM3A3OWM3enBUdmNMWEFZQ0lTb0xESEhhOHpodzhPSzNXV1FpblRoZmZwMXMyLU81ZUptUmktNGJFMVRucndDeFNQVWdXOTZNTkxOSE42VDJSelR1azJNVFFXVmw5SW9pOTJ1NDA2blI1azFUUmZvYnBpblJRSDFRZTY5V3k0dHNXUHdhTXpvUFFjTFFlX3htTDg1ZVNJNVFCSnlVVGkxNzhsMVpQQTgwNXp6NHJLMlZvUQ?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-10-28T06:44+08:00",
+      "published_at": "2026-10-28T11:28+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "The PC market has suffered its worst Q3 in 20 years—can Intel and AMD turn things around with servers and AI? - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNa0t2QkUxUUZkSnJ5d1NNRFlPSnhwcVlsaEZ1ODl2bGItTloxcnNEaDJtYXBMMkNZT3pTV0FlNzd1eVJPd0JrX01HZkZjd2FBTDZaM3VWem5FMHBtNi1IbGRVOXFGNTBEdVQzLWtKWnVkNEQzVnV6UUFjYnFneEVMbE5wNy1CVi1kMGRpWG5nbC1MUQ?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-27T23:34+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台積電ADR勁揚近2%！美股漲多跌少「費半噴2%、特斯拉飆3%」 台指期夜盤一度強漲600點 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiiANBVV95cUxOTDRsZTQyV0pGQVZYblQtckFNRFdBS0pqdVRocFVWWUZUR2x4Q2xRLWdHWTFLSEFPdnVNZFVCcDVaMkJVVFUtVDJSUXVDSnM5WElMTlU2OU5kRHR3ZnZpVHJSdGpWd3pXY2RUTXRlM1RtWkhrZ1lxN2ZSRHctdFhmcHYyd1BldnN6dEx2Yng2X2VPb3pyaU12MVQxdzNNbnQzSVlwQmcxb21uVWlraDk3aUJWNkdUS1lCUEwwVEZmcTNfdmVoaTVQcnZmSnQweENfeWdzYkV4Z1lLQUxxbUpxUnZHYkhORDJ0RUduOThHN1NFVjFLVGlhbWtyZzhVcmcwTU1sbnRWZkh6THQyM2pDTkN0enhaNV9wY2w0SFJCV0hIRERQOUUzSzhESlpCNHpBT01WcnRsS2tjQm9xY19MdXJ6ZWpENUxEa3lSM25uMzZmS0FFRkdvcnVQSndkMDZwQXlEVGhkczV0aGtFRENMQnZ6OG5PY2Q5TGt0aTNfZ3FmbHVJUVAybg?oc=5",
+      "title": "台股一早狂飆821點！杜金龍「點名10檔」聯發科領軍衝高 記憶體、CCL布局曝光 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiywJBVV95cUxPcm9tZHo0NEpwdmtlX3k5QWx3VEM0cXBRSjVUV2lZUTdBbzRJSUVyTC05eVR1Q1JOTkswZmZlVFBXVG41WmJETFV1YkZxaGtwTk85MlNZSFpiUnc5U3BTUGdpckRtVjhmMHZONnZQTFQxTEpQTUg2d1BtWWdiNWs4cy0wT19UYmR4bElWNEpYVzhCc0hJWVBGQkpLSkVfZTBlVTZKdHVaTHlieDJ4R0FfRzRNOGdfVF9VSjVKbFpOVkZxN3RfZEYycGpLdWxPOGJsdVpoVTFjZmFaZ0RBLW5ldE9wM2hXWTZFelE1cDQ4Q3pRc2lFN3Zjc2JTRm55N0JYTnhub2VveEU5N0pLaU5veXlPV0V5QzZDUExqTVk1RFl3aXR0eE96Q0puaExleVlrYjVuaGpaamRmWHVlbzV0U2FZVFltakR5TW5v?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-10-27T22:50+08:00",
+      "published_at": "2026-10-28T10:37+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "Wall Street remains bullish, with more than 70% upside potential—can memory‑chip stocks sound the charge for a comeback? - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNRUR2clNycWFKQUFUQUdzanV6YjVFQ0dLcTlGblNRdFh0WjZLRG1zYWtjUVA2XzNXTmxCMmxfaDZ4dDZQYVpacVA3Z0F6SGhacU9NS1lJMXlsSmVxVGVmYlZubkNFRm00LUR3RGVwcE1jZG51Um5hazg5MWE4aERJLUVQV1hvTldxV0NSc2RKNUhNR1d0M0tFODZoVnRHNVg5X2ZyRGJPa1A?oc=5",
+      "title": "台股強彈743點還沒完？台積電CoWoS傳漲價2成 葉育碩揭「關鍵靠山」 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi_wJBVV95cUxQVy1oQzl1R3lTbzhONHZ6M0xwQW0wd1JXTW44RUxLcUdyY3pkNE1kYlNvdmQxZXhtckhiQld2MEkzVzZ4NG1aU045S29XekJkZWVMMTJzUGpGcXhFTy1VRGJoNWZDbzdXMnY4b0pmN21NYnFVZjNVcEFreVd0bElDUWFDTHFJQnlEaWNzYW5JUXZiMFN6N1NJQ19FV2N6NVVEM1lWY1dpVEMyWWN5OXJnVENaQW4zMlN5aEpoNnAyX1c4R1ZOYmpKakIydy0tUmcyalhpWVVXT2I0SFEtdUNxalUzcVh2aS1iOGR4SmV5UDNtdWlmVTQ2WFh0Sm11OHNZcWtxcVZ6UVB3N3ViMFhOWjM0bXJtN05HX3MyLW9oZGdab041bjk4WjdoMmpvbFlRRGpHY0tvZEljMVVCaFhOVmdudGllRjVsVDlJVlJib3FQZVZkRXFMcm5qam92WENyN0t2QklEMDBjRHRTdDBiS1hJZ1lxY0FRN1cybkQ3UQ?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-28T09:59+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股強彈723點！台積電漲20元 「這檔記憶體」衝5% - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMipwJBVV95cUxOUWNSUU1yZlJ2RWdzdURVQTRHQUhydUh2VHdZNUhWNlVlajVQYm1CTkVMX283TFBtYWRtTjRNZFllYU45NkpFWnVESTF0eGticEQ4NkdvSGdVNkxMUk0za2YzYUpOdWVaOGxDcFJ6dUpSQnV5aXhrS04yaTdSeUFxTFFSNG9pYW9nejc1c09nVTJvekpJZ3FZQ0c4R29tbDNOcGwtdnBMMHJNT1d1V01GblVOazBJaXBKVWczMVdVRTlOMmdUY0JxSkluMDVSSGxpbHNaODI1OWg5UXozdHVHamFaOTU5YmhCaFBhSElqSk9rbkQ5ZE5pdUQ3bE1qQWZjMFprZHJpU29GeElnMGxwV3VLWlBDRWJwVi13azRBTlN4dWRuOG5N?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-28T09:59+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "AI熱潮帶動！台股大漲712點 台積電開盤價曝光 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMisAJBVV95cUxNX2s4YlVNS294anNOdlVMWXZETkluN0xVMERLaXk0enlUNGdMRGFYYjgwTERtZ0FPSnk0TU55M2dZM3RvdUNQZW1Yb091X3V2NDA5UjNoYkR5cXVZcnZhX3ctLW1Kc05lM041SlNtQzRwZ0R0bWptLW0zbVVoT25GZnViMHFqWFVOckxXd3BkV2gtWlJ4bnRobVFEeW0tYkxDSDNSZWZrN3FSZ3g3NmlBcEp2TDViaFBXN09UbW5VREt6YWZDMmIzMlFXWWk5Tmw2MUx5U29wMERqekJCeTNxbXFPNUxNaTF6cDNnTU5nMWhQRFZ3b3ZWaFNUUmVUYjh0QkpGTC03ZVMwQUJOenQ3eGprRTJIS2o0U1kwTTlhbk90aVNvSHBhS3EyYVhCR1FP?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-28T09:49+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "颱風假台股照樣開盤？沈伯洋提脫鉤 央行楊金龍：很多挑戰 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMilANBVV95cUxNdGRwdV82eVF3ay13RjhhaFZUeUNnLTF4WmxROWQxX3lJZEk0UTZYbTIzdFFQTmJSVEkyTHJXZXdBRWprVmtrLVJQZjNNWnhIbzdLZG0xWjVIaGlfZlh4QWlweG1GNE40dl8ydTRmRUtsRk00dmRuV3g5TF9yaWV5bWJjNmJTdDdGN0NLejNPVXNLTkRkVy1YSmd3a3pfaW5KZEJTcFJGa1M3QUF3ckphUXR0dUxfZjlqckw3U2JXRzJsU05VRVdxSFdPUmEzeWNMX25rRDNVREJvNi1fZ0xoS3o4dS1aRmdSOURxWEwtd3poVWFDRkdyM0lUbEllSWI0dUV3dkdQME1JOU8tTE9sSTZHckVGWTA5SnhBYWVqLW5wS0RLM2lKMF9DczJjQnVVZzFVcXJiN1pyVnRydWJxRUU4SDJPZlRYVzR0cXZhZFJXaURqVlZ6NXdxMmZSWF9ZQTc4N2hyWk5nNVdqQ1FzOUVMX0FuVk8xenlSa3RkUjEwaEFuOGo2bHE2eU4ycXIwTTVnVw?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-28T09:46+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "【Yahoo早盤】逼近4萬7！台股絕地反攻漲近900點 分析師陳石輝：樂看收紅 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiugNBVV95cUxQTjRUTXlqeVpBa2xtZjVJRzNtWlVjQk5weVNJQ01Hd0ZBUWxaekx2SFg2Mmc5ZHdtMEhrbS13VjVGWlJ0ekU3TFpTaC1KUGRZZFRaaUtGcmM0NENEQklGZ3UxTUpiYjFmSERFaXlTZHJtZmlodFNFa3ZDbE1yck40U05rZUZHbjFvMm1Mb3BNRXQ0WlQ0bENmLWtValYxSTVGU0RSR2ZpcHdzRGV5RGJsRWMwRGJId3ppUnFaTm5zSjd3cGJIbExEaHhfYnZ2alp1NkJJYmNtOVVsbTVNWjUzQklKc2l6X0lfLWt3YkZIOFJnYW1Dam1CaTJYdDAyQ3BUY3dlX0kzNWdOemhLX3kyN0R4S21mZk9YUU81QmZHaUpFelVPU1l2RVhrN3R5LTVweHFLa1pTZGUxVFRtejZNbjMyOFd2LWlqUkUxcG90LW5mc2hKc1lWMng3V29KRGhLMFJvUmhRb0JITTBiMGNYY0tLRUFUTHRoUlJOdkYxckdiMDlWVTVfTFRJZ25rWXpVcjZBT2xWQzdfMWRxTkxHVXdsZ2MtVV9GQWV4UlFGZWlDNGNkMjVIamhB?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-28T09:45+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股終於硬起來！開盤狂飆700點、台積電上漲30元 「這檔半導體」秒炸80億強勢亮燈 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi0gNBVV95cUxQdDBxWWd6RUpCNzRuY2Jrb252Q3k2RklTLUtIaWpOMXVuQzctWC1HQnZ0ZU9hcGQtZGh1SFhFLUFKNnBXS1NqVEVjS1ZmUWNWLWdDMTZIQ2hJQlVULWx6cDRnQUpGelpwN21mb0NrOEZ2dUtZSEYtSlViZFA0eUdYSDZGU3Vhak13QTZkZlh5ZEI5MllSV1d6WElHOEZBU3RvVm9DMmpWUThjWHNJLW9rWll4dzY5bzFxR2dtWXdhMFRVVUF6LTZhRGI1anRTaG1rZC1ERG1FRmJpWGN6MzZleFotZUp6SXZQY0l2WkoxejZUeEY0clhGVlRzMm5DeldqZzJQZUk3MFNmTmN3WUtJMXRha1IyT2NqaWtWcmdQQ0RIVXBYLXJsVThoajN2Vnl4SG81UTl1dmlOMHgwUE1QbU1MWWJRSW94STR2dHpyRkVmU05HZFVGejlJQW9lYkV6dVFGMmNGenhXOF94cWVvZUhwaHVEaWg1V0c2cTIwTzd2dnJwTTlENkh5S3A3U2FTVnlrYkRfb1dtdXdiS1NhYUppcndoOWh2OEVOaFkxVC14VzU5WFFUN2wwbUhEWEVPLXJzTHpqSFFvUkh6aGlLYkFR?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-28T09:33+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "South Korea's KOSPI index extended its gains - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNWTZncTJqYnZGa216YUZ6RmpOSE1qTWFpazB3TmdyM1UwOVNFaXUzby1VUHprWG9UX2xTT09LdGtYclBCVzdYSGUyVDVWRTE3X0NnRlRseHpxdVBHRnJIRzg2bEJpZmY2UGkycGlIcmExbFFFWXdsYmNWdjQtYlpKSE9zQ0JVLXdFQndtQ1lpQTE4YmthdXpTbkNJY3hZQkk?oc=5",
       "source": "富途牛牛",
-      "published_at": "2026-10-27T22:36+08:00",
+      "published_at": "2026-10-28T09:32+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "China Hongqiao Group Stock Climbs 1.3% in Hong Kong - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNeFN0czhmRkg4U0FYUVpvRnRrRkhiTGNFdGtPekhXWGpZSGc2cmhNTHR4VzhwUlEtUGRKSzZsUUxXNGRPZ29xOUVEVTlHLXJJb3FwSTRDS21VOUVwTTBIX0JFdWlKb2Vrek1tX2hva2xaUlktR0s3RjVpb3k4LUZmblQ4WTlxcWh2MmgzdVhxelBoY25LR3lhVw?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-27T22:13+08:00",
+      "title": "台積電連二漲！盤中漲30元至2430元 分析師：外資賣壓接近尾聲 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMikANBVV95cUxOOFBFZTFkdVp0QUNyUWpobjk4TTc0OWdhek5RUHl1UXJUZEc4ZjZycUROOEdDZGQwRTZaeTJwdGs0MGpRb3JWUmlwa0pMUkxaM0hRWVIxajRHalJ2QWpFZ3Y4TGVXNlRRaWdIQzJYWXpvZ0lab1F2MEI1UWtFUEhkQWUxbUxXdmhwVXpfMDZlNk5qZFptTkZVVFFITzZsWGdwUVQ1VGswTmlQcWhicXdvOUE1aVhrZjN4eUh0RGNQMGJuekZQdjA0N1g4RF82MzcwMjkzcXA5YVhfc3NDR3RwRmo4aVkyLVAyYlBpanlEMVhvNERUUHUwd3pnRkhFdTc3NFVZRXlxUTFhMi1iZ25sRS1ob1VlWlJrQlpRb0hzM2J0U1djZkI2YUllUHRHRmVsWThsdUZOc3N5emJNRWVvd3BPRXkzUWR6SW1mQmx4M09xcGtLNFgydHFCM2NKb2taelFVaVpkZ3QxalFxT1JQdGJZZFpTb21sY1N6U0J6SU5IMFE4UDhfdWRJRWc4NlV5?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-28T09:23+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "AI-related stocks poised to extend rebound; dividend leaders report strong earnings | Tonight's Highlights - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPMloyd2laZERlTThTXzJ6ZmhLOUhnUkhsdDFlMHN2UDJRcGw5TVZHU3F2c3dBcTdDN1hEZWZJU181Y05lOU5QdllGb0ZWUFk0eGZyOFpMc0x6Wk9EdkNFbkMzbFFVaVA5S2w0TkdxX2NCNUx6SENXRzZGdU8wTVV2bGE2bldwbGp6N1FobUNjMk1ucWwybmZjTWpycnRsbHAwdTdETGtqU0N0TVVPeXc?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-27T21:06+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "European Chip Stocks Rise as Anthropic's IPO Prospectus Reinvigorates AI Trade -- Market Talk - Moomoo",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQaUU0bFdIVGdMQkpoeFUzS0hsSm1IM3pidk9fYWdPNFI3QXhEQ0lNc1lsU1BnbEx1a0JJTS1jeGp4eVZPcHRheHhZejBya1A0Q0VSb1FNNC1aRWhycmVOWjBCeEtaeFlTMk1YaGNmZmVMUU9IYzF3S3hJT0ttZTg2ODI2ZkdESl81TTA3MEFtWDhTaDVuczhuT3QxSW8zdnY4RDgyaUk5TXNyUGpjUnZvRm9MaXZCWl9BUHc?oc=5",
-      "source": "Moomoo",
-      "published_at": "2026-10-27T19:37+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "中國澱粉(03838.HK)10月27日耗資173.8萬港元回購1000萬股 - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1FMlQ5aE92bEhOWEZUdmpjUzZkSGxLbmc4TzRkcW9JSlpxWjV1YVJ6NVhncnJBZkpyOHM1d0J0QTlRQzF6aE8xZEZaMGoyUXdSdWp2dHBab3ZOUk1VMWZRMWhhZjFYY0JOQnJj?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-10-27T19:18+08:00",
+      "title": "女股神出手了！大砍台積電、AMD股票 重金砸1族群 - TVBS新聞網",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5PZFVkRk1ST1g0VjAxOHloYVRhM051clNpVnZMZlkzNnMxMlRlTU45Tll5S0tNMmltWEFsbVlXTUJ4TWRocmtmLURVTm1zTEk?oc=5",
+      "source": "TVBS新聞網",
+      "published_at": "2026-10-28T09:08+08:00",
       "importance": 2,
       "risk_score": 0
     }
   ],
   "oil_watch": [],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-28T07:58:44+08:00",
-  "checked_at": "2026-10-28T07:58:44+08:00"
+  "updated_at": "2026-10-28T11:48:54+08:00",
+  "checked_at": "2026-10-28T11:48:54+08:00"
 }
