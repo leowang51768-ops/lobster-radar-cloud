@@ -3,19 +3,19 @@
   "risk_level": "red",
   "risk_score": 3,
   "risk_reasons": [
-    "原油超過100美元／桶：WTI原油 102.04美元／桶、布蘭特原油 110.78美元／桶"
+    "原油超過100美元／桶：WTI原油 101.43美元／桶、布蘭特原油 110.31美元／桶"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 +5.4%｜NASDAQ +1.4%｜日經225 +0.9%｜KOSPI +7.0%｜台股加權 +2.0%｜恆生 -0.5%",
-    "⚠ 全球市場風險｜美債10Y 5.04%｜VIX 16.9｜WTI原油 102.04美元 +2.1%（超過100美元警戒）｜布蘭特原油 110.78美元 -2.7%（超過100美元警戒）",
+    "⚠ 全球市場風險｜費半 +5.4%｜NASDAQ +1.4%｜日經225 +1.0%｜KOSPI +5.2%｜台股加權 -1.4%｜恆生 +0.1%",
+    "⚠ 全球市場風險｜美債10Y 5.04%｜VIX 16.9｜WTI原油 101.43美元 -1.3%（超過100美元警戒）｜布蘭特原油 110.31美元 -4.3%（超過100美元警戒）",
     "⚠ 全球市場風險｜油價觀察｜布蘭特原油價格：聯準會決策日霍塞拉斯塔努拉聲明後達115.59美元 – 看漲120美元，看跌108美元",
-    "⚠ 全球市場風險｜油價觀察｜Middle East Peace Talks Ease Supply Concerns; Oil Prices Fall Nearly 2%",
-    "⚠ 全球市場風險｜無聊投資術3／台股大漲反而賣股票！　股海40年老手每年一動作守資產",
-    "⚠ 全球市場風險｜期貨交易保證金衝破兆元！台股長多效應投資人鎖定股票商品操作| 股市要聞| 股市",
-    "⚠ 全球市場風險｜Micron, SK Hynix, Google, Microsoft, Vertiv, Wendy's, Enphase, and More Stocks That Explain Tod",
-    "⚠ 全球市場風險｜台股要出大事了？陳嘉偉警告反彈939點「是逃命的」 台積電季線下彎、空頭大屠殺剛開始",
-    "⚠ 全球市場風險｜Semiconductor Manufacturing International Corporation (688981) Income Statement & Earnings",
-    "⚠ 全球市場風險｜瑞浦蘭鈞(00666.HK)H股全流通申請完成向中國證監會備案"
+    "⚠ 全球市場風險｜盤中驚崩近千點！台股終場挫667點 台積電跌10元、收2415元",
+    "⚠ 全球市場風險｜台股4萬7千點僅守1日！終場大跌667點、台積電領跌10元 台達電、聯發科齊挫逾4%",
+    "⚠ 全球市場風險｜爸媽送10張台積電 兒離婚媳能拿？ 律師揭關鍵：「這筆錢」恐分一半",
+    "⚠ 全球市場風險｜台積電追上聯發科「竟靠發哥下跌」！股民崩潰喊話外資：不是叫你往3000拉",
+    "⚠ 全球市場風險｜谷歌「AI燒錢」股價重挫近10%！台積電跌35元摜破季線 分析師曝進場時機",
+    "⚠ 全球市場風險｜個股概覽 | 個股 - 股市",
+    "⚠ 全球市場風險｜台股大反攻才一天就變臉！杜金龍加碼到7成 「這3檔」逆勢成焦點"
   ],
   "markets": {
     "US_SOX": {
@@ -45,23 +45,23 @@
     },
     "JP_NIKKEI": {
       "label": "日經225",
-      "price": 64555.49,
+      "price": 64580.64,
       "change_pct": 1.0
     },
     "KR_KOSPI": {
       "label": "KOSPI",
-      "price": 6035.13,
-      "change_pct": 7.0
+      "price": 5929.98,
+      "change_pct": 5.2
     },
     "TW_TAIEX": {
       "label": "台股加權",
-      "price": 47035.58,
-      "change_pct": 2.0
+      "price": 46368.33,
+      "change_pct": -1.4
     },
     "HK_HSI": {
       "label": "恆生",
-      "price": 23094.83,
-      "change_pct": -0.4
+      "price": 23059.6,
+      "change_pct": 0.0
     },
     "US10Y": {
       "label": "美債10年殖利率",
@@ -70,109 +70,109 @@
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 102.04,
-      "change_pct": 2.2
+      "price": 101.43,
+      "change_pct": -1.4
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 110.78,
-      "change_pct": -2.8
+      "price": 110.31,
+      "change_pct": -4.4
     }
   },
   "active_news": [
     {
-      "title": "無聊投資術3／台股大漲反而賣股票！　股海40年老手每年一動作守資產 - 鏡週刊Mirror Media",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5QOXhrcklfcEZUX2U4ZjJiX0lRdDNVV0ZaNlpxNlViZmxkN2dWczVSVkNvVzBIdHZXQ2Qwc1kwc2FNQklxRGlzRFFnUkFwWXEwUVZnOUk2U1hCaTlBelHSAWNBVV95cUxPemhjMENndXR2NFlBY0ZxcU44aTY0ZXNyX295WFZ6STg0aVVqNnEwQW02cXRnbWM5YWpUUzlCdWt5TUEwRGlDWUZ1ZWkwQkZ3dzNNRUctRWpmMWtyQllUamZ4Wk0?oc=5",
-      "source": "鏡週刊Mirror Media",
-      "published_at": "2026-10-29T07:30+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "期貨交易保證金衝破兆元！台股長多效應投資人鎖定股票商品操作| 股市要聞| 股市 - UDN",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBQYlRiR09HRHdEYnBzZGxKaEhKUVZYdmNuN3dXRGh0TUV1Q0RfVHRURzExMGI5NEFFek5sVy1fMjVNb1gwNE8tbnZvVmxlY3lp?oc=5",
-      "source": "UDN",
-      "published_at": "2026-10-29T03:33+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Micron, SK Hynix, Google, Microsoft, Vertiv, Wendy's, Enphase, and More Stocks That Explain Today's Market -- Barrons.com - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOZ2EzVzJKNjlleDJOc3BZNUgxSFRhTk55LXlxbFdyU1BIcXBGUEhZNWZCc3lkMjZhSS1Pby1ra3JnYk9GMXNVR2FvRXhObUtGRkNZeTJ3djhsNHY2RGEwZ3ZNVnp5SWFXSkRZVENLc25GWlRTRkhmcnJpUU1mTTJJZWZfSl9Bb0s3blU3NnRQcHM3bzlKUmRNdElkY3ZzRDRtdXJmOA?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-29T00:35+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股要出大事了？陳嘉偉警告反彈939點「是逃命的」 台積電季線下彎、空頭大屠殺剛開始 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi_ANBVV95cUxQenJwZ3JfUHdTSlpWWFlFdjk5eF9KZjh6WjhGOVhUUVU5SUk4MjB3dHY2WW5BY1BWYnEyWllnZW84NGpEOVVlWXAtSnhNN0l5b1dYMV9sZWRJclVtRkpUOTlKM01KZElnc2VlWF9fUm50S1NjSjVWOWpqemo3Vy0xNnVCak1pUFE3cXJPcjc1cU0xcXNJSm15LWFGLTM0cFMxelVodEZFb0c0MlFqZi1QdlVOVkt2bF9XT3R6SGxhcS1QZnZwcGEtUXprRTVTRk9RckE4c2l5OXVpS0lYd3R0Z0Rjdi1TWjN1cFZqN1B0bEhaOTZwbktiLXM4aUtlQUZwaFAtdVRRb3B6eTB3RmJra3pVN3lDM3dkZDB2N0hfdXVUTnJRWElQdmxCaXVtZmkxUXJUQXNzVWpTZm9NbWlpeDBIR3JkSWw4a254dWl3OFVPUVpYVnRTb3QtWGttaFQ1aUZ0MTRidnNlOXBhSXZHYm11NzJqS19TZ2hvdEh5R0pqbVNNV1dsci0zenFXZ1d3TVpBbUFKLU9TNHpfdEhSbWhSalpQcExHY3lQWFZtNkYwaFNDczFvVGhsendVb3FjdXJyeXFDTGZhcTNWUGtfc1pKR1E0aEo2UDhlMmgteFBacExLTEViZkhMZEY4ZE9Sb2JtNnZSZjVHendm?oc=5",
+      "title": "盤中驚崩近千點！台股終場挫667點 台積電跌10元、收2415元 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi2wJBVV95cUxNLWhraW81ZjN6dzNwd09DMU42MzlYa0VpSEhScUY4cUZjQ1N0ZUQ2Zk1UT2ZlUmRoQmN3N0Jlc0xReDhqRU9xOHZtWHNGZWU5SHRLNE1RVjBXVG4xMjJMV2t6SE9Qanpfc0tYT1NidENfaXdyMk5NTWI3NmxuNWpfT3ZYbEYxVmVVQktPUl8xUUlRcHU0X0ZxOGRCbUQ5YWFnWldWSmo3cGlTcEhsQlBnakNvUm9wc0N0OGVfZjk1WmJMR2lzQThjRU41SVlNWS1SUkpNOHZIcTZtMkRxT0VuYkZPVzlQYWpfZDQ3YlRkWEZYM3A4eFZJTkNhaWtXUUVYZEZPcG9sMmJzSXhYczM0X1c0T1R2ZEZZQ3ZfVU9YS2wyNm1HdjhBZFhXTDZzVDhoT2hTRWlkNHN2TGJoQkNJRlJIOUNlQ0g0VmY2ajFCS2VJSGF4QWFDRGpZTQ?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-10-28T23:55+08:00",
+      "published_at": "2026-10-29T14:14+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "Semiconductor Manufacturing International Corporation (688981) Income Statement & Earnings - Moomoo",
-      "url": "https://news.google.com/rss/articles/CBMiwAJBVV95cUxQMGFPOU45Ni1MRVJsREh2WGozR2Z3czBYTmNJeURBb3Z4bHFLaENFc2hSUDR1MHl3aU9IUkNHTG0xYXljbkhvbkt0U0RCVEc4T3pXOWJ1TzI5c3Q4emJPUTZLVWxoWElOQU9FdHpkSGFDTGdJQkZYWk90V3VOTkR1SkxHTEl6MW1qTC1LQTRDbl82UGpPaGNOd1psV281UE43dmxXeFZERm5tT3NhSUhfT2J6OENQYnBPRkZPS1dva012N1FROWk2NEJMWmluQmtIbHZJZUpjTnhOYXRyYVlUenlKT3FuOFpVNWsxaE5nVlUtQ1g0UE5vN3FFWFUzRWxWMXdyc0JCWHhZNWltRE56dkFYNFAyVW1hZzl5M2NUVFk4YWNjQnhhMWdEdGQzRWhOOXpLMzlnYWczdDRWNFBpVA?oc=5",
-      "source": "Moomoo",
-      "published_at": "2026-10-28T23:03+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "瑞浦蘭鈞(00666.HK)H股全流通申請完成向中國證監會備案 - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE83ZThkUC1BMjFOT0hwNFVHSFNtSlE5eHYwT2k1MW5VeG43NEo5YndFcDM3MWtqdHhzN0g5UmtScXFDTE91YjdoMThEVzVOOUFDZFFDNzlncUEzU0hycEVYczdDa3Q3TTVDT21B?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-10-28T22:49+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "CK Infrastructure Holdings Stock Advances 2.1% in Hong Kong - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQb1BaVThHTTdJTy1ncTJaWldtMlBQeTExQnJMcnJDcWFnM1BqVUJVNWIySDhmd1d4MHFmel9lcFpjYjFZN3oxcVpab2NEdmFsM3lZRGNhQTZlcGp3Z1lQcHlSU2ZIejdYZjFHUF9sUHF2MUNiMVlwUzBtc0pCM2Z3YkpveGdqNDdIWGZwekhLVnRsbjJiRE82ZjlOaG9rcjlfUHpn?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-28T21:59+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "The AI Boom Is Starting to Break Time-tested Stock-market Signals - Moomoo",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNa0g1RE13UUZaVmxTQVBhVVl2YlY0YmlwX04zSnlYckFTLVl5QlFEazREcmNXRVBRQmptLVZFd1V5RzRGQ2JEWm1ONUplVVpZbUMxeWhYcVRLX2RFLUpMWkE1aDNvWVJMVDFQSEVxUjRhZ21qOERkZEt2TktYUG1rNzNzNmdQNmtsR0ZLRmpvMGZrX01sMzRmZkJDSm96eXk3?oc=5",
-      "source": "Moomoo",
-      "published_at": "2026-10-28T19:25+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "大都會投信發表One MIM新品牌 投資長喊：7480億美元AUM應援 不漏接台股黃金行情 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiwgNBVV95cUxNU0UzY21DY0lSVkZ3SGhLMlA5amFYUTFqZjR0VXpFQmFWNHN4Y0RRNnZpWXYwTHlKXzY3QWpaSlVCd0xadkpJUnlINnB3b2JkOVhYMURvbjhreXpxWlFHVnk2d3p3UTdrc04xLXZSSlJaWTNmRlJnS1FVY3RsczRIWlhhZG12VHBqanRJbENBbFVPd2dJQlNZSGhzTnRxZm92WWdYdEZVM05qNkstLXBsNDhPUGxmV2hreldMTzJQenlBcTBnQ0dYa192c1IxV3d3bFRac0Nqa0pidkhvN3V2SkFrTDE5aWZjX0hHQnhYcDJoa1hhUzg2TXpsUkF5MFowTHpKNFdwbTJxWUlBSXREYmJKdmRhX2ZXdmFsQWFMMGJxMnRyRDVESmg0bFg5Qzk5RGZWTGdqU2E0bko0dTBuMENWYkFjTDJwbDNyRlloWDgyLTRlVUJDYTMtV2lTV2VSbHNXb0d1YnA5Wl9jdkpzZ3o2MkRVclZac2J2R0N2Y014bzBNci1LcTJRR1FVWmxZdGkxU09YOXVIdm9zUkVYRVNOd3VDdk9RRVJHN2hyYmNUY005aWwxdkdxem9WQy0wOWc?oc=5",
+      "title": "台股4萬7千點僅守1日！終場大跌667點、台積電領跌10元 台達電、聯發科齊挫逾4% - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMivANBVV95cUxNZ0NuRzBxWnJhbU5pa1J3UDRuMXNGUk1QejZoN3RSZHZkcGtQYldFMzBqVWx1Z192cF9qWjZZSjZxSEU5emxUamtXNE1uQjIwSk9OR0RwbTZHeDBGQmwzOTMzWDBPSlFMSUhKenFTY0w3SlQxMWRHd3lRLU5BdGs3QXdfOEpHaDN4YW1ib1VaOFlVWGJtM011TGRieERta3JOWnp0S0paRnRDZk4tejBpazhqdVRlLWhCQXRZNHFEQVk0akdoU012RzhWRUVGZWVtaW1wQ2dlbnM0OXRxZ3JXbktBT2l6b3Z2akdJQzhkNF85Z3N5Q3RwYkt5YUxhNVJGZXVsZ2g3Mm01bUp1bHFDdm5IblFYeWo5YU9GY040RDFnb09lSEZael9rVF96eWd4R3lnSzNYa3RlMHVwWkNuTnlaMHFFT3d3TWF2TTlPVzFMYWkwOEhKR2cxcG1XSHo1OWJjcENMRGtCVndPYlR2YVpmXzg5c19RZVhFelV1VDZESHlXOVE1UzV3ekdzemhXNHE0bFdYWFV3OXdlakQ5djVOTmROdkZsNjRHdkVFWlpTdDctUW5tM1diZlc?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-10-28T19:09+08:00",
+      "published_at": "2026-10-29T13:55+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "中國置業投資(00736.HK)：李金彪獲委任為執行董事 - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE81ZXdFdl9JS0xWX2ZzckZ2aldRTWJtT3N2Q3MyT3RLRm1tV0xJc0VNRV9SUVd6dVRjTVNMaVAzVDJEOHhmVlRmWld5OThQbEgzcWI1YnZPV0VUc0d3N1NaU3UybTl3M1JCRThr?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-10-28T19:07+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台積電鳳凰城廠周邊工業區需大量資金投入 「大地主」來台灣尋金主 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMixANBVV95cUxOaEpwMUowbFJacDAyelhrMDdOcmNobTVnQXhYcnhoT1RGT0NBU0VMaUFwbll2LWdmb0R5TW1Rb3FtYUF4NlZ4YzUzTDY4N2FJcDVfZDhWMFZTV2p1OTJZam41aTZiZllBS1pKcWVfZTRTdHdHWU04dm9hdTFES1BZNGZ0WG9Xd2dJdTQxR193NVNORU1pSy1NZ09LSjFyMFoxZGJxYlpGM2pid0xtVGFKUnpWY3ptWnp6Z1h3anpuSVJZTy1vbWdUWEVKeEZ4UTM2dURLaVo4VlJkLWdvbkJCYnFTTjc4UnZHTnJzM1NsV2IxZVgxMHBmRW9GMGlRc1FXVHMtZFN6MHlJSW1MQzRVb0dNRUYxak5idVRsZ0t4UlR5U1Vnelc5b0twNDU1MWpJQko3T2tBSzd1X2NJUXFtTWZvOU9DMnlVTFFuc3BDYVpNQzhvcG9yb2R2SnQxOE1NZGpSSGZwbER4enFjR1BQTDR4UHF0eUJmM2szZ2hlbmQzYWVVeEFXclExMXZ2OHpzZC1lTDNMa2gyVUVqU3F4SWtuX0MyUXVFemtSZ3JxQW1QZ0hlOVA0RDVTNXBHSDVlOS1vbw?oc=5",
+      "title": "爸媽送10張台積電 兒離婚媳能拿？ 律師揭關鍵：「這筆錢」恐分一半 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi9wJBVV95cUxQNzNhOFVWaXZjTkhpaXVHVnR5LTFpTWZNX3VpeWpybHZvYkxLWGs3UlhjVW9vWDVMQ0FCN3NnZGhoaGlKd2k2SHZHX3pZT291Qmt4bmRiMFg2ZXdOUnZjM3ZNOHF0QXBzaFdaOHRGMU94azVPc2FPUEVHb2tfU0dqUWZIMkcxWTNtWFVSNmxfSlRSR0h4ZTdWVEpOVUdrazZUOFJzcFFZT0NXOVY4OW9GQlBsV3NvcUx1ZlNFeVJoQzBwR3pJR0JmSXFlZzBaQ2hqaDNzUzBYUXBHeU5pSVE4R0I0VFRUbExXX0JPNnRJV3hNaFJwVmpGa0RhMUE3bGlESm9HVjNYQjM0UHMyNnE3MHR0c0lDeGVEZXF0UVVZTEpfZGp3eUkxSWVKYl9qSW42b0Nzd2lTMzFOUVRlZjA3ei1FRjMtNUpXWDVmbGxEandCZWZfQlNocm51MDZxd2c4Wk4zSkR4bFFoZXBWU2hnLTg4TDQwaVE?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-10-28T17:57+08:00",
+      "published_at": "2026-10-29T12:43+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "台積電聯發科雙引擎催下去！台股大漲939點收復4萬7失土電子族群揪團衝鋒｜Yahoo財經掃描 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMimgRBVV95cUxPZnFhSy1uWE94VjI0LVlpdkczVUtxRUVqSjRLSFBrSnY5M3RkMVdPdnZJWDBzQmFqYTdiVGxVMjdtdVNHWlR0dmhXZlRHUGJvdEQ1eWNtTE1YYzFVd1gteFpjblNYOERJS1huQnFiajlDWDJicElBZmowSTNMNlY5NXRjZHBSWk9aQkw5OUpKdEFXdDZJbXd5bjY5MXB6UTh4dTZxUnRpSERnSXdET0NWdFBlYXZiUUc1cG9WMllab2xVa21OakVxeUNONHNMalk3UmxIU3JSZU0yZEdBMG4yMDZjMXBJRDY2OWdydmtIWThHeGRoTUVLaVVLV1RLeGtPMEx0ODc4RGd4dUU5T29URmQzRWVMekN1ZkZEbVFmRzhVbVZFQ1pJd0dZMVgxSDBnbFhoOERzQTZmcjRVTzdjM1drYzNJRkNhTko0RERkenBRVjlKOTlkanlBNDNkSUR2dVZudG1kV3poSVRXZWNLZE5NMlBhMTRCVUdLdUVWcjF0a2FxOEJaNVFPWE1KVmtvdkhzV2E5Y0EwZjVPallNZGxubXdmU0IwWV8yM2xjYm9CWkwwai1fOEVLY1VTOHI0NVJuYl93elA3R1A3UUxUcmx2dnQ2Y1pjVlpTLWtKUmRuM0JhWlhtMkdfWHlKV0lseVB2NElGVHROdkNuRDlDUEVOaVhLeTdUT3R4V3Fjc2UwbHdSQUY4TThB?oc=5",
+      "title": "台積電追上聯發科「竟靠發哥下跌」！股民崩潰喊話外資：不是叫你往3000拉 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMitANBVV95cUxNbkFncGRQSFphWkJBdjlpVDRNUk1zeXQ3R2ZBVkl5Mk1rNm5MUG9xUGRWaFVHX0F2d203b1U4VVRNMmhISk0xTmlMOWlTX0lLWmlmVDlUZUlQRElTQ2dVRDR5QldvNVhCTHhvbXFJY0V5MjJzdGlVMGJFSnN0WkRPcTdIYm4wbnBENFhmNEp1Skc2R2RnSlIyX0pJQUpCMGlNWEQ3NFg5aUs3NEpFQUpOQXpjSjh5SWIycnN6V081WDhKU0NxYlhFR1JhRUdjSmstNm0wc1lMYlI3TVVTTW01M3B1TXBCeHJueC1Rc242Mk1FOTNPSlJOTUhMOWxibTNSYWhCSmJiV19RdzhQcW5rblhXclRjWl9mNTEtZk5vbkFacWQ5bW9Yb0lOTko0ZEk3cWI0NGRFYUFqVDk0MHdud0xKVDFQNER1d0JYb0xIMk1MeHItdDA1cGphTko0T0lXRUNNWHpmRmtDbEJzRTlHSm51bXI3QXRUdHRxSlpZbWRXQ1I5QVhoLXQtUHFZc2o5ckt2QzI0RWREbndfUDdYQzZ2dG9QNmR4UnhTSElCS0RZcDNK?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-10-28T17:15+08:00",
+      "published_at": "2026-10-29T12:33+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "谷歌「AI燒錢」股價重挫近10%！台積電跌35元摜破季線 分析師曝進場時機 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMioANBVV95cUxOUW1IMV9SSUtXSGNFQk5uLXFNWE5abDhkNW8zbHhrN2RUMExJeDFmVzNQbmFfMXA4UTBvekx2UVlhVzVEZm4tNDI5OFZBVlptRjFaLW5rLVpHeVRqLWZSX1NPMGpUd25abS1VMG1aY05OcmstYnNwYTg2MklSUEFyWTRhT25YMWY3WERLTVdQOXdjRURWUEdHS0FpZDlxTVZVeUduU3hTSkR6Q3RhYXp0SS1hLU84ZUE1LWxraWZuMWlZVW14U1J6d3FQbDkxeDdERFN6Ul9ZUjlGalFJZkZlVW00RWxlekdpVFg2RGV2NWtaQUlwNHpUcXFqOWRuNGVVbkp2U1dNaENaZU9TbzNZMTI1NmZpMTRfd3oybmd0ay1YMVVMQ3lJbWI1VFNEWnZxZjgzTjFSSmJaWmNRX3F2eF9vcC11RkxPRlB4Rjh0U3BLU0syc2lidlZ1bWNUVTdsSnFOdWV4THVFQzZ6Zmtad3hEWkcwUGkwUUZDeTJuSTNaRE1NdEJLeHdFRkRDX3JxYTdWV0kyMGNKR1R5QnVmZw?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-29T12:11+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "個股概覽 | 個股 - 股市 - CMoney",
+      "url": "https://news.google.com/rss/articles/CBMiREFVX3lxTFBfVGtPUmhQeF9nalNLNm9zTGJWQlREWTlFa2dVeEhkNElpN1d0OXlyaFF3U3NaYnBodklvejVEU1YtdkNl?oc=5",
+      "source": "CMoney",
+      "published_at": "2026-10-29T11:35+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股大反攻才一天就變臉！杜金龍加碼到7成 「這3檔」逆勢成焦點 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMigwNBVV95cUxNOEtOYTM0cmQybkZJTkUwUW1aVTZmZlpFNUNBd2RwUWJVZGtybTZoeHU0MDUtM2g0YTRiWWxDMGZlcEJFbGZqQUUwR3N2cmxQOTBOYkluN1BXSFlVakhaLWdUT1F2RURqaFNjaE03Q0l3dU5Rd1BjZUZEV21hd2lxR3k0MDFvWldlWmRuZTV0cVU1MjVZT3Y1TmR6YzBXTmpCMlRUU1ItalJCeWwwcDlXSktQQ0dCY0ZoVHA5azlGeHB3UW1ydlBjRWhrVWQ3OWZ1Z2luMUMwVFJwZjlEVVlZQ04tdWdzbUVMYVJ6dUEzSDR6TUIyU0ktaDU4RHhFaFpibjBHNHdDaDl6WFc2cnFZcHYtRy1OSllEVG41bDNZUE45R2N6b3VfRnRWQ0Z3TkxhaVpxcXBOdXZzZUVsOWFMdXZobjlJS0Q1R2dsdTE1ekNBdEtHamM4UVFOZnVDaGZ1LUtBNnhsR2NWQ2NGaXc1VFdBTXpLWG1sQ0xDTlEzWjR4WXM?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-29T11:26+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "送兒10張台積電股票！離婚會被媳婦分走？律師揭1情況：有機會 - Yahoo新聞",
+      "url": "https://news.google.com/rss/articles/CBMi-wJBVV95cUxQSWc2S2VPbi1oenByMHdNbmFJeWVtekVjNEVOcklVWF90cHdNSUJwVXpZLXBZZnRPRUNxa05tMy1aWC1BT0d3Y0phMXJNbUFNQUhTQWNpN1FVV2tJMVUtVTgzbF9ULThBQ1Z6b0ZkNmp6WmY3YVBtdTlZZlJQWEFQU0JwVXRmX0tvLUtXUHl0ZW42RXZOeG93VEViVTBjS1NFbTlTX0loRU1wMVcyQXhqUk9RT2h6U2dRcTdGc1RjV05NenZuSDBFVzEtb1F1YlpqV0NiTmQwLXN3R2tMM000cnhJTjgyalVNWVRGSEFGVVMtUjI1R25FaUU2WUhqcDQ4b2Q5NGx1bWRsSW9sRmNUVGVqQmFsUXdldm1NSmMzaFhaQkhqR0ZabDZhLTA0R0RXRlE3OFhNY1hHSU9Uc2J5VXM2djlLUjRyakEyNnE5UUtYSUVGNmN6ZWhkYWswYlU3aTc2X2s5MDQ4YW1DVDJLdVdaQ2d1WnBjcEtB?oc=5",
+      "source": "Yahoo新聞",
+      "published_at": "2026-10-29T10:53+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股狂飆939點是逃命波？ 陳嘉偉示警「台積電季線恐下彎」 最壞情境曝 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMipwNBVV95cUxQdjZiZVhKOWZwYlZIV09yUDBVUGJPaTZmVFhlZlJSOTg1T1pxaEs2bFl1bVRNbkhjeEpVUHFNUlAyTmVVWUZnUEgyMU9VbUV0NXU0LXd4NVFxVzdLeVE5RFZvb21vYlNYNlkzblZvMXZieFZNN093RzBBS0ZCN3hGUmZSMGZoYTNWVk5YZWczUWhpRWt5dmJOendUSkN6Ti1lbkVYSlNudU9FNldhNGhQZklGRk5mLUVuVFdrbGN4R2lOR1NlOVBYcEtHcUk2NXNoWXFpUDZiSDV2d1BaRTl4Sk15NVVzNng3R2hWR0ZMb29lMld2YkJHQ05IamJZcnVJQmF6YXpZZG1BeUptZnZtZklORExqeHVKVXRjOGpoS1RPYlotYi04andhVXdMZGYyYlJ0eTVNc2JrUjh3azVaNEV1cU9oVXR3eHJycTlMTDJMN0l4YnVESWtNOXMyelBJUE83QXNXUnlUV1BwUGVfNDZYb2hYZEotUnM3SjljX3ljTTZNcmllRTdJa1dXczhlQVJXNlJPdmIySVFYbnh6ODhUQWMwaFE?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-29T10:32+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "【Yahoo早盤】美股白漲了？台股失守4萬7大關急墜逾700點 分析師呂漢威：不易回平盤 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi9gNBVV95cUxOYWRYdkEyMVJnMUI4amI4MW9fSmF2US12MlFjdzlxMWNHWW5IanM3OXdDSElMNjM1S1F6N0ExUWJKS3ZNRmVfTFpRRXZYTW4zWC1mb1d2amp0bUk3UmxSRzZ5ZURzd1RkQUw3WkpRUjQ4SFBNTDRyNEY4TURXQWJIWWpiMjhLcUh4SjRkd3dKNjdEVmFvbUNzNTd4Wm1pR0JNVE5uUkhKUTluZ3JpWGZpTzgySmlfdzd1LTNiZjBHbmYxblI2anNnNzBpYjV3MFhETmt3aXBTSVJVNTNlU3hydVFxcnR1RThmWjAybUlvcUtvd0I5elY5a0RveHlaaWc3c2VOZGhwVktBNlNzZmZvRU1wU2p5Ti1MLUdyNzFnaWpmM1FveHJ4WFVKZ1g1S1ZTNWZvNTc4X0NWa1NBeEI2dzhaTFpfYUZoeXNjb1ItWWozdzAzMTgyTXo3SHdfdFNVYXBkRHBZZk9xSTdlSjFDSGZFdVBjQlJIbG9kSk9zd2EwV3JEUFNLSEp4RGdCRTVxU0tZaDlUdl93a0plalF5ekFYZXdNeHo1dldpcUFISGhfVnM1N2Z4em9Bc2IzMW10TGRjQ1NzbWVyU2hHQjBCaHlTR2Y2M29kZGJWRTVBOE1lY1JyUEZZajVoY2xsV2xsOEpLWG9B?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-29T09:59+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "百萬股東哭！聯電法說變法會 一開盤跳水近9% 寫二個月新低 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiiwNBVV95cUxNR0JzaE9QaHhZb3RwQTZxTEFFWWp0Uk95cFNvcnJ2bkxfWHpGTGotYkdkM2FHVHpJSlZJZ0hDcE1VUFF3Z3ROYjk3WmVHVi1TaHhPdjVOQmxuXzRBR1l0bGF6Z04xT213NE9QZTladnNyemtnVmF0NkFwOWRNVXZEYzFidnZ4bDBwOGFrNFNHOFhaSlJYYVZjU05aMDRKai1tYV9WaWRJVUhuczA3LUg0SDhxcmdJdm14cXZNLW15OGdfbHFVSEZwR3hvM0pPcWZxM0lLbWZ4c1AyYkFzUGR4ZnN0SG9MTFM3a0lBWDBLaVhidGs2cWJBS3dHekQwVlZ6endUVDJxTDBuTnlxT2hpX182Rk9BWmpVSmRDT3U4OEFlWlV0TXZ2TUlBUmxvdXBFbk5WcThfZXBuR3JGNE55b2hDTkNtaW9HZHV1NExYRTlyTGswc1MwdWV6N3I0VnZhMDJWWjJRVjN6ZnRZckdrcW53djN1YlpsTk5UVHpyNnpuUl9SRmNCSVB6NA?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-29T09:58+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股早盤下殺470點！「這檔處置股」10日慘摔39%今再跌停 聯電、精測法說變法會狂跌逾8% - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi5gJBVV95cUxNZE56aS1KdldheF9EMGlrUjgzbXNSUjFpRnBmMHFrTFE1RE9xRGVULUtQQTlUNGdXMXU0dU1IN1ItX0RaMlVfZThKUEI0NVVSTG40OWhtZUhodWh5SGxQQmNxdTU3dkNTYXVPSmtUTHB2Vmhvdk93eThhS0dYT0ZnaEp5dHFEd1FPTDB3YkllSVRaUUM3eV9uLUFLSEdaXzEwVzdvejF3RVJnTWVCc0ptLTlZTVlqVm9WZHA4VlVqcWo5VFZBMzNvU24zazhla2J4S0NybHY3bG1xSjdWTlhESzJOS1dkdmFKdkNzbWoxWm5qREtxQWtiLS1VNjFRU1BYbXZrd19GLXFIeWxmX2tOOTdpTlNRYmI1Uml4aU9uR0VpOUphM3BrZ2JKeW5rQVVsRk1uU1RPajVSS2NzaGkyZzRfSjgwR044VE9HaXo1RFRET0ViajBCOXNOU1hGWDVRQ3Z6UjV3?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-29T09:45+08:00",
       "importance": 2,
       "risk_score": 0
     }
@@ -183,15 +183,9 @@
       "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQLUpyTmNyM2M1bEd3N1ZLWHczdWljX0dMNFZKUEFsNGt4RFduQ2ZuX1dnMU5WNkpBSVdnQms0Sk16bjF6aXg3R3djQmUzNmtJTTE5bThHakZoTFJCOU50RWp6NEhKOHhvUFZqVjBuS1BKaEhUdEhxTjNSamZ1U3RJRV9EZGdBb2NCV1FYOUcxaWRhY0YxdU9xZHlYVTZWS1pPSjZ0ZFU4MFNmRXRWZVB2Q2VHX1Uwdk5YRF9DOHBR?oc=5",
       "source": "FinanceFeeds",
       "published_at": "2026-10-28T17:26+08:00"
-    },
-    {
-      "title": "Middle East Peace Talks Ease Supply Concerns; Oil Prices Fall Nearly 2% - VOCO News",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5oTjBDVC03NzJsOTN2ZmFuc2FvcWhuVGZReENad1dtNlhLRFZPRDdBZ0syQXV6LXpmWmdwQ1Z5UUJseW1ONFgwTzRUTHlfWndueWxyQmp5ZGRQUTBmVWRxUmhDeGtRSEFJcmVqSTVZM0JBRWJkQlZwMkd3cw?oc=5",
-      "source": "VOCO News",
-      "published_at": "2026-10-28T09:54+08:00"
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-29T08:59:07+08:00",
-  "checked_at": "2026-10-29T08:59:07+08:00"
+  "updated_at": "2026-10-29T14:44:53+08:00",
+  "checked_at": "2026-10-29T14:44:53+08:00"
 }
