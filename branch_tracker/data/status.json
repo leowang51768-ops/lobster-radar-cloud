@@ -1,22 +1,22 @@
 {
-  "date": "2026-10-28",
+  "date": "2026-10-29",
   "mode": "collection_only",
   "expected_stocks": 253,
   "fixed_stocks": 163,
   "supplemental_stocks": 90,
-  "covered_stocks": 251,
+  "covered_stocks": 248,
   "coverage_complete": false,
   "status": "partial",
   "source_blocked": false,
   "ranking_limit_per_side": 15,
   "history_target_top_per_side": 3,
-  "history_requests_succeeded": 119,
-  "observed_collection_days": 15,
+  "history_requests_succeeded": 120,
+  "observed_collection_days": 16,
   "complete_collection_days": 0,
   "counts": {
-    "ranking": 82480,
-    "history": 411569,
-    "queue": 7133
+    "ranking": 89896,
+    "history": 418769,
+    "queue": 7561
   },
   "review_stage": "資料累積中",
   "strategy_changes": false,
@@ -28,6 +28,9 @@
     "排行榜與逐日歷史分開保存，不互相覆蓋"
   ],
   "missing_stocks": [
+    "3380",
+    "5871",
+    "4763",
     "11044",
     "3660"
   ],
@@ -37,8 +40,20 @@
       "error": "Source date missing or stale"
     },
     {
+      "code": "3380",
+      "error": "The read operation timed out"
+    },
+    {
       "code": "3660",
       "error": "Source date missing or stale"
+    },
+    {
+      "code": "4763",
+      "error": "The read operation timed out"
+    },
+    {
+      "code": "5871",
+      "error": "The read operation timed out"
     }
   ],
   "history_errors": [
@@ -343,7 +358,7 @@
       "error": "History date or numeric mismatch"
     }
   ],
-  "history_pairs_ever_fetched": 6864,
+  "history_pairs_ever_fetched": 6984,
   "history_coverage_complete": false,
   "history_coverage_note": "按個股實際交易日缺口排序補抓；來源每頁最多60筆，較早缺口仍保留待補，缺筆不當零交易",
   "history_retry_policy": {
@@ -351,8 +366,8 @@
     "retry_delay_seconds": 900,
     "source_history_row_limit": 60
   },
-  "history_attempts_today": 360,
+  "history_attempts_today": 120,
   "ranking_coverage_complete": false,
   "errors_total": 66,
-  "database_bytes": 75620352
+  "database_bytes": 78831616
 }
