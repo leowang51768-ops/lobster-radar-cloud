@@ -3,45 +3,45 @@
   "risk_level": "red",
   "risk_score": 3,
   "risk_reasons": [
-    "原油超過100美元／桶：WTI原油 102.13美元／桶、布蘭特原油 110.83美元／桶"
+    "原油超過100美元／桶：WTI原油 102.67美元／桶、布蘭特原油 111.48美元／桶"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 -0.5%｜NASDAQ -1.4%｜日經225 +1.1%｜KOSPI +5.3%｜台股加權 -1.4%｜恆生 -0.4%",
-    "⚠ 全球市場風險｜美債10Y 4.99%｜VIX 16.9｜WTI原油 102.13美元 -0.6%（超過100美元警戒）｜布蘭特原油 110.83美元 -3.9%（超過100美元警戒）",
-    "⚠ 全球市場風險｜油價觀察｜〈能源盤後〉葉門戰火延燒 沙國煉油廠遇襲 國際油價漲逾2%",
+    "⚠ 全球市場風險｜費半 +0.3%｜NASDAQ -1.1%｜日經225 +1.1%｜KOSPI +5.3%｜台股加權 -1.4%｜恆生 -0.4%",
+    "⚠ 全球市場風險｜美債10Y 4.99%｜VIX 17.2｜WTI原油 102.67美元 -0.1%（超過100美元警戒）｜布蘭特原油 111.48美元 -3.3%（超過100美元警戒）",
     "⚠ 全球市場風險｜油價觀察｜布蘭特原油價格：114.20美元 萬斯致伊朗信函遇GDP與PCE數據日 – 看漲120美元 看跌108美元",
-    "⚠ 全球市場風險｜Wall Street Parses Warsh’s Remarks: Hints at Further Rate Hikes, but of a Modest Magnitude",
-    "⚠ 全球市場風險｜Hesai Leads Global Robotaxi Lidar Market with 62% Share as Robotaxi Industry Moves Toward Scale",
-    "⚠ 全球市場風險｜個股概覽 | 個股 - 股市",
+    "⚠ 全球市場風險｜油價觀察｜Yemen's Houthis Launch String of Attacks on Saudi Arabia, Sending Oil Prices Soa",
     "⚠ 全球市場風險｜玻璃基板概念股有哪些？2026 台股供應鏈與龍頭",
     "⚠ 全球市場風險｜ZJLD Group Returns to Hong Kong Wine & Dine Festival 2026 #ZJLDGroup",
-    "⚠ 全球市場風險｜珍酒李渡再度參展2026香港美酒佳餚巡禮"
+    "⚠ 全球市場風險｜珍酒李渡再度參展2026香港美酒佳餚巡禮",
+    "⚠ 全球市場風險｜台股大逃殺傳產也沒料！市場點「台塑四寶這1寶」是中東地緣直接受惠者 股價卻連崩登弱勢股王",
+    "⚠ 全球市場風險｜台積電重訊！砸388億買下友達中科廠房 1.4奈米先進製程趕進度",
+    "⚠ 全球市場風險｜AIA Group Stock Advances 1.1% in Hong Kong"
   ],
   "markets": {
     "US_SOX": {
       "label": "費半",
-      "price": 11422.756,
-      "change_pct": -0.6
+      "price": 11518.199,
+      "change_pct": 0.4
     },
     "US_NASDAQ": {
       "label": "NASDAQ",
-      "price": 26112.768,
-      "change_pct": -1.4
+      "price": 26184.725,
+      "change_pct": -1.2
     },
     "US_SP500": {
       "label": "S&P500",
-      "price": 7697.95,
-      "change_pct": -0.4
+      "price": 7720.39,
+      "change_pct": 0.0
     },
     "US_DOW": {
       "label": "道瓊",
-      "price": 52203.54,
-      "change_pct": -0.4
+      "price": 52342.56,
+      "change_pct": 0.0
     },
     "VIX": {
       "label": "VIX",
-      "price": 16.92,
-      "change_pct": 0.0
+      "price": 17.2,
+      "change_pct": 1.8
     },
     "JP_NIKKEI": {
       "label": "日經225",
@@ -65,45 +65,21 @@
     },
     "US10Y": {
       "label": "美債10年殖利率",
-      "price": 4.991,
-      "change_pct": -1.0
+      "price": 4.989,
+      "change_pct": -1.2
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 102.13,
-      "change_pct": -0.6
+      "price": 102.67,
+      "change_pct": -0.2
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 110.83,
-      "change_pct": -3.8
+      "price": 111.48,
+      "change_pct": -3.4
     }
   },
   "active_news": [
-    {
-      "title": "Wall Street Parses Warsh’s Remarks: Hints at Further Rate Hikes, but of a Modest Magnitude - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOeWJfTU4wTERCdEt1LWNseUFKVjI4TG1UUzg4YTZTZm1YODJ0RkJobVF5MGF5UGhXM0k5Q05LTzIwVVgtVVRBMG1EOUdVWUR1NzhYTzU3V1FxNmtXd2MwVFVnX0h6Q3YtTEZyb1JCbEJTTXd1MjRkOUwtVE9XSFNtLWp1QnZsc0Y3elJnZHpnTjF4X296bzV5Mkp3a1JZaDZL?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-29T08:24+08:00",
-      "importance": 5,
-      "risk_score": 6
-    },
-    {
-      "title": "Hesai Leads Global Robotaxi Lidar Market with 62% Share as Robotaxi Industry Moves Toward Scale, Yole Group Reports - Quamnet",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFA3WXY1Z3Exb0JmQkNlV0d2d0ZQLXZLZ0RLRjYxa0xPVk0zZ3RSWjB1b1oyMHduTlNFMFZlajRNdUxQbHhROVpJR25NR29HdXE4ZWxrQm1wcVBhRW5UcktJ?oc=5",
-      "source": "Quamnet",
-      "published_at": "2026-10-29T23:00+08:00",
-      "importance": 5,
-      "risk_score": 4
-    },
-    {
-      "title": "個股概覽 | 個股 - 股市 - CMoney",
-      "url": "https://news.google.com/rss/articles/CBMiREFVX3lxTFBfVGtPUmhQeF9nalNLNm9zTGJWQlREWTlFa2dVeEhkNElpN1d0OXlyaFF3U3NaYnBodklvejVEU1YtdkNl?oc=5",
-      "source": "CMoney",
-      "published_at": "2026-10-30T01:11+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
     {
       "title": "玻璃基板概念股有哪些？2026 台股供應鏈與龍頭 - Growin Blog",
       "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1kcTVDeVFpZ3Nmb2pXTk5oUk8wb1d6WjYxYXJFRTBzRzYyc1J5MEZtX1RzQ0xiNHBiQ0xlbFBqZTdzQnN1engxRWpYN0dFU0RUamhOazJGNS1aQWRyWjVieA?oc=5",
@@ -137,10 +113,18 @@
       "risk_score": 0
     },
     {
-      "title": "Navitas Semiconductor (NVTS) News Flow - Moomoo",
-      "url": "https://news.google.com/rss/articles/CBMingJBVV95cUxPTklIZXgxM214dDZ6X1JYOHk2LWt3eDE4VWhKODFxWmhzeGZGdjR1dmx4UGpLUWhkeVZqZXJuSll3MWFudVBoSDNwVnRoMzY0ME5qYXQ2YzJqdGVRRVJ1YXRxMWYyR1VNQmdwSW5iWG11MXdOYjJzY1l4TjJpOWpiMkE2b0M4VjhfQWItMUJ1Ty14VFlPR2tJVEpmUzVxSGw0UG5vMXhtdUlXc1lqc2dOWnVJTUFvOG9SWjBvTHZnZzAzd3hWY00yMDFmQ3NSN2ZFQnBvOFFXQmxCQXZES0JpTEc2Uk9uQ2JGaVpXT0VLLTVtc3ZYbWRuRlJzWHVGM3BsdTFUNnVUVGxoU3lMRUwtbFlwZHJUamtiOG1iaGJn?oc=5",
-      "source": "Moomoo",
-      "published_at": "2026-10-29T18:18+08:00",
+      "title": "台積電重訊！砸388億買下友達中科廠房 1.4奈米先進製程趕進度 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMihgNBVV95cUxNSkVQelkybmQ2UVhHR3ZvQzV1M0RxbURVOE45M2Z3cm04YjhGeFUzLUx5V0xqbHBaYi1zUTMwc3Jjb25uUlQ4djVRUmQ1dEdoUU9pR0hsbHoyR1Y1cDlLX1FoX3BMNmlFSzNQY0JZeEtYa05lZS1jZngzdlNTekw2OV9GRk8tRWxVR04wZXpNckFDdi13VVE1Q253bmZWd1NobGc4LUo4X1RHQWV5bURxNkItWXY2a3pnX0RFS3BWSGs1MThySVM5b056czRvb1NWM183ZF9zMVpiVUwzNV9wVHMtblZqSEpGNVVUclh1RnBkNnY0M0UtNXhBenRuZTlvN2VMMHZwb3lHMVJxYmVaM0R0MnZTUFVnd2V1VVVoUDI5dGwxNlFKSGtSRXVFN0xtSmFNZTVfUzY4Z2p2RHB3Y19Sc19nbnhMYWtSclYwUTNyWXJuU25NR2RITk1idURaZENLZWxhSmxpTmlRaERZbFhhc2gtZVdicWJpdDN5MnFGRFJ2Tnc?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-29T18:42+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "AIA Group Stock Advances 1.1% in Hong Kong - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNSlVGTVZmVjdBakpyTG1BZVVYM01WMlJ1Q2NHOW1xODRGelR3c0d4LUlhYWJUQVZwOXk0SXltQXVOZDV5cmJkdWtNeXFWMjZ3eGhSaVc5NEhMZTY5LUNTRjczdWtXM3VvNUhCbGk2dktvVlNLX0JFNm5MUzhfSHNzbS1vTWxHU2x0d0tlcQ?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-29T18:39+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -161,6 +145,14 @@
       "risk_score": 0
     },
     {
+      "title": "爸爸看衰台股喊「快賣0050」！他抱長期愈看愈怕 網友秀持股8年績效：賺逾160萬 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiuwNBVV95cUxPdVNHZW5tdDdQeTdSOGp2YW5ZTUUtVmo2X3FNMkowWjRxbzM3N1BWREhrWW0wZW8yNDNWZWp2Rlg2aHFLNTJrRE9hbkl0MlROZXZwVmctZlJJR0ZhcGt1TGxRVXJlbnZaRnJaOHlQa2VVS3QwT2t2eUt6X0xfSVZPUlJDZHJjV0tqTWF4b0tiQkdudVRUS2hGcXNpWnpsRVdiVDRaVkUxWEpxY1VxTzFzcXVsNHdmUDRkN0wtSmtnRHpfU3lWZFZRRFRKa2djdkowYS0xNkU1aEpXSGJYNHA4YWh0RENGc0JDRXhDaE1pUW5DMEFNdmx3aS0xYVdmZm1QQThreHhNamhxWGFtaV9hbGN0Qlc5TGFFd0kwLXFFU3lkQkFoZXhJYm5pLTZ1YzllR2p6MXAweVVJeXFwSXVBNlZsaFhON0NxN0lYQ0NsM0hfcGZYd2dDc1FHNVVOdU1wNHpaUEotLVBhM2k2MlpTTXNINzBwZF9QdjRXSTlwZHppcmJ4UFlqbW5xYjhRZnVvbmFDcTFuamIxX2s0RXJkVktIZzdOWnhQZFpZMEdNWjlQSEVTVnZMY2VnWQ?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-29T16:32+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
       "title": "Hong Kong Market Quick Look | All three major indices declined, with the tech index down 2.84%; tech stocks fell, as Kuaishou dropped more than 3% and Alibaba and Meituan both slipped nearly 3%; semiconductor shares also slid, with HuaHong Hongli do - 富途牛牛",
       "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPM1RwejVuZm5WS2tHal9rQmQ3OGpwaVJOOFI2SHlUMjdreXBLcGtlWEVNSGNKdnlFeDdMUXI2cjR2XzREeUZZcWhEc1laY3l3QVduTlBxeXNlRkxaRm1hZzFJenM5clVxLXhZbzVSYTM4allBdWVCSERUMzJtWXhtV2twZzV6QTFuaGc1SFpuOHNWYzVKTmk3akFneVRIQTNqY29yZFlB?oc=5",
       "source": "富途牛牛",
@@ -169,21 +161,23 @@
       "risk_score": 0
     },
     {
-      "title": "Hong Kong‑listed insurance stocks rallied across the board, as market volatility weighed on insurers' third‑quarter earnings. With the negative factors now priced in, their undervalued valuations underscore a robust margin of safety. - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOTXJXRTg0NnNrX1E4MERLRGhoNjh0dHhMY1JleGZnTjlfMUFEa1d0bHZvbFlqWko0WkpxUzJYejdqOEg5SVQtSDF2M3ZjdnJfcV9xeWZPc2RicTUtcTdXa0lFLTNNbWNHVEtjS2laVWx0WHJHaWhMVk9WYUxqYnZ0eEtJVTFaYXNqbnVESE1sOWhSak11cWJNY1lldWVacDN4UEJ4d04zNA?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-29T15:12+08:00",
+      "title": "友達法說會》388億元再賣廠給台積電！估賺185億元 彭双浪：今年不會入帳 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMizANBVV95cUxNb0g0VXBqZ2J2WTJBYm5IaWJac2thMjhCRVBrUDRkMDF4YlBvQW5SZldBQlU1MFM2U29GLTBpUUhJOExNS09Dc3lBQjIzV2t6Z2JCMjNMVFU5OTFIZlNpZFl0MEpmdEx4WUtNaWNobkpoLU9XcmhTZ2lxMndBLXhraUNEYTZTcnJrSDJnQUdjckFGS3VOQ3VPUFJLR3FKbW5vTmxwbkpWelBIUzJEeXBaeUFtcmx5WUFEUUJzOGE0ZWlmelhKeEp6UF9UOXAyYU5LTVhQZG80amY4TU5oWHpwcnBySF90dFdIUXI1SUU2TDVJcXRVNUFkVE5hNVZPYjBGWGJxd0ZqSU5KYm93MUMxeExBci1yVXRZaHlqOHJIQUhqM0pVb0N3Tnk5NTBseU41aWJUenIzanh4aUVZZDc3QUlOSWZYSEJHdkVuVWFtRzhZZGZCRHFzb084MGM1QjF0YzlMS2pyTmpkMk5uYnlTU180Y0ZMV2FUblFQNmFPYk5kd0p0NV9vMlR2Y3pVQTRIcTJIdk5lTVI1Z3hub1pYRFdUMGo0S3dueTJyaVZueGNWTjhOX2RsX25tTVp4Sm1QNDdrLUdTZDVjUlJf?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-29T15:55+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台積電砸388億元擴廠！買下友達台中廠 送上185億元大補丸 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi-AJBVV95cUxOcUh4enNhUHF3MzRrSDVyNkdiRFd2LU80cjZjTVFMbU9pUUtNTmMtcnlvWEtGX21Tb3Q2Z1kzU3lUb01mSVRkTHgxaHdYUEdqZ0pMWWQzWVF6bl8zXzN6VHBwMks2ckswNUtiX2N0V016MThSZE1BYV9lZTV6NnBsM0dMUTQ2OGZORVN4SzdSWVBCUVRpWXZPT2NiLVp4cDBwTmhLUXVXWVFZM3BLMnFGbl9yMG5jMF9KYVYtZ0dmZnJkTlI4c2dMbEZXblU1cW5XN1BYcHVaWkpibWtFNE5BQmxhNUlENWdSU3pmeVZ3OFVuSXJ4dVJUY09hRDVmXzhpWFlMM1VDXy1UaURRY1B5cy0xWjRJclkzS0MtZFVwb2dLRXNVR0NWRkdKUWJIVUhGN2FTejBkZmtqV2pUNDcwN2ktcTNaMEJYVFJycGFfbmlTcTFNN0lFNnRUTXVhVXQ5NkdzMFREVHpzbTlOMHpTakJoRGE3cDhs?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-29T15:22+08:00",
       "importance": 2,
       "risk_score": 0
     }
   ],
   "oil_watch": [
-    {
-      "title": "〈能源盤後〉葉門戰火延燒 沙國煉油廠遇襲 國際油價漲逾2% - 鉅亨網",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9KRGJpLVZvSng3TU0yX3lDYnZrSjNvZWx0VW92QzZ2MnE2ZmI3bmRhZzdqZ19oUnpSVXhsY25HWDhFc2lwVmQ4VnVkTlo0Yjg?oc=5",
-      "source": "鉅亨網",
-      "published_at": "2026-10-29T05:51+08:00"
-    },
     {
       "title": "布蘭特原油價格：114.20美元 萬斯致伊朗信函遇GDP與PCE數據日 – 看漲120美元 看跌108美元 - FinanceFeeds",
       "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPR2RFTThDM0E3R1dKRWI1M0hXOFRXeGJMaktSbFI1bnR5VUI5NjdwNldKY2xfZ2Y1Q1ZUUU5XVVhvQ1RWVmJUZU5HZzhvd0ZldlBDTmpIa0Qtb0pPdWxONnZaV0F6MGsySmVEemgxWGlhUWROLTJuaHJOQk5hUHRWZm5fQ1NFR0gtTk9r?oc=5",
@@ -198,6 +192,6 @@
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-30T03:13:49+08:00",
-  "checked_at": "2026-10-30T03:13:49+08:00"
+  "updated_at": "2026-10-30T07:17:19+08:00",
+  "checked_at": "2026-10-30T07:17:19+08:00"
 }
