@@ -3,19 +3,19 @@
   "risk_level": "red",
   "risk_score": 3,
   "risk_reasons": [
-    "原油超過100美元／桶：WTI原油 101.94美元／桶、布蘭特原油 110.44美元／桶"
+    "原油超過100美元／桶：WTI原油 102.04美元／桶、布蘭特原油 110.78美元／桶"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 +5.4%｜NASDAQ +1.4%｜日經225 +1.1%｜KOSPI +9.9%｜台股加權 +2.0%｜恆生 -0.5%",
-    "⚠ 全球市場風險｜美債10Y 5.04%｜VIX 16.9｜WTI原油 101.94美元 +2.0%（超過100美元警戒）｜布蘭特原油 110.44美元 -3.0%（超過100美元警戒）",
+    "⚠ 全球市場風險｜費半 +5.4%｜NASDAQ +1.4%｜日經225 +0.9%｜KOSPI +7.0%｜台股加權 +2.0%｜恆生 -0.5%",
+    "⚠ 全球市場風險｜美債10Y 5.04%｜VIX 16.9｜WTI原油 102.04美元 +2.1%（超過100美元警戒）｜布蘭特原油 110.78美元 -2.7%（超過100美元警戒）",
     "⚠ 全球市場風險｜油價觀察｜布蘭特原油價格：聯準會決策日霍塞拉斯塔努拉聲明後達115.59美元 – 看漲120美元，看跌108美元",
     "⚠ 全球市場風險｜油價觀察｜Middle East Peace Talks Ease Supply Concerns; Oil Prices Fall Nearly 2%",
+    "⚠ 全球市場風險｜無聊投資術3／台股大漲反而賣股票！　股海40年老手每年一動作守資產",
     "⚠ 全球市場風險｜期貨交易保證金衝破兆元！台股長多效應投資人鎖定股票商品操作| 股市要聞| 股市",
     "⚠ 全球市場風險｜Micron, SK Hynix, Google, Microsoft, Vertiv, Wendy's, Enphase, and More Stocks That Explain Tod",
     "⚠ 全球市場風險｜台股要出大事了？陳嘉偉警告反彈939點「是逃命的」 台積電季線下彎、空頭大屠殺剛開始",
-    "⚠ 全球市場風險｜瑞浦蘭鈞(00666.HK)H股全流通申請完成向中國證監會備案",
-    "⚠ 全球市場風險｜Hong Kong Stocks Rise on Tech Rally; Standard Chartered Jumps 8%",
-    "⚠ 全球市場風險｜The AI Boom Is Starting to Break Time-tested Stock-market Signals"
+    "⚠ 全球市場風險｜Semiconductor Manufacturing International Corporation (688981) Income Statement & Earnings",
+    "⚠ 全球市場風險｜瑞浦蘭鈞(00666.HK)H股全流通申請完成向中國證監會備案"
   ],
   "markets": {
     "US_SOX": {
@@ -45,13 +45,13 @@
     },
     "JP_NIKKEI": {
       "label": "日經225",
-      "price": 63954.19,
+      "price": 64555.49,
       "change_pct": 1.0
     },
     "KR_KOSPI": {
       "label": "KOSPI",
-      "price": 6012.44,
-      "change_pct": 10.0
+      "price": 6035.13,
+      "change_pct": 7.0
     },
     "TW_TAIEX": {
       "label": "台股加權",
@@ -70,16 +70,24 @@
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 101.94,
-      "change_pct": 2.0
+      "price": 102.04,
+      "change_pct": 2.2
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 110.44,
-      "change_pct": -3.0
+      "price": 110.78,
+      "change_pct": -2.8
     }
   },
   "active_news": [
+    {
+      "title": "無聊投資術3／台股大漲反而賣股票！　股海40年老手每年一動作守資產 - 鏡週刊Mirror Media",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5QOXhrcklfcEZUX2U4ZjJiX0lRdDNVV0ZaNlpxNlViZmxkN2dWczVSVkNvVzBIdHZXQ2Qwc1kwc2FNQklxRGlzRFFnUkFwWXEwUVZnOUk2U1hCaTlBelHSAWNBVV95cUxPemhjMENndXR2NFlBY0ZxcU44aTY0ZXNyX295WFZ6STg0aVVqNnEwQW02cXRnbWM5YWpUUzlCdWt5TUEwRGlDWUZ1ZWkwQkZ3dzNNRUctRWpmMWtyQllUamZ4Wk0?oc=5",
+      "source": "鏡週刊Mirror Media",
+      "published_at": "2026-10-29T07:30+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
     {
       "title": "期貨交易保證金衝破兆元！台股長多效應投資人鎖定股票商品操作| 股市要聞| 股市 - UDN",
       "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBQYlRiR09HRHdEYnBzZGxKaEhKUVZYdmNuN3dXRGh0TUV1Q0RfVHRURzExMGI5NEFFek5sVy1fMjVNb1gwNE8tbnZvVmxlY3lp?oc=5",
@@ -105,6 +113,14 @@
       "risk_score": 0
     },
     {
+      "title": "Semiconductor Manufacturing International Corporation (688981) Income Statement & Earnings - Moomoo",
+      "url": "https://news.google.com/rss/articles/CBMiwAJBVV95cUxQMGFPOU45Ni1MRVJsREh2WGozR2Z3czBYTmNJeURBb3Z4bHFLaENFc2hSUDR1MHl3aU9IUkNHTG0xYXljbkhvbkt0U0RCVEc4T3pXOWJ1TzI5c3Q4emJPUTZLVWxoWElOQU9FdHpkSGFDTGdJQkZYWk90V3VOTkR1SkxHTEl6MW1qTC1LQTRDbl82UGpPaGNOd1psV281UE43dmxXeFZERm5tT3NhSUhfT2J6OENQYnBPRkZPS1dva012N1FROWk2NEJMWmluQmtIbHZJZUpjTnhOYXRyYVlUenlKT3FuOFpVNWsxaE5nVlUtQ1g0UE5vN3FFWFUzRWxWMXdyc0JCWHhZNWltRE56dkFYNFAyVW1hZzl5M2NUVFk4YWNjQnhhMWdEdGQzRWhOOXpLMzlnYWczdDRWNFBpVA?oc=5",
+      "source": "Moomoo",
+      "published_at": "2026-10-28T23:03+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
       "title": "瑞浦蘭鈞(00666.HK)H股全流通申請完成向中國證監會備案 - TradingView",
       "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE83ZThkUC1BMjFOT0hwNFVHSFNtSlE5eHYwT2k1MW5VeG43NEo5YndFcDM3MWtqdHhzN0g5UmtScXFDTE91YjdoMThEVzVOOUFDZFFDNzlncUEzU0hycEVYczdDa3Q3TTVDT21B?oc=5",
       "source": "TradingView",
@@ -113,10 +129,10 @@
       "risk_score": 0
     },
     {
-      "title": "Hong Kong Stocks Rise on Tech Rally; Standard Chartered Jumps 8% - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOSDIxejZxeTFIdk84SHM0bHRNMzNtTnR5ZDdxZkFLdmNPdkRlcjgzVFk3ZDk3MVNSQmlodmFueUozX3NVUzhzem1fVGFEdFRQY2xrNklqSld5TnA2WFFQRjVscWxaSG83dG11dElST19PMXFjRmVkdVljV1M5MHM5bTZubWlDUkdUTkdEelFpNWx5OVZnUWxabnB5OUh4MWpoQ2l2cVZ3?oc=5",
+      "title": "CK Infrastructure Holdings Stock Advances 2.1% in Hong Kong - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQb1BaVThHTTdJTy1ncTJaWldtMlBQeTExQnJMcnJDcWFnM1BqVUJVNWIySDhmd1d4MHFmel9lcFpjYjFZN3oxcVpab2NEdmFsM3lZRGNhQTZlcGp3Z1lQcHlSU2ZIejdYZjFHUF9sUHF2MUNiMVlwUzBtc0pCM2Z3YkpveGdqNDdIWGZwekhLVnRsbjJiRE82ZjlOaG9rcjlfUHpn?oc=5",
       "source": "富途牛牛",
-      "published_at": "2026-10-28T19:31+08:00",
+      "published_at": "2026-10-28T21:59+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -159,22 +175,6 @@
       "published_at": "2026-10-28T17:15+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "台股大漲939點！ 網見三大法人買賣驚：散戶急惹 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiugJBVV95cUxNZHJRQ1NjeXJyOVN3c05lTEktSFplLTcxY3h5YkZBWDJqX0hfVWZJcFJ1RXBFUWctMGNVMzRWMVN6dDU4SGhTUGF0Y3FCQkxadXR1QjU5VTNoTEwzcktGakpXdXRQVmVIcVBlRFZWbFNyQ0pOX2pyNjQxVTZoQmFZTmtYTFc3eEpZa2s5UFBWdG0wUUNWUnNob00yM0FKWmYzY3BFR0ZVUGpKd21Uemc3Umt1ZzRtUElhZFg1cVFXQXM4dTVPQkc2am5pTXBNbUlQQlVwT1gyNDh1QXhlX2ViSkNfRndSbnFjcFJwUnFQbS1UWTFORlIzbWF2cHY5bU41YU9uSV9iRVhlLWE5a2VaaW5nb2YtbXJsbzBFWGpRVTd1QS15NmJYVWxyb0NQdmw4aHJzcHQydVBmUQ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-28T16:03+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股28日指數收復47000點關卡 金控股國泰金帶頭收漲1.32% - 理財周刊",
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5sSU04ekl5U3pQemY3TjF2UkY2S2pGZkF4MlFwNlV0bVhjeE5LakMwcV9iZ3k3NDdJcUNRa2J3SnY3SWlUVWdzZWttQ3dhSU9QN1lYWl9nM096MDQ3MWJsUHFGd2VkLV9Nb1BxcGxhSQ?oc=5",
-      "source": "理財周刊",
-      "published_at": "2026-10-28T15:26+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "oil_watch": [
@@ -192,6 +192,6 @@
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-29T05:16:15+08:00",
-  "checked_at": "2026-10-29T05:16:15+08:00"
+  "updated_at": "2026-10-29T08:59:07+08:00",
+  "checked_at": "2026-10-29T08:59:07+08:00"
 }
