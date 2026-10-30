@@ -3,45 +3,45 @@
   "risk_level": "red",
   "risk_score": 3,
   "risk_reasons": [
-    "原油超過100美元／桶：WTI原油 102.95美元／桶、布蘭特原油 112.44美元／桶"
+    "原油超過100美元／桶：WTI原油 102.95美元／桶、布蘭特原油 112.33美元／桶"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 -8.6%｜NASDAQ -4.2%｜日經225 -2.1%｜KOSPI -4.7%｜台股加權 -2.5%｜恆生 +0.9%",
-    "⚠ 全球市場風險｜美債10Y 4.93%｜VIX 20.5｜WTI原油 102.95美元 +0.9%（超過100美元警戒）｜布蘭特原油 112.44美元 -2.1%（超過100美元警戒）",
+    "⚠ 全球市場風險｜費半 -8.5%｜NASDAQ -4.2%｜日經225 -2.1%｜KOSPI -4.7%｜台股加權 -2.5%｜恆生 +0.9%",
+    "⚠ 全球市場風險｜美債10Y 4.93%｜VIX 19.4｜WTI原油 102.95美元 +0.9%（超過100美元警戒）｜布蘭特原油 112.33美元 -2.2%（超過100美元警戒）",
+    "⚠ 全球市場風險｜Top 20 by trading volume | Intel plunged 28% after earnings, marking its largest single-day dro",
+    "⚠ 全球市場風險｜美股大跌！費半重挫7.2% 輝達、台積電ADR下殺",
     "⚠ 全球市場風險｜Targeting the Global \"Right-Hand Drive\" Market: Waymo and Toyota Announce Level 4 Autonomous Fl",
     "⚠ 全球市場風險｜The wave of selling in tech stocks does not signal the end of the bull market. Wall Street stra",
     "⚠ 全球市場風險｜China Mengniu Dairy Stock Rallies 9.4% in Hong Kong",
     "⚠ 全球市場風險｜拓璞數控(07688.HK)向中國證監會提交H股全流通備案申請",
-    "⚠ 全球市場風險｜Hong Kong Market Quick Look | All three major indices declined, with the tech index down 2.84%;",
-    "⚠ 全球市場風險｜半年線也破了！股民崩潰問「台股到底在跌什麼」 網反喊：還沒上車快上車",
-    "⚠ 全球市場風險｜台股何時落底？40年投資名師揭「4大買進訊號」：先拿10％資金試水溫",
-    "⚠ 全球市場風險｜Hong Kong Market Snapshot | All three major indices rose, with the tech index up 1.40%; memory,"
+    "⚠ 全球市場風險｜Taiwan Semiconductor (TSM) Stock Forecast & Analyst Ratings",
+    "⚠ 全球市場風險｜Hong Kong Market Quick Look | All three major indices declined, with the tech index down 2.84%;"
   ],
   "markets": {
     "US_SOX": {
       "label": "費半",
-      "price": 10683.971,
+      "price": 10688.8,
       "change_pct": -8.6
     },
     "US_NASDAQ": {
       "label": "NASDAQ",
-      "price": 25444.348,
+      "price": 25436.998,
       "change_pct": -4.2
     },
     "US_SP500": {
       "label": "S&P500",
-      "price": 7581.38,
-      "change_pct": -2.0
+      "price": 7580.07,
+      "change_pct": -2.2
     },
     "US_DOW": {
       "label": "道瓊",
-      "price": 51766.3,
+      "price": 51770.31,
       "change_pct": -1.4
     },
     "VIX": {
       "label": "VIX",
-      "price": 20.54,
-      "change_pct": 19.4
+      "price": 19.42,
+      "change_pct": 13.0
     },
     "JP_NIKKEI": {
       "label": "日經225",
@@ -75,11 +75,27 @@
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 112.44,
+      "price": 112.33,
       "change_pct": -2.2
     }
   },
   "active_news": [
+    {
+      "title": "Top 20 by trading volume | Intel plunged 28% after earnings, marking its largest single-day drop on record; Eli Lilly and Co. rose more than 3%, hitting a new high; Apple's market cap once again surpassed NVIDIA to top the global rankings; S&P downgraded - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOSkR1Yl94a3hyWlpSOWxKU2VzVzV2Z0lnWE9pZzJPODl3enZwWWNsQUM3STNvVzIxM05zaFhqNExhd1lDU0szd3ZkOVBYd29LdUN1TGZWMEhWaDJZYWlac1dMWWJBTDRYdTEzQ1lKTFowRUlsdFdJUW5xVWZfVFo1TVk2MWFRWWlhMk5tYk51TW5UTmpBTktzOWxMSTlicEFC?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-31T05:55+08:00",
+      "importance": 4,
+      "risk_score": 2
+    },
+    {
+      "title": "美股大跌！費半重挫7.2% 輝達、台積電ADR下殺 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMimwJBVV95cUxQYXd4TzlGdkI0M2VBdHMyREl5Q1o3ckg1WlZIMDZKODZGM3hsaFNkd1pZSnk0Y0xvYnBoUk5pR0dJUUl6WHdOZkZNbXV6RFNJekhqUzVDSTRrNU1RN0MxOHNLclNKbmpSSWtBZzFsTnk3QzBXNUpiejNtM2dYWEVRV1JyZm1ZZ1BJRGdJVHUydkM1M3NZVkpQNllRYTY3M0ptZi1yejZkenRkYkJKYl91SGRBWUpJZFhhSy1jY1lwNTVsZDZYdS1jY3R6NUZvS19kTFdlNHBxQy1iUUtwTXkzZmxRaHFiT0xNbTBqOGZqNXRxekRjMHRkQktJNE9tbHlSSS1hTURoUW55UVVaRUtmOGtya0Y1QTBYU3Nn?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-31T06:05+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
     {
       "title": "Targeting the Global \"Right-Hand Drive\" Market: Waymo and Toyota Announce Level 4 Autonomous Fleet Testing in Japan for 2027 - Mashdigi",
       "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5yTDJ4eEhXUEktamQ3eGl2QVZlUVpMeW5iVDkwM1REWkM2bUtDeHgzRnNZVlAtZ1BwX1ZwTFVqOFRUR21MRjVNb0s1MDdqSXNPV1l4b1hMaVNSUjdvMTNtOFdSS2dDS1h6MVd5NnVmTXRWZG9B?oc=5",
@@ -109,6 +125,14 @@
       "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1YU3B0bXRlQUcxLWtYR1BZcVd4bW9qM0RWSUlKOUpJU2lBalRkYTMzQVY4NlpJWDVNdzZJVDRka2EwVEZoZkNKcFZ0N2xsOFY4RmtMSEdXVUl3Q1VLcUcyei16bjRVLU9vbGFN?oc=5",
       "source": "TradingView",
       "published_at": "2026-10-30T22:18+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Taiwan Semiconductor (TSM) Stock Forecast & Analyst Ratings - Moomoo",
+      "url": "https://news.google.com/rss/articles/CBMitgJBVV95cUxPV3NCMmhla1FLN0kyWWpyNHQ1aHczSWhvMVhPSEpHUllVRjA0RWdvSnB2NmQ2V211Tl8zdjlYcmdxNDJhRWRfQUlNSnd5RG5EY1lzZjNVb3hlTXg3NFdkVnFnVWtYcVhHQXc2TzNaUzBrLTNVUE50WkRrYm84NkVwZm1ObGkwaElYXzhjc29ydFFGd1RZajd4bHNUYWEyR1dsOXlNYXNkQTRWald0MTNXM29JQmQ3aHpKYUdRS2FVVXNrYkFGWlRWVkVSQjctTklZMkR3cC1zWkM3d08tMmZHelR1V2gzRjE4anlJV0gxSm1LUVpCMzhJblZtVENjeWZNQndjc041b2cwY3BvREZ0eUpkZXhidk1SbFgwRHdlRjFTMGwweEZSbEFLdVBwOTNUVnhicTNB?oc=5",
+      "source": "Moomoo",
+      "published_at": "2026-10-30T22:17+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -151,34 +175,10 @@
       "published_at": "2026-10-30T18:02+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "Southbound Capital Flows | Southbound capital recorded net sales of HK$3.56 billion; tech and internet stocks were sold off again, with Alibaba (09988) reduced by approximately HK$650 million throughout the day - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNMDEyamZYcGhLOGNrR3F3aHBQY2dhaEcxRXBtc3c0blI3VFVYaGRLTHA5RVVLd0ZnaS1BRjc4MVd0a1ZvNUdqMTVuclVvamx5MGN5MWVvVHl5cTlmNWNRYjJZV2pZZXFka1VyUS1UcnZhU1hQamo0ZXpTTlVrOTM2NXlNSmUtc21jQnlpSVlrd05CWmtvNjVpeDNLUjVJTDFEdWp2SjhTY1p1OGNNNS1ucA?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-30T17:51+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "史上最慘10月！台股單月狂殺2729點 分析師：市場情緒轉正需要時間 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiqANBVV95cUxORnhWNE5tZGY2WkVWRWNmTndxSVZscWZxVkd6TFhIZk1QV2VDbkhrV1A5NTlyakxqb3NiRHFYNnJGRXRxekY3dGRQUzB4bzQza3M4LUV1dGVXTXdUQUtpQ2p5UG0tNi1JTkxrUGpsRGM0UktQaE1DYmN0LS1xWTI1Yi1xb0F2RUEySkMxREtNVE5BTG0wZDlKend3eWZ1dkFhcjlZVlV0MzZqeGswLXhMMnpPdEhMaDhlM19TYWFDLWdsMnNOWTdNWU40RjlUMm5zWlNobkpGYmczU2hnQjhmYnlhbGVoZ1hxSkgyYXRIQUJDWkIwUlIwTkdiaGZ0NmhnM0VmWmFGamFwSExyVEViajlOYWxsNkFwMV9SWW5DLWZ2ckEyR0JlQ1FEQVItNGFncGJsd3JkTDBMRUJ4dUU2SHdSN3ZKZENiR09NNUlCXzJRdGtRUi1IYm1DOXF4OHBKMWpfNU1NSlU2YXZSR2stTlRGbmwxUkEtMDJseFV3Q0FpYTVVTkM4WjlwbVlWcmJYRmxjcDlmc1E1cmNpTTB0alplX1VSUzJN?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-30T17:34+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "中國宏橋(01378.HK)10月30日耗資2.57億港元回購1271.95萬股 - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5EazcxVUQ3Qm9vODNScFp2ZDlRb0g2aTB2Z2pHSXd4WHFMem1FX05TWllsQkpoaThXRkVaVUhQVnprVDZsNDkwSk5SUy1BQXZPOHg5RzhUM0huS0s4UGYyWFZJMFFWckZtNGVF?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-10-30T17:29+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "oil_watch": [],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-31T03:58:37+08:00",
-  "checked_at": "2026-10-31T03:58:37+08:00"
+  "updated_at": "2026-10-31T07:27:08+08:00",
+  "checked_at": "2026-10-31T07:27:08+08:00"
 }
