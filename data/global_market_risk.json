@@ -3,45 +3,45 @@
   "risk_level": "red",
   "risk_score": 3,
   "risk_reasons": [
-    "原油超過100美元／桶：WTI原油 104.26美元／桶、布蘭特原油 113.74美元／桶"
+    "原油超過100美元／桶：WTI原油 102.95美元／桶、布蘭特原油 112.44美元／桶"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 -8.2%｜NASDAQ -3.7%｜日經225 -2.1%｜KOSPI -4.7%｜台股加權 -2.5%｜恆生 +0.9%",
-    "⚠ 全球市場風險｜美債10Y 4.95%｜VIX 19.3｜WTI原油 104.26美元 +2.2%（超過100美元警戒）｜布蘭特原油 113.74美元 -1.0%（超過100美元警戒）",
+    "⚠ 全球市場風險｜費半 -8.6%｜NASDAQ -4.2%｜日經225 -2.1%｜KOSPI -4.7%｜台股加權 -2.5%｜恆生 +0.9%",
+    "⚠ 全球市場風險｜美債10Y 4.93%｜VIX 20.5｜WTI原油 102.95美元 +0.9%（超過100美元警戒）｜布蘭特原油 112.44美元 -2.1%（超過100美元警戒）",
+    "⚠ 全球市場風險｜Targeting the Global \"Right-Hand Drive\" Market: Waymo and Toyota Announce Level 4 Autonomous Fl",
+    "⚠ 全球市場風險｜The wave of selling in tech stocks does not signal the end of the bull market. Wall Street stra",
+    "⚠ 全球市場風險｜China Mengniu Dairy Stock Rallies 9.4% in Hong Kong",
+    "⚠ 全球市場風險｜拓璞數控(07688.HK)向中國證監會提交H股全流通備案申請",
     "⚠ 全球市場風險｜Hong Kong Market Quick Look | All three major indices declined, with the tech index down 2.84%;",
-    "⚠ 全球市場風險｜個股概覽 | 個股 - 股市",
     "⚠ 全球市場風險｜半年線也破了！股民崩潰問「台股到底在跌什麼」 網反喊：還沒上車快上車",
-    "⚠ 全球市場風險｜Hong Kong Market Snapshot | All three major indices rose, with the tech index up 1.40%; memory,",
-    "⚠ 全球市場風險｜台股暴跌兇手？ 外資放空超標 金管會最新回應出爐",
-    "⚠ 全球市場風險｜中國旺旺(00151.HK)10月30日註銷合計4376.3萬股購回股份",
-    "⚠ 全球市場風險｜台股重挫他放空！ 慘賠踢鐵板求救 老手笑：傻了才空「這類股」",
-    "⚠ 全球市場風險｜史上最慘10月！台股單月狂殺2729點 分析師：市場情緒轉正需要時間"
+    "⚠ 全球市場風險｜台股何時落底？40年投資名師揭「4大買進訊號」：先拿10％資金試水溫",
+    "⚠ 全球市場風險｜Hong Kong Market Snapshot | All three major indices rose, with the tech index up 1.40%; memory,"
   ],
   "markets": {
     "US_SOX": {
       "label": "費半",
-      "price": 10728.207,
-      "change_pct": -8.2
+      "price": 10683.971,
+      "change_pct": -8.6
     },
     "US_NASDAQ": {
       "label": "NASDAQ",
-      "price": 25578.75,
-      "change_pct": -3.6
+      "price": 25444.348,
+      "change_pct": -4.2
     },
     "US_SP500": {
       "label": "S&P500",
-      "price": 7608.67,
-      "change_pct": -1.8
+      "price": 7581.38,
+      "change_pct": -2.0
     },
     "US_DOW": {
       "label": "道瓊",
-      "price": 52021.71,
-      "change_pct": -0.8
+      "price": 51766.3,
+      "change_pct": -1.4
     },
     "VIX": {
       "label": "VIX",
-      "price": 19.33,
-      "change_pct": 12.4
+      "price": 20.54,
+      "change_pct": 19.4
     },
     "JP_NIKKEI": {
       "label": "日經225",
@@ -65,21 +65,53 @@
     },
     "US10Y": {
       "label": "美債10年殖利率",
-      "price": 4.947,
-      "change_pct": -0.8
+      "price": 4.929,
+      "change_pct": -1.2
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 104.26,
-      "change_pct": 2.2
+      "price": 102.95,
+      "change_pct": 1.0
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 113.74,
-      "change_pct": -1.0
+      "price": 112.44,
+      "change_pct": -2.2
     }
   },
   "active_news": [
+    {
+      "title": "Targeting the Global \"Right-Hand Drive\" Market: Waymo and Toyota Announce Level 4 Autonomous Fleet Testing in Japan for 2027 - Mashdigi",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5yTDJ4eEhXUEktamQ3eGl2QVZlUVpMeW5iVDkwM1REWkM2bUtDeHgzRnNZVlAtZ1BwX1ZwTFVqOFRUR21MRjVNb0s1MDdqSXNPV1l4b1hMaVNSUjdvMTNtOFdSS2dDS1h6MVd5NnVmTXRWZG9B?oc=5",
+      "source": "Mashdigi",
+      "published_at": "2026-10-31T01:59+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "The wave of selling in tech stocks does not signal the end of the bull market. Wall Street strategists note that fundamentals remain robust, and the correction may present a favorable buying opportunity. - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQRFFyU3RySWJSNGM4cmF5T3Vnb3NNV1JuSENKdm9EZVY0VWxiUGtPQWR6cEg4VnQ1bzRfWnRQdDdJcmVjN1FRd2tlYXpwRVQwdGxNLXFrbVhTM0J4MjZtTE5YWklUVUpRcDh4ZkUtVTk1MTVwT1hFUE9WOVctdlhFYzlhTWZLSUJDbmRXSnlVQ3ZfS0VfWEV2QQ?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-31T00:21+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "China Mengniu Dairy Stock Rallies 9.4% in Hong Kong - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQQTY0UmZVSEJHMUxEdXFrV21kdEg1S1hfNzZBc1FzMFM3NGltb2JhbnFGcHVWSFZkSE94XzlOZFpRd3FLREs4X1FLRjNXTE1JdGpLMHVFZ1JNNERkc0QxZ3hiZkJXSmpZUm1yNFlaNkx5OW84eHVreEdldno1emp2VkkxSE42TTNfSk1yc2JXcEk2eGl0XzhuYw?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-30T22:54+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "拓璞數控(07688.HK)向中國證監會提交H股全流通備案申請 - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1YU3B0bXRlQUcxLWtYR1BZcVd4bW9qM0RWSUlKOUpJU2lBalRkYTMzQVY4NlpJWDVNdzZJVDRka2EwVEZoZkNKcFZ0N2xsOFY4RmtMSEdXVUl3Q1VLcUcyei16bjRVLU9vbGFN?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-10-30T22:18+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
     {
       "title": "Hong Kong Market Quick Look | All three major indices declined, with the tech index down 2.84%; tech stocks fell, as Kuaishou dropped more than 3% and Alibaba and Meituan both slipped nearly 3%; semiconductor shares also slid, with HuaHong Hongli do - 富途牛牛",
       "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPM1RwejVuZm5WS2tHal9rQmQ3OGpwaVJOOFI2SHlUMjdreXBLcGtlWEVNSGNKdnlFeDdMUXI2cjR2XzREeUZZcWhEc1laY3l3QVduTlBxeXNlRkxaRm1hZzFJenM5clVxLXhZbzVSYTM4allBdWVCSERUMzJtWXhtV2twZzV6QTFuaGc1SFpuOHNWYzVKTmk3akFneVRIQTNqY29yZFlB?oc=5",
@@ -89,18 +121,18 @@
       "risk_score": 0
     },
     {
-      "title": "個股概覽 | 個股 - 股市 - CMoney",
-      "url": "https://news.google.com/rss/articles/CBMiREFVX3lxTFBfVGtPUmhQeF9nalNLNm9zTGJWQlREWTlFa2dVeEhkNElpN1d0OXlyaFF3U3NaYnBodklvejVEU1YtdkNl?oc=5",
-      "source": "CMoney",
-      "published_at": "2026-10-30T19:10+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
       "title": "半年線也破了！股民崩潰問「台股到底在跌什麼」 網反喊：還沒上車快上車 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMivANBVV95cUxOUUh2T0Uwcl9hSjlfdlBObjBLYnZ0M3Bkc3ZQSjlxLUVEWndkMjZjSU9HRlFZdnJNSjV6WklGRXVHNjlPXzk2SHh5UHc0WV9lMTBQdXFUWTJkLVVfNHpLdTNablh5dVhWVk05eUl3bWZCQmJyLVlJWjdlSXBTZnN1Vng3REdFNnJOM2V0ZmM2UE1jV04tb3U1YUZnSWJ5SThNZy1WSnFqVkFhUFF1czg1M3hPVmNVNFlaTjAzcUUtVE1VaE02M25JeTJaTl9OUVFyV1hSZXV2Sk9Xdkx4TE51R01VWUhJbldsMHNqOFlLT2RaYmpFSUZNd3JQVFVsVTBfMXRYZ1JmUWhFQ2FOSkZpX2VUdTRkTUdVRkxNVGRoQWFWVHUxSURHNFIxT3B0MEo1SVpUTThiVUE1NUMzTmNfQXJLUHdvY3o2Y29FWGQyWlBWVmNVbDlic3lvdTZUNTdvOVJ2VVJDZnJwOUlNV1BuaURuZDBBbWJBRDhJVnNHei1hd2UxZHF0eUdtQS13cTRoX0JFU25HUTNkOE9lT0ZyUDk0RURXVjN3QUZ2Qmx4VW9VWmYyOVpuaGRVbG4?oc=5",
       "source": "Yahoo股市",
       "published_at": "2026-10-30T18:45+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股何時落底？40年投資名師揭「4大買進訊號」：先拿10％資金試水溫 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMihwNBVV95cUxOSWt2THZrSnR4WC1fenk2NVdTZVpKbEtHb1RCd3Z6QzFrWFBiTTllT3pSZlluOUVPZmxweFVCNFd6ZWhzUzBLU1lUY21yNTNjMlAtaW9LNmowV091VWplZE85MUFtRGxDWERYRng4VHI0NDh4R05CTW9iNUtLY0JZRFIxZEJKdU9zNFpZYUFPVTlJN19nSThqLW5mUnZfb3k1Rl90RHMwbEJ3U3hLNzI3cmw1NFlrQUw0aDlTVHZOUExPU3RtaTcxTTZqZWItaGVQQVpZODBZaUxDZ2RlREJMbW5iZWZLRW8tZ3B1aGZLRmd2cTVpazhLakFNcVRWTEZUVzljLXUxX1lRUGxGZUVsTjkydlBYbjNYMmlxOWpNanFrd3k3aGVBTUx5eXJBdEJVRUNnLV9wbV9aVG4xVll0WUhMLU9UYTZKYTVpb3ZyWTRtemdyX3hxcGtCNy1Ddkh5WVl5YzNpZVlRLVNRMFRWSkh0M2RfUnEtS1hMT3ZPVjdyNE5OTW1N?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-30T18:15+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -121,18 +153,10 @@
       "risk_score": 0
     },
     {
-      "title": "中國旺旺(00151.HK)10月30日註銷合計4376.3萬股購回股份 - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9PVkhEeGxPakl0QUUyNVZwUWZoQkJxdGgtT0g5VmdXamVGemI2Q283bzlBNWN6d1VPUXBtbXR5VGV4Qk5VOGR4M21VYUpnR0l6MzB2azBrTnJ1YmVPNHhaNlF2djhabUVvc1VZ?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-10-30T17:40+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股重挫他放空！ 慘賠踢鐵板求救 老手笑：傻了才空「這類股」 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMigANBVV95cUxOSi1QNHIzc2FNdDd3TV96dU41MUJTUUE0TjhCTVl5Mmo4XzV2QTlNUXNmS0RiSXpNWklfcFFjc0V2czhERGgzZG5IcE00TTRWQXBGOUxlXzBuTWhLXzBaaXhYdjMwNlhuZHZ4eEU0Q290bl96SzVQWF9Fb3RjNWxYZUVxUjlIZWZTRkhhdFV1UDZxaVVTb1V5QU1lczVRb3M1OVlHX0RLZDdKVURFbGZhc0xGbXFJUWlJMFFiZ0NXUlFZb1ZFU1pWbVhjWE4taHpzYi0wbExfTnc0QWhTd0xSb2JaajVQdWtqRWRlLXlqRWhYQWJiMlctLUFfZzFvVklYTFJuTkZTcHhkSUd1aVloSlF6aFQtYzZmZHplUXZaWVoyVzNuWDFDMW1GTzViY2lBMDRwSmZvVy1oMnRYV3ktUkJzWThZa1VPQmRzT0JfOU90RHdtWGJqYmtVcFFwaEc1OXhZSFZ0TlVRZ1ZIenNGRVlmQXRsXzZXRGFzeDQwbGQ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-30T17:35+08:00",
+      "title": "Southbound Capital Flows | Southbound capital recorded net sales of HK$3.56 billion; tech and internet stocks were sold off again, with Alibaba (09988) reduced by approximately HK$650 million throughout the day - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNMDEyamZYcGhLOGNrR3F3aHBQY2dhaEcxRXBtc3c0blI3VFVYaGRLTHA5RVVLd0ZnaS1BRjc4MVd0a1ZvNUdqMTVuclVvamx5MGN5MWVvVHl5cTlmNWNRYjJZV2pZZXFka1VyUS1UcnZhU1hQamo0ZXpTTlVrOTM2NXlNSmUtc21jQnlpSVlrd05CWmtvNjVpeDNLUjVJTDFEdWp2SjhTY1p1OGNNNS1ucA?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-30T17:51+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -145,40 +169,16 @@
       "risk_score": 0
     },
     {
-      "title": "台股悲情10月！股民財富平均每人蒸發60萬元 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiuAJBVV95cUxQYlhWblFjMXFzN0Z0OVBIcUQ0dHJKWHhFSWk5cTdVS202NGZoM2NzYUlKb3o4Sk0wUXc1aS1tSlhtX295LWQ3b1otV2FnbUFFcUQydkFubTRtYk4zd25KX1dORGY4UnllYnNnMW1Ob3lSUWhYRkU3VUo4enpjaF9fU1dTWDd2VC1Bekw3c2cyZXpUUEtpMXByQ0g5S0hsQnd4aXUxTzludEUxX21McHJrRE9iZk4wZnFMai1ib3lHQUFRUXY5TFBfb0p0RXhYa2k4WldDTUFPRS1Canl2S2N1TVI2TUVCOGwwLUgwOUl1LTNUZ1otb1J0X3VnQ2stb0Z2VTlWbGpHLUhkcjkzX0lWazlodTVKNTVZcG5NQnFWQUVBWWN1ZlNJNlhEbnEtOEV4dHZQTThsNVg?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-30T17:21+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Hong Kong Market Quick Look | All three major indices rose, with the Hang Seng Index up 1.46%; many tech stocks advanced, with Meituan and Xiaomi gaining over 3%; new consumption and oil stocks also climbed, with Mao Geping surging nearly 14%, Mix - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQbDl2R0toZXJ5UUpJRG5GSjl3aVNYTjF1WDJNX3ZUOFRtYlc2YUFwSExNdHJOdzhwRGxEeXlYdDV4d0xKdnhFRWhiY1Fmd25XWFRRNFJYT0F6V1ptYUNERURxZUljb19EOW5UNlp5aDZKbDRIRXllWXZOVkJSVE5CRmVNUEZYaGhPb2RHNWt4WHVYdVBIUmhVV2MyMXpHN29j?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-30T16:22+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股兩天狂瀉1,824點、外資狠砍1,813億！台達電爆冷跌停 - 理財周刊",
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE52dHZtZkxuRjFDQjVRUE02MXdsWGFfM1VXQUw2Tzk5dmkzLW90bThicHB6NjlUNllVMlJkblNpWXg1NjhZWlRwWlROU3pvcjQyRkhFMGF6aEx3M09Zd1N5Z0Q1WjU1VG9ERHpsbnNQbw?oc=5",
-      "source": "理財周刊",
-      "published_at": "2026-10-30T15:53+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股血洗千點失守4.6萬點！10檔ETF慘淪提款機 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMipwJBVV95cUxOaThzMDBfcWJnWmJwY1U1b1dVUGlOV0JBY0JWR3VkVUpNQ25ibkxNV1VaNHNZWmpVaml5clFGVThESkFITUpLNWNwa01FbjhWN2I1M1FDN0RlMU5OZlV0VkJxQ05MU3JtVlhpTXgtUjRwSEZaTlZHdXQxS2xZdUtjUlduWHNXanMxc3IxeEc1c3NwY0g3Wm5pdFE2SXpwQ1dpLUwtaGNRX0U5ZlVLekxJb1g0QXJ1enliTWxkMWxJcTJPbHdIR2tlZW04LXFLUlVURkRacExmM1AyTUFsZ2lkZ010cTNNYTJzaUlvbGEtUXJwMmRVRWFzczlUNzJSZ2ZMZFNCRC1UN2ZETE5XcTNhVGU2bHNuZUFZSUttRGFIWGlWaC1iZ29z?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-30T15:31+08:00",
+      "title": "中國宏橋(01378.HK)10月30日耗資2.57億港元回購1271.95萬股 - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5EazcxVUQ3Qm9vODNScFp2ZDlRb0g2aTB2Z2pHSXd4WHFMem1FX05TWllsQkpoaThXRkVaVUhQVnprVDZsNDkwSk5SUy1BQXZPOHg5RzhUM0huS0s4UGYyWFZJMFFWckZtNGVF?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-10-30T17:29+08:00",
       "importance": 2,
       "risk_score": 0
     }
   ],
   "oil_watch": [],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-30T23:27:07+08:00",
-  "checked_at": "2026-10-30T23:27:07+08:00"
+  "updated_at": "2026-10-31T03:58:37+08:00",
+  "checked_at": "2026-10-31T03:58:37+08:00"
 }
