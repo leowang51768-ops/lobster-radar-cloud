@@ -1,6 +1,6 @@
 # 分點追蹤稽核｜2026-10-30
 
-資料日期：**2026-10-30**。報告產生時間：2026-10-31T02:14:10+08:00（台灣時間）。請先核對資料日期；舊日期的報告不代表今天採集成功。
+資料日期：**2026-10-30**。報告產生時間：2026-10-31T02:45:42+08:00（台灣時間）。請先核對資料日期；舊日期的報告不代表今天採集成功。
 
 ## 今天是否收齊
 
@@ -9,10 +9,10 @@
 | 當日排行股票 | 251／253檔 |
 | 當日排行筆數 | 7,514筆 |
 | 完整採集交易日 | 0 |
-| 歷史明細累積 | 447,569筆 |
-| 曾成功補抓的股票／分點組合 | 7464／7956組；其餘仍待補抓 |
-| 仍留有補抓錯誤的組合 | 50 |
-| 資料庫容量 | 80.69 MiB |
+| 歷史明細累積 | 454,769筆 |
+| 曾成功補抓的股票／分點組合 | 7584／7956組；其餘仍待補抓 |
+| 仍留有補抓錯誤的組合 | 40 |
+| 資料庫容量 | 81.54 MiB |
 
 排行完整不等於歷史完整；只取得買超／賣超各前15名，未上榜不代表沒有交易。歷史回填不能算成當時已知訊號。
 
@@ -60,18 +60,18 @@
 
 | 股票 | 分點 | 最後嘗試日期 | 錯誤 |
 | --- | --- | --- | --- |
-| 6269 | (牛牛牛)亞-鑫豐 | 2026-10-27 | History date or numeric mismatch |
-| 6282 | 永豐金-匯立 | 2026-10-27 | History date or numeric mismatch |
-| 6290 | 台新-敦南 | 2026-10-27 | History date or numeric mismatch |
-| 6414 | 國票證券 | 2026-10-27 | History date or numeric mismatch |
-| 6426 | 國票-安和 | 2026-10-27 | History date or numeric mismatch |
-| 6442 | 港商野村 | 2026-10-27 | History date or numeric mismatch |
-| 6446 | 元大-敦南 | 2026-10-27 | History date or numeric mismatch |
-| 6446 | 港商野村 | 2026-10-27 | History date or numeric mismatch |
-| 6446 | 中國信託 | 2026-10-27 | History date or numeric mismatch |
-| 6446 | 香港上海匯豐 | 2026-10-27 | History date or numeric mismatch |
+| 6485 | 台新 | 2026-10-27 | History date or numeric mismatch |
+| 6488 | 國泰證券 | 2026-10-27 | History date or numeric mismatch |
+| 6505 | 新加坡商瑞銀 | 2026-10-27 | History date or numeric mismatch |
+| 6505 | 康和 | 2026-10-27 | History date or numeric mismatch |
+| 6505 | 國泰證券 | 2026-10-27 | History date or numeric mismatch |
+| 6505 | 凱基 | 2026-10-27 | History date or numeric mismatch |
+| 6530 | 永豐金-員林 | 2026-10-27 | History date or numeric mismatch |
+| 6530 | 台新 | 2026-10-27 | History date or numeric mismatch |
+| 6533 | 康和-南崁 | 2026-10-27 | History date or numeric mismatch |
+| 6533 | 華南永昌 | 2026-10-27 | History date or numeric mismatch |
 
-共50組保留錯誤，上表最多顯示10組。錯誤可能是先前嘗試留下的，修正後尚待輪到重抓；不得當成零交易。
+共40組保留錯誤，上表最多顯示10組。錯誤可能是先前嘗試留下的，修正後尚待輪到重抓；不得當成零交易。
 
 ## 163檔逐檔稽核
 
