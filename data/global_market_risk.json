@@ -3,19 +3,19 @@
   "risk_level": "red",
   "risk_score": 3,
   "risk_reasons": [
-    "原油超過100美元／桶：WTI原油 103.81美元／桶、布蘭特原油 112.68美元／桶"
+    "原油超過100美元／桶：WTI原油 103.72美元／桶、布蘭特原油 112.91美元／桶"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 +0.3%｜NASDAQ -1.1%｜日經225 -2.7%｜KOSPI -6.5%｜台股加權 -3.2%｜恆生 +0.5%",
-    "⚠ 全球市場風險｜美債10Y 4.99%｜VIX 17.2｜WTI原油 103.81美元 +1.0%（超過100美元警戒）｜布蘭特原油 112.68美元 -2.3%（超過100美元警戒）",
-    "⚠ 全球市場風險｜油價觀察｜布蘭特原油價格：114.20美元 萬斯致伊朗信函遇GDP與PCE數據日 – 看漲120美元 看跌108美元",
-    "⚠ 全球市場風險｜夜盤重挫成前兆！台股早盤狂瀉1400點 跌破4萬5大關",
-    "⚠ 全球市場風險｜台股跌逾1600點史上盤中第11大！5兆元市值秒蒸發 等同少掉一家鴻海",
-    "⚠ 全球市場風險｜【Yahoo早盤】台股崩跌逾1600點摜破半年線 投顧董座呂仁傑：分批「彎腰撿鑽石」",
-    "⚠ 全球市場風險｜台股狂殺1500點「摜破半年線」！台達電跌停亮燈、台積電重摔50元 聯發科法說前挫半根",
-    "⚠ 全球市場風險｜台積電挫55元刷「2個月盤中最低」！10月買在高點 一張蒸發23萬元",
-    "⚠ 全球市場風險｜台股再跌667點！國家隊砸7.5億元搶進0050 再狂掃「瑤池金母」與00406A破7.2萬張",
-    "⚠ 全球市場風險｜聯電法說會後摜跌停！蔡明翰揭2大利空：不如買台積電"
+    "⚠ 全球市場風險｜費半 +0.3%｜NASDAQ -1.1%｜日經225 -2.1%｜KOSPI -4.7%｜台股加權 -2.5%｜恆生 +0.9%",
+    "⚠ 全球市場風險｜美債10Y 4.99%｜VIX 18.3｜WTI原油 103.72美元 +1.7%（超過100美元警戒）｜布蘭特原油 112.91美元 -1.7%（超過100美元警戒）",
+    "⚠ 全球市場風險｜FWD Hong Kong crowned most-awarded insurer at the Hong Kong Insurance Awards 2026, leading the ",
+    "⚠ 全球市場風險｜Hesai Leads Global Robotaxi Lidar Market with 62% Share as Robotaxi Industry Moves Toward Scale",
+    "⚠ 全球市場風險｜台股大跌逾千點，股票該賣還是撿便宜？關鍵5步驟自救法搶先看！",
+    "⚠ 全球市場風險｜Hong Kong Stocks in Focus | Food stocks surged across the board, as the wave of price hikes in ",
+    "⚠ 全球市場風險｜China Energy Engineering New Contracts Plunge 33.29% to RMB662.3 Billion",
+    "⚠ 全球市場風險｜台股盤中血流成河大跌1600點！終場驚險守住4萬5大關、下跌1156點",
+    "⚠ 全球市場風險｜台股跌比7月還猛！反指標女神驚曝「單都沒了」",
+    "⚠ 全球市場風險｜史上最慘10月！台股單月狂殺2747點 分析師：市場情緒轉正需要時間"
   ],
   "markets": {
     "US_SOX": {
@@ -40,28 +40,28 @@
     },
     "VIX": {
       "label": "VIX",
-      "price": 17.2,
-      "change_pct": 1.8
+      "price": 18.34,
+      "change_pct": 6.6
     },
     "JP_NIKKEI": {
       "label": "日經225",
-      "price": 62916.76,
-      "change_pct": -2.8
+      "price": 63290.11,
+      "change_pct": -2.2
     },
     "KR_KOSPI": {
       "label": "KOSPI",
-      "price": 5622.99,
-      "change_pct": -6.4
+      "price": 5730.74,
+      "change_pct": -4.6
     },
     "TW_TAIEX": {
       "label": "台股加權",
-      "price": 44875.96,
-      "change_pct": -3.2
+      "price": 45211.83,
+      "change_pct": -2.4
     },
     "HK_HSI": {
       "label": "恆生",
-      "price": 23217.43,
-      "change_pct": 0.6
+      "price": 23294.42,
+      "change_pct": 0.8
     },
     "US10Y": {
       "label": "美債10年殖利率",
@@ -70,122 +70,115 @@
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 103.81,
-      "change_pct": 1.0
+      "price": 103.72,
+      "change_pct": 1.6
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 112.68,
-      "change_pct": -2.2
+      "price": 112.91,
+      "change_pct": -1.8
     }
   },
   "active_news": [
     {
-      "title": "夜盤重挫成前兆！台股早盤狂瀉1400點 跌破4萬5大關 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiygJBVV95cUxQUTdtemxGd0RBS29QcWM0RzJkWXBDa0tMQTV1VHlENFA5dnctUkNhWW5JMUpKMnltQXRHNmJCTDluQ3pYVUUxMVFMaXNGamlLdnBnU00zQ1F1dUpoVWFyYkZtZmZ6QWhoTkl2V3Z1ZXNxalNBQ09KcWE3MzhLNDFOUWxPRkthV0JKQWZ1Nk5XTXNsYnpEcGdJQ2FaeS1zbFNZeFBnb2xtWjU1bWt2X1M5WF9pUXM5Z3RqTzZZVkR4TGE4eW45dkdCZkVFZUtBbFBibVpkZ3RTZW9RN0ZMMzRaU25McXFyQ1hpbXIxVkpDazlOWDlyQzc0dDNraFFmWVc3WEwydHlodWRxQTh1YmNWZGtKclFSWnlVc1hVY0txcENydllsaGxzb3RuQ1JkNkdneS0yQjR0YTZ3YzYybXl6WUhxN2lQTG91eVE?oc=5",
+      "title": "FWD Hong Kong crowned most-awarded insurer at the Hong Kong Insurance Awards 2026, leading the industry in product innovation, customer experience, and talent development | 主頁 - 新聞 - etnet 經濟通",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPODFGN0NmWm1KMjFCcmVpNWlSRlRhT0lCaDY0ZVlWTGtHRzgwaEwyY1VnX0FKdWt6Ukt4NFdmNVotRnlRZ1RnR2Fmd19RTTR6RW5MQTJVdktPYXBMV2VWNEZJeThSWThKMi1vV0tDQU5GcDFITlB4UkM4N2pWamZDcWJaVEV3eXBNSnQtQ3pvZlY0aHdjWVJuRGJqVXM0X3lfU05EempTcw?oc=5",
+      "source": "etnet 經濟通",
+      "published_at": "2026-10-30T10:34+08:00",
+      "importance": 5,
+      "risk_score": 4
+    },
+    {
+      "title": "Hesai Leads Global Robotaxi Lidar Market with 62% Share as Robotaxi Industry Moves Toward Scale, Yole Group Reports - Quamnet",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFA3WXY1Z3Exb0JmQkNlV0d2d0ZQLXZLZ0RLRjYxa0xPVk0zZ3RSWjB1b1oyMHduTlNFMFZlajRNdUxQbHhROVpJR25NR29HdXE4ZWxrQm1wcVBhRW5UcktJ?oc=5",
+      "source": "Quamnet",
+      "published_at": "2026-10-29T23:00+08:00",
+      "importance": 5,
+      "risk_score": 4
+    },
+    {
+      "title": "台股大跌逾千點，股票該賣還是撿便宜？關鍵5步驟自救法搶先看！ - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMilwNBVV95cUxOT2podmxCbHltUVVtTzJwUXpnVnh3MlY0N1QzQ1pYM0VvS1FzUVJSbUtCWjUzTUEtZ3l4Z0d0U1BQdGoySzFoNmk4MHl3LWhmNXE2ZTFVdFQ4UTJmay0zZU5GYmo2Mk5rcnR6dVl5aDNNdVlYWktqVTl3RHBkQTRNSUo1dE80eHJtZW1wMk4yNUlzSUszNm44RjFYT0Q5Z2MyWUwwcmF4MXpaekNqdEkybHJlT21lbEU2bVhtbGJxb0taZkdYVnpNUllwWFd3U0pneXFfZjN4MXhkekk2eWRsOVl5ZFN1ZDI4dTBNQjdrbE5uUDNTQ20xenBwWVNoUWstbHVEZWRsbkVINlBhVlhJTTdKblhtQmtKaURac0VFVEVwU0xGYUFGNEJlbnV4dmQxYmg4MTlVel9zNTBtWG5lektkQ0NZQkVzeHlBdThzb3VlYzlXU1NjR01jdlYxR21sMmFkekNxRzRfNHN1VGROSEI3X1dkd3AyUUFrbTRQeExYejJFamJJTEdnT2FnZW55TEZxeWRjQQ?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-10-30T09:41+08:00",
+      "published_at": "2026-10-30T15:50+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "台股跌逾1600點史上盤中第11大！5兆元市值秒蒸發 等同少掉一家鴻海 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiqgNBVV95cUxQaHpNMmlUQ3NJSWtoZkRKYWROSXZ3cjk2MDdZN1dnUURlVHlNQ2U4MFBDTnhCNVg5MFdxcnFiTEZUMjY0U09SQ194TDY1cGZOYjZGM0RGZ2hxN2pqS0Jyc3l1cW1DcjQ5NFVONmVrOWtCTXVaUEFOYWdIdHE3Xzk5T1FTT3BHWGZmcm4yZkNDNDVucERvM1BfaHpvSUQybDZ0U2VHV2pNeFVjLVBNajNrUUFYbTVGWE9Ycm5OQlNiZEtLcnhhVnRDLXQ2SkRPZjc4VGFhZy01SnpOY0wzWWw0eHh6QWpFRWJ2R1NEM1BBUHB0UmtPUWtFNDN4b1pKNDlBSDBRbEpBQmF5Sl9ZUW01bXM0aTNFOUxrM2x4cHpXbE04aWJyeC02bHJtSDNWdXV5VDdEZURMaW9ZTXlWNjFWQzZYNkFUa3pPRGVKTmhMNm1nQWRGeFFqbVJzZWV6N3VlM2F6ZUxjdmk0MmkwZk1MWVJ3ZDdDaU9qOVBQSlJxam1MQWxpa21FZ29zWGc0cXRVOGlLdFBCN0pUWGJDdFZteV9uZnByNlcwYUE?oc=5",
+      "title": "Hong Kong Stocks in Focus | Food stocks surged across the board, as the wave of price hikes in the food and beverage sector continues to gain momentum; meanwhile, most leading companies' P/E ratios remain at historically low levels, and a rebalancing of l - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOeVl4ZVZQTlJmRzhtX05rWm15OTNzWFhYOG5VSURJdWZLWnNWYW9wbktvNTFvNDFydDI0X0l5aW5lVEJyTExnY1hUb2NrNEVOb19SSzRVZUdNUFR3MFRqekh5cXZtY2JJU0t5U3VLR05SY0JxZFZrNl9ndGlFYXpTeWs3YW9hSHBOcnMyVkFNZUFQcHd5Zld3OUJuTDJ4c1E?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-30T14:52+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "China Energy Engineering New Contracts Plunge 33.29% to RMB662.3 Billion - Minichart",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQMWpqQWlxdV9QR09OeFV3Nl9PeGtoY3hPRWpTdVZfWnBOUWJYRTBZdlBNT3BqbE9vS0taZHpFVHV2YUVXbkNKM2VsZGRKT2NtTk9UbjlPZXB6VjFaVk9WU0JDXzBvYnlZRXFETEdDRVpkZ292RXFkS2JwSzhDdExzbENOYnNxZV95THNCb2V6c2JWcWFfNThybUlWU1FkVkJ2ZUVmd2tjR2xoa3BBMlBQU2FR?oc=5",
+      "source": "Minichart",
+      "published_at": "2026-10-30T14:08+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股盤中血流成河大跌1600點！終場驚險守住4萬5大關、下跌1156點 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi_wJBVV95cUxOdWF1WWRheTdOV1BkQUd2R0xJMHA0b1RveE5CbzZPa0RPWjNILUctdDJfb0hwNG9ic3dUZkNORGp6MWRVUU9hQnJSdzFIMFItQWJFN3JlektidlVabVBBc2FPeEtQVnlobjN0YUN2U0g0dnZDMFY4b0hGNjRYOHRHRTQ1SXI2cDFpaTRuU0dOdVB3aEY3NFNETU0zMXFWNGllenhOd1VFSjhicGd3SmJBSVNnSmFKdEVER1hwQ3FPWFBJV0dDc3RMU1BJY3BjU2pweEpjczRmWEhBSFVtUWp5TG45UmNvVHQ5UG5tU2sxN1llVzhIR2lZcTFpbURGeGpLZG9ic0dmM1dpbU9hSDJ5bGNCNWlKdmdwbkYwOGppenJSZTRzVkJ4TmNzQjVpVUtWTmV0cUdyNlp1WTdvNEMwNTJERHhXOVBPdzNYNm1DTVZLemR3MzRmU2tJeHlpRlZFZWpscFppVGFYeWl5clotMGVEcl9kZWxTeWNiQVE1SQ?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-10-30T09:40+08:00",
+      "published_at": "2026-10-30T14:06+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "【Yahoo早盤】台股崩跌逾1600點摜破半年線 投顧董座呂仁傑：分批「彎腰撿鑽石」 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi6ANBVV95cUxON2hmUDdFRmtUdjR1d1hIZE93QU1xY1hLVFdXcnRlM1FGZXZ3SjhNbmJVOEt5Y3p2OUtaamFDbnUxUVdMR2kyRlFnMmkxVnVsN1ZPZFZnclF5ZmNFQkdONlYxXzRIYUtaWmY1d2VNQzJ4MFRiZmRlNU1sR0twVXFCRTdheVNHUUdlWDhfVzFySmNYRmZJaFJMOHc2Uk9fbHNrZEZjTmFNbGJKMDVwZW1WakF5V0tKN0xLOWNZVk9HN1I2dHA4UVFiYlZaRzNKRlNiM3hzaldEZHBtOFRHMGJOMUtwNGo2VlZKTEEzams3QkdWbE5JVzNKbEVxVFl1a29uTTY1STBDT0hZZm41aFJmOFJPc29WZ3J1TWp6UThEb3FhTjQxRWVnZ3U3d1p0aEtVWGNHNW1TRXBlLXRJeWE4TTdvU2R4bi0tNzZIc3hnMTVlM2NIUk05cENQdGFvM3RVUXk5SHZQWEVvR1NVaWh3dGk4WExRdnVWbkhLcGJrSHRPNzJyYmo0eFNIc1hqQU15R1RlNWdQejJaZE1ZM0lNVmNoMVdVZWVkQnAtOFhIOTZ6YjdENmE0bVF3MjFqYW9WX3JRbHZ0NWZvNTFDakxDTFlySGhTeUJwQjk4ZlQ0T0tGdXU0OS1UTQ?oc=5",
+      "title": "台股跌比7月還猛！反指標女神驚曝「單都沒了」 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMitwJBVV95cUxNWTNNVUdlYl9qWDFyNE42R2ltZVZhZmZ2WUg4dXRMejdOUlVQcXFoWHZIZ2xlUFZGOW0wenNqbEJZSGs0MFBOWGFFdFpfRzcyZGZOSG1GUGtyRUJFaF9yVFZiYTFrcDF6WnMxUktRYUVsTU9VN0lpWG8xbl9aejFuUXdueXM1QnFtQ2lDZ1o3YUhCak9UajR6MlRvNVlYaXhQbWlOMFBjM2NDYWxrd2ZPNDRKTGtNOG5KWVdMaEw3Ny1DVTNUY3pYdlhka1JFY1RHSmNyYXJscTNXT2RhZ2NBWk9WY2d5LVZZckpFOXhLSzZ1TFYxUDg2TnZUUFRQdU9ITVpweUlqWkxlSUhfWFBjbDBVT0o1bnZTVjRRTzFfektXTG1DbW1rSnI0Y3doT0dCbFBENDZXcw?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-10-30T09:33+08:00",
+      "published_at": "2026-10-30T13:55+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "台股狂殺1500點「摜破半年線」！台達電跌停亮燈、台積電重摔50元 聯發科法說前挫半根 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi6ANBVV95cUxQNlhDWjdkZC1STE9uUmxWcWp6Q1ZDVkZ1bWVCOXRvdkFEU0k2Ml9Ob1dmaGx3RllrMHJxb2Zua0dOYWNxR09TZjM3SjJCZzRhMklGNklrczJTUFdIOER5dmpNWEM0dS1kMmNuVVVhaGNrUlBzV2YyZEhITkticXNGRVRIbHpTUTl2Vk1zdDczY3ZGV0JFdUx4X2sxZGZ5eTlVcy1OTWdWUndKMmtxc1FWdWR3UjlvOGR3NE5JaDkwMTdFdDdiSHlkYXlFZEl1SWR0N1dFRjdHUDR4cXBLMERVYlpjdk5hRGlRNDdRMVRCLWNMSWtSa1NtSDdFTEJtZGlidUsxTzNOQ2h4bXlNemhxa0x6QVc5Yk1Kdi13Sm5vdVNWbDdrZTJHWUdsZjhZbDFmQ2VnQmNDbFd5djdFTVE4T3ZFTVhyTnR1SUtrWlZrX2tJQ1diOGZFbUZZamRxa3RxRm1yNFE2WlB5MU9rMkI2X2R3ZHM3SG9BZmgta3pVRHRwNWx0enBKNjRwNy0tc2hGS3dzTEZ1SmJEZEdWWS1mR0FNd2lDRGctUEJJeHZHQmh4ZGRzem01azlNY3h5VGZOemFyejNzRmc2a3RGdkRXeGtHNkl5NEpWa2kzUFZYSlp0Nks0UllMUA?oc=5",
+      "title": "史上最慘10月！台股單月狂殺2747點 分析師：市場情緒轉正需要時間 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiqANBVV95cUxQTEpoSlFyZmVJWmkzSXR0YUVtcGM0Q2dwTEpZYXY0Y3JUY25zbFdkVGZCbDJxdjZ4dWVsMkxhN1hkUFdyWFBFczJ5VEE0b0VmeDhheHVJb0Q3UWJzQlJmRWFTand2T2drMFJTeUpncHhPODh3SkNLUHNKM1FxUTNldU8tbHVFaWgxOUxRdUZLQXdTSktEdTAzb1FhZXNFVEtBSF9US0x4VE4yTVB2MVVRODdzN29vQW04MjdBVG5XdW5XZFI3eUJlYkE4TjducWkyOG9vQlVSNVA0VUc2dDVtMnVPS3lJWGdwODlaOUM0c2FocWhhWmhTWFFEQ1ItZnRLM1R1ZXNZZWI5eXVKSFFyYlp5WUtuZHREV1h6d0JuYjZIdDh0RzZuZTRXemp4Nk94WVpTUEJFUlJYZk9fYkQ1UUtZMzVzSUszMk5Wd1B4cXhScGp6ekx1bExNblN1M3didHJiZkN3NUFVb0RDWTRHZm1NSnJaZTVFaTh3NWlsMHFsdXdGWlJsZmpqSUQweGxlYzRwYW1tQ1VPb0c2dVhXRUlaRHVqSi1o?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-10-30T09:26+08:00",
+      "published_at": "2026-10-30T13:51+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "台積電挫55元刷「2個月盤中最低」！10月買在高點 一張蒸發23萬元 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMingNBVV95cUxPUksxSE00N3Vicm5WSUFfQmd5ZnB2UDZmdUJkZUJFSDQ0NTEwRFktbTJsRU41ZFJqUkpxVWYwZk9TY3pyUG9ncWlQY3NSbDkyaGpXYWthZ1VJY20wWXMxTjNoY0ljOU41d0xCbTJCcWtGMktOMTR2MnVNampkQnV1RGdZVEh4OEVaYldTWWhRbzNleDFLY3ZwZkJBZFRnNGR6aHFLaGt2NXRGN1Z6Vjg5aEdxNGFjdXA4VUdtVkpFM1lrZzBBWWZSNWtDZGdsZHJ3TEphSzlUVk9HcjcxLXR2dHlmb01sdW9aZGJYN2oyaTRqUEptYXc0aTlSRjJmLU4yUDZLcFdhWm5vUHZDUmsyMW5hRVFFQndNSlp5bGRZZXFWY3l1V2tmdFVZNlJpeFVsWVlGaEduN1JOMjRlRUxJbUtuTWkwSV96ZlVDV0pQZERPc1BLMFE1SDFRdVJfOE5sMXVlZnZhZTRWVUk1WWhqOFpDLUlpUlBmM1hYd3NMdlRuRkFPbXdlVm16dlNaR1VOb3dLWGF4N1BHOVdPcGc?oc=5",
+      "title": "台股悲情10月！股民財富平均每人蒸發71萬元 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiuAJBVV95cUxNNnRJZXFTUkx6a2UxaXYwVW5tQVg4a2hPblJaOXNRQU9RdVRiSFh3SFpwb05GNDFGa1RQcFJjMGxYYUlSWGp2ckZmc3pzcmRfczZobk5pWnVMRlctbW4yMks5RzZXdjRZVmV2dEs5T1pQbnRDbjBiUkwxNFBrbVZGRkRFZ2xfcjVVWjh5MktvTWx1anU0czFieHY5TEJFUkRoOG0xQXlhSWdHLXdleFQxbmVETEpOcnFscEVLaG1BTjBxTWZ1eHgtU2FNYjRjeGJKeWUySk11dE1HbW8tUlJsZjI5cU9BdlIxd0Z5amc3YWNGUFV5VWozRDFFOU5ZMGZNbHRsWEd0eWxWTGstTEhZVXVvNHhlRFNfVnRYbmtnbWx5V2FBcmEwQnFYZmhjSUl1N2s2cGN3ck8?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-10-30T09:26+08:00",
+      "published_at": "2026-10-30T12:44+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "台股再跌667點！國家隊砸7.5億元搶進0050 再狂掃「瑤池金母」與00406A破7.2萬張 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi3AJBVV95cUxOV01EUWkyc2pDRnhjb3VmRlNGQUUwYmtuOE1HcFZrMVoxalFfZl8tSk9HT0xWd2szT0d4c002TFppbHJGVEpkd3dEV3J0LVRBSVZZQ1FvZHZwWHdPLWZ0SkVGTzE0MXdUblF5bksxRHpFaS1YeXZaTFF2MHBNVTBKTk1CRGlSeEJXdHlOamVBeXV3TkRDS05BQUhyT0NvNnl5VDk2bUNuSmR1cHFCdlBlRVUzMkNKTWhQMDZWOXlLWGJCeWVyV2phZnNsOEdTQXl2QVRGRUFxcUI0ZnFMcE5WR3g5alhuU090dHlFM1NTSVNrM19kZ2hTVWV4UlRsWjA1cU41OHM5eUViNVRZQmx0UjViZVMtZDBWbVRsUEM3UzF4THlsNGw5clpPMUhYTHdEdGNYRlpNa09yRDV4REZHRERlNWNJNURHYjl2S1RWSHo0aE0wdHJiZ0k4Ym4?oc=5",
+      "title": "陽光100中國(02608.HK)：韓斌辭任首席財務官 - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE84aWZ1ZEdITmJxSG1kaEo1RjhDTEpvQmpmcUo2TWdzTG9RckFtQVhQQ212Z2NQR1pCSjFNZGVYblBfMWgtd2huZVhyeEtaY1phYXo5TzJQVkgxcXNmTVlzOHNsWTJ6R2FOaGRv?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-10-30T12:20+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Hong Kong Stock Midday Review | All three major indices rose, with the tech index up 1.43%; tech stocks broadly advanced, with Xiaomi and Meituan gaining more than 4%; sporting goods, shipping, and port stocks also saw broad gains, with Anta Sports up o - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOWDAtSTR3cW1DT2ItY2FOVEdHVmJmb21uUWNYNUlpVHZMdlRVTFFpZFZkVEhRWFItT3ZaVGM0eHo0T3NrZmdCMjlBRVRuRUZBRm9FWnVoUXl5Q1FmTmpkX2hCZ3VZS3BnMjZlLU83TFBBbHlnbFBxNEdaendFdHFmWTZmeHRhazlxMEpwVFY4bVZnaUR3SlRiODJqbFFjbktRMnJV?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-30T12:15+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股狂殺1472點回到44K！「瑤池金母」跌破5%噴走21萬 00406A下滑逾4.5%飆89萬張 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi2wJBVV95cUxOamlYdnFsZTRfSU5leExOR3ZDdWVtSWpyQXRQVXNnZ3RXZ2kzNGxuVkZ1c2FIenpBc0tEVlRPQVBpalYxUDFmY1RueFlIT0JQWGZhOVVoTUFHdnQ2R1pwdDRRUHhiVHo4SUx5d0U4WW1ENC1fQ29kNmlNQUdrNGlWVS1jVlp3eDN5b1pQdUVkWVF0cXdraU9GWGxzUnZpX3gzaE5xeEtvMmVPbzg1c3ZHSnVBZ1NHU0tKU0U1WjFnZFJTMmJTM282Rzc3RzZCRnYwYnlOSWEzOVBwYVB0VWwwT3FoSmR0dDlLc250SmdLZkhXSVZmZkRZNkVVUnBjZXVGaGlhRWpHY0xHMVhNNFp2WU1SVFRDalIwc0VzVWJwbTVfXzVHRUxRcGFCZlYxQTlsU1M3T2x1bTdaSVA5elQ0Wms2R1JtOVBZQXcyaVdSM1pCdy1Ld1JwTEh3NA?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-10-30T08:44+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "聯電法說會後摜跌停！蔡明翰揭2大利空：不如買台積電 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi5wJBVV95cUxNdl9OWkZISkJnY25EMTV0ZkszTE10ZXpLSE1nUnJIS2JMQWlRU010a0lnTUtOUThpMjV4R3kxSjMtRi1xc1hyR0NjbnMyLWkyR29XNHZOdUR5XzM1SWRqVWl6djg3d3F1YkJ1bEJKX1d3a2NadVIycFd6UG5EXzdJS1lWUU1wc0hldEk4MWFIYjdjLTdud2E2SE9qV3hGZ0cxekNZTDVLQzVlQ1JSajRwdmVBOFdPME9weFJuMWVGM0h2Y1RhalJ2T2huV3JjcmFpc0t4dlo2ZjAxc3hsZGFTbFZEV2lhSkVSbDBJTkF3VG1xdFBHYUZyX3J3RUQyalUxcW5rek5RekZ2d1ZpUzBUVmZqZVYxLW1CVFZoSzV4Vkx1RVNGVnVvUlZtanFwT0Z2ZTgwaUVzWXdaVnFLb1piUkdXZkw5NEZ1aUF0VFZ2bDlzd1NhMDNKcnVaYU1ldTVSS2tsNk5TMA?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-30T07:50+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "大盤走震盪、ETF越買越多！台股「這26檔」人氣爆棚 受益人數逆勢創高 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiswJBVV95cUxOWjF4SU9Bb3dmLUw0czA1RUlweHBWMl8wSVpCZEZ2SHRuTnBLWTR0aTNVUUlydVpoUHJPRVdEaVhvRnF6MTcwajU2ODRwQnNLZVlQcVJLTUFSTXpkaDVsc1VxWUplWW50VVhGeGRGUjdMQTZxSG5hdk96RmU4ZnZWLW81Z2NhejJhcWpPNGFrVzJiVmxpMUx0QXZYMVZvcU5PZ0ZWYVdWc1gzSVp4RUEzOHQ1UVEyU2xWVDIwU3BCYXp3V1FudWFzMmlBb0ZlMFA2WEpQWl9CSkI1YlpPd0lmR3NSSmRKRjBtaHR0V3J0b1JQQkthaGFSRHh4OFpDdGhPRnBwX2NYVXYtdVd1a3VwSGhmSDJtRmJmSzI5T3VheVBvaG5pY2xCTElPcHhKeWNlYnJF?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-30T06:45+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "玻璃基板概念股有哪些？2026 台股供應鏈與龍頭 - Growin Blog",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1kcTVDeVFpZ3Nmb2pXTk5oUk8wb1d6WjYxYXJFRTBzRzYyc1J5MEZtX1RzQ0xiNHBiQ0xlbFBqZTdzQnN1engxRWpYN0dFU0RUamhOazJGNS1aQWRyWjVieA?oc=5",
-      "source": "Growin Blog",
-      "published_at": "2026-10-30T00:52+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "ZJLD Group Returns to Hong Kong Wine & Dine Festival 2026 #ZJLDGroup - Media OutReach Newswire",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQc3ktV0ROUFpKeUxCbkttbTJ1QW1BYXNsYnFLZmVqdm1RVGd5QllPYVBqbHUzNTZsNGFKOExtSWs5QU1yUjRLcGkybGpIUVA4Q3FaNl9ObnhPRk1tVUVTVUFjdFVVWlRFWGNNQm5INHptQWdqMGpvbThsajFCNFV1bi1qRTlmdWVjZW1QY25QYjE5RkZINlFMOXRCUFh1VFNfRVhmMVEzYkNsSkFxYkVwWGNNcmlRclpUa3hJNQ?oc=5",
-      "source": "Media OutReach Newswire",
-      "published_at": "2026-10-29T23:05+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "珍酒李渡再度參展2026香港美酒佳餚巡禮 - Media OutReach Newswire",
-      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBkTTdibFRaeGhYTTNDNmJLSkR2bmZaTkZrSEFEYUZzR1JQcW5mWk1QSW1zZkc1TER6RmdHV3pMZHlOWFNZZnJSbk9zZW1veERZTUFhMklXT3YtOWJzb1BvTmhMM3lVYjBDSHFuQm50OW0zSnViT3A4?oc=5",
-      "source": "Media OutReach Newswire",
-      "published_at": "2026-10-29T23:05+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "比今年台股還會噴！「8檔高股息ETF」績效完勝大盤 資金避風港在這裡 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMinANBVV95cUxQRm96Y0RwN29iZFVtR3VISEM5V1dUYVBhWVBLdktwenRRYWx4MkRscFVKY2ZzaF9GaExlMWZqZ0c0eXRmUnMtbmZYMzhUUlRGQlhvd3JCQUFyYkR0MHVVNE5tdGhtb0FYb2NIVVNLb2xNLTVEVTlOZDM3dHpITGMwMldVT2pEUkVsV1VNODlWVFF2QTU5d2RpOTdkNFNjdE1uU3B2ZzkzVS1PdGl4RVduM1ROb05MNkJZQUktRmdQc1VpM2RNVl9yeWJObzRLazFUSktjVVlrT2NBRTJkc1BRM3l5VVRpMFV5S1NYVndpS2thOFk1VEIzRW1HYTFDejRnVjV5Ums0R2w4Uk9Hb2YwUW9vSTFhc0did00zOXpHRVZmRjgxTU5iSzVnYzRmTmZXSjhjYVk2eWNfZGN5akpUU2RVYktPMV9WMkJxRndoQ3dLWXh1dnRoOWFtbURxVTJVNTRiNUpteGRTb1hyeHpmclVNUnAwYUNNQi00MHNsYVU4NXFrZzB0akJDTnJwYWZkTWRkOTB4UHJScDFy?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-29T22:15+08:00",
+      "published_at": "2026-10-30T11:44+08:00",
       "importance": 2,
       "risk_score": 0
     }
   ],
-  "oil_watch": [
-    {
-      "title": "布蘭特原油價格：114.20美元 萬斯致伊朗信函遇GDP與PCE數據日 – 看漲120美元 看跌108美元 - FinanceFeeds",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPR2RFTThDM0E3R1dKRWI1M0hXOFRXeGJMaktSbFI1bnR5VUI5NjdwNldKY2xfZ2Y1Q1ZUUU5XVVhvQ1RWVmJUZU5HZzhvd0ZldlBDTmpIa0Qtb0pPdWxONnZaV0F6MGsySmVEemgxWGlhUWROLTJuaHJOQk5hUHRWZm5fQ1NFR0gtTk9r?oc=5",
-      "source": "FinanceFeeds",
-      "published_at": "2026-10-29T16:13+08:00"
-    }
-  ],
+  "oil_watch": [],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-30T10:38:28+08:00",
-  "checked_at": "2026-10-30T10:38:28+08:00"
+  "updated_at": "2026-10-30T16:57:06+08:00",
+  "checked_at": "2026-10-30T16:57:06+08:00"
 }
