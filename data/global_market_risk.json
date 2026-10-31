@@ -9,13 +9,13 @@
     "⚠ 全球市場風險｜費半 -8.5%｜NASDAQ -4.2%｜日經225 -2.1%｜KOSPI -4.7%｜台股加權 -2.5%｜恆生 +0.9%",
     "⚠ 全球市場風險｜美債10Y 4.93%｜VIX 19.4｜WTI原油 104.12美元 +2.1%（超過100美元警戒）｜布蘭特原油 113.43美元 -1.3%（超過100美元警戒）",
     "⚠ 全球市場風險｜油價觀察｜〈能源盤後〉美伊衝突升級風險升高 原油漲逾2%收半年高點 布油月漲13.6%",
-    "⚠ 全球市場風險｜美股崩盤拖累! 台股盤中狂瀉1642點 失守半年線",
-    "⚠ 全球市場風險｜中聯停工引爆沙拉油荒 經濟部：缺口仍大 協調業者年底擴量",
-    "⚠ 全球市場風險｜個股概覽 | 個股 - 股市",
-    "⚠ 全球市場風險｜二哥神話破滅？聯電兩天慘崩近13%、股民嘆「準備回60元」 不敗教主曝觀點：還是可以買",
-    "⚠ 全球市場風險｜台股暴跌1156點！郭哲榮逆勢喊「千點反攻」 年底沒衝5萬點祭出萬份雞排珍奶",
-    "⚠ 全球市場風險｜台股失守半年線！八大公股大逃殺「5檔債券ETF」1.9億 00632R、00665L也進賣超榜前10",
-    "⚠ 全球市場風險｜台股暴跌逾1600點嚇壞股民！阮慕驊曬對帳單進場「這3檔」 喊話再跌還有子彈"
+    "⚠ 全球市場風險｜台股進入回檔！外媒：別急著恐慌或抄底 也不要逆勢而行",
+    "⚠ 全球市場風險｜台股週跌829點！三大法人逆勢狂掃「記憶體雙雄」11.5萬張 華邦電奪冠、5金融股入榜",
+    "⚠ 全球市場風險｜三檔ETF同周開募！ 00419A台股AI、00420A亞洲科技限時申購蘋果AMD Arista財報發布美國期中選舉和非農雙炸彈油價11月2日起連周凍漲｜投資早知道",
+    "⚠ 全球市場風險｜台積電占0050高權重！朋友喊「直接單押台積電就好」 網揭關鍵差異",
+    "⚠ 全球市場風險｜台積電ADR暴跌近6％台股拋售逃得掉？策略師點出護國神山抗壓韌性",
+    "⚠ 全球市場風險｜Apple has surpassed NVIDIA to reclaim the top spot in global market capitalization.",
+    "⚠ 全球市場風險｜台股周一要挫著等了嗎？不敗教主籲堅強活下去 列15檔「美而廉」股"
   ],
   "markets": {
     "US_SOX": {
@@ -81,26 +81,66 @@
   },
   "active_news": [
     {
-      "title": "美股崩盤拖累! 台股盤中狂瀉1642點 失守半年線 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiuwJBVV95cUxQaEx2UmRvb3o2anJzWW90Nm1GM0NvS0cteDB0NWlWNFVsQnV1OEdTSTAwem9aOGtXbUZuYUNjSXAzUHlEZVpMOXkybnpvTWF1SEJPU0lRQTFFcG9Lakl3eEtwdEZ0QTFtVExsUGcyT0w2b3J3aUxhNmZ0UEEwbXZKSjNkYXNqcm5WZElJWFliRk9Rc21UcjVtQnFYLTJVblpxMUQzR0F2aGJ2MWduUGZ5TG1ld2ktY0R3QjJCeDN5NzlUX011RC1nMncwZ0MwN3NoUWNvbjc5dXI1NnV6MFJVMDhvcC1EVlNzYU1WVDI4eEVJMVQ3RVA5eXhCMFE4dXBLcGRGMlpuYTJnQkN2ei1NblJMeDZhNXFod2JSOTBBMlpxazNSdjdiVjVHYjJDZTZqV3FXZEFVRGZvX0k?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-30T22:38+08:00",
-      "importance": 5,
-      "risk_score": 4
+      "title": "台股進入回檔！外媒：別急著恐慌或抄底 也不要逆勢而行 - 自由時報",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1wOU1IWU4wMTlIclllOFV6Q2pLeURSRTVTQ2t2Ny1UakhsMm9QemlsUWpfNkdfemlUVE5WdDI2Z2hQenhvbExqdnRxS3JjR1FEWE5selJCRnI?oc=5",
+      "source": "自由時報",
+      "published_at": "2026-10-31T21:50+08:00",
+      "importance": 2,
+      "risk_score": 0
     },
     {
-      "title": "中聯停工引爆沙拉油荒 經濟部：缺口仍大 協調業者年底擴量 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiiwNBVV95cUxPdDdJbFFNU1BEbXlHTl9DVWU2czVtLUVQS1JTVzdER3h2YVNWMEppLWowNHp3RVFXRklqNnoxdXhXRDYzQTU0MU1tdHhoZDY1V1V1bHdUVWt4dTdFTUg1QldHTjlkeGRFb3otWTBvRlczbm9za2dUUnVSaHZjZVFHQ0RKbTJYUklGZGltMWF2ZENuZ3hNLWlDZnIxU3VmTFFnaHBBVUp6OHg1RWFMcy1yY19RTk5XSzk4d0Y2UXdIQXZoR29iNXZWbm5fTjl2Zi1mY2trX0FPSlJ0NzQwa0l5Vk9TUWVxREV3dVNVUms0UmhBbnZkSWNWbnZKRTNxSXctdXpPeV96ZEVUNEczQlVKdlY4N3FZRVNVN1c0dEhpdVNJZXp0a3F6U21IS08tdEtLZC1TM2ROMEdzcmpqVkJEZDBqcm91MVFLb1dSTUNRVFF6cEMwbk55YjF2azFIS1ZjOVR3SlNyc0Z3QmVMSFUwWnFtc1dkODNkM1JiSUpMazVmaTE2amZmUmxHMA?oc=5",
+      "title": "台股週跌829點！三大法人逆勢狂掃「記憶體雙雄」11.5萬張 華邦電奪冠、5金融股入榜 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi2AJBVV95cUxPNUduTkE0b3NlT0lGaFlFZmdiOEFIWUt0R2Z2VXQtSHhhbWJ2N1o2elIxRlcxbTkyQ0k4cjlRVTFvZmNrVDU2bkFqc3l6WlhlRUwxZnlPN19oVWQza2hxREVxZDJXY3lDZ3NxMlQwN0hoNnJQeEhjdFF5MThpZzNGblhtQ2lFdE9CWUlLcHV1d3F0NG42NHN4T3lva3UzTk5xWUt3bG9SQUhTYklJVG5xRHhIWGw5ci1pV2pMX29sUHdYcTdHVmFSLU5wb2poRURGdDNnc28wNFJXbmxwRHAxZmVvWFNOQ0hpUGlSb1NwSkVTRTA2UEdYX1ZFdzRfazhodHRlWjJEN3lnQV9CR0hod3dhZVFSbkN5OEJ1Qnc4ZmhhZk1lbU52Mmc0d3B2ZUpQSFdBX3NTbExkcEhnTVNvdGlHamhDb1c2TXJYSkpqR285eTZhenF6SA?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-10-30T17:42+08:00",
-      "importance": 4,
-      "risk_score": 2
+      "published_at": "2026-10-31T21:40+08:00",
+      "importance": 2,
+      "risk_score": 0
     },
     {
-      "title": "個股概覽 | 個股 - 股市 - CMoney",
-      "url": "https://news.google.com/rss/articles/CBMiREFVX3lxTFBfVGtPUmhQeF9nalNLNm9zTGJWQlREWTlFa2dVeEhkNElpN1d0OXlyaFF3U3NaYnBodklvejVEU1YtdkNl?oc=5",
-      "source": "CMoney",
-      "published_at": "2026-10-31T13:35+08:00",
+      "title": "三檔ETF同周開募！ 00419A台股AI、00420A亞洲科技限時申購蘋果AMD Arista財報發布美國期中選舉和非農雙炸彈油價11月2日起連周凍漲｜投資早知道 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi7gVBVV95cUxNT3BIUFJ0aUhhbkY3ano5SHBwSjVUeWc3WXA1Sm5hT2VtNGtCcHRrSExIZnlCLXhvLW1Obzc4TERoNmpmMXc0T2dlbkRrUzctNEhFZlhxa2JySExkZ0szQU5ia3IwTHdQSkxDVVY0Q29mREVWTjZUSDdyelg3YXMwWnRpcVRDTi1ZWkk4bV9Ia3NQdGVUOUtXUmYyVFlfUXJLbEgwTmEzZC1zRV9CY3VycXJ6ejZGcTZHX2pRRmhsVkl5Z213TGpuclN3SDRQcHQ2bW0wZ1dTT3hLNF9kY2NsN2FrYjFYeUxTTFJxMG15bVFubkdsU1NlaGN4SFhBQ2hDTDZNelRjeTBXMlh4QVZtZGVVakpYWm5Ub0h6WFFuRkVNZzdmZGRwbzJ3c2tSaFVsZDRVV2lPYms2MzEyNl8yY1pxQkktY09uMTEwNHZ1UjhDYWNqeHRyeTd0azU4ZkJMSUlDUjJMQ2ozN2VZVktPOFBUWEVnQmNLeUlnVFUwMk9uR2hSckJRNkFlRmh4bE94bWlPSWdMNEtJMnVUN0lRam1SZDc2a05qQ1ZTemZzcGxZN2ZvNUtDakcwc2N3QjlzV2pvRFhmaGN1OG9aUUVTMzJaS2Z4RzBfdW5FLVFuSXIwUUkyZXEwQjdmUGlfR2w5MF9MX0xwYUgzOHk5ZFh3bzhrZTBUNW9zakZCWkF0T3J6NW9kYW50OEZQUVZ5c0NOREVYNkFwRFhpV1BobDBHcjJyOWxqOURRQ2FBc3MwcGFqRnZmcjVDX3RaTThiX0FjTXNDMEUxWkxSR09lam42a01GcHFZMThYOXZCeUxpZzhFT0VOdVNaVHM4U0R6MGhMdmw1MzlxcDZER21OZkM1YW9xR3dRdG0zclJmLUZZQjNXNHFJcExqa0RUb3ZEcHlUYndKM1htMDI1NVBFdTRuYVllVllyZVRuSGo2Vy1DLUtpZnMtLWZnbF95MkExZEJsd3ZsV0doSTZrWUV4WWc?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-31T21:36+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台積電占0050高權重！朋友喊「直接單押台積電就好」 網揭關鍵差異 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMikANBVV95cUxNcFZET0x2RGI1RW9ORzJWUTJaQnBhNmlYbDhhMHBjMjFUdWJCT0JYXzZhWE4tSHN0aXlmRW93QXFHVmdTMDBVYUNjcnFscnZNR0IzUEJJUXZkUjk4U2RlREJrNkduUFFjcW5yNGtjekpLc3AyNkFlMDlJUGJwSzRQS3hPemF1NUkwdmRNNl9xRDJZLVZ3OHNqVVdoVGNmOVdtZHhNRDVodS1pRFJNZm4tZW44cmotQUhyRzdTSFY3bV9yN1VMYkJsSmE4b1oyTnVuSERkcjg4VjNfV1JEd25ZTU5TZTRZS1RBYTNtYy11ZkxJa1A0d2U2ZTdvT1VfelE2RGVxTXZTQ3V2XzZQbk9CUC1MYzI0ZnI2TjlkWG9ZXy10bE1rY2g3N1llMHNSWmhJdXBtRFRuaHZLWW1KS0JCR0tIaEVZWFVvTXlQczZBS1RtSVhIRVNUNXZLZURtaU5zajU3cHFhT1c0QkZDWENOemU2WThQMWFvU1VST28zN1BtMExWZndhbm1yUS1vTHN1?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-31T20:45+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台積電ADR暴跌近6％台股拋售逃得掉？策略師點出護國神山抗壓韌性 - 自由時報",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5LeElWTVBPZnpndnVLcG45ZWFUUnJwQTQzOEsyOTI4VkVxQ3c0STNsVjEyd0RIWDFxNG40dm5WNEtrcnpNUFpUaUpKV0t1ZmVLenc3QUFpamQ?oc=5",
+      "source": "自由時報",
+      "published_at": "2026-10-31T17:39+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Apple has surpassed NVIDIA to reclaim the top spot in global market capitalization. - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOQmc4NkJhUUdoRFVvMnVZOXBqY3U1TENWY0FJX2JlYVhqTlBnOUtvMHI4dmgtbkZVVHZlQm4xcHA4dWNQN0JpcHp3R0xpNGw1R29fQnl3OG9jbUZpVmNWWnQyS2F0M0pMaVIwcm5yM1hNOXBNcXJDMU5vVG9maUMzZ1hGYVhidHl6UzF6TlQ1S29uc2VaaGdJbHJ5WUdYQ1BzLUhmZUhRNUlia0tlSkpqLS1zQk02Z29hRFBBZQ?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-31T17:26+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股周一要挫著等了嗎？不敗教主籲堅強活下去 列15檔「美而廉」股 - 自由時報",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5HamI5aS1qN2RvN1pqT0R3d2FCWU83SFpQU09xb0FCQ3pyZ05rVHB4WW4tbzdmbXRwLS00N1Z5WU1YLUEzaWhuaXBKU2FOY1lMNzlnZnRmN08?oc=5",
+      "source": "自由時報",
+      "published_at": "2026-10-31T16:55+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股暴跌1156點摜破半年線！巴逆逆喊「該停損了」 股民反而嗨喊：穩了 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMingNBVV95cUxOVXRhM1NXUGZTeUs5ckp3S1VzSzNwVWVHay10OTl4UDVrendOcC10VEFFQWRxMTllTnpFRUcyQTh5dnBQOHFMeFYzM3VzRVNSTUVkZUpCRHBCOXQ1aER5Z3RMQUFkR3RqdzBSZW5wWjJzZDYwVjRubV9odXJkWUpvdVBDaHhKRzh4TDlXdmR0VlFGTDQxMFdta1ZmQVBZMnRsUXVIZUEzTHRKSHRjc1EwTjRKUGNEZ2NVeVBoNVFpZU9GRk5EM0ZvZXk2UzBKd21Mdm1hMUh5MUpCUWZpaTN3SlEwQzFRZmNJTUNtVUROeGpmZ2RDUWpPLW95ZkdLZEZ6NFpzRUVycFFNbmtXNmc3ckJQT21KMzJ6U2hRVzRtRnJhMTBfWFFPVEZHTmpnSzg4NkpmY3g4Mkd0UFZWY3FDUVlGX3FBODgyRWxnLVFCQjhNdi03SUJWS3JOQkpOQkVLdkJiNU9jTkJFS1N5eHNlVXQxMTZNSGk5Mjk3Zzlpb0NnUFNaWlE5VzQzbWt6Sjc1cERaWEpGQjRUWkJXQ3c?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-31T14:36+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -135,46 +175,6 @@
       "published_at": "2026-10-31T10:31+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "Hong Kong Market Quick Look | All three major indices declined, with the tech index down 2.84%; tech stocks fell, as Kuaishou dropped more than 3% and Alibaba and Meituan both slipped nearly 3%; semiconductor shares also slid, with HuaHong Hongli do - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPM1RwejVuZm5WS2tHal9rQmQ3OGpwaVJOOFI2SHlUMjdreXBLcGtlWEVNSGNKdnlFeDdMUXI2cjR2XzREeUZZcWhEc1laY3l3QVduTlBxeXNlRkxaRm1hZzFJenM5clVxLXhZbzVSYTM4allBdWVCSERUMzJtWXhtV2twZzV6QTFuaGc1SFpuOHNWYzVKTmk3akFneVRIQTNqY29yZFlB?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-31T09:54+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股週一剉咧等？科技股「重賣壓」英特爾崩跌逾28％ - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiuwJBVV95cUxOb3VqTmowMF9pQW50aV9CWGtuMzhGbEhreFJ5VDl5U2NHb1ZSekh5cHZrWkVydjZHaWNOTjNTM3R2UEJnSlgyQWpPS0tYaHVlRXNXRDJuLTZ0cWNaZ1hMX2NaRVM0bF9mRXM1NElqWEJDLVIzR3FTLWZkZnRRNGlLend6MkszelMxRDhHbG5ncGZUMU5uV3psX29HZ1lXZHhEUHF3U1BZdVNRSmxuNDRuS1dmajBuR2dzaklzX1FiWDY5TlRUd2tvM1pNb0xsbzFwczBJaFQzUDk4b0VkMWs1V3ZwN0E1VWxwM3dkVVcwRDc1c1lDcFZwcFVSeklzR2Vja08zdTI2bm5BNnZCRl9lWE9XSVRGdU5DWGVJNXRLcHJiVUNRMUNCblBpMjNodFNfVVdBQmRxQzYwanM?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-31T06:53+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台積電股價重挫逾4% 資金外流與宏觀逆風夾擊 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiwgJBVV95cUxOMkJZSmdWWmsteGdPbmg1ajUzdW1Xb1JYQWVSUGFYbW9NSGhocGlLOVlRNXhiZUR2SmNRSTRodHlMeVlxZHZYbHVWN0t2d3VPLU1qWHNITEg0LVNROGxfd1B0eTFwaS1ielNtR0xXbjVwWkhQdTR2R2xCUVIwOENUeHpRVDI1SW5UNkdzWVRzZDUtcGtQNmQ4UUxQSmRqTWpZREZBR244SVZ4NTA4MzdNYkwwNUtPMXZBRHhTcmNtb3RGTVU2LWI3MGx0alh0VU4zMXltWDlKOU1NM2hHaHdtbGFhM2gtZFBod0RtcUljaUFaeWNZYjVxMkQtTG9CNUZUemtIZnlHa1lJRExqZnVjSUNVZEpJel9yOGJWQ0pQcUU3S0lsUDBjNDJRVWpYSDB1WXJGTGxUa2d5ZnlDLXN4c0JR?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-31T06:41+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "星期一慘了！美股費半狂瀉7.2% 台指期夜盤崩跌867點 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMivwJBVV95cUxPZ0had05yVEJfQ0hzZUlrWjkxc1VWb2MwUU5Qc3B1c0Y3b3ZfTmhuOW1pRUtGcUNhN2NPSkozbTJKUElmNmtpUzlsdTlJTkY3N3BHS3Rya1BaMzBLcGJhb2loYXBWaXlJcTBPMHRURnFHaFlJdm9OR1JCbmFoYnhvWXBjUDJFV1kycG5mam1XbEZ0RlMwcURTS1MxdUtXZjJfZzByM0c5Z1Z3SDd3RHVjRFlUOWN6ZVZwZU1XU21rU003a1M5N3BkczZyaEotQmVyRVBnYUQ0MUJWX1hTM0JjZmNYSGFmTDAtZlpYLWFzX2lfOFV2dFFGR2FhZ0kzbXlNcEgzeVFYMEtJV1ViUXRhYnlKOTJUNkFnWmlWTnNKYU5WUjJ2dG5ZX1ZzNFM3dlVGR3A3ZldXU0JQcUVVYk84?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-31T06:38+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "美股大跌！費半重挫7.2% 輝達、台積電ADR下殺 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMimwJBVV95cUxQYXd4TzlGdkI0M2VBdHMyREl5Q1o3ckg1WlZIMDZKODZGM3hsaFNkd1pZSnk0Y0xvYnBoUk5pR0dJUUl6WHdOZkZNbXV6RFNJekhqUzVDSTRrNU1RN0MxOHNLclNKbmpSSWtBZzFsTnk3QzBXNUpiejNtM2dYWEVRV1JyZm1ZZ1BJRGdJVHUydkM1M3NZVkpQNllRYTY3M0ptZi1yejZkenRkYkJKYl91SGRBWUpJZFhhSy1jY1lwNTVsZDZYdS1jY3R6NUZvS19kTFdlNHBxQy1iUUtwTXkzZmxRaHFiT0xNbTBqOGZqNXRxekRjMHRkQktJNE9tbHlSSS1hTURoUW55UVVaRUtmOGtya0Y1QTBYU3Nn?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-31T06:05+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "oil_watch": [
@@ -186,6 +186,6 @@
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-31T16:48:24+08:00",
-  "checked_at": "2026-10-31T16:48:24+08:00"
+  "updated_at": "2026-10-31T22:48:25+08:00",
+  "checked_at": "2026-10-31T22:48:25+08:00"
 }
