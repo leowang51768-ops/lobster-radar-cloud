@@ -3,19 +3,19 @@
   "risk_level": "red",
   "risk_score": 3,
   "risk_reasons": [
-    "原油超過100美元／桶：WTI原油 102.95美元／桶、布蘭特原油 112.33美元／桶"
+    "原油超過100美元／桶：WTI原油 104.12美元／桶、布蘭特原油 113.43美元／桶"
   ],
   "ticker": [
     "⚠ 全球市場風險｜費半 -8.5%｜NASDAQ -4.2%｜日經225 -2.1%｜KOSPI -4.7%｜台股加權 -2.5%｜恆生 +0.9%",
-    "⚠ 全球市場風險｜美債10Y 4.93%｜VIX 19.4｜WTI原油 102.95美元 +0.9%（超過100美元警戒）｜布蘭特原油 112.33美元 -2.2%（超過100美元警戒）",
+    "⚠ 全球市場風險｜美債10Y 4.93%｜VIX 19.4｜WTI原油 104.12美元 +2.1%（超過100美元警戒）｜布蘭特原油 113.43美元 -1.3%（超過100美元警戒）",
     "⚠ 全球市場風險｜油價觀察｜〈能源盤後〉美伊衝突升級風險升高 原油漲逾2%收半年高點 布油月漲13.6%",
     "⚠ 全球市場風險｜美股崩盤拖累! 台股盤中狂瀉1642點 失守半年線",
-    "⚠ 全球市場風險｜AI供應鏈慘崩！英特爾下殺28%、費半狂瀉829點 台積電ADR跌近6%、台指期夜盤退回4萬4",
-    "⚠ 全球市場風險｜台股週一剉咧等？科技股「重賣壓」英特爾崩跌逾28％",
-    "⚠ 全球市場風險｜台積電股價重挫逾4% 資金外流與宏觀逆風夾擊",
-    "⚠ 全球市場風險｜美股大跌！費半重挫7.2% 輝達、台積電ADR下殺",
-    "⚠ 全球市場風險｜Targeting the Global \"Right-Hand Drive\" Market: Waymo and Toyota Announce Level 4 Autonomous Fl",
-    "⚠ 全球市場風險｜China Mengniu Dairy Stock Rallies 9.4% in Hong Kong"
+    "⚠ 全球市場風險｜中聯停工引爆沙拉油荒 經濟部：缺口仍大 協調業者年底擴量",
+    "⚠ 全球市場風險｜個股概覽 | 個股 - 股市",
+    "⚠ 全球市場風險｜二哥神話破滅？聯電兩天慘崩近13%、股民嘆「準備回60元」 不敗教主曝觀點：還是可以買",
+    "⚠ 全球市場風險｜台股暴跌1156點！郭哲榮逆勢喊「千點反攻」 年底沒衝5萬點祭出萬份雞排珍奶",
+    "⚠ 全球市場風險｜台股失守半年線！八大公股大逃殺「5檔債券ETF」1.9億 00632R、00665L也進賣超榜前10",
+    "⚠ 全球市場風險｜台股暴跌逾1600點嚇壞股民！阮慕驊曬對帳單進場「這3檔」 喊話再跌還有子彈"
   ],
   "markets": {
     "US_SOX": {
@@ -70,13 +70,13 @@
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 102.95,
-      "change_pct": 1.0
+      "price": 104.12,
+      "change_pct": 2.0
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 112.33,
-      "change_pct": -2.2
+      "price": 113.43,
+      "change_pct": -1.2
     }
   },
   "active_news": [
@@ -89,10 +89,58 @@
       "risk_score": 4
     },
     {
-      "title": "AI供應鏈慘崩！英特爾下殺28%、費半狂瀉829點 台積電ADR跌近6%、台指期夜盤退回4萬4 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiwgNBVV95cUxOd2xIUDgyUTlwLUlBMkdwM3NZNF96alVsYTJsWE1qRTlDNnFyTmQyNUFkWXpQcmRla1lCZmpqZTZ1RTVVb3pfaHBwVFUwN3NtU1g5UXpXbzVOQ2V6SlprOHZKSW5ZZ1dHZEtKRGFQNlhhVDF5WkR5bDV1WDBFeW9qSXRKUWV6LTQtZmw5NVc2OUVTZ3hMcGx3XzMxY09rdEl2M2swSEh2NUxncmJlSUVfRV8waHAwM0hGX1RMMVZfd1hBcWJ2UVRCTUZQVTBrYi1CaUJ2a2Rza2huMHRuUVBXMm80OFdCUTl4VWRVLTE0N1RwbXFBM1lCdFBSS3Q2b3F1N3FEUGNpRlJTTDFSNUJock10WklsNVNyeHNTUUNOM3VyWXVodDRlcFh0cEhpbUM0U3BRUGhtV0tqTnFRRjJoYkNpbjZNdnNJZHZTbmtOOU9vRFB5ZWpDNUxVWVNqeFR3Wjk2TDRFcUpkdWpQd0RHM0ZVU25KTUVHbm1XM0tBTGlRMzYzR1FkbE9zSXRHSHZpRGQ4TjZaeWQ1QnRKOUxCVHNIUElnZkFGV1dDMVhNMWgxek1ycEJ2bUhKd3A5V0U1a3c?oc=5",
+      "title": "中聯停工引爆沙拉油荒 經濟部：缺口仍大 協調業者年底擴量 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiiwNBVV95cUxPdDdJbFFNU1BEbXlHTl9DVWU2czVtLUVQS1JTVzdER3h2YVNWMEppLWowNHp3RVFXRklqNnoxdXhXRDYzQTU0MU1tdHhoZDY1V1V1bHdUVWt4dTdFTUg1QldHTjlkeGRFb3otWTBvRlczbm9za2dUUnVSaHZjZVFHQ0RKbTJYUklGZGltMWF2ZENuZ3hNLWlDZnIxU3VmTFFnaHBBVUp6OHg1RWFMcy1yY19RTk5XSzk4d0Y2UXdIQXZoR29iNXZWbm5fTjl2Zi1mY2trX0FPSlJ0NzQwa0l5Vk9TUWVxREV3dVNVUms0UmhBbnZkSWNWbnZKRTNxSXctdXpPeV96ZEVUNEczQlVKdlY4N3FZRVNVN1c0dEhpdVNJZXp0a3F6U21IS08tdEtLZC1TM2ROMEdzcmpqVkJEZDBqcm91MVFLb1dSTUNRVFF6cEMwbk55YjF2azFIS1ZjOVR3SlNyc0Z3QmVMSFUwWnFtc1dkODNkM1JiSUpMazVmaTE2amZmUmxHMA?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-10-31T07:15+08:00",
+      "published_at": "2026-10-30T17:42+08:00",
+      "importance": 4,
+      "risk_score": 2
+    },
+    {
+      "title": "個股概覽 | 個股 - 股市 - CMoney",
+      "url": "https://news.google.com/rss/articles/CBMiREFVX3lxTFBfVGtPUmhQeF9nalNLNm9zTGJWQlREWTlFa2dVeEhkNElpN1d0OXlyaFF3U3NaYnBodklvejVEU1YtdkNl?oc=5",
+      "source": "CMoney",
+      "published_at": "2026-10-31T13:35+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "二哥神話破滅？聯電兩天慘崩近13%、股民嘆「準備回60元」 不敗教主曝觀點：還是可以買 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiqgNBVV95cUxQd3FDaGNxQWxHcnBiWnpPTkxuTHFIcnhRWldWZXoyMWV4MGZhZlQ4NHZCWVZYcEY0enhfNkJlM0FiZTV5bzFMVUpDYm1XWTFlZUdJRzBZazFudm5rd2xHSXd1RzhEX19GUHhzR0hRd1FBaW1BcFFGR0dRT1FZYndJV0hTU2tYSmNHMldQZE9kcUxKSVBaUGR1eGRzVGh3SE91UHJoa2lfS0dBYzV4UGdEZmdGaTJZRXFHQU5OUlF6WTF1UF9wN3U0NlJDV09xdmE4RVF6Tl9jWTBKZEw3TFVHRTYxeUJWSnBiSVhXYlZGVmxhSmZSd3hQTTQ1QXlySGdhaTF0V0dLYl9LVzdBTGcwNGV3cXVBLXRocERpb3pEWG0yc2drX2tHWEpGLWw2RkY3bEpXLTBKUThIX19hTG5LYXJGMEdSM21CbnFpQXlSU1lfUjNXc1hra3pIMV9xbnpsTVprTW9LWjJwcmJlTnBPNlYzNWZDQ0tRUjZwNllVUkE5eTMxUjk2RTV2ekxOdGgzT3Nmbzg1QUhjVlN3bENuc0hiRGs4SS1BU0E?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-31T12:34+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股暴跌1156點！郭哲榮逆勢喊「千點反攻」 年底沒衝5萬點祭出萬份雞排珍奶 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiwgNBVV95cUxPTGlETFVwZ2Yyb1RmVFhnX2hwZkFVMEQ5dElsN2thdDBidm1CX25POFM0aVp0YnJOVU4wWXNsWWxVYS1hLWlEZUxjR2xzMUs2alRSbHFrNTJsa0RvZVlTWGpvZ0xRbDdkTXFUWlhSTFl0WmkwV2hYLXdlN0ZQeW1lOHd2QlMyc01aSElDeXlyYnJka3hzSFNXN0NOM0d1VWphOEFlOV9yb3dtdEhTa2VlU3ByYmdpenoyYlJTQXBKdVdSdDI0RGxiRG4xWlp3YXhQUmxCM2Y2VWpBSWVKMHBQYm9ONDdGdGxNQlZJcGkxUlZjM0VqS2hZVGZ4ZDBwSzRjZVRtdElJZWhIelpPSWhkMlRKMVpfSDRmdThjNlk2d1N2ODM2VVlRdmI5MVhIeE04cVNIZEU1VFJ0Qm1LRnNpbXFXT0Q2OWcxSU9Ja3hVa2dKV3NIUW10Uy14TnF5QmJPLWZ6dVNNNTBRX2JIemNiakxZNF9MNmJJQUc1d040WEV0ZFpjSjZsS0NaSDZCci1ydTBhazBUNUJmaVZ0WkVoS3lkbWhLdUNHQ09CUXE5NU0wdTVPYXUyWWRGdXA0b1dPRnc?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-31T11:58+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股失守半年線！八大公股大逃殺「5檔債券ETF」1.9億 00632R、00665L也進賣超榜前10 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiwAJBVV95cUxQS3czb3dyTUNEMmlIcTY2NWg3RUtZYkE4U255bkIzMEJuZkU4eEt5ZjNKRDdGRHdXZ21YOEpXM2txajBXNjVSRUxjMXF4dF9lVE9ZR1ExTnlsdVh5UEZad0hNUWR3QWRkdmNWRjlyZzZHVVFLcTBLMDVXY1FxaVkzaURwbVhpSjlhSWd5Zm84ZDYtaGxwbUREM3N4MEg5VFpJOElKUDROVEt0aVdNcXc0UUg4VlZlaEgyVm00NXBSd1NYdms2UWpaZ1lBakJTUFhGMUEzNEJuRjZzYTdMYlJuOHpZa1EySVlxR2dYZWUzb1JEdkdwd2piUFdoVVk0Mk9zWDctS0ZUMzlTdVdjNi1vYk1RQTFLV0xjbzZQWFZ4dnloY3VaRFN6YUZWcldnNWk3TDVzWlhuaXdUbWMwWnRzbg?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-31T11:15+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股暴跌逾1600點嚇壞股民！阮慕驊曬對帳單進場「這3檔」 喊話再跌還有子彈 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiwgNBVV95cUxQekpQQ1E1a3hkWjBoNXVWdG9FM3ZWbGV4LXF5ZURDejlWUW1XakxVY1dXSkdDNHRJdkJqbVF2ejZqS2V5VklJN3EtM3l4TV9EalZxZ2VUUnozUWJ2ejlPWUxrWFQzT1NVbzlRZGd4bDJWRG1NUHN2a0w3UG9rR1BlNGw1TkIwVGM0alRUaFlqVFAxOXh5X3JGZGR4Qmp3M0ZjMFR3SzZRa21OWU85OHRBS1ltYXBFeENPQjV1VkNqYUtfZTRGRXBCcl9wZElFZGhmSG9aMm1MUE55dHZRM19DanJ4bGNxbWR5SDNXeEZtcnctalJjekxBdnFlYVE2R2ZBUnh4aDRaNDdpZW1xbXdZa1NqR3BHdXlWTnhZckx5NUZISTBHc2tJaEliSDc4TVB5NGYxd0FJcmlZTkdtVzVLNXNtVHhiRlJzZGx5QUFtc2gwZ1pUOHdqSjhvWTRUNGtxRDljaEFpU0FuOV80LXZ2UlUydlVnc1JQNVA4bjZrUzR4SmhsaWRLZ1lxcnNIa1RwR2cyVkxDWTAtcmRhRDBJT1hhd1ZZSWRjNWQxYkpwQllqazktV3VPRC1tV3BJSmVHNmc?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-31T10:31+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Hong Kong Market Quick Look | All three major indices declined, with the tech index down 2.84%; tech stocks fell, as Kuaishou dropped more than 3% and Alibaba and Meituan both slipped nearly 3%; semiconductor shares also slid, with HuaHong Hongli do - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPM1RwejVuZm5WS2tHal9rQmQ3OGpwaVJOOFI2SHlUMjdreXBLcGtlWEVNSGNKdnlFeDdMUXI2cjR2XzREeUZZcWhEc1laY3l3QVduTlBxeXNlRkxaRm1hZzFJenM5clVxLXhZbzVSYTM4allBdWVCSERUMzJtWXhtV2twZzV6QTFuaGc1SFpuOHNWYzVKTmk3akFneVRIQTNqY29yZFlB?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-10-31T09:54+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -113,66 +161,18 @@
       "risk_score": 0
     },
     {
+      "title": "星期一慘了！美股費半狂瀉7.2% 台指期夜盤崩跌867點 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMivwJBVV95cUxPZ0had05yVEJfQ0hzZUlrWjkxc1VWb2MwUU5Qc3B1c0Y3b3ZfTmhuOW1pRUtGcUNhN2NPSkozbTJKUElmNmtpUzlsdTlJTkY3N3BHS3Rya1BaMzBLcGJhb2loYXBWaXlJcTBPMHRURnFHaFlJdm9OR1JCbmFoYnhvWXBjUDJFV1kycG5mam1XbEZ0RlMwcURTS1MxdUtXZjJfZzByM0c5Z1Z3SDd3RHVjRFlUOWN6ZVZwZU1XU21rU003a1M5N3BkczZyaEotQmVyRVBnYUQ0MUJWX1hTM0JjZmNYSGFmTDAtZlpYLWFzX2lfOFV2dFFGR2FhZ0kzbXlNcEgzeVFYMEtJV1ViUXRhYnlKOTJUNkFnWmlWTnNKYU5WUjJ2dG5ZX1ZzNFM3dlVGR3A3ZldXU0JQcUVVYk84?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-31T06:38+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
       "title": "美股大跌！費半重挫7.2% 輝達、台積電ADR下殺 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMimwJBVV95cUxQYXd4TzlGdkI0M2VBdHMyREl5Q1o3ckg1WlZIMDZKODZGM3hsaFNkd1pZSnk0Y0xvYnBoUk5pR0dJUUl6WHdOZkZNbXV6RFNJekhqUzVDSTRrNU1RN0MxOHNLclNKbmpSSWtBZzFsTnk3QzBXNUpiejNtM2dYWEVRV1JyZm1ZZ1BJRGdJVHUydkM1M3NZVkpQNllRYTY3M0ptZi1yejZkenRkYkJKYl91SGRBWUpJZFhhSy1jY1lwNTVsZDZYdS1jY3R6NUZvS19kTFdlNHBxQy1iUUtwTXkzZmxRaHFiT0xNbTBqOGZqNXRxekRjMHRkQktJNE9tbHlSSS1hTURoUW55UVVaRUtmOGtya0Y1QTBYU3Nn?oc=5",
       "source": "Yahoo股市",
       "published_at": "2026-10-31T06:05+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Targeting the Global \"Right-Hand Drive\" Market: Waymo and Toyota Announce Level 4 Autonomous Fleet Testing in Japan for 2027 - Mashdigi",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5yTDJ4eEhXUEktamQ3eGl2QVZlUVpMeW5iVDkwM1REWkM2bUtDeHgzRnNZVlAtZ1BwX1ZwTFVqOFRUR21MRjVNb0s1MDdqSXNPV1l4b1hMaVNSUjdvMTNtOFdSS2dDS1h6MVd5NnVmTXRWZG9B?oc=5",
-      "source": "Mashdigi",
-      "published_at": "2026-10-31T01:59+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "China Mengniu Dairy Stock Rallies 9.4% in Hong Kong - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQQTY0UmZVSEJHMUxEdXFrV21kdEg1S1hfNzZBc1FzMFM3NGltb2JhbnFGcHVWSFZkSE94XzlOZFpRd3FLREs4X1FLRjNXTE1JdGpLMHVFZ1JNNERkc0QxZ3hiZkJXSmpZUm1yNFlaNkx5OW84eHVreEdldno1emp2VkkxSE42TTNfSk1yc2JXcEk2eGl0XzhuYw?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-30T22:54+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "拓璞數控(07688.HK)向中國證監會提交H股全流通備案申請 - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1YU3B0bXRlQUcxLWtYR1BZcVd4bW9qM0RWSUlKOUpJU2lBalRkYTMzQVY4NlpJWDVNdzZJVDRka2EwVEZoZkNKcFZ0N2xsOFY4RmtMSEdXVUl3Q1VLcUcyei16bjRVLU9vbGFN?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-10-30T22:18+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Hong Kong Market Quick Look | All three major indices declined, with the tech index down 2.84%; tech stocks fell, as Kuaishou dropped more than 3% and Alibaba and Meituan both slipped nearly 3%; semiconductor shares also slid, with HuaHong Hongli do - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPM1RwejVuZm5WS2tHal9rQmQ3OGpwaVJOOFI2SHlUMjdreXBLcGtlWEVNSGNKdnlFeDdMUXI2cjR2XzREeUZZcWhEc1laY3l3QVduTlBxeXNlRkxaRm1hZzFJenM5clVxLXhZbzVSYTM4allBdWVCSERUMzJtWXhtV2twZzV6QTFuaGc1SFpuOHNWYzVKTmk3akFneVRIQTNqY29yZFlB?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-30T19:52+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股跌逾1100點要救市？ 金管會、國安基金齊發聲 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiuwJBVV95cUxNWEdlQmxMVE16QUR2b0E1RlhROVR3YkNMMmRPcFE2S3hmSWptY0t0OGk5VEVQaGoyQ0RoMkRkaWo5aVZDWk5IRkpxdE1Rd2dVN19wUWlzSUxfaHRUUEtuX2J6eGNLeUFoalVwZ2p5Tlc2QWNRYmxhTHV6N0lUSXFZZk1uTXV5UHNRVVRqejFMTTk1SFBDaHJ6bmNrSVdFVmNwQzdHTFF6RnZ6Q0xBS2prOEpxSU1rS1lIa2Vjc0NCYlpFcmZaRDdxb09MTzJTWG9jVnlKbFdQOUVaVEV1dXRQcTNzckVQNzR1UDdhZmIxRjJIX3FGWDlFbFJnV1BQc05uNlpMUE4tUk8zbmhHZDhzVG4xdUxOc3F5SFdVZjBicVhnV05MTktVRmhwVzN6UE5Rd1E2VXRRQ0FJQmc?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-30T19:23+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "半年線也破了！股民崩潰問「台股到底在跌什麼」 網反喊：還沒上車快上車 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMivANBVV95cUxOUUh2T0Uwcl9hSjlfdlBObjBLYnZ0M3Bkc3ZQSjlxLUVEWndkMjZjSU9HRlFZdnJNSjV6WklGRXVHNjlPXzk2SHh5UHc0WV9lMTBQdXFUWTJkLVVfNHpLdTNablh5dVhWVk05eUl3bWZCQmJyLVlJWjdlSXBTZnN1Vng3REdFNnJOM2V0ZmM2UE1jV04tb3U1YUZnSWJ5SThNZy1WSnFqVkFhUFF1czg1M3hPVmNVNFlaTjAzcUUtVE1VaE02M25JeTJaTl9OUVFyV1hSZXV2Sk9Xdkx4TE51R01VWUhJbldsMHNqOFlLT2RaYmpFSUZNd3JQVFVsVTBfMXRYZ1JmUWhFQ2FOSkZpX2VUdTRkTUdVRkxNVGRoQWFWVHUxSURHNFIxT3B0MEo1SVpUTThiVUE1NUMzTmNfQXJLUHdvY3o2Y29FWGQyWlBWVmNVbDlic3lvdTZUNTdvOVJ2VVJDZnJwOUlNV1BuaURuZDBBbWJBRDhJVnNHei1hd2UxZHF0eUdtQS13cTRoX0JFU25HUTNkOE9lT0ZyUDk0RURXVjN3QUZ2Qmx4VW9VWmYyOVpuaGRVbG4?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-30T18:45+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股何時落底？40年投資名師揭「4大買進訊號」：先拿10％資金試水溫 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMihwNBVV95cUxOSWt2THZrSnR4WC1fenk2NVdTZVpKbEtHb1RCd3Z6QzFrWFBiTTllT3pSZlluOUVPZmxweFVCNFd6ZWhzUzBLU1lUY21yNTNjMlAtaW9LNmowV091VWplZE85MUFtRGxDWERYRng4VHI0NDh4R05CTW9iNUtLY0JZRFIxZEJKdU9zNFpZYUFPVTlJN19nSThqLW5mUnZfb3k1Rl90RHMwbEJ3U3hLNzI3cmw1NFlrQUw0aDlTVHZOUExPU3RtaTcxTTZqZWItaGVQQVpZODBZaUxDZ2RlREJMbW5iZWZLRW8tZ3B1aGZLRmd2cTVpazhLakFNcVRWTEZUVzljLXUxX1lRUGxGZUVsTjkydlBYbjNYMmlxOWpNanFrd3k3aGVBTUx5eXJBdEJVRUNnLV9wbV9aVG4xVll0WUhMLU9UYTZKYTVpb3ZyWTRtemdyX3hxcGtCNy1Ddkh5WVl5YzNpZVlRLVNRMFRWSkh0M2RfUnEtS1hMT3ZPVjdyNE5OTW1N?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-30T18:15+08:00",
       "importance": 2,
       "risk_score": 0
     }
@@ -186,6 +186,6 @@
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-31T10:35:57+08:00",
-  "checked_at": "2026-10-31T10:35:57+08:00"
+  "updated_at": "2026-10-31T16:48:24+08:00",
+  "checked_at": "2026-10-31T16:48:24+08:00"
 }
