@@ -8,14 +8,14 @@
   "ticker": [
     "⚠ 全球市場風險｜費半 -8.5%｜NASDAQ -4.2%｜日經225 -2.1%｜KOSPI -4.7%｜台股加權 -2.5%｜恆生 +0.9%",
     "⚠ 全球市場風險｜美債10Y 4.93%｜VIX 19.4｜WTI原油 102.95美元 +0.9%（超過100美元警戒）｜布蘭特原油 112.33美元 -2.2%（超過100美元警戒）",
-    "⚠ 全球市場風險｜Top 20 by trading volume | Intel plunged 28% after earnings, marking its largest single-day dro",
+    "⚠ 全球市場風險｜油價觀察｜〈能源盤後〉美伊衝突升級風險升高 原油漲逾2%收半年高點 布油月漲13.6%",
+    "⚠ 全球市場風險｜美股崩盤拖累! 台股盤中狂瀉1642點 失守半年線",
+    "⚠ 全球市場風險｜AI供應鏈慘崩！英特爾下殺28%、費半狂瀉829點 台積電ADR跌近6%、台指期夜盤退回4萬4",
+    "⚠ 全球市場風險｜台股週一剉咧等？科技股「重賣壓」英特爾崩跌逾28％",
+    "⚠ 全球市場風險｜台積電股價重挫逾4% 資金外流與宏觀逆風夾擊",
     "⚠ 全球市場風險｜美股大跌！費半重挫7.2% 輝達、台積電ADR下殺",
     "⚠ 全球市場風險｜Targeting the Global \"Right-Hand Drive\" Market: Waymo and Toyota Announce Level 4 Autonomous Fl",
-    "⚠ 全球市場風險｜The wave of selling in tech stocks does not signal the end of the bull market. Wall Street stra",
-    "⚠ 全球市場風險｜China Mengniu Dairy Stock Rallies 9.4% in Hong Kong",
-    "⚠ 全球市場風險｜拓璞數控(07688.HK)向中國證監會提交H股全流通備案申請",
-    "⚠ 全球市場風險｜Taiwan Semiconductor (TSM) Stock Forecast & Analyst Ratings",
-    "⚠ 全球市場風險｜Hong Kong Market Quick Look | All three major indices declined, with the tech index down 2.84%;"
+    "⚠ 全球市場風險｜China Mengniu Dairy Stock Rallies 9.4% in Hong Kong"
   ],
   "markets": {
     "US_SOX": {
@@ -81,12 +81,36 @@
   },
   "active_news": [
     {
-      "title": "Top 20 by trading volume | Intel plunged 28% after earnings, marking its largest single-day drop on record; Eli Lilly and Co. rose more than 3%, hitting a new high; Apple's market cap once again surpassed NVIDIA to top the global rankings; S&P downgraded - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOSkR1Yl94a3hyWlpSOWxKU2VzVzV2Z0lnWE9pZzJPODl3enZwWWNsQUM3STNvVzIxM05zaFhqNExhd1lDU0szd3ZkOVBYd29LdUN1TGZWMEhWaDJZYWlac1dMWWJBTDRYdTEzQ1lKTFowRUlsdFdJUW5xVWZfVFo1TVk2MWFRWWlhMk5tYk51TW5UTmpBTktzOWxMSTlicEFC?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-31T05:55+08:00",
-      "importance": 4,
-      "risk_score": 2
+      "title": "美股崩盤拖累! 台股盤中狂瀉1642點 失守半年線 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiuwJBVV95cUxQaEx2UmRvb3o2anJzWW90Nm1GM0NvS0cteDB0NWlWNFVsQnV1OEdTSTAwem9aOGtXbUZuYUNjSXAzUHlEZVpMOXkybnpvTWF1SEJPU0lRQTFFcG9Lakl3eEtwdEZ0QTFtVExsUGcyT0w2b3J3aUxhNmZ0UEEwbXZKSjNkYXNqcm5WZElJWFliRk9Rc21UcjVtQnFYLTJVblpxMUQzR0F2aGJ2MWduUGZ5TG1ld2ktY0R3QjJCeDN5NzlUX011RC1nMncwZ0MwN3NoUWNvbjc5dXI1NnV6MFJVMDhvcC1EVlNzYU1WVDI4eEVJMVQ3RVA5eXhCMFE4dXBLcGRGMlpuYTJnQkN2ei1NblJMeDZhNXFod2JSOTBBMlpxazNSdjdiVjVHYjJDZTZqV3FXZEFVRGZvX0k?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-30T22:38+08:00",
+      "importance": 5,
+      "risk_score": 4
+    },
+    {
+      "title": "AI供應鏈慘崩！英特爾下殺28%、費半狂瀉829點 台積電ADR跌近6%、台指期夜盤退回4萬4 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiwgNBVV95cUxOd2xIUDgyUTlwLUlBMkdwM3NZNF96alVsYTJsWE1qRTlDNnFyTmQyNUFkWXpQcmRla1lCZmpqZTZ1RTVVb3pfaHBwVFUwN3NtU1g5UXpXbzVOQ2V6SlprOHZKSW5ZZ1dHZEtKRGFQNlhhVDF5WkR5bDV1WDBFeW9qSXRKUWV6LTQtZmw5NVc2OUVTZ3hMcGx3XzMxY09rdEl2M2swSEh2NUxncmJlSUVfRV8waHAwM0hGX1RMMVZfd1hBcWJ2UVRCTUZQVTBrYi1CaUJ2a2Rza2huMHRuUVBXMm80OFdCUTl4VWRVLTE0N1RwbXFBM1lCdFBSS3Q2b3F1N3FEUGNpRlJTTDFSNUJock10WklsNVNyeHNTUUNOM3VyWXVodDRlcFh0cEhpbUM0U3BRUGhtV0tqTnFRRjJoYkNpbjZNdnNJZHZTbmtOOU9vRFB5ZWpDNUxVWVNqeFR3Wjk2TDRFcUpkdWpQd0RHM0ZVU25KTUVHbm1XM0tBTGlRMzYzR1FkbE9zSXRHSHZpRGQ4TjZaeWQ1QnRKOUxCVHNIUElnZkFGV1dDMVhNMWgxek1ycEJ2bUhKd3A5V0U1a3c?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-31T07:15+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股週一剉咧等？科技股「重賣壓」英特爾崩跌逾28％ - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiuwJBVV95cUxOb3VqTmowMF9pQW50aV9CWGtuMzhGbEhreFJ5VDl5U2NHb1ZSekh5cHZrWkVydjZHaWNOTjNTM3R2UEJnSlgyQWpPS0tYaHVlRXNXRDJuLTZ0cWNaZ1hMX2NaRVM0bF9mRXM1NElqWEJDLVIzR3FTLWZkZnRRNGlLend6MkszelMxRDhHbG5ncGZUMU5uV3psX29HZ1lXZHhEUHF3U1BZdVNRSmxuNDRuS1dmajBuR2dzaklzX1FiWDY5TlRUd2tvM1pNb0xsbzFwczBJaFQzUDk4b0VkMWs1V3ZwN0E1VWxwM3dkVVcwRDc1c1lDcFZwcFVSeklzR2Vja08zdTI2bm5BNnZCRl9lWE9XSVRGdU5DWGVJNXRLcHJiVUNRMUNCblBpMjNodFNfVVdBQmRxQzYwanM?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-31T06:53+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台積電股價重挫逾4% 資金外流與宏觀逆風夾擊 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiwgJBVV95cUxOMkJZSmdWWmsteGdPbmg1ajUzdW1Xb1JYQWVSUGFYbW9NSGhocGlLOVlRNXhiZUR2SmNRSTRodHlMeVlxZHZYbHVWN0t2d3VPLU1qWHNITEg0LVNROGxfd1B0eTFwaS1ielNtR0xXbjVwWkhQdTR2R2xCUVIwOENUeHpRVDI1SW5UNkdzWVRzZDUtcGtQNmQ4UUxQSmRqTWpZREZBR244SVZ4NTA4MzdNYkwwNUtPMXZBRHhTcmNtb3RGTVU2LWI3MGx0alh0VU4zMXltWDlKOU1NM2hHaHdtbGFhM2gtZFBod0RtcUljaUFaeWNZYjVxMkQtTG9CNUZUemtIZnlHa1lJRExqZnVjSUNVZEpJel9yOGJWQ0pQcUU3S0lsUDBjNDJRVWpYSDB1WXJGTGxUa2d5ZnlDLXN4c0JR?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-31T06:41+08:00",
+      "importance": 2,
+      "risk_score": 0
     },
     {
       "title": "美股大跌！費半重挫7.2% 輝達、台積電ADR下殺 - Yahoo股市",
@@ -101,14 +125,6 @@
       "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5yTDJ4eEhXUEktamQ3eGl2QVZlUVpMeW5iVDkwM1REWkM2bUtDeHgzRnNZVlAtZ1BwX1ZwTFVqOFRUR21MRjVNb0s1MDdqSXNPV1l4b1hMaVNSUjdvMTNtOFdSS2dDS1h6MVd5NnVmTXRWZG9B?oc=5",
       "source": "Mashdigi",
       "published_at": "2026-10-31T01:59+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "The wave of selling in tech stocks does not signal the end of the bull market. Wall Street strategists note that fundamentals remain robust, and the correction may present a favorable buying opportunity. - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQRFFyU3RySWJSNGM4cmF5T3Vnb3NNV1JuSENKdm9EZVY0VWxiUGtPQWR6cEg4VnQ1bzRfWnRQdDdJcmVjN1FRd2tlYXpwRVQwdGxNLXFrbVhTM0J4MjZtTE5YWklUVUpRcDh4ZkUtVTk1MTVwT1hFUE9WOVctdlhFYzlhTWZLSUJDbmRXSnlVQ3ZfS0VfWEV2QQ?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-31T00:21+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -129,18 +145,18 @@
       "risk_score": 0
     },
     {
-      "title": "Taiwan Semiconductor (TSM) Stock Forecast & Analyst Ratings - Moomoo",
-      "url": "https://news.google.com/rss/articles/CBMitgJBVV95cUxPV3NCMmhla1FLN0kyWWpyNHQ1aHczSWhvMVhPSEpHUllVRjA0RWdvSnB2NmQ2V211Tl8zdjlYcmdxNDJhRWRfQUlNSnd5RG5EY1lzZjNVb3hlTXg3NFdkVnFnVWtYcVhHQXc2TzNaUzBrLTNVUE50WkRrYm84NkVwZm1ObGkwaElYXzhjc29ydFFGd1RZajd4bHNUYWEyR1dsOXlNYXNkQTRWald0MTNXM29JQmQ3aHpKYUdRS2FVVXNrYkFGWlRWVkVSQjctTklZMkR3cC1zWkM3d08tMmZHelR1V2gzRjE4anlJV0gxSm1LUVpCMzhJblZtVENjeWZNQndjc041b2cwY3BvREZ0eUpkZXhidk1SbFgwRHdlRjFTMGwweEZSbEFLdVBwOTNUVnhicTNB?oc=5",
-      "source": "Moomoo",
-      "published_at": "2026-10-30T22:17+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
       "title": "Hong Kong Market Quick Look | All three major indices declined, with the tech index down 2.84%; tech stocks fell, as Kuaishou dropped more than 3% and Alibaba and Meituan both slipped nearly 3%; semiconductor shares also slid, with HuaHong Hongli do - 富途牛牛",
       "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPM1RwejVuZm5WS2tHal9rQmQ3OGpwaVJOOFI2SHlUMjdreXBLcGtlWEVNSGNKdnlFeDdMUXI2cjR2XzREeUZZcWhEc1laY3l3QVduTlBxeXNlRkxaRm1hZzFJenM5clVxLXhZbzVSYTM4allBdWVCSERUMzJtWXhtV2twZzV6QTFuaGc1SFpuOHNWYzVKTmk3akFneVRIQTNqY29yZFlB?oc=5",
       "source": "富途牛牛",
       "published_at": "2026-10-30T19:52+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股跌逾1100點要救市？ 金管會、國安基金齊發聲 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiuwJBVV95cUxNWEdlQmxMVE16QUR2b0E1RlhROVR3YkNMMmRPcFE2S3hmSWptY0t0OGk5VEVQaGoyQ0RoMkRkaWo5aVZDWk5IRkpxdE1Rd2dVN19wUWlzSUxfaHRUUEtuX2J6eGNLeUFoalVwZ2p5Tlc2QWNRYmxhTHV6N0lUSXFZZk1uTXV5UHNRVVRqejFMTTk1SFBDaHJ6bmNrSVdFVmNwQzdHTFF6RnZ6Q0xBS2prOEpxSU1rS1lIa2Vjc0NCYlpFcmZaRDdxb09MTzJTWG9jVnlKbFdQOUVaVEV1dXRQcTNzckVQNzR1UDdhZmIxRjJIX3FGWDlFbFJnV1BQc05uNlpMUE4tUk8zbmhHZDhzVG4xdUxOc3F5SFdVZjBicVhnV05MTktVRmhwVzN6UE5Rd1E2VXRRQ0FJQmc?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-30T19:23+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -159,26 +175,17 @@
       "published_at": "2026-10-30T18:15+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "Hong Kong Market Snapshot | All three major indices rose, with the tech index up 1.40%; memory, optical communications, PCB, and semiconductor stocks rallied, as Zhaoyi Innovation gained nearly 10%, Zhongji Xuchuang and Jiantao Laminate Board both c - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOTk5nQjIwQ2c2M19zdm5SNE5zV2phekE1Z0VDMlkwNDlTS3YwalNLWk1pNi1xNlVHNUF2cnNOTTQ3cmxENHpBUENHSGNQMUNqU2Npd093bUpHVGh2OVg5Z1VvNEtUanVVaE8wMkw3T2FRYkxmenNTOE53RGdoUms2TWY5OW81T3ZKc0RZUXFNTHNqZGx1eElheG1KNXd4aHgxekluWQ?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-10-30T18:05+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股暴跌兇手？ 外資放空超標 金管會最新回應出爐 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi5gJBVV95cUxPU2U0WG9MTldlQ1hCY21zUm5LZXB5am11OFlidTVGOUdxeWVzX2RhelcxaDBEY0h6Wll2RzVMcFk1dzM1dlcwQkpBX0tRLTlad2gwWWpuRmZBcjAwcTM1VUhCN1V3OEJfYVdEZGxGYzhKZ3REWlZ1bnFOeTlIZUllSGIxU3BnN3l4WDB1WmREd0F5RmNIeXpqbDdwd29HTVlfTm1qMUVfWTBObEFycFAyWUdsRjVxMFZDLXotSFVKSXhGOGZSaFdBZ3kzNlZoOHFqSGQxREE2WXBTSU5wRUpFOW9haEZvZmI0VVdlc0pIbjYyRG1GNTJQaS1yNFpTYjZ5ZG9obHdpVnpYQm1ZR0g4QVRRazlaS0FKcmVGZzcyNzQxMGRzeVYzclh6VjhXNjBjUHlMLWxoR05ReDR5UWZVVkVuQjhuaGpodXpyUllSWS1HaDVYSHFPU1hZczdoUm5MS3p2Y1Bn?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-30T18:02+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
-  "oil_watch": [],
+  "oil_watch": [
+    {
+      "title": "〈能源盤後〉美伊衝突升級風險升高 原油漲逾2%收半年高點 布油月漲13.6% - 鉅亨網",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9HVTllSmhqOE9NRVl2MnMyazVySlNPSGFHWmV0TVBBT3ZJWFl5U3hlTU1SSDdRZTgtek4weGMwZUhvRUpwN2ZVSENwZkYxWXM?oc=5",
+      "source": "鉅亨網",
+      "published_at": "2026-10-31T06:26+08:00"
+    }
+  ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-10-31T07:27:08+08:00",
-  "checked_at": "2026-10-31T07:27:08+08:00"
+  "updated_at": "2026-10-31T10:35:57+08:00",
+  "checked_at": "2026-10-31T10:35:57+08:00"
 }
