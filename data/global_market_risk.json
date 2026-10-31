@@ -84,7 +84,7 @@
       "title": "個股概覽 | 個股 - 股市 - CMoney",
       "url": "https://news.google.com/rss/articles/CBMiREFVX3lxTFBfVGtPUmhQeF9nalNLNm9zTGJWQlREWTlFa2dVeEhkNElpN1d0OXlyaFF3U3NaYnBodklvejVEU1YtdkNl?oc=5",
       "source": "CMoney",
-      "published_at": "2026-10-31T22:48+08:00",
+      "published_at": "2026-11-01T02:43+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -153,6 +153,14 @@
       "risk_score": 0
     },
     {
+      "title": "台股連日重挫行情｜新聞事件整理與重點摘要 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5USGVSSXhtQXFRRUdKV3FyU3lBVnFIZEU1bEw0Q3k1dTQzWGR5blM2M09vWmJaeXFSZ19tLVhyMWZLYkJiSUlDX0cwS2ItbVB2S2JQT2lsVDF2THlWaGpMZjhZSWh2d3RKQUxPV0ZPYmhYSXAtTW91dkw5X1p0SEU?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-31T13:42+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
       "title": "二哥神話破滅？聯電兩天慘崩近13%、股民嘆「準備回60元」 不敗教主曝觀點：還是可以買 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMiqgNBVV95cUxQd3FDaGNxQWxHcnBiWnpPTkxuTHFIcnhRWldWZXoyMWV4MGZhZlQ4NHZCWVZYcEY0enhfNkJlM0FiZTV5bzFMVUpDYm1XWTFlZUdJRzBZazFudm5rd2xHSXd1RzhEX19GUHhzR0hRd1FBaW1BcFFGR0dRT1FZYndJV0hTU2tYSmNHMldQZE9kcUxKSVBaUGR1eGRzVGh3SE91UHJoa2lfS0dBYzV4UGdEZmdGaTJZRXFHQU5OUlF6WTF1UF9wN3U0NlJDV09xdmE4RVF6Tl9jWTBKZEw3TFVHRTYxeUJWSnBiSVhXYlZGVmxhSmZSd3hQTTQ1QXlySGdhaTF0V0dLYl9LVzdBTGcwNGV3cXVBLXRocERpb3pEWG0yc2drX2tHWEpGLWw2RkY3bEpXLTBKUThIX19hTG5LYXJGMEdSM21CbnFpQXlSU1lfUjNXc1hra3pIMV9xbnpsTVprTW9LWjJwcmJlTnBPNlYzNWZDQ0tRUjZwNllVUkE5eTMxUjk2RTV2ekxOdGgzT3Nmbzg1QUhjVlN3bENuc0hiRGs4SS1BU0E?oc=5",
       "source": "Yahoo股市",
@@ -167,14 +175,6 @@
       "published_at": "2026-10-31T11:58+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "台股失守半年線！八大公股大逃殺「5檔債券ETF」1.9億 00632R、00665L也進賣超榜前10 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiwAJBVV95cUxQS3czb3dyTUNEMmlIcTY2NWg3RUtZYkE4U255bkIzMEJuZkU4eEt5ZjNKRDdGRHdXZ21YOEpXM2txajBXNjVSRUxjMXF4dF9lVE9ZR1ExTnlsdVh5UEZad0hNUWR3QWRkdmNWRjlyZzZHVVFLcTBLMDVXY1FxaVkzaURwbVhpSjlhSWd5Zm84ZDYtaGxwbUREM3N4MEg5VFpJOElKUDROVEt0aVdNcXc0UUg4VlZlaEgyVm00NXBSd1NYdms2UWpaZ1lBakJTUFhGMUEzNEJuRjZzYTdMYlJuOHpZa1EySVlxR2dYZWUzb1JEdkdwd2piUFdoVVk0Mk9zWDctS0ZUMzlTdVdjNi1vYk1RQTFLV0xjbzZQWFZ4dnloY3VaRFN6YUZWcldnNWk3TDVzWlhuaXdUbWMwWnRzbg?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-10-31T11:15+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "oil_watch": [
@@ -186,6 +186,6 @@
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-11-01T02:49:18+08:00",
-  "checked_at": "2026-11-01T02:49:18+08:00"
+  "updated_at": "2026-11-01T05:55:14+08:00",
+  "checked_at": "2026-11-01T05:55:14+08:00"
 }
