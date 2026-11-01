@@ -8,14 +8,14 @@
   "ticker": [
     "⚠ 全球市場風險｜費半 -8.5%｜NASDAQ -4.2%｜日經225 -2.1%｜KOSPI -4.7%｜台股加權 -2.5%｜恆生 +0.9%",
     "⚠ 全球市場風險｜美債10Y 4.93%｜VIX 19.4｜WTI原油 104.12美元 +2.1%（超過100美元警戒）｜布蘭特原油 113.43美元 -1.3%（超過100美元警戒）",
-    "⚠ 全球市場風險｜油價觀察｜〈能源盤後〉美伊衝突升級風險升高 原油漲逾2%收半年高點 布油月漲13.6%",
-    "⚠ 全球市場風險｜個股概覽 | 個股 - 股市",
+    "⚠ 全球市場風險｜台股摜破季線及半年線 投信：短線觀望心態濃厚、長期仍審慎樂觀",
     "⚠ 全球市場風險｜台股進入回檔！外媒：別急著恐慌或抄底 也不要逆勢而行",
     "⚠ 全球市場風險｜台股週跌829點！三大法人逆勢狂掃「記憶體雙雄」11.5萬張 華邦電奪冠、5金融股入榜",
     "⚠ 全球市場風險｜三檔ETF同周開募！ 00419A台股AI、00420A亞洲科技限時申購蘋果AMD Arista財報發布美國期中選舉和非農雙炸彈油價11月2日起連周凍漲｜投資早知道",
     "⚠ 全球市場風險｜台積電占0050高權重！朋友喊「直接單押台積電就好」 網揭關鍵差異",
-    "⚠ 全球市場風險｜台股拋售逃得掉？策略師點出台積電抗壓韌性超越美韓市場",
-    "⚠ 全球市場風險｜Apple has surpassed NVIDIA to reclaim the top spot in global market capitalization."
+    "⚠ 全球市場風險｜Apple has surpassed NVIDIA to reclaim the top spot in global market capitalization.",
+    "⚠ 全球市場風險｜台股暴跌1156點摜破半年線！巴逆逆喊「該停損了」 股民反而嗨喊：穩了",
+    "⚠ 全球市場風險｜台股連日重挫行情｜新聞事件整理與重點摘要"
   ],
   "markets": {
     "US_SOX": {
@@ -81,10 +81,10 @@
   },
   "active_news": [
     {
-      "title": "個股概覽 | 個股 - 股市 - CMoney",
-      "url": "https://news.google.com/rss/articles/CBMiREFVX3lxTFBfVGtPUmhQeF9nalNLNm9zTGJWQlREWTlFa2dVeEhkNElpN1d0OXlyaFF3U3NaYnBodklvejVEU1YtdkNl?oc=5",
-      "source": "CMoney",
-      "published_at": "2026-11-01T02:43+08:00",
+      "title": "台股摜破季線及半年線 投信：短線觀望心態濃厚、長期仍審慎樂觀 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiowNBVV95cUxNei1QdzhSWHI4RENQRWN1NVRrZ25EeWo5RlV6RjdtOWRFck5VcjVIN2xRQjNGb3Q4R3gwbmFnNERNRk90ZW94X1RmcnZTYlZPSEFGRlpxTlJseXRiYVVwNEdfVFQ1UElDLTFtQXJwRjdvd29JZ0RVV0ZXSG40WC12ZkhiN3pYdDRoYUdLVFRsRWJiYlZIMDcxdE1pU1ZJOENPTm1rdkxIZUw4YjRFSW9oSUNoTnNDVW5DcERfem5Fak1Cc3B5eFhlMEtITDhQc0xUV1F1Z0lVS1BaWFhHRk4zbTE4VjU5U1RVSWVaR3lhSmNlMTFRZ1dBa3NiN3FzN2QxcVpTQlU5a1phSVJiOEdVX1U1Wl9NeTQ5OGhOdWs5bVBtOTVOOVhXREswQTBCYWFxTWhMRVUtd294dE4tT3piNTU5b3pHVkxDT094RkVTMTQxMThCSDlCaktYZkt2UDhTQlZtSVViNWtQT3ByYkliNFUyT2E1aXlZb3VRTjhtR2xqS1RZN0podlE1NUlHaGtUUndSY1Jrd0VVQkZFNDE4clpVTQ?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-01T07:00+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -121,26 +121,10 @@
       "risk_score": 0
     },
     {
-      "title": "台股拋售逃得掉？策略師點出台積電抗壓韌性超越美韓市場 - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5LeElWTVBPZnpndnVLcG45ZWFUUnJwQTQzOEsyOTI4VkVxQ3c0STNsVjEyd0RIWDFxNG40dm5WNEtrcnpNUFpUaUpKV0t1ZmVLenc3QUFpamQ?oc=5",
-      "source": "自由時報",
-      "published_at": "2026-10-31T17:37+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
       "title": "Apple has surpassed NVIDIA to reclaim the top spot in global market capitalization. - 富途牛牛",
       "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOQmc4NkJhUUdoRFVvMnVZOXBqY3U1TENWY0FJX2JlYVhqTlBnOUtvMHI4dmgtbkZVVHZlQm4xcHA4dWNQN0JpcHp3R0xpNGw1R29fQnl3OG9jbUZpVmNWWnQyS2F0M0pMaVIwcm5yM1hNOXBNcXJDMU5vVG9maUMzZ1hGYVhidHl6UzF6TlQ1S29uc2VaaGdJbHJ5WUdYQ1BzLUhmZUhRNUlia0tlSkpqLS1zQk02Z29hRFBBZQ?oc=5",
       "source": "富途牛牛",
       "published_at": "2026-10-31T17:26+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股周一要挫著等了嗎？不敗教主喊跟小強活下去 列15檔「美而廉」股 - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5HamI5aS1qN2RvN1pqT0R3d2FCWU83SFpQU09xb0FCQ3pyZ05rVHB4WW4tbzdmbXRwLS00N1Z5WU1YLUEzaWhuaXBKU2FOY1lMNzlnZnRmN08?oc=5",
-      "source": "自由時報",
-      "published_at": "2026-10-31T16:55+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -175,17 +159,26 @@
       "published_at": "2026-10-31T11:58+08:00",
       "importance": 2,
       "risk_score": 0
-    }
-  ],
-  "oil_watch": [
+    },
     {
-      "title": "〈能源盤後〉美伊衝突升級風險升高 原油漲逾2%收半年高點 布油月漲13.6% - 鉅亨網",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9HVTllSmhqOE9NRVl2MnMyazVySlNPSGFHWmV0TVBBT3ZJWFl5U3hlTU1SSDdRZTgtek4weGMwZUhvRUpwN2ZVSENwZkYxWXM?oc=5",
-      "source": "鉅亨網",
-      "published_at": "2026-10-31T06:26+08:00"
+      "title": "台股失守半年線！八大公股大逃殺「5檔債券ETF」1.9億 00632R、00665L也進賣超榜前10 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiwAJBVV95cUxQS3czb3dyTUNEMmlIcTY2NWg3RUtZYkE4U255bkIzMEJuZkU4eEt5ZjNKRDdGRHdXZ21YOEpXM2txajBXNjVSRUxjMXF4dF9lVE9ZR1ExTnlsdVh5UEZad0hNUWR3QWRkdmNWRjlyZzZHVVFLcTBLMDVXY1FxaVkzaURwbVhpSjlhSWd5Zm84ZDYtaGxwbUREM3N4MEg5VFpJOElKUDROVEt0aVdNcXc0UUg4VlZlaEgyVm00NXBSd1NYdms2UWpaZ1lBakJTUFhGMUEzNEJuRjZzYTdMYlJuOHpZa1EySVlxR2dYZWUzb1JEdkdwd2piUFdoVVk0Mk9zWDctS0ZUMzlTdVdjNi1vYk1RQTFLV0xjbzZQWFZ4dnloY3VaRFN6YUZWcldnNWk3TDVzWlhuaXdUbWMwWnRzbg?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-31T11:15+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股暴跌逾1600點嚇壞股民！阮慕驊曬對帳單進場「這3檔」 喊話再跌還有子彈 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiwgNBVV95cUxQekpQQ1E1a3hkWjBoNXVWdG9FM3ZWbGV4LXF5ZURDejlWUW1XakxVY1dXSkdDNHRJdkJqbVF2ejZqS2V5VklJN3EtM3l4TV9EalZxZ2VUUnozUWJ2ejlPWUxrWFQzT1NVbzlRZGd4bDJWRG1NUHN2a0w3UG9rR1BlNGw1TkIwVGM0alRUaFlqVFAxOXh5X3JGZGR4Qmp3M0ZjMFR3SzZRa21OWU85OHRBS1ltYXBFeENPQjV1VkNqYUtfZTRGRXBCcl9wZElFZGhmSG9aMm1MUE55dHZRM19DanJ4bGNxbWR5SDNXeEZtcnctalJjekxBdnFlYVE2R2ZBUnh4aDRaNDdpZW1xbXdZa1NqR3BHdXlWTnhZckx5NUZISTBHc2tJaEliSDc4TVB5NGYxd0FJcmlZTkdtVzVLNXNtVHhiRlJzZGx5QUFtc2gwZ1pUOHdqSjhvWTRUNGtxRDljaEFpU0FuOV80LXZ2UlUydlVnc1JQNVA4bjZrUzR4SmhsaWRLZ1lxcnNIa1RwR2cyVkxDWTAtcmRhRDBJT1hhd1ZZSWRjNWQxYkpwQllqazktV3VPRC1tV3BJSmVHNmc?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-10-31T10:31+08:00",
+      "importance": 2,
+      "risk_score": 0
     }
   ],
+  "oil_watch": [],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-11-01T05:55:14+08:00",
-  "checked_at": "2026-11-01T05:55:14+08:00"
+  "updated_at": "2026-11-01T08:30:41+08:00",
+  "checked_at": "2026-11-01T08:30:41+08:00"
 }
