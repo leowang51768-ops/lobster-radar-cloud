@@ -9,13 +9,13 @@
     "⚠ 全球市場風險｜費半 -8.5%｜NASDAQ -4.2%｜日經225 -2.1%｜KOSPI -4.7%｜台股加權 -2.5%｜恆生 +0.9%",
     "⚠ 全球市場風險｜美債10Y 4.93%｜VIX 19.4｜WTI原油 104.12美元 +0.0%（超過100美元警戒）｜布蘭特原油 113.43美元 -3.6%（超過100美元警戒）",
     "⚠ 全球市場風險｜80% Market Share Isn't Enough: Harley-Davidson’s LiveWire Issues \"Going Concern\" Bankruptcy War",
-    "⚠ 全球市場風險｜China Construction Bank Posts Higher Q3 Profit; Operating Income Up",
     "⚠ 全球市場風險｜台股10月慘跌近3千點11月風向變！ 投信：短線資金保線、金融股部位提升",
     "⚠ 全球市場風險｜台股週報》外資提款撤退 4萬5千點攻防",
     "⚠ 全球市場風險｜外資10月殺紅眼！台積電遭提款3859億元 「面板指標廠」被重砍56.6萬張登頂",
     "⚠ 全球市場風險｜英特爾重挫近3成台股周一剉咧等！ 法人：45000點及10/30低點44726點成觀察指標",
     "⚠ 全球市場風險｜週一剉咧等? 台股10月市值蒸發10.5兆 郭哲榮:年底5萬點",
-    "⚠ 全球市場風險｜台股逼近5萬點進場做多！女網友期貨一路攤平 最後慘賠63萬崩潰刪APP"
+    "⚠ 全球市場風險｜台股逼近5萬點進場做多！女網友期貨一路攤平 最後慘賠63萬崩潰刪APP",
+    "⚠ 全球市場風險｜「別人恐懼我貪婪」錯了嗎？他喊這波下殺不單純 網淡定：台積電都敢加蓋了"
   ],
   "markets": {
     "US_SOX": {
@@ -89,14 +89,6 @@
       "risk_score": 6
     },
     {
-      "title": "China Construction Bank Posts Higher Q3 Profit; Operating Income Up - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNRGVXay1PeWZZcXlQWG5mU3RCM19nT2g0bWhLSkNUM0pHMG9ZS2pweHBvY0l5SVJWT2tGYWotUjlNQTBvY1M0ZDAyd3JaNlV3Q3Y4X1BPR3BIUEh3X1FVSW5PY1dLUmVvcXVhenNKb3FiaTZ5Wk8yUWpoLXNmUGEtck4wSVR1Z25pLVZqNTU3bW8xRDEwOHBOSUxnckFPeHdMQ2NBZFFZZ09CNTZ1X3c?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-01T04:08+08:00",
-      "importance": 4,
-      "risk_score": 2
-    },
-    {
       "title": "台股10月慘跌近3千點11月風向變！ 投信：短線資金保線、金融股部位提升 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMiqgNBVV95cUxPWHdXNmFUWldsb3J5SEpHeHROYVJyS2ltMW1mMmFkX2h0SGtMN2lyUF9LVkFTSXU2aXRmVkhqR0NEMjFUUUUyZzAxUDAzUXU5MW9xLVFoeHdTMDU2NHdkNDRXMkF2N25OSW4yZUM5RHJGckp2VkdSQVBOTlpyUloxSFhuTWc3dGFKRUpHcWNKREszMy14ZjNqT1lXdUJJNjlCUjJydGRlSWVBMDl0ckpMVHJSWHVEc0pDSGdqb2E1QlBaQlM3ZmNLTkxlQ29RZGVBbGVWd2EySjBla1diQ2VvZUwwY2g2bGYxWXMzOHE3RUMtQkVJUjY1ZkZyS3puRE9zbkNGaEJLVFdOM0dNX1RPRXZacUVhUUtHVDlKS3QtWVhuMnk2QnJxWlVoTHdIdHl1Qkl5b1M3VEtxdjlxbnR6bUZVUWtxY3dhcTYwNkpHT2Fpa0p3QlJieGRObk1hbnJSOEFSSzkweWhqa1ZfSl9hVVR6ckJfcXk5SFEtQUhhSnFOYl9vbm1XZjRZUUsxckVXQ2F4OXpMZzJ5YmVFZWg3WVBtRDhNQjN6MUE?oc=5",
       "source": "Yahoo股市",
@@ -161,24 +153,32 @@
       "risk_score": 0
     },
     {
-      "title": "房市瞭望》不只台股看AI臉色 工業地、預售屋都搶搭 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi0gJBVV95cUxQbFpYWTgyTXVTeWtKT0FVdVFvX2xlT3YzSlRtSENzdFR6aXl4RVYtNHZ2aVM3UVFUWGx4Qlpic1Y0eEJsdmMwWHA1azR3Tm1iZmJ5cTRXT2VEWkpIcmdMT3NBRFZiMFJ1cmM4X3VkQzYzU2dIUS1rZTZOLXdNUmtYS1NWNUZERHNDTUJRUlUtdTVCdUhIWHFyU0licm5SN0ZmLVdiOElSSjFBV2RZX3hoQ2o4a1pNdnRpcjhXTmlmTmhsUkNDOFFPSDFhdFpfTmRZV1JqSnZhN2JUemxqS0RYNE8tT3hQNGVqX0ZOYWZBY3ZhNWFBSllmNnFJYlJrd21DNXRnNE14enJlVG1nNjktMi0xYmc3b0FaRDhNU0dSeWpIcXJ3WV9kQnRiMzNxWFcydW0tREpzTG13cEJKVFN3SUd4dVJVamhXU1dwT2R1MV9TZw?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-01T16:00+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
       "title": "台股重挫「50張50張在買」！他曬單2小時1426萬砸這檔 網驚：都能買房了 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMijANBVV95cUxPWk1FRXZFYXhOcnQzdU1uTi1WczJSLXN2N1hQMWhPcDNBZDZYU3dpcW51RXVMYS1uTklBb3VVSGUwanJQWU5fVWl2WmVDWmV0bDR6dnRyOEFjZFVkS3N4VUpmdlZlclFuN1hXRXZxMUtGZmRoa2NiOXZQLXV4cUdJMUFYZGFQOXM5bXMyWGE3VXVoZEZNRUgyVGlITjc0RHZzUTBMakRReDZ5OHg0WTNqeWUxbmlsUlIyUEx5Q0RpV2ZVbXNWVTdQczJTcEs2MnpMUHJKeEpEMTU5Nm1DODkyMkVaWnBOYmxIcVNTWnlvSzZDQlRBYndGVGxVQzJaWldyU3BmVmpJVXFrTWphdDcwRjNkVUpTQmhMQ1NWRmFUcWd3RFRQUGdFOVhXbUJxaHlHVHJEUGt6RnBFVHVWdWFTMG8yTHdrbDJqakpEOVp2VUFTM0FxQmRnZ2NIaERpaUh5ZERRcUJxeWtyN2lNdnlTbEh6MEJ6U2Y3N1ZPMmdSWkFuZFhRR2s0TXBZS3E?oc=5",
       "source": "Yahoo股市",
       "published_at": "2026-11-01T15:39+08:00",
       "importance": 2,
       "risk_score": 0
+    },
+    {
+      "title": "台股震盪嚇跑槓桿ETF股民！400張00685L全出清 網見1地方笑了：不適合玩正2 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMingNBVV95cUxOOXdxRUt5SEdWT09mckxlT2VZRFRDdlRSaDkwOHN3R3lfMktnbnpmNnNFUGVZNTJOUEF3TWJ2X2JlaC1TSmxFTVN1eWVDRk94dzBxbE5UMUZobWwwbHQ0NHVsODd5V05nT3lmNW5McjU1blhPWWRwaXF5OVZENHR3clZrTVBmSWhkNG9ISzNJMmhoNG5VcnpuZlZYbWhyNTU3UzNrZWRGSHM0Zm5rUV9ocHB1cFVNOEhCamRad1BEU3RCUzFXdS1TLUk5Y1dONFRwX2hkUjZmTzdvV3Nfc1Z4LVFPUTB5RW5rZGNFNUlZeV9JUzdmLUc3eUpvYzFwbGt3eWZmNGp5RDZBMWpLTXBOcHlXRDR4ZnloLTBFcUJzbTF1MnR4NEh6NkVDQkRUNmIzcXlINGtvMVRNbF9ybDhLa2FhR3o1TkFiQUFfU3BqWURLR1dZNlhuVE40NFN4cHgxRnRER3hHb1NtRDBPTlpoM1lRUlNhVWxkQjRxZVFSYlhQRFRXbFNjS0tQcVV3d0VPbVVRdXN0QnBuVTI3aFE?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-01T15:05+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股週一剉咧等？夜盤已破4.5 萬，美國科技財報、期中選舉與非農依序到| 動區動趨-最具影響力的區塊鏈新聞媒體 - 動區動趨",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNcDJ4aFJCNUg2UXhkRFpmbm1FSEtqNi1NQUVNR0pnSXZOckVUeC00WDluMVhNVGRZRFZHLWtNNmpjQmxxQ0w2TldJWXd5MWxJYVNGYS1BTDFpN2tXOUJiekIybVM5RjFJbWd4b3FvU203VUpTdFZMRmlEdFBKVUpQcVlFRXJvS09xWHZSYUl0SHgzME5JQm9oblhEN1V3NXlHdGUzUQ?oc=5",
+      "source": "動區動趨",
+      "published_at": "2026-11-01T14:50+08:00",
+      "importance": 2,
+      "risk_score": 0
     }
   ],
   "oil_watch": [],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-11-02T02:36:11+08:00",
-  "checked_at": "2026-11-02T02:36:11+08:00"
+  "updated_at": "2026-11-02T06:19:43+08:00",
+  "checked_at": "2026-11-02T06:19:43+08:00"
 }
