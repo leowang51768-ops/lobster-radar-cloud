@@ -3,45 +3,45 @@
   "risk_level": "red",
   "risk_score": 3,
   "risk_reasons": [
-    "原油超過100美元／桶：WTI原油 100.81美元／桶、布蘭特原油 110.37美元／桶"
+    "原油超過100美元／桶：布蘭特原油 104.05美元／桶"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 -8.5%｜NASDAQ -4.2%｜日經225 -0.3%｜KOSPI -1.3%｜台股加權 -0.7%｜恆生 +1.8%",
-    "⚠ 全球市場風險｜美債10Y 4.93%｜VIX 19.4｜WTI原油 100.81美元 -3.2%（超過100美元警戒）｜布蘭特原油 110.37美元 -2.7%（超過100美元警戒）",
-    "⚠ 全球市場風險｜油價觀察｜布蘭特原油價格：113美元 期貨重開 OPEC+擬維持12月產量 – 11月3日中期選舉 看漲120美元 看跌107美元",
+    "⚠ 全球市場風險｜費半 -8.1%｜NASDAQ -2.5%｜日經225 -0.3%｜KOSPI -1.3%｜台股加權 -0.7%｜恆生 +1.9%",
+    "⚠ 全球市場風險｜美債10Y 4.87%｜VIX 19.8｜WTI原油 95.87美元 -7.9%（高於常態，觀察）｜布蘭特原油 104.05美元 -8.3%（超過100美元警戒）",
+    "⚠ 全球市場風險｜Hong Kong Stock Market Alert | China Minsheng Bank (01988) fell nearly 5% in early trading as t",
     "⚠ 全球市場風險｜Hong Kong-listed insurance stocks led gains, as the People's Bank of China and the China Securi",
-    "⚠ 全球市場風險｜Shares of China Literature Limited (00772.HK)",
-    "⚠ 全球市場風險｜野村投信最新台股看法--【台股操盤人筆記】雜音頻傳，震盪中聚焦供應鏈龍頭",
-    "⚠ 全球市場風險｜〈台股盤後〉11月開門出師不利台積電疲軟 跌292點失守4萬5",
-    "⚠ 全球市場風險｜台股衝5萬目標不變！ 郭哲榮加碼「雞排、珍奶」：沒達標發萬份",
-    "⚠ 全球市場風險｜ETF Market Watch | South Korean leveraged ETF products gain momentum as KOSPI turns from losses",
-    "⚠ 全球市場風險｜台股早盤狂瀉800點後續跌勢收斂 台廠記憶體法說會週將登場"
+    "⚠ 全球市場風險｜蘋果iPhone Duo出包！內螢幕沿摺痕裂開 官方回應：暫不召回",
+    "⚠ 全球市場風險｜Apple, Marvell, Lumentum, SpaceX, EchoStar, Palantir, and More Stocks That Explain Today's Mark",
+    "⚠ 全球市場風險｜LianLian Global and Cobre Collaborate to Streamline China-Latin America Payments",
+    "⚠ 全球市場風險｜Tech Stocks Enter November After a Brutal October: Is It Time to Buy the Dip?",
+    "⚠ 全球市場風險｜UBS Sees Buying Opportunities on Dip After Tech Stock Slump: Market Underestimates AI Super-Cyc",
+    "⚠ 全球市場風險｜Ahead of Apple's earnings report, Wall Street expects Apple's revenue to rise 10.6% year-over-y"
   ],
   "markets": {
     "US_SOX": {
       "label": "費半",
-      "price": 10688.8,
-      "change_pct": -8.6
+      "price": 10589.902,
+      "change_pct": -8.0
     },
     "US_NASDAQ": {
       "label": "NASDAQ",
-      "price": 25436.998,
-      "change_pct": -4.2
+      "price": 25523.777,
+      "change_pct": -2.6
     },
     "US_SP500": {
       "label": "S&P500",
-      "price": 7580.07,
-      "change_pct": -2.2
+      "price": 7610.86,
+      "change_pct": -1.4
     },
     "US_DOW": {
       "label": "道瓊",
-      "price": 51770.31,
-      "change_pct": -1.4
+      "price": 52306.82,
+      "change_pct": 0.0
     },
     "VIX": {
       "label": "VIX",
-      "price": 19.42,
-      "change_pct": 0.0
+      "price": 19.83,
+      "change_pct": 2.2
     },
     "JP_NIKKEI": {
       "label": "日經225",
@@ -60,26 +60,34 @@
     },
     "HK_HSI": {
       "label": "恆生",
-      "price": 23375.98,
+      "price": 23393.32,
       "change_pct": 1.8
     },
     "US10Y": {
       "label": "美債10年殖利率",
-      "price": 4.929,
+      "price": 4.874,
       "change_pct": -1.2
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 100.81,
-      "change_pct": -3.2
+      "price": 95.87,
+      "change_pct": -8.0
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 110.37,
-      "change_pct": -2.8
+      "price": 104.05,
+      "change_pct": -8.2
     }
   },
   "active_news": [
+    {
+      "title": "Hong Kong Stock Market Alert | China Minsheng Bank (01988) fell nearly 5% in early trading as the company prudently and proactively recognized risks; Q3 net profit declined 33% year-on-year. - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNMjZtMlRlcWdvYVBidnJSUjV6d1BKcEdfSnMzRVpxdmtISER1WHloRXhVU0hhc25ZaGNyVEF5bW1EVmxsNHJOMklUS3VnOHhNRTg4Vmprc1ZmNnRBemwtY0QtcE92dm1qTG5PYndYdHo1TEFQQUtIUUxWMDZaYW1LUnZWanFLZXBGUFhIWUhwX1c0dzJWWWl5dldOb1BBcEpNLTZ4WA?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-02T13:11+08:00",
+      "importance": 4,
+      "risk_score": 2
+    },
     {
       "title": "Hong Kong-listed insurance stocks led gains, as the People's Bank of China and the China Securities Regulatory Commission jointly discussed capital market tools to provide support; institutions note that bearish expectations on the asset side have already be - 富途牛牛",
       "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOb1lLd1V4Q2w4TlN5cEpDSXcyLWdyRGM1SExYRU1udDFvUEVVMVRNX1ZyTENPdEczTHI2NzY4YXp3T1J1WGdqLXdkMGljQXRVdG11QnBjdk10WkQwS3o3cjRaaG53WVh3ZWR3aFBRbmdkYnVUQ3g1V2lZeDZabW1YR0I3ZVd4d3FmZldKX0dCX3VlMmFiYnBEbF80LVRPN3hVckE?oc=5",
@@ -89,18 +97,74 @@
       "risk_score": 2
     },
     {
-      "title": "Shares of China Literature Limited (00772.HK) - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQcEZnQXFVdXZWYkNxem13MklkWHZuaHpYbDdwNGJENWFGOUI4NUtvQm00c2tLaU9scThLQXk5M3l4TmFkTEdUMzZWejRPbmpHYXR3NFBrZ0NWWTRHWk1VMThIX3RyYWQ1NHNVSVZpSDVjX3VvODNkazVSYU1sR3ZKUjE0R0ItTzlPT1NLVWJjaFp3bU52US11QURWaFE1WUlPZVkyVA?oc=5",
+      "title": "蘋果iPhone Duo出包！內螢幕沿摺痕裂開 官方回應：暫不召回 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi3AJBVV95cUxOeE9ESVh1eFN0UkVKMlBwYnFsQTJjQnN2WmdoNFJyWFRQWjdUM3ZQMVM2Z01lM19NaHBneG91eWNuaE1PRzRGTndyODdkbGdxNmwwS19JVUlYOWdwWHBOSEVlSV9xRURGaVYyMUxBWkpXUUF1MGp5eWFENDVPU2ZmSUozQnNwbndJVmZuSlo5NlFhenJ0cDVhODB2Z3ZKR0sxdzdJVW9JTWZHMDExZEJna0kwRmlUN0s2NjBHcEZyRFdwZzNjeUJlcnVIUjE2bHNlbUZGZlJsc3dJRHFHNmlPUkRTeC1EX3BTVmpvUEdISUloaU13T05IR2Zqd2g3d0RfME9ZN0t1enVhajRmSXNLRWhvYnVubnZUclBPR0JlMUpHcUxjRVFILTBNOWE0ekxLVGNWQ3pIckUtUV9aRG81LVIxOHdyWTBlY0pLcHloU2ZqUzVoc3lhRGRoY2s?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-02T09:05+08:00",
+      "importance": 4,
+      "risk_score": 2
+    },
+    {
+      "title": "Apple, Marvell, Lumentum, SpaceX, EchoStar, Palantir, and More Stocks That Explain Today's Market -- Barrons.com - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPYnItZUpISXlHNUNfcjNObEpqMlBBRmlJbW1tNkx6NXBwLW5IVGh6eExMVndaRjJLUWhUMXNwc0RvRDQ5QUpDcjl2cXZtOVhrUndQNUJkWjhtZkpEbHdkc3lNSVl3cnJUSk9fd1NXOTFsWnhncm03SnF3WFlRRjhJMHhzeU0xblhnSWM4cFhOOXBWME5fT2QyUFVLV2U1M1FXX2FLd1Rza1hBSG9VVklBVQ?oc=5",
       "source": "富途牛牛",
-      "published_at": "2026-11-02T15:46+08:00",
+      "published_at": "2026-11-02T21:59+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "野村投信最新台股看法--【台股操盤人筆記】雜音頻傳，震盪中聚焦供應鏈龍頭 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi0wNBVV95cUxNWURldDlTV3VCM2tnQ1VTekRwa1hOZXRDMnFIUkxLenlnVmhuZEpnNnRJNy14aTNFcmQxUUV2SDlqaTNBR1g1ZzV0anFBSmJ0cXZGcGZ6TmVXa2Nxb1ZkYjlsYTdac3FjWGFneEt3NS0yc2hlRUVRbzdVTkdkaE9rN05lSTN4d2dnMEVqSFFPX0trRmh5RTdiVFE4aHJKU0p6eHk3ZFNkMWYySjlEdXJ2MmJwSTVXYnVRdXNjVmdDemNmLXJsWUVVOXlFRldGTHdNcS1nakZJVlhxYURlS1JmUzh6TngxMXA0R0xGbjNDV2d5c2o2RncxVE14bVZfRXJid0s1emQyZklLM2FGUUdfZUVwZkU3aEJyeF9pZUIxcWZEVVdGUVh0VFFfTVFHV25QSnpCbldBc21KejE3REU1MENHU09LUkV0UlhVbFExWGxIZkRPY0d2OVJTb3VodkwzUy1KMWRqLXBMdW5GOElJVUZZMTEzOHp2UnlMclk3a1lhY1JWemVDTUMxZElWaGM0LXZfTmowSHR3ZzJEaTIzV3hJNDZyd3NPdk5XZE9CdnRqNVpDSTZ4NXUyTEpTWFBPWUlRb2VLZVd1c25TVDM4VndfMA?oc=5",
+      "title": "LianLian Global and Cobre Collaborate to Streamline China-Latin America Payments - Quamnet",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFB3QXh5TVpYdjZfakVTcFRkM0xhaUNFeE8yNUtGbTFuOE9hbGZ3cXk4bkZJcWRFS2lLQlBpSmNDODVySnRkRUxtb1ZVWGtFT1dkVG52X0xEakRoT3JzbUVv?oc=5",
+      "source": "Quamnet",
+      "published_at": "2026-11-02T21:00+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Tech Stocks Enter November After a Brutal October: Is It Time to Buy the Dip? - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxObTdqVzZ6S2lEZWU3QVlDc1VoYmh2bjB1M2lqM09xd0IteC15WDZoc3JsRWZGOElfS2dhWDJVSEdiTXZROGFaanJlLUZFTE1OdWJRMFloSEpObHNIS0kxczV1SV9GY0JYZW1uTURUbDhOZmxEN0ZoeXRadnB2bEhES2tITjA4VHMwX1VaTXVwQjR6RHRCZXlHSGZyWURoSVk?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-02T20:10+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "UBS Sees Buying Opportunities on Dip After Tech Stock Slump: Market Underestimates AI Super-Cycle, Inflection Point for Returns May Arrive in 2027 - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPeHYtVHZaVWFjSzJLTmNJc2w3aFR1M2k3RDQ0VDRRZzhZRHB1MGMzckhSOS1ud2tKeTRiNnkzVU9DMXptZVl6RXpiUEtPOUM2eEpGX1RlZndIUU5lTWkydmdiUnFzamxNbExIMmg3YmhaX2loaERpa0hZMWhKeHNwMjY0anNEb2ZweTloY3BrVmljaHVyeG9NNEpYWkQ2RlNJbzR1Ug?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-02T20:09+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Ahead of Apple's earnings report, Wall Street expects Apple's revenue to rise 10.6% year-over-year; Bernstein analysts maintain a \"Buy\" rating on Apple. - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNclcyYjgzRTN5czNLWHF1Q1pIVExlaVZGUUllQUpCN0FvUHJvdkVvcFlQMk12a1VqdnZYb2VNUlpQdkh3OHVRYXhRaTdEQXhrd1pBY3VMTnZCYWdXYlY1VFEyTzh0X3ExamJrM0VuVGFJNk0xZm5tWGJZb0RQQzVrcUk0SnhWSGJfTDVTUjgzbDlnZi1YRWR2NEk3SGU4YXpJdG5F?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-02T19:21+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "金融信心大增 台股熱潮帶動民眾投資意願升溫 - 自由時報",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9paVViZjh0MlQtSXRfOG8tVlNrZlhzX1U4MFVxVFhYWThiMFc1dUlSVndfYlExVy1ieVVBNXdEMmtROGZiZjN6WnNUOHN3WnJfRkpBRE5OX08?oc=5",
+      "source": "自由時報",
+      "published_at": "2026-11-02T19:04+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "野村投信最新台股看法--【台股操盤人筆記】AI資本支出續航，震盪中布局台灣供應鏈龍頭 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMihgRBVV95cUxPaDc4bWctaTB3SUNqTDBDSkY2Tk9GWjNJeFRTejRzN1JETGE3aEtsTkk0OEQySXUwN0lZclVMVlo0dmhpNTBLdWNFZmQ3UEtFQ2cwYUdKVDJEUkp6N3VFQmpmUllsRGRMc0J5V29tV0dqNzdDTXFBOXVmWTVuSlNNVTlyc3VXZHNrUVFNNmNBRGwzTUI0MFpEeDc4OG9KZXB2M2hNTzROSEU5UlN2UjMyQWVoRzQzVmlDeFREb05BXzZQaXg0dHdTc0I1X2dza0pKNlZYcFFNR2h6X1p1TWpwa0lNY2FMTGhJWUtFYWxRWnBQSVJTYUZlbUUyZDN5bVIzeEh1dlJsQVo4RVhDdGZOUXZ4NzVLLWRiQ0dIOXRHX1BaY19OUTJmcTdmVkRpczE4Tkp3WUhMbnIxUmpRcURvYU9jdnh3YnpfZk0yb04tNzNRS3ZsR0FBY2ZwN3NVREVOcjIxLVdHeXlEem1HdmJFOTd5aXByMFhTSjN1ZlpqYnVkSHlTdWhmbUZFWTNGWngtTXdJWWFlSGo3ckNvZEZuMzI1ems4RmZPa3VrTUI5MnE1WGtzY1lWWmtiTjNJU3UwLXMxNURFazdsaFNuR19hS3p6OWJHdGFoUkdyNE45LWpJY1FXenhBRE1CeW4ybWhsMzFuY3R6anhvVVdrYlZCLTYwOEIwdw?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-11-02T15:42+08:00",
+      "published_at": "2026-11-02T17:21+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Hong Kong Stock Market Close: Strong Start to November! Hang Seng Index Surges 2.25%; Tech, Internet, and Brokerage Stocks Lead Gains; Macau Gaming, Cement, and Dairy Sectors Rise Broadly - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNQmtiTm52c1BydFRxNlFNQmVlZXJyLWRaV29GSEJfa2FuYkt2OTRqTDh2TkdfNVZSYXpNUlpIOWtLelpObjFkWkJJZ092b2tQRHMxS2ROak5qS0Y1XzZ1WVhCSjBCMl9XeFJGV0s5bWZxTGF6UU5XQ1dOQm8taHFOcUJDVzVhby13WWJBNk1RU3pGSGxQQWdnT0FpakpGUzNsYUJZ?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-02T16:34+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -108,84 +172,13 @@
       "title": "〈台股盤後〉11月開門出師不利台積電疲軟 跌292點失守4萬5 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMi4wJBVV95cUxQclNTRDk1aVBHSUhIMlhVZ09XNHRzMTh0ZXJNcWlIS19aSldCeWNEWUVuSnZYcDctclhSREpnU1dGTld6UHptTDMyMEZCS2R1SFNPcHdUOVR6NC1zNTVkOVU5SHhENS1lZ3k3aklKWmsxMERBMURmNFZrdjF5c0prT1UwY2V1bGJfRmtPT2dsUVQ0TXE4ZkdxRHprdFI1REw4X0tGS183Vy1ua1poTFo5YnVNLWQzNWloQTM1MkhmQ0s0azZfM251UU1Bbk96cTBhWk92T25seHBieXFWbmVZQjBqMnhpS3pPTENVaFBDN19WRk1wMWh5Zk45cjcySHYyaloyTWlnS2dBM0FqWElFYTRESkI4YUZOVHRMR2VmXzlmZlRTdl9XT0VYbjB6Tzg0LUNZb1ZlMUNCODBIRGhMb29ITEFuNFdGOGpqLVFKajI2cGtxY3Y1dmdpNVVrbnRnSHl3?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-11-02T15:20+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股衝5萬目標不變！ 郭哲榮加碼「雞排、珍奶」：沒達標發萬份 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi9gJBVV95cUxPYl9ZSU1HLWVxald4SG9XZW0xOVRlRnRjYW5GVFAtUFdCRmVPUDAwWWQxY0NuWFFodHB3aS14SkRXSXpRRWphQ0NkSWNkeF9IQXJseHlaQndWZUw4ek9pOVZPZ09QN1VMRE50OGZ6UGlWQlYxWVR6OEl5SzdYVV9oWUVwTXoydHVpTWJFZkFyV191NDBkXzRrcnpWQTNoOGVjaElZYm10MVRGOEp1M1Bmb1l4Z1p2VnpwRHNESVdmLUVzZDJHSi03ZV92aGtGRXgtQlVBWnp4enB2ZGpEMzBqX0U0LThQOWluRVJ4Vkw1R3FaNUhsaXlMYUpmV3BKMVlHcXRFbU5pYjczUnVDOFBucG50T2ZUSDFlVy1zSmg3QjRwTkVIUkxsMmc4Z1o3UGs5aDVyZExmalhyRHdZUHdsSXNJYS04aG5wZl84SjdJQXZ4SXhIaGxpZ3ZEV05BQ1loNUVpQjFvSnlyNEZFZW1NbTFqd0xWdw?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-02T14:55+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "ETF Market Watch | South Korean leveraged ETF products gain momentum as KOSPI turns from losses to a 3% intraday gain; South Korea's October exports nearly double. - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOa1ppRUFVWEZBam5qZlR3RVV0ZDBQb1F2aDZIeHhtUFpuYTdWa0JMYUw2V3RvcnItdzVVTnRWcnpiNkZPd01Rck10Y2lJN205cUc3WlhDRnF6aHZrOW1ZSFJ1QkhiNk1ZSXV6RFpfM2I2ZWJuLVM5MHZUX0x5VWgtZ1BMaEUyUFJ0NExnbGVyYWZ2VG5YQmFLd0gta0tXbjhJRWpfSVZEcTZEMjB2N1E?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-02T14:46+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股早盤狂瀉800點後續跌勢收斂 台廠記憶體法說會週將登場 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMijANBVV95cUxPLUU5NTZfSjlOSU1UN2FwSkpFaEpzenlTYzN1dkROdFF4QTdPQkZNV1BBS0hJSTVpUVk0SDBGVjVNaDUtWlM3TG4tMmJsTmhSVldmOGpYWWYzRUlnclFLc1BLcHlpc2VOUlhfTXZJazlCbElKaW9pbDNocElfS3lUVGRsS0QzOVppVlhRaXVRSWN2U0RZeEtEMjNZMkZuV21qZnROZVV6MTExZ1AwY29DZmU4Wk9sNElWUjZFZW4wLURjRTZmREI1UGdIZlA2RjZ6dEpseGZXRk5HTnpNUUFNSlltVXc3ckVKUExEbk0yQ2NEQzViZ2VTNjhPTGQ4bXc5SG1EZjVzM2VQVWpveTZuWnl6SC1qTkR4ZXc0QjZ5ZzUyenRybFpnZlB5TGo3dWo3NHI2T1JNUXVUbl95S0lNMDlzaFh4dTBaU1Y5b2JTTlhhTHNxcngtd0xXTWlRV1N0bEVJLURmTFVRR0N1cC1LNWdSallMdm9kRGhiUnlzaDhpNExPQWJqbVVkNjE?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-02T14:30+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台塑四寶、PCB撐盤！台股收跌291點 成交量僅7588億 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMirAJBVV95cUxNcUpTLWdOSjNFVUNDSGFrVDFwN0FiMVI3eGFsMDl4ZTdGbnZETTRZakd1NTUxUWlGU0ZoZVI5cURsczVpYVFuUnBoUXVUaGZNTUg4Vy1CQ1hldnJPSVBHX0NIN2NfdDRHQnFqRmJaZlY0MGJMRDNwRlNOak1jdVZGU0pRUS05ek9Rd0poTV81RzhhRGh2SEFUMlJmTksxVzVCZmlQaUM0RkxTV2NFbGR6N2hBVnU4Y3lKWG5YZEQtbTVYRzlSbmFKWVdCRDZVdF9hTUoyQUFfc3J3WHc5TTNMdXN1M21tb1J6ZmZLVE1HWEVvNlJMMFg3UWlsbVZTUVdRQWlEOWJWUFZLNU5zbDBOZEtKQTZDOFlEY291MjZxTXBMQXQtbUtSalVBdlM?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-02T14:11+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股失守4萬5大關！終場下跌291點 台積電收2330元 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMitgJBVV95cUxOVHNkMGNJdVlodWUwa2dLY2RjcVk2eVJkbnd2V0RmeXRrZnFBTGhla1JaaThXeVFKRW9NaURHVzc4NEJRcW5FV1NqeXJHYVNUTkJwWGpZdTU1XzVTN0xpdUx1YnRfN20xN2dSTXZEa01STHdUQjBiLVUtMXFqUGU4VUYzSDk4UmhvazVsN2ZBMHZEbDB5Z0dOR1pPSERNQlR6RDA4OVFsYlR6SVJ2R0tOcm5CZzRqM2JIalZ1UXlqMWlveUJINlBkZVYtYzdoaVNiamlPeXM5cXctSDJGZm1KUU80eXk0N3d3UjIybzBneXNLdzFON193SGI3MjlBZVUzeWd1OExBdVZxMVVBZ203VTRZT014ODREWEdzOFAydFVHenVmOWRmd0JLRVRPeHVDZWVibThB?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-02T14:04+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股下跌291點失守45K！台積電領跌1%再現2330元台達電、聯發科止跌翻紅、鴻海漲2.24%撐盤 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMimwNBVV95cUxQU1pVd0hYeFhVMGNZRDhEeHdCdE1kWUxVR0E3Tm1lNXZJUTMxTWY4ajA3Qk5LUURTcEVTdnRkOWdMUVZWeURid1Q3cmxRYTh3UmZhWEtzZV9aYmZVenE5NkZDcVdwaG94bEYzTkd5aGQ1MDlOczN5SVVST3VLMUNGY2pZTkxVMkJFWWR2NnA5U2ZQRDhDNVB0MGtvOXg2Q05PeTFyS1Y0WFBSRjlnQ0RORkhKSFp5ZHZhTEQwLUFJcllkVmV0Z1NZM1RobU1FMGNQX1hTZDlWWkNFeFJrdWNJWWpJSmRDZm9FYnF6LWx2Qy1OcW1EbTU5Y0Z6R2F4VmVCQ0JkTWNQUXIxOERNOEMwYzdKcFIySnJnTVhQaldEbWt3bzl5c0E1UDRVRHNBQ1ZSWDV2a3lyZGFwWTJhemZsSUdvTUhuRGxxdEdNUlZOUFZwTWVpbWNDaVQzRV8xX2V3MnB6NjFnRWtTODBBWmhNbWV0dG81NXZKRnppNDN0UVBrbTF4VXBrb2dnbENmNjZsZk5SeGJLcmVKTzA?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-02T14:04+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "【Yahoo早盤】台股挫逾800點跌破4萬5還沒完？分析師丁彥鈞估下檔支撐看4萬1 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMixwNBVV95cUxNN0J0dDFjOEdNbl9hYUp0QXYwMkNhdll1X1lhWXI3Z2Y2RGM0WllaOVN1Y2JwZUhrNENpVW84TzhfUF9GbEVlazNIaWVWZVp3OUE1eFpaM19zbkNIRGhybGsxYVJDeUVaNDVsX2kwY2k0TVBOU2pLdWdBVHNvMUZXQlVxQTJhUTRwUi1HY0Jmd1BFT2xlNjRWM3lodXpSdG9GQ2xqMmdCSU44bGhGdnhxd1ZRMFZIMldhZWpUSkhKUloyV25ZMG5nc3c5am5sUjNwdmlYOFhENHlKd1lfSnl6VnJlTHBEcUg1dUxpS2xMYmMzc2twNDFmV0lqNEx4RjV6eXYtS29aNXk5MXFkU3Q5bVhFWlJqRWVsRjY2NWZzdGdnamZRZ2lFZ1lFLWV2bENMZUdQaTBWa1JXSy05ZlZXN2c3c2VFM1dFUHMwcnNmU0FzemQ0NkdyOXlQbW5HalNBUWxaLVRtVktTb2xPRVU5TUYzdXNrTUJPa09uREZ5cXBhRHdQalZKLWRrYzlHZ3RVR1o0V2Vic3dNcGx2WDNqaURsRGx3NmxVOTZHbFRZUjM4dG1FWTFGSmVFc2RpX0lEdElUa1psZw?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-02T13:49+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股今年狂飆55.81%稱霸全球！他好奇會「跌到4萬還是衝上5萬」 網揭最大隱憂 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi8AJBVV95cUxQam96cENJSk5VdkJacmp2UXNSYlF0RlhGZUtrSE5FMzB5cHl0WXlGdVRWZlJWSURsRWRBR2JGZ1BiOTEtZEdvc1FOWmE4Rjc0N2xrdUJmUzUyWUthMnp6QUdNSEY4VS1KWU5rcFl1TTktNDg1TFJIcDB2cmhaYjZyeksyWkxtTlQ2MDhMWE5YVHl3UVFCdElLRHVPZmR2djdiaXhleUFxSnNmWHJqX2NYTm9nNmo0TTltN3JkWlViQ1F6bU9aLTBFRUNjd2NCaHlZSEx0Zk91VFVfV2JIMEQ4bDRUcWtUMFZoTGl6WFE4NGt0Y041M1JkUXE3eDlOek5fc1d6em9xdHYtREtMVmVoZmtuSjZub3NxZ00wTUhzOGs1QkVTNGdpOUdRYk5wS3ZSR0hOLVdTaVlOUW5xZldtVFFxeXZKRmcyd1o5MDFacF9WNXBvbUxYbXhDb1pmdl9Lcy1lTHZrR2NwWDhseFEyTA?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-02T12:56+08:00",
+      "published_at": "2026-11-02T16:01+08:00",
       "importance": 2,
       "risk_score": 0
     }
   ],
-  "oil_watch": [
-    {
-      "title": "布蘭特原油價格：113美元 期貨重開 OPEC+擬維持12月產量 – 11月3日中期選舉 看漲120美元 看跌107美元 - FinanceFeeds",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5rdERTZFloX3E5N0phRVZ2N1FtaUljcEhOX21XSzFNSHVpUjNCcUpLdjVYSFAzZmFTUUxpUFJOaktxQ0o2SWNWb21TZXZvRThodjUyVUtvd29YLVA5a1ZuU0JpOTB4ZmlGWkk1Rmc2NjUxVzRmdnlTWUkwZw?oc=5",
-      "source": "FinanceFeeds",
-      "published_at": "2026-11-01T16:27+08:00"
-    }
-  ],
+  "oil_watch": [],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-11-02T16:11:06+08:00",
-  "checked_at": "2026-11-02T16:11:06+08:00"
+  "updated_at": "2026-11-03T02:15:51+08:00",
+  "checked_at": "2026-11-03T02:15:51+08:00"
 }
