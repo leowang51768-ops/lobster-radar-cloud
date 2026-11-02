@@ -3,19 +3,19 @@
   "risk_level": "red",
   "risk_score": 3,
   "risk_reasons": [
-    "原油超過100美元／桶：WTI原油 104.12美元／桶、布蘭特原油 113.43美元／桶"
+    "原油超過100美元／桶：WTI原油 101.79美元／桶、布蘭特原油 111.23美元／桶"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 -8.5%｜NASDAQ -4.2%｜日經225 -2.1%｜KOSPI -4.7%｜台股加權 -2.5%｜恆生 +0.9%",
-    "⚠ 全球市場風險｜美債10Y 4.93%｜VIX 19.4｜WTI原油 104.12美元 +0.0%（超過100美元警戒）｜布蘭特原油 113.43美元 -3.6%（超過100美元警戒）",
+    "⚠ 全球市場風險｜費半 -8.5%｜NASDAQ -4.2%｜日經225 +0.0%｜KOSPI -2.2%｜台股加權 -0.9%｜恆生 +1.5%",
+    "⚠ 全球市場風險｜美債10Y 4.93%｜VIX 19.4｜WTI原油 101.79美元 -2.2%（超過100美元警戒）｜布蘭特原油 111.23美元 -5.5%（超過100美元警戒）",
     "⚠ 全球市場風險｜80% Market Share Isn't Enough: Harley-Davidson’s LiveWire Issues \"Going Concern\" Bankruptcy War",
-    "⚠ 全球市場風險｜台股10月慘跌近3千點11月風向變！ 投信：短線資金保線、金融股部位提升",
-    "⚠ 全球市場風險｜台股週報》外資提款撤退 4萬5千點攻防",
-    "⚠ 全球市場風險｜外資10月殺紅眼！台積電遭提款3859億元 「面板指標廠」被重砍56.6萬張登頂",
-    "⚠ 全球市場風險｜英特爾重挫近3成台股周一剉咧等！ 法人：45000點及10/30低點44726點成觀察指標",
-    "⚠ 全球市場風險｜週一剉咧等? 台股10月市值蒸發10.5兆 郭哲榮:年底5萬點",
-    "⚠ 全球市場風險｜台股逼近5萬點進場做多！女網友期貨一路攤平 最後慘賠63萬崩潰刪APP",
-    "⚠ 全球市場風險｜「別人恐懼我貪婪」錯了嗎？他喊這波下殺不單純 網淡定：台積電都敢加蓋了"
+    "⚠ 全球市場風險｜〈台股盤前要聞〉鴻海AI伺服器機架產能翻倍、聯發科ASIC Q4營收上修至25億美元",
+    "⚠ 全球市場風險｜【Yahoo早盤】台股一度挫逾800點跌破季線！失守4萬5 分析師示警還沒跌完",
+    "⚠ 全球市場風險｜聯發科、鴻海、群創翻紅了！台股跌幅收斂 下跌428點",
+    "⚠ 全球市場風險｜U.S. stock market shares of storage and optic",
+    "⚠ 全球市場風險｜快訊／台股開盤血崩4萬4、下殺近800點！台積電跌45元、台達電挫3％",
+    "⚠ 全球市場風險｜台積電盤中跌60元、近4個月盤中最大！ 分析師：短線賣壓已宣洩",
+    "⚠ 全球市場風險｜台股重挫別怕！ 法人點名「3大硬漢」：止穩有望戰前高"
   ],
   "markets": {
     "US_SOX": {
@@ -45,23 +45,23 @@
     },
     "JP_NIKKEI": {
       "label": "日經225",
-      "price": 63290.11,
-      "change_pct": -2.2
+      "price": 63306.79,
+      "change_pct": 0.0
     },
     "KR_KOSPI": {
       "label": "KOSPI",
-      "price": 5730.74,
-      "change_pct": -4.6
+      "price": 5807.03,
+      "change_pct": -2.2
     },
     "TW_TAIEX": {
       "label": "台股加權",
-      "price": 45211.83,
-      "change_pct": -2.4
+      "price": 44820.62,
+      "change_pct": -0.8
     },
     "HK_HSI": {
       "label": "恆生",
       "price": 23294.42,
-      "change_pct": 0.8
+      "change_pct": 1.4
     },
     "US10Y": {
       "label": "美債10年殖利率",
@@ -70,13 +70,13 @@
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 104.12,
-      "change_pct": 0.0
+      "price": 101.79,
+      "change_pct": -2.2
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 113.43,
-      "change_pct": -3.6
+      "price": 111.23,
+      "change_pct": -5.4
     }
   },
   "active_news": [
@@ -89,96 +89,96 @@
       "risk_score": 6
     },
     {
+      "title": "〈台股盤前要聞〉鴻海AI伺服器機架產能翻倍、聯發科ASIC Q4營收上修至25億美元 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMivANBVV95cUxPaEFXX0oyYVZwTmp4X25pQkROaFN1REpuMEh1VGZiOGxBbUprUGh4dDVsR1BVdGhKN2pXTXBudWNtT3RjaTFfNnBObEtqYTVpZ3hFT0F0eTM5WU5lTjE4dERQSXJyVlY3dkpEbGdLR0JvM0NOR3dNa2M0VjFheGhyOXJ1YjFrRXNiSER0NU0zU0p5UjZfXzdRU1JGZWFTaFpXMjg2bFZFWkl3MzN6MmdwRjZhV0M5bEJaTlRtQ09oLXpELWc5ZHhhQ1RMQXp6WUFkMkhfY2huZHlwU1U3Uy1YYkhrUC1vX3BzV3l4Y08xZ0RYYXExX1dabFNpdGljLUUtSVJfazB3Rk9iVFpGTERjeDlNMlhXRlBaVWVWdzBsVmpPUktyQ0VoUmFPbHhSaEQtRWFrd2Z0M0RQRkRYUU5ZMUtTcGFzRmJ4bUlJdEFONHZIN3M2RExQOHNCeWF0OGZ1OTlDakNxSmxBWi1XOEJuaHdoaEx4LVhIRWM5dzR5QzIzLXNQVEJDd2I4bWktak1fN3hPTnV2UTJPdXBFcHpMNFhnSTYtcGhnV3AxSmh5Z0xGem5jcTdDVHJxR1k?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-02T05:10+08:00",
+      "importance": 3,
+      "risk_score": 0
+    },
+    {
+      "title": "【Yahoo早盤】台股一度挫逾800點跌破季線！失守4萬5 分析師示警還沒跌完 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiugNBVV95cUxQaDdUNFo3UktPZEtBSUNOWnM1QmtLaHl3b29WZWxjUnNJbGpQWDBuUVZyendJd3BRVGZ4YlAwYVFPN2huOGhGdDNXV1BrXzhGMmY3ZS00allqS21VWTNOa0tzM2pfdWRfTGhsOVBJQ0V4MFhTTzlaRFJwcm9LV2o5NjhndDUxclZ1UzF4bmtIVU95X2VCWDFVNTN3bUc5UGtkaVhHNEdVRUpqRDllZ1NyTjNYRkYtT0JjYks0THBLMDQ2NXh6OTdsbzkyVlk0RmRBMHFtRFpkZ2hDNWdvYTFvaURpS0RMMWR3a0FjMF82ZnAwd0ZUWGtnS1NBZzBRaFA1MENaQUt3ZXpWWU56aWI0c3pxMFZtWFMzSXE1d2dUVi1fUmVWUE9FTUVtTk5yaEV3Y3pGcno2aWpZa0YxbVlsQ1hRblJfN25TQmI1eDJxbHp6RFRKOEpjQ2c3UUpjdU9iTHUzWEtSZEp0WklCa0NDVzBNdVU4OGk5QkYxdVFsT0l4V01LRFdlNkp1Qk5DOVZYWVM4X0RMQVRsMmVWVWlhLWdjMUVRSzROWGo4dUVhdF9md1VTNnVBeW93?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-02T09:31+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "聯發科、鴻海、群創翻紅了！台股跌幅收斂 下跌428點 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiyAJBVV95cUxNb0stQTYwbUh3TllKOThWRU1ydFRiS24xMlAwSXEybm5KLUNTYUZweXVPYUdaeGRDeDRveEdlUlhlMDEtak8xRjhLRGQ1dXJXcVJQcGdhRWxUdnhGN3pqV2tBNFB6OUFZQ0xiWWc5TVlzOEZ6M001Ym05S21LdS03aDF0VnROSWxVdmdKNEdvekJKVkhIakRTUjZYQzFpQXNEc2tZa2VjZDhoajQ2SkVJSGV6NGUyanRUZU1qREhMaWpHbVpSVXlNMnZpeWQzNGgwMWdjY0Y2S0NvVUIzMjdReTYzTVlDSXplbHpfY0ItVGFoT1RtUWF3dGRqTF93V3c5TUxlMVh1Mi14UEU5WnROb2haNlpIUnZqUU41Q1gtaVpCc1RXRUlaSlJCVHBMdnBZamNIbXU5QjBTRExaa3ZEejQ5SjkwWHJm?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-02T09:30+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "U.S. stock market shares of storage and optic - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQaEZMRE04d0FlQ1ByQnppX3FmUm95X3llNkF5U3FNcjMwbkFLYWF1X2hGeFFMeVJEa3dwakxJaFFaSU0wNnk1dzNkcjNzcERURnRPc2cyZDhJSlg0TFlQbkVNUUU2WnQ0bmdkMlp4TkFMemNUd0kxaHQtdDNsbUV6RTF5ZW54MnE2NHVzVlZKcWZ3VkFuUXE3cXUzWkstVUUxTV9RZkFYM0ZLbVlxSGZ4Ukp2MDY?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-02T09:29+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "快訊／台股開盤血崩4萬4、下殺近800點！台積電跌45元、台達電挫3％ - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi8wJBVV95cUxOekdoVXd6TTFMVVRMcDc4aVFXVTdhYk5fRFpqQmIzSzV5bi1fZm1lZDBnTXRJMVhEMmZwZVZVcEs2ei0ySlhRN1A1ZFRzV0ItQW1sZy1RcUZfTm01czNUUHVqLW1NZFU0OXpLMzJjakRYSjlfZ0FuUkU3R3RYVWdhYVFmVEVUczZWeXN4X3pCcHBDZHA4WHFueks5YVBkb01hZUN5Y3JaX1FHY3RWTndnS1BTdUx5NXB5eE1JQTMtRC02RWpleEpUQmVLVDhuWkh1c0VVa2JRRWJtRzZnTjN1Zmh6LWVzeS1lblFHVWpwdGxBUV9vQ21WbTB0a294NHN6QWRXM0ZDajdjVDZHek05d2wtWS0wZHVrYzY0QnVxVUJvdWpJWEhHTXpPN3hPVS1FRmZpMEZXeVRaWl9xT01Cd00zdjh2WnhiNkh4OUNJNFVoUzhZa3ctMGNfUHlUQXVpQ2NuY1ZWUVV1cVJjeFQ0NF9YSQ?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-02T09:15+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台積電盤中跌60元、近4個月盤中最大！ 分析師：短線賣壓已宣洩 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMipANBVV95cUxPdU5mdWFtYU5tT00xdXdqOXlDLTlDMU9uQ2ZidnZpX1hGMmpYYmZZczZyZkVTVENBTVk3QWQ0N0pkNmN0bWRxRVEwN2VBY09QcFo2aVBRcWhwM3NCYk0zY21xSFB3T1ZDc1RwYXBhQkN6TVl1WTRYSzFoSjV0akRkbzZNbDJubnkzX3VpU002aFpkeDRkZGk0UE9BNkl4b0Q2cThWd1RsRHpSU3dfYnpubDdXZWEwMGNzaERSY2JWcFVoOTlFeHlSUEpjNWhwNWYxcmMza3RuZlA0SkJmNFV4WmUwb2w1WFVac0hCN0FURGZyV205b0hIOGpkOW9WZlUxWWw5VTNLY19XSGxFa2lUM1YyRldzbmRwdmpOV09obExHUnZWSzVuY1UzeFBlRHVjZnpBSHFTRllTRFBNN0NNejhYWkVETFdEN3JETkdMcV9DN01oU005S2E2TGVEVUhWY2xBVTQwY1NWOXJ2UFlVRUUzRElFdkJvLUNONGplZUhqblpaZHRFNmpERnlZTW9QcVBiVkhCMmlDSUFvMXFhNXRuU24?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-02T09:12+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股重挫別怕！ 法人點名「3大硬漢」：止穩有望戰前高 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi0AJBVV95cUxNNmtTYmo1eXFzQVQwalJlSXpScFhDS0xDRkgxd0VwV0ZrbVFmeF9zRTM5alFsQ2VyY2ljMUdRbHIxUjUzQ2JxYkZObFcyMGx1Q1RORkRhT2JhMXNXM184YjhaMF92a0tybUQtWVl2c1IxbnZBa1lHYUdCbnp0MVFVNW9aQU96ZWt1ZWJ5QU5nbktva21YRm5fRGtfSElDVVhIQUtReVlDOC1NOHVtbEJpMF91X290ckZ3aWRySnRJUjFQOVZuX3MxaU5HSGhjUWJmYjd3UnRQdkFLdGRqUFBKZ2k0eHdjeE5KZDBWUVJlN09BejdFNFVwQWdoRGJIRTUzeElnUThYSDRNTnkxR1JOR3dsakdCTFNDZFNGcGhCSklXQVItanM4YlU2T2hOT0w5dHRTSi1iQWZjUkFXSERKTWFLckFuZmJ4Uk1KWWxTbmY?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-02T08:45+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "U.S. AI Stocks Lose $5 Trillion in Market Value in October: Will the 'Golden Window' Reappear After the Midterm Elections? - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOYlA2WXprTFNMS0dwTmpCclE2Z1FZUFcySXdieXVMSGFSYW1BZXVvT0w5aDlEV1ZxalZaUU9JNDh5U0xLdEZpc1NMQTBNNUFOZ0d6clpSdEUxSldTYWlLaTg1THp0ZDNVNUlwUlFnZ2RobmhZX3Nkc0xnOG94RWxaSjhMa3dZckVVQ3owYy1peFEzOS1G?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-02T08:40+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "外資狂砍9943億創史上新高！國家隊豪砸4553億救台股 16檔強勢股拚反攻5萬點 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMivANBVV95cUxQcDRyMVpHUE1oQzRSWC0ySWgzVW5YZEtFUzZZY0xPU0NJVTRudEFJVUFTSVNHSzkzS09qZkl2dUhyaGpGODBlbnFCaTYxX3dlUkdpNEJsZkI2SS1DRFJZSDZGLWh3bTNKM19RWnFScEd2cTk1c2UzZ1RNMzZqU3BCM3Nrejk1X1VGNktvTkpWMWFMMUlnblBLUXMxakJhRmNjWWl0RzhiQnV3cFVkYW9ZOUJPejNNMHFpd2t2elRodmF1aUY1Y1R5aWcya2ZENzl1dlFBMzF5ckFpRVVaXzg0RGVtQ0YzWnRwVGZveHE4Mm1VdzcwcXdGSHNTMm1wdno4aW5HRjdHa0RMRG1fYndyTDM3M3oxejB3bHJGaW9JNTBlbFZfTjMtMHhrRDJWZFpic3pkaS1OOGdJNFlTd204RGRBUzBhNkxXSmZCMDI4TjdGSkd0TG1KNzVZcWc3LWVWcXJ0c3pWZDlBT0FTZF9QYkY0OXhGSWNjbkdqYldmRGN2VV9MSXdVc241cENQZUc2SGFMbU1CVVpYdEVybDlTd1JDQXV4VW5LMUI3dzRVQW5BRi13UnBsWTZFOXY?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-02T06:47+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "美期中選舉逼近、美股上周五重挫 台股多空戰三情境推演 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi_gJBVV95cUxOWTJoZTRQMm5RSWhWVnFlMzFDcjZ5VWZweG00WWJ1UTVWLXFZYXpUQ1piNkNxVlVMZzNiMzdMWXRaM1FpYmJpd3otLTMyTlRGZ3ZncFJrSklnTW1uYnh0N2ZYeUl1UVpMN0NrdkVLVWVxZzJIMm9qbTlZd1FwS0dOYy1JMDZnUUh4dmw4ZzJxVWhKOXhJWHFkbGliUTBrWHVfYlNDOS1RSW10Y25VRWpsTWlYZXFtUUpETlk2bWhoWWx3OVlZWW5XV3VDZnpFR0JFQ0w2eENOM3l2Z0x4M19mU01JbVctRG9HZFNJeUhEcWpyTUpBdGJkOVB3RURybHJRbVlLTk1QMVZfYmxsalRoM3hMMXU4WFhFWlZUSlVYR2JnQTFxMXIzWFN1aEc2dEY5ZTVDVE1rZF80M0s1TGlqeFdQQWpsblJkVm1aNXkzR2gwV0FzNHJFV05JX0NNYVVkVkRSd28xQk9PdVNuR0Z3ZUJQZnJRMU9VaHhzZlln?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-02T06:36+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
       "title": "台股10月慘跌近3千點11月風向變！ 投信：短線資金保線、金融股部位提升 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMiqgNBVV95cUxPWHdXNmFUWldsb3J5SEpHeHROYVJyS2ltMW1mMmFkX2h0SGtMN2lyUF9LVkFTSXU2aXRmVkhqR0NEMjFUUUUyZzAxUDAzUXU5MW9xLVFoeHdTMDU2NHdkNDRXMkF2N25OSW4yZUM5RHJGckp2VkdSQVBOTlpyUloxSFhuTWc3dGFKRUpHcWNKREszMy14ZjNqT1lXdUJJNjlCUjJydGRlSWVBMDl0ckpMVHJSWHVEc0pDSGdqb2E1QlBaQlM3ZmNLTkxlQ29RZGVBbGVWd2EySjBla1diQ2VvZUwwY2g2bGYxWXMzOHE3RUMtQkVJUjY1ZkZyS3puRE9zbkNGaEJLVFdOM0dNX1RPRXZacUVhUUtHVDlKS3QtWVhuMnk2QnJxWlVoTHdIdHl1Qkl5b1M3VEtxdjlxbnR6bUZVUWtxY3dhcTYwNkpHT2Fpa0p3QlJieGRObk1hbnJSOEFSSzkweWhqa1ZfSl9hVVR6ckJfcXk5SFEtQUhhSnFOYl9vbm1XZjRZUUsxckVXQ2F4OXpMZzJ5YmVFZWg3WVBtRDhNQjN6MUE?oc=5",
       "source": "Yahoo股市",
       "published_at": "2026-11-02T00:30+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "台股週報》外資提款撤退 4萬5千點攻防 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMilAJBVV95cUxOeUZIbVFRMnQ4bXBxQlFjUDlvN2hMaXQ2NzJsYndnM2M5MlJjbmVyY0QtclJjM2thWTFtdXc5dGNUdXdQMFh1N181aUVZWmlidDNrM1NpQXUtR3k5ODRoSmZJdEpRZnlFVGdLcEdiUjhpLWJyWnZFSXVIb1A2YnlUU3Vqa18yVGtxNUZlYm5hVk9QOTBfWEtpYS1xa2E1M1pwOVdfTlVUTnBxYUVYbC1SQTRvd1g4VkQzdlFIT0UwX2tJenVMVDh4anQtTTVoNER0eGtUSkcxV2ZyWHkzU0JxQmpKbThvTWI5TURhR09yTHZkRmJhSXRfUl9WVjdCRVJZMVF5VlI0Nm1jY0lTc2YtcmlkRXo?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-01T23:15+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "外資10月殺紅眼！台積電遭提款3859億元 「面板指標廠」被重砍56.6萬張登頂 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMipANBVV95cUxQYnM1Y3pCV1BZNWx6YkNtWDg0dXlpdVNhQ0RHSnJrVWZKNWNDVjRDcTN3NnVRb2RzbnY2UzB0aTBpeDctQXcyYndWZVptTXo3RDl1SS1iQTJVa0NmUGdkTkx4MTdOYXZwVHhkQUVpd2ZTNXpWakpDM3UxVlcycHlJSTZWaHhRZDdpR2Mxa3BnUUV0b0FEelVrdFdrdmozX042TXlnTThvMlZyVzNNTkpyb0oya3JsSGl2cV8tQkdMb281ODFzQWNxekxkQ3hId284RUUxWDkzRlNTeUpuMmU5d2diUXlRYnpYd2ROZ3k0R0h2UWh6ZnBEZmZQSmlWc2FHdVlIWnhGclhMaGx0MlV6Tkd2dXhoa2ZIeGRyeTBoNVJwUmphZkhleklmNy1KNXZKX3BjZTg2bEFVaUViRWNBckdRYmFQSmplRnVvdXlIQzQ1dUVlaFZ4UWdMV2NVTUtxVHB5RXFHUU5US3BhY0tWWHZ3S1BrTjJ3U3FnMklnaXlJdm9UV3FjWjlKSllxUFk5LVJ5dTJUMWNVVjNqZTZOYzZnUTQ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-01T20:30+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "英特爾重挫近3成台股周一剉咧等！ 法人：45000點及10/30低點44726點成觀察指標 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMioANBVV95cUxOQnJUdDNrRkZEd1BjRjdlRVVvLWhVbEpDV185ZHZRUGlQZjlVTE5nLUltdnRZenlsbmcyRG9rYjRhekxDSUpxSVJUUHpLdkc5TUxuMk5iX0lEaXpZOUg0dk9oTURYSVIxSWx2M2diTjZDaGwxbXcwZUNnaXhkdFJJNHV2WGl4ZTNzcXlXVWloZFhHTDZtbWhhM2h2X0NzdkF5T1JhZ2FLNEhGbWJfR2V4WUpULVNLdzA0Rlp4ZmRBT056RG9fRmQyMVpLWnkteS1GcHBKVEQ5LVZZRmJaYWYyaU56RGhHSFZYRkc2aXEwRnhZLWN2UEM5Y1lYdmx2RnhxME1EeFRnei10MlAwUVJTdEVjWFpGQ1NOSnBQaVdXQzVPWk5xWXNQcTJpYUJWdHludndSYkRnR1VUOEx6bnlZSFRUX2hHbG9IWHRVNzFTR3U0SFIzdm1zRHk4MEVtWmdjY0JPUE0ydFN3cEw2X1ltVHlxZzI2YnBnRU9SOEdqSEZsR3RxVVRoeG5iSlBzRGxrell2RC1xbXFWQWZmaUlaRQ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-01T18:15+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "週一剉咧等? 台股10月市值蒸發10.5兆 郭哲榮:年底5萬點 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMimwJBVV95cUxQd2xFZ19WTEYxQkVXOWJuc3Q1RHlyX1ZSdDJZYjN5WTNRQ09VWmRjbk5JSjFhdWVoV041NmZLdHJHX1V2dkNjX211c2I2ZFFyOFNRUVpsUEY2NlAtcU1xR3lNYnIxMF9Mc090NnNzUmRldThRTlRnMk8yVUhXVmNiWnB2OHJqUnZJTkJsNE1ycU5mbFJfYXdKVE5sNFN3M04ybFM4aXZyR3JBZlBDamVIUU5KU0tvMjZoMFVIZVVJclh2OVhMOVQxOV9jbnViNm9Gb216c1pPX18xVGVZVGlNekh0NW1kYkVySktRNFdvZ0ltUWJKVGhyTUNieDBrTS1nS2FUNTcwRzhZal9xXzczdS11eTBLU1ZCUW1Z?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-01T17:43+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股逼近5萬點進場做多！女網友期貨一路攤平 最後慘賠63萬崩潰刪APP - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMinwNBVV95cUxNQ21JREpqRkVMZnFOUk82cm1nNmF3RkN4dzV6QWhXS0J6cWkySTYyeHVfLUFQQTZmUWdaM3hxSzRwVG9wTzN6MmhmN2pHdkwtOHpjTC1FMkpKSDhacFZVMExuV0xWWm5mUWw5OEJucF8yLTN3NFNuQ2lQNWh2Yloyd2R2SFV0cHBpYjg5UWpUaWhDNU5XazgwR3NWTXRNeXU0MjBWR0E0NWxSdm9zNDNSTXFpQmNaSHAtV04wYzl2d0x5NDhqTjdPQnh4YjRhZUZDVjRhWk5GVDlBTnhUSWlRbzlsaFlDdTVobGpGU05VQi1vNTA4aGJyQklzSDJ3eHhXRnlpY2tnc2h0UnQ4Q01sa3B0eFhNRzU3NU4wV3VFTWF6anBrMXhTdHp5SUJrZ1BtVXlDQTBYaEN0aDdVQVlXSzFybTA2bXpCaFAyczM1eTUzT1BULWxWTEUtYmxuMjZzY2ZSMGUxMlF2Y3FyVlNYR2l3dnc5WWxoUFVtZkRfeFlVOHY3ZnVJa1E0Z29mTHNtdnJueWVkU2Z2WU1hZVY0?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-01T17:15+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "「別人恐懼我貪婪」錯了嗎？他喊這波下殺不單純 網淡定：台積電都敢加蓋了 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiyANBVV95cUxQWDRXQ0dsem9Yc0N0UlNuVUpfRzJKVURWcVpJX3NkazJlelNSblRGSlFjRzMtS293YUE3ZG9vLVBCbVcxM0gtOXh5eTh4UFdBOVJXT2NiMDdlTFc5dzQ2bkViNkxpQUhVSTZPaFhoYUxCekQxbU5iVlY0eXI2ZlVOcGNHbFB4MDBZQWF4ZkdjX1pMOTNUaTFPYUJlWjk5YUN5a1FLUGhpSUt3ODNWSUktcFpCd2gtS1ltUXVNR3dQZWRHUXpXNG1KMXc2UjNoa1VHY0NIN1FoVU9ld0lFbHJZZVkwU1FPR2xCMTNRN0pWaFQyVlBqV0o2V3ZLQXFjNHBfRTZEdHNzSHpSaE9LdE9oMDB3VHAwQ3liMlVNWjNzU2tNN0VQZnZDVGdKV2JBM3FzdVJJOUc1VzJLRUdEVk1FSjVEZndTcGdkUTBDMTBiRFhHUEc3UFRaM1pNWFJNSDdxMUpMaDlFUHB6QkdKSV95ZWV3Z19mV3VWQlU4MjRia3o0TENGV0l3OVA3S21fSTlONGI2blhVSGpkWk1ZV0VQcFgybDJZSW1acVhwNHJiUDFwdHVBN3B2REtaVjJEcDJoc1lqVEFCVDY?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-01T17:00+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "〈台股風向球〉融資恐殺出引爆補跌壓力 台股走勢可能有2種情境 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMilwNBVV95cUxOS01iOWNoN09nVmFNZTVrelEwbUhqcVE5WlhoNGZnaG5qT3M2dnBFdzlkcmp0M2N5ODNnQ1ZxLUdheVFJUm00MlREazVvMWc1V0ZGN3U0ZHM1QjQ2dWx1enRsV0ZCWlNkV2xHbzQ5d3YycE9FMFRWZHhHY2NyXzd6Si1sZ0h4OGlXcU40dHlIQUxMYTZId3JhWHR1WWtlcmNrNFJXYmZxa3hpbDVGSzdlaGpINkZmWnp4Mmt5U2w1Z2Q3RGJwaU9wTG9LTUNUX1ViV3RUVlgwRXlmUmtsVVBfTjVJVjItenMyZTJGLUNralJ0SGlFN3JiVWl0Z0FqT2xLcXBqQXFnZHZKT3JpSF9mVkpGNXRjNGZDNFJ3NXNkYlc1VzZOX0h2c3hzVTRjWTJ2c1NqRExtVjRYV2YyOE5sQ2huVGNrcHNzcU5ZXzJGbXUwdjVMRnJONVduNjdVcFZWanp5TnJYVnVEZ09PVVZxUWI4X1I3Tl9kMUJNN0xrbG4wTUZsb3g3UjBzMXFMUktnQ2dEUWNERQ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-01T16:43+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股重挫「50張50張在買」！他曬單2小時1426萬砸這檔 網驚：都能買房了 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMijANBVV95cUxPWk1FRXZFYXhOcnQzdU1uTi1WczJSLXN2N1hQMWhPcDNBZDZYU3dpcW51RXVMYS1uTklBb3VVSGUwanJQWU5fVWl2WmVDWmV0bDR6dnRyOEFjZFVkS3N4VUpmdlZlclFuN1hXRXZxMUtGZmRoa2NiOXZQLXV4cUdJMUFYZGFQOXM5bXMyWGE3VXVoZEZNRUgyVGlITjc0RHZzUTBMakRReDZ5OHg0WTNqeWUxbmlsUlIyUEx5Q0RpV2ZVbXNWVTdQczJTcEs2MnpMUHJKeEpEMTU5Nm1DODkyMkVaWnBOYmxIcVNTWnlvSzZDQlRBYndGVGxVQzJaWldyU3BmVmpJVXFrTWphdDcwRjNkVUpTQmhMQ1NWRmFUcWd3RFRQUGdFOVhXbUJxaHlHVHJEUGt6RnBFVHVWdWFTMG8yTHdrbDJqakpEOVp2VUFTM0FxQmRnZ2NIaERpaUh5ZERRcUJxeWtyN2lNdnlTbEh6MEJ6U2Y3N1ZPMmdSWkFuZFhRR2s0TXBZS3E?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-01T15:39+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股震盪嚇跑槓桿ETF股民！400張00685L全出清 網見1地方笑了：不適合玩正2 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMingNBVV95cUxOOXdxRUt5SEdWT09mckxlT2VZRFRDdlRSaDkwOHN3R3lfMktnbnpmNnNFUGVZNTJOUEF3TWJ2X2JlaC1TSmxFTVN1eWVDRk94dzBxbE5UMUZobWwwbHQ0NHVsODd5V05nT3lmNW5McjU1blhPWWRwaXF5OVZENHR3clZrTVBmSWhkNG9ISzNJMmhoNG5VcnpuZlZYbWhyNTU3UzNrZWRGSHM0Zm5rUV9ocHB1cFVNOEhCamRad1BEU3RCUzFXdS1TLUk5Y1dONFRwX2hkUjZmTzdvV3Nfc1Z4LVFPUTB5RW5rZGNFNUlZeV9JUzdmLUc3eUpvYzFwbGt3eWZmNGp5RDZBMWpLTXBOcHlXRDR4ZnloLTBFcUJzbTF1MnR4NEh6NkVDQkRUNmIzcXlINGtvMVRNbF9ybDhLa2FhR3o1TkFiQUFfU3BqWURLR1dZNlhuVE40NFN4cHgxRnRER3hHb1NtRDBPTlpoM1lRUlNhVWxkQjRxZVFSYlhQRFRXbFNjS0tQcVV3d0VPbVVRdXN0QnBuVTI3aFE?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-01T15:05+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股週一剉咧等？夜盤已破4.5 萬，美國科技財報、期中選舉與非農依序到| 動區動趨-最具影響力的區塊鏈新聞媒體 - 動區動趨",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNcDJ4aFJCNUg2UXhkRFpmbm1FSEtqNi1NQUVNR0pnSXZOckVUeC00WDluMVhNVGRZRFZHLWtNNmpjQmxxQ0w2TldJWXd5MWxJYVNGYS1BTDFpN2tXOUJiekIybVM5RjFJbWd4b3FvU203VUpTdFZMRmlEdFBKVUpQcVlFRXJvS09xWHZSYUl0SHgzME5JQm9oblhEN1V3NXlHdGUzUQ?oc=5",
-      "source": "動區動趨",
-      "published_at": "2026-11-01T14:50+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "oil_watch": [],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-11-02T06:19:43+08:00",
-  "checked_at": "2026-11-02T06:19:43+08:00"
+  "updated_at": "2026-11-02T09:34:15+08:00",
+  "checked_at": "2026-11-02T09:34:15+08:00"
 }
