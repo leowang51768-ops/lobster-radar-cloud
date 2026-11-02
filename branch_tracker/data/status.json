@@ -15,7 +15,7 @@
   "complete_collection_days": 0,
   "counts": {
     "ranking": 105016,
-    "history": 469169,
+    "history": 476369,
     "queue": 8332
   },
   "review_stage": "資料累積中",
@@ -42,56 +42,6 @@
     }
   ],
   "history_errors": [
-    {
-      "code": "6485",
-      "branch": "0039004200300030",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "6488",
-      "branch": "8880",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "6505",
-      "branch": "1650",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "6505",
-      "branch": "8450",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "6505",
-      "branch": "8880",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "6505",
-      "branch": "9200",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "6530",
-      "branch": "0039004100390043",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "6530",
-      "branch": "0039004200300030",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "6533",
-      "branch": "0038003400350053",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "6533",
-      "branch": "9300",
-      "error": "History date or numeric mismatch"
-    },
     {
       "code": "6548",
       "branch": "9853",
@@ -243,7 +193,7 @@
       "error": "History date or numeric mismatch"
     }
   ],
-  "history_pairs_ever_fetched": 7824,
+  "history_pairs_ever_fetched": 7944,
   "history_coverage_complete": false,
   "history_coverage_note": "按個股實際交易日缺口排序補抓；來源每頁最多60筆，較早缺口仍保留待補，缺筆不當零交易",
   "history_retry_policy": {
@@ -251,8 +201,8 @@
     "retry_delay_seconds": 900,
     "source_history_row_limit": 60
   },
-  "history_attempts_today": 240,
+  "history_attempts_today": 360,
   "ranking_coverage_complete": false,
-  "errors_total": 40,
-  "database_bytes": 89546752
+  "errors_total": 30,
+  "database_bytes": 90460160
 }
