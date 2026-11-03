@@ -3,45 +3,45 @@
   "risk_level": "red",
   "risk_score": 3,
   "risk_reasons": [
-    "原油超過100美元／桶：布蘭特原油 104.04美元／桶"
+    "原油超過100美元／桶：布蘭特原油 104.20美元／桶"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 -0.6%｜NASDAQ -0.4%｜日經225 -0.3%｜KOSPI -1.4%｜台股加權 -3.6%｜恆生 +1.0%",
-    "⚠ 全球市場風險｜美債10Y 4.97%｜VIX 20.8｜WTI原油 96.38美元 -0.1%（高於常態，觀察）｜布蘭特原油 104.04美元 -0.7%（超過100美元警戒）",
+    "⚠ 全球市場風險｜費半 -0.8%｜NASDAQ -0.3%｜日經225 -0.3%｜KOSPI -1.4%｜台股加權 -3.6%｜恆生 +1.0%",
+    "⚠ 全球市場風險｜美債10Y 4.95%｜VIX 20.8｜WTI原油 96.57美元 +0.1%（高於常態，觀察）｜布蘭特原油 104.20美元 -0.5%（超過100美元警戒）",
     "⚠ 全球市場風險｜油價觀察｜WTI原油走勢：美伊談判迎來重要契機！油價多級別「雙頂」結構能否確立？",
     "⚠ 全球市場風險｜油價觀察｜原油價格大跌8%！美伊外交有新進展，未來走勢如何？",
     "⚠ 全球市場風險｜Restaurant stocks have bucked the trend and strengthened, with institutions bullish on their \"h",
-    "⚠ 全球市場風險｜XTransfer and Bank of China (Hong Kong) Announce Partnership at Hong Kong FinTech Week",
+    "⚠ 全球市場風險｜Wall Street bank chiefs are bullish on large-scale AI deals, citing strong financing demand.",
     "⚠ 全球市場風險｜2026台灣週總統親到場揭幕 蔡力行:快買我們家股票",
     "⚠ 全球市場風險｜川普期中選後恐「豁出去」？ 總經學家：難怪外資一直賣台股",
-    "⚠ 全球市場風險｜US Market Movements | Goldman Sachs Significantly Raises Global Data Center Capacity Forecast; ",
-    "⚠ 全球市場風險｜千金股血流成河剩43檔 大立光旺矽等14檔跌停亮燈"
+    "⚠ 全球市場風險｜《TAIPEI TIMES》Lai touts Taiwan’s economic resilience",
+    "⚠ 全球市場風險｜Hon Hai Precision (2317) Stock Price Today, Live Chart & News"
   ],
   "markets": {
     "US_SOX": {
       "label": "費半",
-      "price": 10630.386,
-      "change_pct": -0.6
+      "price": 10600.396,
+      "change_pct": -0.8
     },
     "US_NASDAQ": {
       "label": "NASDAQ",
-      "price": 25343.5,
-      "change_pct": -0.4
+      "price": 25372.01,
+      "change_pct": -0.2
     },
     "US_SP500": {
       "label": "S&P500",
-      "price": 7565.95,
+      "price": 7568.92,
       "change_pct": -0.2
     },
     "US_DOW": {
       "label": "道瓊",
-      "price": 51729.56,
+      "price": 51786.72,
       "change_pct": 0.0
     },
     "VIX": {
       "label": "VIX",
-      "price": 20.78,
-      "change_pct": -1.8
+      "price": 20.82,
+      "change_pct": -1.6
     },
     "JP_NIKKEI": {
       "label": "日經225",
@@ -65,17 +65,17 @@
     },
     "US10Y": {
       "label": "美債10年殖利率",
-      "price": 4.966,
-      "change_pct": 1.4
+      "price": 4.952,
+      "change_pct": 1.2
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 96.38,
-      "change_pct": 0.0
+      "price": 96.57,
+      "change_pct": 0.2
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 104.04,
+      "price": 104.2,
       "change_pct": -0.6
     }
   },
@@ -89,11 +89,11 @@
       "risk_score": 4
     },
     {
-      "title": "XTransfer and Bank of China (Hong Kong) Announce Partnership at Hong Kong FinTech Week - Macau Business",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNOVlyZ2g0UkVER0Y0bWlVc05iTXJfSDdERzlmcURkaVZuMTYwM0RaQzJ2eTNOUXVvM1AxTDc5SVo1Zk42WDBKZnRwUnVCX29oTHp4ZmJRakpVZjZ0RXIxMnI1UDZUZFlXN0x2TzFORUFUNUhRUGNaNnJ3RDZRY2dQVkRTYkR0elNGZDhzbWNXay1zOUg5d090bTI1WENHNkpQU1dlVkpvZkh5NVUwV2xRdg?oc=5",
-      "source": "Macau Business",
-      "published_at": "2026-11-03T13:20+08:00",
-      "importance": 4,
+      "title": "Wall Street bank chiefs are bullish on large-scale AI deals, citing strong financing demand. - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPNUd3cU1LdHhvekp0X1YyTmJtWklJYXg0amZLdnFrWEplSzZGSTZPenFCT3ZqZTBTY1QyOGRBMUdQQkJOeXBqdFh2MTUybE8wRVFMekIwOUlrOG1jVVE2V2p2TkUycm1fWU5kTkFJYWhZR3B2dHpSYkxYMHlqSnVXaUpiVnRkWU1ReVVMUlhFdHVNdlBtOUpwd25DY3U?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-03T14:37+08:00",
+      "importance": 2,
       "risk_score": 2
     },
     {
@@ -113,6 +113,38 @@
       "risk_score": 0
     },
     {
+      "title": "《TAIPEI TIMES》Lai touts Taiwan’s economic resilience - 自由時報",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1XcWdfTVZmV0FudUI2bU9zTzhROHp5U1l0QW1zNHVzUUVTXzBNbkY3ZXJMbFlSQ2d4VzkxcVd4ZmVHYl8wYjlmYWItbWozM01SR1kyc1p1YkF3VVZOODEtRTlTal83QdIBa0FVX3lxTE5FaE54WmdLMGlfaHlHN2prMGd0WWxOOXU5cGdnZWMtZXE2dVJVcUF1SUNJeUl0c1AyYnFJRUMwSmQwbFFsaGVyU3VtMjRLeFlUZmNFVWtoT19TWU9aT1RSR2xiVGFWYndmYVFV?oc=5",
+      "source": "自由時報",
+      "published_at": "2026-11-04T03:00+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Hon Hai Precision (2317) Stock Price Today, Live Chart & News - TechGraph",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1wOUIwa2FkbEZIa0Jpcktsdi00dTNGM2Yta09fX0pCeVhSam82OF9OdTJFLTZQNE9WQjE5Sy1Pd1BXWTc5aTgwU2d2UVJybkZaM3k1dExHYzY5ZHBMVTBab05DT29ZNXhJWDdKWWU5cTZrNU9D?oc=5",
+      "source": "TechGraph",
+      "published_at": "2026-11-04T02:42+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "A $300 billion combined market cap! Analyzing the \"Chip + Optics\" vertical integration behind Marvell's potential acquisition of Lumentum - Mashdigi",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxORmxRZ3JBOTcydVVsendPQjZ6QTNRcWUza0lUbnR4SFgyX1MyWnNrcHFZeDdQaHRCMTNZRzcyczlmaTV4Vnl4S05MclhGUi02Rk1Jc1NqM1ZOMlNRRUlzVzB0YXV2ZF81SjVKaTRFVHFYVDkxNG1NUEVfTkE1enl4NW1TdV9OOEZw?oc=5",
+      "source": "Mashdigi",
+      "published_at": "2026-11-03T23:51+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "金沙中國有限公司(01928.HK)：兩筆優先票據擬11月4日上市 - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5DN1gzMWx6a1BQY0xBbkRaX0VFOUtDdkdrVzVFR1kzTkg1aTFObU4wbmU0SG5LYjhYRFd2MzBqcEZIcmxnQ0N4RFhBYy1mdm41VjhYRmxqUEpSUmVndjFyc1Jzcmd6ZFh5clp3?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-11-03T22:58+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
       "title": "US Market Movements | Goldman Sachs Significantly Raises Global Data Center Capacity Forecast; Storage Chip and Optical Communication Stocks Rise Together - 富途牛牛",
       "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOaThHWjNib1FNei00VFJpeENIVmxWQUg4bjNUcnoyOUtjZ21ZZTVsVmFFS0RHWVJhSHdvbDRsZXNfa2tfMVoxbmhURmF3MElaRzVLODBBc1RBUUNmdHZQcEZWS1J3QldkSVZNcHJYNjQ0ckJRMkloQTcwUVNVQWVIN0JDUWVNTnJjZEVwN2VRdkhjUllOQ1VmRVVYT25KZ2tmaEVTVXVDTWtkMGp6NzU0c1NnajFBVmM?oc=5",
       "source": "富途牛牛",
@@ -121,58 +153,26 @@
       "risk_score": 0
     },
     {
-      "title": "千金股血流成河剩43檔 大立光旺矽等14檔跌停亮燈 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi0gJBVV95cUxOYzRRVF9RQjh3eUFTcDNOY25IX2s1bDdQT2dCQlZzM2JQcWRoSFludzN1R3ZZdkFlZ0MtSkVJR3k2SHVFZzRYbmJTeS1UcGROeU1YOUhraEZiM0NmV0c1dWpQNlhmWDNVeFJIajk1X2dwX0pUOXVhWjZvdk9hUWZqVU81MnpZNjdKZ05YT2hyMXZmWVUxMWVIT0Zhd2Y5dTI1ZlZtZkpjM0lPelhnTHFzOXhWT3JxWW9PeFo4ODlMdkplWllCQ0laSXhfSURNNmJaTWRlNzRFZENGQl8wM1VXTjdicExYaXR2aF9qNVo3aEJqQjdZOGNjWlFuRlhJQ2lHMS10b0x5Ukd3d2puXzZpdm9lTVo5cHo1b1hQT29JNW43c1R5akJ1VllaQmIyVEI4eVExd2NzelBTcms2eDl4cm5rMm9lQkxqSUIxeWJIMzBTUQ?oc=5",
+      "title": "明天台股大反攻？台指期夜盤急拉「黑翻紅」漲逾400點 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi0wJBVV95cUxOTjE1VENKSlNoaGY1aC01VWpTREs5YVVhVWVJVVBWWnAwc1NlczIxdUNLUVp4WmFHRHdWOW00RTdPZmZFWUdkZjNYenlTM2RLc1BTWUFtaG1mOVFBVXNwNlplSmdTRkRmdzZZaWtWRHFRczZvQ2hLdUR3TEFWS0pVLThXYmg2djJ2UjNKTG03cUNOSTJfdU5OcEZ1X21sVDJzYjJsYmd0QURNdm9KcTI1VGJ6V0pVTE9tTFJGZnBKZm9FU0pUV1d2NmhNV3BMdHl5RlBMYmRIQzhHa19ibjlxb2tiNVpCbVpQM0cyUzJwTVB3Y3FweTVnVmhLX1AtSERMeXdTNS1BR3RtQXoyU3dKU2dabGdyei1EUFZnLVRzeG1lZzNBN3hrbDZWNGRKYkpCczdMUW9uVkY2aXdMdlVycEc3SlhDWWhIYWxobXd6SzY5MlU?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-11-03T18:45+08:00",
+      "published_at": "2026-11-03T22:22+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "台股市值全球第4大 臺灣週系列活動盛大登場 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiwgJBVV95cUxOTE9TdlRiNlV1RllQaFNMWXVSWkpla0RJVE84UHU0QnFDdmk1VnpvWDF5YTJHM2dHQkEyc3FaOEdEVndrMTFhQjVzZ09BOWczRWdHcDl0a0FKWUp4WE52dW1XaEtZeFp5TllBRDdEQU1DSm41aGJlWkwycnJLWnBOb3NqaER1TFA1NlBzRXcwczBTaWJlVFpRdHhOdzJpZEdVcnN5dzVhR0o2R0hCeVY4LUVidTFJaUczMWtfUzdyRGtkNVp1UXZ3ZVZKd1NSNUFYOXdqdGVmbzlTcE5MbmZYWk45Tk5mZHNnWWhEZUM0S1hPMEgyNzNaMWwzOGxHU0JqdUNNMm1oQ243NDZjQTZmY0E1WVp4dTFPOGpDR0RPYllIeGx0VzRnaWgxWEpWdkZnaGNMLU1US0ZWNGRGbDktTDB3?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-03T17:51+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "[Hong Kong Stocks] Hang Seng Index rises 132 points for the day; JD.com surges nearly 5%; Lenovo falls 6% - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQVDVaN3RjYWhlYjZSbHpva0cybzFXUUdyVXJBQWIyQ29kb2JLZUFwY1JtMTQ3aVdzRkRlS3pYcy04VW1aVmhLU2k3bjlaY3d2U2lMRkJpWld1RkN6d2tVbThuRnF2VlFIaUNlTGlmUWZIZDR1MDZkV2sxbF9mOWgxYlBicUl3cExrd0tGSUs1V0JBM0ZiaU9hQTNOckY?oc=5",
+      "title": "As tech stocks plummet, humanoid robots knock on Nasdaq's door! Agility Robotics plans to list this week, with net sales of only $174,000 in the past six months. - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPWHBTSEwzNFRoeVhqdzQ4NVdsR2FlRlJwNmgyTDhDOHdsYjdqSkhGN3hhaFI1dFk0SE1GdzYwRlU1TDdDVFF6ckVfazdObExIdXJDd25tV1lLLTRZQ0k0U0NJREUwbExNSlNGUmU0YWlrOFlxWkpwaGZDdk10dmJ0ZC1TOW5abXAtZWN6LVllY2Z2NmNpQmRuZEpYZEFZb0Vy?oc=5",
       "source": "富途牛牛",
-      "published_at": "2026-11-03T17:19+08:00",
+      "published_at": "2026-11-03T21:32+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "中國波頓(03318.HK)11月3日耗資242.33萬港元回購78.8萬股 - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1zaWxqMmItQVczaDJHTWFIbjJLVklleUktR2ktNWNLOW1oaHVvTkdKUldLdTh0MFpqcFhpRVZPZ1J5bm1VbE14MnRETm50dnVublBHM3VqUWRNS3lKLTZtSFZZZFc3SDh5bjRr?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-11-03T17:19+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "永豐銀行系統出包！驚爆集團盜轉10萬元 金管會證實「419人受影響4千多萬元」 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi5ANBVV95cUxNTEQzUEU1Qk9lZzdqb3phMmk2emY1eEd1ZmljQXk3LUlNWmpxWnd3NXRLX1g1QTVMQUFlNnZPaTY4UlVaQkR6RWhYZlhoWmIzVTY0Skx1d2VhN1lYUXhCT2EwVktkMVBlNmd6dGpxa2JiYk9oUHR5dkhuQkQ5SHpfV0t2aG80TmVFWWt0aU45WTVqUl9Qd0U0eGFjNTlvYm9pNVRtTTIxUWx2LW5HNC1uZ2F4THlDUlFtNUJHT3JkZ3FldW01cHQ4U1FqYUxOckFFTW1tZzZST0RLemVSbmlBMVFpeHNzRWR5dTJQWllzRVg2Q0dTNzR1SmdnaE5vSkZYdkViLW8ya29MR3RYdTFNdTBscmpsT1RCQ1Z1TWJIbGtfTFU4YjRyUWFQTDNWckxCaXNJUDJFWXBZbW0wcEU3a2FXQ1pXWjJMWlRITXFSUko1SlJxU19OamVEU3FWdnE3eEpNM2MyUmFZNUZJeEtHd2l2UUxNUkNGdzZOSXc2UndSeHMyUVQwYnlpZFZKZVlHeTMyZ0ZDQ1lQbW5jU29wVUxjTHBMNTVGb1RWX3ZNdWRvNmZDVDJraFc1MDQ5dktEX1BWZ3c1TENqU0x2YmI1NWhZQU9oRWFIdkktbTNMLVZmQXNk?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-03T17:03+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台積電成全球第七大企業 那斯達克高層：國家成就 - Rti 中央廣播電臺",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9EU0xjOG10SmMtVGt4aFNfYVRrZS03c0Q0bDBZZU10aGIxMzBfNjdGY2NSREFhUFZVTDlxSXhHeUoyaV9qUzVLRVhBQl8zUzBDdENCdV9Hdw?oc=5",
-      "source": "Rti 中央廣播電臺",
-      "published_at": "2026-11-03T16:20+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "The Hong Kong Stock Exchange announced that it will launch 12 new stock futures contracts, including MINIMAX and Lenovo Group. - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNdFAwVTZtdlJiZUtYWHl6c29FYkRnc2NJQzk0T3JmVjh4MW82dEcwYmRxdXFzZklrUTVoUFVqQWw5TnhILWloSkxzYUVDYWtFSl9NWHRmaC1XWjZwRHhrSU5wMm9Yd3hEWC11dGJQNGdxY3FBN2RpdVRCQUpINXg4RFlwWGdrUDFiTjRVQzV5aHVEN0l4ektsV3pIUjRRUktUSlZPVQ?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-03T16:19+08:00",
+      "title": "2026光通訊概念股有哪些？16檔台股、CPO供應鏈與最新進度一次看 - 數位時代",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNenlhajhKeGpjenpMSDJfaEtnTWZlR0pIY0F5ZmxWUFR5bXdtLUh0LXVVeFJYY0E2RHcySTlhQTJwRS1ITUNuMjkwT041U2FuamlWeHpJZ054bkFneVBTaDV2OFVDUVhWeFQ1Q2NGQmx6S1VBa0FETlAxaUJOZ0xDXw?oc=5",
+      "source": "數位時代",
+      "published_at": "2026-11-03T19:15+08:00",
       "importance": 2,
       "risk_score": 0
     }
@@ -198,6 +198,6 @@
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-11-03T23:25:26+08:00",
-  "checked_at": "2026-11-03T23:25:26+08:00"
+  "updated_at": "2026-11-04T05:08:45+08:00",
+  "checked_at": "2026-11-04T05:08:45+08:00"
 }
