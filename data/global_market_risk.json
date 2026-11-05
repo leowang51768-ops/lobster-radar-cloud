@@ -10,42 +10,42 @@
     "出現重大風險新聞"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 -11.3%｜NASDAQ -2.5%｜日經225 -1.8%｜KOSPI -4.7%｜台股加權 -3.2%｜恆生 +5.4%",
-    "⚠ 全球市場風險｜美債10Y 4.84%｜VIX 23.1｜WTI原油 90.41美元 +2.6%（高於常態，觀察）｜布蘭特原油 96.78美元 +2.3%（高於常態，觀察）",
+    "⚠ 全球市場風險｜費半 -15.0%｜NASDAQ -4.2%｜日經225 -1.8%｜KOSPI -4.7%｜台股加權 -3.2%｜恆生 +5.4%",
+    "⚠ 全球市場風險｜美債10Y 4.84%｜VIX 28.2｜WTI原油 91.20美元 +3.5%（高於常態，觀察）｜布蘭特原油 99.25美元 +4.9%（高於常態，觀察）",
     "⚠ 全球市場風險｜油價觀察｜WTI原油走勢：美國中期選舉「塵埃落定」，油價擊穿87.0關鍵支撐，見頂了嗎？",
-    "⚠ 全球市場風險｜油價觀察｜布蘭特原油暴跌10%接近90美元關卡：什麼原因導致油價快速下跌？",
-    "⚠ 全球市場風險｜Chinese Auto Stocks Benefit From Investor Concerns on AI Hardware Stocks -- Market Talk",
+    "⚠ 全球市場風險｜台股這週暴跌3600點！再傳「違約交割」慘斷頭災情",
     "⚠ 全球市場風險｜Hong Kong-listed oil stocks fell across the board as extreme expectations of a full blockade of",
     "⚠ 全球市場風險｜Record €62 billion in demand for Meta's new bonds! Behind the surge in appetite for tech giants",
-    "⚠ 全球市場風險｜Taiwan Semiconductor Manufacturing Co Ltd(TSM)股票11月5日開盤下跌5.32%：原因全解讀",
-    "⚠ 全球市場風險｜台股何時反彈？謝金河預言挑戰5萬點「要等這時候」",
-    "⚠ 全球市場風險｜China Resources Land Stock Climbs 3.8% in Hong Kong"
+    "⚠ 全球市場風險｜Hong Kong Stock Market Update | Gains in Mainland Chinese Bank Stocks Widen in Late Trading",
+    "⚠ 全球市場風險｜Stock markets diverge, oil prices steady tracking Trump and AI",
+    "⚠ 全球市場風險｜川普期中選舉慘敗！謝金河點出「4大危機」衝擊全球股市 台股挑戰5萬點恐等到明年",
+    "⚠ 全球市場風險｜Hong Kong Market Quick Look | The three major indices surged in the afternoon, with the Hang Se"
   ],
   "markets": {
     "US_SOX": {
       "label": "費半",
-      "price": 9402.172,
-      "change_pct": -11.2
+      "price": 9011.138,
+      "change_pct": -15.0
     },
     "US_NASDAQ": {
       "label": "NASDAQ",
-      "price": 24736.97,
-      "change_pct": -2.4
+      "price": 24314.998,
+      "change_pct": -4.2
     },
     "US_SP500": {
       "label": "S&P500",
-      "price": 7471.64,
-      "change_pct": -1.2
+      "price": 7353.73,
+      "change_pct": -2.8
     },
     "US_DOW": {
       "label": "道瓊",
-      "price": 52227.43,
-      "change_pct": 0.8
+      "price": 51523.06,
+      "change_pct": -0.6
     },
     "VIX": {
       "label": "VIX",
-      "price": 23.15,
-      "change_pct": 39.4
+      "price": 28.18,
+      "change_pct": 69.6
     },
     "JP_NIKKEI": {
       "label": "日經225",
@@ -69,26 +69,26 @@
     },
     "US10Y": {
       "label": "美債10年殖利率",
-      "price": 4.841,
-      "change_pct": -1.0
+      "price": 4.837,
+      "change_pct": -1.2
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 90.41,
-      "change_pct": 2.6
+      "price": 91.2,
+      "change_pct": 3.6
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 96.78,
-      "change_pct": 2.2
+      "price": 99.25,
+      "change_pct": 4.8
     }
   },
   "active_news": [
     {
-      "title": "Chinese Auto Stocks Benefit From Investor Concerns on AI Hardware Stocks -- Market Talk - Moomoo",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNSDh4dEE3OUk1RktVY0dQQWxnZXFLLTAtU0hyMmZ1Qm44eDVhNUJtOEhObWM2TzhoVWViNzVJTkNpU21NYjkxcTlwT1ZJb1RVVnlRV1h1d1hpczhNY3hmdWJDX2VSQ2NHd0R4U2dMU2pEeElZb2JURWRNMGt1UUViZGNobE9LeGljVlUzRzBtRE5CTm5nTjRFbDdVRk5TcTY5SmloanpCYlZEa0I2MXVfaVZnT1k?oc=5",
-      "source": "Moomoo",
-      "published_at": "2026-11-05T13:02+08:00",
+      "title": "台股這週暴跌3600點！再傳「違約交割」慘斷頭災情 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMivAJBVV95cUxNc05pZTl5b2daTXBjRWxCQVRQRGJEemlHSEk1Q3YzcS1fREV5TnQya3RUZHB2bWZBYnU1d1d4cDM4WkhjQ3V6MC1BUU5welFSLWpkYkJ0QTdhZTdhRFY3UzcxajlTMVpzQTlxUlgxNWZ6MmlKS0kzZ2FEZEZSMndNZ056Wm4tQVVuV0hNU1dpNDl3NGRkU1NYbjg3RnZJNno4VzNXU3Y3Z0VvbG5qVElHb2cyLWNWNk5WaURWQWxMN3NsNEdWdllGdVV5TDRpSGdhYXUxQWFESEI0eldkVUtJamM2b2FRdlJCZ1JiLWR1LXNGbVdGR1pibFdaQTRCSjJ6UERBb0VCWFpWaHBJSGpfNjNFRUdrazhlT01uTjBfaWJvTkxMUEpKMlFjVjJGbmtidWtoQzd5NXN2blds?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-05T20:11+08:00",
       "importance": 5,
       "risk_score": 4
     },
@@ -109,74 +109,74 @@
       "risk_score": 4
     },
     {
+      "title": "Hong Kong Stock Market Update | Gains in Mainland Chinese Bank Stocks Widen in Late Trading - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQaDlpWFhNbkdvY21IbFpZZ3ljUndIUFpKeGNtYnR1OFFqLXlRLWpScWw3S3F5LW5qR1h1WDh4eDBPaUNMNTFEVE5sNldveTRsLU96WjJWMmJjZ1RlQkluUHdZQ3RnZUtxZlJoZVZSUmRtUXo4VG5hNDFQRHJFNkgwb282eUpEVnBDb0dlOUdLVjBXc3YyWFJaNnhrRHUwSll5UEhaQ25R?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-05T18:09+08:00",
+      "importance": 4,
+      "risk_score": 2
+    },
+    {
+      "title": "Stock markets diverge, oil prices steady tracking Trump and AI - Macau Business",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOY0dMQXBFX0R5cmI5STZGa2pzNnpacFFnTngyckxpQ0lkTUl5Tm9hZ0Jjb21yZGx4RGFpY2VmVHIzeTRJUzBhSV96U1FUQ2hlSzRoUWtxWnBpc2FFWjhtTTNFbzMwcVZiQXl2RXJpZkMyMWYxYXBncmxmSm5QQjFkZHNJWjhEOWRtNl9lNXhRZ2dtZw?oc=5",
+      "source": "Macau Business",
+      "published_at": "2026-11-05T19:21+08:00",
+      "importance": 3,
+      "risk_score": 0
+    },
+    {
+      "title": "川普期中選舉慘敗！謝金河點出「4大危機」衝擊全球股市 台股挑戰5萬點恐等到明年 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi7wNBVV95cUxNNk1IZzdxUWU4SnRaSl9HZEpKZjEyUHRUblUzLWNEXzJvVEplTDlWR0JRRVBVU0pGX1ZHVEdHRXNwSUs4MG40aXg0ZUtSaHVkTHNXaGRPSVFFYi13V0d6ckNzNVUxQ3ZROHFnaGVNOGNxcFRTdUNsRGNNR2VEUkFTUnBvc0pkbkoyV1E2Um1UWDhuMFUzbnhLZmZiLWJWcjZKMkF6aHY1SDJ2NE5BNkVtdnNDTVMzLTJIZkkxNlhucmlPajY4NzdxWkRxcGQ3UWw1RXpmeHdJTVhXS214ajg1MGwxbzI1YzJ6NUI5Wk5qQlpOWDM3RzR5VEZ3a1UtekM0MmJyRndsV1VUSmx1X2Z6cW1ubHJSdGZUZkZIQXZjVjE5OTI1NjlzVEpab2U2dFVBNUw2d1Z3QTlfNmVMLWdydUFoa1c1WmZxblBYMUl6MFNoMzd5Y2c4dzltYnduaFdGSzI3M1otbzk3ZC1lY2hNYmYxem1JN1NCUjFqUGRsdDZ1cGpFTDNydTFQUmpBVDZKOG1tX0pqRWhHRkNtb2lVeEpiRjQtMmI1RWw5eW0waVRDdHRlYURFWmFnVjVNZzJMNTdOdnFyN2M1SkVtX0hMRWNlRkpKZjlQdDNWNHN6STEyMGlUbGNKRFZuakZfS28?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-05T10:42+08:00",
+      "importance": 3,
+      "risk_score": 0
+    },
+    {
+      "title": "Hong Kong Market Quick Look | The three major indices surged in the afternoon, with the Hang Seng Index up 1.67% and the Tech Index up 1.77%; chip, PCB, and optical communication stocks rallied, with HuaHong Hongli soaring nearly 16%, JianTao Lamin - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQbkF5bndQYWQ5OUxtMnNaWkpPSWFrVERiTGJQeUxweVpyd2FDLVdJR254bEY0SjJHejZmOUVuVWdneGxjOXUtb056elZxRGhfYThINWZ5S3Q3OE0zaUl5c0JGemtmQVVoRFFOcjR3STExY0pjSkFHUURHVGpFckJCMlJzNF9nUndaQlJZZWNtejhDRUU2RHIyaDZLemJjYlRSOVBF?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-06T03:30+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Global Equities Roundup: Market Talk - Moomoo",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQTFJndFhIWHBfVmJiR2JYQjRydzdKMEJ3ajVkTTZSWmdScTV0T1NQV0JYdDQwUjlmVE1tQS1HM3BhVkJZZ0ZwUzRXT3VvMS04X1VzM0d2NHBzQTgxWFFEc3RyNGxKRnpyY21ocG1nRm9jOENsd1hleHRsdHRVZnFxM2tfV1ZHdEVBRENkTA?oc=5",
+      "source": "Moomoo",
+      "published_at": "2026-11-06T03:27+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "The Stock Market Celebrated Election Day. Then the AI Trade Imploded. -- Barrons.com - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQNHU1NFQxLXBzcjNEVF9COXBIdUFWZTZrRFc5bG4zaTVLTTROU2dCVUh1c2djSUhHbHdNSlBsbWVfb1labTBmUDhxT3BTcVE0cGxvVFVPblBFU29saGUxZjZGc2NwbHhFM2JuNXNDTk5YZGZwaFFfb056WlBLS3Z5NnFRWDFNeWNOQ2VXZzBrM0pwc2xiUWFJTGNERF84SEx1Zllz?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-06T03:21+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Market Chatter: Nvidia Chips Stack Up in Hong Kong Pending Shipment Approval From China - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOanBFblJxc0tYdUo2WFJqSlhxZkRjNnlldFFyMmdvYm9pYXNoRXd0TWFwLVlyMndrcWNCak44aDI0Q2dFOFJydnFtTDd4ZUVDWWFQQmVxSkdVWEg5MzNqUGlyWFlRVjRKZi1ZV1drbDFlVUlLdTFfV3NZa3hXU1pNVHJ2UXhCTFl2VU1peHVvWFdtTFdyMVRvNDFHa3dudVZIWnc?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-06T03:07+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "A sweeping Democratic victory sparked a sell-off in chip stocks, sending the three major U.S. stock indexes lower; the Nasdaq plunged 4%, the Philadelphia Semiconductor Index tumbled 9%, and oil prices continued to retreat. - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQU19LZHVOcDRsNWhpdXhhb0ZqZlNpekxQNWpRXzVpNzFPM3UzWDRIRnV5QURjWjA3RGlhWDhPaURxUzFoWDNCaGFkdHkzQzIxdHFNWnBQRUh4WWU1OW5IUTlUdWozcjhaOFFEZmFRSm5tcExYbkhuQ0UyVF9wUDdTemxoNnk5QmY1RFlXX0I1U2FISDBaR0M2cXZxSnpST0ot?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-05T23:34+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
       "title": "Taiwan Semiconductor Manufacturing Co Ltd(TSM)股票11月5日開盤下跌5.32%：原因全解讀 - TradingKey",
       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOUW1US21uSDM3b2ltaWtvYlI2OWlERVBHcURkTnZPczJ0eUdTVWlURFVrcEF6NXA0WEJHWU5UbEU2Yl8xQ1dEdzJ1QmZQU19ObG13S0g5bHZubER2aHZGOEhqaFNBdW5wc1B4V1ktOWFQaGtSTEhYZDBCVndsY25ZLTBGeVUtNWY4RFNnWVJOb2Rqd09P?oc=5",
       "source": "TradingKey",
       "published_at": "2026-11-05T22:52+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股何時反彈？謝金河預言挑戰5萬點「要等這時候」 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMizwJBVV95cUxOWkRQejZjWG83U05oZ2IxalQwT1liN1UxZm5fVGxsWUhyNFNBSkZlUmJ2RkxqRmZaU05zZGdaNF9VQVk2LTFNTXpxUEpveUdCZVNlWW10ODlXNEdJdm5CYjRYbjVuUVFjaGJzMXBKWlNBSTljNl9fWXE0MktsLWV1MFZpcVN4dXFJdUJzS3h0Rm9rVnJ5TDJWMWZZY0ZCbXpYdUNGSG1YTkpNWm11THk0UEZvYUJqNWZFaGNwSk1fdG4tT25OeS1wSEdUSF9FQlpqQVdEa0JDVHpQQzJ3SU43enVNTFh2MXNZN2ItblU3bk8zUGNlN0o1d3lMbW1vcTJUUFdQb3NfalJBc0F6UFphc3ZFNGMzYTZiaEZuOElGTWhwVVpiZ21PN2duTVZBX0k4eVpOWWxhYmo2UEFQc2JtVkVBM3pjQ2V0eThDMnJLQQ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-05T21:11+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "China Resources Land Stock Climbs 3.8% in Hong Kong - Moomoo",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQYkk3dU5Pb2V6eHVZdzY4V29aLUpoVkl4dU13Z2o2UURVRndMQTdZVG10VExKU1gyR2JzTUgxTnQxQ3EzYUhObi1hT0IyZURHVnU1N19sZ0U5MGdFWjEwMnQ0WkNkTkVoanlaZ25zcDNMZk9FTERSbUR1eW5TeXluZDBzSzdUTldiaUJ3cWFySXVRSzBYSVZYcG80V0J0dFdn?oc=5",
-      "source": "Moomoo",
-      "published_at": "2026-11-05T19:54+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "比台積電更威？外媒點名「這1檔」：股價再翻漲4倍 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiugJBVV95cUxQcUFRM1RPY0RtWGJwS0NxUU5LalBVVjNHeWdMSmEyN2pIOGpiTEJ5Q3JCOGR1NzhVeXVyXzNULWxmelgzWFJkRXpxOC1jTnpocFp5YzdhcjFBSlNUQkJNSjMzc0d1dFBWeHNlT0hla1lUZElTYk5JaXF3Q016N3VjREotZWN6dW1xZUl1Qm1iVWZrYVJLTUoySFlyUXUtdDBFc2NrOTAwck9Kd2RQN0RqSzF0VHRrRHRqX0t2V3hyR0U2aGY2Q3FqVkxQUnZ2V3lMSDNlZE9OejdrSzlsWFpaUU90c3M4bnEzMXBoR0RBSXVtb3UyVXZSc1ZzOHRsTmVnSHVUSjdXYVhDdnZfSENCTXhjS1p1SE1HT2RfQ2J1Ti1zNlBxZzU1YnZMeXRHa3ZXMHdlS2RRVzRTUQ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-05T19:43+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "UBS Group: Maintains \"Buy\" rating on Aluminum Corporation of China's H-shares; target price HK$12.8 - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOTTRJcktDVzVhcXZYRmFOLUs0UWEyUENQVWhIOUlVeV9OOXFHWUUxMllJeWRuWk9qdWZwVDdZSzNoUkQyVWU4NWJsdThkZUptYVYxQjZTZXNKLVlWb3NjWlpRa1BKY2stTWtMb1RlQS1zUU10MWRvekc3V0hxaE1meUpoR2Z2MENYQlRMVXBsdDkxTE0wNnZfRi15R2s3OHl5Tm1NaTBaZDdjdw?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-05T19:33+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Hengke has risen for five consecutive sessions, while Alibaba and Tencent have surged! Has a revaluation of Hong Kong stocks begun? - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNaXFPZGc2QVNHMFlfZ2pWOHlQMHI4Q1BUcDZmQ0RhRTJmZVhVVWJwUFZSRjhxRDJkSWV2R3ppUU1JbzFKU3dPcFNCcElLcjZyM1M4Rk81QzJIM3FVamtMd2d2UTZadFM2b1BrejIzX21pNGpuLTVVVHdqLTR6dkM3RTE3cVBQV0ZJa3BFNFc0ZGFEd3JoaFg3X2p5QTcxM1h0UVBLcnhtZDFmVEk?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-05T18:37+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股下挫，融資加倍買進正2！台積電、台指期強撐，大盤再跌逾一成就追繳 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiggNBVV95cUxOZUVOWW5mbXVodEUzV3dweHdxV2xEdU1FTnhGeXBVTXlsVnNtR1o2c2ZEbFJRTUh1VlBtaHRQZ0l5QmllX2hlOVJ5TmowUkNIUVFtbUtNWmp6d0xhZTZ6c285SmNBWHA4NUI0Xzcza3VnaE14TG1hY1gwU0RCSk5BVVRjOHlZdDhxemd1YVpPb3cxSkk2aElUSG1xU0J3R2Y3T29xZlZyMS1fTGVBd1kxc0F2UEhoVDFLTUFpUlFobWxZYzI3VzB4Q2VUUWtqOXN3VkZGTFZlMTBnNEVmSUhGQ1FsUHVzU3lVZzhtc3BGay1WZnduYmwyaFRzNzZiVnVTZHNoaUlsaHlxZDR6RWZ0OUhpNjlDeGxBaHZoLTdvOUNrNUFoUDRxWGJ4dXRFWm1ocTVBX0dWQTF1aV9LZkp6emtDejZBYW1zdTJtamp4TU56RjYtVE5vbXVfckVwNk9KdGpWek1PWTlwWW9WN09YbFdxN3VVYXRHSzhhdHpYazV3UQ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-05T18:27+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股再跌千點救市措施備戰？ 金管會曝啟動「限空令」門檻 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi8wJBVV95cUxNSHN2Z1hDeVE5UkZ2anNVOXNOQk9VUXVHT0RvbFZnQV94M1hfelgzTWItalE4MVF4Vmo5SkV3bXQ5eDN0Z3dfZWdubTV2aGJCWmpYOWdJSWQ2MF9ySERJUWVPSUtVYmt3b1RFYXVZdHpiRG16ZjdraG9NVWN0TjlfTVkwQ0hZaDBFNVRMMk11eFM5RE5kMGVnZmY5Z0FEckI1WXRpcUtCTzN6VlE1SG5SWUVLd3cyOVZPSEJ6Z3lRcDRENUpZUEs5b3dtc2dZWGwwQUhYbWQycklkbEF1Wmp0TUtLMXNUYWdyMV9RVnJDY0I1Q3lRbEowTmxYUTc2NHNIU1JWdEFMWjBMSkk0ZUg5SlMxMVNTTU9ORWdIN0J6eVNfbUJ0TnktSUxMZW1oTUo3VjRJOEN5OFFQb3NEcFJxZkNVU1pRRmo2UnVpSXFNN294eWc3Mm13V2FqNjJVMl8xS3hvckVndVlLeHVJdzl4czNOaw?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-05T18:13+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "金管會救市18套劇本第一招出手了：證交所喊話+法說會 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi8gJBVV95cUxQeE5LbFB3ZFBCQWhVU2pIa2ZoQ2ZwVUY4LWkwcm9KRndhNTU4ekJBYUdadWpkTWtISzJMTEtCd1A2V1lNQzEyTl81elFfeVV6VUZZbFF4UFFsVnRKb3R0NDhKdjBPdkY2bFc5VElZRTVkNjM3RG40MDRJTWVhaWpQVVRsN18wVEU2QTVtYjNsVFlRZF84LURDTzlSX3BPYUtTNHdwZTdON2otVHhjQXRlcDM0NjVweWszUkROaklXRFRkSGk2OVh4SHZaWUZkMFd6T1AxYWhpTHJqVGNOSkQ1V2RQWXNyZHgtbllsVmRpNjRHaExmSi1pNUxZbld1QV9aN2V3RWx5QVFUc0p2WkItVk41LXZHdERaMzdfcFQxN3RoZ3YwWms0c185MG55ZGZUc2lkRkJENkJQWml0UUlEZDRqbFRWOVlXREpqb0wtNGlXdnNzdUUxTlJ0NktINGFNVDRmWllNaWc1NGFlRm5JeUxR?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-05T18:00+08:00",
       "importance": 2,
       "risk_score": 0
     }
@@ -187,15 +187,9 @@
       "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBkZ19XcjVBMzNVUkY0ZHFrS0VVQmc5cXRPVjFWTzFkbDNpSXVmZzU4SEdPekhha1NHNDZhM0JYSnp0amJVclpMeWhISnJienRkVTdJVTNSWmpMTDg4OG12ZkFKWl8zanNRNzl6MjE2YnhHeW9wbDBTOTV3?oc=5",
       "source": "Mitrade",
       "published_at": "2026-11-05T16:17+08:00"
-    },
-    {
-      "title": "布蘭特原油暴跌10%接近90美元關卡：什麼原因導致油價快速下跌？ - TradingKey",
-      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQdlRZb3FZWWhsTEF1ZV9HWGlORVEzREt6VzBNWnJnb3BNeGtfQUs4aGFocnhUZ0xpSmMzWWdPSXdjcFdUUV85NWRnN0lRbWNFYktNWm9tUUpoR2NqbXYtb2k5ZThWX21BajUtMEdQdnVMRUh3NnFGdUNFQVRqSnNhR3RoTmx6OGJqXzNJSnRDM1c5OXczMjEtYjRnRHpqOS1mdmVmY3Q4NzNRVUZ4eDN5aTlXMFpNTm1xVlI4bkZHR2FYbV9EQVk4VnRvQnVndlY3SkE?oc=5",
-      "source": "TradingKey",
-      "published_at": "2026-11-05T01:51+08:00"
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-11-06T00:37:18+08:00",
-  "checked_at": "2026-11-06T00:37:18+08:00"
+  "updated_at": "2026-11-06T06:14:33+08:00",
+  "checked_at": "2026-11-06T06:14:33+08:00"
 }
