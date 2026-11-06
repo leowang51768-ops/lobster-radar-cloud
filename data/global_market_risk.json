@@ -1,25 +1,25 @@
 {
   "schema": 1,
   "risk_level": "red",
-  "risk_score": 10,
+  "risk_score": 11,
   "risk_reasons": [
     "費半明顯下跌",
     "NASDAQ明顯下跌",
+    "日經明顯下跌",
     "韓股明顯下跌",
-    "台股明顯下跌",
-    "出現重大風險新聞"
+    "台股明顯下跌"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 -15.0%｜NASDAQ -4.2%｜日經225 -1.8%｜KOSPI -4.7%｜台股加權 -3.2%｜恆生 +5.4%",
-    "⚠ 全球市場風險｜美債10Y 4.84%｜VIX 28.2｜WTI原油 91.20美元 +3.5%（高於常態，觀察）｜布蘭特原油 99.25美元 +4.9%（高於常態，觀察）",
+    "⚠ 全球市場風險｜費半 -15.0%｜NASDAQ -4.2%｜日經225 -5.8%｜KOSPI -10.4%｜台股加權 -6.2%｜恆生 +2.9%",
+    "⚠ 全球市場風險｜美債10Y 4.84%｜VIX 28.2｜WTI原油 91.46美元 +3.8%（高於常態，觀察）｜布蘭特原油 99.71美元 +5.4%（高於常態，觀察）",
     "⚠ 全球市場風險｜油價觀察｜WTI原油走勢：美國中期選舉「塵埃落定」，油價擊穿87.0關鍵支撐，見頂了嗎？",
     "⚠ 全球市場風險｜台股這週暴跌3600點！再傳「違約交割」慘斷頭災情",
-    "⚠ 全球市場風險｜Hong Kong-listed oil stocks fell across the board as extreme expectations of a full blockade of",
     "⚠ 全球市場風險｜Record €62 billion in demand for Meta's new bonds! Behind the surge in appetite for tech giants",
     "⚠ 全球市場風險｜Hong Kong Stock Market Update | Gains in Mainland Chinese Bank Stocks Widen in Late Trading",
+    "⚠ 全球市場風險｜[Major Banks] Citi cuts Brilliance China (01114.HK) target price to HK$1.94; Q3 BMW joint ventu",
     "⚠ 全球市場風險｜Stock markets diverge, oil prices steady tracking Trump and AI",
-    "⚠ 全球市場風險｜川普期中選舉慘敗！謝金河點出「4大危機」衝擊全球股市 台股挑戰5萬點恐等到明年",
-    "⚠ 全球市場風險｜Hong Kong Market Quick Look | The three major indices surged in the afternoon, with the Hang Se"
+    "⚠ 全球市場風險｜After the tech stock rout, Anthropic’s IPO faces a crisis: Is it still worth $1.5 trillion? Sho",
+    "⚠ 全球市場風險｜Black Thursday Sends U.S. Markets into Risk Aversion: \"Fear Gauge\" Plummets 70%, Wave of Option"
   ],
   "markets": {
     "US_SOX": {
@@ -49,23 +49,23 @@
     },
     "JP_NIKKEI": {
       "label": "日經225",
-      "price": 61077.9,
-      "change_pct": -1.8
+      "price": 57567.42,
+      "change_pct": -5.8
     },
     "KR_KOSPI": {
       "label": "KOSPI",
-      "price": 5383.8,
-      "change_pct": -4.6
+      "price": 5091.37,
+      "change_pct": -10.4
     },
     "TW_TAIEX": {
       "label": "台股加權",
-      "price": 41574.72,
-      "change_pct": -3.2
+      "price": 39016.79,
+      "change_pct": -6.2
     },
     "HK_HSI": {
       "label": "恆生",
-      "price": 24796.98,
-      "change_pct": 5.4
+      "price": 24620.13,
+      "change_pct": 3.0
     },
     "US10Y": {
       "label": "美債10年殖利率",
@@ -74,13 +74,13 @@
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 91.2,
-      "change_pct": 3.6
+      "price": 91.46,
+      "change_pct": 3.8
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 99.25,
-      "change_pct": 4.8
+      "price": 99.71,
+      "change_pct": 5.4
     }
   },
   "active_news": [
@@ -89,14 +89,6 @@
       "url": "https://news.google.com/rss/articles/CBMivAJBVV95cUxNc05pZTl5b2daTXBjRWxCQVRQRGJEemlHSEk1Q3YzcS1fREV5TnQya3RUZHB2bWZBYnU1d1d4cDM4WkhjQ3V6MC1BUU5welFSLWpkYkJ0QTdhZTdhRFY3UzcxajlTMVpzQTlxUlgxNWZ6MmlKS0kzZ2FEZEZSMndNZ056Wm4tQVVuV0hNU1dpNDl3NGRkU1NYbjg3RnZJNno4VzNXU3Y3Z0VvbG5qVElHb2cyLWNWNk5WaURWQWxMN3NsNEdWdllGdVV5TDRpSGdhYXUxQWFESEI0eldkVUtJamM2b2FRdlJCZ1JiLWR1LXNGbVdGR1pibFdaQTRCSjJ6UERBb0VCWFpWaHBJSGpfNjNFRUdrazhlT01uTjBfaWJvTkxMUEpKMlFjVjJGbmtidWtoQzd5NXN2blds?oc=5",
       "source": "Yahoo股市",
       "published_at": "2026-11-05T20:11+08:00",
-      "importance": 5,
-      "risk_score": 4
-    },
-    {
-      "title": "Hong Kong-listed oil stocks fell across the board as extreme expectations of a full blockade of the Strait eased, sending international oil prices plunging 10% in a single day. - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPamZReUxsdTN0ZTJmRWVyYjVuV05GSkNPdjQwZS1FVF9YU1YxVFMteHNVSWpmOHk2YUx0MUlGSEFhanZpejhNVEtvRlhyOUtQT1UxZ1lEeHQ5bGtnTnFmVUxPRTh4VUhuM3ZhLUtjNUZxb2EyRmMwUllxbkJsNlNBSUoyZ0EtT2VrRS0yZzNDYlhvalBUejRkalJ2bw?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-05T09:45+08:00",
       "importance": 5,
       "risk_score": 4
     },
@@ -117,6 +109,14 @@
       "risk_score": 2
     },
     {
+      "title": "[Major Banks] Citi cuts Brilliance China (01114.HK) target price to HK$1.94; Q3 BMW joint venture margin decline seen as manageable - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOUlhsVTFOSzFUdVdkem45SXB6b3BIdjVoWGtCNzhvNkxWRzI5MWc3d2JDT3dQdzg4S0J6NWVSMjNCakc2ZEVtRGw1Nk5pUmM3dGt2ZFYxbllheHBud0VNVTJ0YmRaVjNvQnlhMlM2N05Gd3A5bHV4Y3VDYmhFMHQzcjVtV3FPY2hNSWVNckZLYjA2TW9uVXNoejBYZW9xLUZXRHdJMGNn?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-05T12:05+08:00",
+      "importance": 4,
+      "risk_score": 2
+    },
+    {
       "title": "Stock markets diverge, oil prices steady tracking Trump and AI - Macau Business",
       "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOY0dMQXBFX0R5cmI5STZGa2pzNnpacFFnTngyckxpQ0lkTUl5Tm9hZ0Jjb21yZGx4RGFpY2VmVHIzeTRJUzBhSV96U1FUQ2hlSzRoUWtxWnBpc2FFWjhtTTNFbzMwcVZiQXl2RXJpZkMyMWYxYXBncmxmSm5QQjFkZHNJWjhEOWRtNl9lNXhRZ2dtZw?oc=5",
       "source": "Macau Business",
@@ -125,58 +125,58 @@
       "risk_score": 0
     },
     {
-      "title": "川普期中選舉慘敗！謝金河點出「4大危機」衝擊全球股市 台股挑戰5萬點恐等到明年 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi7wNBVV95cUxNNk1IZzdxUWU4SnRaSl9HZEpKZjEyUHRUblUzLWNEXzJvVEplTDlWR0JRRVBVU0pGX1ZHVEdHRXNwSUs4MG40aXg0ZUtSaHVkTHNXaGRPSVFFYi13V0d6ckNzNVUxQ3ZROHFnaGVNOGNxcFRTdUNsRGNNR2VEUkFTUnBvc0pkbkoyV1E2Um1UWDhuMFUzbnhLZmZiLWJWcjZKMkF6aHY1SDJ2NE5BNkVtdnNDTVMzLTJIZkkxNlhucmlPajY4NzdxWkRxcGQ3UWw1RXpmeHdJTVhXS214ajg1MGwxbzI1YzJ6NUI5Wk5qQlpOWDM3RzR5VEZ3a1UtekM0MmJyRndsV1VUSmx1X2Z6cW1ubHJSdGZUZkZIQXZjVjE5OTI1NjlzVEpab2U2dFVBNUw2d1Z3QTlfNmVMLWdydUFoa1c1WmZxblBYMUl6MFNoMzd5Y2c4dzltYnduaFdGSzI3M1otbzk3ZC1lY2hNYmYxem1JN1NCUjFqUGRsdDZ1cGpFTDNydTFQUmpBVDZKOG1tX0pqRWhHRkNtb2lVeEpiRjQtMmI1RWw5eW0waVRDdHRlYURFWmFnVjVNZzJMNTdOdnFyN2M1SkVtX0hMRWNlRkpKZjlQdDNWNHN6STEyMGlUbGNKRFZuakZfS28?oc=5",
+      "title": "After the tech stock rout, Anthropic’s IPO faces a crisis: Is it still worth $1.5 trillion? Should it go public now? - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNMEdIcXhMdTZoR2RWcWxkaVlFcHo2ZjRkQUdHdXdYUjV2M1dDLTljaFVoQnNhU0xFSU5MNDZobnRwRjB4S3pzRnRkelJnX09WRWNyX04yaXQ4SG1MTnBORi1OZE1qa2xUWHVTdmZCZGtJVVZKS3hRdjg1S1BveFR4SVJGdHozbmJiejhxUlgyR2dLaGtoVVBV?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-06T10:18+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Black Thursday Sends U.S. Markets into Risk Aversion: \"Fear Gauge\" Plummets 70%, Wave of Options Hedging Sweeps the Market - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOZGI4bVZsZXlHcExJYlNubFY5amphUXZVU1E5VmRJMlVmcjctYUlfcDR0NFI4a0NSUDNjcTZFbHJpZUwtVEVhdG1LeVNCX2NTVF93NDJqcGF3QkQ1a19GTk5qVERJUHFmdjlpM1lkdHl4SUxBMTBuSUNPYkpZTE54NTNINmxYbjB0bkM5dGJNSTJiT0pBbzdCSkJfU0VOaHJySkhKLURuRQ?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-06T09:58+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股狂殺逾3700點摔到3萬7！國安基金何時護盤？金管會不排除祭限空令 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiqgNBVV95cUxNbUNiaWlwV1JKQWtMTzNSNVVFUDBrb29IUU5KRW9GR0FKZy1sVWZkV1l1T0RsOUg3U0pDbnRkUkpPUEVsZ0RpRmlVeTVtSHJDZnFZV3hqSkM5S2VOR21BLVhTWHh6NTktSE1yOWlka0xhVnBWUmsyNmFJajI4Uk02Z2tRNDJRN0N6dGtpNEV0Y3V3LWlqQlBiay1SUkhzMVY4UW10a2E1NkFrZkQ5Uk1BbGhxeDdmcVBmTlg0RzFJRGRKOVVfUERiTlB1MWtiSVJldEx1a2JwRkdUbjhhdW9vdzVyVUluRkpWa0d6dlVSbzJjcDRUeVZvc2NQcjZ0RmsxS1hWQTlTeUtUakVqN0p6dmpSbkU1ZzFPRk9zQXh2Sm5aSDE2X1ZaSzBqZGk4T2Y2X1BlQ0t1NnVmRzRkQ0J1SzVsV3JrRUhZczJRX2dqbnBQaGV2MXlkcDlwakM3SUtzSmVCMDVXbHhVNktjSDNyZmFfbjNKczZLcDhjWG1PNHhkdzJjYkEzNjVPb3BCTU94ZDJpNHBiUVJXdFBySUc5ZHk4c3YzU2FIOUE?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-11-05T10:42+08:00",
-      "importance": 3,
-      "risk_score": 0
-    },
-    {
-      "title": "Hong Kong Market Quick Look | The three major indices surged in the afternoon, with the Hang Seng Index up 1.67% and the Tech Index up 1.77%; chip, PCB, and optical communication stocks rallied, with HuaHong Hongli soaring nearly 16%, JianTao Lamin - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQbkF5bndQYWQ5OUxtMnNaWkpPSWFrVERiTGJQeUxweVpyd2FDLVdJR254bEY0SjJHejZmOUVuVWdneGxjOXUtb056elZxRGhfYThINWZ5S3Q3OE0zaUl5c0JGemtmQVVoRFFOcjR3STExY0pjSkFHUURHVGpFckJCMlJzNF9nUndaQlJZZWNtejhDRUU2RHIyaDZLemJjYlRSOVBF?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-06T03:30+08:00",
+      "published_at": "2026-11-06T09:36+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "Global Equities Roundup: Market Talk - Moomoo",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQTFJndFhIWHBfVmJiR2JYQjRydzdKMEJ3ajVkTTZSWmdScTV0T1NQV0JYdDQwUjlmVE1tQS1HM3BhVkJZZ0ZwUzRXT3VvMS04X1VzM0d2NHBzQTgxWFFEc3RyNGxKRnpyY21ocG1nRm9jOENsd1hleHRsdHRVZnFxM2tfV1ZHdEVBRENkTA?oc=5",
-      "source": "Moomoo",
-      "published_at": "2026-11-06T03:27+08:00",
+      "title": "【Yahoo早盤】台股失守年線...血洗3737點創紀錄！黃文清：滿足點已步步近逼 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiwwNBVV95cUxNODQ4NUJ0Vm1HdW16R1pFZnVZQWxTeEVEVlhOMmE2U3pNUl8yeDJETVRLSjRwMk5vQUxwLWY0d0JIRHpqNzZfSlpkUmdaa0hsY1haRjFQTURmQXBnd25Ja2t3SG8xM2VJZC1UcG1CclZ2YUZuYU1jTDF1UUJNQmVWSzNrTTRLMm9CZ2lQeEowVk5hcm5sLXMtTHRHT2h4LVZRakZteUs2cDdZRExZSU5PeDREMWhZUWZXVGdvSHFhYU42UEctNjQ4X3ROdmNweTg5UzgtNFF3N3FPNTJOSVRONUNaX0VlbG1sRXlJVlNqT05JWG0wUndCMXlTMDZBTjVaZ1IwX0JQNDZUUWUxRGFPS05vekRpUndKVDhMX0lYeGo2VGZSOTlVc3g1NzI4eTFudllPTFpzX0FCa0JjaTNVcUZWUVh1cTdoU3Y2MEpLSlpDdUYxY2N1NEZSZXN0UjhjbThXVExMTXp6VXRqTm5wVnBkVlVkd2drSXAwTEN0QThSbEYyRXF1MWpCWm03cFkyYWo0TWF5RXdHZnhkOU9kNlFkWHh4Q0JqazZpMEUwdkFzMkRaWFFtT3JiSmM0X2o1LURr?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-06T09:36+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "The Stock Market Celebrated Election Day. Then the AI Trade Imploded. -- Barrons.com - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQNHU1NFQxLXBzcjNEVF9COXBIdUFWZTZrRFc5bG4zaTVLTTROU2dCVUh1c2djSUhHbHdNSlBsbWVfb1labTBmUDhxT3BTcVE0cGxvVFVPblBFU29saGUxZjZGc2NwbHhFM2JuNXNDTk5YZGZwaFFfb056WlBLS3Z5NnFRWDFNeWNOQ2VXZzBrM0pwc2xiUWFJTGNERF84SEx1Zllz?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-06T03:21+08:00",
+      "title": "台股暴跌近4千點！史上盤中最大 4萬點、3萬9、3萬8關卡一次沒了 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMinANBVV95cUxQY3VnelE1ZUJ0d1dlY2MzY2RZb1QyLXY0Sk9JR2tVWlk3SUx5bkFRTkJwYzA4Z2t3by1iNzRiVm1ZbkVLTmNPY3JROUgya1JIb2VjWjVBUmNSN0J3SjJmZU5MeHU5VmhYZG5zanRHOVBRejg0XzZPcEtnY2EzcXl2Y2dCeUNsdWN0czBJYUNTUThnT2lsNTdzUDRRanVsOWJTRnBKc05tem9POVZSWW1KLS1KeTJhY2FVNk1wMmFiS2dlckpJSXdRcXBmX0gxaUhyczd0YVVXbFJLUnk2aXVoVUVQTmJQX2IyNzZqMHAxNGRaMEZWdnkydjFWZ3RkMHVMOVB4UjRYaHBNMjQ1bEhEakFHN1ppRGYtLURrMTZCTU5rUkJHQjVKc3hOLW1UYXhmc28tRmt0b0lnYzF4czhFRG5hblRVRDByLXhvX0NVU3pkVWNwLW9uMHVqUm1YVm9EbzgzRDZRRmFqcHNha1BLTnIweVo1VTVuZVRSSThFd0xGcjh2UUNfVmFXY053RGxneU85eWJnV1RqUUZK?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-06T09:08+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "Market Chatter: Nvidia Chips Stack Up in Hong Kong Pending Shipment Approval From China - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOanBFblJxc0tYdUo2WFJqSlhxZkRjNnlldFFyMmdvYm9pYXNoRXd0TWFwLVlyMndrcWNCak44aDI0Q2dFOFJydnFtTDd4ZUVDWWFQQmVxSkdVWEg5MzNqUGlyWFlRVjRKZi1ZV1drbDFlVUlLdTFfV3NZa3hXU1pNVHJ2UXhCTFl2VU1peHVvWFdtTFdyMVRvNDFHa3dudVZIWnc?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-06T03:07+08:00",
+      "title": "台股暴跌逾3千點！史上盤中最大 4萬點沒了 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMitwJBVV95cUxOa0RWX3pIcmlTZW45Rm1tX0JPRWdwYjNkZ3VLNDJNNDBLQ0pBSnFVSERzSllPVzBwQ3NQdmFHWk1xVzFiY1l3LU1ncnBJMVBORk9aVmkzbXpXZjJuNVJ6Sm9OVWd0M3pKcU9uOGFwMS1xRmRRSVhpenRCbGhQR3ZDNUxFd1EwX2c5Tm9SNkRDQWxsQmpOZS05eWV1TWctWUZBZFdkbHlpR2JuRjJtb2Eta29ZSUFDdHItYldGZlV0VXYzM0lPZkhkcGJYb1Y0MXpQZmRKU1huUVZmLVVCeG5DWmMxaFY5bzVWRDBxMlZfM2VNM0c0STN6TFdXTXpOM3VjN1p4MkZ5bTYxT1ZobTdnZDBKZTBuWUFLQkRjTkJXUTZHNlRta3dFblVMYWJvTElfNTVGazhkRQ?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-06T09:03+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "A sweeping Democratic victory sparked a sell-off in chip stocks, sending the three major U.S. stock indexes lower; the Nasdaq plunged 4%, the Philadelphia Semiconductor Index tumbled 9%, and oil prices continued to retreat. - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQU19LZHVOcDRsNWhpdXhhb0ZqZlNpekxQNWpRXzVpNzFPM3UzWDRIRnV5QURjWjA3RGlhWDhPaURxUzFoWDNCaGFkdHkzQzIxdHFNWnBQRUh4WWU1OW5IUTlUdWozcjhaOFFEZmFRSm5tcExYbkhuQ0UyVF9wUDdTemxoNnk5QmY1RFlXX0I1U2FISDBaR0M2cXZxSnpST0ot?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-05T23:34+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Taiwan Semiconductor Manufacturing Co Ltd(TSM)股票11月5日開盤下跌5.32%：原因全解讀 - TradingKey",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOUW1US21uSDM3b2ltaWtvYlI2OWlERVBHcURkTnZPczJ0eUdTVWlURFVrcEF6NXA0WEJHWU5UbEU2Yl8xQ1dEdzJ1QmZQU19ObG13S0g5bHZubER2aHZGOEhqaFNBdW5wc1B4V1ktOWFQaGtSTEhYZDBCVndsY25ZLTBGeVUtNWY4RFNnWVJOb2Rqd09P?oc=5",
-      "source": "TradingKey",
-      "published_at": "2026-11-05T22:52+08:00",
+      "title": "台股血崩狂跌，這1檔股票竟「飆上歷史新高」！專家曝3大抗震神力： 定存股最後良心 - 風傳媒",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9MQ0otWEZnMXhhOWtGWUVzTWJtbHBvZUI2MFRxZVpQWU9fdXVuNGhXb0p6UHhlUG9ESGlwYjdHb1czZmVFd2ZucTB0Mk9xMHVE?oc=5",
+      "source": "風傳媒",
+      "published_at": "2026-11-06T08:54+08:00",
       "importance": 2,
       "risk_score": 0
     }
@@ -190,6 +190,6 @@
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-11-06T06:14:33+08:00",
-  "checked_at": "2026-11-06T06:14:33+08:00"
+  "updated_at": "2026-11-06T10:25:20+08:00",
+  "checked_at": "2026-11-06T10:25:20+08:00"
 }
