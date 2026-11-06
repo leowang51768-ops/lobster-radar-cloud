@@ -10,16 +10,16 @@
     "台股明顯下跌"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 -15.0%｜NASDAQ -4.2%｜日經225 -5.8%｜KOSPI -10.4%｜台股加權 -6.2%｜恆生 +2.9%",
-    "⚠ 全球市場風險｜美債10Y 4.84%｜VIX 28.2｜WTI原油 91.46美元 +3.8%（高於常態，觀察）｜布蘭特原油 99.71美元 +5.4%（高於常態，觀察）",
-    "⚠ 全球市場風險｜油價觀察｜WTI原油走勢：美國中期選舉「塵埃落定」，油價擊穿87.0關鍵支撐，見頂了嗎？",
-    "⚠ 全球市場風險｜台股這週暴跌3600點！再傳「違約交割」慘斷頭災情",
+    "⚠ 全球市場風險｜費半 -15.0%｜NASDAQ -4.2%｜日經225 -6.0%｜KOSPI -11.0%｜台股加權 -4.5%｜恆生 +2.4%",
+    "⚠ 全球市場風險｜美債10Y 4.84%｜VIX 26.1｜WTI原油 89.23美元 -1.4%（高於常態，觀察）｜布蘭特原油 96.95美元 -1.4%（高於常態，觀察）",
+    "⚠ 全球市場風險｜油價觀察｜美國期中選舉後油價劇震 中東局勢添變數恐影響全球能源",
+    "⚠ 全球市場風險｜Japanese and South Korean stocks collectively slide into a \"bear market\"! South Korean official",
     "⚠ 全球市場風險｜Record €62 billion in demand for Meta's new bonds! Behind the surge in appetite for tech giants",
-    "⚠ 全球市場風險｜Hong Kong Stock Market Update | Gains in Mainland Chinese Bank Stocks Widen in Late Trading",
-    "⚠ 全球市場風險｜[Major Banks] Citi cuts Brilliance China (01114.HK) target price to HK$1.94; Q3 BMW joint ventu",
+    "⚠ 全球市場風險｜Dow Jones Top Markets Headlines at 7 PM ET: Wall Street Gets $2.5 Trillion AI Reality Check Wit",
     "⚠ 全球市場風險｜Stock markets diverge, oil prices steady tracking Trump and AI",
-    "⚠ 全球市場風險｜After the tech stock rout, Anthropic’s IPO faces a crisis: Is it still worth $1.5 trillion? Sho",
-    "⚠ 全球市場風險｜Black Thursday Sends U.S. Markets into Risk Aversion: \"Fear Gauge\" Plummets 70%, Wave of Option"
+    "⚠ 全球市場風險｜Global Forex and Fixed Income Roundup: Market Talk",
+    "⚠ 全球市場風險｜Nomura Dissects U.S. Stock Market's Black Thursday: A Reflexive Storm Triggered by a $100 Billi",
+    "⚠ 全球市場風險｜台股崩跌3737點創紀錄！國安基金操盤手表態：不排除召開臨時會"
   ],
   "markets": {
     "US_SOX": {
@@ -44,28 +44,28 @@
     },
     "VIX": {
       "label": "VIX",
-      "price": 28.18,
-      "change_pct": 69.6
+      "price": 26.06,
+      "change_pct": -7.6
     },
     "JP_NIKKEI": {
       "label": "日經225",
-      "price": 57567.42,
-      "change_pct": -5.8
+      "price": 57434.77,
+      "change_pct": -6.0
     },
     "KR_KOSPI": {
       "label": "KOSPI",
-      "price": 5091.37,
-      "change_pct": -10.4
+      "price": 5059.69,
+      "change_pct": -11.0
     },
     "TW_TAIEX": {
       "label": "台股加權",
-      "price": 39016.79,
-      "change_pct": -6.2
+      "price": 39701.64,
+      "change_pct": -4.6
     },
     "HK_HSI": {
       "label": "恆生",
-      "price": 24620.13,
-      "change_pct": 3.0
+      "price": 24481.86,
+      "change_pct": 2.4
     },
     "US10Y": {
       "label": "美債10年殖利率",
@@ -74,21 +74,21 @@
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 91.46,
-      "change_pct": 3.8
+      "price": 89.23,
+      "change_pct": -1.4
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 99.71,
-      "change_pct": 5.4
+      "price": 96.95,
+      "change_pct": -1.4
     }
   },
   "active_news": [
     {
-      "title": "台股這週暴跌3600點！再傳「違約交割」慘斷頭災情 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMivAJBVV95cUxNc05pZTl5b2daTXBjRWxCQVRQRGJEemlHSEk1Q3YzcS1fREV5TnQya3RUZHB2bWZBYnU1d1d4cDM4WkhjQ3V6MC1BUU5welFSLWpkYkJ0QTdhZTdhRFY3UzcxajlTMVpzQTlxUlgxNWZ6MmlKS0kzZ2FEZEZSMndNZ056Wm4tQVVuV0hNU1dpNDl3NGRkU1NYbjg3RnZJNno4VzNXU3Y3Z0VvbG5qVElHb2cyLWNWNk5WaURWQWxMN3NsNEdWdllGdVV5TDRpSGdhYXUxQWFESEI0eldkVUtJamM2b2FRdlJCZ1JiLWR1LXNGbVdGR1pibFdaQTRCSjJ6UERBb0VCWFpWaHBJSGpfNjNFRUdrazhlT01uTjBfaWJvTkxMUEpKMlFjVjJGbmtidWtoQzd5NXN2blds?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-05T20:11+08:00",
+      "title": "Japanese and South Korean stocks collectively slide into a \"bear market\"! South Korean officials warn: Necessary measures will be taken to prevent excessive volatility. - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNc2xwTzdSUG00RmxCREFGS05COVJWWFpkTklueE9pZDZHcjQ5SmFWZ1l6bG5XMkZ0dVBFMm9hdkxRaVpyQTZWN2I4a3VhUEFOZ2hCUkQwOG52Ukw0NFpncTNlRjJFcXo1WExtUmZBb2RMWlFQSl9qMXRZTWdHYXN5NzBOZUJzMFNLb1hPcDlOSE9lZkdsenZKZFMyU3pnYzNaeElCek1uUTl2Zw?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-06T09:13+08:00",
       "importance": 5,
       "risk_score": 4
     },
@@ -101,18 +101,10 @@
       "risk_score": 4
     },
     {
-      "title": "Hong Kong Stock Market Update | Gains in Mainland Chinese Bank Stocks Widen in Late Trading - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQaDlpWFhNbkdvY21IbFpZZ3ljUndIUFpKeGNtYnR1OFFqLXlRLWpScWw3S3F5LW5qR1h1WDh4eDBPaUNMNTFEVE5sNldveTRsLU96WjJWMmJjZ1RlQkluUHdZQ3RnZUtxZlJoZVZSUmRtUXo4VG5hNDFQRHJFNkgwb282eUpEVnBDb0dlOUdLVjBXc3YyWFJaNnhrRHUwSll5UEhaQ25R?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-05T18:09+08:00",
-      "importance": 4,
-      "risk_score": 2
-    },
-    {
-      "title": "[Major Banks] Citi cuts Brilliance China (01114.HK) target price to HK$1.94; Q3 BMW joint venture margin decline seen as manageable - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOUlhsVTFOSzFUdVdkem45SXB6b3BIdjVoWGtCNzhvNkxWRzI5MWc3d2JDT3dQdzg4S0J6NWVSMjNCakc2ZEVtRGw1Nk5pUmM3dGt2ZFYxbllheHBud0VNVTJ0YmRaVjNvQnlhMlM2N05Gd3A5bHV4Y3VDYmhFMHQzcjVtV3FPY2hNSWVNckZLYjA2TW9uVXNoejBYZW9xLUZXRHdJMGNn?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-05T12:05+08:00",
+      "title": "Dow Jones Top Markets Headlines at 7 PM ET: Wall Street Gets $2.5 Trillion AI Reality Check With Historic Rout of Tech Stocks | Bank ... - Moomoo",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPeFFMVWw1eG16SmczQU9IbzdRQ0YyVHFVVjRVWkxFLVdnNGhHSV9CcjVjeUk5d0EteDJTTFhiajdRajYwWEFXZXBaTEwxeElaQXBPQWQwM29yRUVNenNvZUlwTi15TUVBVThKQm5vOHJ1akxPMThrbGdIdGFUNTRrSEVob3RIYndwZU9MZ1ZDVklyRVdLSC1kUVhQemE?oc=5",
+      "source": "Moomoo",
+      "published_at": "2026-11-06T08:00+08:00",
       "importance": 4,
       "risk_score": 2
     },
@@ -125,71 +117,79 @@
       "risk_score": 0
     },
     {
-      "title": "After the tech stock rout, Anthropic’s IPO faces a crisis: Is it still worth $1.5 trillion? Should it go public now? - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNMEdIcXhMdTZoR2RWcWxkaVlFcHo2ZjRkQUdHdXdYUjV2M1dDLTljaFVoQnNhU0xFSU5MNDZobnRwRjB4S3pzRnRkelJnX09WRWNyX04yaXQ4SG1MTnBORi1OZE1qa2xUWHVTdmZCZGtJVVZKS3hRdjg1S1BveFR4SVJGdHozbmJiejhxUlgyR2dLaGtoVVBV?oc=5",
+      "title": "Global Forex and Fixed Income Roundup: Market Talk - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNQzFNQ1AyeWxNUnZBc2trT2lVQ21mOFQzemVYb1UzRkhZUHN5STdLdGRCZVh0TURsQmdSUGtEM2cxQklRc1JrMENQUDRCZXF5YW5SanVwcVhjNDNGMFJNbmFxT2VBYnE0eXB0aEEwWXF6Z0ZRV2ZBT2RCMC0xMHZIeHdIc0FvTWc3NUplREJ6YkdOSUl1djlv?oc=5",
       "source": "富途牛牛",
-      "published_at": "2026-11-06T10:18+08:00",
+      "published_at": "2026-11-06T15:58+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "Black Thursday Sends U.S. Markets into Risk Aversion: \"Fear Gauge\" Plummets 70%, Wave of Options Hedging Sweeps the Market - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOZGI4bVZsZXlHcExJYlNubFY5amphUXZVU1E5VmRJMlVmcjctYUlfcDR0NFI4a0NSUDNjcTZFbHJpZUwtVEVhdG1LeVNCX2NTVF93NDJqcGF3QkQ1a19GTk5qVERJUHFmdjlpM1lkdHl4SUxBMTBuSUNPYkpZTE54NTNINmxYbjB0bkM5dGJNSTJiT0pBbzdCSkJfU0VOaHJySkhKLURuRQ?oc=5",
+      "title": "Nomura Dissects U.S. Stock Market's Black Thursday: A Reflexive Storm Triggered by a $100 Billion \"Early Sell-Off\" - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQNmQwLVgzQ01lc2duSmpVX0dBc2RYZk5MTnllQ1NyM1ZzMXJjNFBnQWpsbGxLRnQzN0pPNkJRUzV3c2c3Q01VeVFpQWNJeU4xQ1hHRURCdWhUSXA0b1ZpeEU4Z2pYQjlaSGE5WFBDUzZRN3ZMUFN4QTdCX0hScUEzczVTNGg1RVlZbE5wY3llUGw3Z01SbkxFTzJNUTQ5QzkzY0drM3RR?oc=5",
       "source": "富途牛牛",
-      "published_at": "2026-11-06T09:58+08:00",
+      "published_at": "2026-11-06T14:44+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "台股狂殺逾3700點摔到3萬7！國安基金何時護盤？金管會不排除祭限空令 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiqgNBVV95cUxNbUNiaWlwV1JKQWtMTzNSNVVFUDBrb29IUU5KRW9GR0FKZy1sVWZkV1l1T0RsOUg3U0pDbnRkUkpPUEVsZ0RpRmlVeTVtSHJDZnFZV3hqSkM5S2VOR21BLVhTWHh6NTktSE1yOWlka0xhVnBWUmsyNmFJajI4Uk02Z2tRNDJRN0N6dGtpNEV0Y3V3LWlqQlBiay1SUkhzMVY4UW10a2E1NkFrZkQ5Uk1BbGhxeDdmcVBmTlg0RzFJRGRKOVVfUERiTlB1MWtiSVJldEx1a2JwRkdUbjhhdW9vdzVyVUluRkpWa0d6dlVSbzJjcDRUeVZvc2NQcjZ0RmsxS1hWQTlTeUtUakVqN0p6dmpSbkU1ZzFPRk9zQXh2Sm5aSDE2X1ZaSzBqZGk4T2Y2X1BlQ0t1NnVmRzRkQ0J1SzVsV3JrRUhZczJRX2dqbnBQaGV2MXlkcDlwakM3SUtzSmVCMDVXbHhVNktjSDNyZmFfbjNKczZLcDhjWG1PNHhkdzJjYkEzNjVPb3BCTU94ZDJpNHBiUVJXdFBySUc5ZHk4c3YzU2FIOUE?oc=5",
+      "title": "台股崩跌3737點創紀錄！國安基金操盤手表態：不排除召開臨時會 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMijwNBVV95cUxPZ25BSkp1Zlg4OEpKY3NOQnlEUDVmT0NtQkkwcU1TVXI1NVhlX1RlT0dNZ0ZpVHdMb1kxRHMtaThqRE9ERjZJWjJXemVwZ1R3WTRDVmt4T3g5VjFUNTRDb0FPQW45d3M2eDJBR0RYSW9YZE45TkhoeFF0MmxhaFNkYjZnQ2xkMDZuU3ZiTTdNblJuOXlCM2FObDRfRTN0SkhOdXhhcVFIR2hUVEVTWV9UQzZFQlE0RmpiTUE0dE9WcUtYa3RnSXBocUVzZ01Rb3lFODJSWmdHOHQ2ajJjd0VtN1RnZ3NEeUhlOHpZYjREOEltS0lPNG5RMThJSHFuQ3R3OWVkcl84ak9iazhQUVNMM0k1VFlmYkp0TTd1NkJYYjVlVW16QkxiUDBUNHNmWU5qSzkyTUQ4R3QtSzFoTHdSOEpXVXJKcFBSNUtMSmszc29QYU1fTGoyQXk3MUl0MExmbG9sdjUyaEdwaUM2ZDB2ejZPdHdsd3hTMXA5VkVsc055ZFJLU29JSTdlMmdZQjg?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-11-06T09:36+08:00",
+      "published_at": "2026-11-06T14:01+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "【Yahoo早盤】台股失守年線...血洗3737點創紀錄！黃文清：滿足點已步步近逼 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiwwNBVV95cUxNODQ4NUJ0Vm1HdW16R1pFZnVZQWxTeEVEVlhOMmE2U3pNUl8yeDJETVRLSjRwMk5vQUxwLWY0d0JIRHpqNzZfSlpkUmdaa0hsY1haRjFQTURmQXBnd25Ja2t3SG8xM2VJZC1UcG1CclZ2YUZuYU1jTDF1UUJNQmVWSzNrTTRLMm9CZ2lQeEowVk5hcm5sLXMtTHRHT2h4LVZRakZteUs2cDdZRExZSU5PeDREMWhZUWZXVGdvSHFhYU42UEctNjQ4X3ROdmNweTg5UzgtNFF3N3FPNTJOSVRONUNaX0VlbG1sRXlJVlNqT05JWG0wUndCMXlTMDZBTjVaZ1IwX0JQNDZUUWUxRGFPS05vekRpUndKVDhMX0lYeGo2VGZSOTlVc3g1NzI4eTFudllPTFpzX0FCa0JjaTNVcUZWUVh1cTdoU3Y2MEpLSlpDdUYxY2N1NEZSZXN0UjhjbThXVExMTXp6VXRqTm5wVnBkVlVkd2drSXAwTEN0QThSbEYyRXF1MWpCWm03cFkyYWo0TWF5RXdHZnhkOU9kNlFkWHh4Q0JqazZpMEUwdkFzMkRaWFFtT3JiSmM0X2o1LURr?oc=5",
+      "title": "NVIDIA Corporation (NVD.DE) Stock Price, News, Quote & History - Yahoo! Finance Canada",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1VT285Ni1pTkhtYzlmVHBWLXJZLWRZbkxyZVg3bUcyNkx2dU5pbXdFREcyZ3BNYlhNOWJtazFYNVBTTzFKUFd2M0IxWl9FM2dxMmVNQw?oc=5",
+      "source": "Yahoo! Finance Canada",
+      "published_at": "2026-11-06T13:39+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股盤中崩3700多點摜破年線 金管會將宣布\"救市\"措施 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi4AJBVV95cUxQSURkUXlIelJyTUQ3OHNQYXVKOVpyTEMtR3U5Zjd1ZUJQUmd1WTk3Z2VjdU84YzRWSTZ6V3lyU2FnR2FPNU1wNHZCRmllWFhoeHhXdTJXaUFXTW9hOXVEZld0ZU1FRUNzOTlvWlZQZE1TOUlfdTRYWm9JS25VZXVzS0M1eTBkeXd1cUR4bjVwNHNDbzVrbHRJQTVrc0xyZG90R2MxWmZQa1RucWstODI2N0FLNUFsMlpPUkNocmdjQk5pQ0ZnYTdUN2Q3RjlkVWpEYlRyT2ZKVHNxejM5MVA0UlROOXpLV2FIdmRBSUF0bThrY0VfMFJtTDgzelBuc2pPcjExZDZnVVZMYURaakp4Ny1QZXE1R3NyMWsyNzZBLWNYT1pNZThzUVZDdlM2WVRQM1Jtdy03TmZVUW5rRTVTdUZUV2VxejVSWmdxaUpmTFA1aURJeHpnMnFJVGNseGx1?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-11-06T09:36+08:00",
+      "published_at": "2026-11-06T13:00+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "台股暴跌近4千點！史上盤中最大 4萬點、3萬9、3萬8關卡一次沒了 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMinANBVV95cUxQY3VnelE1ZUJ0d1dlY2MzY2RZb1QyLXY0Sk9JR2tVWlk3SUx5bkFRTkJwYzA4Z2t3by1iNzRiVm1ZbkVLTmNPY3JROUgya1JIb2VjWjVBUmNSN0J3SjJmZU5MeHU5VmhYZG5zanRHOVBRejg0XzZPcEtnY2EzcXl2Y2dCeUNsdWN0czBJYUNTUThnT2lsNTdzUDRRanVsOWJTRnBKc05tem9POVZSWW1KLS1KeTJhY2FVNk1wMmFiS2dlckpJSXdRcXBmX0gxaUhyczd0YVVXbFJLUnk2aXVoVUVQTmJQX2IyNzZqMHAxNGRaMEZWdnkydjFWZ3RkMHVMOVB4UjRYaHBNMjQ1bEhEakFHN1ppRGYtLURrMTZCTU5rUkJHQjVKc3hOLW1UYXhmc28tRmt0b0lnYzF4czhFRG5hblRVRDByLXhvX0NVU3pkVWNwLW9uMHVqUm1YVm9EbzgzRDZRRmFqcHNha1BLTnIweVo1VTVuZVRSSThFd0xGcjh2UUNfVmFXY053RGxneU85eWJnV1RqUUZK?oc=5",
+      "title": "台股史上最大崩跌！台積電一度跌停 卓揆喊話金管會因應 國安基金也待命 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiyANBVV95cUxPMUNCSHVzc0x1MFNMeF9NME0zVTFMVGhUM2ZLWUdQWG5yWjZ6cnNrbWRUX2RIUnpRQXdVT1pIeEZxZlI5SkE5eEtBNkFGM21zc0JHV1ViX3J1aUR0dkl3VkhCLVBoZkNWZWdvQmN2NmlhSExNZ1psVWdoS2NGOERZRU5pd3ZOYjFSaDQ1cXlKbEpjdjMzMkZtOVNZcHN1N2QySE9BX016NFFXTl9BYnpkazBPNW45Um1Jd1ZubEVzbG8xMlpuWGc0R2IwQ3FweVJNTklsZVJWUXZ1THAyY2w2LVM5TEJ0UGx1Zk5HaDRjSHZkY1M5dmlnbHVmbWtkUTFweHdVYm5mdTVPWFlQTjliUVNLYkxKbUFuODFiclNaMGRtTUdUQjVxMDJyYVE2S0p5RUVhSDFHNWd4Q0ZJVDVTVlk2Tld0VjI0TldWYzBadTV6M3ZZeWR5SW5SY25qV3AwM3NmSk13NWtTcU5sY2daY0dXbHRJRGJEenUzLWI3MlRBUm52V09sUURmdXl5U0FueTZ4U3A4bW1lamRtNGh5MmgydktETGozazh6Ml9BUFVaYjlEb0szdHk2czh4ODkwV0RXMlRzMko?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-11-06T09:08+08:00",
+      "published_at": "2026-11-06T12:43+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "台股暴跌逾3千點！史上盤中最大 4萬點沒了 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMitwJBVV95cUxOa0RWX3pIcmlTZW45Rm1tX0JPRWdwYjNkZ3VLNDJNNDBLQ0pBSnFVSERzSllPVzBwQ3NQdmFHWk1xVzFiY1l3LU1ncnBJMVBORk9aVmkzbXpXZjJuNVJ6Sm9OVWd0M3pKcU9uOGFwMS1xRmRRSVhpenRCbGhQR3ZDNUxFd1EwX2c5Tm9SNkRDQWxsQmpOZS05eWV1TWctWUZBZFdkbHlpR2JuRjJtb2Eta29ZSUFDdHItYldGZlV0VXYzM0lPZkhkcGJYb1Y0MXpQZmRKU1huUVZmLVVCeG5DWmMxaFY5bzVWRDBxMlZfM2VNM0c0STN6TFdXTXpOM3VjN1p4MkZ5bTYxT1ZobTdnZDBKZTBuWUFLQkRjTkJXUTZHNlRta3dFblVMYWJvTElfNTVGazhkRQ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-06T09:03+08:00",
+      "title": "台股大跌，台灣AI供應鏈還有戲嗎？專家看好：500家台企市值上看5.5倍，下一波誰受惠？ - 數位時代",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPbkNESWVFOUFpcDF0bDRwaVI0UkUtYTZRamduVWc0SjNOYzdwMXhuaVRMNzJyZG5PWWlIUTZONGJ4YVZCSjk0ZTdmcTZWQ0dReUcwaUpGMkQ4NlNaQXJPQTJuVklaLUJtWlVleXZ6TUtvbmROVVR5Vl9yUVlNMFltaEh3?oc=5",
+      "source": "數位時代",
+      "published_at": "2026-11-06T12:21+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "台股血崩狂跌，這1檔股票竟「飆上歷史新高」！專家曝3大抗震神力： 定存股最後良心 - 風傳媒",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9MQ0otWEZnMXhhOWtGWUVzTWJtbHBvZUI2MFRxZVpQWU9fdXVuNGhXb0p6UHhlUG9ESGlwYjdHb1czZmVFd2ZucTB0Mk9xMHVE?oc=5",
-      "source": "風傳媒",
-      "published_at": "2026-11-06T08:54+08:00",
+      "title": "Hong Kong Stocks Midday Review | All three major indices declined, with the tech index down 1.75%; internet and semiconductor stocks weakened, with Baidu falling more than 4% and Lanqi Technology dropping over 9%; some new consumption concept an - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOclZ4Y2dSejR1S0hMaEVFWGNHY3g3NjlOS3RBVHdtOU1FakJMS1hUUzYwYWw1aGFSWHc1R2dwSkxrMDVfeEp0Q3ZOV09Rc0ZkTHBQYl9QS2tjcldWSjB1a2c2Z3pZMkZkQWhrZmFvSjluSmwtTnZOLU51TGRVTUwwcWhzTHpMQzNJOFIzVHpGdHJnbnRxUjRzWGlObWozdUYyWTBLekZmYnlTQQ?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-06T12:16+08:00",
       "importance": 2,
       "risk_score": 0
     }
   ],
   "oil_watch": [
     {
-      "title": "WTI原油走勢：美國中期選舉「塵埃落定」，油價擊穿87.0關鍵支撐，見頂了嗎？ - Mitrade",
-      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBkZ19XcjVBMzNVUkY0ZHFrS0VVQmc5cXRPVjFWTzFkbDNpSXVmZzU4SEdPekhha1NHNDZhM0JYSnp0amJVclpMeWhISnJienRkVTdJVTNSWmpMTDg4OG12ZkFKWl8zanNRNzl6MjE2YnhHeW9wbDBTOTV3?oc=5",
-      "source": "Mitrade",
-      "published_at": "2026-11-05T16:17+08:00"
+      "title": "美國期中選舉後油價劇震 中東局勢添變數恐影響全球能源 - Life 生活網",
+      "url": "https://news.google.com/rss/articles/CBMi9AJBVV95cUxNeWtwX1lBZUo3U1lwcl95d01jYUowMEg3VVZZeW14LXVpa3A0XzVRQVdCaXN4azU2RFNyVVppRzBiTVQ5eHY1N2lRSVdPVmdJOXFpb3c5bDhvRzdRWEdnYWgwTXR4WUVUWWh2eVpaNVpsbnByODB1aVF4bG1yTzlHaC15UUZxakwyX2Q5NFZSUWVvTnFPZ3dHeHdqWXZLVE52U0VhWXkzbzh4LWZCTE8zc3pVV0RLbDgxRURkQXpKamVnUWRJWVI2cUdUdjFhdVFQWXhsS0Y1UklDVjFEUkdJa0ItTmhZTmM2THo0d19qYUxUZTlUT2hZX0FMeWZLSjFtdzhwN2VrdUlxWXRmTnl4RXpMRDB0QklOOEx1NVBVeEMtM0ZkajBGbWZtZlZwbE05TE9CQUZxTFpTTENyb0p1YXZlRDNVcnNybEg4Y01RYjRJd1NwYjczT1MwSkxqSkVWY0Q5S214WkVRQmhXYktQQUs3Nkg?oc=5",
+      "source": "Life 生活網",
+      "published_at": "2026-11-06T10:22+08:00"
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-11-06T10:25:20+08:00",
-  "checked_at": "2026-11-06T10:25:20+08:00"
+  "updated_at": "2026-11-06T17:33:53+08:00",
+  "checked_at": "2026-11-06T17:33:53+08:00"
 }
