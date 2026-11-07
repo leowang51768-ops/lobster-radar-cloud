@@ -11,15 +11,15 @@
   ],
   "ticker": [
     "⚠ 全球市場風險｜費半 -8.6%｜NASDAQ -4.5%｜日經225 -6.0%｜KOSPI -11.0%｜台股加權 -4.5%｜恆生 +2.4%",
-    "⚠ 全球市場風險｜美債10Y 4.86%｜VIX 25.6｜WTI原油 90.44美元 -0.1%（高於常態，觀察）｜布蘭特原油 97.83美元 -0.5%（高於常態，觀察）",
+    "⚠ 全球市場風險｜美債10Y 4.86%｜VIX 25.6｜WTI原油 90.34美元 -0.2%（高於常態，觀察）｜布蘭特原油 97.76美元 -0.5%（高於常態，觀察）",
     "⚠ 全球市場風險｜油價觀察｜美國期中選舉後油價劇震 中東局勢添變數恐影響全球能源",
     "⚠ 全球市場風險｜台股暴跌！ 過來人憶金融海嘯慘狀：不碰股票也遭殃",
-    "⚠ 全球市場風險｜Japanese and South Korean stocks collectively slide into a \"bear market\"! South Korean official",
-    "⚠ 全球市場風險｜Dow Jones Top Markets Headlines at 5 PM ET: Wall Street Gets $2.5 Trillion AI Reality Check Wit",
+    "⚠ 全球市場風險｜October Non-Farm Payrolls Reignite Expectations for a December Rate Hike! Wall Street Bets Exce",
+    "⚠ 全球市場風險｜Hong Kong Exchange Operator's Profit Slips as Trading, Listing Activity Cools -- Update",
+    "⚠ 全球市場風險｜法國世界報 - 台灣：台積電股價飆升掀股市熱，部分普通民眾甚至每天都買賣股票",
     "⚠ 全球市場風險｜Nvidia, Intel, Tesla, AMD, Coherent, Lam Research, Moderna, and More Stocks That Explain Today'",
     "⚠ 全球市場風險｜《TAIPEI TIMES》 Taiwan to activate NSF amid stock rout",
-    "⚠ 全球市場風險｜Hong Kong Market Quick Look | The three major indices surged in the afternoon, with the Hang Se",
-    "⚠ 全球市場風險｜South Korea Tries New Tactic to Steady Kospi After AI Rout Deepens"
+    "⚠ 全球市場風險｜Hong Kong Market Quick Look | The three major indices surged in the afternoon, with the Hang Se"
   ],
   "markets": {
     "US_SOX": {
@@ -74,13 +74,13 @@
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 90.44,
-      "change_pct": 0.0
+      "price": 90.34,
+      "change_pct": -0.2
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 97.83,
-      "change_pct": -0.4
+      "price": 97.76,
+      "change_pct": -0.6
     }
   },
   "active_news": [
@@ -93,20 +93,28 @@
       "risk_score": 4
     },
     {
-      "title": "Japanese and South Korean stocks collectively slide into a \"bear market\"! South Korean officials warn: Necessary measures will be taken to prevent excessive volatility. - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNc2xwTzdSUG00RmxCREFGS05COVJWWFpkTklueE9pZDZHcjQ5SmFWZ1l6bG5XMkZ0dVBFMm9hdkxRaVpyQTZWN2I4a3VhUEFOZ2hCUkQwOG52Ukw0NFpncTNlRjJFcXo1WExtUmZBb2RMWlFQSl9qMXRZTWdHYXN5NzBOZUJzMFNLb1hPcDlOSE9lZkdsenZKZFMyU3pnYzNaeElCek1uUTl2Zw?oc=5",
+      "title": "October Non-Farm Payrolls Reignite Expectations for a December Rate Hike! Wall Street Bets Exceed 80% Probability; \"New Fed Communications Channel\": AI Sell-Offs May Become a Policy Variable - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQVFVZNWRwd19VOVdCZTctaGJoaEZuZDlLblRPM3dGbWVJTFQ3RlVLNm1RSm5VdF9zaXRDQmNQa2p2eHlCR3hFNUNKTVZ1QWdRejNBMVk4Mkk0Yi01cmJySmM2UHdYM0hBdWY5V1pTMFY1Rk5mdjA5cFZxR2ROZWQwXzZtejl5UmFPMmlzcDhoLUtfeDhmOWktbmRJLVVwOXItalc3TVNOUTJOaE5uaUpr?oc=5",
       "source": "富途牛牛",
-      "published_at": "2026-11-06T09:13+08:00",
-      "importance": 5,
-      "risk_score": 4
-    },
-    {
-      "title": "Dow Jones Top Markets Headlines at 5 PM ET: Wall Street Gets $2.5 Trillion AI Reality Check With Historic Rout of Tech Stocks | Bank ... - Moomoo",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNTmFHSWNPb0Y4ZkZHblhQZHpIWXMwLWxFMmEtd2V4aHh4WkZiNzk2WmtxOEFZelJEWElYV3BHMDc4TXZYUGQzWFdSbzh5bnVSeTBrdUgyMU5iem5iZkJYNW9FZ3VDVF9lampkM1FhVmJ3QlNtdUN6RFJlQVNqbUxkay1SbXE0VWRCTzFPNW9MTmd1Sm1qMlVoejJ4dXQ?oc=5",
-      "source": "Moomoo",
-      "published_at": "2026-11-06T10:37+08:00",
+      "published_at": "2026-11-07T01:08+08:00",
       "importance": 4,
       "risk_score": 2
+    },
+    {
+      "title": "Hong Kong Exchange Operator's Profit Slips as Trading, Listing Activity Cools -- Update - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxONTlabjRGXzFyTUdRRkhsWXAwYVB2MTF6eG9kX3NwY2NPQXRCVmFVMUFaelRRR3ZGU09Ha0htOW53bFNaWW9qYkVUV2dpOHpzeGxlSDZDUEFrOGlZeENPV1BySkc4MExUM01ZaVlLck1qSlBVMUtPTEJOU3V4cmt1Vnd1aV83V2xFMnYzUF9qVTFBeXo3M0twN1FEY0lFYmNwLU1NdlZpQQ?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-07T07:16+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "法國世界報 - 台灣：台積電股價飆升掀股市熱，部分普通民眾甚至每天都買賣股票 - RFI",
+      "url": "https://news.google.com/rss/articles/CBMikgRBVV95cUxOa2hiQ2tZb2VqVXc1MFpxYlJ2UkY2OWtaZ1dVcVM2SjRjV3lRTEZLNExYS3hkb0VmdVVpSXZiQlFtUVlSUXlNTUUtTWEwTl9SSFpoTjRfazZtRTJoYzZfM2s2OHpLSFRIeFN0aHlRU0JESHdwaEFpeVZNaURUbHJVQ3VsVmQxUDdLQ003U21TWTlEcWxnNjE1Z1RYbnFnZ0RFdTVsaTF0NWVQMmwxeHdrZU5IeTZuYThldlBkMGJtT3FVTERUTER0U016RVZ0VFJDUkNiN3lwQlBqRTNTYkxndHI4TkZkNXVNaVBza3ZGYjAxYW43cE02b0RZeDdMRWY3R2lKd2l5NUZiQ1cwUFlxcXF1cVRzcUhHYjFIVWt0V0RmbkVOdHZtcV8yOTBiNjlQYUtIeWF4YlNTT1ZheVlXQ0psRlc3RWJpRHhBR1dWVkZfRzk0V1FvMk0wdFNsNUd3OV9pQ25wbm9tWW5hbDRuSHpCMVc3TmxLR3BKc2VaSXJmckdXbmdoOUlWRmNmMHE4QVJQcmFsSUNjTE03dEpxRXRIZXRFVDA5cHRYczZ6Z1BXTHJXYWlvM081NUxwZFJEWUFDN3BMRDFRbXRfUTdCdS1lTXV5Zl9lMEhqSGJ4NG5xWFZlWUZPMEZfc3Q0NExiT3FxWHhaRDlNWFlybVlwbWgxUE9WRWdqbWJLR3ZoMG0tdw?oc=5",
+      "source": "RFI",
+      "published_at": "2026-11-07T06:47+08:00",
+      "importance": 2,
+      "risk_score": 0
     },
     {
       "title": "Nvidia, Intel, Tesla, AMD, Coherent, Lam Research, Moderna, and More Stocks That Explain Today's Market -- Barrons.com - 富途牛牛",
@@ -141,10 +149,10 @@
       "risk_score": 0
     },
     {
-      "title": "Wall Street collectively turned bullish on U.S. stocks following the election results, only to be proven wrong within a day! - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQRERPa0tuMVJqN0QwQW5mMm52WXU3X0k2aXphTWRzRGhfUDRsbktnSmdsN2tzSzF0X0hGOU1SUi1Od0U2Y2pNTlU5N1FHR0gwcjFqMHBXUl92UVY4TnZQYjBLYWpkS3Z1RTdPYTVxX2IwczFKNENEWDJkZXhlV2ZGSk95Y2l5S2VzUVpUbHpEOFVlX1pXTkVNSGplWmhEQmJqaUgxUVFSUlZKYjVqZXc?oc=5",
+      "title": "Expect More Fireworks as Markets Adjust to the New AI Reality -- Barrons.com - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQc2pLNVBPUnB3TXJiTnJ2MmctQ2xIU1JGMEVXdmNKRFpJak9DODdzZy1uWi0ycTdmN211TUxnXzFqUXFBSjdTV05VRUtaS0N2ejVpYnhYbUFhc203T0dUaHh0MEZuQmlCb2s1RHMwSEJWdUttSEgyam5WZ1NfWFdVaTdnU2VfdzR0TVhuWFVLZ0ZHTEJadnBmR3RPOVI?oc=5",
       "source": "富途牛牛",
-      "published_at": "2026-11-06T20:54+08:00",
+      "published_at": "2026-11-06T20:43+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -171,14 +179,6 @@
       "published_at": "2026-11-06T18:56+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "金管會救市措施來了！ 下周一祭限空令、調高保證金成數等5招穩定台股 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMisANBVV95cUxNc2Z4RUU5WE5PLXlDUUhUbFdsUjA5UUhaVzJ5X0xmWHlneUdNeGpFTkh0Ymp5Sk9tNVltal9OOV9RQlExa3BKSDBnWlA4N0V5N0VRc25VQWNOUFVoTmhjdmhSM3Q1SENkcDNMRWpqRC1jeWNiY0FldjA0X0cxU1hibDZxaFdISnJzd2t3bmwxamM3dUJpN3VEbGZ3dl9lSXBHMTFHaUFrWFFEUnczbk9DUDgxajF3c3ZudVladWU4SDBiWVM1dVBCVldCczJvYnBaaVRBRWE2dERleDBDYmdCbWV3M3hDUnhGaEoxWUl6UG5FM2loWkhoWHNBdEVCWUZ0RU15WHBmcEdzNEQzVFZ0bmRDXzlJYkt0cWstMUYwQ0lXbzdOYjlENE9ROGpjeTRKQTdZQ0ZGbFhPMml2RzAwMTJmSFJYLVh5ZHl6SzFYVUVOX3ZfWGF4QTdtOUp1dnhkUVpITHJUT29lVjJzM3Nfems5d2lDeV9VUlpuOUg0NWE1MFV3QXFDUWpveTliS29sRzdlMFVwTW9meEhuQldXZWFidjVRUkU2Q2VwazczNDE?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-06T18:38+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "oil_watch": [
@@ -190,6 +190,6 @@
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-11-07T05:48:08+08:00",
-  "checked_at": "2026-11-07T05:48:08+08:00"
+  "updated_at": "2026-11-07T09:17:01+08:00",
+  "checked_at": "2026-11-07T09:17:01+08:00"
 }
