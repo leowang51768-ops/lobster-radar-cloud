@@ -2,6 +2,7 @@ name: Independent Branch Evidence Tracking
 on:
   workflow_dispatch:
   push:
+    branches: [main]
     paths:
       - "branch_tracker/*.py"
       - "branch_tracker/tests/**"
@@ -23,6 +24,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   collect:
+    if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:
@@ -33,8 +35,10 @@ jobs:
         with:
           python-version: "3.11"
       - name: Verify parsers and deduplication
+        id: verify
         run: python -m unittest discover -s branch_tracker/tests -v
       - name: Accumulate branch evidence only
+        id: collect
         run: python branch_tracker/collect.py --history-budget 120
       - name: Refresh matured price and quantity observations
         if: ${{ always() }}
@@ -43,9 +47,11 @@ jobs:
         if: ${{ always() }}
         run: python branch_tracker/audit.py
       - name: Build final branch conclusions
+        id: report
         if: ${{ always() }}
         run: python branch_tracker/final_result.py
       - name: Save successful evidence and coverage even on partial failure
+        id: publish
         if: ${{ always() }}
         shell: bash
         run: |
@@ -82,6 +88,21 @@ jobs:
           done
           echo "Failed to publish branch evidence after retries"
           exit 1
+      - name: Summarize branch tracking stages
+        if: ${{ always() }}
+        env:
+          VERIFY_OUTCOME: ${{ steps.verify.outcome }}
+          COLLECT_OUTCOME: ${{ steps.collect.outcome }}
+          REPORT_OUTCOME: ${{ steps.report.outcome }}
+          PUBLISH_OUTCOME: ${{ steps.publish.outcome }}
+        run: |
+          {
+            echo '### 分點追蹤執行結果'
+            echo "- 解析測試：${VERIFY_OUTCOME:-skipped}"
+            echo "- 來源採集：${COLLECT_OUTCOME:-skipped}"
+            echo "- 候選報告：${REPORT_OUTCOME:-skipped}"
+            echo "- 資料寫回：${PUBLISH_OUTCOME:-skipped}"
+          } >> "$GITHUB_STEP_SUMMARY"
       - name: Preserve evidence on failure
         if: ${{ failure() }}
         uses: actions/upload-artifact@v4
