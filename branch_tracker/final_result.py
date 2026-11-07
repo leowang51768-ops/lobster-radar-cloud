@@ -94,6 +94,70 @@ def load_watch_pool():
     return out
 
 
+def report_missing_rankings(db, day):
+    """Do not publish a fresh signal when the day's ranking never arrived."""
+    if db.execute(
+        "SELECT 1 FROM ranking AS r JOIN stock_status AS s "
+        "ON s.day=r.day AND s.code=r.code "
+        "WHERE r.day=? AND s.status='ok' LIMIT 1", (day,)
+    ).fetchone():
+        return False
+    try:
+        status = json.loads((DATA / "status.json").read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        status = {}
+    if not isinstance(status, dict) or status.get("date") != day:
+        status = {}
+    blocked = status.get("source_blocked") is True
+    message = "來源驗證或存取限制中止採集；當日無可核實排行。" if blocked else "當日無可核實排行。"
+    result = {
+        "generated_at": datetime.now(ZoneInfo("Asia/Taipei")).isoformat(timespec="seconds"),
+        "requested_date": day,
+        "data_through": None,
+        "status": "source_blocked" if blocked else "missing_rankings",
+        "candidate_count": None,
+        "current_candidates": [],
+        "message": message + " 無法判定當日候選分點。",
+    }
+    (DATA / "final_results.json").write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
+    write_shared_candidates(day, [], 0, status, unavailable=result["status"])
+    (DATA / "FINAL_RESULT.md").write_text(
+        f"# 關鍵分點結果｜{day}\n\n**資料不足，無法判定。** {message}\n\n"
+        "既有觀察池與監控情報保留原有日期。\n",
+        encoding="utf-8",
+    )
+    (DATA / "current_candidates.csv").write_text(
+        "code,name,branch_name,latest_day,consecutive_buy_days,streak_net_lots,streak_est_net_amount,stealth_score\n",
+        encoding="utf-8-sig",
+    )
+    print(json.dumps(result, ensure_ascii=False))
+    return True
+
+
+def write_shared_candidates(day, candidates, covered, status, unavailable=None):
+    expected = status.get("expected_stocks") if status.get("date") == day else None
+    keys = ("code", "name", "branch", "broker", "branch_name", "latest_day",
+            "consecutive_buy_days", "streak_net_lots", "streak_est_net_amount",
+            "status", "historical_grade", "historical_d10_samples",
+            "historical_d10_win_pct", "historical_d10_avg_return_pct", "stealth_score")
+    payload = {
+        "schema_version": 1,
+        "requested_date": day,
+        "data_through": None if unavailable else day,
+        "status": unavailable or ("complete" if expected and covered == expected else "partial"),
+        "covered_stocks": covered,
+        "expected_stocks": expected,
+        "candidate_count": None if unavailable else len(candidates),
+        "limit": 20,
+        "candidates": [{key: row.get(key) for key in keys} for row in candidates[:20]],
+        "source": "branch_tracker/final_result.py",
+        "note": "僅列既有規則產出的觀察候選；缺漏不視為零，歷史等級不代表樣本外已驗證。",
+    }
+    (DATA / "key_branch_candidates.json").write_text(
+        json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+
+
 def main():
     if not DB.exists():
         raise RuntimeError("branches.sqlite not found")
@@ -102,6 +166,9 @@ def main():
         latest_day = db.execute("SELECT MAX(day) FROM official_prices").fetchone()[0]
         if not latest_day:
             raise RuntimeError("official_prices empty")
+
+        if report_missing_rankings(db, latest_day):
+            return
 
         prices = {(d, c): (cl, vol) for d, c, cl, vol in db.execute(
             "SELECT day,code,close,volume FROM official_prices WHERE day<=?", (latest_day,)
@@ -600,6 +667,16 @@ def main():
             "disclaimer": "券商分點不等於特定自然人或主力。歷史分數是描述性統計，不保證因果或未來報酬。",
         }
 
+        covered = db.execute(
+            "SELECT COUNT(DISTINCT r.code) FROM ranking AS r JOIN stock_status AS s "
+            "ON s.day=r.day AND s.code=r.code WHERE r.day=? AND s.status='ok'",
+            (latest_day,),
+        ).fetchone()[0]
+    try:
+        status = json.loads((DATA / "status.json").read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        status = {}
+    write_shared_candidates(latest_day, candidates, covered, status if isinstance(status, dict) else {})
     (DATA / "final_results.json").write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
 
     lines = [

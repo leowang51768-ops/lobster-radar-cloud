@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Produce a readable daily audit from persisted evidence, without new requests."""
 import csv
+import gzip
 import json
 import sqlite3
 from datetime import datetime
@@ -35,9 +36,11 @@ def main():
         if not examples:
             examples=db.execute('SELECT r.code,r.side,r.name,r.buy,r.sell,r.net,p.volume,p.close,r.url FROM ranking r LEFT JOIN official_prices p ON p.day=r.day AND p.code=r.code WHERE r.day=? ORDER BY r.code,r.side,r.rank LIMIT 6',(day,)).fetchall()
     maturity={h:[0,0] for h in (5,10,20)}
-    relationship=DATA/'price_relationship.csv'
-    if relationship.exists():
-        with relationship.open(encoding='utf-8-sig',newline='') as f:
+    relationship=DATA/'price_relationship.csv.gz'
+    legacy=DATA/'price_relationship.csv'
+    if relationship.exists() or legacy.exists():
+        with (gzip.open(relationship,'rt',encoding='utf-8-sig',newline='') if relationship.exists()
+              else legacy.open(encoding='utf-8-sig',newline='')) as f:
             for r in csv.DictReader(f):
                 h=int(r['horizon_sessions']);maturity[h][r['status']!='mature']+=1
     good=sum(r[1]=='ok' for r in coverage)
