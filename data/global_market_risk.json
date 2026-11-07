@@ -11,15 +11,15 @@
   ],
   "ticker": [
     "⚠ 全球市場風險｜費半 -8.6%｜NASDAQ -4.5%｜日經225 -6.0%｜KOSPI -11.0%｜台股加權 -4.5%｜恆生 +2.4%",
-    "⚠ 全球市場風險｜美債10Y 4.86%｜VIX 25.6｜WTI原油 90.34美元 -0.2%（高於常態，觀察）｜布蘭特原油 97.76美元 -0.5%（高於常態，觀察）",
-    "⚠ 全球市場風險｜油價觀察｜美國期中選舉後油價劇震 中東局勢添變數恐影響全球能源",
+    "⚠ 全球市場風險｜美債10Y 4.86%｜VIX 25.6｜WTI原油 90.83美元 +0.3%（高於常態，觀察）｜布蘭特原油 98.32美元 +0.0%（高於常態，觀察）",
     "⚠ 全球市場風險｜台股暴跌！ 過來人憶金融海嘯慘狀：不碰股票也遭殃",
+    "⚠ 全球市場風險｜Southbound Capital Flow | Southbound capital posted net purchases of HKD 2.415 billion; increas",
     "⚠ 全球市場風險｜October Non-Farm Payrolls Reignite Expectations for a December Rate Hike! Wall Street Bets Exce",
-    "⚠ 全球市場風險｜Hong Kong Exchange Operator's Profit Slips as Trading, Listing Activity Cools -- Update",
-    "⚠ 全球市場風險｜法國世界報 - 台灣：台積電股價飆升掀股市熱，部分普通民眾甚至每天都買賣股票",
-    "⚠ 全球市場風險｜Nvidia, Intel, Tesla, AMD, Coherent, Lam Research, Moderna, and More Stocks That Explain Today'",
-    "⚠ 全球市場風險｜《TAIPEI TIMES》 Taiwan to activate NSF amid stock rout",
-    "⚠ 全球市場風險｜Hong Kong Market Quick Look | The three major indices surged in the afternoon, with the Hang Se"
+    "⚠ 全球市場風險｜台股急跌正5族卻越跌越買！他質疑「跌20%了也打死不退嗎」 投資人搖頭：本多終勝",
+    "⚠ 全球市場風險｜愈跌買愈兇！台積電一周暴增7.3萬股東 總人數326萬刷新高",
+    "⚠ 全球市場風險｜台股1個月狂瀉1萬2千點！工程師「四貸同堂」崩潰送醫",
+    "⚠ 全球市場風險｜台股暴跌逼出恐慌症！34歲竹科工程師開高槓桿「四貸同堂」 心悸送急診",
+    "⚠ 全球市場風險｜傳台積電進軍「先進記憶體」！為輝達生產「3D DRAM」"
   ],
   "markets": {
     "US_SOX": {
@@ -74,13 +74,13 @@
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 90.34,
-      "change_pct": -0.2
+      "price": 90.83,
+      "change_pct": 0.4
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 97.76,
-      "change_pct": -0.6
+      "price": 98.32,
+      "change_pct": 0.0
     }
   },
   "active_news": [
@@ -93,12 +93,60 @@
       "risk_score": 4
     },
     {
+      "title": "Southbound Capital Flow | Southbound capital posted net purchases of HKD 2.415 billion; increased holdings in tech stocks such as Tencent (00700); sold off AI hardware throughout the day - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxORjRWcnJWRjVrWFhVTFRTSlZ0NExGREV4Rnl1ZXlVYVZTRHlOV252Q3pLRnA4WUFGN3VEalhVT3pQWXlCa2pzeml2YnlzTkxfbFRQZzVRdHU3b3FwcHo1U0ZvTlVCNTZ0N1pQWFBnekNSNXdFZXo4VU9IWEw3d19xX2p5U0ItdXA0UXdMM01lNkkxMmFKZ2NDTDUwdEZ5enRKMUVmNUhRWGF0ZXNJeUtEQXVxUQ?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-06T17:51+08:00",
+      "importance": 5,
+      "risk_score": 4
+    },
+    {
       "title": "October Non-Farm Payrolls Reignite Expectations for a December Rate Hike! Wall Street Bets Exceed 80% Probability; \"New Fed Communications Channel\": AI Sell-Offs May Become a Policy Variable - 富途牛牛",
       "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQVFVZNWRwd19VOVdCZTctaGJoaEZuZDlLblRPM3dGbWVJTFQ3RlVLNm1RSm5VdF9zaXRDQmNQa2p2eHlCR3hFNUNKTVZ1QWdRejNBMVk4Mkk0Yi01cmJySmM2UHdYM0hBdWY5V1pTMFY1Rk5mdjA5cFZxR2ROZWQwXzZtejl5UmFPMmlzcDhoLUtfeDhmOWktbmRJLVVwOXItalc3TVNOUTJOaE5uaUpr?oc=5",
       "source": "富途牛牛",
       "published_at": "2026-11-07T01:08+08:00",
       "importance": 4,
       "risk_score": 2
+    },
+    {
+      "title": "台股急跌正5族卻越跌越買！他質疑「跌20%了也打死不退嗎」 投資人搖頭：本多終勝 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiqANBVV95cUxQUndIMHpBZzJoblBtWXAwUEVHVFR0a2lLWkJsQ2JJQjF0S1lvLXBSUXVxUkJ0dWQtUmFCelFNaGt6eWFhVzl3WHJzWlI4d25VcVFOX3BxZlZkWjROZjE0ZWpweTAwWEVQMVZjQkRMVDlYUmxSZEtvYzFGNERiOUl3akhRWElwSUhwUHhqYWVUS2U0cUFLazJMX0VqYkRxNnNEUnhKNzdUQm9VTExaMVA1NDA3TFo1bWk2LWVMME1Ma1M3S2ZWcUtxUGQ1YVJXdHItRTdiWU9ISUJnOHVBdlZzbk9NQ19RbXptZVFGVkdXNlI2SGh2dEI2WWxTWFFuRFRtUnlpYW1ENGJXXzAxdFRsOEVhY2YxLXFoeS1KWVd1QXVnaFRyeTQ0ZDV6cklJN0oycWRfMFR0YkpaSFJENVdVbUQwMzBIZVYwcjZLQjRZSjdDRUdlUktkQkZmcVItX0V2bkgxV0RQWXhMek9CMVhaUzNpUjAtNDRuQnJGRjlHWTRfS3NTZUp0OW1MSFU3MXNQYlI2Vmc3T21uQmxnYk5Pa3ZGazhaTHpF?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-07T12:28+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "愈跌買愈兇！台積電一周暴增7.3萬股東 總人數326萬刷新高 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi9wJBVV95cUxPU2FWNlhmUXB2eE1VUWNxQWg1d2VuTXN5TkVpOHZkd2pKNnpSZjR3ejNuR0FkTHBycS02ZXZBWWM3dmdZRXFzWTMxRWl3bkRuMXl2UkhSRDV5T0ZiV1ZkREdLZzFmY21XR3h0alQ4eFhMbWRxR09zcHdVcERGay00aXFZajZTMFFnMnkzZGNVSTBNSmtWQjF2SHd0eVFnS1EwX00wbnZfUFFYUF9YZEZaQjR6NjZuQVVVMmJhZU9kd1JCbTNZZVJBaTZWZ2NvYlFSaU52T2E2cGIwY3g1UEdYTHJQWVFuc1h6RkVPWGduOWhSYjBfa2l3NHJ5ZldGVUxyRFU4aHlwRUdIbFNnQWFTWUhaM3AzUWJCUS1LNk8yQ0NHRGoweVVkMmtNenlhRlFKMzR5dWtjVGpzOTV4SlhYYTdEVDFBYnBhaGdjOVVLZFhjdUFWTmhoc3lDYldEZFUwM3kta3BTZWZjbF9UQ0JPWldJSFMwSjQ?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-07T12:15+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股1個月狂瀉1萬2千點！工程師「四貸同堂」崩潰送醫 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi0wJBVV95cUxNb1FoQXZHc3B4c2JvRDFoUlYwOEZab1VTY1V1UFRoV2Z6ZzE3amYxVDVHS3A4S0R0LU1Ba094bl8yajhkUWdLNXFqY2NWWElqNTExWVFpSmZFaWdnT3Zva1VxT0RnRkNNWHF0VjVic3VwS2RhcG4xR2wyeVFGSDJ6bGlDbjVuSXd6UmNUX0h4RWNmZWhjdlhGQ1VmaHh4UVZCbjk2N2JXeDZkUnllUjUwN3UydGdycXNrTlJUcE4zQ0FxRnBRMHF1OVVfZGdITUhIc25wbU9BUWZDcXlSYlNKbVpzUnI4V3NsNTRhcmxuOEdQVWxPenBJcU1nWU1LZTRrOGNTTFRlS1QtVXRkeE00aW1xVDM5MHNTZGQyb1BRR2VnUjVyY1hkTk83VWNYYWU3a0g5UUdEMzAycGNiaXJVazZZTG1IZEFSYTduYWdQanRId0k?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-07T10:49+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股暴跌逼出恐慌症！34歲竹科工程師開高槓桿「四貸同堂」 心悸送急診 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMisgNBVV95cUxPS3hXU1REZjREYjB0ZUlfOHdMOGo2ckNfVnNXSS00d0RLTGlXSlV6ZmdjSVBEMkJxb3dTLWpvcWFxbDBzaXYzYTRnVm9Yd1lWR1RDT0o1U092RWtTYTJibVBJRFlrN2xwZ3F4YjIzRmhYQTN0RmFHZEw3Zi0tZTJTb0lOS1lJbVpTRkxTcEVEcERSQ20zQ085ajZ1MnNXeGdob1RyZDA3bEwydF9mOHUtUWNYb3VTenREekVXandia3RPVFBFVnhUM2ZhRFFObmFqcVZ4YTYxWjkwOGtwQjdXbGhNZDk1T1NJaFlwYUlKUjM1TkE0cGhVNmhnanlfekwxS01YWEJ4MFNMa2E0ZUtBUGZGQ3NhSEVoaDUyU0gwNUVKbnBrdXlmNGRpS2s2TmF0LUhsSlVBLXRyS2VxNUJUSU05TW03c0ZoWjJGUko4Qnkxb2JHakRnLS1tTW1RTWxnM0gzUGJ3YzZGTEJLSGcxZFFTczV5NlJPcmE2UFpBSE9uWmpKQloxb0hVMnR1bkpvLUtRWW9vRGprdVpKdG9CZy1WN1dHRFJCeDFJcDJTNUc4QQ?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-07T10:47+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "傳台積電進軍「先進記憶體」！為輝達生產「3D DRAM」 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiqAJBVV95cUxNUFhwbVFNR2dDMUtndmJVRVBRbU1tcWNzNU1ab2l0SkNvNG1pNXdUb2ZXLXlrRk5Pc2dGVDBGVEdTV19uWlZLZUhLVHZNWVYzYXZJTGZDMVlNUExCZVBTX2RSVlcwMnFEWWtKQ2lQeEdKY3JmRVJoYXo3WElxMS1TSTB2T0NDdkZ2TzJ4SWR0eFhNdzFFUnNpbllnNElmZXVBOUhXWEFGZGo0TTZFLW15LVgwbS1TX1EzQVRmRzJKZ2pZaDFlOGJLSEY2U0w2Vm5faU9LSklRTUhOSU40NS1DV21jc1VRSmdhVXBaRExYMUQ3RkVJcUM4aEdJUlJNeGt2VkoxaXFVS2cteXQwYm5mNGdOcnJwNXdKZ2MtMW5UVWJrMmpZREJqLQ?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-07T08:36+08:00",
+      "importance": 2,
+      "risk_score": 0
     },
     {
       "title": "Hong Kong Exchange Operator's Profit Slips as Trading, Listing Activity Cools -- Update - 富途牛牛",
@@ -126,70 +174,15 @@
     },
     {
       "title": "《TAIPEI TIMES》 Taiwan to activate NSF amid stock rout - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5qaWJKS09mZFZYdUZyWldkbXg0cmgxQzlJSENKdGxOc010c3ktUTJ1dEREMWlEcjBzTUl3RHA3dWxoWmp6ZUtwYVBIb3h2NjhXdUNzYkZaZFJHMDRfQTFlVjdJWXhod9IBa0FVX3lxTE9zX0RQdmp4UER5OE44Yy1oNmNlbHRsbUg0WnM0eDdMd3JCTFdCMmNrZUZWOGFtN1dTWjFidU03XzRwV0F5a21oWWpWUHVvRi1xWjV6NDkxcTBxb2FFWW1WbTNPTTdEOGVJUnhZ?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9zX0RQdmp4UER5OE44Yy1oNmNlbHRsbUg0WnM0eDdMd3JCTFdCMmNrZUZWOGFtN1dTWjFidU03XzRwV0F5a21oWWpWUHVvRi1xWjV6NDkxcTBxb2FFWW1WbTNPTTdEOGVJUnhZ0gFrQVVfeXFMT3NfRFB2anhQRHk4TjhjLWg2Y2VsdGxtSDRaczR4N0x3ckJMV0IyY2tlRlY4YW03V1NaMWJ1TTdfNHBXQXlrbWhZalZQdW9GLXFaNXo0OTFxMHFvYUVZbVZtM09NN0Q4ZUlSeFk?oc=5",
       "source": "自由時報",
       "published_at": "2026-11-07T03:00+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "Hong Kong Market Quick Look | The three major indices surged in the afternoon, with the Hang Seng Index up 1.67% and the Tech Index up 1.77%; chip, PCB, and optical communication stocks rallied, with HuaHong Hongli soaring nearly 16%, JianTao Lamin - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQbkF5bndQYWQ5OUxtMnNaWkpPSWFrVERiTGJQeUxweVpyd2FDLVdJR254bEY0SjJHejZmOUVuVWdneGxjOXUtb056elZxRGhfYThINWZ5S3Q3OE0zaUl5c0JGemtmQVVoRFFOcjR3STExY0pjSkFHUURHVGpFckJCMlJzNF9nUndaQlJZZWNtejhDRUU2RHIyaDZLemJjYlRSOVBF?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-06T23:34+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "South Korea Tries New Tactic to Steady Kospi After AI Rout Deepens - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOTFZqUldpcHJsSzdKUWZtbjA3dXhHQV9DR0IxVklVbTdpRnQ4NXZ4MnlrSDVucXRueWw1eHluOUloa3RndFEyTWdMNTRuc3VhNDNIZ1ZqcXY0ZEE4SkJQTWJRMk5kSTZQYmlLX0xmejctMGk2c0dLMDR5RTBRb3dIc2I4S2xseWZVVnBUdV9YekpqcnRQMEVkMEI2QzM?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-06T23:04+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Expect More Fireworks as Markets Adjust to the New AI Reality -- Barrons.com - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQc2pLNVBPUnB3TXJiTnJ2MmctQ2xIU1JGMEVXdmNKRFpJak9DODdzZy1uWi0ycTdmN211TUxnXzFqUXFBSjdTV05VRUtaS0N2ejVpYnhYbUFhc203T0dUaHh0MEZuQmlCb2s1RHMwSEJWdUttSEgyam5WZ1NfWFdVaTdnU2VfdzR0TVhuWFVLZ0ZHTEJadnBmR3RPOVI?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-06T20:43+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "中國誠通發展集團(00217.HK)附屬訂立1.55億元飛機售後回租協議 租期5年 - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5lckF3LWhsc0FkaFJ3T3VLS09wQ05rMlRQQUJpQmotSnpxZFJiSUxfYWpqbG5FQWVlZEVxYTJ1Nklkc3IxZ2xfSjQybUhZRk5oSlA0ZFJpOG83eXZHMVdReGZsdGxKWkNUclM4?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-11-06T20:42+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股湧現斷頭潮失守四萬點 國安基金晚間宣布啟動第十度護盤 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMioANBVV95cUxPZUotVmQ5RVcyalNWSkhjSkhCdG80XzFXWVV3YzlRS2V4MmdZMFhXZTFWRkphdkh6R3FyZVNiQVVnUm9uTGh2S01YZ0ZDUjdzbHJSR09HLVlaLThkcTVtQUtiZGd6M0dJTzZWNlVSY21lNC1hZjVxYnphWXNodDVOWVYxU3U3dUV0OEpHQzVaVVZzVnBvbUZoeDVhRm5nZkV6N0RSeDVUYkR4c2xpUy0yUXVWMUpQeXVsOVRkNkV6S0NMRkM5eGI2SjhpdTNCMG1DWE4zdGFvOVE3WmxPR1NqUnNrVkhETVZKQ0pJYkVKbzdObDZLRXlYemZHYVJJRXpSekFRcjFXWUg3VUxadTNKdXB0bEdLUlNhRnZWek1fQ2h3ajV5ajhwZlBmVWJoZEZxNHFJVWJPWlhmVnRzaGg5cy1tdDRCVlNLTUR3VHNvUkF6OHRPRGhwQjFxREFiTHJqNS13TW8zOTJia000MWVfMVdrWWtPUUJGci1OOWNhbXI5MUE5SUdnZjIzdTJERThuaWdTV1ozT1pndHctY21aWA?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-06T19:49+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "史上第七次！金管會宣布下周一開始限空令 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMivwJBVV95cUxQRXF0cGVjSlh4OXY5aW9rZzNJWmUyU2RPSVVFckZoaWh0a1FmSW04dlRERFFKUVBsUG1mTDg1c0lDYTBrSnYtSWVJUzRIRjBXQmk2OXhvNzQyY0hHaGE3V2hadE1IVVV4alB0QVl0aGJnZnhtR3dVVmlEQ05Gb0ZvMVFvcElJLXFHNm1PdE5aYnlJSVF2LWdSUkdTdjFGbV85WnBCLVZ1cWpRLXEzb0tTcFFDUU45QzZWMHc2cmN1UGR6RG1GMmV1czhERXBwVmJHRmgtWjRxaHRndE5nMmwxWlNyeWw2bUxROFFtT3lLZXNydlNmRDQ5aVpRbkROUXk0ZVdHcjhScE5QOGpXb1dlM0lURVBhU3BNOXQwSDFQZnRBaDNvUHlxM2hiSkd4dklNWmVrZkdmQmFBWHFmbjZr?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-06T18:56+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
-  "oil_watch": [
-    {
-      "title": "美國期中選舉後油價劇震 中東局勢添變數恐影響全球能源 - Life 生活網",
-      "url": "https://news.google.com/rss/articles/CBMi9AJBVV95cUxNeWtwX1lBZUo3U1lwcl95d01jYUowMEg3VVZZeW14LXVpa3A0XzVRQVdCaXN4azU2RFNyVVppRzBiTVQ5eHY1N2lRSVdPVmdJOXFpb3c5bDhvRzdRWEdnYWgwTXR4WUVUWWh2eVpaNVpsbnByODB1aVF4bG1yTzlHaC15UUZxakwyX2Q5NFZSUWVvTnFPZ3dHeHdqWXZLVE52U0VhWXkzbzh4LWZCTE8zc3pVV0RLbDgxRURkQXpKamVnUWRJWVI2cUdUdjFhdVFQWXhsS0Y1UklDVjFEUkdJa0ItTmhZTmM2THo0d19qYUxUZTlUT2hZX0FMeWZLSjFtdzhwN2VrdUlxWXRmTnl4RXpMRDB0QklOOEx1NVBVeEMtM0ZkajBGbWZtZlZwbE05TE9CQUZxTFpTTENyb0p1YXZlRDNVcnNybEg4Y01RYjRJd1NwYjczT1MwSkxqSkVWY0Q5S214WkVRQmhXYktQQUs3Nkg?oc=5",
-      "source": "Life 生活網",
-      "published_at": "2026-11-06T10:22+08:00"
-    }
-  ],
+  "oil_watch": [],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-11-07T09:17:01+08:00",
-  "checked_at": "2026-11-07T09:17:01+08:00"
+  "updated_at": "2026-11-07T15:13:46+08:00",
+  "checked_at": "2026-11-07T15:13:46+08:00"
 }
