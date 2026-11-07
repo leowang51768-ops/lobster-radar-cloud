@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Pair prospectively saved branch observations with later official closes."""
 import csv
+import gzip
+import io
 import json
 import sqlite3
 import statistics
@@ -98,9 +100,20 @@ def analyze(db):
 
 
 def save_csv(path,rows,empty_headers):
-    with path.open('w',encoding='utf-8-sig',newline='') as f:
+    def write(f):
         writer=csv.DictWriter(f,fieldnames=list(rows[0]) if rows else empty_headers)
         writer.writeheader();writer.writerows(rows)
+    if path.suffix == '.gz':
+        tmp = path.with_suffix('.gz.tmp')
+        try:
+            with tmp.open('wb') as raw, gzip.GzipFile(filename='', fileobj=raw, mode='wb', mtime=0) as gz, io.TextIOWrapper(gz, encoding='utf-8-sig', newline='') as f:
+                write(f)
+            tmp.replace(path)
+        finally:
+            tmp.unlink(missing_ok=True)
+    else:
+        with path.open('w',encoding='utf-8-sig',newline='') as f:
+            write(f)
 
 
 def main():
@@ -109,7 +122,8 @@ def main():
         print('No branch evidence yet; relationship analysis skipped');return
     with sqlite3.connect(path) as db:
         detail,summary=analyze(db)
-    save_csv(DATA/'price_relationship.csv',detail,['signal_date','code','branch','horizon_sessions','status'])
+    save_csv(DATA/'price_relationship.csv.gz',detail,['signal_date','code','branch','horizon_sessions','status'])
+    (DATA/'price_relationship.csv').unlink(missing_ok=True)
     save_csv(DATA/'relationship_summary.csv',summary,['code','branch','horizon_sessions','nonoverlapping_windows','interpretation'])
     status={'observations_with_horizons':len(detail),'mature_rows':sum(r['status']=='mature' for r in detail),
             'pending_or_missing_rows':sum(r['status']!='mature' for r in detail),'summary_groups':len(summary),
