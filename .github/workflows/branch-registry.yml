@@ -1,0 +1,43 @@
+name: Branch Registry and Verified Archive
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/branch-registry.yml'
+      - 'branch_tracker/research/**'
+  schedule:
+    - cron: '0 6 * * 0'
+permissions:
+  contents: write
+concurrency:
+  group: independent-branch-tracking
+  cancel-in-progress: false
+jobs:
+  research:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Archive and download-verify the baseline
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python branch_tracker/research/archive_snapshot.py
+      - name: Build research registry from complete available history
+        run: |
+          python branch_tracker/research/build_registry.py branch_tracker/data/branches.sqlite branch_tracker/data/key_branch_registry.json
+      - name: Publish only the registry and verified archive manifest
+        run: |
+          git config user.name "lobster-branch-research"
+          git config user.email "actions@github.com"
+          git add branch_tracker/data/branch_archive_baseline.json branch_tracker/data/key_branch_registry.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Publish branch research registry and verified baseline"
+          for attempt in 1 2 3; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            sleep "$((attempt * 5))"
+          done
+          exit 1
