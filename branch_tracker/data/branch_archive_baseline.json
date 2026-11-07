@@ -1,0 +1,30 @@
+{
+  "sha256": "2915f35078dee4bcf47a37c4db1e4060c67e1e7e92e76bdca1b48c544bb53e5c",
+  "bytes": 96948224,
+  "counts": {
+    "ranking": 127582,
+    "history": 496166,
+    "queue": 9466,
+    "stock_status": 4276,
+    "official_prices": 33572
+  },
+  "ranges": {
+    "ranking": [
+      "2026-10-01",
+      "2026-11-06"
+    ],
+    "history": [
+      "2013-01-15",
+      "2026-11-06"
+    ],
+    "official_prices": [
+      "2026-04-01",
+      "2026-11-06"
+    ]
+  },
+  "tag": "branch-baseline-2915f35078dee4bc",
+  "asset": "branches.sqlite.gz",
+  "compressed_bytes": 17821190,
+  "source_commit": "3bc5c44821a023e6b44ae022315605fa9e168357",
+  "download_verified": true
+}
