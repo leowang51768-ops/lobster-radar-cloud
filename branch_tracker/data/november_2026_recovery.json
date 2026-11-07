@@ -1,0 +1,22 @@
+{
+  "restored": {
+    "2026-11-04": {
+      "artifact_id": 13362580662,
+      "covered_stocks": 251,
+      "ranking_rows": 7520
+    },
+    "2026-11-05": {
+      "artifact_id": 13453098478,
+      "covered_stocks": 251,
+      "ranking_rows": 7516
+    },
+    "2026-11-06": {
+      "artifact_id": 13538002304,
+      "covered_stocks": 251,
+      "ranking_rows": 7530
+    }
+  },
+  "unrecovered_dates": [
+    "2026-11-03"
+  ]
+}

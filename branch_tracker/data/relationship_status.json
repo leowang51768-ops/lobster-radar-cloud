@@ -1,8 +1,8 @@
 {
-  "observations_with_horizons": 315048,
-  "mature_rows": 117352,
-  "pending_or_missing_rows": 197696,
-  "summary_groups": 68003,
+  "observations_with_horizons": 382746,
+  "mature_rows": 156458,
+  "pending_or_missing_rows": 226288,
+  "summary_groups": 85789,
   "historical_backfill_included": false,
   "strategy_changes": false,
   "note": "只配對採集當天已知的排行榜與之後股價；逐日歷史回填另存，避免事後選樣混入。非重疊期間仍不保證統計獨立。"

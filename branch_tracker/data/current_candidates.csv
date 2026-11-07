@@ -1,1 +1,6 @@
-﻿code,name,branch_name,latest_day,consecutive_buy_days,streak_net_lots,streak_est_net_amount,stealth_score
+﻿code,name,branch_name,branch,broker,latest_day,consecutive_buy_days,consecutive_sell_days,streak_net_lots,streak_est_net_amount,recent_sell_lots,sellback_pct,status,direction,price_5d_pct,price_20d_pct,not_extended,historical_grade,historical_d10_samples,historical_d10_win_pct,historical_d10_avg_return_pct,stealth_score
+2382,2382,永豐金證券,0039004100300030,9A00,2026-11-06,15,0,6176.0,1878612500,0.0,0.0,buying,🟢加碼,-8.65,-13.28,True,觀察,35,42.86,-0.98,98.8
+2454,2454,元大-崇德,0039003800310053,9800,2026-11-06,7,0,704.0,2395605000,0.0,0.0,buying,🟢加碼,-14.61,-29.89,True,觀察,24,41.67,-0.62,78.8
+2454,2454,中國信託-文心,6164,6160,2026-11-06,7,0,1056.0,3615125000,0.0,0.0,buying,🟢加碼,-14.61,-29.89,True,觀察,26,38.46,-1.83,77.6
+1513,中興電,富邦-建國,9658,9600,2026-11-06,4,0,203.0,28891500,0.0,0.0,buying,🟢加碼,-10.06,-17.56,True,觀察,19,36.84,-2.06,59.7
+2356,英業達,國泰證券,8880,8880,2026-11-06,4,1,3559.0,202650600,1325.0,37.23,selling,🔴轉賣,-11.74,-9.47,True,觀察,30,36.67,-1.4,70.4
