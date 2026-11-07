@@ -18,6 +18,7 @@ on:
     - cron: "40 12 * * 1-5"
     - cron: "30 13 * * 1-5"
 permissions:
+  actions: read
   contents: write
 concurrency:
   group: independent-branch-tracking
@@ -37,10 +38,23 @@ jobs:
       - name: Verify parsers and deduplication
         id: verify
         run: python -m unittest discover -s branch_tracker/tests -v
+      - name: Restore verified November evidence
+        id: recover
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ -f branch_tracker/data/november_2026_recovery.json ]; then
+            echo 'restored=false' >> "$GITHUB_OUTPUT"
+          else
+            python branch_tracker/restore_november_evidence.py
+            echo 'restored=true' >> "$GITHUB_OUTPUT"
+          fi
       - name: Accumulate branch evidence only
         id: collect
+        if: ${{ success() && steps.recover.outputs.restored != 'true' }}
         run: python branch_tracker/collect.py --history-budget 120
       - name: Refresh matured price and quantity observations
+        id: relationship
         if: ${{ always() }}
         run: python branch_tracker/price_relationship.py
       - name: Build readable daily evidence audit
@@ -52,7 +66,7 @@ jobs:
         run: python branch_tracker/final_result.py
       - name: Save successful evidence and coverage even on partial failure
         id: publish
-        if: ${{ always() }}
+        if: ${{ !cancelled() && steps.recover.outcome == 'success' && steps.relationship.outcome == 'success' && steps.report.outcome == 'success' }}
         shell: bash
         run: |
           if [ ! -d branch_tracker/data ]; then
@@ -60,7 +74,19 @@ jobs:
           fi
           git config user.name "lobster-branch-tracking"
           git config user.email "actions@github.com"
-          git add branch_tracker/data
+          stage_evidence() {
+            git add branch_tracker/data
+            python - <<'PY'
+          import subprocess
+          from pathlib import Path
+          files = subprocess.check_output(['git', 'diff', '--cached', '--name-only', '-z']).split(b'\0')
+          for raw in filter(None, files):
+              path = Path(raw.decode())
+              if path.is_file() and path.stat().st_size >= 100 * 1024 * 1024:
+                  raise SystemExit(f'GitHub size limit: {path}; evidence retained as artifact')
+          PY
+          }
+          stage_evidence
           if git diff --cached --quiet; then
             exit 0
           fi
@@ -74,14 +100,25 @@ jobs:
             # A binary SQLite conflict cannot be solved by repeating rebase.
             # Merge independent evidence rows into the current remote snapshot.
             cp branch_tracker/data/branches.sqlite "$RUNNER_TEMP/branch-local.sqlite"
+            cp -a branch_tracker/data/{status.json,november_2026_recovery.json,audits} "$RUNNER_TEMP/"
             git fetch origin main
             git reset --hard origin/main
             python branch_tracker/merge_evidence.py "$RUNNER_TEMP/branch-local.sqlite" branch_tracker/data/branches.sqlite
+            cp -an "$RUNNER_TEMP/audits/." branch_tracker/data/audits/
+            cp -n "$RUNNER_TEMP/november_2026_recovery.json" branch_tracker/data/
+            python - <<'PY'
+          import json, os, shutil
+          from pathlib import Path
+          prior = Path(os.environ['RUNNER_TEMP']) / 'status.json'
+          dest = Path('branch_tracker/data/status.json')
+          if json.loads(prior.read_text())['date'] > json.loads(dest.read_text())['date']:
+              shutil.copyfile(prior, dest)
+          PY
             # Publishing must not depend on another network collection succeeding.
             python branch_tracker/price_relationship.py
             python branch_tracker/audit.py
             python branch_tracker/final_result.py
-            git add branch_tracker/data
+            stage_evidence
             git diff --cached --quiet && exit 0
             git commit -m "Merge independently collected branch evidence"
             sleep $((attempt * 10))
