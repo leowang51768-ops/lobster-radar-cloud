@@ -12,14 +12,14 @@
   "ticker": [
     "⚠ 全球市場風險｜費半 -8.6%｜NASDAQ -4.5%｜日經225 -6.0%｜KOSPI -11.0%｜台股加權 -4.5%｜恆生 +2.4%",
     "⚠ 全球市場風險｜美債10Y 4.86%｜VIX 25.6｜WTI原油 90.83美元 +0.0%（高於常態，觀察）｜布蘭特原油 98.32美元 +0.0%（高於常態，觀察）",
-    "⚠ 全球市場風險｜台灣友邦國最年輕總統被羈押 涉銀行倒閉引爆260億資金疑雲",
+    "⚠ 全球市場風險｜This Market Signal Called the Tech Selloff. Now It's Sending Another Warning.",
+    "⚠ 全球市場風險｜限空令是什麼？11/9開始實施！5大措施、影響…過去6次禁空令/限空令台股表現如何一表看",
     "⚠ 全球市場風險｜國安基金啟動護盤看「它」臉色 台股興衰與「這指數」連動",
     "⚠ 全球市場風險｜國安基金進場+限空令護盤雙管齊下 台股週一能漲多少?",
     "⚠ 全球市場風險｜台股重挫能回血嗎？學者示警一大風險",
     "⚠ 全球市場風險｜中國創新投資(01217.HK)與“中國創新投資管理集團”無任何關係",
-    "⚠ 全球市場風險｜台積電傳搶攻3D DRAM！華邦電董座潑冷水「點出2大難關」：晶片一哥不做半吊子",
     "⚠ 全球市場風險｜台股週一能反彈？夜盤漲 646 點、國安基金＋限空令上路，融資斷頭與 CPI 是變數",
-    "⚠ 全球市場風險｜明天股市開盤會大漲嗎？星期五我又加碼哪些股票？ 來一一的跟大家報告吧⋯⋯"
+    "⚠ 全球市場風險｜從實驗室走向國際賽場 成大二次發酵技術為臺灣咖啡開創新風味"
   ],
   "markets": {
     "US_SOX": {
@@ -85,17 +85,25 @@
   },
   "active_news": [
     {
-      "title": "台灣友邦國最年輕總統被羈押 涉銀行倒閉引爆260億資金疑雲 - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBLWWUzT3N2NGtzR2Zha2xxN0lPVmF5VTBQZTIxU0dFRHktNTg1ZDR4TEUzM2dmZXdSRVdHUWVmS2tUNk1BZ1l5Z1RZWXBSMm9zOWYtX253Tzc?oc=5",
-      "source": "自由時報",
-      "published_at": "2026-11-08T16:11+08:00",
-      "importance": 4,
+      "title": "This Market Signal Called the Tech Selloff. Now It's Sending Another Warning. - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQSzZqNlk4cV9tS3hMM2tfV1RvU1pWbkh1MDlpTndsYk9vcURFMGQxX0Rrb19iTUhPbGpzRnhhdktrbkhSaXhLbk11Sk5VVGE0UXBHZ3QzamRqbzN2MVBkdi1WaXlJeXU1cVBtcXN1d3BGUGVDbUZTYm1YdmJNWWlGQm5wVVFkSXBaemhRV0lLQ2xtS0loV0RpbW1B?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-08T20:17+08:00",
+      "importance": 5,
       "risk_score": 4
     },
     {
-      "title": "國安基金啟動護盤看「它」臉色 台股興衰與「這指數」連動 - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBTc01UVnJ5ekR2ZnpTMWJtaWF3SzhFNjM1cDU0THprUVFET2VIMU5MQi1SQlBmSkdKY3JpNjg0cGthOGhFQ0p1QVk5MC1DWHJIcC1HLUNSbmI?oc=5",
-      "source": "自由時報",
+      "title": "限空令是什麼？11/9開始實施！5大措施、影響…過去6次禁空令/限空令台股表現如何一表看 - 今周刊",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNNjctbkE0YWVtczIyQktmQ1JwNU1XX2huZjliTFZic2dKRkhURGxzN0pfZjN3TEI3VmJaRUN4ZnBuMUhOLTlJTHdXdnVxa3RpZmItMU5Pa0lTTzlxa2xndjZmbTJSNl9sZ2ZyYk1mNGx6Z1ZYODJycDVGTDVnNmtVaA?oc=5",
+      "source": "今周刊",
+      "published_at": "2026-11-09T01:25+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "國安基金啟動護盤看「它」臉色 台股興衰與「這指數」連動 - 自由財經",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5MZWViT3F3M0FEQk5BMjQ4aE5HaDNjMlVYbWlfa0Z3SXYtTVRPelc2c3RUTjZYMngtY3RmYm01MVpfQnVnNHpta3ZIN1hnSlpZZXNiR3FYUGkxSE9zcHZj0gFkQVVfeXFMUF9wX2FrVWJsLXAtd1JVSW9WQUdWZkxSMnpOdXlSMGFzTWRiTlQzR0RSTlJMbDRSU3h2cFhoMk5aZC1yWEJ4cDlEazU4UjQzRUJyVVdqbEFGb0ZjUnY5WHZUWUNzZA?oc=5",
+      "source": "自由財經",
       "published_at": "2026-11-08T22:00+08:00",
       "importance": 2,
       "risk_score": 0
@@ -125,18 +133,18 @@
       "risk_score": 0
     },
     {
-      "title": "台積電傳搶攻3D DRAM！華邦電董座潑冷水「點出2大難關」：晶片一哥不做半吊子 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi5gJBVV95cUxOMHFIaTBSUHotMHJxSGJHcGdZcmtIc1dWTFMyOHBRTmtncFItTDBCR25YeDNMNzBuMjNxZ0VURTc0TFBENUM2U3RrMnBsOVdUa1JCWXFBNXBZb3VYM3JhNElFMXZsVGVYaEM3NGNaWXJpa2hQeHNKSlFfSkNrbndxZWFjTFBFQTZmQ1l4X2xQODN4dVdKVHVwcDFfaDZHWkE3Q08zSkI1NnF2QVBNMGRzN0VSR1dkYUhCbUdnTXBtU0t0R3ZUTjlTamN6djBsVkIwTkdVTkZrWWpaODhQZWN4eHR6eVZ1MGt2NHVDUm5yaHhCeWp5bUZRNjFxLWp1Z1NTSTdzRmRXbHZzZVlsUXNidDY3UUptOTdMekVEOUw5TnhZSnJFRm9wRFBKWlVmOWVlYkQyd3FVV21YQWZhczBCYjhmdjl2djFldE1LUVJKWXpTY2NwaEY5TWFqQVZ5QUZJQkZUanRB?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-08T18:13+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
       "title": "台股週一能反彈？夜盤漲 646 點、國安基金＋限空令上路，融資斷頭與 CPI 是變數 - 動區動趨",
       "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNU1d4QkRtV0RDYzRVeDMyLXFPZ280V1NyWUNrRWI0WkhVd3hqZzlzLTVOcFowMXFjX3lqTW1TN2F0N192MlNyMHQ1VllLX2xPSkNGLVpiTnZXYk53U0RkVUM2emY3bmVRQmZoUTRvZ0RTT2MyMmpUN0tuR1pZSXY4YWVsNUptcElUbGlwa3A5OTJKTFkteUx0Mg?oc=5",
       "source": "動區動趨",
       "published_at": "2026-11-08T17:17+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "從實驗室走向國際賽場 成大二次發酵技術為臺灣咖啡開創新風味 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMirANBVV95cUxNUnp1RG5MUG5IWEZUSktLdVpJbC0wWjJZSGxKdXBXREY5S1pyMU1sTzhicVBNSkFDMEFOTWpvSlBMNWxZSngxNEc4Mi1JRkRPdzNwR1NFaUQ3alBiZVU5cWVLVzJOeTNrOGFqc2w1NzZMT0Y0bl9VX1lBTm9uVTJCMjBIT3NXN3h6ZmxBY2pTUDZ4ZExzSXpMS0g4YW5aNG9NVjllUWFvQ0RjbzllZDZSa1pYZjVVV3Y3bTRXcjAxcTdvMnBERjJ5MnhJM2piWjZiTDBMVzd1bkZHN01UVms3dnhpbTg4UlNkS2tqNDhDVi1IcnJ0YTY4V1duOElLMVRPTnVJSDBPTXVQT1FWVWFCb2FEVkc1TU1KaDJBZlY4dEE1UzNBemhxTzRmMjE3Nk5seGhET2tuc1lXaWN3VTJMMzhNSEZJczNwY1habGNqVVBRSURraFdBanJBWjladW9ZRExOTjV4QlRFMjdEc2lLSXZFOXRRMWlaWDBHQUFlTzdwZEd5M1F5WkZfS3FUMUtONFhMc3ZhTTJpang4bUdKcmItWU1VdHRhNTFnaA?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-08T16:57+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -165,24 +173,16 @@
       "risk_score": 0
     },
     {
-      "title": "台積電遭血洗崩跌105元也不怕！外媒仍喊買進 ADR最新目標價曝還有27％漲幅 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiugNBVV95cUxPLXdKYlk2dl9Qc2xobDhmQWx3V20wb21ZNFRBcWhYdzUtQ0tvXzJqaDJlRG9mNHFRNUFOZ01YaklBM09iS0ZVVFg1X3dtSkFFWmp4T196c1JfMXlSdVU2ckxnbDFxcHBBd3NKeTNwbWtSM21nb3hqTm02Z2dxbkcyZk9wWm45N3drR0NFYXFrLVpZMXNYRldSekFMd3N6REdlZF9mZ1FrcXV0bUhrYV9vZ0U4ck1XZDUxU0llOWx2RmlXNEdsNVdwNDlZX3NWb05rQkdaTGxsZmRhZ2JFbmwybE1ub0s2dmM2YlhJbTdvN3hpM1hjM0lVZVdqQ2pGRHRYOVNIdDllVkRXVWsybUtpZTNEZEpnTy13NC0tZ3BzZTdFaEUzeEJnam9YNldIVXRYd1hXaTUtenJyYUxEc0ZpSC1ITzdBdUtPcFZHV01Tc29zRlJrYTZXOVpialhZRi1NQVc0eDVUdmFGek9RTDVwWFF6WlFERlIzWG1TQlZuNExSaW9BVUNIVFFoc0xHVUJtM1AyeUtleXd6UkhfZTZvUGJfaGlHdlh6aUJ2bDFYazQwTVo5eDdGY2pR?oc=5",
+      "title": "台積電傳進軍記憶體市場！韓媒：AI晶片供應鏈恐被「整碗端走」 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiggNBVV95cUxOQ1hhY3o3SFJpN1d6cnZDUnd4anNkbWZmV2o2eGNuOFAyczZnbVlvbmhwbnBnY2szdTNjN1RrRWRwNDJDbThKVm5Qbmk2RlpPcXdkYkhfOFVDMlRYNm8wbk1IM1laTktQbnNEVE93OUtsaF8tejl4d05KYlhGMnU0RFhrNTRQbkcwUXFPaG55VTZ1TzZaVDVhNThLTmdHa05ISC1tSnREamVoM0JVZTRyMk51N0hNVFZNempiOUxwaTJPVUJmeEhENjZqU0lPanJ1dWFpaU9NaFpqRHVZV1gzWEF5VEtsSmxzNjFBeFFpdXlvbFV5Y2t6WWxnMVB1eXNicjJQVm0tV0R2UzZ4VDJ5WFMzSEN4QThKQjAxTUJjQXZSTkl2dEttYl8tTncyNUhIZWMyZWNDcklOUTN4VmZHbHNvQ1hQMW9BcE1EMlFBamNVZjNXSzRFYkJJYmlXQUtJcUcxNzVURjR0TUtMeWxTSVNzUkZVUHhMSUlYZHpoV1hWQQ?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-11-08T13:58+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股一週跌逾12％、全球最重 AI長線趨勢不變 - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE15eGVwaUlVMEJuaGRWbTlILWhuOUZTQ2tMVXE1am1zbmRtVlE1a3ZRc1R4ZTJYVGw2Z0RQVkN5N0h5b25KbXdaWTlPdWZEUml1dkxkN0JYRXU?oc=5",
-      "source": "自由時報",
-      "published_at": "2026-11-08T13:25+08:00",
+      "published_at": "2026-11-08T15:28+08:00",
       "importance": 2,
       "risk_score": 0
     }
   ],
   "oil_watch": [],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-11-08T22:26:26+08:00",
-  "checked_at": "2026-11-08T22:26:26+08:00"
+  "updated_at": "2026-11-09T02:55:51+08:00",
+  "checked_at": "2026-11-09T02:55:51+08:00"
 }
