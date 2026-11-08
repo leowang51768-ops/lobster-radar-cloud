@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "risk_level": "red",
-  "risk_score": 8,
+  "risk_score": 11,
   "risk_reasons": [
     "費半明顯下跌",
     "NASDAQ明顯下跌",
@@ -12,14 +12,14 @@
   "ticker": [
     "⚠ 全球市場風險｜費半 -8.6%｜NASDAQ -4.5%｜日經225 -6.0%｜KOSPI -11.0%｜台股加權 -4.5%｜恆生 +2.4%",
     "⚠ 全球市場風險｜美債10Y 4.86%｜VIX 25.6｜WTI原油 90.83美元 +0.0%（高於常態，觀察）｜布蘭特原油 98.32美元 +0.0%（高於常態，觀察）",
-    "⚠ 全球市場風險｜台積電傳進軍記憶體市場！韓媒：AI晶片供應鏈恐被「整碗端走」",
-    "⚠ 全球市場風險｜應輝達要求揮軍3D DRAM？台積電回應了",
-    "⚠ 全球市場風險｜台積電遭血洗崩跌105元也不怕！外媒仍喊買進 ADR最新目標價曝還有27％漲幅",
-    "⚠ 全球市場風險｜台股一週跌逾12％、全球最重 AI長線趨勢不變",
-    "⚠ 全球市場風險｜法人：台股短線沉澱不改AI長期動能 宜採「多策略配置」迎戰高波動",
-    "⚠ 全球市場風險｜台股明年衝6萬點？006208擬「1拆7」股價降至30元 分析師揭0050、009816誰最會賺",
-    "⚠ 全球市場風險｜韓廠壓力大！韓媒：台積電跨足記憶體恐全碗端走AI晶片供應業務",
-    "⚠ 全球市場風險｜傳進軍先進記憶體！台積電應輝達要求規劃3D DRAM仍遭小兒砍「這檔」毛利率飆47%、獲大摩喊111元目標價卻淪賣超王"
+    "⚠ 全球市場風險｜台灣友邦國最年輕總統被羈押 涉銀行倒閉引爆260億資金疑雲",
+    "⚠ 全球市場風險｜國安基金啟動護盤看「它」臉色 台股興衰與「這指數」連動",
+    "⚠ 全球市場風險｜國安基金進場+限空令護盤雙管齊下 台股週一能漲多少?",
+    "⚠ 全球市場風險｜台股重挫能回血嗎？學者示警一大風險",
+    "⚠ 全球市場風險｜中國創新投資(01217.HK)與“中國創新投資管理集團”無任何關係",
+    "⚠ 全球市場風險｜台積電傳搶攻3D DRAM！華邦電董座潑冷水「點出2大難關」：晶片一哥不做半吊子",
+    "⚠ 全球市場風險｜台股週一能反彈？夜盤漲 646 點、國安基金＋限空令上路，融資斷頭與 CPI 是變數",
+    "⚠ 全球市場風險｜明天股市開盤會大漲嗎？星期五我又加碼哪些股票？ 來一一的跟大家報告吧⋯⋯"
   ],
   "markets": {
     "US_SOX": {
@@ -85,18 +85,82 @@
   },
   "active_news": [
     {
-      "title": "台積電傳進軍記憶體市場！韓媒：AI晶片供應鏈恐被「整碗端走」 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiggNBVV95cUxOQ1hhY3o3SFJpN1d6cnZDUnd4anNkbWZmV2o2eGNuOFAyczZnbVlvbmhwbnBnY2szdTNjN1RrRWRwNDJDbThKVm5Qbmk2RlpPcXdkYkhfOFVDMlRYNm8wbk1IM1laTktQbnNEVE93OUtsaF8tejl4d05KYlhGMnU0RFhrNTRQbkcwUXFPaG55VTZ1TzZaVDVhNThLTmdHa05ISC1tSnREamVoM0JVZTRyMk51N0hNVFZNempiOUxwaTJPVUJmeEhENjZqU0lPanJ1dWFpaU9NaFpqRHVZV1gzWEF5VEtsSmxzNjFBeFFpdXlvbFV5Y2t6WWxnMVB1eXNicjJQVm0tV0R2UzZ4VDJ5WFMzSEN4QThKQjAxTUJjQXZSTkl2dEttYl8tTncyNUhIZWMyZWNDcklOUTN4VmZHbHNvQ1hQMW9BcE1EMlFBamNVZjNXSzRFYkJJYmlXQUtJcUcxNzVURjR0TUtMeWxTSVNzUkZVUHhMSUlYZHpoV1hWQQ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-08T15:17+08:00",
+      "title": "台灣友邦國最年輕總統被羈押 涉銀行倒閉引爆260億資金疑雲 - 自由時報",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBLWWUzT3N2NGtzR2Zha2xxN0lPVmF5VTBQZTIxU0dFRHktNTg1ZDR4TEUzM2dmZXdSRVdHUWVmS2tUNk1BZ1l5Z1RZWXBSMm9zOWYtX253Tzc?oc=5",
+      "source": "自由時報",
+      "published_at": "2026-11-08T16:11+08:00",
+      "importance": 4,
+      "risk_score": 4
+    },
+    {
+      "title": "國安基金啟動護盤看「它」臉色 台股興衰與「這指數」連動 - 自由時報",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBTc01UVnJ5ekR2ZnpTMWJtaWF3SzhFNjM1cDU0THprUVFET2VIMU5MQi1SQlBmSkdKY3JpNjg0cGthOGhFQ0p1QVk5MC1DWHJIcC1HLUNSbmI?oc=5",
+      "source": "自由時報",
+      "published_at": "2026-11-08T22:00+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "應輝達要求揮軍3D DRAM？台積電回應了 - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9nUFlOcHFFbi1wWHBqTUtLQnM3WUE0UUIxQnBNSWN3dU5mZzRlV28ycWdyc1ZOVWllVTBXUzBZX3FITGxjZU1KRFZnM245V1pzNWstTUJHX0Q?oc=5",
+      "title": "國安基金進場+限空令護盤雙管齊下 台股週一能漲多少? - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi5wJBVV95cUxNUFk3NGZNQjJyQUNWaW9uRmZUUnBrd3RZelc3bHFidVRhZ0tlbEo2UDJBLTVTVEJHYzNZcnljSGFpMXNXVWoxX2ZRYWNDRmV6aUtsU2FDcWlGa3pVYlM0YnV3LW12bmlfcmtNMldDLUx4Z3cyYjJGX0xuZGo1STJwNmctZDF3Rmt2eURkdy1WVkZhOUpZU3hOMGxpM1h6Ym5GVGlZWHY2QWgxU1M3c3ZGMXItSUxRQTZncWRSWndXaTlqUGFGZE5pS0hxcV9ocy1CVXhwbWtFTktmMzVFWVNVX1JtbTBlVHUxaTNQckRHWmJnbF9CUTZkbUktWFMxYkg0bGNsbHREUmMzU2tsT2dPb0NTWGIxVmVvVVVTZkp0WHBTRUJoSHdPVnlNTkJjam1CNWFHTkZ0T2RwX3FxclY5VEgtMlliX1dKcmZzTldydW1oWHVOS2wzMGVlY1h3TmdWU0RUV0o3dw?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-08T19:49+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股重挫能回血嗎？學者示警一大風險 - 自由時報",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9GcFdwQkxqejFySHNXeVpvNHBxNVZWVjQ4ekkxNW1ZakdLRHNiZnBCNkZHTHJkdlRkR05YUjhTN1BxN3JfU25kZnFHUU5HalhMYW9FM2hLajc?oc=5",
       "source": "自由時報",
-      "published_at": "2026-11-08T14:09+08:00",
+      "published_at": "2026-11-08T19:46+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "中國創新投資(01217.HK)與“中國創新投資管理集團”無任何關係 - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE03c1pBSmNVNU9tT0pDZ0dJTnpFMVhubHM3bjZzdjczY2VFWjczRUxrc0NWMS1ZUlQ3M0NFNWNrV0tNejVhRmJlTnJsSjUtU3dzSUg0c0R1TFhjbGxKWjhjU0Z0TG10Rk10MEww?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-11-08T18:39+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台積電傳搶攻3D DRAM！華邦電董座潑冷水「點出2大難關」：晶片一哥不做半吊子 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi5gJBVV95cUxOMHFIaTBSUHotMHJxSGJHcGdZcmtIc1dWTFMyOHBRTmtncFItTDBCR25YeDNMNzBuMjNxZ0VURTc0TFBENUM2U3RrMnBsOVdUa1JCWXFBNXBZb3VYM3JhNElFMXZsVGVYaEM3NGNaWXJpa2hQeHNKSlFfSkNrbndxZWFjTFBFQTZmQ1l4X2xQODN4dVdKVHVwcDFfaDZHWkE3Q08zSkI1NnF2QVBNMGRzN0VSR1dkYUhCbUdnTXBtU0t0R3ZUTjlTamN6djBsVkIwTkdVTkZrWWpaODhQZWN4eHR6eVZ1MGt2NHVDUm5yaHhCeWp5bUZRNjFxLWp1Z1NTSTdzRmRXbHZzZVlsUXNidDY3UUptOTdMekVEOUw5TnhZSnJFRm9wRFBKWlVmOWVlYkQyd3FVV21YQWZhczBCYjhmdjl2djFldE1LUVJKWXpTY2NwaEY5TWFqQVZ5QUZJQkZUanRB?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-08T18:13+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股週一能反彈？夜盤漲 646 點、國安基金＋限空令上路，融資斷頭與 CPI 是變數 - 動區動趨",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNU1d4QkRtV0RDYzRVeDMyLXFPZ280V1NyWUNrRWI0WkhVd3hqZzlzLTVOcFowMXFjX3lqTW1TN2F0N192MlNyMHQ1VllLX2xPSkNGLVpiTnZXYk53U0RkVUM2emY3bmVRQmZoUTRvZ0RTT2MyMmpUN0tuR1pZSXY4YWVsNUptcElUbGlwa3A5OTJKTFkteUx0Mg?oc=5",
+      "source": "動區動趨",
+      "published_at": "2026-11-08T17:17+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "明天股市開盤會大漲嗎？星期五我又加碼哪些股票？ 來一一的跟大家報告吧⋯⋯ - Facebook",
+      "url": "https://news.google.com/rss/articles/CBMi4ANBVV95cUxOTTd0SWE5ei0xbW1aLXhUc21neUJOWEM5aXJVeWlHRi1EVTljV2JlaURRVER6NkUza2ZPdmVKZ3FKREtkTEQ1czg3SjVMaHV2VUFlcDVMeDVLV2hSWVZIOVFhcWJISWNvN21yNnRRVWktc1k4WFQycTNWdXlCQ1pOXzI0N1JsQ1BnQXAtdGxQcVpvalh6UEtERFFXUDM0X1JoazZLUHpEcnpTVmg2Q296UVZKWkJmc3ZnUHJHTmROb3plUEJlQktmbVR3cWw3bkJxckxMOTRKc09KYmdBUmk4MUw1QnlJOXZkcE5kOTJNUWJnOFFlVTZQY25mcGNiUkdFZVNDSF9DV1JPa3NGNS1MNWpJdUFTTGpNZXpCX3lmUlhJa0JvYWl4M0FqZ1U0ZndoZDhIaTA1bVRtNWhrblRsbDRQUTkxeXRCM3ZRZEJJUGdVVlNENDJRdmNUbTMtS2hMY3JHekp2N3Y4dGgyUzdrdEZ3TTVrY0NKTDJDQlV2Qkk2UGpFOWRfcFRJSE1pRjFzVTgxMHNveHZYTmppTlY2ajZqZzl0SVVXRkR0VmpkQV9xdUV1M3ZTLTVPdEhnN0lWOXVjRXVSaGhVNjRzRFM1U2NuOC1uOVpRSkVFTlRLLXA?oc=5",
+      "source": "Facebook",
+      "published_at": "2026-11-08T16:52+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股一周狂瀉5510點！主動式ETF轉買金融股 台新新光金加碼近1.5萬張奪冠 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMipANBVV95cUxOaktPMXcwbkZWam0tUkE5bGpZU2hBRFpXWmx1TU8xcjR2UUwxUTE1R2ZQQjRaczlqV0NJSGJrYUpZbDVEV2EzakI5c3lNRzJEanU3X1hpdVJmbkJ4RktoSVB6SGZqa2xyTEZEYVJCbzlrb05TOXRnemxpbU5SMDVneU00dTNUcmVUaGJxM21lME0tdFBuam5ScW96dVNfSTJtRFFKb1FWNUk2d0RRdUp0c1o2TUw5enZ5YjA2ZnpMb2NKOUhqVHlMWFVCWDEtWkZmbF9TaWJyWkpXWnZaNEE2Q29RQ3VrNW1xdmdNVXJzSzNTbkhlLUlNYVBiS1Rja19BNkFGVTZGRDJ6UmVPY2t3UGtMQU1SV0lFRXdsUEpHQmgxMFRCLTJON3R4TnE4b1RJWVdvdFJFcnlJWTh0ZjQ3Ml9EOUloOEx5Vi1qc2ZNRm1SMmVHV0tEYXZPZzNmX2ZoODMtNko5bWNMSTFQN2hCdFRWR2tyWXAxQ1FKTzN2YzZaaFBTcV9SN1VaamFfVkhJYWVxckV4bHRVeUtBUkc0OWN3Ujc?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-08T16:47+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股週一有望迎強彈！法人籲「別盲目搶短」緊盯1事 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMixgJBVV95cUxQUnktRnYxUHE0dDVMQk1sUFgyTGJHeklMMV9aN3dMc01qR2w5WUFGazhDbkFIWUdyMk50TUtjVkdNeFE4Nm81SEV0OEVSMlQ3QnUzRHpUZHBtckNhYkxycDhMeng1Wl9oOFlabVc2R01Zc0pNSEcxRDl4c1RIOXdBaVh0QjhZQnVKNkVnM0ZqeU9jaTZ3Zy1aSlNPb2ZRU0ZVTWk4UVYwOUltZU42NG1TaGVyRjhYdDFfVTE5eGNfMk1keXZhUXQwT2F3ZjhZSkhPM2tlQjFYM0ZWdFZ6QjZiZ1ZzNGJZWGRfS3RpVk1vd2tLQkVJZ29wOGVCVEVIMG5vUlI5c21BeFN0ZktZVEZaa0VuMlZzdmlRd1RSa0g2MFd0aWtmUVMxN3k3dml4ZVBMQUMzUHRaUklQVEFUeXFyNjEwWm1HQQ?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-08T15:28+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -115,74 +179,10 @@
       "published_at": "2026-11-08T13:25+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "法人：台股短線沉澱不改AI長期動能 宜採「多策略配置」迎戰高波動 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMimwNBVV95cUxNeFFFR0toOVUta1d0MDVYNXdGdkNwRGQxVkpzWS1mVy0tRXczSmFMRnlqSEpXbDhwZUNhMVVMMkVld2tfZ0VQUllDZi13dWNRSkJpbVJnUEJYdFBGaGVlN1lyOUgtcU5uZ0JLT2FvZkdQem9IYjlaR3ZZS1hmOFNzbG1LUUliZnZwbURSU1VvS2NUdXdzSFUxNjZIaThOQWQ0dTNFRnRTbklMUWxTUzRIZVc4RWRycFFPNkFBWmZTT081SjdaRVp2azJfWVg2em9FUmRlbGE2ZXVHLXh4QnV1cG1URnZpeHhjaWRFendjV0Z6V0NCaFl2XzJzQUtjWmdySXNhXzhENDB5ZHdUMFlYeXVqOVRFSnRJeUI0cUJWSUtUS2NqUXMtakJreVBCU0owUG9sX0FGNlB5OVdXc1FMLTkweHNGQlNIQUlwMTVmRXJWZklYSFlXLVNKSlEtUlAwc3hhLWFvUm9aV0xJV1pZNUpDaXZwcmpEdjNvTjRDdG5zU1RIelFZdXhIZGZMdHhCQmNhUWNMeHpIRW8?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-08T12:03+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股明年衝6萬點？006208擬「1拆7」股價降至30元 分析師揭0050、009816誰最會賺 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMizAJBVV95cUxNbmVXSzBESGFDMWQwVUVwcmNBbzhUNGw5RV9aMEIyS0xfM3VzclljM1p6VVpvWXowU0tqNFc3dTI1NEtEcHRpUVhPNkN3OGNvWHJEdVBLSGV3VEtJTTdDNV8wTTNyRVA3enhFY3R6UFJ3aXBLLTgwYkliTkc5QW8yRHlxTVFtRDVCV0VWUE5TR0lITFNLVGliU3pkdEozZEJQQ3RLeDhlSGpxQ0s4T3J5SjJCQU8zam9ZWnhfSnQ0U2R3MTZCU1hsLWZBN0djRS1IR2FsbjNmYzB3YV9yN01DUHdCV2hVNlV1VlAzdDM2S2NNU28yaDJTbG1WcmtyaHhfdUJoTktEOGkwSzlxeUlkQ0szeUZWNmF6MHg0bHdzb09tMHhMU2tMdDF5U3NjRjhCeUJUTkR3a3dYRmlIQXJFOFg2ekphck5DSXBUVw?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-08T07:24+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "韓廠壓力大！韓媒：台積電跨足記憶體恐全碗端走AI晶片供應業務 - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE81SUFRSVpaSURBeGt3Nnd5QkdBMjFKVXJ4WkEzQjM0RUdNY1JVQS1aZnI1QjlPdF9HbVc3aFZya0tnVEJqbUNncXR5enVwQlBDd0J5dmFQMWM?oc=5",
-      "source": "自由時報",
-      "published_at": "2026-11-08T00:03+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "傳進軍先進記憶體！台積電應輝達要求規劃3D DRAM仍遭小兒砍「這檔」毛利率飆47%、獲大摩喊111元目標價卻淪賣超王 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMixwNBVV95cUxPQW5JSDltQ0d0TzgwV2tpMmNnMFhxVzVrdUF6Rlg1cTQ2VUZYWlFvTWdsd1BtSXFZaDNHbDZ5TVZaT2JMQ3NXRkpnYkVzWEJTd25HaV9VQmpzSWVfbEdDWkpmeUpobEw0U0FIbFYyT3g3V2o4T2FPZDJhS3BXNlBwejBKX0t6d2hRSUJrZUNRRVRaems5RVhSS3ZsNjlUZG9mZDd0R0FKdFJremJRelJzZjlMTXU5N2toVHZxV25yMTVyUGFpczJPX1QxZ1lkTnZ4dWVMT1RkYVIwbjhVdEJRdVBjdzlYcl9jMDhBMXJpWFgtSGIycGk2eVFyV05RMU5QQnBuZzRLUzZvRjFOenFKNnhyT1E1NVFsdmo5MURGTzZmTEtfbVhMdW5ybmx1NTIwNy1tY2NsWDRhbmk1LUNuV3Yycy1iMmVFUTBzMHhuVjRlSHRvTkNVUGNsaGxsTTRPVG9WRXVLTGtWY0hpal9vLUZfczMwbmJneFc3cnhmcXktQVNlTGdmOGVTdFlUMEk3YzhfWWR6aC1ONENqWWdjekhjbnJCMGtOUHRIR1NFbFJHNnVCOUZIRjhXNHgxQTMwWEp3SU80QQ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-07T19:50+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股「一片極光」竟笑了！陳珮騏加碼6位數進場 重押這檔股票賺30% - Yahoo新聞",
-      "url": "https://news.google.com/rss/articles/CBMi_AJBVV95cUxNLWVVRUpLU2VBTlZQRE9EX2xKd1ZCREl3N2dOV0ZvZmRrVHQxYklVX1BPWGNhbG13TEJFRHR1Tm4yZ3VBTzM3b3RUcmFhU3ZLRElscjdxaXdwNHFQcXNzZ3NxT3dITTA0MlFnU2NLZktldlFydW95ektjZ2VZck5mYTVTNlUwTE4zS0ozWjZvSVBuYnd6OXFYdzdjS1VYMjVkN1k0dUpBcF82MC00X25sdXhMa0RYMHE0VDdibmNIRUgwSUpwVXpFcVpjSWlNNk5zSm1iZnliLVZSMjdQRmJFVzRTMzJYdUVOVXVBN0EwckFNQURRNlJzUHU2ZE9aV1hDVTBfZ3Q2OWVDeEVxa3dySnd3ckFFeW5MbHlHOGNfUDY5VlQzZDJ1TFBrdmdKNTlTb3BSbDJ6YUs3TGR1ZG9HZ1JkenNQYXhvZnBQbDdoT1dNV1EtVkVfVnpjSEQyc2kwNHpOZVZKWVZSWkNhMDdsQU96Z1NOWEZ6TU9UeQ?oc=5",
-      "source": "Yahoo新聞",
-      "published_at": "2026-11-07T17:49+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台積電ADR狂飆6%！台股週一反彈有望？網憂「先拉後殺」：週二恐被套 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMivgJBVV95cUxPZEZucXZWT0I3TDEzUl9zRTdGdjJDUHJZRGZ4M3BHTUo1STV4NmdqUVVETUFsdFg1YnhhZEJTRGstTi1NY1RYdlVPWUtwR0JUWlpHMDRpY01TZGZQZTdDdFI0RlNMZVZUZHFUU01LeWZTbDRJVWg3NkhTY3hkUFhUVGlqVTlIWkkzcUQtYXFXczV1RWlWMEVwRUVhbll3X19GWWNRZzBqbmJqeGxuUl9ORFBSR290TkVhLXg2VkpVQ3RCNmlfdHlzeU9xQzE5NnQ2OE11QjlkeHJMTV85LVhMVlBHb01jXzJVbmt1TGVkX19ISGNHZ1BkZnVqQVVQQUVCMnhEdWk0SXdvaEJMX1pkVFFBY0ZvUl94amdPT2RKNFpRendnanhlbGcxQVFkY2liaVd1R3FJWTJqdlJvQkE?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-07T17:28+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "國安基金再次出手救市！上次砸122億買「8檔」狂賺近百億 台積電、鴻海、台達電都上榜 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMihgNBVV95cUxOVHdkWkw5MS10OV9CbERHNkU0ZTBYWUctX1BRQU1YUnozOFBmMHZaODgwZ3JIbXdVTlA1WVNPZ3V2cEJ0SFlxTFpLdGpXSnZSVGRUX3lfU0k1T1dtZHFud1VsSUNpT2VYM3ZlbHpreVNMcmJwLUJid0R5UlZDUFpOTDA3bnlOUXhYeTdHcFhJNVNCZEx2cVlEZVZ1dUtnSlEyZFY2M1JCNDh6UTVvam9uNC1lVjhRTEg5R19MMmRaNG9IaFk4cEpOanNLRVoxX21Kb2h6MlN5bHVxY2Y5MnFsUmxoVmZUYllRV0tua3JwVnctNnFxSEhuckNyelFrT3F0ZVN0aHFUamNtSXdsTHVheE5FQjZRRGJFSmVkVUdrSXFGdlRpSF90eGhCcWx1WmctZkg0Q0FYVHF2T1pDREdmU2ZhdnIzNkJTanpfbDJ0eks4ZDlGTFJqeFdPWW1YeDFUYW1wcE9nN3I3bFlfbXllVXE4MHhIMkU1bzYxM0hKaFN4ZVpNTXc?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-07T17:00+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股一度血洗破3700點！外資放血0050狂捲80.8億元 反手重砍「瑤池金母」4.6萬張 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi0wJBVV95cUxNOFJaUXF4RjBlMDBaZktiOG1SLUxwQUFfS2pDa3BYODJ5WUxXYXNYRGhHV0FUY2t0c2V6MHh2WHg5WlZEOVY4Zmo5a2dkZU1Yc1drRExWajcxS1h3RFFyRmVtZkpwS09xM0JLcXlwZ2dZQUF1OVdybmJmc1p4TDV5dzE5b2ZnRDdab3VsYkd6WVljcGtPXzdONlNidV9lNm9VVVRFMmJUZ1ZVMlctaFBXWG9lNXJoWWVLM2oySGRPbVdHVFN4Q1Z1S2MyQUZxTEZxdXo2T3Iyd3hTVDNzMXUzSWJzRGNRZU9QdEdwdGNRX0hEdTlWcXdublN3MHBNLWdwT3QzR3RhRDdtejY3ZnpCR0pSODU0WXNDdFg4WUJ4RU5NNVFJcVREWXRRZEpKYUZ6c29iNVlwZWNSRS1XS0R0eEhxWk9vbTZBRjR6dnZVNk00elU?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-07T16:45+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "oil_watch": [],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-11-08T15:30:22+08:00",
-  "checked_at": "2026-11-08T15:30:22+08:00"
+  "updated_at": "2026-11-08T22:26:26+08:00",
+  "checked_at": "2026-11-08T22:26:26+08:00"
 }
