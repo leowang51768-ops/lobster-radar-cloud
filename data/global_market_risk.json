@@ -12,14 +12,14 @@
   "ticker": [
     "⚠ 全球市場風險｜費半 -8.6%｜NASDAQ -4.5%｜日經225 -6.0%｜KOSPI -11.0%｜台股加權 -4.5%｜恆生 +2.4%",
     "⚠ 全球市場風險｜美債10Y 4.86%｜VIX 25.6｜WTI原油 90.83美元 +0.3%（高於常態，觀察）｜布蘭特原油 98.32美元 +0.0%（高於常態，觀察）",
-    "⚠ 全球市場風險｜韓廠壓力大！韓媒：台積電跨足記憶體恐全碗端走AI晶片供應業務",
+    "⚠ 全球市場風險｜台股明年衝6萬點？006208擬「1拆7」股價降至30元 分析師揭0050、009816誰最會賺",
+    "⚠ 全球市場風險｜MasTec暫停併購談判 2.5億美元股票回購計畫優先",
     "⚠ 全球市場風險｜台股「一片極光」竟笑了！陳珮騏加碼6位數進場 重押這檔股票賺30%",
     "⚠ 全球市場風險｜台積電ADR狂飆6%！台股週一反彈有望？網憂「先拉後殺」：週二恐被套",
     "⚠ 全球市場風險｜國安基金再次出手救市！上次砸122億買「8檔」狂賺近百億 台積電、鴻海、台達電都上榜",
     "⚠ 全球市場風險｜台灣外匯存底跌破6千億美元 外資撤離創歷史新高",
     "⚠ 全球市場風險｜台股震盪跌千點！主動式ETF績效榜出爐 這檔大賺47.8%奪冠",
-    "⚠ 全球市場風險｜台股市值跌至全球第七 滑落三名 被印度超車了",
-    "⚠ 全球市場風險｜Was the election result merely the final straw? The market is finally confronting the risks pos"
+    "⚠ 全球市場風險｜台股市值跌至全球第七 滑落三名 被印度超車了"
   ],
   "markets": {
     "US_SOX": {
@@ -85,10 +85,18 @@
   },
   "active_news": [
     {
-      "title": "韓廠壓力大！韓媒：台積電跨足記憶體恐全碗端走AI晶片供應業務 - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE81SUFRSVpaSURBeGt3Nnd5QkdBMjFKVXJ4WkEzQjM0RUdNY1JVQS1aZnI1QjlPdF9HbVc3aFZya0tnVEJqbUNncXR5enVwQlBDd0J5dmFQMWM?oc=5",
-      "source": "自由時報",
-      "published_at": "2026-11-08T00:05+08:00",
+      "title": "台股明年衝6萬點？006208擬「1拆7」股價降至30元 分析師揭0050、009816誰最會賺 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMizAJBVV95cUxNbmVXSzBESGFDMWQwVUVwcmNBbzhUNGw5RV9aMEIyS0xfM3VzclljM1p6VVpvWXowU0tqNFc3dTI1NEtEcHRpUVhPNkN3OGNvWHJEdVBLSGV3VEtJTTdDNV8wTTNyRVA3enhFY3R6UFJ3aXBLLTgwYkliTkc5QW8yRHlxTVFtRDVCV0VWUE5TR0lITFNLVGliU3pkdEozZEJQQ3RLeDhlSGpxQ0s4T3J5SjJCQU8zam9ZWnhfSnQ0U2R3MTZCU1hsLWZBN0djRS1IR2FsbjNmYzB3YV9yN01DUHdCV2hVNlV1VlAzdDM2S2NNU28yaDJTbG1WcmtyaHhfdUJoTktEOGkwSzlxeUlkQ0szeUZWNmF6MHg0bHdzb09tMHhMU2tMdDF5U3NjRjhCeUJUTkR3a3dYRmlIQXJFOFg2ekphck5DSXBUVw?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-08T07:24+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "MasTec暫停併購談判 2.5億美元股票回購計畫優先 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMitAJBVV95cUxOQ19ZckcwMTI2eU0zQnBNZEFkVFZfVHhfT3dudXZlVmNsVEZxVG8tZFZSVWFBczZJWENKZkpxWjVpTWIxaThRX2ttYTJHVFFFRjQ2X2RBVHl4TFhUSmdpNUYzeXdJZ0d6b2phWGdubU9JbXNnYk9nVmJPRlp1S2xpME9fNkF6SkJjU3RJR3I0VG5odURuNzl2M1NXWURlSnhtV2ZBVWlVNjJyUXMzN2h2RzlqTzRYMGhqT19JSnd6MWp1TU42YXZVMkVyM3otZ0R6WDVEaXVrNWRZMG1QeWt1dUlQay1vemN3WTNHZUt1SDhkYVlJSUlBN05DdG0wZWZUblAxZnpQVzBxeVNuY3lNVjhaUXNRTDZBdGN4bVNjNGRzeU1nX0hSRUVYb0xkeUZJcVNaOA?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-07T18:53+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -171,18 +179,10 @@
       "published_at": "2026-11-07T12:32+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "愈跌買愈兇！台積電一周暴增7.3萬股東 總人數326萬刷新高 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi9wJBVV95cUxPU2FWNlhmUXB2eE1VUWNxQWg1d2VuTXN5TkVpOHZkd2pKNnpSZjR3ejNuR0FkTHBycS02ZXZBWWM3dmdZRXFzWTMxRWl3bkRuMXl2UkhSRDV5T0ZiV1ZkREdLZzFmY21XR3h0alQ4eFhMbWRxR09zcHdVcERGay00aXFZajZTMFFnMnkzZGNVSTBNSmtWQjF2SHd0eVFnS1EwX00wbnZfUFFYUF9YZEZaQjR6NjZuQVVVMmJhZU9kd1JCbTNZZVJBaTZWZ2NvYlFSaU52T2E2cGIwY3g1UEdYTHJQWVFuc1h6RkVPWGduOWhSYjBfa2l3NHJ5ZldGVUxyRFU4aHlwRUdIbFNnQWFTWUhaM3AzUWJCUS1LNk8yQ0NHRGoweVVkMmtNenlhRlFKMzR5dWtjVGpzOTV4SlhYYTdEVDFBYnBhaGdjOVVLZFhjdUFWTmhoc3lDYldEZFUwM3kta3BTZWZjbF9UQ0JPWldJSFMwSjQ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-07T12:15+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "oil_watch": [],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-11-08T06:10:13+08:00",
-  "checked_at": "2026-11-08T06:10:13+08:00"
+  "updated_at": "2026-11-08T09:22:54+08:00",
+  "checked_at": "2026-11-08T09:22:54+08:00"
 }
