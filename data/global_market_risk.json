@@ -9,16 +9,16 @@
     "出現重大風險新聞"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 -8.6%｜NASDAQ -4.5%｜日經225 +3.0%｜KOSPI -5.7%｜台股加權 +4.1%｜恆生 -0.5%",
-    "⚠ 全球市場風險｜美債10Y 4.86%｜VIX 25.6｜WTI原油 90.54美元 -0.3%（高於常態，觀察）｜布蘭特原油 97.48美元 -0.8%（高於常態，觀察）",
+    "⚠ 全球市場風險｜費半 -8.6%｜NASDAQ -4.5%｜日經225 +2.3%｜KOSPI -6.8%｜台股加權 +4.9%｜恆生 -1.4%",
+    "⚠ 全球市場風險｜美債10Y 4.86%｜VIX 24.6｜WTI原油 89.47美元 -1.5%（高於常態，觀察）｜布蘭特原油 96.24美元 -2.1%（高於常態，觀察）",
     "⚠ 全球市場風險｜This Market Signal Called the Tech Selloff. Now It's Sending Another Warning.",
-    "⚠ 全球市場風險｜台股早盤漲逾千點站回4萬點 台積電等權值股勁揚",
-    "⚠ 全球市場風險｜國安基金、限空令雙箭齊發！千金股絕地大反攻 世芯-KY群聯7檔亮燈漲停",
-    "⚠ 全球市場風險｜國安基金、限空令雙管齊下！台股早盤狂飆1200點 迅速收復4萬點大關",
-    "⚠ 全球市場風險｜台股重返4萬1大關！市值秒回血逾5兆 相當於補回「1家聯發科」",
-    "⚠ 全球市場風險｜國安基金喊護盤！台積電大漲75元 台股勁揚1300點",
-    "⚠ 全球市場風險｜個股概覽 | 個股 - 股市",
-    "⚠ 全球市場風險｜Micron Technology, Inc. (MU) stock price, news, quote and history"
+    "⚠ 全球市場風險｜台灣AI護城河勝過韓國！為何台股曝險低 外媒揭曉答案",
+    "⚠ 全球市場風險｜Hong Kong Market Brief | All three major indices fell, with the tech index down 0.92%; most tec",
+    "⚠ 全球市場風險｜台股今年漲幅稱霸全球 台灣中小型基金報酬飆破127％",
+    "⚠ 全球市場風險｜AI投資越來越難 施羅德力推AI科技台股主動式ETF",
+    "⚠ 全球市場風險｜國安基金、限空令雙箭齊發！38檔千金股全數收紅 大立光等15檔亮燈漲停",
+    "⚠ 全球市場風險｜[Hong Kong Stocks] Hang Seng Index rises 49 points in morning session; Meituan drops nearly 5%",
+    "⚠ 全球市場風險｜台股狂飆2600點還不能抄底？國安基金護盤勿貿然追高 分析師喊「觀察這幾點」"
   ],
   "markets": {
     "US_SOX": {
@@ -43,28 +43,28 @@
     },
     "VIX": {
       "label": "VIX",
-      "price": 25.64,
-      "change_pct": -9.0
+      "price": 24.61,
+      "change_pct": -4.0
     },
     "JP_NIKKEI": {
       "label": "日經225",
-      "price": 59146.94,
-      "change_pct": 3.0
+      "price": 58775.5,
+      "change_pct": 2.4
     },
     "KR_KOSPI": {
       "label": "KOSPI",
-      "price": 5074.72,
-      "change_pct": -5.8
+      "price": 5018.85,
+      "change_pct": -6.8
     },
     "TW_TAIEX": {
       "label": "台股加權",
-      "price": 41314.26,
-      "change_pct": 4.0
+      "price": 41661.7,
+      "change_pct": 5.0
     },
     "HK_HSI": {
       "label": "恆生",
-      "price": 24674.52,
-      "change_pct": -0.4
+      "price": 24448.95,
+      "change_pct": -1.4
     },
     "US10Y": {
       "label": "美債10年殖利率",
@@ -73,13 +73,13 @@
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 90.54,
-      "change_pct": -0.4
+      "price": 89.47,
+      "change_pct": -1.6
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 97.48,
-      "change_pct": -0.8
+      "price": 96.24,
+      "change_pct": -2.2
     }
   },
   "active_news": [
@@ -92,96 +92,96 @@
       "risk_score": 4
     },
     {
-      "title": "台股早盤漲逾千點站回4萬點 台積電等權值股勁揚 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi2gJBVV95cUxQLVRxMlJsUHVIV3RGX3JxM3lpUGlPVlIzYWkzUDV0N21JMldLWFJrWElyYjhnTHRkWENVUDRXcmtqY19EUzlVZTBLYUZZRUZ5cjEyU1c2TlRxMmVjVHZVX3BLQ2MzbXlkOElsazZUSzJlZ3dVbXB5M1hNcHBrTjkwbVp6dnIyYVZsdkFwVkN6WTJIMTR4R0pEbTJBYWlJWUFQSmladGdmdEtQa3ZMY0FXQkxGaGJwV3ZjQndMaXc2RWRnUFFOUkNGb3NaZmtJM0RqazZsV0RVSklqT3BkVVQ5UlJnVnFPYjhxelBSMVE3ZmtVTnROb3RKRkE5Q3hhZmZvNzRnQUFvOFpiX0dWYzhnQlY2RThLTTRlcC1wdVpiRVJidGFXQVdDcjl2VlpLd0lFOXprQlBlQk1YM0JDM1pJY0dwR2pkbDlya0N2aDRhbGNoRjFvZHV1VzJ3?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-09T09:44+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "國安基金、限空令雙箭齊發！千金股絕地大反攻 世芯-KY群聯7檔亮燈漲停 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiygNBVV95cUxQSG5PQThtM1F3Y2V1ZFlURFBEMXdJQ2hTU3ZpamlqZWNIWldRVVY5WnFidVlXREJzMzVvN0wzbER0bkRGS0UyTUJ5c215U0h5MjktM3VRRE5TVGhMc05CaHhhZzY0cHdpZ2JoM0VKd3pjQjdWZlRRRHBTTHZjdGVZUXhVYms4NWJOdzd5bDJGQ3g4OUFmRk9mUzhudGt0M2pBMldvLWJWalEzd0ZVOXlrdTVaQWE5bFVsckprQ1M4RXdTdmpaYjdsb09JUDdxejhnYXd5YUlFRVh4ZWZPV1NrOERDb1Q4eDRxbWNBQmx0R1M0UmVYRV85enZ2U0Z0WlZnMlhHOFJGTEtJSUJCbEpid0JyUGYwMjEzMjQyMmJ1U29oNV9tVkd2b2ZZZG94WjdRZl9ER2RUcXhfN1JsUzJhWUcxZEVaRWhMdlpsaWlabXVraXRYOUxFM1owSTA5WVoyVkRQdU5VVnUxU2tMUjBVX2ViQUhQTFF1Z1hSUV9HUFh6NUdLeGhtWWN4bk1xeTIwY2o0cUVDZTE1MjI0TEpkMlkteGk1Wkt2NTNqNUFoNGFVTy0wZU4tTW9ENjhtcFp1TXdWMjFfbjlGUQ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-09T09:43+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "國安基金、限空令雙管齊下！台股早盤狂飆1200點 迅速收復4萬點大關 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMingNBVV95cUxQeEFKVUdiVlFQWFBzWXRrNzhLR2FSWlFIaFJ5RktqVTJiY1FqZ3YzTWU3c1k1SzF4ZlpacVRvUThidWVOSWRBZk5ORjRHOW1ENV9TQXlVMUpqQ20zNEg4Z21CZFp6QnY1dF9WS2toWlUxaVdHV2VZMFpxS3VfaXZTMDB0VWhJaWRuemdjclBkRTdCclpXWW9QLWY0b3RMUVpxSU9XS2lxZm1TeGkzemJrODZ2UDlfUjVBX0hBVXFKMVFfdnVhUGU1bjRldE9HODBEeUwxbTV4dGZTT2ZkcF9VaEFCUXVzTHdpRTNMalV2V0Q3Z0x6MVJSZ3hUR2Z6RWJKMVFoUkRDemkwdVlCM19GZ1Babkwxd3p1RHVtLWFDZW9wbUx0SG9FWjNHWlA5SzNmZFVvcDdvcnhOWS02ZE5YdW5TemtwUUk2Ukh0eWZiUVlQT3YxOXRlVnA4eWhaRnY3YWpJTWVlTzdtZW83UVBJelVaNGtKRkRRYXBZRnY3SkpxTHFkTzUybXBpVC00dnNTWDc1eUNSR0ZSZW5zVXc?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-09T09:39+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股重返4萬1大關！市值秒回血逾5兆 相當於補回「1家聯發科」 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMimgNBVV95cUxOUjYxbzR1OS1SZnY0dGRTSzllbVMyWWw1b3JnTHRvWHJBNHA1allxNFZiN2hyZnJ3VjZCVkpfSDZnOEZwZFloTDNZYm5FQXp2OW1MU08yeE9yb1FKQVlSd3Ntb1FmNXNJV19QYmZEdWtIVDlEdmVDMW44c2FuWHljQU9sdFdESEZ2ejJkVm83VE1KMkExZDNVaHk5WUlMNTBfSGZ6RjVSbDd2OUN0VWNXNEZqSS1NcHhqdDVoRWJ2TlU4UEtrWnVfZktKMmRESHZEak05bFl4MUo2U3Z5aUFucmxmRkVXRVFMSlhwbmN5ekNWZ3NnM2JOMFN4UUxYRlhkblY0SjlfVE9lN0JFRHYwZDBxN0FFVVNXSU45bFVORmJhbVNaWGptcVRsdVFxVmpPQTlQQ1lzUC1vdVB5TGNnRVZwNG9qSzBneUFZcVRpZDU5S3NDbzZoSW44Sk95LTZzbHdlVzFndFZaalJ6cXJwbEhVM2pvdXpWZ3VtWGZJelVCY21PSTN5LWVRc3h5QWFRRkFidnVHMXkydw?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-09T09:33+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "國安基金喊護盤！台積電大漲75元 台股勁揚1300點 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMivgJBVV95cUxNUmM3VDU4dlZCY1M0ZWMtUEZ0WXhhclRsX1ExLVUtbnZXMXZNZ2h0Z3h5ZkNNOFFrVEhGdGRod3FRRmR5Q2hIbjBQblJYZy1yTl9fNTR2aDFJZTBEekNGdmtJdFdYRDlpVGp2RDMzLW5DRlNSTWt5VURzcnp1cWhUXzIzMzRqSDhERGxwdExla01MVUUwOEh0QmhkUmZDZFN4b3VfWDZnajBlWnEtY2lYdFFENEJoYVlsZXdvdnN2M2lwTk96ZDhuX3NsUGg2MVNUczFKNUxXd0FpMElrRUp6Z3NoOWhaaFZfcnQ2NmhLNUF0YkNwOE9aVk4wdzZUZlM1RFVDRGF4S3lGY0l3Z3V5WXZ0cE1OYXZ0Wms4ZUF1SWtNdTBMRkZsRTdGVlNFcWpFVWNvQ1hsTVlocjBWdWc?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-09T09:30+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "個股概覽 | 個股 - 股市 - CMoney",
-      "url": "https://news.google.com/rss/articles/CBMiREFVX3lxTFBfVGtPUmhQeF9nalNLNm9zTGJWQlREWTlFa2dVeEhkNElpN1d0OXlyaFF3U3NaYnBodklvejVEU1YtdkNl?oc=5",
-      "source": "CMoney",
-      "published_at": "2026-11-09T07:44+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Micron Technology, Inc. (MU) stock price, news, quote and history - Yahoo Finance Singapore",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9kQ041OExwalFFX25TenVnR05FU2tLb3RhY0UyeEZlY0h3aTUyQnl3MGNyOGVXeWsyUUY4MHJIQU9NUTlGbWRRYV8tcDljc2M?oc=5",
-      "source": "Yahoo Finance Singapore",
-      "published_at": "2026-11-09T07:06+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "國際油價跌破百美元 臺灣中油連八週凍漲油價 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMizAJBVV95cUxNQW5PT3BVcmJUQ1dOeVpiaWxWYXdsdGZmYWhQTVZ2YVlwTm1zU28wRFc5NFJXdkIxcFAtSE9DMy1LdkhHTENDU0x6cTc4TWViUjR6Z1pCOWh4UWtKZHY4QWJxUmhESVBxV1NxaEdFR2JUZVdVN3ptREg3WktCekRPVl8zOXNMMUVwMU9lN3gzYzJFQzJxbUlhRXVOZFh3NzVUeDZaU0RJd0dEVzFtRFJlSnVxWkRUX0lTaG5UcjhoOEtwa2k0VC1kS1NaaUo5TkNUNGxIT3pualBmbWwxc1BkZ3RMcF91UlI2aVBOd19JNXNFLTdybVJJQm1IZmdKN0lKWEYxWFoxMTgxQ2JNLUFFN3FkWDFVNTFoNEYxc094Q0h3MkwwQ19MODY4VEx2UXlrQUhKMnNwakI3VF85Q2xGWHNpS0RBVWVNMzdEMQ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-09T07:06+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "輝達黃仁勳捲入中國情報案 公司股價承壓 凸顯供應鏈安全挑戰 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiogNBVV95cUxNMjZxR0lSZkhBVWN1aW5XLXl4M3pZTlJaWFYwYXNDREswSDJkY3lfOFBxQ0ZyMWJyN09sZnlwZWx0WlgxTi1hQW9DWDg5UWozdkphUndfejR6Tlh5Yy0zOFpoMHpETkVhNlpZNmVYT3B1N0ZYN0FRY09abnNQZjdvVnRUTzFLOGRkeEhselZ2UHc2ejRIUlZhYVIwaUp5UWZjSW9KckZ3N3MzY2lnV3M3LUpHX0VGYWlIa01MWTktLV9LczNqMlNlSkwyMjg3WTlPSWkyNEZ4bUhhLXBUTG94bjBvWkduSUU2UlluTWJIU1ZJaHJXNWVqWThWNEdwNW9CV1hQNzhYUjFaV09jMUM1dzhmNlZJd1pLZWFGNWJGcnMzQVRISkNrcndYcVd2dS1yaThJdk1scnZ6UF9LUGluc0hpSGJBUXJOMjQ2cGZuWU95TUlSa3pkY0c2NTNFMDRoWUxFN0w1UjBTUGVZeFhHSUZiclEtbVZhMXhaQmF2a0ZkUHl4MHd3MHppSEJQMUFyZ0JGV3NUSV9XOU9ybHU3NWNB?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-09T06:45+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股週跌12.19% 法人：AI長線續旺 - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBVSDVCenVDNVVTNVNGN2xGOGFDNm5wOHpuUTRtQ1BsWDIxX2QtbC1XYlp6bWtSSlRJalNlYzJ0RFlsSnpKZm9YYnd4alRTejRWcWd4eXZNQ0Y?oc=5",
+      "title": "台灣AI護城河勝過韓國！為何台股曝險低 外媒揭曉答案 - 自由時報",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE8wOEwyQldzYVNFM3hsY3JEbURYUzMzWFJjOG51V25IU1FiUnVkUDYzVHFMNl9NTUpuTC1OMnFXaVdVelFoR2dRQnhxTHNWVTFzWUNyM2xiajk?oc=5",
       "source": "自由時報",
-      "published_at": "2026-11-09T05:30+08:00",
+      "published_at": "2026-11-09T16:37+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "國安基金啟動護盤看「它」臉色 台股興衰與「這指數」連動 - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBTc01UVnJ5ekR2ZnpTMWJtaWF3SzhFNjM1cDU0THprUVFET2VIMU5MQi1SQlBmSkdKY3JpNjg0cGthOGhFQ0p1QVk5MC1DWHJIcC1HLUNSbmI?oc=5",
+      "title": "Hong Kong Market Brief | All three major indices fell, with the tech index down 0.92%; most tech and auto stocks declined, with Meituan dropping over 6% and Leapmotor falling more than 7%; coal and biotechnology stocks rose across the board, with Shouga - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPbUc5bG5nMTNxeHkyWG1SUlZYYUhPT0szYk1JeWs3R2tuVldOdk5xY2MyR3RiUnRJTmdOV3B1ZFctTU4wUzhEQ1VmUXgxLVNhU2dMOUtseTNQOU5vSmZtRDZwbUFkU0dWazN0aDdETEp4SDFIOExIRnVLdVZjdHEzcXAtNnB0Y3RoaXBBZVRDT2hGSWJTaFNsT244V25LQWNM?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-09T16:30+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股今年漲幅稱霸全球 台灣中小型基金報酬飆破127％ - 自由時報",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1uSGJkMURNWFhFbkNzLUh6eDlGZzk0NU9mLWlDMFZNTWQtT1FId2d2QWt5cXBDVVVpbzBvMHZFbTVscnhvTml3bkdiNGZUVXZ0ZXRET2ZaMjk?oc=5",
       "source": "自由時報",
-      "published_at": "2026-11-08T22:00+08:00",
+      "published_at": "2026-11-09T15:37+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "AI投資越來越難 施羅德力推AI科技台股主動式ETF - 自由時報",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9tOXR0OGhyLXF2RnpnZXlwdjVjdjJab3lmalZYY3FUdkxlN25DcnlDLVNSM2pkY2MwTWhMS2FUMGlRWFNDVG10ZkRnaEtqY1FvSURYcXQycDU?oc=5",
+      "source": "自由時報",
+      "published_at": "2026-11-09T15:01+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "國安基金、限空令雙箭齊發！38檔千金股全數收紅 大立光等15檔亮燈漲停 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiygNBVV95cUxNYVYwSlA4dS1tSGdTZ2dOdUdmNkJoOEtCSWVjQ2EwcmlpcEZXNlI3bUgxNDY5UFgyOXgteUgtNGJQMk14eWtESVJMeXhTNncta1Zfa1Q2clJCMkdQMG1XRFV0SzNjYkZmWWpKTFRSVk1yVUpLc1BhQU5jczhsVHdmazJiRUt0UzF3X3FPZkxPaDk0SjFLMHlKS0ZESDFMYkpaUVUzdkYwZ0xPS0FjMkJTNGpvcXJmYS1iSEp2MFlxYkJaYmxnaE1VZzB3QUY2dl9VcVpHMXFDbWJDNU5zeDNCWEtxNTAtQ3Awam1HUTJMRXV1OGZQRU1oMXpaREJxWng1M1FCbE0wcUYxcFp0NmdDYy1uT19EMUMzRWo5bVVNVFdDa1kzTUpXVVhBbXVEek9TUUNVYkRqVUNNTlBFMnJLNGpTcTZHVEY5eWctNFd2VERxNDJGLVN5WnA1WDExZmlwMjNiTkZVRHI1VFZObUZDN2xiMjBIWnRQV2d5MmRkVHpMSmhHcFVoV3E4UHMxX3ZadkpVYmxyNU9zb2dhc2hmVGJpZGd3RmU1ZE5MLXJ4NTI5N1FIbFBhMVh5S1I5WHVzR2ZWRlIyakhvZw?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-09T13:41+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "[Hong Kong Stocks] Hang Seng Index rises 49 points in morning session; Meituan drops nearly 5% - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQc1BpTzViaXRXS3NQbmNWYV83QW10VVJNVEhVMjFqRTlCMk92czJUMmRhR0xIeHpDS0l6emV4VTZtRHZBcFoxOXRFRk4xdktTNUJFZzlhTERMYkNwVHNrRk9xMWlYa2wzbDktTWhkTHVUeWp6Z1Rhb0d5LUtDLUU5TWY4dVdUc1J3MWZJdFFGLTdNLVRKQlZNMVBn?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-09T13:32+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股狂飆2600點還不能抄底？國安基金護盤勿貿然追高 分析師喊「觀察這幾點」 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMizANBVV95cUxOa2Q4T3I1QzJVZ1JQVFVaZjlrckhRemhjZnJWZUUyd2FTR2J4ZzZtdWdGNXpYU0tqbXdOemc0aWhacUx2OG95ekZzZmpLeHNickZqNFB1d3VsdjJxSzN5ejJFWG9fVEdrbkhrVWdhbG5OZzh3WE5TdTRMRk5jdEhOSHVwWkxpWUxDNzJ0WHhURGQ1Q0pmcnVVeG92X0M0bXdOUXYyV0RDRFlwaFBtMlJDVmdUeEJwaXd2QTdZb0ZBdGJJMU9FY3hfSlhKZmViTWNOdi01MTZRal9JcExoQ285aGRWcUhzNWhUSTB2bm9CelFTaG5Bei1SYlpkYm9fTW5jaVFwQkM5M2VGMDlRdXMxWTV5VGxlZU1XN2hkQmFWRGdqelgzLXl2YVRhdFBQWXBXVnA3cnhqaEZ3dzlZeF9PRkQwV3ZhOEo0c1dmckRxM1VhbkJLcG84eEFRTVlCTkVjT2tlX1hnU1N1WkdyMVVldHkzUllwS2IzM3NpaHVhb1hRNVJIdmNVcjhBTkVGRnRycjlmbmFLWEVVd3FSV0p0bzNUVVAtV2tjb1loTy16VEJHcnI3MTVzRmdpNm4wZVhRRUdOQkVlVTJES0pY?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-09T12:16+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Hong Kong Stocks Midday Review | The three major indices edged higher, with the Hang Seng Index up 0.2%; biotechnology and physics AI stocks rallied, with JD Pharma surging over 13% and Ubtech Robotics rising more than 9%; Yuanshin Energy Storage - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPUkttX2lKbVBlc09xLWdCZ2Zjdk00dV9Xc3FVU01QaUdrai1wTy12WWxDQVRkZERUZVZhdkdCbTJsQ1FSa1BTNTVDbXd2NHE4UEV0MjRPSE9LSVJZNHg4NEhST0UtMmloVEg0WGNaeEZCT3NsUTFfcHNSR3V5M2V0QWpBWTkxUWN4WUVjQWdWVEllZktrX3h2RHh4VTBxZV9oeGN5bW1R?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-09T12:10+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "國安護盤報復反彈！台股勁揚2500點 創史上第二大盤中漲點 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi9wJBVV95cUxPdk9xWWFwSlpIZXZLRF9jcGRtYlV6bTJrQnIwSTFEVHpwNS1KcG02Z0FlZmxXNUF2V0s4bUstY19Sam9tSTAzZnVyU2lpbUhxSGlyQU1lMkZOOWZVWUR1NVlWVG9PVWEycGlCSHZjV0JCc3pESC1wYU1aRm1BZ094WGZUeUdXMm9tenoxbXd4UG9ER2RQallLLWxoOGZfQ3o4ZVNPTi1rSkZvVmNtaU9jbXgxNmgySTlJQkFQQ3dtZTJySDVsdWtLZWI4VFhpYzhxRmFYcXRSNERGX0FRVGhpajdFNmVTN2h6dDg2WUpxSmY2Sms3SmpMaHJDYXMwclgzRC1QTXhJRDdrMTV1RHpsb0NEXzl0NnhQOU85Vk5FT1Z2MWlldU5jYnctb1JPUjVZV19FWnZhWjBSWWJpNHIzaVAxa244LUxMd3k1UmNyRy1icE1aLU9NNjZPN0J5VTlIQ3dFc3phTEZ4bmRTOGVvRUFsN2F5OW8?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-09T11:45+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股狂飆逾2600點！ 台幣反貶近1.5角 專家：留意外資倒貨 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi2AJBVV95cUxOenNIS2tzeU13Mm14WmpOSGF6b1pDZUlkdWpwcE5SVHNfM0xZbkhodlhpS044RDQtZ2NVZUU3aS1SSVdFaFl2U1dKYkVkb2JnLWdadEtBVFJfYk9NVFV2TlZoZnY5VFMtNmp0S3dOQ1Y2NGV1ZFlaa3dyR0JDcDBBNjROUGNzY183dndQdUZLbEhFTUJZYlJDQWZZZEdrSEZLSy10ZkgxNTRhZi14bDR0ZXE4SzdhQ09hM2N2N1pjOTdWNG9YQjhydnI5SXJsYjNsaVhhTFJHWlFoOUZTdzJhVVFWN0JHQ2dNQ1o0Uk1jV2xRYk9HRzUtY3BJUGZuRHFraGowQzU3QXowbjBXcTFJcWxfdk40RTFucTk0b3l0MDdsc29yeVhPenZORFFmZktqbWs4YW1fc29HUmdsRDVGRDFUd2pzR1FueXk3MzJ2ek1jd25aY09BSA?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-09T11:45+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "國安基金、限空令雙箭齊發！千金股絕地大反攻 大立光聯發科13檔亮燈漲停 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi3wNBVV95cUxQZTgxS0d0a2ZzNm9iRFJNVVVTQ2dmS2xBRWRtTWhnYWQ4ZHRzV29ib0J1bUZEczd5SnpXbE1YYXlYUVdwNDRfQmJGaHV2ek9naWFzZ0VaSzFkLWlmdWVueG5Zd0FlMzlVN2xHSVlCVGN0NndxeEdWQVZ5aU1GQmJMdWNERURqRktIWmR2UjU0TWtMbnk0aUJQMG9NR3FoS0JnTHJRZFpXWXhwUTFnbWN1cTVHZjF4d29GeWJ3bkhrRW8wS0V2QjRxSDk1ZzQzSFdycUktOWgwWnBhQ2NPVFZKNjYtVHZHX0tIdHRIbE5jS3d3bWEwSEdoTG1EOWQ5SWhuREc2RzhoY0s1dERyRWwzRkRzUm53cGpyVXhNU3dIUk5EQ3l0SVpOS0FJSkRiblZLbGY4eC1wdkN1cjFaUHJDRkFJcV9qMnRuNlM1SHdVSHdnVUJ4bF8xTDdzQWxRelI2ekhRdlZFNFZUTVFRNmdIMUx5WEZQaHJqWUIzWTAzcEJpdWhRRHAxSldldHYxMnpQamtlVGhaSUJxdU14UWdJc3dGWEJYSEdFVEtjdXBETUtKakNPSlZpRXN6Rk9nMWFuR0J0ei14MXVZZzQ4VEhYOVEzUktiQVJ6NEJiWU4xVQ?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-09T11:17+08:00",
       "importance": 2,
       "risk_score": 0
     }
   ],
   "oil_watch": [],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-11-09T09:54:53+08:00",
-  "checked_at": "2026-11-09T09:54:53+08:00"
+  "updated_at": "2026-11-09T16:44:34+08:00",
+  "checked_at": "2026-11-09T16:44:34+08:00"
 }
