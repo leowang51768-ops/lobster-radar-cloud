@@ -1,50 +1,47 @@
 {
   "schema": 1,
-  "risk_level": "red",
-  "risk_score": 8,
+  "risk_level": "green",
+  "risk_score": 1,
   "risk_reasons": [
-    "費半明顯下跌",
-    "NASDAQ明顯下跌",
-    "韓股明顯下跌",
-    "出現重大風險新聞"
+    "韓股明顯下跌"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 -8.6%｜NASDAQ -4.5%｜日經225 +2.3%｜KOSPI -6.8%｜台股加權 +4.9%｜恆生 -1.4%",
-    "⚠ 全球市場風險｜美債10Y 4.86%｜VIX 24.6｜WTI原油 89.47美元 -1.5%（高於常態，觀察）｜布蘭特原油 96.24美元 -2.1%（高於常態，觀察）",
-    "⚠ 全球市場風險｜This Market Signal Called the Tech Selloff. Now It's Sending Another Warning.",
-    "⚠ 全球市場風險｜台灣AI護城河勝過韓國！為何台股曝險低 外媒揭曉答案",
-    "⚠ 全球市場風險｜Hong Kong Market Brief | All three major indices fell, with the tech index down 0.92%; most tec",
-    "⚠ 全球市場風險｜台股今年漲幅稱霸全球 台灣中小型基金報酬飆破127％",
-    "⚠ 全球市場風險｜AI投資越來越難 施羅德力推AI科技台股主動式ETF",
-    "⚠ 全球市場風險｜國安基金、限空令雙箭齊發！38檔千金股全數收紅 大立光等15檔亮燈漲停",
-    "⚠ 全球市場風險｜[Hong Kong Stocks] Hang Seng Index rises 49 points in morning session; Meituan drops nearly 5%",
-    "⚠ 全球市場風險｜台股狂飆2600點還不能抄底？國安基金護盤勿貿然追高 分析師喊「觀察這幾點」"
+    "全球市場正常｜費半 +10.7%｜NASDAQ +3.7%｜日經225 +2.3%｜KOSPI -6.8%｜台股加權 +4.9%｜恆生 -1.4%",
+    "全球市場正常｜美債10Y 4.88%｜VIX 20.1｜WTI原油 87.63美元 -3.5%（高於常態，觀察）｜布蘭特原油 93.62美元 -4.8%（高於常態，觀察）",
+    "全球市場正常｜油價觀察｜WTI原油走勢：川普稱這一情況下「極不可能再襲伊朗」，油價面臨方向選擇！",
+    "全球市場正常｜Philadelphia Semiconductor Index rises 3%; Broadcom and AMD gain over 6%; NVIDIA buckles trend ",
+    "全球市場正常｜Taiwan Semiconductor Manufacturing Co Ltd(TSM)股票11月9日開盤上漲3.14%：投資者必看的核心資訊",
+    "全球市場正常｜Goldman Sachs: Global bond markets are poised to stabilize, with U.S. Treasury yields potential",
+    "全球市場正常｜中國華君(00377.HK)建議股本重組，每手買賣單位更改為2000股股份",
+    "全球市場正常｜中國華君(00377.HK)建議採納2026年股份計劃及終止2017年購股權計劃",
+    "全球市場正常｜U.S. stock index futures rise collectively in pre-market trading; NVIDIA plunges 6% against the",
+    "全球市場正常｜Wall Street strategists believe the correction in U.S. stocks is nearing its end, with Morgan S"
   ],
   "markets": {
     "US_SOX": {
       "label": "費半",
-      "price": 9390.25,
-      "change_pct": -8.6
+      "price": 9976.417,
+      "change_pct": 10.8
     },
     "US_NASDAQ": {
       "label": "NASDAQ",
-      "price": 24579.424,
-      "change_pct": -4.4
+      "price": 25222.477,
+      "change_pct": 3.8
     },
     "US_SP500": {
       "label": "S&P500",
-      "price": 7376.86,
-      "change_pct": -4.0
+      "price": 7550.64,
+      "change_pct": 2.6
     },
     "US_DOW": {
       "label": "道瓊",
-      "price": 51285.73,
-      "change_pct": -3.8
+      "price": 52413.34,
+      "change_pct": 1.8
     },
     "VIX": {
       "label": "VIX",
-      "price": 24.61,
-      "change_pct": -4.0
+      "price": 20.13,
+      "change_pct": -21.4
     },
     "JP_NIKKEI": {
       "label": "日經225",
@@ -68,98 +65,90 @@
     },
     "US10Y": {
       "label": "美債10年殖利率",
-      "price": 4.859,
+      "price": 4.878,
       "change_pct": 0.4
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 89.47,
-      "change_pct": -1.6
+      "price": 87.63,
+      "change_pct": -3.6
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 96.24,
-      "change_pct": -2.2
+      "price": 93.62,
+      "change_pct": -4.8
     }
   },
   "active_news": [
     {
-      "title": "This Market Signal Called the Tech Selloff. Now It's Sending Another Warning. - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQSzZqNlk4cV9tS3hMM2tfV1RvU1pWbkh1MDlpTndsYk9vcURFMGQxX0Rrb19iTUhPbGpzRnhhdktrbkhSaXhLbk11Sk5VVGE0UXBHZ3QzamRqbzN2MVBkdi1WaXlJeXU1cVBtcXN1d3BGUGVDbUZTYm1YdmJNWWlGQm5wVVFkSXBaemhRV0lLQ2xtS0loV0RpbW1B?oc=5",
+      "title": "Philadelphia Semiconductor Index rises 3%; Broadcom and AMD gain over 6%; NVIDIA buckles trend with 5.60% drop - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNU3BfY1BtZ2tXWG5QdEZHdElLd3FxbHRXTFVJd0pjYzBNMDVuMVE3dC1ueG9EUkVTR2JlV1RpbnEyR0J4Q2dMNTRyRnVuUGtaMDVmLWYtdUxhd3RHalFWY1poV3hkdFU5RWx0NUxNemtLME9BN0kzMks2RF80bV82VGhTc0tJQUpudmU4Q0tnTkQ5UWlDeTNmU3NfdEhlUWg0OEdpbXBoQkQ0RE9mN2RyZzNyQ1BJT0NNLUE?oc=5",
       "source": "富途牛牛",
-      "published_at": "2026-11-08T20:17+08:00",
-      "importance": 5,
-      "risk_score": 4
+      "published_at": "2026-11-09T23:15+08:00",
+      "importance": 2,
+      "risk_score": 0
     },
     {
-      "title": "台灣AI護城河勝過韓國！為何台股曝險低 外媒揭曉答案 - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE8wOEwyQldzYVNFM3hsY3JEbURYUzMzWFJjOG51V25IU1FiUnVkUDYzVHFMNl9NTUpuTC1OMnFXaVdVelFoR2dRQnhxTHNWVTFzWUNyM2xiajk?oc=5",
+      "title": "Taiwan Semiconductor Manufacturing Co Ltd(TSM)股票11月9日開盤上漲3.14%：投資者必看的核心資訊 - TradingKey",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNaXFNd2tqMDZEZkxkMVRSaW44S01jd3dDa3pwTUlfSFBBNnotZVhXTF80Vm4ycE9TNXZqak9nNS05a25fZ2Q1SEJraDVLTDB4MThrZDJyaFpSN0ZpWVB1TW02RFk2cXdTZ1dQTWRFT0FrSmZFUFRUVGdMMWRBbTBwTU1fYmhYTVp0TnlMYnFtOWwyNGJH?oc=5",
+      "source": "TradingKey",
+      "published_at": "2026-11-09T22:50+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Goldman Sachs: Global bond markets are poised to stabilize, with U.S. Treasury yields potentially entering a new range. - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOWExRTHRjMFY4WUYyWGhRMDZ2QkFGeVF2UXdManBCNXcyTzh1V01fa2ZMUTZzeURsUjVhMnkxYXh0bEVDcHhvbk54RkJGOWJCdXUyS182ZmdTZGs2bkM0OEgxbGlhNkt1SUF6NnBJVVdtRW9xWnJVS090TnZ4ZHNDRmxOODZibmptaENULUxnWlN2cS1EczVoM056NEJ2ZTRORmE0anZ2Mnk?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-09T22:23+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "中國華君(00377.HK)建議股本重組，每手買賣單位更改為2000股股份 - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1nb24yRGF3MnI0dUpfTWV1WUV0TEdTZHIxTDU2YTVCSWpsNVpPcktYMHVoZ1VEY3lPVEMtWk9WdnhoLXRsaGtGZkZTN2Zva2FHUWNnTUxJNmlydEg3c3BzLUFHcDlPVHRCdlJ3?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-11-09T22:22+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "中國華君(00377.HK)建議採納2026年股份計劃及終止2017年購股權計劃 - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9GR21MbTNicTAyN2hEbUpiLXRDUkNTV2VmbUdsTnFJNTR6T3haOGdFNDU4LW15dDlwb2pxWlJ3bjZZSWdWRVdhUDdBTlVFM3pGcUkyRGFZMV9pVlE4WFFZaXQ0ZWltRElmQ0dJ?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-11-09T22:21+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "U.S. stock index futures rise collectively in pre-market trading; NVIDIA plunges 6% against the trend | Tonight's Highlights - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPTFh6MTg5S1RuV1VrVWIxVFdFWWM0OV9sNGJpVlJHUDdFZUllbUxsWGhwX0JKdVY3aHc5UzVNcWJqSlJqMEdMQzJGYXR0UU03NmF4cUI0ODlsczEwaTdHdWszWG1weEZmSmFPUzlKaWdnSzMwNTBmWUt6Tmg2X0NhMTg5TTlRSF9JWlVmc3p4MTUyRXlCdDBUVkJtc2FuSWtMenJ3YjFLb0k?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-09T21:04+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Wall Street strategists believe the correction in U.S. stocks is nearing its end, with Morgan Stanley forecasting that the S&P 500 Index could fall to the 7,100–7,300 range. - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPUGg5M09yazNVel9WdUxzSlJRRlNrMXptSzk3TkQ3a2lsZlI0dTJBcGVEa28tQ25Ud0k5NkhfeWg3SnNBdEVEQm1rVlFlZ1NocjEtdzRKbXEzQW14ZHVjc25Tc2RDaVZwVm15SUg1eEQ1RmVvNDJ1NTlwa2t3QmRfQ2VpbFNocWNDcVNlMGkyak9wZUxxRWxDcWNkMy1hS3B1T2pWU1E2SkI?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-09T20:54+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "同欣電砸近20億元收購新加坡上市半導體測試廠 溢價129％ - 自由時報",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9vZEljYWE1R1k4N1FSNEQ0d0k3cDhwUzFtclRNeVBiRVo5TkVHakRhUG1rLTBZclZ2S1FkeV8zS3Znc0FhS2NJNkRjbmZTMzdKYkFQUGlvS2M?oc=5",
       "source": "自由時報",
-      "published_at": "2026-11-09T16:37+08:00",
+      "published_at": "2026-11-09T20:04+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "Hong Kong Market Brief | All three major indices fell, with the tech index down 0.92%; most tech and auto stocks declined, with Meituan dropping over 6% and Leapmotor falling more than 7%; coal and biotechnology stocks rose across the board, with Shouga - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPbUc5bG5nMTNxeHkyWG1SUlZYYUhPT0szYk1JeWs3R2tuVldOdk5xY2MyR3RiUnRJTmdOV3B1ZFctTU4wUzhEQ1VmUXgxLVNhU2dMOUtseTNQOU5vSmZtRDZwbUFkU0dWazN0aDdETEp4SDFIOExIRnVLdVZjdHEzcXAtNnB0Y3RoaXBBZVRDT2hGSWJTaFNsT244V25LQWNM?oc=5",
+      "title": "Lenovo Group Stock Slides 0.9% in Hong Kong - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQMG84cWZIZ0wyUEs4ZXJRTXBWbE5iZ0FNbUpwa2pvWC1jeTczS1pORld1UzBsaGlmbmZKakZBY0RJQkxfbVlQNDl3bTFaaWYzNlloM25zcGZMY0hPWU10SlFSWllvLVVBckF5UUYtSHBxdmI5dnB3bUVXaXFnY1JfTmZrVjdpZ3Q1MEE0V3Jn?oc=5",
       "source": "富途牛牛",
-      "published_at": "2026-11-09T16:30+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股今年漲幅稱霸全球 台灣中小型基金報酬飆破127％ - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1uSGJkMURNWFhFbkNzLUh6eDlGZzk0NU9mLWlDMFZNTWQtT1FId2d2QWt5cXBDVVVpbzBvMHZFbTVscnhvTml3bkdiNGZUVXZ0ZXRET2ZaMjk?oc=5",
-      "source": "自由時報",
-      "published_at": "2026-11-09T15:37+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "AI投資越來越難 施羅德力推AI科技台股主動式ETF - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9tOXR0OGhyLXF2RnpnZXlwdjVjdjJab3lmalZYY3FUdkxlN25DcnlDLVNSM2pkY2MwTWhMS2FUMGlRWFNDVG10ZkRnaEtqY1FvSURYcXQycDU?oc=5",
-      "source": "自由時報",
-      "published_at": "2026-11-09T15:01+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "國安基金、限空令雙箭齊發！38檔千金股全數收紅 大立光等15檔亮燈漲停 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiygNBVV95cUxNYVYwSlA4dS1tSGdTZ2dOdUdmNkJoOEtCSWVjQ2EwcmlpcEZXNlI3bUgxNDY5UFgyOXgteUgtNGJQMk14eWtESVJMeXhTNncta1Zfa1Q2clJCMkdQMG1XRFV0SzNjYkZmWWpKTFRSVk1yVUpLc1BhQU5jczhsVHdmazJiRUt0UzF3X3FPZkxPaDk0SjFLMHlKS0ZESDFMYkpaUVUzdkYwZ0xPS0FjMkJTNGpvcXJmYS1iSEp2MFlxYkJaYmxnaE1VZzB3QUY2dl9VcVpHMXFDbWJDNU5zeDNCWEtxNTAtQ3Awam1HUTJMRXV1OGZQRU1oMXpaREJxWng1M1FCbE0wcUYxcFp0NmdDYy1uT19EMUMzRWo5bVVNVFdDa1kzTUpXVVhBbXVEek9TUUNVYkRqVUNNTlBFMnJLNGpTcTZHVEY5eWctNFd2VERxNDJGLVN5WnA1WDExZmlwMjNiTkZVRHI1VFZObUZDN2xiMjBIWnRQV2d5MmRkVHpMSmhHcFVoV3E4UHMxX3ZadkpVYmxyNU9zb2dhc2hmVGJpZGd3RmU1ZE5MLXJ4NTI5N1FIbFBhMVh5S1I5WHVzR2ZWRlIyakhvZw?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-09T13:41+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "[Hong Kong Stocks] Hang Seng Index rises 49 points in morning session; Meituan drops nearly 5% - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQc1BpTzViaXRXS3NQbmNWYV83QW10VVJNVEhVMjFqRTlCMk92czJUMmRhR0xIeHpDS0l6emV4VTZtRHZBcFoxOXRFRk4xdktTNUJFZzlhTERMYkNwVHNrRk9xMWlYa2wzbDktTWhkTHVUeWp6Z1Rhb0d5LUtDLUU5TWY4dVdUc1J3MWZJdFFGLTdNLVRKQlZNMVBn?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-09T13:32+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股狂飆2600點還不能抄底？國安基金護盤勿貿然追高 分析師喊「觀察這幾點」 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMizANBVV95cUxOa2Q4T3I1QzJVZ1JQVFVaZjlrckhRemhjZnJWZUUyd2FTR2J4ZzZtdWdGNXpYU0tqbXdOemc0aWhacUx2OG95ekZzZmpLeHNickZqNFB1d3VsdjJxSzN5ejJFWG9fVEdrbkhrVWdhbG5OZzh3WE5TdTRMRk5jdEhOSHVwWkxpWUxDNzJ0WHhURGQ1Q0pmcnVVeG92X0M0bXdOUXYyV0RDRFlwaFBtMlJDVmdUeEJwaXd2QTdZb0ZBdGJJMU9FY3hfSlhKZmViTWNOdi01MTZRal9JcExoQ285aGRWcUhzNWhUSTB2bm9CelFTaG5Bei1SYlpkYm9fTW5jaVFwQkM5M2VGMDlRdXMxWTV5VGxlZU1XN2hkQmFWRGdqelgzLXl2YVRhdFBQWXBXVnA3cnhqaEZ3dzlZeF9PRkQwV3ZhOEo0c1dmckRxM1VhbkJLcG84eEFRTVlCTkVjT2tlX1hnU1N1WkdyMVVldHkzUllwS2IzM3NpaHVhb1hRNVJIdmNVcjhBTkVGRnRycjlmbmFLWEVVd3FSV0p0bzNUVVAtV2tjb1loTy16VEJHcnI3MTVzRmdpNm4wZVhRRUdOQkVlVTJES0pY?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-09T12:16+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Hong Kong Stocks Midday Review | The three major indices edged higher, with the Hang Seng Index up 0.2%; biotechnology and physics AI stocks rallied, with JD Pharma surging over 13% and Ubtech Robotics rising more than 9%; Yuanshin Energy Storage - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPUkttX2lKbVBlc09xLWdCZ2Zjdk00dV9Xc3FVU01QaUdrai1wTy12WWxDQVRkZERUZVZhdkdCbTJsQ1FSa1BTNTVDbXd2NHE4UEV0MjRPSE9LSVJZNHg4NEhST0UtMmloVEg0WGNaeEZCT3NsUTFfcHNSR3V5M2V0QWpBWTkxUWN4WUVjQWdWVEllZktrX3h2RHh4VTBxZV9oeGN5bW1R?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-09T12:10+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "國安護盤報復反彈！台股勁揚2500點 創史上第二大盤中漲點 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi9wJBVV95cUxPdk9xWWFwSlpIZXZLRF9jcGRtYlV6bTJrQnIwSTFEVHpwNS1KcG02Z0FlZmxXNUF2V0s4bUstY19Sam9tSTAzZnVyU2lpbUhxSGlyQU1lMkZOOWZVWUR1NVlWVG9PVWEycGlCSHZjV0JCc3pESC1wYU1aRm1BZ094WGZUeUdXMm9tenoxbXd4UG9ER2RQallLLWxoOGZfQ3o4ZVNPTi1rSkZvVmNtaU9jbXgxNmgySTlJQkFQQ3dtZTJySDVsdWtLZWI4VFhpYzhxRmFYcXRSNERGX0FRVGhpajdFNmVTN2h6dDg2WUpxSmY2Sms3SmpMaHJDYXMwclgzRC1QTXhJRDdrMTV1RHpsb0NEXzl0NnhQOU85Vk5FT1Z2MWlldU5jYnctb1JPUjVZV19FWnZhWjBSWWJpNHIzaVAxa244LUxMd3k1UmNyRy1icE1aLU9NNjZPN0J5VTlIQ3dFc3phTEZ4bmRTOGVvRUFsN2F5OW8?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-09T11:45+08:00",
+      "published_at": "2026-11-09T19:33+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -167,21 +156,36 @@
       "title": "台股狂飆逾2600點！ 台幣反貶近1.5角 專家：留意外資倒貨 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMi2AJBVV95cUxOenNIS2tzeU13Mm14WmpOSGF6b1pDZUlkdWpwcE5SVHNfM0xZbkhodlhpS044RDQtZ2NVZUU3aS1SSVdFaFl2U1dKYkVkb2JnLWdadEtBVFJfYk9NVFV2TlZoZnY5VFMtNmp0S3dOQ1Y2NGV1ZFlaa3dyR0JDcDBBNjROUGNzY183dndQdUZLbEhFTUJZYlJDQWZZZEdrSEZLSy10ZkgxNTRhZi14bDR0ZXE4SzdhQ09hM2N2N1pjOTdWNG9YQjhydnI5SXJsYjNsaVhhTFJHWlFoOUZTdzJhVVFWN0JHQ2dNQ1o0Uk1jV2xRYk9HRzUtY3BJUGZuRHFraGowQzU3QXowbjBXcTFJcWxfdk40RTFucTk0b3l0MDdsc29yeVhPenZORFFmZktqbWs4YW1fc29HUmdsRDVGRDFUd2pzR1FueXk3MzJ2ek1jd25aY09BSA?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-11-09T11:45+08:00",
+      "published_at": "2026-11-09T19:01+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "國安基金、限空令雙箭齊發！千金股絕地大反攻 大立光聯發科13檔亮燈漲停 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi3wNBVV95cUxQZTgxS0d0a2ZzNm9iRFJNVVVTQ2dmS2xBRWRtTWhnYWQ4ZHRzV29ib0J1bUZEczd5SnpXbE1YYXlYUVdwNDRfQmJGaHV2ek9naWFzZ0VaSzFkLWlmdWVueG5Zd0FlMzlVN2xHSVlCVGN0NndxeEdWQVZ5aU1GQmJMdWNERURqRktIWmR2UjU0TWtMbnk0aUJQMG9NR3FoS0JnTHJRZFpXWXhwUTFnbWN1cTVHZjF4d29GeWJ3bkhrRW8wS0V2QjRxSDk1ZzQzSFdycUktOWgwWnBhQ2NPVFZKNjYtVHZHX0tIdHRIbE5jS3d3bWEwSEdoTG1EOWQ5SWhuREc2RzhoY0s1dERyRWwzRkRzUm53cGpyVXhNU3dIUk5EQ3l0SVpOS0FJSkRiblZLbGY4eC1wdkN1cjFaUHJDRkFJcV9qMnRuNlM1SHdVSHdnVUJ4bF8xTDdzQWxRelI2ekhRdlZFNFZUTVFRNmdIMUx5WEZQaHJqWUIzWTAzcEJpdWhRRHAxSldldHYxMnpQamtlVGhaSUJxdU14UWdJc3dGWEJYSEdFVEtjdXBETUtKakNPSlZpRXN6Rk9nMWFuR0J0ei14MXVZZzQ4VEhYOVEzUktiQVJ6NEJiWU4xVQ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-09T11:17+08:00",
+      "title": "Southbound Capital Flow | Southbound capital recorded net purchases of HKD 1.856 billion; tech and chip stocks showed divergence. Southbound investors increased their holdings in Meituan (03690) by nearly HKD 600 million. - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQLTBFdUNlUy05eFU2TkdKSEdSR2tXUkJQc3pXRnVicXRsUzJ2UXJ3UjBsMXFkMzQzZl91YmxFS195bU45MzByWDRESXJVMEN4aVdYYzhqb3JtNC13a2lNSi0wLUJPOG83SEZUVno0VERyYWMxM2ZFSEdHQ2FDMEtFeHFjTmhzalpLQ3lVWHFQSVdGY0I4Snp0M2FrMjRjLWxxd3NPaXFZMTZwVWFwdnZZS1dDaTYzUQ?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-09T17:52+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "圖解丨南下資金淨買入港股18.5億港元，加倉美團和中國移動 - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1Pd2dGR1Npc1hwTERvdkFUQ0E1Y1ZDbkV5NlZKTk9YbW5NMkRQNWUyLVQtNXhBcFk3YjYzOUYzZnM2RG9CN3BFWXJTbWZFLXpiNHUxSlFuWkRqZVdUTDQ1UmFyT2xncWlEeFVr?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-11-09T17:51+08:00",
       "importance": 2,
       "risk_score": 0
     }
   ],
-  "oil_watch": [],
+  "oil_watch": [
+    {
+      "title": "WTI原油走勢：川普稱這一情況下「極不可能再襲伊朗」，油價面臨方向選擇！ - Mitrade",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9SVXpkSnNtVnJtRDJDNWJITHFaY2ZkUVlYODRTM2h5WlppenpueVFnRTFNV2FDV3d3S2dXc1ByUkJzYzUydlRIVHRKNC1TeVNKWTNtZjF3VElOdGtPNG9GR29fcU85dVZybk9hUms5TnEyVWFIeGd6WkVR?oc=5",
+      "source": "Mitrade",
+      "published_at": "2026-11-09T17:18+08:00"
+    }
+  ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-11-09T16:44:34+08:00",
-  "checked_at": "2026-11-09T16:44:34+08:00"
+  "updated_at": "2026-11-10T03:09:56+08:00",
+  "checked_at": "2026-11-10T03:09:56+08:00"
 }
