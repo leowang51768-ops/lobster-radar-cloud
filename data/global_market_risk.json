@@ -1,85 +1,149 @@
 {
   "schema": 1,
-  "risk_level": "green",
-  "risk_score": 1,
+  "risk_level": "red",
+  "risk_score": 3,
   "risk_reasons": [
-    "韓股明顯下跌"
+    "出現重大風險新聞"
   ],
   "ticker": [
-    "全球市場正常｜費半 +10.7%｜NASDAQ +3.7%｜日經225 +2.3%｜KOSPI -6.8%｜台股加權 +4.9%｜恆生 -1.4%",
-    "全球市場正常｜美債10Y 4.88%｜VIX 20.1｜WTI原油 87.63美元 -3.5%（高於常態，觀察）｜布蘭特原油 93.62美元 -4.8%（高於常態，觀察）",
-    "全球市場正常｜油價觀察｜WTI原油走勢：川普稱這一情況下「極不可能再襲伊朗」，油價面臨方向選擇！",
-    "全球市場正常｜Philadelphia Semiconductor Index rises 3%; Broadcom and AMD gain over 6%; NVIDIA buckles trend ",
-    "全球市場正常｜Taiwan Semiconductor Manufacturing Co Ltd(TSM)股票11月9日開盤上漲3.14%：投資者必看的核心資訊",
-    "全球市場正常｜Goldman Sachs: Global bond markets are poised to stabilize, with U.S. Treasury yields potential",
-    "全球市場正常｜中國華君(00377.HK)建議股本重組，每手買賣單位更改為2000股股份",
-    "全球市場正常｜中國華君(00377.HK)建議採納2026年股份計劃及終止2017年購股權計劃",
-    "全球市場正常｜U.S. stock index futures rise collectively in pre-market trading; NVIDIA plunges 6% against the",
-    "全球市場正常｜Wall Street strategists believe the correction in U.S. stocks is nearing its end, with Morgan S"
+    "⚠ 全球市場風險｜費半 +11.3%｜NASDAQ +3.9%｜日經225 +2.7%｜KOSPI +3.3%｜台股加權 +3.5%｜恆生 +0.4%",
+    "⚠ 全球市場風險｜美債10Y 4.86%｜VIX 19.9｜WTI原油 86.03美元 -0.9%（高於常態，觀察）｜布蘭特原油 91.92美元 -0.7%（高於常態，觀察）",
+    "⚠ 全球市場風險｜油價觀察｜〈能源盤後〉川普稱不太可能再攻擊伊朗 Brent盤後跌逾7美元 創8月底來新低",
+    "⚠ 全球市場風險｜油價觀察｜WTI原油走勢：川普稱這一情況下「極不可能再襲伊朗」，油價面臨方向選擇！",
+    "⚠ 全球市場風險｜台股同時爆3檔違約交割！光通訊、載板、玻纖布全中標「合計金額破億元」 富喬慘遭18家券商通報",
+    "⚠ 全球市場風險｜HK Stock Market Movers | China Everbright Environment (00257) rises over 3%; plans to issue up ",
+    "⚠ 全球市場風險｜台股大漲1135點！ 台達電連2日亮燈 PCB一票衝漲停",
+    "⚠ 全球市場風險｜台股昨暴漲 仍有81戶遭斷頭 每戶平均追繳金額竟僅1萬多元",
+    "⚠ 全球市場風險｜台股狂彈1,960點，外資卻狂倒900億！10萬口空單壓頂 反彈背後藏什麼危機？",
+    "⚠ 全球市場風險｜AI需求帶動科技產品出口 台灣10月貿易總額創歷史新高"
   ],
   "markets": {
     "US_SOX": {
       "label": "費半",
-      "price": 9976.417,
-      "change_pct": 10.8
+      "price": 10033.933,
+      "change_pct": 11.4
     },
     "US_NASDAQ": {
       "label": "NASDAQ",
-      "price": 25222.477,
+      "price": 25253.139,
       "change_pct": 3.8
     },
     "US_SP500": {
       "label": "S&P500",
-      "price": 7550.64,
+      "price": 7549.94,
       "change_pct": 2.6
     },
     "US_DOW": {
       "label": "道瓊",
-      "price": 52413.34,
-      "change_pct": 1.8
+      "price": 52389.75,
+      "change_pct": 1.6
     },
     "VIX": {
       "label": "VIX",
-      "price": 20.13,
-      "change_pct": -21.4
+      "price": 19.92,
+      "change_pct": -22.4
     },
     "JP_NIKKEI": {
       "label": "日經225",
-      "price": 58775.5,
-      "change_pct": 2.4
+      "price": 60381.11,
+      "change_pct": 2.8
     },
     "KR_KOSPI": {
       "label": "KOSPI",
-      "price": 5018.85,
-      "change_pct": -6.8
+      "price": 5227.2,
+      "change_pct": 3.4
     },
     "TW_TAIEX": {
       "label": "台股加權",
-      "price": 41661.7,
-      "change_pct": 5.0
+      "price": 43116.06,
+      "change_pct": 3.4
     },
     "HK_HSI": {
       "label": "恆生",
-      "price": 24448.95,
-      "change_pct": -1.4
+      "price": 24576.65,
+      "change_pct": 0.4
     },
     "US10Y": {
       "label": "美債10年殖利率",
-      "price": 4.878,
-      "change_pct": 0.4
+      "price": 4.864,
+      "change_pct": 0.0
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 87.63,
-      "change_pct": -3.6
+      "price": 86.03,
+      "change_pct": -1.0
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 93.62,
-      "change_pct": -4.8
+      "price": 91.92,
+      "change_pct": -0.6
     }
   },
   "active_news": [
+    {
+      "title": "台股同時爆3檔違約交割！光通訊、載板、玻纖布全中標「合計金額破億元」 富喬慘遭18家券商通報 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMisgNBVV95cUxOUkFxYldUYkNiZDYxOC1OZnlPbWh0eUZoaTNoSlpwMVdPZXljTFVZNmxKSGNpRWtBRUp5NVpxU3FramlpbGJ6MVpRUVJYbGJ0aHdmcnNJbmtBdGMtTVlsR1BjaWQ2ODhWTlJCRzAwYXExMmtiYVlhNEdkak9ES0VwU3JrZE1UbDAzVHVTeHlRRVlmbThXYW5JazE2NXQxN2RFYjFhWWc2SUxWR3R1MTR3YlVnankzd1lMSEdkZVVQelpSMFNVUUJmQVJiQng3bGh4MGtVS3hTemhhbjhvQ0dSSzc3czNkUDlHc0wwOGpRLWRlb3RNTXJyOHpFRG5iMlZmeVVpazYxTml4d3NENXJkZ1hpcDNFdUFIbjZ4dmp2NWFyRE1yRVU2c0x5TUJmTHlzWG9KeUlvNXFjTkxTNEZrOTNuNGVieXlSRlhDeXBtYk4tTTczd19iVjVNcnltY0tmTE9uY3NEbmJSeUFnZFprTmFjVjBKc19QRzFfSUljNVlMYnVSdlBPYThEVmlfN0s5dXZ6aFliVHlYeGtTT0tyVFJsWC1mMnZ6MlVQMVUxNDJMdw?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-09T19:40+08:00",
+      "importance": 5,
+      "risk_score": 4
+    },
+    {
+      "title": "HK Stock Market Movers | China Everbright Environment (00257) rises over 3%; plans to issue up to 920 million A-shares; Bank of America Securities forecasts a 38% increase in dividends per share - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQUzhwSnNsdW9lXzhUaHEwNDNKLWRXQi00VlFpYVFHRG55SFZtSkZ4ak1Md3RwZVd0c3pYUkplT3hwNjlEWS10bDlKN2pjT19ZMzhJdi1yUV9fYXJ2aDQtQy10ektIMUdRbVRZQXQ2N3hXTGpzTGZDVUxEU1FoVzBfUnhBMWY2Qi1WdHBGbjNzdEsxVUlCdk1qaEh1ZEo5ZWFOQW5WQ3FWMUI2VTJGQnhUSw?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-09T20:18+08:00",
+      "importance": 4,
+      "risk_score": 2
+    },
+    {
+      "title": "台股大漲1135點！ 台達電連2日亮燈 PCB一票衝漲停 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiqgJBVV95cUxPZ29VT3RHaVVzaW5RUVF4NjRXLXlUcXJ3ODhfZGRNUGNPTjZGcTBVRjh5THRzOWt5LXFBekVCdHhRZ3pTWDdpOVhRbkRPTlFOOUVzeWhiX2hhQk5nQTNwWDVsVVc0NG1OQ2lGenc3LTlNa3ZuOHdhSU9pSWhqR2U0a19YUl83OHhjLXZWU0lsT3MyMTBIMkFJTUVibmoyZWQyQ19LQTdUc08yVF9pRjBiNEl1ZGxJWDVhemxGcGx1M0MwWkR0dzRWNUxDMXVERlFaMl9BM2F4ZnhkLXp1eld0SXRMNGhHeUhWOVZWZDdWdmNGVWRhSHhCN3lEWk5oTzZWTENJbjkyQ1lYdTFDdEVETzluWHR2VlFLTWpzOFVLY3VVNlJOcVgzVGZ3?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-10T09:24+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股昨暴漲 仍有81戶遭斷頭 每戶平均追繳金額竟僅1萬多元 - 自由時報",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5rSTZMZzVKTUE2ZmF4aWVyZkxvVDIxT2N2ZHFyNHNadnl4NTU5QWUtUmFBVjR5S2lyVlRUNFN0TUlpMXJXOFB2WXNoeTcxN20wdGtNZ3d3OWs?oc=5",
+      "source": "自由時報",
+      "published_at": "2026-11-10T08:39+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股狂彈1,960點，外資卻狂倒900億！10萬口空單壓頂 反彈背後藏什麼危機？ - 理財周刊",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5ickNvSlVzbEI0Q1FWVEFPYS1DZ3BqZ2FmWVpILVc1VW40R1ZQdWFvNVhhR1o4a1dPRnVXMjZPaEljZGtsME52cmRTYWMtdk9OSGl5MUJIS0lsR3RVNzVHV0s4aXRxZ0VwQ21pZmMzaw?oc=5",
+      "source": "理財周刊",
+      "published_at": "2026-11-10T08:29+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "AI需求帶動科技產品出口 台灣10月貿易總額創歷史新高 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi6gJBVV95cUxPVjFZMnFvR3JVUURVSldRRDhmQlNtRGVjMXJvSWpmWUpGUGR5N2tuWG8yVG1rQ2hrNEU2YTVnOHNwZk8tckZHd3lpUXhFRjdpcjVmRFl6WkFSNndzRzFXMWZsaFlNWXJYY2pDNWtjWENiTURKSi1ybExMbDE1WGdzQjR6c09sTTZwZ3pIeHhCZnJBaDdaOHBJencwUnVGQmJ4TExpc25WeW9BQmY2aXdjdDZ4UzdjM0dyaXpLV0g4aFF4TkFuX0RkdTBINDZCS0xOMkp1SmdmZENoaDVOQXhJbzRsM1A4TGw0dkpsaVhveU9rM0N4WlY3bUlFeHQxM2VSdUpSQVIxbVlmdUxyMVhsVlV5d281Szl5aW1CNUVFb2JIa0VBVFREbGNYSWUtekZKZjVwVkxYOWhtUkZKaVFzTHRWbWtKRDRMaGlNV2ZoNTd2cXczbkd1VUxsNk5OeDN0TkloLTJOWHhwQQ?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-10T08:22+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "美股飆漲強勢助攻！台指期夜盤上演大逆轉 終場狂漲1064點 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi9wJBVV95cUxQTFg0aWNyMEpPUVhZdk9ReUhMc2Rac2FpdFR6OXkzTk9oaEVjNU5RbFZhVFBLZ2syYXUzWjlXZklVbjFISmNxODg2LVlHQlk2SDRVX3IzZVFWQTZwTjNQc3UwQkNNQUdhbjBoWWswSWw2NGtNZU44Sk1ibnFOWEJFb2REYklTSmxxbDJpSkF4UzJXSDlENEIxY2hBVUJqWWEwbVBISzlWd2RGSW9IU0JJQUNHLTBHTFN6TGFNZmZLYmpsMnViX1lOd2hkdlRqc0tMN2tYVXFaUDd3R1RMSmVQNkpYd1NuVEJUMW1MNDk4WENPRlZpeVlYeVVVVW9pTFhiNURuZGdEakNsRjFGMEVUWXF2NmpMR05ITUdVb2VKaDZudUpGb3hOZ0VqSmF6Ym0zbGR5NXFjb1JxLXQwSGxxNGZlM05JczVYZ29rQ2dUaGpUR25vemdFcTB1ZW5RZ0p0dHdOa2dNVFItaVBEckY0VGNuWXNpSUE?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-10T06:39+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Pan American Silver Corp. (PAAS) Stock Price, News, Quote & History - Yahoo! Finance Canada",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9rdFZtTjJLTmpaSnlVN0ZtektZWWlLT2Vrb1lKTlNPLUdHYUkxT1FtSU1QTks1SFZkMHg1U2pBUkY5ZVBYcHBZRmkxa1hvNy1rVUE?oc=5",
+      "source": "Yahoo! Finance Canada",
+      "published_at": "2026-11-10T02:30+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
     {
       "title": "Philadelphia Semiconductor Index rises 3%; Broadcom and AMD gain over 6%; NVIDIA buckles trend with 5.60% drop - 富途牛牛",
       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNU3BfY1BtZ2tXWG5QdEZHdElLd3FxbHRXTFVJd0pjYzBNMDVuMVE3dC1ueG9EUkVTR2JlV1RpbnEyR0J4Q2dMNTRyRnVuUGtaMDVmLWYtdUxhd3RHalFWY1poV3hkdFU5RWx0NUxNemtLME9BN0kzMks2RF80bV82VGhTc0tJQUpudmU4Q0tnTkQ5UWlDeTNmU3NfdEhlUWg0OEdpbXBoQkQ0RE9mN2RyZzNyQ1BJT0NNLUE?oc=5",
@@ -111,81 +175,29 @@
       "published_at": "2026-11-09T22:22+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "中國華君(00377.HK)建議採納2026年股份計劃及終止2017年購股權計劃 - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9GR21MbTNicTAyN2hEbUpiLXRDUkNTV2VmbUdsTnFJNTR6T3haOGdFNDU4LW15dDlwb2pxWlJ3bjZZSWdWRVdhUDdBTlVFM3pGcUkyRGFZMV9pVlE4WFFZaXQ0ZWltRElmQ0dJ?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-11-09T22:21+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "U.S. stock index futures rise collectively in pre-market trading; NVIDIA plunges 6% against the trend | Tonight's Highlights - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPTFh6MTg5S1RuV1VrVWIxVFdFWWM0OV9sNGJpVlJHUDdFZUllbUxsWGhwX0JKdVY3aHc5UzVNcWJqSlJqMEdMQzJGYXR0UU03NmF4cUI0ODlsczEwaTdHdWszWG1weEZmSmFPUzlKaWdnSzMwNTBmWUt6Tmg2X0NhMTg5TTlRSF9JWlVmc3p4MTUyRXlCdDBUVkJtc2FuSWtMenJ3YjFLb0k?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-09T21:04+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Wall Street strategists believe the correction in U.S. stocks is nearing its end, with Morgan Stanley forecasting that the S&P 500 Index could fall to the 7,100–7,300 range. - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPUGg5M09yazNVel9WdUxzSlJRRlNrMXptSzk3TkQ3a2lsZlI0dTJBcGVEa28tQ25Ud0k5NkhfeWg3SnNBdEVEQm1rVlFlZ1NocjEtdzRKbXEzQW14ZHVjc25Tc2RDaVZwVm15SUg1eEQ1RmVvNDJ1NTlwa2t3QmRfQ2VpbFNocWNDcVNlMGkyak9wZUxxRWxDcWNkMy1hS3B1T2pWU1E2SkI?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-09T20:54+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "同欣電砸近20億元收購新加坡上市半導體測試廠 溢價129％ - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9vZEljYWE1R1k4N1FSNEQ0d0k3cDhwUzFtclRNeVBiRVo5TkVHakRhUG1rLTBZclZ2S1FkeV8zS3Znc0FhS2NJNkRjbmZTMzdKYkFQUGlvS2M?oc=5",
-      "source": "自由時報",
-      "published_at": "2026-11-09T20:04+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Lenovo Group Stock Slides 0.9% in Hong Kong - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQMG84cWZIZ0wyUEs4ZXJRTXBWbE5iZ0FNbUpwa2pvWC1jeTczS1pORld1UzBsaGlmbmZKakZBY0RJQkxfbVlQNDl3bTFaaWYzNlloM25zcGZMY0hPWU10SlFSWllvLVVBckF5UUYtSHBxdmI5dnB3bUVXaXFnY1JfTmZrVjdpZ3Q1MEE0V3Jn?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-09T19:33+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股狂飆逾2600點！ 台幣反貶近1.5角 專家：留意外資倒貨 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi2AJBVV95cUxOenNIS2tzeU13Mm14WmpOSGF6b1pDZUlkdWpwcE5SVHNfM0xZbkhodlhpS044RDQtZ2NVZUU3aS1SSVdFaFl2U1dKYkVkb2JnLWdadEtBVFJfYk9NVFV2TlZoZnY5VFMtNmp0S3dOQ1Y2NGV1ZFlaa3dyR0JDcDBBNjROUGNzY183dndQdUZLbEhFTUJZYlJDQWZZZEdrSEZLSy10ZkgxNTRhZi14bDR0ZXE4SzdhQ09hM2N2N1pjOTdWNG9YQjhydnI5SXJsYjNsaVhhTFJHWlFoOUZTdzJhVVFWN0JHQ2dNQ1o0Uk1jV2xRYk9HRzUtY3BJUGZuRHFraGowQzU3QXowbjBXcTFJcWxfdk40RTFucTk0b3l0MDdsc29yeVhPenZORFFmZktqbWs4YW1fc29HUmdsRDVGRDFUd2pzR1FueXk3MzJ2ek1jd25aY09BSA?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-09T19:01+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Southbound Capital Flow | Southbound capital recorded net purchases of HKD 1.856 billion; tech and chip stocks showed divergence. Southbound investors increased their holdings in Meituan (03690) by nearly HKD 600 million. - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQLTBFdUNlUy05eFU2TkdKSEdSR2tXUkJQc3pXRnVicXRsUzJ2UXJ3UjBsMXFkMzQzZl91YmxFS195bU45MzByWDRESXJVMEN4aVdYYzhqb3JtNC13a2lNSi0wLUJPOG83SEZUVno0VERyYWMxM2ZFSEdHQ2FDMEtFeHFjTmhzalpLQ3lVWHFQSVdGY0I4Snp0M2FrMjRjLWxxd3NPaXFZMTZwVWFwdnZZS1dDaTYzUQ?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-09T17:52+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "圖解丨南下資金淨買入港股18.5億港元，加倉美團和中國移動 - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1Pd2dGR1Npc1hwTERvdkFUQ0E1Y1ZDbkV5NlZKTk9YbW5NMkRQNWUyLVQtNXhBcFk3YjYzOUYzZnM2RG9CN3BFWXJTbWZFLXpiNHUxSlFuWkRqZVdUTDQ1UmFyT2xncWlEeFVr?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-11-09T17:51+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "oil_watch": [
+    {
+      "title": "〈能源盤後〉川普稱不太可能再攻擊伊朗 Brent盤後跌逾7美元 創8月底來新低 - 鉅亨網",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBZZHNVSldqT2dNQ0VsWU5jSjZCZVFwM0lzaEJPQmtQRzJwY3lYUHhHclhlbUtsSFpkRGRnb1BGVVg4WlEyNXRucDBQRG82cU0?oc=5",
+      "source": "鉅亨網",
+      "published_at": "2026-11-10T06:01+08:00"
+    },
     {
       "title": "WTI原油走勢：川普稱這一情況下「極不可能再襲伊朗」，油價面臨方向選擇！ - Mitrade",
       "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9SVXpkSnNtVnJtRDJDNWJITHFaY2ZkUVlYODRTM2h5WlppenpueVFnRTFNV2FDV3d3S2dXc1ByUkJzYzUydlRIVHRKNC1TeVNKWTNtZjF3VElOdGtPNG9GR29fcU85dVZybk9hUms5TnEyVWFIeGd6WkVR?oc=5",
       "source": "Mitrade",
       "published_at": "2026-11-09T17:18+08:00"
+    },
+    {
+      "title": "美伊霍爾木茲協議穩定全球油市 降低原油地緣政治風險 - Life 生活網",
+      "url": "https://news.google.com/rss/articles/CBMi6AJBVV95cUxPWmhtZWRXb3BDN0FVeXJyRmZDa1hWU05aOWFDTHVuNHBEY3ctWk5wUm91MVBwRENReXQyUHNYNzdKbjJOLXNzTWtLTGFaMTlBakc3TFplbXlmbzdQSl9mUVY1N0czaVViT0twV1F0cW9mMU50RE5KbmxzQXpEQ1BNaG1oNUFvYU5WMVRvdXktOVp1ZEJ5emRLcGxpRUJWdUdjUTVpNldsSi1kUTBkU0VyUklYMnpqSVMyU0pMdVI4aXpmMF8xNm9zYWduU25IMEwwQ1VuTHJEYUs1MWgxUnBPaEozOW5HdktqaWQyNHFFQ3F4NW03MjdSUE5IUGZDaS0wb1BBR3BUV2VIajgyTnRkbTlXRU1LMzJ2cm9wR0ZPYU9BNC1tT09maGoxNWM3dURDV2ZXY0toWlZNVy1tZk1JWUMtUXRzTGZpb3R0b08wakxGa0xPbUZzcWxkMzJDYWFwbGJ4ZFA4eWs?oc=5",
+      "source": "Life 生活網",
+      "published_at": "2026-11-10T06:50+08:00"
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-11-10T03:09:56+08:00",
-  "checked_at": "2026-11-10T03:09:56+08:00"
+  "updated_at": "2026-11-10T10:01:36+08:00",
+  "checked_at": "2026-11-10T10:01:36+08:00"
 }
