@@ -1,19 +1,18 @@
 {
   "schema": 1,
   "risk_level": "red",
-  "risk_score": 5,
+  "risk_score": 3,
   "risk_reasons": [
-    "美債10年殖利率快速上升",
     "出現重大風險新聞"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 +4.8%｜NASDAQ +1.5%｜日經225 +2.9%｜KOSPI +3.5%｜台股加權 +2.5%｜恆生 +0.3%",
-    "⚠ 全球市場風險｜美債10Y 5.01%｜VIX 21.0｜WTI原油 86.70美元 -0.2%（高於常態，觀察）｜布蘭特原油 92.08美元 -0.5%（高於常態，觀察）",
+    "⚠ 全球市場風險｜費半 +6.5%｜NASDAQ +2.0%｜日經225 +2.9%｜KOSPI +3.5%｜台股加權 +2.5%｜恆生 +0.3%",
+    "⚠ 全球市場風險｜美債10Y 4.98%｜VIX 19.5｜WTI原油 86.44美元 -0.5%（高於常態，觀察）｜布蘭特原油 92.06美元 -0.6%（高於常態，觀察）",
     "⚠ 全球市場風險｜油價觀察｜美伊局勢有新進展！原油價格11月跌近20%，未來趨勢如何？",
-    "⚠ 全球市場風險｜油價觀察｜〈能源盤後〉川普稱不太可能再攻擊伊朗 Brent盤後跌逾7美元 創8月底來新低",
+    "⚠ 全球市場風險｜油價觀察｜原油價格預測：布蘭特跌破90美元創八月底以來新低，下一目標或指向80美元",
     "⚠ 全球市場風險｜Investment banks unanimously warn that AI stocks have fallen too far! Asian tech stocks stage a",
     "⚠ 全球市場風險｜HK Stock Market Midday Review | The Hang Seng Index rose 0.29% in morning trading, with AI hard",
-    "⚠ 全球市場風險｜Anthropic 上市開價最高 1 兆美元，台積電也出 5 億美元入股",
+    "⚠ 全球市場風險｜台股血崩週狂殺5510點！市值蒸發近18兆 這族群慘跌21%成重災區",
     "⚠ 全球市場風險｜Global capital targets undervalued assets in emerging markets following AI trade sell-off",
     "⚠ 全球市場風險｜Alibaba Gets Regulatory Approval for Separate Hong Kong Listing for Chip Design Unit T-Head",
     "⚠ 全球市場風險｜環球醫療(02666.HK)獲中國通用技術(集團)控股有限責任公司增持185.6萬股"
@@ -21,28 +20,28 @@
   "markets": {
     "US_SOX": {
       "label": "費半",
-      "price": 9843.996,
-      "change_pct": 4.8
+      "price": 9998.33,
+      "change_pct": 6.4
     },
     "US_NASDAQ": {
       "label": "NASDAQ",
-      "price": 24958.336,
-      "change_pct": 1.6
+      "price": 25065.875,
+      "change_pct": 2.0
     },
     "US_SP500": {
       "label": "S&P500",
-      "price": 7496.58,
-      "change_pct": 1.6
+      "price": 7520.93,
+      "change_pct": 2.0
     },
     "US_DOW": {
       "label": "道瓊",
-      "price": 52127.91,
-      "change_pct": 1.6
+      "price": 52231.89,
+      "change_pct": 1.8
     },
     "VIX": {
       "label": "VIX",
-      "price": 21.04,
-      "change_pct": 5.6
+      "price": 19.46,
+      "change_pct": -2.4
     },
     "JP_NIKKEI": {
       "label": "日經225",
@@ -66,17 +65,17 @@
     },
     "US10Y": {
       "label": "美債10年殖利率",
-      "price": 5.01,
-      "change_pct": 3.0
+      "price": 4.983,
+      "change_pct": 2.4
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 86.7,
-      "change_pct": -0.2
+      "price": 86.44,
+      "change_pct": -0.4
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 92.08,
+      "price": 92.06,
       "change_pct": -0.6
     }
   },
@@ -98,10 +97,10 @@
       "risk_score": 4
     },
     {
-      "title": "Anthropic 上市開價最高 1 兆美元，台積電也出 5 億美元入股 - 狐說八道",
-      "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5XZ2JvYmVhdm54eU9JQUo2UDM1WUJRWUl5UnQtMlY0OF91eS1LTjVTay1lUVFDTUI4Q0xvdTk5amc5V2szWU80a19rVVFEUQ?oc=5",
-      "source": "狐說八道",
-      "published_at": "2026-11-10T22:48+08:00",
+      "title": "台股血崩週狂殺5510點！市值蒸發近18兆 這族群慘跌21%成重災區 - 三立新聞網SETN.com",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE16WU1BUk1EZDJWOEUzaU0tdjBtcVVOVklSRDNPUmJhRmkyT2M4c2NTMGRpOGY4U1AxdXlqRTBnSWdvaWN2MnNXMXUwRQ?oc=5",
+      "source": "三立新聞網SETN.com",
+      "published_at": "2026-11-11T02:33+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -146,10 +145,10 @@
       "risk_score": 0
     },
     {
-      "title": "Overseas Research Selection | Semiconductor Sector Suffers Sharp Decline; Goldman Sachs Says Risks in AI Data Center Construction May Be Overstated - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQUF81WTNPLW5Ya3dEU1NTVW4zcjd6alBXd3diM1ZUMEV6a0lRWVJMQnBoS2s4RkhpTXRxdVhXbU1ZM2pDeFhNR3podkFGWUUydXJKcm5oMC02blFUUzBFeE9FTy1peVB0M1dZMmlmbUtYN2JIUjJHbDMzdE43eVRlVWRneEdlbk5KYmJjaV9TMThfT0ZiUktoc1dHU2V5NzBOUHducEZrWkJzdTYtT3VfeFh4NWw5bWpiVXFfUkp4bVFaYnY5ckE?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-10T20:10+08:00",
+      "title": "台股連2日飆漲千點、外資仍大賣341億元 連23賣倒貨台積電 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi7gJBVV95cUxNSzh6X2U3Z1l4VjQzQXZ5VDBIREN1WHY1bXhiUkdzUWFSVkctSms0ZHVMQjR4aWtzVDBPdEpSLVlhRWFCeWRGR29rWERGVVM0WDlJRGZPOTBBY3oxOGgycnpzRWh1LV9LdG5fZURxWWJ0R2hLWF9YSk56YmJFeGdYR0ZRU0lSLUcwUzVxcE95RFV4UFdCOEZrNzh4c2dFaG5uXzVFaG5SVThWcDlJTzFQNmlsbGpfc0hTQVY5UEJvNi13QTVadmk1a2V2WTNOeDFVOU1OamREQVlKN2pVMEVScmNiS2VLaWRndGlRQWo2V3RqZ1BJOW54X3ktM1BIS1E5bE5nSGY4dXl3SFAtWVpvdUdhVndqdDRVVmsxdndaTzI0QWgtTWxyalNRX1Q1VG1PY0dPMGczcXA1akoxQWp1T0x4a2YxUzlCMzI5U2N6TlM5a0JrYlc4b2hEbkVwS2FEU0dKOWdVbWJfWnNtNVE?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-10T20:03+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -162,18 +161,18 @@
       "risk_score": 0
     },
     {
-      "title": "中國創新投資(01217.HK)10月末每股資產淨值0.042港元 - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFAxN2ZhM0RfVTNhTGJMcWJBbmdjRGtUWGJwYUp5Rk9VTDVEdF85RmUxV21sTjZvN2VoV2p1Z2N1TFBJSG1jNnVybU9DWjhmY1VDbVVfaXJuSHVZel8zUk1mRUxucFN6UFlYazV3?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-11-10T19:09+08:00",
+      "title": "Capital Flows | Southbound capital recorded net sales of HK$2.739 billion in Hong Kong stocks, while increasing holdings in Alibaba and SMIC - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQbXlYaFdjdjl3eDF3eXFDTmxUZENfUWc5bDdnYVVhMVZPMXI0TjQyQjdKbGJqc1pDVFZxSnI1NDhZdWpTNGxiVHA3MkFlRzJYNEM2WGFqU2VNRnZoTGNSZmQzN0pxTC00dGhXTEV0VlFTY21kX2xaWV82V2RIcHkwZHVhQ0M2cGN1Z2pEZHEwM2ZCQThXNGVHMkstMjZBUjQwUFROVw?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-10T19:16+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "台積電10月營收破5800億元！年增近60％ 史上最強 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMivwJBVV95cUxQdDBwcjhpR3VYMnhZUERmRnpRQmhvLVdkZFVrRXcySUY2RENJTFUwNTJhZWM4R1JCOU5ybnVYSFYtLUxobHI0eUNaUlg1dS1nY0dSa1NDTTNIVEJoUW1wekczcGJ1Mk5SVzV1TDN6dS01UzZRc3E3WWJEeHAzYkprcTVWWG9KVUh5UVlkbkcwUG5XcXZqUF8wWHZrcFNzVFBRd2gxVmdjVjdjLWRaQ1MwSWVsb0ppeEs5VmM2RnNBdUt1UGpvNjJJbzd0cVFTcFAtZEFsNTdyWG1XMEFCNC1rMTlneE5PUDMyLXdwS2g1WWpfZHNSdEU2QkUydVdDY3BrcVljTlM3NUtFUVVtNHJWWmRtRHFiMGFKX3BHbC05NmwyeWxLaWdLUVFNVXFZcFJDbzZBam40OG1YeFhkY2tV?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-10T18:43+08:00",
+      "title": "中國創新投資(01217.HK)10月末每股資產淨值0.042港元 - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFAxN2ZhM0RfVTNhTGJMcWJBbmdjRGtUWGJwYUp5Rk9VTDVEdF85RmUxV21sTjZvN2VoV2p1Z2N1TFBJSG1jNnVybU9DWjhmY1VDbVVfaXJuSHVZel8zUk1mRUxucFN6UFlYazV3?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-11-10T19:09+08:00",
       "importance": 2,
       "risk_score": 0
     }
@@ -186,19 +185,19 @@
       "published_at": "2026-11-10T11:56+08:00"
     },
     {
-      "title": "〈能源盤後〉川普稱不太可能再攻擊伊朗 Brent盤後跌逾7美元 創8月底來新低 - 鉅亨網",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBZZHNVSldqT2dNQ0VsWU5jSjZCZVFwM0lzaEJPQmtQRzJwY3lYUHhHclhlbUtsSFpkRGRnb1BGVVg4WlEyNXRucDBQRG82cU0?oc=5",
-      "source": "鉅亨網",
-      "published_at": "2026-11-10T06:01+08:00"
-    },
-    {
       "title": "原油價格預測：布蘭特跌破90美元創八月底以來新低，下一目標或指向80美元 - TradingKey",
       "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOV181SUhDb2FlbGdjZlVsTmpiTzV3RjFpY3NwMWx4ODlGNGhNbWY1UFJ2VkMxR2FlS2tHY3FHRzJPQWNnOGNxc1VyeGFmWlltV2tSOGw1a0s1YWpoSlJjXy05MHI5bUt1QmMwVzFrTlA4TThfdGh6YnhFSVY2MHNXZnZ4WGxWV1JKN0NhM1BYaVA3XzlEa3dlbW1IUWpxcnNBZDJtMjVFLVBVZ0NHU1A3UVExaVh1WS15QkphOURSOHlFc19XbWdRQ2hnUWZ0MldrdW9FRnJ3ZUtnOUlxd1JaOTROcWw5d1VfQXR5Y3N3?oc=5",
       "source": "TradingKey",
       "published_at": "2026-11-10T18:18+08:00"
+    },
+    {
+      "title": "布蘭特原油：伊朗局勢降溫的希望帶動油價下跌 – 荷蘭合作銀行 - www.tmgm.com",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQMS0xYmJuOEZrSGxWeTcwcE50QnhLT2JkbC1VVXhoeE4zbnJpS3dQdHFFb3FMZlJnRXdqOENvTWE4WVExWFRSMGR4WkMxNDVuTUlkUmwxY1llSlYtT1lIY1dsUmNBYkl6bDgtR1pWZDJvSlZ6eWZwQ1VrN1BacDhaejg3aklmeUV3aEV3bFFZYXdLb3VLX0RBOHlzdUh2NE9XVVJTSG5RQWRDdzJZUFVuQk9CRC1qWi1kU0FkaWtlN3k?oc=5",
+      "source": "www.tmgm.com",
+      "published_at": "2026-11-10T21:41+08:00"
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-11-11T01:12:06+08:00",
-  "checked_at": "2026-11-11T01:12:06+08:00"
+  "updated_at": "2026-11-11T06:20:44+08:00",
+  "checked_at": "2026-11-11T06:20:44+08:00"
 }
