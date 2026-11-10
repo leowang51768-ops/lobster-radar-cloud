@@ -15,7 +15,7 @@
   "complete_collection_days": 0,
   "counts": {
     "ranking": 135110,
-    "history": 503306,
+    "history": 510393,
     "queue": 9781
   },
   "review_stage": "資料累積中",
@@ -43,8 +43,8 @@
   ],
   "history_errors": [
     {
-      "code": "1810",
-      "branch": "0039003200300041",
+      "code": "2915",
+      "branch": "9859",
       "error": "The read operation timed out"
     },
     {
@@ -198,7 +198,7 @@
       "error": "History date or numeric mismatch"
     }
   ],
-  "history_pairs_ever_fetched": 8393,
+  "history_pairs_ever_fetched": 8512,
   "history_coverage_complete": false,
   "history_coverage_note": "按個股實際交易日缺口排序補抓；來源每頁最多60筆，較早缺口仍保留待補，缺筆不當零交易",
   "history_retry_policy": {
@@ -206,8 +206,8 @@
     "retry_delay_seconds": 900,
     "source_history_row_limit": 60
   },
-  "history_attempts_today": 120,
+  "history_attempts_today": 240,
   "ranking_coverage_complete": false,
   "errors_total": 31,
-  "database_bytes": 101523456
+  "database_bytes": 102387712
 }
