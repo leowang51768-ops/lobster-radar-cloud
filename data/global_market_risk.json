@@ -1,45 +1,48 @@
 {
   "schema": 1,
-  "risk_level": "green",
-  "risk_score": 0,
-  "risk_reasons": [],
+  "risk_level": "red",
+  "risk_score": 5,
+  "risk_reasons": [
+    "美債10年殖利率快速上升",
+    "出現重大風險新聞"
+  ],
   "ticker": [
-    "全球市場正常｜費半 +11.3%｜NASDAQ +3.9%｜日經225 +2.9%｜KOSPI +3.5%｜台股加權 +2.5%｜恆生 +0.3%",
-    "全球市場正常｜美債10Y 4.86%｜VIX 20.1｜WTI原油 85.09美元 -2.0%（高於常態，觀察）｜布蘭特原油 90.51美元 -2.2%（高於常態，觀察）",
-    "全球市場正常｜油價觀察｜美伊局勢有新進展！原油價格11月跌近20%，未來趨勢如何？",
-    "全球市場正常｜油價觀察｜〈能源盤後〉川普稱不太可能再攻擊伊朗 Brent盤後跌逾7美元 創8月底來新低",
-    "全球市場正常｜台積電來襲！韓媒警告三星、SK海力士恐淪為分包商",
-    "全球市場正常｜東方匯理首檔台灣ETF 00993B瞄準美元公司債",
-    "全球市場正常｜台積電抵得住AI市場恐慌 外媒直指股票首選",
-    "全球市場正常｜〈台股盤後〉台股連2日反彈超過千點 終場大漲1050點站回4萬2千點",
-    "全球市場正常｜Hong Kong Stock Market Movers | Innovent Bio (01801) rises over 3% as CREDIT-5, the Phase III c",
-    "全球市場正常｜台積電10月營收破5800億元！年增近60％ 史上最強"
+    "⚠ 全球市場風險｜費半 +4.8%｜NASDAQ +1.5%｜日經225 +2.9%｜KOSPI +3.5%｜台股加權 +2.5%｜恆生 +0.3%",
+    "⚠ 全球市場風險｜美債10Y 5.01%｜VIX 21.0｜WTI原油 86.70美元 -0.2%（高於常態，觀察）｜布蘭特原油 92.08美元 -0.5%（高於常態，觀察）",
+    "⚠ 全球市場風險｜油價觀察｜美伊局勢有新進展！原油價格11月跌近20%，未來趨勢如何？",
+    "⚠ 全球市場風險｜油價觀察｜〈能源盤後〉川普稱不太可能再攻擊伊朗 Brent盤後跌逾7美元 創8月底來新低",
+    "⚠ 全球市場風險｜Investment banks unanimously warn that AI stocks have fallen too far! Asian tech stocks stage a",
+    "⚠ 全球市場風險｜HK Stock Market Midday Review | The Hang Seng Index rose 0.29% in morning trading, with AI hard",
+    "⚠ 全球市場風險｜Anthropic 上市開價最高 1 兆美元，台積電也出 5 億美元入股",
+    "⚠ 全球市場風險｜Global capital targets undervalued assets in emerging markets following AI trade sell-off",
+    "⚠ 全球市場風險｜Alibaba Gets Regulatory Approval for Separate Hong Kong Listing for Chip Design Unit T-Head",
+    "⚠ 全球市場風險｜環球醫療(02666.HK)獲中國通用技術(集團)控股有限責任公司增持185.6萬股"
   ],
   "markets": {
     "US_SOX": {
       "label": "費半",
-      "price": 10033.933,
-      "change_pct": 11.4
+      "price": 9843.996,
+      "change_pct": 4.8
     },
     "US_NASDAQ": {
       "label": "NASDAQ",
-      "price": 25253.139,
-      "change_pct": 3.8
+      "price": 24958.336,
+      "change_pct": 1.6
     },
     "US_SP500": {
       "label": "S&P500",
-      "price": 7549.94,
-      "change_pct": 2.6
+      "price": 7496.58,
+      "change_pct": 1.6
     },
     "US_DOW": {
       "label": "道瓊",
-      "price": 52389.75,
+      "price": 52127.91,
       "change_pct": 1.6
     },
     "VIX": {
       "label": "VIX",
-      "price": 20.12,
-      "change_pct": 1.0
+      "price": 21.04,
+      "change_pct": 5.6
     },
     "JP_NIKKEI": {
       "label": "日經225",
@@ -63,58 +66,106 @@
     },
     "US10Y": {
       "label": "美債10年殖利率",
-      "price": 4.864,
-      "change_pct": 0.0
+      "price": 5.01,
+      "change_pct": 3.0
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 85.09,
-      "change_pct": -2.0
+      "price": 86.7,
+      "change_pct": -0.2
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 90.51,
-      "change_pct": -2.2
+      "price": 92.08,
+      "change_pct": -0.6
     }
   },
   "active_news": [
     {
-      "title": "台積電來襲！韓媒警告三星、SK海力士恐淪為分包商 - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFA0Q3NDazFKUVQ2UF92MWszZjdpYkJkdTQ4SWVkY2lEVFRqeW5qNl9YMTZoOXZBVGFGUFd3ZjVnQkRiaGN6amlOaTlXUXNYVk5sSGIzdFZDTW8?oc=5",
-      "source": "自由時報",
-      "published_at": "2026-11-10T17:20+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "東方匯理首檔台灣ETF 00993B瞄準美元公司債 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMilgJBVV95cUxPVkNqN1VIX1lpNUpiSWpjY2NWWUMwQ0RaZTZvY2JINnFwV2hVVUt1SHZ6R05QamNkUHJSdzhST1pLZkpyaWFCZk82WDlBRVBzRERIWkVNd1JrQTJxYzh4T0g4QldXSWtYXzNEa24yRmtzQVJFdkZHX0FlSUFFOWNpTzZWYi1HZFZuQlVzZmFFWTlwS3ZJLS1mOW5EMDF5WGNLOGlrVW83VnVOZTlYVmZla0RXX3hnRi03UGVtSlN4bUUxN1d1WXpRWUJUdjhsYkUtQ21OMDdiTjdKZThuV0dSc3RiT2JhcmtKcVhtZVRWUUR0eFBtS1VDZXlyR1pQVzNHcUtZd2FNTEpIYm11QXJnWTZlb29VZw?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-10T15:29+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台積電抵得住AI市場恐慌 外媒直指股票首選 - 自由財經",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5SLXFMbUd5NFNPdF9WS1hvTTJFdjlkNUlCRkZHLXFUQm1ZYUNXS2JMMVJ6bXo2YlZEa2g4aUJ4X09VYy1CZ0l2QktyYXgtOF83aHExS0hoZEwySmllczJv0gFkQVVfeXFMT05IbTVCM2FSU3hsb25Yd2o3Z28wSFJKTlpwUFdLT3lXOGV4MGlZNnRzdG45NW1JRDBleWZmR3dQSGtXcWpYVFJ0Szl4aEhmS3UyallCWnZrVnhBNmZhb0E5YmlfdA?oc=5",
-      "source": "自由財經",
-      "published_at": "2026-11-10T15:18+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "〈台股盤後〉台股連2日反彈超過千點 終場大漲1050點站回4萬2千點 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMihwNBVV95cUxQQWN5X2o2TDdUVE9ocEpBQXI1WkI0R3hLTzRld3FKaUswTHdWUHBLVm84dGVyYWE5Uk93WHVDSkc2VzZnREFLLUtMVE1qNE1oeEVDbllnNUJYbzcybkNoRXB0UUtTNjZlSzczakg0TmlsYmt0a3ByUUx2MnA5UkhyT1ZhQXByWUd6U01jNS1mWWx2NUs3MTlvNFRaVXVuek5ETFZLdmkzUWlnWV9qTDhtRjhMTkJzeVdreVhGQWVkb1oza0FzRnRNbkhKZWhuUGc5cDJzN05tOVhmWkVlbFFrYXItMTFkQTFSMmlha0UzeWJpbUNQTTBSZk80RlB3YzlKZDRmbllXUEo1WlVCOUJVbG5oaHBxU3RsUUxPbW0zNG41WVJEbjl1WWpvWlRBLU9lYmpvLS1GQUFNLVBhdUdRSkV1ZXQzcU00VzFXbkdGTU5IR2FVNi12Vy1DQkY2by1OM2JfVlU2Q191bWdNbXM4NXl2ZFpneXBQaDFjRk9VQVBOS3IxOEdj?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-10T15:12+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Hong Kong Stock Market Movers | Innovent Bio (01801) rises over 3% as CREDIT-5, the Phase III clinical study of Xinpule® for treating hyperlipidemia, meets primary endpoint - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOS0dhR3JOVEZXODJtZU5oeEx3eGVNWDFRLUlSTE9pZ0FwRWNuTE1IR2F1S0R1eHZyRW90NU9LRXdfajFtREVWZGtGaXVlRTkyVHBPYkVzMVdkLV9rdE5UVGxIVUFqTzdTMC1iam53UnNzUVg3dVJUVExncnl2VHB4SVQ0UU9yNFNQcGdDaEZxM0RUQ3hzdDhHQjljMEIyaG9vcnhxSg?oc=5",
+      "title": "Investment banks unanimously warn that AI stocks have fallen too far! Asian tech stocks stage a strong rebound - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNbThCTUhLeXBTRmY2dmhRb2VSaWVfV00tNl91OE1vbGQ0TDU4dVpBdUR1cC1FNlBqYVF0UlZvSEVwTjFXVkt5czhUT1FqV1A1cXNuOElUdjA1a3AxWkFzWm04UnlXY3ZQMVJQSk1xcmVYa2ZlMEhyZFNPOUxjRWk5V0Q0bjJBNEJEb3ZUN0Q5Zkw3alEyS096ZFU5SGlDZEgwVlBHTjVUSVhyRjQ?oc=5",
       "source": "富途牛牛",
-      "published_at": "2026-11-10T14:48+08:00",
+      "published_at": "2026-11-10T10:37+08:00",
+      "importance": 7,
+      "risk_score": 6
+    },
+    {
+      "title": "HK Stock Market Midday Review | The Hang Seng Index rose 0.29% in morning trading, with AI hardware stocks leading the gains. - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPdXNLNG05WmszMlo4LXpfS0ZSeHB3a24xVVJJd2Z3WGFsZV9xOXk4dzVRZW9reHFsSE5Nbjk4OVc5VVZSaDI5aVctb0xSZzRGVXF6QnBiRERUVTZITU5GamZxNF80YmJUZHR5aDRQSU9lTmhjOXVmN0w2Z1pzZHRwUEhhQmoxQXp0VV9aSWhzMWQ0dDBaZUxWU2hQc2lWUQ?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-10T13:16+08:00",
+      "importance": 5,
+      "risk_score": 4
+    },
+    {
+      "title": "Anthropic 上市開價最高 1 兆美元，台積電也出 5 億美元入股 - 狐說八道",
+      "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5XZ2JvYmVhdm54eU9JQUo2UDM1WUJRWUl5UnQtMlY0OF91eS1LTjVTay1lUVFDTUI4Q0xvdTk5amc5V2szWU80a19rVVFEUQ?oc=5",
+      "source": "狐說八道",
+      "published_at": "2026-11-10T22:48+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Global capital targets undervalued assets in emerging markets following AI trade sell-off - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPU2l0dVdTQnZYTGczT2N2amxpTGJOZmpGTTRXZzB0VVR4TnBnNDFzYlUwYkNNd2NHWGxLdG1ZNk16VTFGeFFOeDdhS3FKZk5ZVUJ1bkFSb2NaZFNBQ0JydloydVd2OXBmeXZaTk96VTFoLXFVN0Uyd2thazVEUExQM1VXb0ZNZDllczQzSXc3NmJWVzBMVDFWUUFVU0huZWVDQkUzeHdUcFVuQUViVGNXTUw2aDN3TzNE?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-10T22:32+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Alibaba Gets Regulatory Approval for Separate Hong Kong Listing for Chip Design Unit T-Head - Moomoo",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQdzZCVVJwcl9seE83cW8tcWRfSjA4dS1vTTZZMHAyOVQ0cWd3ejJyeDhnMkwwTTRWSnVPQ0xodmIyRXQtLXBSQjZodXBTZVZpWGt1Z1U4NEVDbVdqNlVjb05lUk44U1RIc0EtYVVJWFRSMklwYnZpdzJHLW9IOXdkN0x6Z3VPYUZVMHQ5QlpoYWpVbFp0NmJqVGlGQ25acXlONXFXeDBSV1Y0TldrVlVZeg?oc=5",
+      "source": "Moomoo",
+      "published_at": "2026-11-10T22:26+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "環球醫療(02666.HK)獲中國通用技術(集團)控股有限責任公司增持185.6萬股 - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBRSS10M1VmRkxENUFlVlUyUGZPLWVGM1JTMUx0WnBqcjhrRXNXWTJ3QmZKYmc3SE9JUFVZOHNIQlNLbDNIcDkwdGFJZFFKR2RIVGU5U0xvUkhGX3JQSHhFNHFPeXBubzZBN0JR?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-11-10T21:45+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Alibaba: Plans to spin off T-Head for an independent listing on the Hong Kong stock exchange - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPV0RZUmV4blBkal9XNnR5UElOTng5TUZ3UmxGajBUR1RfOTBLWHRBeEpaa25naWZjaktMVzc4SHNhNG5aR3FzYkhQd1dGakxpS2lzUTFKQVEzaTlpWXpjblpMT25lWmN1VUJSM1QwLVVSNFRxZHIxc1ZZd1h1X1BnUFVjX2pUbmtjZGlTb01GelBnN2hCSEVYakpR?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-10T21:05+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "中國食品(00506.HK)與中糧財務訂立2026年財務服務協議 - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE15d1I4MklZd1ZQbnZhMExRaHBJbVpuSllxRXBROEN3VU1xbmZBdVREZ3lxZHhnMDNqLVBfLUFZRHd6c1lidzBMODI4U095S09Va0MwWXNjSXpYbUgwZ3pfU3JYaGt5YmE5MTl3?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-11-10T20:53+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Overseas Research Selection | Semiconductor Sector Suffers Sharp Decline; Goldman Sachs Says Risks in AI Data Center Construction May Be Overstated - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQUF81WTNPLW5Ya3dEU1NTVW4zcjd6alBXd3diM1ZUMEV6a0lRWVJMQnBoS2s4RkhpTXRxdVhXbU1ZM2pDeFhNR3podkFGWUUydXJKcm5oMC02blFUUzBFeE9FTy1peVB0M1dZMmlmbUtYN2JIUjJHbDMzdE43eVRlVWRneEdlbk5KYmJjaV9TMThfT0ZiUktoc1dHU2V5NzBOUHducEZrWkJzdTYtT3VfeFh4NWw5bWpiVXFfUkp4bVFaYnY5ckE?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-10T20:10+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台積電股利加碼變9元！史上最高 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxNa3RaUVd3NmV0ek1HSTM4UnVpSEJDMExqRUNkQ1BUSGNiSEJ3SnlTZl9PeFlMMU5PbURPM3dTTm1uQzdSbkVQcGEtbW04NllKcVFaMjh4emk5TnJvYjVpaG8yUUk4b2JkU29EWTdkdlJWS1p1eUR0b2pMc1NvUUFFMlctY09ZR0pNYkNEQ195MFhacmJhV1JvUFBRVDQyUVlVWGhtUGNVemZXOHRVc0p3aGh6NVVHOGNVZEctTDFLMjBmZVFjSGRNdl9uUGFiZGkyZmpyTHczSV9QTlJLR2YxYUpNYUFiX0dRZlJ1amlhZEJSSDVBT2JiVXBpZTkycEJtRnF0bQ?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-10T19:55+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "中國創新投資(01217.HK)10月末每股資產淨值0.042港元 - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFAxN2ZhM0RfVTNhTGJMcWJBbmdjRGtUWGJwYUp5Rk9VTDVEdF85RmUxV21sTjZvN2VoV2p1Z2N1TFBJSG1jNnVybU9DWjhmY1VDbVVfaXJuSHVZel8zUk1mRUxucFN6UFlYazV3?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-11-10T19:09+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -122,55 +173,7 @@
       "title": "台積電10月營收破5800億元！年增近60％ 史上最強 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMivwJBVV95cUxQdDBwcjhpR3VYMnhZUERmRnpRQmhvLVdkZFVrRXcySUY2RENJTFUwNTJhZWM4R1JCOU5ybnVYSFYtLUxobHI0eUNaUlg1dS1nY0dSa1NDTTNIVEJoUW1wekczcGJ1Mk5SVzV1TDN6dS01UzZRc3E3WWJEeHAzYkprcTVWWG9KVUh5UVlkbkcwUG5XcXZqUF8wWHZrcFNzVFBRd2gxVmdjVjdjLWRaQ1MwSWVsb0ppeEs5VmM2RnNBdUt1UGpvNjJJbzd0cVFTcFAtZEFsNTdyWG1XMEFCNC1rMTlneE5PUDMyLXdwS2g1WWpfZHNSdEU2QkUydVdDY3BrcVljTlM3NUtFUVVtNHJWWmRtRHFiMGFKX3BHbC05NmwyeWxLaWdLUVFNVXFZcFJDbzZBam40OG1YeFhkY2tV?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-11-10T13:37+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Hong Kong Stocks Midday Review | All three major indices rose, with the tech index up 0.7% - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOb3hoUFZZbVprdmt2VUdFR1JRYTB4OVotVEpDVXVPeVM0T0pudm94bVhIMHFoV3dQRXVEYUl4cnk2Z2h1VC1CWTlWS2xqdWY3ZXptaFBubGFmYXQxV0N3Z210SEgxd0RJNjA2ZElfQVNSWG85aWNlb2xGU0RUWDRmejRwUEtpVTRfbERFWmRfSWM5NnBOTVN3NnFwNFlIYVkzS1ppSg?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-10T12:12+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "The world relies too heavily on Jensen Huang; NVIDIA should mitigate the risks associated with having a single CEO. - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQRDFkb3B0WUtwbFpUVkhKY3ZlRFhfeU4zd3I3ZHJwT0Q4TjQxaUFKbUg2YVhyS3RXUHBMc3F4TVRZbWltN2s5T2d3dUZORzNLYTFTdVo2UzJINFlEeUN3VXlBNGVxNXhRMDR2SDJCWHhwRFhFal9UX0FnWVFyRzNReG9FTGIycEFMRjBpX2Z0c0IwNlJ4dTZFQzFiWkcyaEpXUTA4?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-10T12:03+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股跌太凶！政府出手「沒收空方武器」 限空令5大招白話文一次看 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiugNBVV95cUxQTFZuMjZmb0RZd0JrcEExdDFGRkVpNm9sNFFNWlFjbkhKMmQxTjRxaUxHSi1QVXRjOVRBVUtFRFU1YVlUTU16b2FWekh4ZEZJdENSY3h5R292djc4UVhZc3J6RjdSbFB3VzY3T3BZdXhhMV84NVFkR09mZHJsWVdndUpZU3hCYnl1OWNSRXAtbjY2ZnhLWGR5RHJRR0UtMkFaVDd2V3VJNndCRWNOX2d6dmlGZEZ2MV9sRnhjWGVRMGMwbU5NSTI3SThuZ3hSdDVCbjA5Uk00YkZYQzM5dHhzV0c0UVVVNGVDVExoQ0JaTlVtQTVmcVZwRE82TnlrMnRiTHU4eThRcTRsRVpVbFFOMFpNMVo3bl9iVUQtOXR2NEctZURSelpkSFVNbnBDNFMyV29lT2xuRVlyX2FoV0NoSVFJZGZYZV95NS1MalpOcEg0Rk1EZ3VTZWRwOWxwNW5BYlA5WE5xVjBDX3lCbVJUV1VMMDhmcnd1dVBxT3VQTk4tS2JpNXM3em1pcjBFbkRtbFk5RVRKMFdoOFNWRG5HRm8ya05zeTJtOWkyRXNsMnB3NE1Ga1dsQnZR?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-10T11:58+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股狂飆1960點！外資竟倒貨900億「真正買家是誰」 專家揭殘酷真相 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiiANBVV95cUxQMzF1d2xrUjFWckFfVUdyaTVzVENuSmE3Uk9aa0lRSUFRZmNPNlF5WmFvLWhjWDlaN0N6d2xWdGxhdk55OER0SDJfUXVnZ0FEak9VbHBIVVpFOFBWN3E4Y1NseVMtTDE4cWVpR2RKdTQtN1ljRjRJcEhZb2NCNnl1ODZmS1g4TlBSb3NSajh2SE5USkFiemhYSGdkNUpzRXRUMGYyVlM3NExFZC1ZYndGWkpMaDNWTS1kZWctSHlFRXgzOTBLR3JsSjFVaTQ0ZWw3SzF0bmhQR0gzQ0V5SUV3RHRXREN6cG01M29IMWVvLUNCNi1IUTBLM1JzZE5Zb3hPRTdPemxjSEhHdTNscF90N18yS3A0N0dDMTNlSXltbFhFdHJaSGpCOGtiVDZyRmo4dXMxN2FtdU1PMjRTLThqNFF2aENMQ25rLTVFbTM5VGVVbkhFdS1TNlhlN3NOVklaUFlPeFY2N3VPLXpGUDAya2hmQ3lQMmFvdVA0dTR6c0VwMGNRUjNhZw?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-10T11:58+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台灣微軟資遣6年女經理挨告！法院認定「未盡安置義務」 每月16.6萬薪資照給 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiwgNBVV95cUxNbDBPWklDenNuMG9WMk5neWZTWWZzaHJrQ3lQb0hhaEkxVUk5MTkxUm84dEh0dzFuWkhGOVh1b0pKdzBvcUZ6WGFjZ2tXVHRIbFZsT3pUR2tLckY3UzVCZ2QwYUhaVEdZMmh1T3Q1anJ0U1dHLVpCR0h6QS1FbmJsTHc0UW83eTdkclozdmJuZ1FKb0J4b2lXYUtSZTdHTk9LWXVQUEtVVkFMWGxFQUJrTndKazNjRFNzVGd3dVZFazRYaC00cENXZ184bmVFTWR5bWk0UWFoUVZMOGNPQkkyVGxJZUl3SVdtU0RZS0FYUEFzMF9YSlJJS19oMjFYTkE4eEZhYnliWHJ4dEdkV05oY2J0Sm5ic1NOdTZveU5qdzQ0OVpmQnplU3RnZldieHJUUnVBcGVwOUlTT1BycFJUbU5UQWdXQ19wa3NPYXNlZF9xS21GTnlSZkdnbkh4cVpMdDFEbXBxcmhncV9qdnlxLWdLM3BDNmJzRTctb1lZTDFCRFI0M3RNaWkxZXh6Q1VhNnhDYkRERVY3c1dzb21zdkt4VXFRS21sbEVlNkp0SVk5bDF3S1U5X0ZtTnEtaVRvdHc?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-10T11:46+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "黃仁勳風波壓不住台股！郭哲榮拆解3大利空雜訊 再曝10檔看好標的 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMipgNBVV95cUxNUWpDQnhNb0QtalVMNFE1d09rZTNrTFgyMnJrbHpzb0VTcTlCRU9ySVdWaHhQRjdZSzYwNjFUeTRsTnBhT3lDVmpPalNCTGRRVG93ajJROUdTWmJHcjlVVGFVQUU3dVRWYzFZRGV2OVlDeEwwTEtnZWdxMTZsaFlEUzhCVTI2UHlIMEtHQ0V4dnI5R01jdG5LaGNwR0FJUkh4S0oweWFFX2M2UjNvMExDcGw5Q3o5VUVhc1hLZFZ0cThSOGRyaG5UNGw3bG1QTFdSbWN6dUtPN0RjM05pcEJrUXZscC1WaFFSbTJOaV9pSDUzTkZOTTdWb1doNmpENTNKU25EcFdKSERLM1dqdEVNYUYzOXVZc3BkSmU4V09jMzVBY29UVHRyTmFET0dJY0U0eFRqSGdETWlCMTF3X3VuQnY0RGpjN2xmQldOa1B6V1NEVGtURW9VdlhLb2E2QnFJRG5MbTJKQ2I5T1ZTMjd5bzdQUEJyNVBOcEw2aDRJZVdUMWZtZTdleVAzRVc3Nk5JN2Y1SGVhS2ZTcmtRYlpNYXh1MlhTUQ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-10T11:16+08:00",
+      "published_at": "2026-11-10T18:43+08:00",
       "importance": 2,
       "risk_score": 0
     }
@@ -189,13 +192,13 @@
       "published_at": "2026-11-10T06:01+08:00"
     },
     {
-      "title": "美伊霍爾木茲協議穩定全球油市 降低原油地緣政治風險 - 蕃新聞",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFA3UGxwT3AwcGdxd0V1eWFrekhIZEg4OWJLclNvQ1hvS3pQT3FRN2hnZ2JHTlV3SHJJc191Q2VqcjBqQTl2SjhpVWE4a3B5MUc3TVE?oc=5",
-      "source": "蕃新聞",
-      "published_at": "2026-11-10T06:50+08:00"
+      "title": "原油價格預測：布蘭特跌破90美元創八月底以來新低，下一目標或指向80美元 - TradingKey",
+      "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOV181SUhDb2FlbGdjZlVsTmpiTzV3RjFpY3NwMWx4ODlGNGhNbWY1UFJ2VkMxR2FlS2tHY3FHRzJPQWNnOGNxc1VyeGFmWlltV2tSOGw1a0s1YWpoSlJjXy05MHI5bUt1QmMwVzFrTlA4TThfdGh6YnhFSVY2MHNXZnZ4WGxWV1JKN0NhM1BYaVA3XzlEa3dlbW1IUWpxcnNBZDJtMjVFLVBVZ0NHU1A3UVExaVh1WS15QkphOURSOHlFc19XbWdRQ2hnUWZ0MldrdW9FRnJ3ZUtnOUlxd1JaOTROcWw5d1VfQXR5Y3N3?oc=5",
+      "source": "TradingKey",
+      "published_at": "2026-11-10T18:18+08:00"
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-11-10T17:28:48+08:00",
-  "checked_at": "2026-11-10T17:28:48+08:00"
+  "updated_at": "2026-11-11T01:12:06+08:00",
+  "checked_at": "2026-11-11T01:12:06+08:00"
 }
