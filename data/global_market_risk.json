@@ -1,45 +1,47 @@
 {
   "schema": 1,
-  "risk_level": "green",
-  "risk_score": 0,
-  "risk_reasons": [],
+  "risk_level": "red",
+  "risk_score": 3,
+  "risk_reasons": [
+    "出現重大風險新聞"
+  ],
   "ticker": [
-    "全球市場正常｜費半 +6.5%｜NASDAQ +2.0%｜日經225 +1.3%｜KOSPI +7.1%｜台股加權 +3.6%｜恆生 -0.5%",
-    "全球市場正常｜美債10Y 4.98%｜VIX 18.7｜WTI原油 86.23美元 +0.2%（高於常態，觀察）｜布蘭特原油 91.85美元 +0.4%（高於常態，觀察）",
-    "全球市場正常｜油價觀察｜原油價格預測：布蘭特跌破90美元創八月底以來新低，下一目標或指向80美元",
-    "全球市場正常｜油價觀察｜布蘭特原油：伊朗局勢降溫的希望帶動油價下跌 – 荷蘭合作銀行",
-    "全球市場正常｜台灣半導體為何難以取代？侯永清：工程師具備「合作DNA」",
-    "全球市場正常｜台灣半導體產業3大挑戰 台積電侯永清：缺電、缺人與少子化",
-    "全球市場正常｜Alibaba Announces Multiple Positive Developments: The New Qwen4 Model Is Officially Launched, a",
-    "全球市場正常｜〈台股盤後〉台積電漲110元領軍記憶體、散熱族群 飆1545點收復4萬4站回10日均線",
-    "全球市場正常｜台股強彈1545點！最會賺錢12檔股票群聯EPS 138元稱霸| 財經",
-    "全球市場正常｜台灣氣凝膠11/13登錄創櫃板"
+    "⚠ 全球市場風險｜費半 +6.4%｜NASDAQ +1.1%｜日經225 +1.3%｜KOSPI +7.1%｜台股加權 +3.6%｜恆生 -0.5%",
+    "⚠ 全球市場風險｜美債10Y 5.00%｜VIX 17.7｜WTI原油 88.30美元 +2.6%（高於常態，觀察）｜布蘭特原油 94.10美元 +2.9%（高於常態，觀察）",
+    "⚠ 全球市場風險｜油價觀察｜美伊霍爾木茲協議穩定全球油市 降低原油地緣政治風險",
+    "⚠ 全球市場風險｜NVIDIA and Jensen Huang Sued by Shareholders: Analyzing Wall Street’s AI Bubble Warning, CEO Su",
+    "⚠ 全球市場風險｜NVIDIA shares fell another 5.5%, wiping out hundreds of billions in market capitalization, as h",
+    "⚠ 全球市場風險｜Fear is the biggest bear! Morgan Stanley urges buying into semiconductors at the bottom: shorta",
+    "⚠ 全球市場風險｜Taiwan Semiconductor Manufacturing Co Ltd(TSM)股票11月11日開盤上漲3.15%：釋放什麼訊號？",
+    "⚠ 全球市場風險｜說來殘酷但很現實 外媒：沒有黃仁勳 台灣晶片大戲照樣精彩！",
+    "⚠ 全球市場風險｜Stock market today: Dow, S&P 500, Nasdaq futures rise as Nvidia stock recovers, 10-year yield n",
+    "⚠ 全球市場風險｜Dow Jones Top Financial Services Headlines at 7 AM ET: Western Union Scraps $500 Million Intern"
   ],
   "markets": {
     "US_SOX": {
       "label": "費半",
-      "price": 9998.33,
+      "price": 10678.534,
       "change_pct": 6.4
     },
     "US_NASDAQ": {
       "label": "NASDAQ",
-      "price": 25065.875,
-      "change_pct": 2.0
+      "price": 25530.09,
+      "change_pct": 1.2
     },
     "US_SP500": {
       "label": "S&P500",
-      "price": 7520.93,
-      "change_pct": 2.0
+      "price": 7613.52,
+      "change_pct": 0.8
     },
     "US_DOW": {
       "label": "道瓊",
-      "price": 52231.89,
-      "change_pct": 1.8
+      "price": 52282.68,
+      "change_pct": -0.2
     },
     "VIX": {
       "label": "VIX",
-      "price": 18.71,
-      "change_pct": -3.8
+      "price": 17.71,
+      "change_pct": -9.0
     },
     "JP_NIKKEI": {
       "label": "日經225",
@@ -63,26 +65,106 @@
     },
     "US10Y": {
       "label": "美債10年殖利率",
-      "price": 4.983,
-      "change_pct": 2.4
+      "price": 4.998,
+      "change_pct": 0.2
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 86.23,
-      "change_pct": 0.2
+      "price": 88.3,
+      "change_pct": 2.6
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 91.85,
-      "change_pct": 0.4
+      "price": 94.1,
+      "change_pct": 2.8
     }
   },
   "active_news": [
     {
-      "title": "台灣半導體為何難以取代？侯永清：工程師具備「合作DNA」 - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1kQzF0TzJqUDZsRXhrZWdaNVlYTjlMTjVRX0UyWWo4a3dQaThsRGN1U1lNRl9BNjd6Zkoxc0x6LWpaWm9leVEzeEFOM09kWVZFUjFwdHBkclA?oc=5",
+      "title": "NVIDIA and Jensen Huang Sued by Shareholders: Analyzing Wall Street’s AI Bubble Warning, CEO Succession Suspense, and US-China Geopolitical Conspiracy Theories - Mashdigi",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOY0U3Z3NBM094TXNYTlJtdXphb21zQkYyd29rMUwtS3N6UkY4SjcwUnV6ZDdua3VfU2R1dHV6U2ZhRUtLTW5ITGo2elFUQkhHdWkxQjNFWEJaSVlMOC1hNWM1LXJUTTBjZUZlT3UyOFJGV3BRR1AxMzh5R0UxLTloOUp3?oc=5",
+      "source": "Mashdigi",
+      "published_at": "2026-11-11T14:26+08:00",
+      "importance": 5,
+      "risk_score": 4
+    },
+    {
+      "title": "NVIDIA shares fell another 5.5%, wiping out hundreds of billions in market capitalization, as high inflation and Governor Waller’s hawkish comments dealt a double blow to Wall Street. - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNdVNQbmRpaktaTnpyX2ZLMlhnN3N5bFNja1B3Mk9aVnE0aHpxTzVLbUJYaklLNHFLbUFpTmppYzlJeUtwbFRmZUJzUDJ5dTRZS0JWZy1RLTV3YnVMZk5uUnVlV2VJQXRLRkNQM1I4NTF2M2VaN0ZpdzV2cml4OWJ4MVA2YzVwWVhfcUpGUUpOZ2ZEb1ZrSXNNQlg4M0M?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-11T12:35+08:00",
+      "importance": 5,
+      "risk_score": 2
+    },
+    {
+      "title": "Fear is the biggest bear! Morgan Stanley urges buying into semiconductors at the bottom: shortages of land and electricity are not issues, as even approved projects cannot be fully supplied. - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQczlBX1pTc1JWNFdiRlN3NUFQZDMtTTNDQkVZSUtPU0pkX2dQVVZVRWhfQmJma29GVGhHZGx1SHRna2tvVGVfMUxUdFp0bkxXUjk0dlRtVC1UQU1mV2ZyRlhQeGlrTE5xZ3AxV3FYNjFYem1KclhWTVdIZmdwLU9NVzRZaGdqM3FWdW9JbVVFZUdNbmZQUzlrb1ZzZzBBUFFscHc?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-11T13:57+08:00",
+      "importance": 4,
+      "risk_score": 2
+    },
+    {
+      "title": "Taiwan Semiconductor Manufacturing Co Ltd(TSM)股票11月11日開盤上漲3.15%：釋放什麼訊號？ - TradingKey",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOY1BfNEt2THdQcGU2UnBEdzFVcFNmbk9RZnVwVWhjeWxzOTVLZ3o5SHN3Q0t6WEVPQkdka0pIeUhoaHJ0TUY1RVI3SHV2aEstLUFDT2loU2NkLXpmNkprMEpIODJXWk5seHBydWNQbVdzWHg5cXpYZUxTYWh2cm5GVko5WTlxYXJjYkZ2MUQxOGRCdmNO?oc=5",
+      "source": "TradingKey",
+      "published_at": "2026-11-11T22:50+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "說來殘酷但很現實 外媒：沒有黃仁勳 台灣晶片大戲照樣精彩！ - 自由時報",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBvaHNiYmtQTnZGcEJXVzFtYldoODNPSF9CbmNtdWdaOXdteDNRcmZEOWNSOUpIalBST3FvQ0RQLU9DdDJ6YVozV1lfcEl5Y01oU1J0VmFXdGM?oc=5",
       "source": "自由時報",
-      "published_at": "2026-11-11T16:46+08:00",
+      "published_at": "2026-11-11T21:50+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Stock market today: Dow, S&P 500, Nasdaq futures rise as Nvidia stock recovers, 10-year yield nears 5% - CMoney",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1vZVdCRndFV2dNZTlPalB6UG1iNUtyLW5EQ1lHTkFyUEx4cDZVZ0NxQU1ZWC1POEd2M1JEX2NRb3EzcFhES1FrMFd6VG9TeW9IZW81MDhDZmM?oc=5",
+      "source": "CMoney",
+      "published_at": "2026-11-11T21:07+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Dow Jones Top Financial Services Headlines at 7 AM ET: Western Union Scraps $500 Million International Money Express Takeover | Nasdaq-Backed ... - Moomoo",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNSTRkVTBtbVdPa0s2VUhtSWprUk1KRkUzc1E4Z0QxMVA2WUpJdGV1b2VnY2tsTXJEN1Q3cEF5SHJKeDJscFZZSVBJMkJtUGYxN2F6RmpzX2dBNEFzX3ZNdUducGdrLUxwN2tWSHRZQjk5R1ZLOXVHM3JYdXlhUkJybnFpUnZ3N3l1WS1hdlFXcDczUmZEN0dBNUh4M3p2VnNkSWdwQw?oc=5",
+      "source": "Moomoo",
+      "published_at": "2026-11-11T21:01+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "中國天弓控股(00428.HK)10月末每股綜合資產淨值0.77港元 - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBYQzlGNTJ2d0M2b1pGWXFqQWFvU01hTkdaSWd6Wi1mZF83bVp5ZWRjWUN0US1Ld1RCRTJEQmY1VjJhOE9uY0docTdHTmwtNWtzT2FzZVhtTVE3WHN3UGg2US1tZlc0NG9zZTFr?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-11-11T20:39+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "明天台股繼續反攻？台指期夜盤站上4萬4500點大關 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMixwJBVV95cUxNaVlJS3M5bVUzMEpZUGJCQXhPMGFSRkR0UXdxU1hTdGx3TVJNVWEwWU9vRHFwd1NiT0h5MWlDMHRxZE9POHNxMlJSbnR1ZUVDc3JGM2Q0ajdlM0tOd1l4cWw0RGFxT0tMdlM5ZTlqY3pLaHZnNGFuMEdtaDRDS20xTm9EQUU1cGdOMHVSa3lPWDRwNV9Sd21PWjlOWmNLa2R4R0hqTks5ZWwtaFpXeDdOaFRrUUtJb2VnY3VfYjd2NE5vU1AtRVlXZFhLNzJacDhNU2I2a2t3QzdsOHJWNTNSc0pOeHlsYzVOQ1hiX1JsTGpaLUZVemxNNnFDSWY2Q3V5OGdFUXJtd01UUThPSGdlOXBZOGxuRG9PSUZOMDVkcDRXV3JGUkFOdlF6dmF2WFB2Yko2cDRpQXI2aTZ3blFlalFFT3REb2c?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-11T20:16+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Global Equities Roundup: Market Talk - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPVWh5aHo0ZWtlcHpJbHpiUE9jV1Z0Z0g2X2FKam9aamtTbTJySUNvaVF2U3c5UllfQVlZSTdPR09GbUFHYXJZV29jV2Fub0lKZ2NCNkxmc182ZGRjaDh3Rm15M29ldXlvX3BwT0FsQWZQeGIyLXhKbjhqT2p2cE9KS290SGY?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-11T17:26+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "終止連23賣！外資回補台積電 賣超力積電、仁寶、南亞 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi0wJBVV95cUxQSEFjVkdWaHBuNkVadzA3dGduODRHQ1Rkem53NjcyS2tTUHRqZjRtOUQ1Z1ZjY1FXQklaNVR4a0FvWW5MN3ZwbWYzRFBHVFBLWW52eEpxbk0wZ01FQmF1SWZyb0RGaURBSDVlWjM0LUptRXdHM0I4Szd0Wi1fWGk2S3owdk54emZUaDdCQW5icXBJTWFLLWxhSGFLNFEtY0RsSWZnbzBCdUdEWHlMVGpLWkxQS3EwTV9ETjU0VzRtdlp3LVJsREJZMUJmQzk1V3pNcWg0d3FQLWtuT0d2UWJfVnJaanUxT1NqWHRtbU56a2ZEcTJKMk9UcVRmcW02ajVpV2NlYlg2TnpCYnRHMmhwaHZwSktISk83ZEQ5VHBUR1MzNnRHcFhNcEM2VnoxMjNIX3hqN2ltN2g2Ujh5UkJIMEpYLXZ4WU5EUHFUcnFFSzdTLXc?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-11T17:12+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -93,101 +175,9 @@
       "published_at": "2026-11-11T16:34+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "Alibaba Announces Multiple Positive Developments: The New Qwen4 Model Is Officially Launched, and It Plans to Spin Off Its Chip-Leading Subsidiary \"Pingtouge\" for an Independent Listing in Hong Kong - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOVmwxVmIxd3RVSVZJUldvSnJqczBRNkNxUjc5ZFNBS3dPSWducmNjMjNxakxXczM2dE5fblhCUkVZLTlJX0Z2enJtRUp4ajNLallmLWdSMWNjdWhod0NLVFUtX0dRVTVhV2dnZkN0OWVfTVpQNnMxdVBZOVpqVFcweno4OGVXMmZxQVBnQ0FOUzFwbG50QURyNWhHNnhSWEYtNTRHbFlPNmFHLUlNVlhidmFQT3A?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-11T15:04+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "〈台股盤後〉台積電漲110元領軍記憶體、散熱族群 飆1545點收復4萬4站回10日均線 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMivgNBVV95cUxOYkJoWXhQeE1jdHpfZjFKSUZEV1ljOWJKcU1vZk9pczZmbEdIMGxMLXhiUFFuU0Z0VmJlNFpxaW9wUTloX2JYUVNSVXVFY0txS2tTWGxLNGIwTnFGOWF2ek9XTDUxYVlGT1E1YnlnSGpNWUJPX3JSRGxLNTBrTUJKOHdJZGdJZ2FmcFFWVm9YN1I4cU9RbHdmRGEtM3RoU2hWejhRVTRxSThaVjVrczF6RHZBZmhBRkFuZDhhZXM2ckFQV3J4eHBaREpCMER2c0U4cmE2UmlTNl9ZOURRZ0tMUzJtSU9jZnRIQU5IbnNXbC1NOE9sdVUya2xuMDkzeXVBZFBudEZrUTZOZ1hiMFFhNEpfME5wVmdnU1NQUUxnNFBOUkxJQi1HS1hqdnJHSWctMWdWQzdEWGNuU1lvREt0QmxUZDJtRDFSTUwzLWkzSV9IX1JVRlFscEJtREtiajFkbnM1TnplVVZzaXNRZmozRFdaRDJwQVFGSXFMZ3MzN1R1MFVzRjZkN3hEYlkxODNHWDZ5VTB5eGJDRl9FeHBkZzZibFBObHdPajEtaUt2X1J2TzhkS09waDA5cWJIQQ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-11T14:42+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股強彈1545點！最會賺錢12檔股票群聯EPS 138元稱霸| 財經 - Newtalk新聞",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBHQmliU1NfT1lZNGdXMmVaVWYzZk8yUWIyNVBjaVJ4UHdfNVJxTDFIczZqd3htR0ZzX194VXVNc3JoMHpXWWc1Ui1PWVphNnE1LW9aamtGQ0NTeXc?oc=5",
-      "source": "Newtalk新聞",
-      "published_at": "2026-11-11T14:39+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台灣氣凝膠11/13登錄創櫃板 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOd3ZuZnE0WG5HUlpfUUFQU2o1alFVZXJqLTJORjRQdF8xR3p3dVc5QUZ2Rk9naExHNVkyT2lLYkpzdG1uSGM0Z2NSdmF6TEI1TzRURVc0NGhwazlrVUpkaEluVS15QUZDdWdSeVR0Q0FDVDZRWnFQaWtadlhyeTNGR25ReVRJN1owQVZzQzhMT3dYQWtGYXpYZ3NzMzJzRWpqNzZRcXN5ek1GNE0taklYR0N0aXowQXFoNU1OZlNXSjd6NktYWGRMZG5rd2E2eENGd3VBc2x0d3pKUQ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-11T14:05+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Wall Street’s dream of an AI computing power futures market faces another setback! U.S. regulators have delayed approval, with the first trades not expected until at least 2027. - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQQm9rMGhhdXpWZl9ZQy0xdHU2VXBIVER2Zkh4QklyN0FlUVhVU1UwNWRGdWQwZDEwOVpHRENYa0xlZzlOWnRncGhQM1c0UHdtYl9rTlFSTEtVSWJ6NGI0NlAxYjV3aDAyeTE5S3FVQWpXaG9FQmlwX1VXbjZkS3ZQR0c1Q2t3UUhWS1RWS0xyczVmRGF4MzBCQzMtNA?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-11T12:13+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Hong Kong Stock Midday Review | All three major indices fell, with the tech index down 1.36%; tech stocks declined, with Meituan dropping more than 3%; optical communications stocks rose against the market trend, with Cambridge Technology up over 16% - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOSUJLX0Rwc0ZWelpJOE1iS0h5Z3RGTVlGZ1o2Q2tuSmNreVpqOXdXYWg4dUhHQlgzWUljWnhaeTdBYWRGZGN3Rmp5SGd1ZTZ6elM5b3dqVXJjUHNPSkJudFFsV0xLbU05dE1lT0cxTlliWGc4UWtFT3RZcEtSUDNkbEY2UG5FUmJSNUxJMjdCbllha1BDX0tLODRjdE9JVkxlNnZF?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-11T12:10+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "大摩：中國企業CIO下半年調查見IT預算回升，應用層料成AI下一階段最大受益者 - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBndzF6cVFhc2s3b251U3JSWGFlMm43bzZ1QkgwTlpjN2x4aWpSZGw0Zk1fTFVDNW9nMVRsVlNXTHdlYzVrbWpZemRoaWxsM1JmcWtVOVRHUENILU5UekVWaE5YbkRCS3ZDVTRN?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-11-11T11:14+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Hong Kong IPOs are picking up! New Hehua was oversubscribed by more than 2,100 times, and its share price surged over 90% during trading on the first day. - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQMmRVdHd3Q29MQ3RGWXBjdTQwZjlqMURGbWlBV2NUaFN1MHdLOC1jMUVNTzg4ci04ZkhOTlpESjR1V1JyOGVvQlZKbnJFTWVqSkx3NXE3b3RaRk8yUG5adHpsR0xuMS1rQk1BSkNidGYzUUZZRkMxcXRBSmhlWVFVMWp6bGdOYXNRTjBxWGZ6WlM4UEhSTXNXWjhCTlBSRmhnMHM4?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-11T10:26+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "【台股暴彈 5000 點還能買？】台積電、聯發科非首選？第二階段上漲，3大飆股族群準備接棒！ - 鉅亨網",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9MZjBwSHUzek9IOUVFTC1PWWlRZXM3Q2NnTnVtY1czVUdmMlpmRXlfd3dkQ2NZVG1rbFJUVHdDazdZXzlIYTk3RjNQZThCSms?oc=5",
-      "source": "鉅亨網",
-      "published_at": "2026-11-11T08:28+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "新台幣面臨資金外流壓力 外資連八日賣超台股 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMizAJBVV95cUxPV2ozQ01KNEZFTUFJcXhWWF9tWW80SlF5c2kwMGh2SmRlQng0YW9oUEZOZkEwUjJfejNwY3VGYkhRWXhxNVlrQnJfdm80YVhJYXJXX19zUVFsNEd1b2JWZW9xMnRYeWQtU05GR19uekZ2WFB5ME9EVjFQVTZCd3JiY1ZVSW1PbHZwNnkyVTZwam0wV1VQTFlTQXJoaVZJZnBkWTRXRE5zN1dFVS02S041amM2cDFGZ2IyVk11WGxaWXFlWTFSaDZ3cS1COWg5c2JrUG15aTJoWmkyQ1Nmdkx5QVBSSGgtRnloTTE2VjRnRTV3TVN4NUdFRHpIOGp0czVqV0pLdDFWYWJxOWdqcGVzeVJ3Q1JXeXc3dVNMZE01SHlsaVpET0xIaV9YeXNOSmZNUjdLb0FMMlE0V3FKREQ2Tk9aSjRQRkZHaTF0bQ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-11T07:22+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "oil_watch": [
-    {
-      "title": "原油價格預測：布蘭特跌破90美元創八月底以來新低，下一目標或指向80美元 - TradingKey",
-      "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOV181SUhDb2FlbGdjZlVsTmpiTzV3RjFpY3NwMWx4ODlGNGhNbWY1UFJ2VkMxR2FlS2tHY3FHRzJPQWNnOGNxc1VyeGFmWlltV2tSOGw1a0s1YWpoSlJjXy05MHI5bUt1QmMwVzFrTlA4TThfdGh6YnhFSVY2MHNXZnZ4WGxWV1JKN0NhM1BYaVA3XzlEa3dlbW1IUWpxcnNBZDJtMjVFLVBVZ0NHU1A3UVExaVh1WS15QkphOURSOHlFc19XbWdRQ2hnUWZ0MldrdW9FRnJ3ZUtnOUlxd1JaOTROcWw5d1VfQXR5Y3N3?oc=5",
-      "source": "TradingKey",
-      "published_at": "2026-11-10T18:18+08:00"
-    },
-    {
-      "title": "布蘭特原油：伊朗局勢降溫的希望帶動油價下跌 – 荷蘭合作銀行 - www.tmgm.com",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQMS0xYmJuOEZrSGxWeTcwcE50QnhLT2JkbC1VVXhoeE4zbnJpS3dQdHFFb3FMZlJnRXdqOENvTWE4WVExWFRSMGR4WkMxNDVuTUlkUmwxY1llSlYtT1lIY1dsUmNBYkl6bDgtR1pWZDJvSlZ6eWZwQ1VrN1BacDhaejg3aklmeUV3aEV3bFFZYXdLb3VLX0RBOHlzdUh2NE9XVVJTSG5RQWRDdzJZUFVuQk9CRC1qWi1kU0FkaWtlN3k?oc=5",
-      "source": "www.tmgm.com",
-      "published_at": "2026-11-10T21:41+08:00"
-    },
     {
       "title": "美伊霍爾木茲協議穩定全球油市 降低原油地緣政治風險 - ENN台灣電報",
       "url": "https://news.google.com/rss/articles/CBMiOkFVX3lxTE5SaDFpOXRvNWlXdjkwN1k1em83dU40eHo0dy1talhfMmJaZ3kzdFQ0SURjSXlLX0N2LUE?oc=5",
@@ -196,6 +186,6 @@
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-11-11T16:48:48+08:00",
-  "checked_at": "2026-11-11T16:48:48+08:00"
+  "updated_at": "2026-11-12T00:38:49+08:00",
+  "checked_at": "2026-11-12T00:38:49+08:00"
 }
