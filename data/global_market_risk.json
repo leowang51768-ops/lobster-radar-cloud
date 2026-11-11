@@ -6,42 +6,42 @@
     "出現重大風險新聞"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 +6.4%｜NASDAQ +1.1%｜日經225 +1.3%｜KOSPI +7.1%｜台股加權 +3.6%｜恆生 -0.5%",
-    "⚠ 全球市場風險｜美債10Y 5.00%｜VIX 17.7｜WTI原油 88.30美元 +2.6%（高於常態，觀察）｜布蘭特原油 94.10美元 +2.9%（高於常態，觀察）",
-    "⚠ 全球市場風險｜油價觀察｜美伊霍爾木茲協議穩定全球油市 降低原油地緣政治風險",
+    "⚠ 全球市場風險｜費半 +5.3%｜NASDAQ +0.8%｜日經225 +1.3%｜KOSPI +7.1%｜台股加權 +3.6%｜恆生 -0.5%",
+    "⚠ 全球市場風險｜美債10Y 5.00%｜VIX 17.5｜WTI原油 86.42美元 +0.4%（高於常態，觀察）｜布蘭特原油 92.63美元 +1.2%（高於常態，觀察）",
     "⚠ 全球市場風險｜NVIDIA and Jensen Huang Sued by Shareholders: Analyzing Wall Street’s AI Bubble Warning, CEO Su",
     "⚠ 全球市場風險｜NVIDIA shares fell another 5.5%, wiping out hundreds of billions in market capitalization, as h",
-    "⚠ 全球市場風險｜Fear is the biggest bear! Morgan Stanley urges buying into semiconductors at the bottom: shorta",
+    "⚠ 全球市場風險｜Nvidia, CoreWeave, Nebius, Teradyne, Riskified, and More Stocks That Explain Today's Market -- ",
+    "⚠ 全球市場風險｜〈台股盤前要聞〉廣達明年AI伺服器營收年增高雙位數、中信金前10月加計FVOCI股票狂賺1488億元",
+    "⚠ 全球市場風險｜South Korean Shares Close Higher on Technology Stock Gains",
+    "⚠ 全球市場風險｜台股明天要噴了？CoreWeave營收暴增168%點燃AI行情美股費半狂飆3.42%、台積電ADR也大漲3.40%",
     "⚠ 全球市場風險｜Taiwan Semiconductor Manufacturing Co Ltd(TSM)股票11月11日開盤上漲3.15%：釋放什麼訊號？",
-    "⚠ 全球市場風險｜說來殘酷但很現實 外媒：沒有黃仁勳 台灣晶片大戲照樣精彩！",
-    "⚠ 全球市場風險｜Stock market today: Dow, S&P 500, Nasdaq futures rise as Nvidia stock recovers, 10-year yield n",
-    "⚠ 全球市場風險｜Dow Jones Top Financial Services Headlines at 7 AM ET: Western Union Scraps $500 Million Intern"
+    "⚠ 全球市場風險｜電電公會首部TEEMA白皮書 Taiwan+N策略促台灣成經濟日不落國"
   ],
   "markets": {
     "US_SOX": {
       "label": "費半",
-      "price": 10678.534,
-      "change_pct": 6.4
+      "price": 10564.111,
+      "change_pct": 5.2
     },
     "US_NASDAQ": {
       "label": "NASDAQ",
-      "price": 25530.09,
-      "change_pct": 1.2
+      "price": 25466.19,
+      "change_pct": 0.8
     },
     "US_SP500": {
       "label": "S&P500",
-      "price": 7613.52,
-      "change_pct": 0.8
+      "price": 7619.38,
+      "change_pct": 1.0
     },
     "US_DOW": {
       "label": "道瓊",
-      "price": 52282.68,
-      "change_pct": -0.2
+      "price": 52486.49,
+      "change_pct": 0.2
     },
     "VIX": {
       "label": "VIX",
-      "price": 17.71,
-      "change_pct": -9.0
+      "price": 17.49,
+      "change_pct": -10.2
     },
     "JP_NIKKEI": {
       "label": "日經225",
@@ -70,13 +70,13 @@
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 88.3,
-      "change_pct": 2.6
+      "price": 86.42,
+      "change_pct": 0.4
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 94.1,
-      "change_pct": 2.8
+      "price": 92.63,
+      "change_pct": 1.2
     }
   },
   "active_news": [
@@ -97,18 +97,50 @@
       "risk_score": 2
     },
     {
-      "title": "Fear is the biggest bear! Morgan Stanley urges buying into semiconductors at the bottom: shortages of land and electricity are not issues, as even approved projects cannot be fully supplied. - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQczlBX1pTc1JWNFdiRlN3NUFQZDMtTTNDQkVZSUtPU0pkX2dQVVZVRWhfQmJma29GVGhHZGx1SHRna2tvVGVfMUxUdFp0bkxXUjk0dlRtVC1UQU1mV2ZyRlhQeGlrTE5xZ3AxV3FYNjFYem1KclhWTVdIZmdwLU9NVzRZaGdqM3FWdW9JbVVFZUdNbmZQUzlrb1ZzZzBBUFFscHc?oc=5",
+      "title": "Nvidia, CoreWeave, Nebius, Teradyne, Riskified, and More Stocks That Explain Today's Market -- Barrons.com - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNMWEwNDcxTlQ3ai11SUstZms3d2lERy10T0FvazlzZ0JvSHk0RkpVTnVsUjhTdHNSdUpsbmlzd0hYbkRHeDE2QnFGMWlkR1FTZGQyNGx5Rml3bUdJd19LOUZNSm95WXY3N3V1Q1MyelZHQVYxRzctMUFRVnNaZzdYMXVDdU95YU5IbzBNbXg0RTFKVDExdzB3b0F5and5TUo3MS1hcS1KUXV4NTBfQlVnN3Y5ejE?oc=5",
       "source": "富途牛牛",
-      "published_at": "2026-11-11T13:57+08:00",
-      "importance": 4,
-      "risk_score": 2
+      "published_at": "2026-11-12T05:17+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "〈台股盤前要聞〉廣達明年AI伺服器營收年增高雙位數、中信金前10月加計FVOCI股票狂賺1488億元 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMihwRBVV95cUxOWWoyUXZMb3M3dVpGdHpCRnJIY1lvN0Z1OVB0UGZZRkx1R0duREY1TXcwSGNlZVI4blVtZTVJWWlxY1BmcG5hRTJ2OUNhT0JNSnhnVXBZb1VlUW9IUzlicUNEeHlzTjRTcHk2YnNWUkZzbWVxb0RFNkFNWks3c0xfeFNqSy1zenEtUEFmZkE1ZVd5WW5aMU1RUWI0RXFTNk1idUZTemFiRXlyVFNGeTI2M0MwUEJZdk5HeklSRTJ2Y3BPS3ZMREw0czZIeUoxYURoRXd1RHhJMHYxenJmQk96emxfaTJNUG5ueU1NRGZraWIwVFdhWjB2SkdIaUNPQlJ1aGVSZUgzdDBkd3VTZThwWlMyVDBkRzVRb1VRMlNvXzlwLWUtY09yYnhEOUVXR2tHYmVCQ3M3dHV6SXlfTHQ5S3kwcmlyN0k0YW1Fc3B5cVBheVdRTEw0VDdYR3FzSG1QTFhDSm5KR2VScXlXUjZYeWJOcFRVdHItQTNGcjMzUlNBU3NiVDRvUF9YNFNSSDBqT25vdWR6bkFWLVVWRVFYX2NnRllCRFljNDNSS0tBQnJBcEhIb1NjTEdBUjFuMDk3UW9TVDRJcDAzbERtdXBHRlBYbkxRblp2SVlxOENvYUhRVFNIOVNaNXFIN2xucHo1dzdyM09acDVrTnRVQllBRFBtemxfcDQ?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-12T05:10+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "South Korean Shares Close Higher on Technology Stock Gains - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNdnFTUGVhUjNiclZBS2lhT3lNM2Nzc0d3UERxOFZ4dmdvZ2lBZjh2aURXYUtpZUNpbFRRemwyV2JxbUtmaVZReHc4LWhYNGV6WnZ5bF9PbWFVajJRVGdKckhsamNCeDZZYnJKU2NYemZPRVNYTlhIeC0wQ1hZZUVTamJUTFJib2hEbjh2bmJVN3djQ2Z3XzNUY1ZoMHFCaHgtWTRj?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-12T00:55+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股明天要噴了？CoreWeave營收暴增168%點燃AI行情美股費半狂飆3.42%、台積電ADR也大漲3.40% - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi8wJBVV95cUxOdEJ5UWxKM1ItcERIV0RFX1p6X3lTU3daaGI2c3FNR29DZFpvV1BKUUNqRzdURko4ZzlSTWpDQjNTSS1zX3NIeVZfTnZESFMzUGIzdk9Va3ROWTQ5SHFKeGtWU1pPSVp4TUM4TUcwUkJIOHRoYjJvRkYtbzh2ODdhSUZkeWVKa3NIbW1LbjJBWUc4YVBsVnpOTGZ2eFh6RFAwOFlvWHRDMVp0QVJ3ZVBlRXVQQ2NrZDY4bWZLTHJNa2VMSjdXYVV0LXdEX0k5dDQ5X1pCSzVmWExhTF9fQVVjRElVbUNUdTlmVW40WGRvZEVpU3pJQUliZFpPT1pWbHZHNE1CZFNib3RhbmpCZU9mcE5PQTVEcTlzRktQU0pUQ3haeDhCT2NCT2lrRHJENS1hb08zV3FvbERjRDBhWU5YRUh4aVJObDUzZW5EaWZSX3AtVzY0Ykw0WkpYbHc3WkpQb2NRU3pXNXhHbVNrUHF3b3RNYw?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-11T22:57+08:00",
+      "importance": 2,
+      "risk_score": 0
     },
     {
       "title": "Taiwan Semiconductor Manufacturing Co Ltd(TSM)股票11月11日開盤上漲3.15%：釋放什麼訊號？ - TradingKey",
       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOY1BfNEt2THdQcGU2UnBEdzFVcFNmbk9RZnVwVWhjeWxzOTVLZ3o5SHN3Q0t6WEVPQkdka0pIeUhoaHJ0TUY1RVI3SHV2aEstLUFDT2loU2NkLXpmNkprMEpIODJXWk5seHBydWNQbVdzWHg5cXpYZUxTYWh2cm5GVko5WTlxYXJjYkZ2MUQxOGRCdmNO?oc=5",
       "source": "TradingKey",
       "published_at": "2026-11-11T22:50+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "電電公會首部TEEMA白皮書 Taiwan+N策略促台灣成經濟日不落國 - 自由時報",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBtM0ZsSTlZNnM2WS0zZVI5bGhhUlhMeWhEVGtDZG5XZUZtLW9CWFBrTEoxZXVaU2tZVEttRmExOHh5Yk56TXAzVktDeG1ULVFNY3RYMHZXNHc?oc=5",
+      "source": "自由時報",
+      "published_at": "2026-11-11T22:00+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -143,49 +175,10 @@
       "published_at": "2026-11-11T20:39+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "明天台股繼續反攻？台指期夜盤站上4萬4500點大關 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMixwJBVV95cUxNaVlJS3M5bVUzMEpZUGJCQXhPMGFSRkR0UXdxU1hTdGx3TVJNVWEwWU9vRHFwd1NiT0h5MWlDMHRxZE9POHNxMlJSbnR1ZUVDc3JGM2Q0ajdlM0tOd1l4cWw0RGFxT0tMdlM5ZTlqY3pLaHZnNGFuMEdtaDRDS20xTm9EQUU1cGdOMHVSa3lPWDRwNV9Sd21PWjlOWmNLa2R4R0hqTks5ZWwtaFpXeDdOaFRrUUtJb2VnY3VfYjd2NE5vU1AtRVlXZFhLNzJacDhNU2I2a2t3QzdsOHJWNTNSc0pOeHlsYzVOQ1hiX1JsTGpaLUZVemxNNnFDSWY2Q3V5OGdFUXJtd01UUThPSGdlOXBZOGxuRG9PSUZOMDVkcDRXV3JGUkFOdlF6dmF2WFB2Yko2cDRpQXI2aTZ3blFlalFFT3REb2c?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-11T20:16+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Global Equities Roundup: Market Talk - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPVWh5aHo0ZWtlcHpJbHpiUE9jV1Z0Z0g2X2FKam9aamtTbTJySUNvaVF2U3c5UllfQVlZSTdPR09GbUFHYXJZV29jV2Fub0lKZ2NCNkxmc182ZGRjaDh3Rm15M29ldXlvX3BwT0FsQWZQeGIyLXhKbjhqT2p2cE9KS290SGY?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-11T17:26+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "終止連23賣！外資回補台積電 賣超力積電、仁寶、南亞 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi0wJBVV95cUxQSEFjVkdWaHBuNkVadzA3dGduODRHQ1Rkem53NjcyS2tTUHRqZjRtOUQ1Z1ZjY1FXQklaNVR4a0FvWW5MN3ZwbWYzRFBHVFBLWW52eEpxbk0wZ01FQmF1SWZyb0RGaURBSDVlWjM0LUptRXdHM0I4Szd0Wi1fWGk2S3owdk54emZUaDdCQW5icXBJTWFLLWxhSGFLNFEtY0RsSWZnbzBCdUdEWHlMVGpLWkxQS3EwTV9ETjU0VzRtdlp3LVJsREJZMUJmQzk1V3pNcWg0d3FQLWtuT0d2UWJfVnJaanUxT1NqWHRtbU56a2ZEcTJKMk9UcVRmcW02ajVpV2NlYlg2TnpCYnRHMmhwaHZwSktISk83ZEQ5VHBUR1MzNnRHcFhNcEM2VnoxMjNIX3hqN2ltN2g2Ujh5UkJIMEpYLXZ4WU5EUHFUcnFFSzdTLXc?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-11T17:12+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台灣半導體產業3大挑戰 台積電侯永清：缺電、缺人與少子化 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMilgNBVV95cUxQRm5zT3cyamRTRi1FVmxhbVk0N3Z4VGktZWxYREt2QjBCTTBIV0tHSDNkMlNXS3BtMHF0UmZxTU9zSjh0RUdpcWhYVFNubHpNaDRvQVlHd003cG1hUnNaQ2hOZzhINmZldkQ4YU9LX0dIX2x6aHdMN2pMT1dObGpNYlhTOTBIR0JLUXRCdWVwWFplZ25icEpMZkl1TXNiZWZobGh0Ri1BN1RIRHlFeGVvdTIwYkM0TkR2bkVLR0ZrS2FNUWNCQjloMHBkUW1aTVdCQWlPTThmeTFEdDNsb2VvaTk3R2tUTExpN1d0RmxrcE5aUm0zV1dFckZoRVcwcVFsZWwyeUM3b2lZZHgwQVVDVV9LbnRLaEstcFZ4LUlWdFVYcXZlYk1QNlhtdXMyMnlwaW5kdWtaSkt4ME1YaVhMTV9nTlZxZmJ3ZERWMnd2RzdoNnVRRU9fVXd5QTBnSU5GQ3ZTTmJNdUVobUZmNmNfNHpCdFUzTUNFYkg4QkhVQ2xlTVJ6OU5Lc0QxSGZ1M19IY3d0OTV3?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-11T16:34+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
-  "oil_watch": [
-    {
-      "title": "美伊霍爾木茲協議穩定全球油市 降低原油地緣政治風險 - ENN台灣電報",
-      "url": "https://news.google.com/rss/articles/CBMiOkFVX3lxTE5SaDFpOXRvNWlXdjkwN1k1em83dU40eHo0dy1talhfMmJaZ3kzdFQ0SURjSXlLX0N2LUE?oc=5",
-      "source": "ENN台灣電報",
-      "published_at": "2026-11-11T05:20+08:00"
-    }
-  ],
+  "oil_watch": [],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-11-12T00:38:49+08:00",
-  "checked_at": "2026-11-12T00:38:49+08:00"
+  "updated_at": "2026-11-12T07:00:29+08:00",
+  "checked_at": "2026-11-12T07:00:29+08:00"
 }
