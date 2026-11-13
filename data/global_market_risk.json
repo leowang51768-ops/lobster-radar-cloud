@@ -1,21 +1,21 @@
 {
   "schema": 1,
   "risk_level": "green",
-  "risk_score": 2,
+  "risk_score": 1,
   "risk_reasons": [
-    "台股明顯下跌"
+    "港股明顯下跌"
   ],
   "ticker": [
-    "全球市場正常｜費半 +5.1%｜NASDAQ +1.2%｜日經225 +0.6%｜KOSPI -0.6%｜台股加權 -2.6%｜恆生 -2.2%",
-    "全球市場正常｜美債10Y 5.10%｜VIX 18.7｜WTI原油 88.64美元 +2.4%（高於常態，觀察）｜布蘭特原油 95.88美元 +3.4%（高於常態，觀察）",
+    "全球市場正常｜費半 +5.1%｜NASDAQ +1.2%｜日經225 +0.5%｜KOSPI -1.4%｜台股加權 +1.4%｜恆生 -2.7%",
+    "全球市場正常｜美債10Y 5.10%｜VIX 18.7｜WTI原油 88.71美元 -0.0%（高於常態，觀察）｜布蘭特原油 96.25美元 +0.5%（高於常態，觀察）",
     "全球市場正常｜油價觀察｜布蘭特原油：油價反彈推升通膨預期－德意志銀行",
-    "全球市場正常｜[Major Banks] UBS: Revenue momentum for Hong Kong banks to continue slowing in Q4 but remains s",
-    "全球市場正常｜NVIDIA Corporation (NVDA.TO) Stock Price, News, Quote & History",
-    "全球市場正常｜Nvidia Fallout Hits Alibaba and Other China Stocks as Tighter Regulation Look Likely -- Barrons",
-    "全球市場正常｜Nvidia, AMD, CoreWeave, Nebius, Tesla, and More Stocks That Explain Today's Market -- Barrons.c",
-    "全球市場正常｜黃仁勳下台衝擊明天台股？台指期夜盤嚇跌逾700點後 驚險翻紅狂拉近千點",
-    "全球市場正常｜黃仁勳辭職股民炸鍋！網憂台股喊救命...「國安基金也擋不住」 5大熱議盤點",
-    "全球市場正常｜黃仁勳請辭震撼市場！美股4大指數全倒、輝達一度崩跌12% 台積電ADR、台指期同步下挫"
+    "全球市場正常｜黃仁勳下台誰跟川普談台灣？學者點名「1大咖」接棒",
+    "全球市場正常｜【台股收市】台股造好，台灣加權指數收升1.55% 作者 Investing.com - Investing.com 香港",
+    "全球市場正常｜黃仁勳遭共和黨清洗？他示警台灣需做好心理準備…",
+    "全球市場正常｜輝達換帥變局／輝達跌、台積電漲！AI熱錢大搬家 分析師點名4檔股票有肉吃 | 鏡週刊",
+    "全球市場正常｜輝達利空出盡？台股一度強彈逾千點 新台幣翻升、暫收32.859元",
+    "全球市場正常｜Hong Kong Stock Midday Review | All three major indices fell, with the tech index down 1.75%; i",
+    "全球市場正常｜股后換人當！創意擠下川湖衝8645元漲停 11千金同步亮燈"
   ],
   "markets": {
     "US_SOX": {
@@ -45,23 +45,23 @@
     },
     "JP_NIKKEI": {
       "label": "日經225",
-      "price": 61201.88,
+      "price": 61142.35,
       "change_pct": 0.6
     },
     "KR_KOSPI": {
       "label": "KOSPI",
-      "price": 5342.73,
-      "change_pct": -0.6
+      "price": 5297.51,
+      "change_pct": -1.4
     },
     "TW_TAIEX": {
       "label": "台股加權",
-      "price": 43091.87,
-      "change_pct": -2.6
+      "price": 43675.12,
+      "change_pct": 1.4
     },
     "HK_HSI": {
       "label": "恆生",
-      "price": 24008.55,
-      "change_pct": -2.2
+      "price": 23661.55,
+      "change_pct": -2.6
     },
     "US10Y": {
       "label": "美債10年殖利率",
@@ -70,109 +70,109 @@
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 88.64,
-      "change_pct": 2.4
+      "price": 88.71,
+      "change_pct": 0.0
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 95.88,
-      "change_pct": 3.4
+      "price": 96.25,
+      "change_pct": 0.4
     }
   },
   "active_news": [
     {
-      "title": "[Major Banks] UBS: Revenue momentum for Hong Kong banks to continue slowing in Q4 but remains solid - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNUmFGeS1FNTRQNkJ2cXJmalpBdTI1WXNibHE1MEtTLVdCRDJmeHZVVnhoNWxRRTh5cW1iWVBsMUNnX29ZeWdYNThQZk13UjJMd1psaDAzbzZ2LU1BRzBnTGJGVkc0dlB2ODBHT2M4M0trLWlQWWxpZVM0eUhNNklNTUFncUtsSkFlbXhZSTJBcDZGV00wdUlfTlR4dWVPc0U?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-12T10:56+08:00",
-      "importance": 4,
-      "risk_score": 2
-    },
-    {
-      "title": "NVIDIA Corporation (NVDA.TO) Stock Price, News, Quote & History - Yahoo! Finance Canada",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5PRnBzWHBpa3laeGR6YzhER1Z6dHcwNkQzWmZVRExfX0pYZDhPQnQ0NkgtUXk2QjlGQjJfcVozZ3QxcU5KMzJaeDN5SE9qYzhZYmczOFZB?oc=5",
-      "source": "Yahoo! Finance Canada",
-      "published_at": "2026-11-13T05:06+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Nvidia Fallout Hits Alibaba and Other China Stocks as Tighter Regulation Look Likely -- Barrons.com - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQSDRDU2xLYk5rX2ZpbFRGSHFkck1LLUVOYi1iU3h0Nm9TaTVzOTZ4M0ltR3lZVC1PeTl2eTNaMlppV3ItZGJoSlh5MDlTQkZKQ1IyRUtTSmhXVTNPZkFnVXBncE5XZkhLVFI5b0tZRFgyMVl4azZoZmJvVVZpRDlWNGFHdG5rcm1xX2tWTmhvdXI3NVUwWkRGc19PQTMwRGxWa3lWNGVvMA?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-13T04:31+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Nvidia, AMD, CoreWeave, Nebius, Tesla, and More Stocks That Explain Today's Market -- Barrons.com - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOd3hmWVQyeU1ydnh2VGFwNWtFNHJydFBhVXh5eThVSkRTTDIzSE1SQmZ2RjZQUW1EbzZPb0VzMTdhWF9sa0kzb2xDM21fa2lxVTdUYUhmNFRKVkFMUlJCckdiRkppNFhDTkJiUlpOVU9aOS0wM1kwVzNwTzFGU0ZWTk5pVTlqc1kxVERHQ0JINFdhVG5TNXpUM0lqaTdfVFZWR2JqYlZtOW8?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-13T01:24+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "黃仁勳下台衝擊明天台股？台指期夜盤嚇跌逾700點後 驚險翻紅狂拉近千點 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi1ANBVV95cUxPQ0xsQ1pRaGlRZ256TENzVlRPdlJvcmRLaEpGQ3lOSW40WWVldS1FcHA1di0xUGc4ZlZQbjI2X1VvVTNoRThLZnFXaVlFTU5Dc3FraXZVRjJOZUVOdjlLb0lIVFRydXVtVkc0V1dieEZaNDRycEgtZFR6WGtoXzljWTFlUDRaZjQxZUthN1dReUZSblp4SGYtOE1tQ0JXNUl6VVBCVlk5ZnVmZ0Vmd0x5NnU4MXA2VVZPMVU5dnYwWHdTVjYwbEllVE5SZjNoaDdBRTB0djdkcU9vOHNTVGhxWEkxeTI3a2puWWVDRUpMY1pIZ05VSHdMajhEY3NXZHZPc3BxN09hOXI3VTVfb0JCNC1BTW5lUmo5cXlubDQwd25kcTVnc2hHZXFPdHg5TWhSWjBPOFJTaVc3d0VaU3dVWWFZWjg5Z2NUa1BjeUNhMXdGMklOWkhtanBuaVlWc2dWbWtUUHZjWlpMeUl0OVVrSXRlNjYzRmFRWnB3V2hCTkxQWkVlaGtSaXN3SFUwdWNRSldnMTdVQk05RThPN25ndVBHTXNvbzJTeE1KZld6Nno4eVFYU0lib0N6dXBJcTVPTWRNS1V4aU0zUVhhd1JNMzNocnc?oc=5",
+      "title": "黃仁勳下台誰跟川普談台灣？學者點名「1大咖」接棒 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi0AJBVV95cUxQOW1MbjE0eTB5S01Oa1VYZjdlX005dnlKS2VZbVlXOERGQWVzNmtMSU5jZnJGajMzMXoyTDk1d2pmUFQ1QXYyZ1FGSnJYdGJxM2hSNXJSZ0d0Z2xLczA5MWJDaWFockh3VW9BdzVEYTZFV2hPZ2k1YkQ1UG1jUVg5T2ZPb0dJd0h0c3NUVzBGZ2xvNlRqVG1tSi1MblVwNTk3SGlFcFg5UUJ4NXVTN3JTdndaaTYzV1ZRSW9lWG5lelN4VEZDTUwtMjRTM0NEV2xkWV9VaTdoYmUtYkdhNENRS0J1cElBTk1BclExZndvNElTTFlWUU95ekJuWV9GWlV4THpIcFVGdGp2bnlzcTRNelJWYnpCY2FaRnlJVWwtNU9ldVRNU3pLV0txd3JHOTBxRFVxNXFxU2xFbHd5UE1ycXc1a1dQOFJQcmQtVFNSMXo?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-11-12T23:01+08:00",
+      "published_at": "2026-11-13T10:59+08:00",
+      "importance": 3,
+      "risk_score": 0
+    },
+    {
+      "title": "【台股收市】台股造好，台灣加權指數收升1.55% 作者 Investing.com - Investing.com 香港 - 股市報價& 財經新聞",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9vRkVrN3A0ZzFaRUtja1BfbVhaejFSbjNya0g5UkpOblpkTVRtc2FkeENvbGoyUUNBUDZvTWJaMmRIcDRTemNJeUprQ2ZYdUwwOXZiNEhnVTl2cVRyUkM2WS1Ea2dEcmlMdnNFVm1HQlc?oc=5",
+      "source": "Investing.com 香港 - 股市報價& 財經新聞",
+      "published_at": "2026-11-13T14:22+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "黃仁勳辭職股民炸鍋！網憂台股喊救命...「國安基金也擋不住」 5大熱議盤點 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi3gNBVV95cUxNZUhZQ1dXb3R4ZGtxX0FhVmdIUmY2Znp1cnhNQThvNUJ2djFjVnlDdHRfZmRMUTl5STk0WVFvcngtNmpuVmptTy1NdkVvTThFbXRlYkhEQ1Rfd2dQWDBYTUY0dkU0YXVDLXBQbFgwZGduaHZNbF9XLVhaMzhObkx4UUFTNUphcXFjWGlCeTB2U1JtRHBJSTJqRDJmUDFfdDlwRUw1MjUxa01pWmM3ek5XSGdkai1TdHhiNjRUZm4tVENzVk44UURaMFVrRkRWb2tUTUtHR0dINTFBaGhacS1iUUdHV3EyN203bzVJMFJObl9SSWZoaDduTnBCcDZyUVRzbmx2WVU1YkVJMTk3TkgtanQxQk1aVm53azY1NlQ5WmxfbGR0RE9HZFFPaEpqMFdzOUlYNFJmOVN6TEVXVjRZXzdsajlsSWlQZW01bTVWcG5PSUNxZXBneWE3Q3hTdHZNbldGbFhfQzdPN1YtNDNRNDFfUzhqcHRaWmhtdVp3eTFwelBOSVF6WFpFb1FCVU9RQ0M4X2xGbWd2R2ZWbkE4VHUzU1Ixc0lyNkJ5eWNEdEpXQWwzZGs1UmVxUUxtMjVyM0M2UDcxeU1wRmp3cC1lNkpZcTJYSm5rNzBaemtR?oc=5",
+      "title": "黃仁勳遭共和黨清洗？他示警台灣需做好心理準備… - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi2AJBVV95cUxNVl9sbTZVMDM2UVNHTHhnM3RwMVBvTjFvRHpmbGxSb04teEFOdk42M3FwWEUtSHprcjRrMm1jYW9hUnNxa05ESXQ5QVFGOVU0R3dkRk9JeDM4ZGRGQ3VOZU1IVHp2NE16UWRPUHJjbGxzeGg0REtKTkRjc0Q4ZXdQWUlScVhfNkxlZTFBeFhvM1ZGV3RBSXBDazlFZHZKVlZMNHNTdVJUV2tLV09PaFNLdi1TWDdSc2taOFhTWHFfRGhFS1pmUklhbDBzTzA2ZWkzSFpjdEYxOERsM0RxazBpcUNEQmZYUldLektIQzBOSG8xZEhET0VsLVRlZlZOandvczBMbUdBOTFrQk5KMjRmdlRPZHRycW5NQkxFcThaR00tT05Fb0JNMXZBUVpfX3RabkExSk5RVnVTSFY2dFV2NXZqQlpqNER3bkd6SUtBTndOWTJmZ016VA?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-11-12T22:57+08:00",
+      "published_at": "2026-11-13T13:42+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "黃仁勳請辭震撼市場！美股4大指數全倒、輝達一度崩跌12% 台積電ADR、台指期同步下挫 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiiANBVV95cUxORzhvOGlpSUJFRHluTUp2LXZKT2tNQ2ZQVDcxUTlpUW5xSmUwY3FWUkIyekk1ZUdpWjVrWk1LczR3d0dhQXM3aV81Q0V4X1RSNnR3cmVHb2xCSnlMblFPNnMzOEwzc08yUndQVUxtZUZLblBXRElORnhqNFJqUXhXM0JpbWswRi04ZlB4MDBzU0JVUmFuSjhuWGlrejVZRFNPRTdaUEVCT2pJNjdMaV9FNmd5Q3hqUkFWZTJfdlprN1JBYWhTX1dJVzdrUHNjRFN0MHJNWno2eHRGTjNVdFBWMVhxdGI5LTl4QTBiMUFKU3Zxc2NudGg1eWt0clE4TUUyd3VxX3N5SlBMd0h2VXlrbmdIclNBVVBJR3pGQkdWdUhJTHRrdXJScTJnV1BiSHctcnRjcjBkLWN3TS03dVVMTm9HSkZsOVBqOE9iaS03bldSZEZYOGZNZXhPT2NBcGNhNW1BUUhJTXB0elBFNTkyeG1JdmFpYWVFRjZ6bjh2Y3JGZHpkRVI1ag?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-12T22:40+08:00",
+      "title": "輝達換帥變局／輝達跌、台積電漲！AI熱錢大搬家 分析師點名4檔股票有肉吃 | 鏡週刊 - LINE TODAY",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9rQjgtb2dJelZEaVBuZ0JFVUM3QlhRU2ROTnJSU245RzBlRlJ0Zkd0V25MZVpIYktybDhxRUtWTVVXT3pxenRBMlAxanNURzhLNGhsZGxn?oc=5",
+      "source": "LINE TODAY",
+      "published_at": "2026-11-13T12:48+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "台股暴跌1165.28點！今日上市融資僅減76.83億元 - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBnRjQzMEMxNXZSaFZuUzFuaVpad0Fxbk1GTXhyMFRENnBLUjUwSmlNcGJjTnU2cU5ldHFXdFZFMUQzVGRRdjdyRVF2X0pwLVV0OVhIOVV6ZXI?oc=5",
+      "title": "輝達利空出盡？台股一度強彈逾千點 新台幣翻升、暫收32.859元 - 自由時報",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBDYWxWaHFRNURiNGctaXJySzJqZmhfY2xvbFhwaEdUcXc2aXlxSE9qS1pxTjBvRzZ1a0kteGlLNnR0a0tRYnBQOW0xV2ZCQkRoUzFHQy0tMkw?oc=5",
       "source": "自由時報",
-      "published_at": "2026-11-12T21:14+08:00",
+      "published_at": "2026-11-13T12:33+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "中國生態土地治理(08507.HK)盈警：預期中期擁有人應占虧損不超800萬港元 - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1KSVE3Qnowbmo0X3dUaUJXTDFVY05ObTBaV3htQXBXdURGVGZKOFNMVVFNWGVPQnRVUWxJb0I4RkpMc0ZCNjhrN19SRlQ1UDc2OVZZLTFycFVRbGJfM21zOERWSkQyTXJGTVVr?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-11-12T21:09+08:00",
+      "title": "Hong Kong Stock Midday Review | All three major indices fell, with the tech index down 1.75%; internet stocks declined, with Kuaishou dropping over 3% and Xiaomi falling nearly 3%; PCB and optical communications stocks weakened, with Shenghong Techn - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPejgxSzZQZFhSWWowMTVfLUNDWTJzWjdOSnRXOFp1b3Q0R1cwMi00bHJkUVhoRWNJRnVaU0pOYXJhbnBrMnZwcFdoVjdJUDZlYUVRQ3FnYzEybVc0NmdxNVQ0YkZVZWpzN0RHdnJyM1NhRVd5Z0MtcTI3WmJUbzdmY0ttQnJranRHUUdKUFU5cHBnTFhkWW14cjBhdmNJMUVvNmx3?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-13T12:08+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "唐永博任中國聯通總經理 - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFAwa1c4U29TTHVGNTJERW9qMDdRcTRUSVpEYjJrMHo5Zkw4SXFqX0NNWnZZWmY1blFobDBlaC1xa1NLMUthVl95Rm1BSm9ZeHdpRTJubjlwazBWWi1MSlY1NUQzcmZSMkFpejlv?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-11-12T20:27+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "中國金茂(00817.HK)10月取得簽約銷售金額105.07億元 - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5xNWZ6YWJ4djNQclRFYklmWG13NHp1UGtOckt1Z1hoWG83SWw5LU83Q1l0NElsb19vQzFmMi1qQkJwcExOdmNmaHJlcXVWbnA4Z1VMT2ZRUlotNUtJOXZXWnM1UkUwQ0dMcXZ3?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-11-12T20:04+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股狂殺1165點 外資狂買台玻14萬張 反手倒貨群創、台積電 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi7wJBVV95cUxOazdiQS1lOFUyMG5zNzNScDJwZ2ZQM2l4X292bDZPWUtwQm1HSjExcFJMRWwxSm5nSUE2MkNNWTJCLTFyVS1aQnBzSGg4OVEyQ1hBRDVrV0lySnJ5V0pFWTlXS2Y1RmhWeTU4aEV2aEFFdzI0a2k1NnExNkV3clRLQ3ROS2hnb3otZnNsemtER1hRU2R5XzhOc0UwTzdaUEx5N0k3Vjd5RjA3YjlTVVZtQlFDMDhkYXp6c0JEZGhVYmdrNTA1NkRac2w2cS1rRGNiZHdib3c2OHhoYThvRURnQkp6bVRwSXNrMDM2SExEV3ZpWUM5MEtZZlhTZjZIdGdndEU5SzY5X0R4ZHNnWkd1Y3RBVkpoeGp4Q1d4NVN0ODhDb0UwdkJXRUIxLUpsc2g1LWdUX2N3ZDFTRTJ2eG9WbHphQ3ZLNmk4NG1ZMlZjMklNLVQ3SzJoU2tOdkEwOHpmdFp5T29GQ0NfX05sdmpV?oc=5",
+      "title": "股后換人當！創意擠下川湖衝8645元漲停 11千金同步亮燈 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi7AJBVV95cUxOdUh4cl9mRHd6a3lqS2tZRUZCSHhzcHZuanZYMTdPZ2ZuZm9Pc0lfUktJT0t5UGx5QVVqenNqa2RTNlM0akc0SWhMcVV4SHpmT2VYb1BuNi1FRjZoTlhaQTI1SU5DUTBkNVVGYjBTOFJVRXVMQkNYMHREOWxFS0FESmFrVHJqY2ZNdjRaM1gwUXBzTzFiUW9zeG9jYndwN2tnM0k5dmFIaXVLY21GN3AweU54eUFaV1NnU0ZwRTFCZW1vMHpvSkFRaE1Ycmw3OEJRWVVhUV9DQXFCeGpqbXl6UmtBLVFIWG9WLVZocTNvQmRNOXl4Mk8za0ZYNzFwVlJLZFp2QWltY25hTU42Q0FDVGZRRFFnLXdpd1J0cUF4SU5mSFF6LWRzOE5GR3NsX3RZTVIzOG4xMC1Sb2tUT2tqQjFsLWZ0d2RtcXY5T3lXcC1Sell4TWdvM0lHMlEtdEt6THFFOXZJbTQ2ekIx?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-11-12T19:53+08:00",
+      "published_at": "2026-11-13T11:45+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Jensen Huang's resignation triggers leadership shakeup at NVIDIA (NVDA.US): Product roadmap is clear, but execution remains the true test - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPTEZ2a2lFRmltbk5MU2pGMnFOd1RodnZHZGdQY0V3VTlHY3VlLUwycHpGRDBkc0kzcURGRmNVdldJRmVQZWcxSzF3b2pSQTViaDc0SlBGNE1vRTZVOHN0Yl94Smt0ZFNra0Z3bEc3WHkxaDVCR2NwcEFFZzNRWjh1QTN2MHFfc2VDd1R1dVZsbGJCX3ZpbC1yRkphOU1HLUtLNzJkd3MyQ2hBcU9pOUdHSmdIMUU?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-13T11:09+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "不甩輝達風波！11檔千金股飆漲停 創意超車川湖登「股后」寶座 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiowNBVV95cUxPNGwwY3NoZDVTaDRZY3FmR0hnTzJId0JldENLU2Jtd2stNDJheFFFT3ZXeWc4eHJUZlNrU0ozck1tVmlvdU1WVzZjc2VGcFZoZEJEMVdwQVJ0WEc2a2U2ZXFfMWZieE9wOXcyV2w3a2FTZlpGdnVFZkdxbEF3dzlIS0xFTGdXRnRuWGhNLXhzSTRRVHBwa3ZBY0pJQ0JDcy1nQ0d1YkNpV21OQ1EzREhKSGZjWE9ySE8wQlQ1bHUtOTk1LXJ0QVNYbmpGMzB4Q3pWMWJneEdFNm84Ukp2RDYxT2RmT1RtUzJ2bWN6dlFpX0RHUXpXSDZESXdQeVVwNHh4WjhsTFN6SjJ5THRETWtleHBOMk9WdXVvOGtOb3JYQ0tZeWdPSmczVnpXZDBWcmNTeUJCOGg3Ul9sMnRqYi1MY0JoMHlza0lXeVRFemxaMlVwaUFvLTVYb1A0bHpyNURlaVZXaUJib2s2azZ6ZEoxOTVnMzNjZ3lPQURhRmlRd3dkRDZZX202VHNQQ0Z6Mm9XZzYyNzBVQjA0RGtSWk1DbHRvdw?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-13T10:48+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "輝達變天！ 專家點名「2通吃4黑馬」：準備大翻身 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMirgJBVV95cUxQX21KR1pqVGROUF9kMm1GcjFtQlRjSXFTaTh6TzZQYy1NV3lzUGxqQ3BuR1NrQXlrY19EdXRCck1fVEVyZVFORGFPbU84bl9iaWpWcVFzaE85UlRqTGJkejJmd2c0NVhFZFBZSXpPelQyQjQzZTV1RExmRTZTeEdnUGtyd1BOT2lHNXpsa1ZOTGhTZ2lrRlpuMGdiQjNEQkswalYwdll1dXUyZk9HMEt0elRldzlDRzJ6Rk90N25sUi1lVHhiVjJic0dBR09XMnJoZnhoMnVWcGgtUnhmTEhIbGd5TG9CYjBWYkR5R0pTWTVtelVaVkxjdXFERFctbnM2ajJXWWg0bDdneks5ZmVRVUVtMGl2Z29jX0dvNkZNMUg1c25yZWdrSFNlYk0zQQ?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-13T10:28+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "黃仁勳外遇又閃辭！輝達台灣總部進度受影響？ 北市府駁：各項情況均正常 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMixwNBVV95cUxNNUU5NWk2a2FxNzh3SDVBT2ZZem9McU1LSFNXUlRJRThnakttZzQ4cHFsYzFRSXJUbE41c3RVQ3V3ME5DSkNDOXNlSUVSRnBzRTlveXdYSEMxNDlUZktKdE5DaDFydmJUaTBJUUlvZUZxQnFsNW1fU3RHRV9Va3hZdlBkUU5xMUduZnR3MEJEVTFNLTdMX0JiZ2otc01tQm9DR2o5RDNzWWM2NDk0c2hZSGIwVTdodGp2YXhKRGs0bWp3eG8yQ0lzQkNsSWtwZ0NuWndRazhBTnp1QkdOSTRGYXQ1VTFYYnJlSlBScjRuTHEyU2hielItTzZGcUZkV3A3Y2owLW5jcE1CTWsxemhESHV1VkM1VjloN1JXejJsVWhQM191OUhYZk1rN0RBbVdVdlU3STJzZ3FJcjJTRXlFMHFjblBQSEhNMU9XbVRQQXlPRVlHS09memJ6WXNQZ2ZiT3ptcDNXc0VNT3M2ZDNtbHlUNld2a0ZVTG5ueUI5bk50RzJkY3o1bUZDNnlQMFVPVDlSM2o3Z2RTZndKaERHSGw2UHZ2NmxaQjFBQWF1RV8ybDVvZDBVeUdUUFcweVV2Z0VwdFBxaw?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-13T10:01+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "86檔「黃仁勳概念股」一片紅！創意聯發科5檔飆漲停 分析師：不確定性降溫 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi4ANBVV95cUxQMkVVZjlIWW9KWGxRT3lES2dHSkRIT1RnUTlIQXNxR2RoQXRic2Z4aWRKTjBZMW9pcGhQaW81TzBJRzloTmVxNWNHOHhqQUZ3SE5fVGkzNzQ5bWNLaENMTi1nOEVkZUFDYzBUc2Q4aXhNQVdTd1BqV0pIVGllRWpfY2FrSUl5WVQ3WUl2bHdPdXcyc2IzcHkzSWV1aUtIbmJoaDRON25QcGVNTU9oaXNYbWdlTDVDV19ScE4zN1phQlNWMVF2VlNfVUxXWVp1WFlfTlg0ZHpkdloyTUJqSkdJdEc3ZEhoTXUzNkxJc3F6dkYyampqNTQ0NmJKTUpkNFRyVjNXdzAtQWJSRDB4aUdvSXl4SzZ6YzR0NGplcmVCUzBNQ3lZTmNEa2hteUZRTjFuYjFKN0Q1aFNVSGVfQVdaS3ZqeXRqSmdIeVBhY1lfOTR6M2Vabk9xODJkSlF5UURHaU9uRXg4UEl5MWhKNmdJcm94ZHBxWTVWaXV2SmZTZHhpcDV2YVQyaUJacW1pZFVnNVRCcVlGeGRBVmsxaWUzcDZUb0Q5U0hZYlJyVXFQcmNEWXNZMXF5U2VxUW40MGlNeGRxS053V1hoa1h2MDEwbV9XOTVza09SbUlVMml3ZDE?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-13T10:01+08:00",
       "importance": 2,
       "risk_score": 0
     }
@@ -186,6 +186,6 @@
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-11-13T08:15:17+08:00",
-  "checked_at": "2026-11-13T08:15:17+08:00"
+  "updated_at": "2026-11-13T14:46:25+08:00",
+  "checked_at": "2026-11-13T14:46:25+08:00"
 }
