@@ -8,42 +8,42 @@
     "出現重大風險新聞"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 -3.7%｜NASDAQ -1.0%｜日經225 +0.5%｜KOSPI -1.6%｜台股加權 +1.4%｜恆生 -2.8%",
-    "⚠ 全球市場風險｜美債10Y 5.17%｜VIX 18.6｜WTI原油 89.26美元 +0.6%（高於常態，觀察）｜布蘭特原油 96.80美元 +1.0%（高於常態，觀察）",
+    "⚠ 全球市場風險｜費半 -4.0%｜NASDAQ -1.3%｜日經225 +0.5%｜KOSPI -1.6%｜台股加權 +1.4%｜恆生 -2.8%",
+    "⚠ 全球市場風險｜美債10Y 5.15%｜VIX 19.2｜WTI原油 88.83美元 +0.1%（高於常態，觀察）｜布蘭特原油 96.08美元 +0.3%（高於常態，觀察）",
+    "⚠ 全球市場風險｜油價觀察｜原油：布蘭特原油反彈至200日均線上方 – BBH",
     "⚠ 全球市場風險｜What signal is this? Goldman Sachs compares Apple’s historical trajectory to NVIDIA: The curren",
-    "⚠ 全球市場風險｜富邦投顧：輝達若砍單恐衝擊台股 AI供應鏈面臨重整壓力",
     "⚠ 全球市場風險｜黃仁勳閃辭台灣恐失去「直通川普王牌」！1大咖有望成接班人",
     "⚠ 全球市場風險｜黃仁勳下台誰跟川普談台灣？學者點名「1大咖」接棒",
+    "⚠ 全球市場風險｜台股受黃仁勳事件干擾、一周內仍急拉3973點 外資連續11周買超這幾檔股票",
+    "⚠ 全球市場風險｜臺灣公司治理蟬聯亞洲第三 評分提升顯示多面向進步",
     "⚠ 全球市場風險｜GOOG Alphabet - The bull market in stocks is being put to the test. 2027 may not be any easier.",
-    "⚠ 全球市場風險｜台積電Q3拿下各國政府補助款約1670億！前3季累計金額創新高",
-    "⚠ 全球市場風險｜Stock market today: Dow, S&P 500, Nasdaq futures waver as Nvidia tumult deepens",
-    "⚠ 全球市場風險｜Nvidia, AMD, Microsoft, Broadcom, and More Stocks That Explain Today's Market -- Barrons.com"
+    "⚠ 全球市場風險｜Earnings Growth Is Set to Peter Out - but Not the Bull Market, Says Goldman Sachs. Here's What "
   ],
   "markets": {
     "US_SOX": {
       "label": "費半",
-      "price": 10177.247,
-      "change_pct": -3.6
+      "price": 10146.323,
+      "change_pct": -4.0
     },
     "US_NASDAQ": {
       "label": "NASDAQ",
-      "price": 25219.56,
-      "change_pct": -1.0
+      "price": 25136.273,
+      "change_pct": -1.2
     },
     "US_SP500": {
       "label": "S&P500",
-      "price": 7564.27,
+      "price": 7561.67,
       "change_pct": -0.8
     },
     "US_DOW": {
       "label": "道瓊",
-      "price": 52316.77,
-      "change_pct": -0.4
+      "price": 52347.55,
+      "change_pct": -0.2
     },
     "VIX": {
       "label": "VIX",
-      "price": 18.64,
-      "change_pct": -0.4
+      "price": 19.16,
+      "change_pct": 2.4
     },
     "JP_NIKKEI": {
       "label": "日經225",
@@ -67,18 +67,18 @@
     },
     "US10Y": {
       "label": "美債10年殖利率",
-      "price": 5.174,
-      "change_pct": 1.4
+      "price": 5.154,
+      "change_pct": 1.0
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 89.26,
-      "change_pct": 0.6
+      "price": 88.83,
+      "change_pct": 0.0
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 96.8,
-      "change_pct": 1.0
+      "price": 96.08,
+      "change_pct": 0.2
     }
   },
   "active_news": [
@@ -91,18 +91,10 @@
       "risk_score": 4
     },
     {
-      "title": "富邦投顧：輝達若砍單恐衝擊台股 AI供應鏈面臨重整壓力 - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9sOEZFZUxzWmdBUE5qTVF3UUFCLUhubGQ5Z2Y1U3h6UkZiNkFDdDdJS2dlRk0zeWV0VHdTdjdkVVAzME93TkVjOFVUMmJveG1KNTdKMERGUU4?oc=5",
-      "source": "自由時報",
-      "published_at": "2026-11-13T17:46+08:00",
-      "importance": 4,
-      "risk_score": 2
-    },
-    {
       "title": "黃仁勳閃辭台灣恐失去「直通川普王牌」！1大咖有望成接班人 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMi_wJBVV95cUxOa0tNeHFfQldkbWhmQTU1V0sxT3BGNkJWSzNjem5EdTd0VFF6X1JTVFRhMGdTQTJNaGptRXhVREtuMEJCOVdQTGE0WGR1Q3JPZTJrWjI2Nks1SjE2WW00cmpYQ0VmSnpjUEpaaG52cU8tYmZtY0c4NFFCeHJZNnl3X0oxeGlfM0NXd0RNYmV2bmVQUGZSRHJSTHRnUlBHTmFlU2ZtUjNTOGFsUHVnYnlzWkZFNHJaNHRfSENRMlR0ck9nZVRhRDlGSk9OMkNkS19zaUpVcU90d19DRnF2Z1l2Vm9Wb20zXzVycHBuUWpuZ3pkd2pQUi1lbFU5RjdrU1RVN2RJTjdBallZMWNvWnVQOWxFeENGc2ZCYVR2R1g4bGllMTVRaDVKSnpuQVh0bXQ2dWNoX3kyNzdadWt4OFBHejVOMzh1MF9sN19HelZ6R1ZCRjJvcE5hQnp3Nm40dkdwYkMyNkJvY1NWbGFSSHVhejk1VU94dTdRcUdrWjBuQQ?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-11-13T15:55+08:00",
+      "published_at": "2026-11-13T16:18+08:00",
       "importance": 3,
       "risk_score": 0
     },
@@ -115,6 +107,22 @@
       "risk_score": 0
     },
     {
+      "title": "台股受黃仁勳事件干擾、一周內仍急拉3973點 外資連續11周買超這幾檔股票 - Yahoo新聞",
+      "url": "https://news.google.com/rss/articles/CBMirgNBVV95cUxQdTNVd0FLWnJzQW4taEI2cnlNdFdpaGp0MW85ZExSZFdXQmxSQTdMdFEyQ3NFdkNmb21UTG1JZDJSaVB0WnNsSEMwRlBhZk5HbC1YR0xhNEhoSUQ0YWVUVm9RbWVjY3paZ3pfN1czaWVBTzdBX2dEYlhYTDQzVXdIbmF4eWlIcmNUc05ZMFZ4ZlhYWl9xalVZU1hvNFNjNnNYR3B1dHQtUE5VWlBmVHZfUHRPWXQ5b2NYQ3NXWGt5UGV0UGhRc29qMEFoWmZIOHhVTzZGY25MaURhaWxNMUdrM3ZXRzRwcl9ZTm9weldvYVVlc1gzZmZQWElMTXNyR1pNSHNiSkVBYXZYQm9BTFUxOFVZZXRLSG93cWYwWXlHZHRzTkhqOTExamtXcTlxazUxdWlzb01iQ3dINnJlQ1NLa2R1MW5RTDNCTXFrYlREOHN6RGoxSHhHRTJmdnBNMGhheTB3MF9ySlBhUi1xY29XU0kxYklhNEd2MEpXUjEyZHIzZGNuWFA3cUp4U0dpLXZpeXJZS29aRnh5M0ZsWjNlN2h5aUtvRVFZSVh4RGhn?oc=5",
+      "source": "Yahoo新聞",
+      "published_at": "2026-11-14T03:40+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "臺灣公司治理蟬聯亞洲第三 評分提升顯示多面向進步 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi8AJBVV95cUxQQlpNekJXbnJfcFUyNHIzMHdNcXFCY2Y1YjlyMzJ2bXhwemRheVVYSFhRRUJVX1BneXgtUzRUemhlZERlQlp0amNxc2ViTk9TRENqU3luQUt3NnVrakhDM1BvNDNfMEJEWmpackJWNUdZQ09CZzQzQllPNnAtRGwyY0lBYklXZWRqWlg0bU16bVZ5QUhRRkRxSWw1c09LalF5MlRoTnJhVkNDREQ0Q1hNbmZ5OFM5eWlsVGxTczNKMGlWazVLekYtWkNBaDJxaHFISnh6QjBKQnlkWV9oVHowZHRYRkw1WU5zc245M080ZFlwRUhtUW9Za3U1ako2Y1ZVRlNVQ2Y5UTVJOC1EUXBPdlA5UVlxS3FrTjl5R0tiWExOSkZ0UHlmNkY3VXhTYnhBX0p2U3Q2eV9MN3ZSaWhiSld6X2tVRFdtZ0x4SVlTMm51WEJ4VUc5LUU3ZnZRbTMzLUliWlFBNVA0TjFaQXdOdw?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-14T00:06+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
       "title": "GOOG Alphabet - The bull market in stocks is being put to the test. 2027 may not be any easier. - 股市爆料同學會 - CMoney",
       "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE00MGVyc1VpZ0JUcU9CZFlwNDZEVlNXX1hvWmRpcVpfSGo3cGJoTEFyUURvMGQ3Q2FwWWZqamFRTXZaZjg0VTlpV0RRSmNMZ3BNNDZnVlFvY2I?oc=5",
       "source": "CMoney",
@@ -123,10 +131,10 @@
       "risk_score": 0
     },
     {
-      "title": "台積電Q3拿下各國政府補助款約1670億！前3季累計金額創新高 - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFB5V2w1U19hMzF6T0RWSk92OGpjb3NwbE9fMTlaRHFzSExOZklPZ1IxZG1XWnVpYzR5WHNtMFprOGV5WVVRSGlER3VzVUJ3RFN1MFhyYThuWXo?oc=5",
-      "source": "自由時報",
-      "published_at": "2026-11-13T21:09+08:00",
+      "title": "Earnings Growth Is Set to Peter Out - but Not the Bull Market, Says Goldman Sachs. Here's What the Firm Recommends. - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPVDlPTEhsTFVxcWRVQXlkLTRNWlpBS3Bfbzl6dElHR2JXbW5xdlJVRks0eUtYbDN3NldqLU42dERrNXptRW9vcENHMnFaT1FaRGh0elpsSThxemppZmVUZU56TTZWLU5EOHB1X3E0bEdHTGhEeFBSTjBaOTFyQ3NpNUFROG1sMDF1eUZwQTdzMVhQQUNU?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-13T20:35+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -140,9 +148,17 @@
     },
     {
       "title": "Nvidia, AMD, Microsoft, Broadcom, and More Stocks That Explain Today's Market -- Barrons.com - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOUjJRTmN4cy1NVE5XbVg0aUZwdnlOZDBfYTU2bk9DYWZjblBuWFU1V20wR0liVk5ubFlCUDNRN19YYV81V0ZyanZPWmlNc2RUcXNGdGlhcUNtdERRbk1tek9qZUdaTXI4N2c0WmE5dnhZTklfd2g2SC1YeFhJVjZzaXRqcXlSeDBtZVdqdmJ1MDhvZDQyekNfNUFmNDZWT0dGSmhOQ0FINEx6U0E?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNZGh5SzlxNUZGSFV3X2xnV2FrYmpyZDNHT2d0TXI5MjIyYldIclRyWnRvUlpPUWZCWk4wZ2x5WTl5TlMxQjlJQU4ya1M1YTNSNmpZQmZOTVUxT3RKSWhnbnlKR29PUWtaZDlSLXF2Q0hsVmVGX3lTNzUxdzl4LVdoRG5VUGwyV3d2MTlZQjhQSnpmQjRmNVQ3XzRPaGlZR0tUSmk3V3BwemFYems?oc=5",
       "source": "富途牛牛",
       "published_at": "2026-11-13T19:31+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "中國通商集團(01719.HK)每手買賣單位更改為10,000股股份 - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFB5TWExWlUwU3JlcFlvZkFmOFdPblhrVGRuMlA4ei1KQVdVMWt4OWtyZlk3aTFSQkh4UC1BZzhLMTFvdTJGa0N3OTdIeDdNbFdBS2VtUjlTRGRwRk1mZVAzOGZJcms4MmJzMURn?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-11-13T18:35+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -161,26 +177,17 @@
       "published_at": "2026-11-13T18:14+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "臺灣周雙論壇.講座落幕 串聯金融跨業新局! - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMitgJBVV95cUxOVEZBZEdMOUk1MDF4WFdGWkNLVjhKbUVoTUM4VFlmZzlSLVdNZkM0QWQtOXFOby1HeUZ2QkZ4LUhrNXpoN1Z3bjZ3Z2xiQTVlT2hCcmNONnZtbkRlZjJwMlBCRktWaFZ4SXpZSnhhQ1JaWWh6aFNqeERYRmxCc0d4Sk9VMUdvNnZuOFNkTkliWFB2bEd5QTFpTDZmRlliWFNpUmExdVpsNm5IdkZrTHRZdTJPLUJaWnZiVE9HVUdLMmREdHdTZUF2SnN0YmtFbXoxMlJsd1hOUldCVXZTQkhnNld5ODRxcGxoQWNGTE9hcmI0eTRCaGJTR2pEb0J6dXB1WEpHTkRqVk1vUWEyc1lFSjcxT2M2clhVNFhuczVYRldUQy1DRnluYVE1YWt5R1hvekdoZ0dn?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-13T17:54+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台灣浩鼎攜手諾華開發癌症新藥！潛在合作金額逾650億元 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi_wJBVV95cUxNRXBGMW1wY2Q0REVHTFdqRkVtdWlVLXN4dzBrUldBNkM2YlFaMDdKWDItMzQ1dU91NGxPcEhSeGh6c3lTTElLVS1DRnlKeUdFendaZkJYNGhOYnNJNE42cnlOWXpLaVlDbUYzYTNfQXBfWGEtSmxFaFI2WHhvUER0TmFtYnlOTk5GUWtPeEhBR2R5MEdhQlA4WnB1NnJ6ZVlJRVY1R1hkU1RpWHFCWEJYZGR4bVFnZHZUQmU0R3d3QkFUbmtpZ3JTbWg1U2xyd0ZDLXpubEc2aUJRYW90cHpCWnROOWNuMjlDSGtwYnJtZnFmMWMtWk5xTS1xa3VOVldVWkZwUzFIcWh5YklmZU43cVpsV2RVWUVLeU9BYl8tOWpsTWdyOXJwaVY5Q3ZaTjhYdlJtYUhBT0hfbDNPMkdlSjFWOUp0ZHAwMTFPSE5PVjJVdDNtaEF2VEEtbU9kWjhCcC1LbTNNVl9veTF5eS15SU13MTBxaWNtemg0YVdNUQ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-13T17:09+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
-  "oil_watch": [],
+  "oil_watch": [
+    {
+      "title": "原油：布蘭特原油反彈至200日均線上方 – BBH - www.tmgm.com",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPRjhKUHpLRlU2c2FyelppbXZaUGNPRWVBME1kUDBXWFZQRE5YSV9DSWoxS2J0R1Nrbm5IXzhCTm02YTZKV2txRWxGbG1YMmVpWDBVdzdJdjgwbm5sS3ZHajhxZ1VSVzJReVFEekU0RmVsUEZCX1ROWUx6OXVUam1GZzBzc0xlN3gxQm1id1kzMUtNd0dGaHNiUVBuNm9JUnV5bDRzZ3VRUFhMeG5EZktWMHNBZUszZw?oc=5",
+      "source": "www.tmgm.com",
+      "published_at": "2026-11-14T00:23+08:00"
+    }
+  ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-11-13T22:55:45+08:00",
-  "checked_at": "2026-11-13T22:55:45+08:00"
+  "updated_at": "2026-11-14T05:03:44+08:00",
+  "checked_at": "2026-11-14T05:03:44+08:00"
 }
