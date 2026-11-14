@@ -9,7 +9,7 @@
   "ticker": [
     "⚠ 全球市場風險｜費半 -4.0%｜NASDAQ -1.3%｜日經225 +0.5%｜KOSPI -1.6%｜台股加權 +1.4%｜恆生 -2.8%",
     "⚠ 全球市場風險｜美債10Y 5.15%｜VIX 19.3｜WTI原油 88.56美元 -0.2%（高於常態，觀察）｜布蘭特原油 95.84美元 +0.0%（高於常態，觀察）",
-    "⚠ 全球市場風險｜油價觀察｜原油：布蘭特原油反彈至200日均線上方 – BBH",
+    "⚠ 全球市場風險｜〈台股風向球〉外資期貨做空未轉向前 題材股輪動維繫多方熱度",
     "⚠ 全球市場風險｜台積電法說遇輝達財報AI行情的關鍵48小時 MSCI半年度調整出爐AI伺服器供電散熱誰最強？緯穎台達電奇鋐雙鴻11月17至18日法說見真章中油油價連8凍漲｜投資早知道",
     "⚠ 全球市場風險｜美股震盪引發避險潮 連增股息數十年老牌企業成焦點",
     "⚠ 全球市場風險｜台股2周上演大怒神！「這檔金融」持獲利利多獲大哥豪砸87.4億奪冠南亞砸115億擴產玻纖布被上調390元目標價入榜",
@@ -81,6 +81,14 @@
     }
   },
   "active_news": [
+    {
+      "title": "〈台股風向球〉外資期貨做空未轉向前 題材股輪動維繫多方熱度 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMilgNBVV95cUxOZlNNdWRORHc5cnpCSVRCVU9LVTJVbXhqcDZPZElEU3dzQmNCTERPRWZpdXRqN2U1NU0tQjVHYkR5b2JfLW9BUll5dFdoNW5EN0lUeXA3V0M5OGp1bVZqby00dlFuV0dwMTBtc2NYWUV6ekk3MlY4TjNySm1USzhLNi1CX2lGRjFfNmJpWk5aX0luaHRFVG1JSE1hbEFxRC1RYlVFZTA1LVZlX3l4TGk5ZHRnc09Mdi1OQTlvSDlOY1NfTWJlVmF2UXJFdnI0Mi1HWW0xbmxTNVFTTUUzWWczdUtNZGlGcXNhOXFPY2d5emhITHRNYU5MV3dJT3R4a2FBQ1VBckhoM0ZOU1lfNUlRVktGWEZtQkVoNGN4VTFnbHRyalA5S29qLVQ2dmdEVkJnV2NwbHFkZXZpSGcyOGlVNk9NZUtZOVBHa0I1VnJuQmQ2dTlmZUMyQUh6RWxxd2RybjRDOExib0prenhxWVVGQV9yR2Y3RG9aOUd3QVd0RjBkRURPYzZ1MmswYWlXeHgxenQzbVhn?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-14T23:48+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
     {
       "title": "台積電法說遇輝達財報AI行情的關鍵48小時 MSCI半年度調整出爐AI伺服器供電散熱誰最強？緯穎台達電奇鋐雙鴻11月17至18日法說見真章中油油價連8凍漲｜投資早知道 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMigwdBVV95cUxQOXN2QXlmOEJLa2VBcEQ1SGtxRU0yOUNkUDRpQzZCMVRCWTdEVzZpVGNqTDJROFo5eC11Zy0tdGhnUFBvV1llZEwtbi1PQUdXZEdBOGJuTjhreGQxcVhwbjRHb2hOXzlFNVBtNkZVaC1YZmJGUmsxZ0xuUVhNS0JKT0tQaGlVRDlsNm5LdHdpR2lSeGpOWDI2S01hU1VMblBIR2JvX05vcWVucFotd1hBVHNRWlROZUhsTjZPdzdNMTI5M1BpYWFoSlV1dzRKNjZPQUNCY2FnS0VRSGtDYXhINFlmU1BMQ0dINklkckFRc28tVF9xT0xIOHZvUW1hV0NHWHFRX051UmpUQVhaVEp1OUN0Wk1teEpjVndCU19ZS2lDU2F2Qkcwdl80V0lSd1lpS3FHVzVZM1VqdFJzYWd4bjM4T2p0YkNDMW9ZZEJyVkhDQk5CY1dEdGRtRHpSWU1QVFcyTGV0eUhKS0F0dXVRNjUwY3RDOW9sUHJ4ZzNZOVBuVWUxUFotYXNBdmhjUVZicHFZZWJwVXRjOG1fYmpWS0ltN0lSb1VvM0NnNXNaODJFYndiZXFJTHpiRW0yT1NzdnpENTZpSnNON0R1SnhkUEhMcUV1UjNHclhvODVHNHFnSTdwU2pXaTFRQjB0WWxzaWJBblN6TjZZRVA2cGR5QUEwSmFJX3hlY1JyMFFhM2xTc0lpb0ppeHh1ZzE2Ty01SDczeC1YdWdLRmlYR3BuczFfVm5Ob1djMy1aN1gxWXk5UGFBZVVGM1g4bHA5Rzd5WHFQMS1FWFpnTFk1VWc4NkJQS3Bmb3V0X0sxSkVuTHhtTE1xU1U4NUFQX1QwckFFek5jU3B0bzh4ZmwxS3ZwTXE2WFBnOHZIdFYwUmFIRTdGTGdkMTlVM21qaHBzWGNvd3JIVmlFWmJEYm5sV2x6T3RCbDVBalozblQzckpLQ01NVEVNcDNiejYtaHd5NFpQTEx3RU1vQnlZSHRmTUxNMWVNSkFrdHptYTJsZ1ZfVGtNdmNoU0llNUdzbU9qbDVaNzVtcDBPY2k4YUh3OFlqYlliYV96SGJKdnlENVRMTnU4RU12Wms2UkFUTWlZaXUxQ21GVE5XS0NiZFF6eF9CZDI1XzFnQ0hlVjBQZUpQekRwNWtKeVduUXVHczh2R3I2TmlHRzhla2FYZWlYSmwxOWRZZw?oc=5",
@@ -154,39 +162,24 @@
       "risk_score": 0
     },
     {
+      "title": "累計EPS飆60元！「無塵室大廠」Q3營收、獲利齊創高 握台積電訂單需求達2029年 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMipwNBVV95cUxNSTNYLUJYcTJPaGlGd1JWWlFVVWI5STFMcDY4WDdwSlQ5dXRLeU9HZnNISG5IMEZTVDZSc2xYS0s0Mms3QllSUUlOV2dJOVNRRzdabG5ocEJ1Y3lIYnU4QmpYZm9FVVNjXzNwOW42VGVpOXBDQ3REWG9fS0k5b0F6ZWVPdkQtSy1GOEFvckRzUXNEY1lLbWpDMzJNMHllNlM2VTNTOS1oZks4cXZHeDRMRzJDUE9wMDZsVjV5d3FhbWo2cnpuSU1EZzJRb0JuTDZ2cUxIS0JwQTVsa0hTbmppNnBTX1ZJdVZrS25ZWHNTZktIQVFrOWJiNVc5bDhGazhlcEkxRmxmMVRiSHdxMmVXTnFEN3FscFgzdmhjRGhRZG5Db2xZd3JfdEtXSW1UUFFGTzdKZ3BfX1R1dEpPOFRKV01mSU5nNnZrTkRfOU1Ic2ZELWswMEhncktQVk5DR3I5NE41Z2JoMzN1QjJWLVlOREtaVGp1M1FEejJoTWJhRXFsYUtRT21MMTFQV1dDb0JiTFdvRVNxSi1vUXNNUWxuSzJ2dTVlRTA?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-14T15:46+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
       "title": "黃仁勳離開輝達恐衝擊台廠？網憂台股崩回2、3萬點 網反駁：換個CEO而已 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMiqwNBVV95cUxQdTNxTTRCNjBIaUpOM25GaXJRQ3RIR2luUVlWZmd5UkNtS2g5YnRhVzJ0RnZFQ1U3bXFibkZSdWlqS3l3MXpBblJ5cFdKZXJ2RHJGNzd2SklEaFlldlBkM0c2M0ptemk4NGhUVmZEMlFualZ6czQySERRRm13UWxJMzNnTkh1YXRrLUNVa0htMkUtNDFtY0hJVXQ5Yjhkd3FLOWw4cVE2VVNfVHhjUUNHSHBwcUtfRjliQ3Nqb3Z3YUtkLTJkQXdlcy1hX0NUejItTlluOU00cXE5VmFFTDI4aFpjcTRPR2ZNZlA2WElmSkNZZ01xYkNCQ1c0U3VEdlBWazA3a1VkZkhkYmEyMFJzWUpkWXAwVXRGUlYyTTdrQ3pmT0lneE0yU1dYaUZWaE94ZHRvcnhfYng5dDBLWi1kZG1fNjFlczZOdWdJU240YWp5aXdWYnZkNmotZWFzUFVOU2U0OVptTm9XeE80aDFSVm9TcXJVTGZoWFJwOWY3bmFzSDB0TkxtbjdOUU5PNnRQRk9jTmgwVy14V1VKSlhXcjVQc3h2ejRWOG1j?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-11-14T14:39+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "黃仁勳爆婚外情、捲共諜案閃辭！矢板明夫揭台灣3大隱憂：美中AI競爭恐牽動國安 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi4wNBVV95cUxQdk9VMVladjFMMHBXeVFrbEVSNGhza0FLNWpIVnhRMVlLdnZNMW0xYXhzRWxndkd0SEFqTUNCR0dJZVZpbENBUGxVSnhTdTlNZnRkYm9ISFo5aUJFTHp3NGhTdk5GLV9nY1VpQlpLSlc0elNWTGVLeVBULWtGQU1yODlRTkxXTkV3MGtxVHVBNHlWcmxKLXBtclkyaVFvamIzY3VIaVpwVXdQbHpwR0tRenZaVHMzZ1dDT1kyQ1BseW52ZHZVWHZuUENkVlR4QXFKeUtfYzRrZU5COGgtVmJqQ0E3QV9xbmlVTVctVjF6ZU93X0JJQWdIem0yT1BsUlVYZm5ScW9VY21JWG1pQlUwYk9rN1FSTm5nbDdCaTI5OFN3V1MzQXVMVnpKOGdmSXFQMEpfUmhrU1M3VjcySXZGdmFXVGlCX015TlRpekw5UHo3c0tjVmMzaU80cWp2Wks0aEVGV2dEMjdwaWlCRDBNeEJHSUYzY3p2Z0pkcFAwajRYZlRiSThPdWdneGlHRUFIU05sMi1jYUJGRG5MUDJweXdTbXJSaVNCamZPZ0ZzUlI2ZWZsNndTbzVqTEV5ODF0NEZleEh6TDhBQkpJbDRBMXI1VUJjU2k0WFBwaTFPbFBfalE?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-14T13:55+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股漲583點穩守4萬3關卡！國家隊大砍0050提款5.9億 放血「瑤池金母師兄弟」逾7100張 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMipwNBVV95cUxQTVI5RUU4M1BDQWloMlF5Rjh2Qzdjdk9NQmhFc05EcTJXZENZbUh1aUdmRkNxeW00MlUwRWNXdnI5Z21QZE1RdGVTVy1NSFlsMm5pUlZQUlozZDQyN2JmVlRkUWk5QmNmLU5HWnRQN3lwTXE4Ujh0clRPX2sxZXgxT2hadDNib1ZEdmc2NlFvS2xyZFZTZ1hzYjJpM1lqQW1Sam1YQm56cVdmNlhOQjMySVRYRVdBVEdqRkJaM1RyNEIxRFcyVGpUdWdueG5WeXhsRlAtTEQxcDhfMWtheGZ2RkExRWRjRjJkVTg0YkQ0OXJndExmLUVrdVVWSGRUNC1xNjlqS0J1V292X053dEZIZl9YRmVkRnhyRW9JanduOElRNGladnYxclVDWGZMaGdaRjVhc3RSMXBEM0xhUWJFd2h2YmMydEF0V1I3ZURQRTNLTDJqMWtXazhPZ0JlRi1sV3l0RzZOUzFkeUYyc2tHdGxGdVJxbWF2UTlaZU1JTHJ4em5ybXViZmhWQVNzMmhPYldqZTV1NHEwMTg4R011aGpSb3UzRmc?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-14T13:45+08:00",
+      "published_at": "2026-11-14T14:35+08:00",
       "importance": 2,
       "risk_score": 0
     }
   ],
-  "oil_watch": [
-    {
-      "title": "原油：布蘭特原油反彈至200日均線上方 – BBH - www.tmgm.com",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPRjhKUHpLRlU2c2FyelppbXZaUGNPRWVBME1kUDBXWFZQRE5YSV9DSWoxS2J0R1Nrbm5IXzhCTm02YTZKV2txRWxGbG1YMmVpWDBVdzdJdjgwbm5sS3ZHajhxZ1VSVzJReVFEekU0RmVsUEZCX1ROWUx6OXVUam1GZzBzc0xlN3gxQm1id1kzMUtNd0dGaHNiUVBuNm9JUnV5bDRzZ3VRUFhMeG5EZktWMHNBZUszZw?oc=5",
-      "source": "www.tmgm.com",
-      "published_at": "2026-11-14T00:23+08:00"
-    }
-  ],
+  "oil_watch": [],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-11-14T22:29:48+08:00",
-  "checked_at": "2026-11-14T22:29:48+08:00"
+  "updated_at": "2026-11-15T03:23:03+08:00",
+  "checked_at": "2026-11-15T03:23:03+08:00"
 }
