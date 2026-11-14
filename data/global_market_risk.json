@@ -9,15 +9,15 @@
   ],
   "ticker": [
     "⚠ 全球市場風險｜費半 -4.0%｜NASDAQ -1.3%｜日經225 +0.5%｜KOSPI -1.6%｜台股加權 +1.4%｜恆生 -2.8%",
-    "⚠ 全球市場風險｜美債10Y 5.15%｜VIX 19.2｜WTI原油 88.83美元 +0.1%（高於常態，觀察）｜布蘭特原油 96.08美元 +0.3%（高於常態，觀察）",
+    "⚠ 全球市場風險｜美債10Y 5.15%｜VIX 19.3｜WTI原油 88.92美元 +0.2%（高於常態，觀察）｜布蘭特原油 96.08美元 +0.3%（高於常態，觀察）",
     "⚠ 全球市場風險｜油價觀察｜原油：布蘭特原油反彈至200日均線上方 – BBH",
     "⚠ 全球市場風險｜What signal is this? Goldman Sachs compares Apple’s historical trajectory to NVIDIA: The curren",
-    "⚠ 全球市場風險｜黃仁勳閃辭台灣恐失去「直通川普王牌」！1大咖有望成接班人",
     "⚠ 全球市場風險｜黃仁勳下台誰跟川普談台灣？學者點名「1大咖」接棒",
+    "⚠ 全球市場風險｜謝金河參訪日本百年工具機大廠驚嘆！點名台積電：應思考成立晶圓博物館",
+    "⚠ 全球市場風險｜黃仁勳離開輝達！他示警「對台3大危機」：台灣痛失最強代言人",
+    "⚠ 全球市場風險｜Jensen Huang Was a 'China Salesman' for Nvidia. His Exit Is Weighing on Chinese Tech Stocks.",
     "⚠ 全球市場風險｜台股受黃仁勳事件干擾、一周內仍急拉3973點 外資連續11周買超這幾檔股票",
-    "⚠ 全球市場風險｜臺灣公司治理蟬聯亞洲第三 評分提升顯示多面向進步",
-    "⚠ 全球市場風險｜GOOG Alphabet - The bull market in stocks is being put to the test. 2027 may not be any easier.",
-    "⚠ 全球市場風險｜Earnings Growth Is Set to Peter Out - but Not the Bull Market, Says Goldman Sachs. Here's What "
+    "⚠ 全球市場風險｜臺灣公司治理蟬聯亞洲第三 評分提升顯示多面向進步"
   ],
   "markets": {
     "US_SOX": {
@@ -42,8 +42,8 @@
     },
     "VIX": {
       "label": "VIX",
-      "price": 19.16,
-      "change_pct": 2.4
+      "price": 19.3,
+      "change_pct": 3.2
     },
     "JP_NIKKEI": {
       "label": "日經225",
@@ -72,8 +72,8 @@
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 88.83,
-      "change_pct": 0.0
+      "price": 88.92,
+      "change_pct": 0.2
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
@@ -91,19 +91,35 @@
       "risk_score": 4
     },
     {
-      "title": "黃仁勳閃辭台灣恐失去「直通川普王牌」！1大咖有望成接班人 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi_wJBVV95cUxOa0tNeHFfQldkbWhmQTU1V0sxT3BGNkJWSzNjem5EdTd0VFF6X1JTVFRhMGdTQTJNaGptRXhVREtuMEJCOVdQTGE0WGR1Q3JPZTJrWjI2Nks1SjE2WW00cmpYQ0VmSnpjUEpaaG52cU8tYmZtY0c4NFFCeHJZNnl3X0oxeGlfM0NXd0RNYmV2bmVQUGZSRHJSTHRnUlBHTmFlU2ZtUjNTOGFsUHVnYnlzWkZFNHJaNHRfSENRMlR0ck9nZVRhRDlGSk9OMkNkS19zaUpVcU90d19DRnF2Z1l2Vm9Wb20zXzVycHBuUWpuZ3pkd2pQUi1lbFU5RjdrU1RVN2RJTjdBallZMWNvWnVQOWxFeENGc2ZCYVR2R1g4bGllMTVRaDVKSnpuQVh0bXQ2dWNoX3kyNzdadWt4OFBHejVOMzh1MF9sN19HelZ6R1ZCRjJvcE5hQnp3Nm40dkdwYkMyNkJvY1NWbGFSSHVhejk1VU94dTdRcUdrWjBuQQ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-13T16:18+08:00",
-      "importance": 3,
-      "risk_score": 0
-    },
-    {
       "title": "黃仁勳下台誰跟川普談台灣？學者點名「1大咖」接棒 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMi0AJBVV95cUxQOW1MbjE0eTB5S01Oa1VYZjdlX005dnlKS2VZbVlXOERGQWVzNmtMSU5jZnJGajMzMXoyTDk1d2pmUFQ1QXYyZ1FGSnJYdGJxM2hSNXJSZ0d0Z2xLczA5MWJDaWFockh3VW9BdzVEYTZFV2hPZ2k1YkQ1UG1jUVg5T2ZPb0dJd0h0c3NUVzBGZ2xvNlRqVG1tSi1MblVwNTk3SGlFcFg5UUJ4NXVTN3JTdndaaTYzV1ZRSW9lWG5lelN4VEZDTUwtMjRTM0NEV2xkWV9VaTdoYmUtYkdhNENRS0J1cElBTk1BclExZndvNElTTFlWUU95ekJuWV9GWlV4THpIcFVGdGp2bnlzcTRNelJWYnpCY2FaRnlJVWwtNU9ldVRNU3pLV0txd3JHOTBxRFVxNXFxU2xFbHd5UE1ycXc1a1dQOFJQcmQtVFNSMXo?oc=5",
       "source": "Yahoo股市",
       "published_at": "2026-11-13T10:59+08:00",
       "importance": 3,
+      "risk_score": 0
+    },
+    {
+      "title": "謝金河參訪日本百年工具機大廠驚嘆！點名台積電：應思考成立晶圓博物館 - 自由時報",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1XajhINkR0YlB0eklFZTZjRU5FSDBPVWxuNS0yS1JuWGNtYUNoNlNzSjQ2WnFLSWFhT1F5czk3V2MxMi1rZWdNcnZEekcxUWlSMU1IanFPZXk?oc=5",
+      "source": "自由時報",
+      "published_at": "2026-11-14T08:58+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "黃仁勳離開輝達！他示警「對台3大危機」：台灣痛失最強代言人 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMigANBVV95cUxPLTZuaXRhVGJLVVRBTVJIdmZIRmpyb0pWYnBRaXVBLXo3azE5Mi03OEhnMl8yY3E0YkUxRFhHQkh1XzVDWk9wVVhGOE5pNzNfRnJ2SUg4SUQyU0o3UEN2am9Sc1l0NFJJM05TbWptVXpUV3FDM0ZnNFNBbTJHS1V2X0k4cWhYdWlKZFRBMFdiMktDa19SNWd3aUphQ0o1dHYwbVhZWks1T1I3eHlJdmJvQjVXa01kQnNVcTltUV9QLVpPWHlUX1ZPNkxmblctWEpKd192bFo0SWxkdXVub2NhVy1iZDVoQWZXZ1Rqdlp3R21XN3M0S3ljTWJtcUx0Q2ltNF9hb2VxRTJmX19CQmJ1bDR5dFpOc29zdGFMQVhxNGotdGtoX1pGRS1FaVBQWFA3V01YeDd4alRoeVVMVk44d1NDb2hxZTBpek4wTldYcTJzLU1zUk5SV1hfQ2xYbThOVTlLZ3A0dGtmaFJBaGxyQTFvc19jdXo2bTAxRndha24?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-14T07:11+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Jensen Huang Was a 'China Salesman' for Nvidia. His Exit Is Weighing on Chinese Tech Stocks. - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOa3VuUUoyc01YQmlMVWY1aDdvNjhkLXhLZl9QT09FTjE1blJ2YVNSa0RvaV8tOERoeFFQVFZvVGZVX0dBREtYQmNvb2JTZzRGSkxzMDcxUjZ4bU9JOWFYbXk3ejRqTlVwRF9mb1ZmVHIzYXphMlQ5R0xlVW41b19KQnA1Yk5NdG9hbTFuYWFmc1FIUzdQeWowODhkdFk?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-14T04:41+08:00",
+      "importance": 2,
       "risk_score": 0
     },
     {
@@ -119,14 +135,6 @@
       "url": "https://news.google.com/rss/articles/CBMi8AJBVV95cUxQQlpNekJXbnJfcFUyNHIzMHdNcXFCY2Y1YjlyMzJ2bXhwemRheVVYSFhRRUJVX1BneXgtUzRUemhlZERlQlp0amNxc2ViTk9TRENqU3luQUt3NnVrakhDM1BvNDNfMEJEWmpackJWNUdZQ09CZzQzQllPNnAtRGwyY0lBYklXZWRqWlg0bU16bVZ5QUhRRkRxSWw1c09LalF5MlRoTnJhVkNDREQ0Q1hNbmZ5OFM5eWlsVGxTczNKMGlWazVLekYtWkNBaDJxaHFISnh6QjBKQnlkWV9oVHowZHRYRkw1WU5zc245M080ZFlwRUhtUW9Za3U1ako2Y1ZVRlNVQ2Y5UTVJOC1EUXBPdlA5UVlxS3FrTjl5R0tiWExOSkZ0UHlmNkY3VXhTYnhBX0p2U3Q2eV9MN3ZSaWhiSld6X2tVRFdtZ0x4SVlTMm51WEJ4VUc5LUU3ZnZRbTMzLUliWlFBNVA0TjFaQXdOdw?oc=5",
       "source": "Yahoo股市",
       "published_at": "2026-11-14T00:06+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "GOOG Alphabet - The bull market in stocks is being put to the test. 2027 may not be any easier. - 股市爆料同學會 - CMoney",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE00MGVyc1VpZ0JUcU9CZFlwNDZEVlNXX1hvWmRpcVpfSGo3cGJoTEFyUURvMGQ3Q2FwWWZqamFRTXZaZjg0VTlpV0RRSmNMZ3BNNDZnVlFvY2I?oc=5",
-      "source": "CMoney",
-      "published_at": "2026-11-13T22:07+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -163,18 +171,10 @@
       "risk_score": 0
     },
     {
-      "title": "輝達總部還蓋? 蔣萬安喊合約有效 專家揭\"台積電反成最大底氣\" - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMilwNBVV95cUxPc0ZiZWhDUFl6Tk9GR3liS2JBTTBxUkZHQUFNX0Rvc1dSakJma3FBNWhITkFrOGJnRGtOX0lrOWFhY3otMFUwZjBrVjVGMEtoSEV1RTA2Tm9hdjJtbXcybHVMVmhEM2U0S3lZeC1BdG5ZZEV5aDFKSWpCRkVfWWxnaXBiNm1BR1dROHA0V2g4NmNKWTRQejlNMGxfb0FXSEJ2YkVQcXFJaVVLdkZ5RmhTWE9uQmxFdUp5aHl0WEdzQUdxMlVwRmVKYkZud0YxaFlPNVFnS3NaNW9KaUhWcjRncGJfNW5vWXBqVVUtTUxzVHNTajdfeUJXckZfb2tQamJ4Zm1vZmVJLVp2dmFrZ2Ezbi1Da19xSHVuNS1nREJpMjVoMkt6bWxmbk5tQTVDMXU1Q1VNMURCQU8zM05aSVRhbWVnMFB3SzlETklFeVFuOHdWQXhxR2wzQlY2WUd5SFIxazN3emozaV81U2wzSmRQQjhKc1ZDRTFxQTNSTm5odVNnaTYwbTlhS0tEX2hjR05jY1M3NGRadw?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-13T18:22+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Earnings Growth Is Set to Peter Out - but Not the Bull Market, Says Goldman Sachs. Here's What the Firm Recommends. - Moomoo",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOeHNveDNtRnp0bEt2bHRSajN5OEdBMkl0a3VsNDBYNzRrRWpuUVI4emlvUjVjanp3UkliMl9sQVhCOWlkV0JmQjhtUXBOWkxySVhRZnRDeGRkSTFvZU5KanpmNHlCTjlaVXp5eU92WVJRZWw5Y09CdTM2SWUyZFQxTFlnUlRmclU0UERHdWE2NEowV2N3bVVXVnFtYlE?oc=5",
-      "source": "Moomoo",
-      "published_at": "2026-11-13T18:14+08:00",
+      "title": "津上機牀中國(01651.HK)11月13日耗資345.4萬港元回購10萬股 - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9kcHk2aUo5aWUwXzJyVlhDUDFTc3FqZExJdVpKR2xkc1V2Wm1vRUJsZmpaN1NsRXFnWDYzYVlWRDI3SE1kblJMQ1Rta3JqTXp4d21KYjdDeGZNV0JiVlFaNDEyOEF0ekV5Vldv?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-11-13T18:29+08:00",
       "importance": 2,
       "risk_score": 0
     }
@@ -188,6 +188,6 @@
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-11-14T05:03:44+08:00",
-  "checked_at": "2026-11-14T05:03:44+08:00"
+  "updated_at": "2026-11-14T09:24:03+08:00",
+  "checked_at": "2026-11-14T09:24:03+08:00"
 }
