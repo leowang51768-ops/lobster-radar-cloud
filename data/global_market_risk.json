@@ -1,23 +1,22 @@
 {
   "schema": 1,
   "risk_level": "red",
-  "risk_score": 6,
+  "risk_score": 3,
   "risk_reasons": [
     "費半明顯下跌",
-    "港股明顯下跌",
-    "出現重大風險新聞"
+    "港股明顯下跌"
   ],
   "ticker": [
     "⚠ 全球市場風險｜費半 -4.0%｜NASDAQ -1.3%｜日經225 +0.5%｜KOSPI -1.6%｜台股加權 +1.4%｜恆生 -2.8%",
     "⚠ 全球市場風險｜美債10Y 5.15%｜VIX 19.3｜WTI原油 88.56美元 -0.2%（高於常態，觀察）｜布蘭特原油 95.84美元 +0.0%（高於常態，觀察）",
     "⚠ 全球市場風險｜油價觀察｜原油：布蘭特原油反彈至200日均線上方 – BBH",
-    "⚠ 全球市場風險｜What signal is this? Goldman Sachs compares Apple’s historical trajectory to NVIDIA: The curren",
-    "⚠ 全球市場風險｜黃仁勳離開輝達恐衝擊台廠？網憂台股崩回2、3萬點 網反駁：換個CEO而已",
-    "⚠ 全球市場風險｜輝達不再是唯一選擇！外資資金轉向「5檔晶片股」 台積電也搭上這波行情",
-    "⚠ 全球市場風險｜黃仁勳爆婚外情、捲共諜案閃辭！矢板明夫揭台灣3大隱憂：美中AI競爭恐牽動國安",
-    "⚠ 全球市場風險｜台股漲583點穩守4萬3關卡！國家隊大砍0050提款5.9億 放血「瑤池金母師兄弟」逾7100張",
-    "⚠ 全球市場風險｜黃仁勳辭輝達執行長、MSCI調整台股增3刪4、台積電入股 Anthropic與OpenAI 本周大事回顧",
-    "⚠ 全球市場風險｜股價震盪不減熱度 台積電股東直逼330萬人"
+    "⚠ 全球市場風險｜台積電法說遇輝達財報AI行情的關鍵48小時 MSCI半年度調整出爐AI伺服器供電散熱誰最強？緯穎台達電奇鋐雙鴻11月17至18日法說見真章中油油價連8凍漲｜投資早知道",
+    "⚠ 全球市場風險｜美股震盪引發避險潮 連增股息數十年老牌企業成焦點",
+    "⚠ 全球市場風險｜台股2周上演大怒神！「這檔金融」持獲利利多獲大哥豪砸87.4億奪冠南亞砸115億擴產玻纖布被上調390元目標價入榜",
+    "⚠ 全球市場風險｜台積電海外廠營運報喜！前3季領1675億政府補貼 美國廠大賺逾539億",
+    "⚠ 全球市場風險｜周末精選｜後黃仁勳時代！ 台灣AI供應鏈的新局勢及應對之道",
+    "⚠ 全球市場風險｜台灣股市漲近4000點 漲幅達10%！",
+    "⚠ 全球市場風險｜Hong Kong Stock Market Close | Hang Seng TECH Index Plunges 6.5% in a Week; NVIDIA's Sudden Lea"
   ],
   "markets": {
     "US_SOX": {
@@ -83,12 +82,76 @@
   },
   "active_news": [
     {
-      "title": "What signal is this? Goldman Sachs compares Apple’s historical trajectory to NVIDIA: The current risk-reward ratio is attractive! - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOTHFnMFk3Q21fOE5LSzd4bnpYd2lKLS1hRFZ5NVNmMUFRNVdvQlRJUFJaMFQweDBSaHhyZ3FiTGx3UklCZG1sUmdsdVV5Z1I0RVY0OG9hdTVKTW4wMW5zSTN4RGJwR2hRZ2k4Q1R6cFNIOUxQRXpBT0tFY28xU3FhbjBxNlpIaGlaOU9DZkVFajloaXJleUo1Z1BTLXdSbnY1S3UxdG56Zw?oc=5",
+      "title": "台積電法說遇輝達財報AI行情的關鍵48小時 MSCI半年度調整出爐AI伺服器供電散熱誰最強？緯穎台達電奇鋐雙鴻11月17至18日法說見真章中油油價連8凍漲｜投資早知道 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMigwdBVV95cUxQOXN2QXlmOEJLa2VBcEQ1SGtxRU0yOUNkUDRpQzZCMVRCWTdEVzZpVGNqTDJROFo5eC11Zy0tdGhnUFBvV1llZEwtbi1PQUdXZEdBOGJuTjhreGQxcVhwbjRHb2hOXzlFNVBtNkZVaC1YZmJGUmsxZ0xuUVhNS0JKT0tQaGlVRDlsNm5LdHdpR2lSeGpOWDI2S01hU1VMblBIR2JvX05vcWVucFotd1hBVHNRWlROZUhsTjZPdzdNMTI5M1BpYWFoSlV1dzRKNjZPQUNCY2FnS0VRSGtDYXhINFlmU1BMQ0dINklkckFRc28tVF9xT0xIOHZvUW1hV0NHWHFRX051UmpUQVhaVEp1OUN0Wk1teEpjVndCU19ZS2lDU2F2Qkcwdl80V0lSd1lpS3FHVzVZM1VqdFJzYWd4bjM4T2p0YkNDMW9ZZEJyVkhDQk5CY1dEdGRtRHpSWU1QVFcyTGV0eUhKS0F0dXVRNjUwY3RDOW9sUHJ4ZzNZOVBuVWUxUFotYXNBdmhjUVZicHFZZWJwVXRjOG1fYmpWS0ltN0lSb1VvM0NnNXNaODJFYndiZXFJTHpiRW0yT1NzdnpENTZpSnNON0R1SnhkUEhMcUV1UjNHclhvODVHNHFnSTdwU2pXaTFRQjB0WWxzaWJBblN6TjZZRVA2cGR5QUEwSmFJX3hlY1JyMFFhM2xTc0lpb0ppeHh1ZzE2Ty01SDczeC1YdWdLRmlYR3BuczFfVm5Ob1djMy1aN1gxWXk5UGFBZVVGM1g4bHA5Rzd5WHFQMS1FWFpnTFk1VWc4NkJQS3Bmb3V0X0sxSkVuTHhtTE1xU1U4NUFQX1QwckFFek5jU3B0bzh4ZmwxS3ZwTXE2WFBnOHZIdFYwUmFIRTdGTGdkMTlVM21qaHBzWGNvd3JIVmlFWmJEYm5sV2x6T3RCbDVBalozblQzckpLQ01NVEVNcDNiejYtaHd5NFpQTEx3RU1vQnlZSHRmTUxNMWVNSkFrdHptYTJsZ1ZfVGtNdmNoU0llNUdzbU9qbDVaNzVtcDBPY2k4YUh3OFlqYlliYV96SGJKdnlENVRMTnU4RU12Wms2UkFUTWlZaXUxQ21GVE5XS0NiZFF6eF9CZDI1XzFnQ0hlVjBQZUpQekRwNWtKeVduUXVHczh2R3I2TmlHRzhla2FYZWlYSmwxOWRZZw?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-14T21:18+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "美股震盪引發避險潮 連增股息數十年老牌企業成焦點 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi8AJBVV95cUxPd1JtRTBzejhvTXRUQVgxcHA0SzlzcDJ3bXZ3bUFOeGxpWTRTY3JKNHlJaG1yNVdLVjZ4Qi1rTkV6V2xyTHVBMm9Uek5falZzS0Q4LS16Mml4M2tLUXdrb0Y0UTZTeUJheGZoTmV6VEJXUE50UHlHdUNhWUJsVUQ2VWQtNGt3N29GN3NjdUZ5bVZjbzhTdEJ5a2ctMTVvY2ZrdzU0QnY1MVJVak1LdmREWE1UWWUtZUNFNEpFZl92cE5hWHR2VnIyQm50cmFraWFYTUVRM1RudWJwTjhFelB4bGpvYU1CZWdMTEpJT1RyeWRpa1ZRQkZoRndZNDNWWEg3akhFNExRUjZPN1RUYkZGWk9mZnFWLTJ4Tmo5S2xqVUZOYkFGN2JLYWlfYlJVbV9DOUlxNUpPSVdhb3d1cWJiMWZZWGpSdUZGekJmNmlpSWl3MmNEWWJjN2ZXMU15UUc5RmRtc2t6YXNfbGRTVzRMSA?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-14T19:20+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股2周上演大怒神！「這檔金融」持獲利利多獲大哥豪砸87.4億奪冠南亞砸115億擴產玻纖布被上調390元目標價入榜 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi8gRBVV95cUxOZ2U0ZER0ZkFjLUlRQXBMNkZhLUV1VXlCUk5uVVNDMmRwZjFKWktPSGtRaXNMU21BcjJPNklOUlNtd0lwUTJCVDJJNmNYVHRmSTJndFJDTDAtSlBmanRzVHhDREIxbEJzNW9rTnZnNHp0TWNfQy1WMDlVMWNVUzgtNkxubzB5VFNBOGIzblFwc3ZoTDZoa0VBWnRlNTNwaDZBRWpadWoyM3Q1eDBVN2VBbEdnQl9idXZDaFVKUndWcUk4RkhPUWFhT0lUcHhYZndJcjN6bnNlRXRyZEpSZDRsY0pVc2RCOGtpWkxZUU4wbXE4cHN4MzdQdmFCY21LZmlkcEZGRVdlbkVtdHRMMkZMR1J5a2xaR0k2eU9ROVVVX0FTN3RxaVhCeHFkUlBDRjhWMnQxTTZKWlpTMTJqdEItdUVLalJGRWVQWlJfYnJPeThCUGtBeFA4N28wSXliSy15ZVJ6T3c4NmFGYnZXNFNCR0dTMl9uOVNtcHhWRUJwZlhWZC1RT3h5SEYyTW1nS2hjM3NidFd0dnpZV25YelJmdlhVZ3owZ1pCSWVHdGFBdThtdXliZzFRV09VR1dTNVgtY3BQdk5jSnpWc2Y2RlFyWi03RTNzSGN5dC1FcmZOdGJ6eHA4ZXREWGVGVkwtS1VmbTJnRjhfZkxvREF0eF9HNllGX0ZhNlBWYXpfTjFXU3FnNVRKbGpGZ0pxSVlNa3BFQTJvRWZoV2hhcVVuVHBrdHZ5QWN0NFM1YUFqellLbHlsM3V1TFI3VkR4M01yS1VZb3dDc1prbTFLRlFiWGpJbEk5M0dDWEhZUGMyQ3JyclBVZw?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-14T19:10+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台積電海外廠營運報喜！前3季領1675億政府補貼 美國廠大賺逾539億 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMilANBVV95cUxONG5UX2NUdFRmSmFueW9TYW5jN2E1dmhfaTRlQ2tlMmUtSi1IcTdSMEl2cWJiUW9HZUFMQUQ3OTM3a2VSdlJZUU1VMFU1Y3NIaEJJNWh5VUgxYS1jSFB0VzBRc3BBcThNdEtYbEExYTlHWUJ3dTVLMUdYV2thUDVieDJZSG4yUFMzT3NPTG9pSDdrNGFxT0VIMkduQmhncTRPWjN5RXVBQ0VqOFowS1NmUnRNSzYtVWZhdkl5TzE1Nkl1QmFPOVk2M2V2VXpIZmJTY0F2OEYxQk5WMmpzZkZsUnpYNHBUckUxTFdpbE04aVlzV0lMZHR1Sk9PSlBUYndZTVlKN3hfRXI2VXdOaDdqcFc0anFKa3hQd0ZNaGRVaV9HTTN0cDRheFBVTDBFSzBGZFpTdG56RjdTSU44WFdHcXZ1bGJQbHJQMDc3WlVBQk94c28xYS01ZFdiN1BGX1ZoQWsyYm0zTnYxVThuWUdwcDNrRVhTYmItZVhzY1YxNHNFdWg5NG1PdXFyN29IU1otNUp3cQ?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-14T19:00+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "周末精選｜後黃仁勳時代！ 台灣AI供應鏈的新局勢及應對之道 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMigANBVV95cUxOX1JCdU1CVnFGcU94aDdySEh0ei1Vd2ZpaXRfZVc2RjMzSDJMZ2RzN2FReW8xYkE2UUxnTXJVU0FVcXRqbTNPZ2lEVnlTU1ZzYS0xVXZrSkRGSFlNRVZVQ1U0YW5LdDZySWtBbFdlX25xN2hqOTNjREZQOEZ3cU9IejdLbS1jcFlrTGRfVFoyeFRTMmVEUnZYUVdncm9kakE0R3h4bGtnLThTWERWVENJNHVUTXVJYkxBNDcxaVNoWTFRckJGSVJieERIRGNXSXRfT3pWeXZfa1U3MkgzbE05UVVUdVYyRWxteGRZdjhCQ0tvdWxFdHJHZDdPVFhucm1wVS13a2dPQjFjMjFEVGJxUU5RSHBVOVcwMm9QY3YxcEVVYXlMc3JxRmtmdGZiWGZBSE8ycUhHOWZGWldnbFlNSTd1VG1QOXFwQjV2dlJWNkhWaU4tamd1bkFhLXVoS2xyV1hVempUMEtuVzhKSFc2SUNmRmx3RGQzWEpfZGRobTU?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-14T18:08+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台灣股市漲近4000點 漲幅達10%！ - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPUFh1OHk3akpERjhYMHhsc21wSFFwRzFrU29PT3FHa3pNa0IzeHMzM0VKNDREX25kTWZqT3pzRi1sYTI3alRBbFo3WUVZdDI0dnBfY0ZlbWpvQlNxYUhlZTdidElYdGUzWnZNb2hfLXMxb3ppQTdRa3daUGlDTTVQekllWmRvRHFvQXNCY3BOZUdlb2wxY3dqTUxMMFA2a1BUWUxJNkJVQnF2VnNBT0xVb2IwdTdGZURJZURYd29jYmZTTmZtd0dPY2V3cUFpUTFzaW9xSHhmQzBGZ2Q2?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-14T17:04+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Hong Kong Stock Market Close | Hang Seng TECH Index Plunges 6.5% in a Week; NVIDIA's Sudden Leadership Change Severely Impacts AI Computing Power Supply Chain - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNcERjXzV2amJzLTBGUWwtMHJUaXJXQUo0eDRXcWVmNm9PbnZ3QTViRVF1NERiMnBNRWlfakY0RnFTQkZ4dnVqWWNhSl96YjB1VHNDTmJ1NTloYjZlb1JrRWFDdlpXLUpEWnlBbnZHdlhYcndEaVp5Z2h2VTRUNWl6NHBZOXRqR0x3MjVsQ1JqOFdsTUZNQUkwMkNtM0hOZFhKYVE?oc=5",
       "source": "富途牛牛",
-      "published_at": "2026-11-13T15:43+08:00",
-      "importance": 5,
-      "risk_score": 4
+      "published_at": "2026-11-14T16:27+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Nomura Dissects U.S. Stock Market's Black Thursday: A Reflexive Storm Triggered by a $100 Billion \"Early Sell-Off\" - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQNmQwLVgzQ01lc2duSmpVX0dBc2RYZk5MTnllQ1NyM1ZzMXJjNFBnQWpsbGxLRnQzN0pPNkJRUzV3c2c3Q01VeVFpQWNJeU4xQ1hHRURCdWhUSXA0b1ZpeEU4Z2pYQjlaSGE5WFBDUzZRN3ZMUFN4QTdCX0hScUEzczVTNGg1RVlZbE5wY3llUGw3Z01SbkxFTzJNUTQ5QzkzY0drM3RR?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-14T16:16+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "黃仁勳掰了掀全球震盪！專家亮出風險狂飆「7家台廠」揭訂單大變數 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMipANBVV95cUxNeDNtU1ozS1hMWHJQR2dZOV8tY1daQWlrOXF3UlU5VzItR216YWROS0FEM1M2cjdhelVab3R0M21MamVfcEZuUjdNeFpDSFp1UHJHaTdBZ2x2allkWUxRbkthcnE0cmpieTdyTVUxa0x4T3oxTVRWRFNpV2dHcXA4VlNiSzZtNzFZTHFOTWVuLUN2TWh1ZlVpc3Z6MDcxWGUxLVRKeWhPQVJaZjN3WGFkZVZ4dE1zS0JHdlRUUFRIWE0wdlFRS280MFE1MWdpVUd4NHZWMFhmU1J0TGlIMEQ5ZnlvWnAzOF9TRWE5cnk3UW53d2hDNHRReUZzWVdweUJyZE9MOWlhT2dtTFdMUkdhVlV2bVFYNjN4cmhWd2NRc2w0V2pnSXkyMHV5cnRSemEtekxpZXJqbEVNQUJ4SW9FSGRTTURRODlnZ3lJZzE4SEZaUWd3T3lLT2xXMGIzTmJoNURfbkVqODU2V1ljM0IweE54WWM2bnVjeVNycERUdEVsSU90ajVHeHlFZFhLR09ZVXVCX2lsanlvY3B3dVNIYnFiUWQ?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-14T16:07+08:00",
+      "importance": 2,
+      "risk_score": 0
     },
     {
       "title": "黃仁勳離開輝達恐衝擊台廠？網憂台股崩回2、3萬點 網反駁：換個CEO而已 - Yahoo股市",
@@ -99,18 +162,10 @@
       "risk_score": 0
     },
     {
-      "title": "輝達不再是唯一選擇！外資資金轉向「5檔晶片股」 台積電也搭上這波行情 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMisgNBVV95cUxONjdQMkZTakV3RW5NOVdfMDAzdnVDcU9KVnFmdTZmZU5ZOEVUTTJyUU9NeEVJcTJVZmpOSkxZU19rZW5jSHdfMnpXUGtOU1E1bUQwQm9WZEFGSF82c3gwUmdqX2prMkJ5NzM3ZWM3NFBvMVRFTi01N3FmZkNXUHNpU3Z6ZUpDWnpST3d2THl1M1BpZW9naE9jRjJMaldDUzV1el9XQ2hydHExSmxYV0VSOFlJZ1l5M3J0WDh6WFNIbzJJc29iUm1GSEpzaWxaWFZJcFFQOHEwYTh3NWtGSG1rcUlPeUc3T3RuMm1hLUNtR0h5YkY0V2MzWGJsNUt2SnVlSjdwY1pHNWF3c1dhQXpibE1kRkhwbFdmX1dVczJmRUNkN3dBOWFGNjBud2pneXB0eE5hdE1fZEpmd09aVjZNNl9QckhGUmVQOS1GVEpfek4tMkMzVm51SXRWYTF0VmNlTDVNSjlBanFQVDg3ZE5XOTVxbFZVWldIeWQtazd1MjhGZmdfNWJtVmZrZkgyMEY5NnUwWTZiMDVWTHdHX25oQ0YwQVA4VG1KMDhvZ2VKNF9MQQ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-14T14:20+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
       "title": "黃仁勳爆婚外情、捲共諜案閃辭！矢板明夫揭台灣3大隱憂：美中AI競爭恐牽動國安 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMi4wNBVV95cUxQdk9VMVladjFMMHBXeVFrbEVSNGhza0FLNWpIVnhRMVlLdnZNMW0xYXhzRWxndkd0SEFqTUNCR0dJZVZpbENBUGxVSnhTdTlNZnRkYm9ISFo5aUJFTHp3NGhTdk5GLV9nY1VpQlpLSlc0elNWTGVLeVBULWtGQU1yODlRTkxXTkV3MGtxVHVBNHlWcmxKLXBtclkyaVFvamIzY3VIaVpwVXdQbHpwR0tRenZaVHMzZ1dDT1kyQ1BseW52ZHZVWHZuUENkVlR4QXFKeUtfYzRrZU5COGgtVmJqQ0E3QV9xbmlVTVctVjF6ZU93X0JJQWdIem0yT1BsUlVYZm5ScW9VY21JWG1pQlUwYk9rN1FSTm5nbDdCaTI5OFN3V1MzQXVMVnpKOGdmSXFQMEpfUmhrU1M3VjcySXZGdmFXVGlCX015TlRpekw5UHo3c0tjVmMzaU80cWp2Wks0aEVGV2dEMjdwaWlCRDBNeEJHSUYzY3p2Z0pkcFAwajRYZlRiSThPdWdneGlHRUFIU05sMi1jYUJGRG5MUDJweXdTbXJSaVNCamZPZ0ZzUlI2ZWZsNndTbzVqTEV5ODF0NEZleEh6TDhBQkpJbDRBMXI1VUJjU2k0WFBwaTFPbFBfalE?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-11-14T13:54+08:00",
+      "published_at": "2026-11-14T13:55+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -119,62 +174,6 @@
       "url": "https://news.google.com/rss/articles/CBMipwNBVV95cUxQTVI5RUU4M1BDQWloMlF5Rjh2Qzdjdk9NQmhFc05EcTJXZENZbUh1aUdmRkNxeW00MlUwRWNXdnI5Z21QZE1RdGVTVy1NSFlsMm5pUlZQUlozZDQyN2JmVlRkUWk5QmNmLU5HWnRQN3lwTXE4Ujh0clRPX2sxZXgxT2hadDNib1ZEdmc2NlFvS2xyZFZTZ1hzYjJpM1lqQW1Sam1YQm56cVdmNlhOQjMySVRYRVdBVEdqRkJaM1RyNEIxRFcyVGpUdWdueG5WeXhsRlAtTEQxcDhfMWtheGZ2RkExRWRjRjJkVTg0YkQ0OXJndExmLUVrdVVWSGRUNC1xNjlqS0J1V292X053dEZIZl9YRmVkRnhyRW9JanduOElRNGladnYxclVDWGZMaGdaRjVhc3RSMXBEM0xhUWJFd2h2YmMydEF0V1I3ZURQRTNLTDJqMWtXazhPZ0JlRi1sV3l0RzZOUzFkeUYyc2tHdGxGdVJxbWF2UTlaZU1JTHJ4em5ybXViZmhWQVNzMmhPYldqZTV1NHEwMTg4R011aGpSb3UzRmc?oc=5",
       "source": "Yahoo股市",
       "published_at": "2026-11-14T13:45+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "黃仁勳辭輝達執行長、MSCI調整台股增3刪4、台積電入股 Anthropic與OpenAI 本周大事回顧 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiwANBVV95cUxNaWtOYUNMVnd0N3Q5MTliQWZ1WWo0M0Q1YXFYbzlnRi1RMHpfeUJNSXJEZ1AwLTNlYm0yUGVxUDlwSTJPSDlLTE5jb0FLWG1pQnNrTS1wWVR5NXgtSnROaHhUbnBhSnFEYlJ3YkNIQVZDSFREZUtiQ2haQ2tuSk9Cb0l6aUFiS3g2UUF5d1d2NDdIQzE1enZLYUZEc3c2M3hQLTRuN05DT3pwVF9HS1NadTNUQVJXVVJJS3lCSHFHeUJZbmJLVTFxc19rUVhRdWxXN1lncVoxZkZIX1MwVHdVRUVkMmE3WnlXNmRfelBkUExVcmtfNVFfM2ZsRFRQNnZHaHYzeEZHMlBfbXRhemdua1R0SHN4TFctRjVtQmxZU2Q0SkNfdGZINGhHcEpuTElqQ0JybDdwWUhtRkpKZzdYU2wwMDZEVUFVZkU2ZjM3c0ZYT2Vmc3E3eW5mVThfNFFXcm5MZFh1dEdjeExTdFZnTEgwRkpTX3JYbzJtYWpZZWJpV1IyWG5uem5aU1NDU2FsOVowbEQ4cGpNbVI1TFhWMzd6T3RkZ2k1Y0xFQjRoQmdscDlodmZwV25maXlWRnc5?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-14T13:01+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "股價震盪不減熱度 台積電股東直逼330萬人 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMirAJBVV95cUxQTWpQeUJIZ0h6c1RUdzNtRzdidkpsblVyTzNyTl9LMExDX0tCOTI1Snp0dS1OU0stamRpRXRxeDQyQk16SVhpaUtkeW42bUVES3JlcXd0R2ZOYzRGMTlDMDVuanpCdE9jYWU0WWNZN3lrOFJoZ1Rxd2ZGN3dSZFNvQ3R4TWJ2SEY1aE5RVUcxQUVQbmhMakxUY3d3Z1lIRGFtaEJlMVdvZGk1SXlLSnBvOUhWMU9SaGlzZjEzNWt0QmVabmtkRXNXN3ZSZjR6UWN2UzVKUmlFanMwYXFnSzF2cTdOeHF0TTVRb1RLYTVwNHhMZkhlUVo0SjQ1QUl2aHpZWjdMbjJiVndFYWQyYzlhWUhJU2JrUGNEYUVHQXJGdUdYY2FTajR4LUZvZWU?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-14T11:53+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "黃仁勳卸任才是開始？台股反彈583點 郭哲榮突點名「這幾檔」接棒股 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMinANBVV95cUxQRURMSnBlbVU1N0xGRWRfREczZHhtMlp6bkN5ZlRPdU1fSk1RdXZmeHdhNTM3eW1wenVCZ29tblhPZ1Vtd194UWQ2OG14UEVsT0kzaGRrRXNOUFlULW9ZRXMwaUIwWjhsZnMweDlmSGhxamsyai03UjdTWGJhVWhzQm9WZU5mMElqNDQzZFhVNXllUWkxaEJtR1JXc2lUdUpETDVwYU9PSGVKelU4enYwaVVlNExHMHZIYjlwbm9TbU1ma0JKTHBLeDF6SUJqMkQyclRLS2pmbnJ4cUtCbmlhczBIOGdFRlA3bXljdkNGYWlYTDZzOVJNd1lDLTdUOUk2MFk4N1hPSVRXVU9YYVdSYzhUTktiZjhldmx6eUJFTHVjY196WVRHYXN5N0x5RVRvYkZPYVhyTE1sa1FINnJvTjhWeGhjVmR5THB1OVRadklVLXl5cHZqNm9USE1SZlFodW1DQ0hlWHZIajNvTTlkN0t6V0R6T0VaQUFtQjFZM1pJRWx6blRfd1ZrT2lOWkFTaXZfcnk1OWhPSU9D?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-14T11:11+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "周末精選｜後黃仁勳時代！ 台灣AI供應鏈的新局勢及應對之道 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMigANBVV95cUxOX1JCdU1CVnFGcU94aDdySEh0ei1Vd2ZpaXRfZVc2RjMzSDJMZ2RzN2FReW8xYkE2UUxnTXJVU0FVcXRqbTNPZ2lEVnlTU1ZzYS0xVXZrSkRGSFlNRVZVQ1U0YW5LdDZySWtBbFdlX25xN2hqOTNjREZQOEZ3cU9IejdLbS1jcFlrTGRfVFoyeFRTMmVEUnZYUVdncm9kakE0R3h4bGtnLThTWERWVENJNHVUTXVJYkxBNDcxaVNoWTFRckJGSVJieERIRGNXSXRfT3pWeXZfa1U3MkgzbE05UVVUdVYyRWxteGRZdjhCQ0tvdWxFdHJHZDdPVFhucm1wVS13a2dPQjFjMjFEVGJxUU5RSHBVOVcwMm9QY3YxcEVVYXlMc3JxRmtmdGZiWGZBSE8ycUhHOWZGWldnbFlNSTd1VG1QOXFwQjV2dlJWNkhWaU4tamd1bkFhLXVoS2xyV1hVempUMEtuVzhKSFc2SUNmRmx3RGQzWEpfZGRobTU?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-14T11:00+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "黃仁勳掰了掀全球震盪！專家亮出風險狂飆「7家台廠」揭訂單大變數 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMipANBVV95cUxNeDNtU1ozS1hMWHJQR2dZOV8tY1daQWlrOXF3UlU5VzItR216YWROS0FEM1M2cjdhelVab3R0M21MamVfcEZuUjdNeFpDSFp1UHJHaTdBZ2x2allkWUxRbkthcnE0cmpieTdyTVUxa0x4T3oxTVRWRFNpV2dHcXA4VlNiSzZtNzFZTHFOTWVuLUN2TWh1ZlVpc3Z6MDcxWGUxLVRKeWhPQVJaZjN3WGFkZVZ4dE1zS0JHdlRUUFRIWE0wdlFRS280MFE1MWdpVUd4NHZWMFhmU1J0TGlIMEQ5ZnlvWnAzOF9TRWE5cnk3UW53d2hDNHRReUZzWVdweUJyZE9MOWlhT2dtTFdMUkdhVlV2bVFYNjN4cmhWd2NRc2w0V2pnSXkyMHV5cnRSemEtekxpZXJqbEVNQUJ4SW9FSGRTTURRODlnZ3lJZzE4SEZaUWd3T3lLT2xXMGIzTmJoNURfbkVqODU2V1ljM0IweE54WWM2bnVjeVNycERUdEVsSU90ajVHeHlFZFhLR09ZVXVCX2lsanlvY3B3dVNIYnFiUWQ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-14T10:20+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "美國期中選舉使美台股市劇烈震盪，專家揭三大訊號台股還有機會上 5 萬點 - TechNews 科技新報",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPOUdZU1RubHVVZGw2eWRiQi03M0ZmTS1yN0dGbE5mTTVTZS1OSkQwX0JHN1FabHFYS1JnSGQ1WWNaOUpGQ0ZFZEhqbXJUMjlTVXZZV1BGZXJIZDlNNzNpQ3k5aVQ5MzNKeWhfYWZ3QmVPcEdseW0xLUhYdjNneXhLaUVOaE0xOTBoQzV6RFZIa0h4Z200RHpJdG9Mei1iMnFjdmtiQ3Y1VDhNRDJYSDFoRHBqRTh5RU5oTmViUElEQQ?oc=5",
-      "source": "TechNews 科技新報",
-      "published_at": "2026-11-14T10:02+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "謝金河參訪日本百年工具機大廠驚嘆！點名台積電：應思考成立晶圓博物館 - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1XajhINkR0YlB0eklFZTZjRU5FSDBPVWxuNS0yS1JuWGNtYUNoNlNzSjQ2WnFLSWFhT1F5czk3V2MxMi1rZWdNcnZEekcxUWlSMU1IanFPZXk?oc=5",
-      "source": "自由時報",
-      "published_at": "2026-11-14T08:59+08:00",
       "importance": 2,
       "risk_score": 0
     }
@@ -188,6 +187,6 @@
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-11-14T15:40:34+08:00",
-  "checked_at": "2026-11-14T15:40:34+08:00"
+  "updated_at": "2026-11-14T22:29:48+08:00",
+  "checked_at": "2026-11-14T22:29:48+08:00"
 }
