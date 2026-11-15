@@ -12,12 +12,12 @@
     "⚠ 全球市場風險｜美債10Y 5.15%｜VIX 19.3｜WTI原油 88.56美元 +0.0%（高於常態，觀察）｜布蘭特原油 95.84美元 +0.0%（高於常態，觀察）",
     "⚠ 全球市場風險｜父親頻示警台股要崩盤！她手握0050陷兩難 過來人勸：先想清楚投資目的",
     "⚠ 全球市場風險｜Federal Reserve issues sudden warning! Major short sellers increase short positions.",
+    "⚠ 全球市場風險｜10檔台股ETF 本月中除息- 日報",
     "⚠ 全球市場風險｜#IXIC NASDAQ指數 - 3 big things we're watching in the stock market in the week ahead - 股市爆料同學會",
     "⚠ 全球市場風險｜不甩台股周線強彈10%？國家隊單週重砍「2檔正2ETF」逾4.4萬張 提款名單一次看",
     "⚠ 全球市場風險｜黃仁勳不只嘴上挺台灣！曾向美國喊「台灣救了半導體業」 還攜手鴻海打造萬顆GPU超級電腦",
     "⚠ 全球市場風險｜台股紅包明天開搶！「這檔重電新兵」抽中潛在獲利8.5萬 2檔新股申購時間一次看",
-    "⚠ 全球市場風險｜Taiwan Semiconductor Manufacturing Company Limited (TSM) 股價、新聞、報價和記錄",
-    "⚠ 全球市場風險｜台積電海外廠大進補！各國政府補助1675億創新高 美國廠前三季賺539億"
+    "⚠ 全球市場風險｜Taiwan Semiconductor Manufacturing Company Limited (TSM) 股價、新聞、報價和記錄"
   ],
   "markets": {
     "US_SOX": {
@@ -86,7 +86,7 @@
       "title": "父親頻示警台股要崩盤！她手握0050陷兩難 過來人勸：先想清楚投資目的 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMitANBVV95cUxPS0dyZmVlWi1NWEJjSUEwRmVURHk2YVdfdVNWQ1ZFVUdvUFJwYnFWeEFkdmZiak0xU1BlbXFrVUNDSzNZWlNZYV9ESWc2T1l4RWlTUDM1QXFSdUx6cDZWOFFEMUdGOE55MVVuMDBVOUtILWxSR2dJR1NoRVh0X0NfY2N6d3FvaVFBWnZRY1Z6SDh0bUhZbWpjTGlqcmNFa0NXYlpHZi1MVHdnYWJJM1gyMFhTVmVqbTRYdkcxTjM2ZERFOFB0VEtOZlA5UkJiZ1RTSFZyaENDZ1prSkFKVHpwT2tNZ2lXOTg1NGVzYkhTbG03TkFBMk9maGR1TFB1bDBHRDlhb2ZzRWhaRHJ4N1JTT3ZvRWZ0cXdCLTRzSTRjODd4Wmo1X1lDaDJQZ3pQSERkRHRpcUdnX2JaUkVWeTF1T1RXWk9NV1doN2kyOXlJTkQ5OTRRQmV1MjFSYjVkVXEzaWk0SElIVVZSaVZvMzRVQV9lU0RaajBUa3RncU9TLWo4MHBaU3ZLNEdGMnNxR3NuWlpTdUltaW5xaG4tMkpObnZoZlF3aW5aektaRzVocFZBM0hS?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-11-15T14:48+08:00",
+      "published_at": "2026-11-15T14:40+08:00",
       "importance": 5,
       "risk_score": 4
     },
@@ -97,6 +97,14 @@
       "published_at": "2026-11-15T11:23+08:00",
       "importance": 5,
       "risk_score": 4
+    },
+    {
+      "title": "10檔台股ETF 本月中除息- 日報 - 工商時報",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE54RHlIVzVwNklVZkhodmNCa1UwYXNPZHV4MTU4OW45RVFlTk5GU3k2d29LX3Z5TEs5VGQ2UGlZWFUtSjljV1BZRnM3Zks3S19zTFY2X3lwX1JnMXdCUnJZ?oc=5",
+      "source": "工商時報",
+      "published_at": "2026-11-16T03:00+08:00",
+      "importance": 2,
+      "risk_score": 0
     },
     {
       "title": "#IXIC NASDAQ指數 - 3 big things we're watching in the stock market in the week ahead - 股市爆料同學會 - CMoney",
@@ -158,7 +166,7 @@
       "title": "黃仁勳離開輝達台廠也變天！分析師點名鴻海、台達電1類股超危…但ASIC將噴發法人選「這2檔」 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMi8wNBVV95cUxQT05XQUxDd0hNS1NKemt3NGtoNVZRR18tTXdJWTQ1dnYwZ0pJWk94ZnpDYTFSb19vWkV1RnJucXVxZXBBMW9sMHFMd3Y3RktfR3hYVFV1WmtKWHdHQzRjaDRYaVQ5Rmt1TFVpMUtFcVlVaDlqa1FLRzh2Z0ROYlljYS10cC0ydDRnbmJENFQ5YUszRHJoQ0gydFJtZXhOY3JKbGw0SVlYNGwwdl96UHp1MG9fQm5WdmlTVnVFeGNlRGZUdzJkM2R3ZGstakY1MDdCZldfQzlibzdPUkJ2SURDdEpLZnlYMFo4YXNGUGtoN2FsR094U2l1UUZVSXR2TzNZeTg1NDRKWFRYX0JVVGlxbVk4QjBzZTQyWmVKNDV4MWttejJ0TlFSdnFiSThBNmNvb3FlYWVjTVlEWDVVMklXdldScU4zTUZ4TXFvc2l2MjlVdjQ0T0J3RDFyUWx3aUtReGtvVVZ6RzE1OEZBSW9CS0NfekZfN2tBTWoxQ0tPTXZ4YWs5bGRUSXFHYl9wdFBjbWhDY2wzVVFkbzR5YXF3OTU3M01VLWRHek1FcEVER1dTZVpwTGdOZUtUSkpxTjVtOFliQmVGbFEyeUFzcjJySmdUV3E2d3BlM19RVE13N2N3ZG1sRDAzdEJ4MUduNTgzQ2dj?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-11-15T15:43+08:00",
+      "published_at": "2026-11-15T15:40+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -169,18 +177,10 @@
       "published_at": "2026-11-15T14:21+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "黃仁勳閃辭、亞洲AI布局陷變數！台灣面臨合作模式考驗 南韓憂16.7兆元大單恐生變 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi5wNBVV95cUxPR3Z5R3VmMFZPcmVCVzg0NlpoTVVOZTlzbUpPNk5lX2JRLUF4cXVFN1VLYW5WT0RJM3hNNFExaDRiZTZFTjFWR3N1YlU3LUZKcWU5UlFrbG80N0Y5d3l1eFhsdlZ1RDVlUWhxNnV5RjdVa2Z5Zk1yTkt6UUFDVldHV3dOVzYtalVzeGp3eDJYVm5NUWlXM01fbEg1R1RDZFlIclRsN1U5SXZPcE1ET3ZmcXF0YWVwNS02bmVKa0NONkJnd0pkTUFBdjF3aW1kWks3T3cxZDlLdEdPV2kzLVRoZGJQSkEtVXExSXlWbzdYLXJXWXdTb0Y5VTdIb2poV25lQXktVXJyQndUSHMxeXR0b0loY2IzOVQwcjAwbmhOd2ZSSXFxR2dhMlkybWp4SkpCd1p0OTRzZTU5dmNFcnhrVGpRWEpwbFFSck8wWGJMb2ZsREZVekFiLTZaWkptczRQZGRqT2ZTVlI1QXFjVi1NLTVGNXBjeEdyeF9VSHFCN0t6ek1CZ0UxUS1VX2szalRyM3AyWE5lbHQ2YzZ5LVV0WXFRZWljd3BFRzA0YXUwZ2NWM3lKQV80MVdzamxTcEFlcWpwbXZaY2l0SXNkRndXclc2LUp2djFLWGRRZzloN3dBX2c5enpn?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-15T12:43+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "oil_watch": [],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-11-16T00:38:07+08:00",
-  "checked_at": "2026-11-16T00:38:07+08:00"
+  "updated_at": "2026-11-16T05:13:14+08:00",
+  "checked_at": "2026-11-16T05:13:14+08:00"
 }
