@@ -4,20 +4,21 @@
   "risk_score": 6,
   "risk_reasons": [
     "費半明顯下跌",
-    "港股明顯下跌",
-    "出現重大風險新聞"
+    "日經明顯下跌",
+    "韓股明顯下跌",
+    "台股明顯下跌"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 -4.0%｜NASDAQ -1.3%｜日經225 -1.0%｜KOSPI -1.2%｜台股加權 +0.0%｜恆生 -2.8%",
-    "⚠ 全球市場風險｜美債10Y 5.15%｜VIX 19.3｜WTI原油 88.28美元 -0.3%（高於常態，觀察）｜布蘭特原油 95.28美元 -0.6%（高於常態，觀察）",
-    "⚠ 全球市場風險｜父親頻示警台股要崩盤！她手握0050陷兩難 過來人勸：先想清楚投資目的",
-    "⚠ 全球市場風險｜Federal Reserve issues sudden warning! Major short sellers increase short positions.",
-    "⚠ 全球市場風險｜爸狂喊台股要崩了！小白抱「0050」嚇到想落跑 眾人點破盲點：全賣吧",
-    "⚠ 全球市場風險｜《研究報告》10檔台股ETF 本月中除息",
-    "⚠ 全球市場風險｜輝達換人掌舵台廠挫咧等？股海老牛：台灣吃的是AI大餅 3指標沒變續抱科技股",
-    "⚠ 全球市場風險｜LTN經濟通》台積電龍頭地位 南韓「大猩猩」覬覦追趕",
-    "⚠ 全球市場風險｜黃仁勳閃辭掀風暴 美加速立法防堵輝達AI晶片流入中國",
-    "⚠ 全球市場風險｜Anthropic週四IPO！募資規模最高904億美元 輝達、台積電等七巨頭砸260億美元力挺"
+    "⚠ 全球市場風險｜費半 -4.0%｜NASDAQ -1.3%｜日經225 -2.4%｜KOSPI -4.5%｜台股加權 -6.0%｜恆生 -1.1%",
+    "⚠ 全球市場風險｜美債10Y 5.15%｜VIX 19.3｜WTI原油 88.90美元 +0.4%（高於常態，觀察）｜布蘭特原油 96.05美元 +0.2%（高於常態，觀察）",
+    "⚠ 全球市場風險｜台股重挫 2,635.04 點史上第二大跌點，台積電跌 135 元",
+    "⚠ 全球市場風險｜史上第2慘！台股重挫2635點 輝達概念股一排全跌停",
+    "⚠ 全球市場風險｜台股暴跌2635點寫史上第二大跌點！台積電挫逾5%、台達電鎖跌停 上市櫃170檔個股慘亮綠燈",
+    "⚠ 全球市場風險｜史上第二慘！台股終場崩跌2635點「失守4萬2」 台積電收2215元",
+    "⚠ 全球市場風險｜Dow Jones Top Energy Headlines at 12 AM ET: Global Oil Market Set to Return to Surplus as Gulf ",
+    "⚠ 全球市場風險｜2330 台積電 - 大不了年底股票歸零- 股市爆料同學會",
+    "⚠ 全球市場風險｜台股狂瀉2635點！17檔千金股跌停亮燈 股王信驊一張蒸發120萬元",
+    "⚠ 全球市場風險｜輝達經理涉走私晶片遭訴！傳公司求助台積電吃閉門羹 美調查Megaspeed則因「一通電話」喊卡"
   ],
   "markets": {
     "US_SOX": {
@@ -47,23 +48,23 @@
     },
     "JP_NIKKEI": {
       "label": "日經225",
-      "price": 60507.42,
-      "change_pct": -1.0
+      "price": 59662.02,
+      "change_pct": -2.4
     },
     "KR_KOSPI": {
       "label": "KOSPI",
-      "price": 5275.91,
-      "change_pct": -1.2
+      "price": 5100.5,
+      "change_pct": -4.6
     },
     "TW_TAIEX": {
       "label": "台股加權",
-      "price": 43675.12,
-      "change_pct": 0.0
+      "price": 41040.08,
+      "change_pct": -6.0
     },
     "HK_HSI": {
       "label": "恆生",
-      "price": 23637.6,
-      "change_pct": -2.8
+      "price": 23741.37,
+      "change_pct": -1.2
     },
     "US10Y": {
       "label": "美債10年殖利率",
@@ -72,115 +73,115 @@
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 88.28,
-      "change_pct": -0.4
+      "price": 88.9,
+      "change_pct": 0.4
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 95.28,
-      "change_pct": -0.6
+      "price": 96.05,
+      "change_pct": 0.2
     }
   },
   "active_news": [
     {
-      "title": "父親頻示警台股要崩盤！她手握0050陷兩難 過來人勸：先想清楚投資目的 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMitANBVV95cUxPS0dyZmVlWi1NWEJjSUEwRmVURHk2YVdfdVNWQ1ZFVUdvUFJwYnFWeEFkdmZiak0xU1BlbXFrVUNDSzNZWlNZYV9ESWc2T1l4RWlTUDM1QXFSdUx6cDZWOFFEMUdGOE55MVVuMDBVOUtILWxSR2dJR1NoRVh0X0NfY2N6d3FvaVFBWnZRY1Z6SDh0bUhZbWpjTGlqcmNFa0NXYlpHZi1MVHdnYWJJM1gyMFhTVmVqbTRYdkcxTjM2ZERFOFB0VEtOZlA5UkJiZ1RTSFZyaENDZ1prSkFKVHpwT2tNZ2lXOTg1NGVzYkhTbG03TkFBMk9maGR1TFB1bDBHRDlhb2ZzRWhaRHJ4N1JTT3ZvRWZ0cXdCLTRzSTRjODd4Wmo1X1lDaDJQZ3pQSERkRHRpcUdnX2JaUkVWeTF1T1RXWk9NV1doN2kyOXlJTkQ5OTRRQmV1MjFSYjVkVXEzaWk0SElIVVZSaVZvMzRVQV9lU0RaajBUa3RncU9TLWo4MHBaU3ZLNEdGMnNxR3NuWlpTdUltaW5xaG4tMkpObnZoZlF3aW5aektaRzVocFZBM0hS?oc=5",
+      "title": "台股重挫 2,635.04 點史上第二大跌點，台積電跌 135 元 - TechNews 科技新報",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNeGcyMzZyT0VzT1NhX3ltWmt2ak5qQ1YydUhNZkxMbHhFYVB5OUVkRjlfWlFHazdadGJwUzZkRXY3VEM0ME90TDhjOGo5R2dlN3ZFUm5Zci1FS181WDN2RGRtZWVOTER1VjZva0wwNzB4WkxybDZmRDhaZmoyU0JDY0hCZzJweTFJa05kSl81LXJ0MkFPVVNOdDBIQ1Joenh2aXB2UlJoQ29tbTNBU1FtQ1VQZFlEc0JYMTFZbWI1SFk3YWVQSWNFNzhn?oc=5",
+      "source": "TechNews 科技新報",
+      "published_at": "2026-11-16T14:37+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "史上第2慘！台股重挫2635點 輝達概念股一排全跌停 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMivgJBVV95cUxQcEViSXN4TE9uWlgyVk01MzVXcW83UjFCc1BUd2UxV2Q2TEFrZ0F6NnZSMi1qYWQ5ckk2TGRlQ3JMMHlzYS1NQ3FscmNSMFhnOTdyTFZ4NzNMa2NEOUx6dFQwcHNsaDVlLWNZUVdpZlhtZjRsLW1yMU40MktNdHVNWG00dU9TUGNmQW8tQmt3NjlqUnlITklHYnN0RmI0T1VqUWhvdjBrd2NwdVdGRjdaTEdYUE1FbzdmYkV5aUlselloRjRMS0psWkloMmlOWmhjSnNFOHdJTF9ObFBST0ZiWGdBUkhvaEhkakdMS3N0RmV6dU15V0xsSkVXekFNUzF4QWVnUUItUHlmVjA5WDV5YmE3bTJyWFMtR1prVlRCUkdjRXpmSmViZHhFYW94NnhLTWtnRW1taHM4SG1WakE?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-11-15T14:40+08:00",
-      "importance": 5,
-      "risk_score": 4
-    },
-    {
-      "title": "Federal Reserve issues sudden warning! Major short sellers increase short positions. - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPdXNuYTNXWnZJd0w1Si1SWFktZWpmSWhtVVpWbHhJd3FSd3Z3dU51SGFaWS1UeS10Q3FMa08wWlY2Q182WTVIWnpyWmx2cVpRMFBMYnlRazdKV2t4QURNZnFJSk5MZ1JrbG4za2hiR1pQc1VLcHhsZkRMcHItZEdadGFPeW5XT2hGV19CcWV3aGk0RExMV0htX2tfWHFNQTBRbmlVaTZPM29pNEFiZEExWGFEa19rQQ?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-15T11:23+08:00",
-      "importance": 5,
-      "risk_score": 4
-    },
-    {
-      "title": "爸狂喊台股要崩了！小白抱「0050」嚇到想落跑 眾人點破盲點：全賣吧 - 三立新聞網SETN.com",
-      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE44bHNGSmswU2hxX1RKQXB2ZFlOdnNjWmtnNEJSdXA4dGVVVzM2eFhfbXlqd0ZwcVRaV0RsRWl6N0lBZmZ2aWJ6eGpwaw?oc=5",
-      "source": "三立新聞網SETN.com",
-      "published_at": "2026-11-16T08:57+08:00",
+      "published_at": "2026-11-16T14:26+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "《研究報告》10檔台股ETF 本月中除息 - 富聯網",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOTVd6QW15ZndHUUJpQkViVzZpalRuazBYTTJnLTllWGt4UkdSekFKQXRsTUM5NTRFb3Vyb29NWVBuTnYxVEE5NHNlenVlN3kxblBMT0d3NmpZZkJ3S2pEWlE4R1JDZHQ5UU1CWXVCc0l2OTFCZDhBYTdtYXpnWlR0azR3WVFKTGlt?oc=5",
-      "source": "富聯網",
-      "published_at": "2026-11-16T08:23+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "輝達換人掌舵台廠挫咧等？股海老牛：台灣吃的是AI大餅 3指標沒變續抱科技股 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi1wNBVV95cUxOaWlESkg5VVdiRUdSY2JjdExIWjQwemYxS0J1eVdfNWRyNFI5bWxsaVdPUW5oc3lia2hTM0xzbE5Kd2NZQjdtMXZmRkkwdVViOThNQ2t3bU9jR0xlS0RORjlHVzZMMUtzOXo3a2pSYjhNQ1dreXVXb1lOanRpdTQyX0VVcTdHbWU2dFAwdXBFeHlaR09tSDhOT2dEODZZRkk1dk1PQ2RsNkN6WTRoalJaYzJ2OVBSM0MyeWhTVHNfNVl2MU1PZmxjQWpub0hlc0JWV29hMjdpOWtCNVlLUkhTQ1Nsc0daTElrSWpONDhPN2dKaHlsU1FEd1ZNUzV3d0c5WllzMXlJY3BmX3Vab2I1RzFiT3g4RU56SWFFQzNpT1FmWEJpajRvT1VZY1hpNTVqc1BPcFQxUHdlb2J4azNRWHhDdkh3V1FUOWI5c1U5M2pjOGVCZl9id3dWdjJxa2NWd0RMYUVqcFBoSm5xeF9sdTAyM1BndE1Oc2hOczVTUllzZVJMOHR6RDh0MHBsUDYwdkNxVmNlVEN6TXRvOWhidDkzY2lNVUdpRmZiTFEwWXFXVjRZcGVsWUFpMi1hYjNkbUZFcjRjUEc1LUdRTkdXdldYSjVrUUE?oc=5",
+      "title": "台股暴跌2635點寫史上第二大跌點！台積電挫逾5%、台達電鎖跌停 上市櫃170檔個股慘亮綠燈 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiggRBVV95cUxQandGdlJFM3Z0ZGg0VU81RlAxQ3Ytc3JuRDhnczFST0twcFRheFJFUFNqREFibFo0OFUzbC1qQ2hDTmZULUc5R1JhcnBFNWd1YjJJb19rWEVvOEhtMU5mTTlJb09IbFdIeVcxbjVQb0tIM010TFBZYUNQb1pyYWJNbnNueEdlN2RBMm9INHZ0LVRhcTZwSmI5SU5pQXFfSmN0MGg2WFI3YThzWTVBM09QbjBmdzVwQTJlMUtwZk95RFJSVldWUUV5ZmE0cy0wUXNyRTZWOTllNzQ0NThvd1lFVmlaRi1GNlk0bzNtQlFoemdtaUZua3J4eHdoMk5WWWMtMmM4cUZYVEZIVDlZOTRSS082NjViTllnY1JqVWRuTjI0a0JKUjhmVmVHbGdZazYwQXdFb2VkOEZxcExGbFBaN1AwLTlGQjItWHNGeFhDMGF3THZ6TVM4NmZoSnlyWkJ0RmdEUEtacTZrazNqUHFucE5MbUhoM3JCWV81WEtCc3Y0WjFrODRFU0hNYTAzU2tnamQ2SzRPSGZwa2FjbTR1aVktODB1VkMwLUt6WUJPX3Jib1FsOWhNX2pyTTlQbHlwblRyVWRTdWtrQ0x6MmRDT0o1ZGJYSkR0VHBEeUc3X2NCS0pHcWlpMGhfcWhycUlDaDlFMlJZUU9yRVI3bzVxeXJ3?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-11-16T08:14+08:00",
+      "published_at": "2026-11-16T14:05+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "LTN經濟通》台積電龍頭地位 南韓「大猩猩」覬覦追趕 - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5IRWstSUgtNEowMldQMlg3V3hNRzl3WUcxOW5ROXY1Y2FFTGtNNFoyemJtaF8yTjNfWWNBWkNBRHJjdVdYSGlYOXVIcHE0OTdLYl9tR3Z2SHI?oc=5",
-      "source": "自由時報",
-      "published_at": "2026-11-16T07:00+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "黃仁勳閃辭掀風暴 美加速立法防堵輝達AI晶片流入中國 - 理財周刊",
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFAyOVNkczdDUEJRdnowc1g4a1ZjQ0ZEZ1puc2lmVjhEb3NreFdMNXJnZ2htcE1IRl9Qa3l4UmtoeWIwc0pnX2NXU1VQN0FsM0ROX0JOamxYRnItUGdDUWtzYk0yQVJIemlYVzFNcUpyTQ?oc=5",
-      "source": "理財周刊",
-      "published_at": "2026-11-16T06:51+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Anthropic週四IPO！募資規模最高904億美元 輝達、台積電等七巨頭砸260億美元力挺 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMirwNBVV95cUxOVWc3dU9tcDhSZ3ZMdWY1LTlhYThMRVlLVjB2dllsNjRlT1ZBR1Axc1EtM2x0SG5kWi14amhUYnhyUHRINmVpX1VDdVVWSllJbUFyWlc2SEpZV3lOdVNvT1NaX3RyN1VSUkd5eDRMTHBmU2t5amdVdzRpUWNZNS1QVy1Oa1llSDRWcF8wTDYteERmRHZRajJtUkVtTTBlYkE4bFpyaGtOMGY0LXVhaWdNT05vNmp3U0pObVFlTVdLdUFBTENKTElfN2V4VTBDYTJRNnB4YWZWT2NRWk9xMkhMNXd4QnZ1QTk2aXNIbWVkX0V6UEQ3VGIzVWVQU3FaSzJiai01RmwtdGRaTDZFWUlQaTBqLW1LYXJXVWtKakRQckVGWkhDd3BYMkZJS2dXellDQzF4X1NoMk4yNnMtYm5vRmVWRVA2TWltSGVxemFUUlA2ZTQ0eklLaVZITkZCQkpBdWljR24tVHRLNlI0VHV5dW5HS2h4RDVZVFZmbGtGaVVERndSUnZXUVRSYkxpRnNRVTMyaC14M21DZFFyLVJxaUpsOUdTNlllUDVGelpVNA?oc=5",
+      "title": "史上第二慘！台股終場崩跌2635點「失守4萬2」 台積電收2215元 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi3AJBVV95cUxOV3NKM1BKa3hWdmFHbmxDcXkzVi1RUXF0ZkRiZmEwdVRSUTVRejNZTC1PN0VwWFF1d213TUhlekZxMlBuLThWR2JWclhZVFM0YXBlSzZLWkZId2xibTZKYXZWYXJ2OU55WDNIT0tBeHRRUVh3U09OY2h6YkY4TmdlTkRBd1pxQmljSXZUSDNFM0JuTldNUVNaZmszTEFtdXNjbE52MldhR3BFdDJaZ2Ixb0FQdFZoUjZkWkllcUcxUW5jem5GZFdpaWlCT0JaX3lyZllWQ09aY0kzMjFQYXNQa3JFeHNQcGFVSDhwYTA4OFRxWG5adVBzOVhfajRubFlTd2NkQ0FnUWxYRTdOU25QUUZ0WmJ1aW9EdWZranVGUjl5M25ENlNaWEYxdUpLNFg1SnJwN1JqUTMzQ1prcXB2OGozZ3ZFa0ZzaGJOWV9TZ3A2LU1WZmpEdF8xb3k?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-11-16T06:50+08:00",
+      "published_at": "2026-11-16T14:00+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "法人︰台股挺過修正 年底前震盪整理 - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBXcWpqR21Bb1dkUUtuLS1EVFpHeXhXaXMzN1Utc05yVXpGYlI3TVRuVEZzcjJhckJoQ0w4N09nOGdxTW1Rd3Z0cDlTVVFPWFJBZXE0SzVZVEg?oc=5",
-      "source": "自由時報",
-      "published_at": "2026-11-16T05:30+08:00",
+      "title": "Dow Jones Top Energy Headlines at 12 AM ET: Global Oil Market Set to Return to Surplus as Gulf Exports Recover, IEA Says | Crude ... - Moomoo",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNakRlX1dZaEhhb0JFVmZtNkdXU01xTTJWVVMxTDBIYklWVmhSa0dZTVlxQUl3bENaWjJuSE85QUdnbWJCWDl6UXR3cFhfcjE5LVJIYWpjNGplVzczandCdjR2U19HZVJBMzVlS2lZR2s4SGgzYlpZZ3k0Vm5KcmdscS1iODJFdFJBcEw3UGg0NjNfQTdBamFPdm9wRWtvbmM?oc=5",
+      "source": "Moomoo",
+      "published_at": "2026-11-16T13:58+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "〈財經週報-台股焦點〉台股軟體資安族群逆勢噴出、逾10檔亮燈漲停 - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBUOGRBaEJENm4xNnI3QU16RHBINGFjVXhISVUtR2FHOXFKZXBJUFBtanI5N0hQR1FBSzN4a3RTSDZPT3Y3Y09ESnZZLWM1cWtUNlBCdGc3Y2s?oc=5",
-      "source": "自由時報",
-      "published_at": "2026-11-16T05:30+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "〈台股盤前要聞〉群創Q3每股賺0.96元連5季獲利、公股4金2銀前10月賺1440億元皆超越去年 - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBzXzlWXzA5MWQwOUJjV09mOWpxRGREeTYyb2lrb0U5al90RmUzeno1bzEwVXBFTlAxMHNGelBlSUV0TDJlUUR4SmtJY2tUZ2Zad3NTaC1RWjFyOWNrR0JVZ2plazM?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-11-16T05:10+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "#IXIC NASDAQ指數 - 3 big things we're watching in the stock market in the week ahead - 股市爆料同學會 - CMoney",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFA5Y0pYYlllYlF1UGlsTF94MDRkMHVzYm11RXJWNnhWZ3hscDVzUUkyZFlzQUVTOXZVQlV2eEx6UHVIa0Jnem1tMjJhOFEzWDRHa1NsbjI1SEU?oc=5",
+      "title": "2330 台積電 - 大不了年底股票歸零- 股市爆料同學會 - CMoney",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9vbnBYd1dyNDlLczg0cjdkMF9IbEFWWWFrRXd6NlNJYWN1RG9TWVp6NWhhUDcxT1d5a3B6Q2pFam55TG5nTnNPQ2FQMml5WURKMHd4X1NZalU?oc=5",
       "source": "CMoney",
-      "published_at": "2026-11-15T23:33+08:00",
+      "published_at": "2026-11-16T13:50+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股狂瀉2635點！17檔千金股跌停亮燈 股王信驊一張蒸發120萬元 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiiANBVV95cUxOSnd1VmVIZm55S1hSOHpLVHBUd003WWt4WXVzMXprWVAxWFVwYlhCWXh1WnFrRGR5SUdBVFkzMHpkSVFLcXZoRUVpVm1pcHRhaEtuLXBxek1SQ2QyNjdtd29Ybms5bFgycVNwRDM5a2U4Q0NCcVF2MFRzLWg5eXRPdndsTXBReG5PWWRTQkFhdk5YRUd3WVVtcWtWaTB1azlzeVc3TlFqemRTMHUzR1N2ZlFjQVNudjhZRUlQX1NZS1VkN242b2szd2F2Q19HVHZmVS1CemZ6UVg4VzhvN1Z5UC1hS29oOS1sV0hkZ0JvOERMTzhUZHNBTHQ0ZkdTdE80X1oyOXRzZ0dSbmJacDMxclAxcW5YNHZvVVN6alhTNU5mWWhWeWM1bHJGU2ZYX0syNUU3WEllRVp0X3oybDMzcGRzVTBGSldlc0RNS05iUFczaDM1ampwSHJYa1d5YVI1UC1lakNzaVFrNWRWYlRnZGQ4anIyNUpsZzl1SVFnTlhZUDRnR19xbg?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-16T13:46+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "輝達經理涉走私晶片遭訴！傳公司求助台積電吃閉門羹 美調查Megaspeed則因「一通電話」喊卡 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi-ANBVV95cUxNWDgxZFNGMEFOMkQtYTlfRHZlVWphN29lYkx1UTZmZzdaaTd4eGNoNEdUOFpQWUY4clpYUE83M3ktV1VNWTYtVkxhbFVDRFdYa05XdWpLdXJqa2h5VEZNTzVXTzBQSkowN01hdVRLV3ZZdXJHWXU3RDBuNC1uT2JDTUdISV9EaEM4RWN6Y19oVmJvOHE4ckhEa3dBNklLcVRsaFYydmRzOUZkazBKRGVQX2hWVXRfTDk2WDNpcDRDcnZCeEpGUll3RlU4X0pqeHktX0lrb2NaS1ZESDNlNVBrWUw1RmN3UklYZ1h4cGh2MDdOZjhFQ0oxbWh2WnJ2NVZWOXZtUEJxNjNDQmVuaTRwbURvVFdIN1lwTUJ5SGRpTzRheENMODRJTjFxTGUyZFRVYmZWZkw1YWIxc2gxUzB5SDFuY2lDV1U2QlpHMEcwcTVaaDg1UjVGSjhSQ2tmWmxKWU5uU2lKR2J1NjhxOXl4U2dXVlZubk9zQndDOXREWG1Hamdsalc2ZDIzdkFsUjNndDZXdXpIY2lQbHh3YXctcjFJODJEYXU1X3BfYlV2MGpLR0lnbXVpQ19LOGJPa0JTRk1yVk1hbVhxUm1VNEFncUsyZEwxVWdZYnB0R04yaW5vRWY3ckpmNmhQNlJYZlprSjlWRy00bk8?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-16T13:25+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股狂瀉逾2200點 外資落跑還是內資倒貨？ 專家看匯市抓真兇 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMigwNBVV95cUxPMXVvQ1V1QjJfSXhNamdaUkZHU0JxazlTQ0t3c0htZTc5bVRkNVZkVzBDMlhieko4WkN6M2N6cHo5UmJrNktESU1OVU9HQ0tuMkJoQU8zd05pTkRNblNWdzhTcFVzMkVyU1AwX0JBWDZxa3RfMDFiOVladS1pYmt1Vk1JZHdlZW5qRUJZUDM1Mnc0ajBaQ3cxdzVhc1g4QXlqZGVTSXFHaUMyVzlXSDUwWWtZb2M2YW1MX2swNS1qOVZjR09zWVJpSkJtaDNUSVczV2lHdkU2RlJENE1KZW5oTzBlSnBQUHI2SExMSUhVWng5SktPR0pZRVN5ZzhHNXVDOW1XVVM4aTZLRGJGRGJnLTVFaEc1b0VLZ18wekVxZVJyeGgzVFQ4SUNMRUhSbWE2bXhycXlsR2xvTzc3ZUdNQk5QNHBKZ0twSU55THM2WktaWlZjWVpUbmhqOGZvcE42Z1pzQklndGZweFRPVFBrMFR6bEZ2X2Foa1Y1RmZIa1ZBSUk?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-16T13:07+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股重挫2059點失守42K！五大權值股無一倖免 台積電大跌90元、台達電打入跌停板 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiyANBVV95cUxOekJoLXNUNkhMamFDcFZRTjFlZ1pTWW0wRGZvSnlEanZkR1QxcUlZeXRUUDZtWWgxczBsQm5YUDhUQW5NdVlNRFdqY2FVdjJ0bEVzZTNtZlZDT2k2VWs3RmRxYk5UdTlkN2xESDJBQXpvM1FFN1ZRalp2VUE0U0tZUmU4Q3hfOHg5bXRGcUFGWkRLbmFRREUyRzNNelFSSnlKaGl4N1RsZExmcGNYRFRWTHFWUzVwRkdaWTdCV1dUZk1kdmgyc0Q1SUFpY1RkUzhSTFJFSFIyTEl0R1NEcWtLWGtFa0xOMmU0VncwZTEtdGFJQUxQUTRqVHFXM19sQlVaMGVIdTQ1UkozbEdZanJTXzI0cm9IcWJwZ1UzVWs0QlV1aVhSSEh6Q3VuX3hsV3M2UExGM3NqU29WRVVoUm01akVaRjdnMi1kWFNjMTNXSS16cW8wWVg4djR2ZUdUVnk1aUwyczNqSjZ5dFRSYXpiM2xtQTBubzAza3V0Wm5wMTctWmdsZ2N4MkJKb3ZGdllJXy1DbWd2c3lyWklBX19OT1ZHQTdsSmxjOE9xTC1ObmdseGtZZi1KZ3VuVTJuMWpURmhhLXA2WGQ?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-16T12:25+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "【Hot台股】大盤跌逾2千點止不住？網哀「持股都變聖誕樹」 分析師勸先觀望 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi4gNBVV95cUxOeGJ6WGFRX25USTUzcEpXOXlQcVhCbWdGdFRtb0VoRjZKMFk1NlVkWG8xX0VySUQxMlBLZks2MzV4RkJWSkI5MC16NTU0ZXBmTWtmdzdRWTI1bUctRHIzQWxleXdPOEsxdVpEV0x2bTRTRkFlaDMyemhINFFnU2tYWERZaXpYU0F6NFJoSXJkZ1pjcHdyUHJGZTlGTmprbDV3SEdVOEVwUFdBSnlUYkxSbFRNbWR1MlhFZFQ1UXdrd3o2bV9aXzBiMG52STlseklnUlQwNFg2YXRCZXBmdkJHZ00zR2sxVkNfbXdaLUxvSlk3ZlNycUJvUE5oeVBUaGxYSU9mUXBlUFdBdGpnUkN2eUVQcWRGa3JyZGVvTjR5UDJ2SlNhNVFyblJJbmVCYkRmNXJmbGNWODNSdnVndzFyaWVCV0xlZEdNRHRNNmJyQkpFYnA3YjNZOTFmNWt3Wm0wbWthNXAxNndLc2tBMmpsVS1pZ0JrQWZrczJjSWYwUlYzTTMtemtxakVyQ1JvdGo1eFlveXY0TExrVWVOeXRPSWhPek1LWnlhSVpleTNJRzd5Nmd6MVBGcWJjaGphejFhRWJac0NrRWtreGxFNWVrc2JGY3pHbUxDTXN0dERkc2xUZw?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-16T12:12+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Hong Kong Stock Midday Review | All three major indices rose, with the Hang Seng Index up 0.84%; many tech stocks advanced, with Meituan gaining over 3% and Tencent rising nearly 2%; biotechnology stocks weakened, with CanSino Biologics falling mor - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNWl81bEZfdF9ha1I2aE9kUy1ROGp2cGxfUkRUUDRTaXI3RzhndHBsMC1lakU0UGZWamZyY1E0Z200aDJXeTc3WjNEeWxFTnpjTkZCa09vTmZfOGhUREpFZEpkcVk1a1E3Uzl2dDVpeWs2RWRCcUxQYXlBSnh3bXd5YlNfNFduVVVmMFRSeHZGem1QWDBKaUdXMmNaN1g2RHZMeUhN?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-16T12:11+08:00",
       "importance": 2,
       "risk_score": 0
     }
   ],
   "oil_watch": [],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-11-16T09:00:13+08:00",
-  "checked_at": "2026-11-16T09:00:13+08:00"
+  "updated_at": "2026-11-16T15:41:40+08:00",
+  "checked_at": "2026-11-16T15:41:40+08:00"
 }
