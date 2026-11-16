@@ -1,50 +1,51 @@
 {
   "schema": 1,
   "risk_level": "red",
-  "risk_score": 6,
+  "risk_score": 11,
   "risk_reasons": [
     "費半明顯下跌",
+    "NASDAQ明顯下跌",
     "日經明顯下跌",
     "韓股明顯下跌",
     "台股明顯下跌"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 -4.0%｜NASDAQ -1.3%｜日經225 -2.4%｜KOSPI -4.5%｜台股加權 -6.0%｜恆生 -1.1%",
-    "⚠ 全球市場風險｜美債10Y 5.15%｜VIX 19.3｜WTI原油 88.90美元 +0.4%（高於常態，觀察）｜布蘭特原油 96.05美元 +0.2%（高於常態，觀察）",
+    "⚠ 全球市場風險｜費半 -7.8%｜NASDAQ -3.0%｜日經225 -2.4%｜KOSPI -4.5%｜台股加權 -6.0%｜恆生 -1.1%",
+    "⚠ 全球市場風險｜美債10Y 5.14%｜VIX 21.2｜WTI原油 86.42美元 -2.4%（高於常態，觀察）｜布蘭特原油 93.36美元 -2.6%（高於常態，觀察）",
+    "⚠ 全球市場風險｜Why This 40-year Market Veteran Is Making a Lonely Bet on a 40% Stock-market Crash - and $500 O",
+    "⚠ 全球市場風險｜黃仁勳閃辭掀海嘯！ 台股狂瀉2000點 楊金龍：短期亂流",
     "⚠ 全球市場風險｜台股重挫 2,635.04 點史上第二大跌點，台積電跌 135 元",
-    "⚠ 全球市場風險｜史上第2慘！台股重挫2635點 輝達概念股一排全跌停",
-    "⚠ 全球市場風險｜台股暴跌2635點寫史上第二大跌點！台積電挫逾5%、台達電鎖跌停 上市櫃170檔個股慘亮綠燈",
-    "⚠ 全球市場風險｜史上第二慘！台股終場崩跌2635點「失守4萬2」 台積電收2215元",
-    "⚠ 全球市場風險｜Dow Jones Top Energy Headlines at 12 AM ET: Global Oil Market Set to Return to Surplus as Gulf ",
-    "⚠ 全球市場風險｜2330 台積電 - 大不了年底股票歸零- 股市爆料同學會",
-    "⚠ 全球市場風險｜台股狂瀉2635點！17檔千金股跌停亮燈 股王信驊一張蒸發120萬元",
-    "⚠ 全球市場風險｜輝達經理涉走私晶片遭訴！傳公司求助台積電吃閉門羹 美調查Megaspeed則因「一通電話」喊卡"
+    "⚠ 全球市場風險｜Taiwan Semiconductor Manufacturing Co Ltd(TSM)股票11月16日開盤下跌4.21%：投資者必看的核心資訊",
+    "⚠ 全球市場風險｜Dow Jones Top Energy Headlines at 4 AM ET: Global Oil Market Set to Return to Surplus as Gulf E",
+    "⚠ 全球市場風險｜NVIDIA (NVDA.US) perpetual contracts surge to $5 billion; Wall Street giants join forces in law",
+    "⚠ 全球市場風險｜Three Questions for Anyone Considering the Nvidia CEO Job",
+    "⚠ 全球市場風險｜China Resources Beer (Holdings) Stock Rallies 3.6% in Hong Kong"
   ],
   "markets": {
     "US_SOX": {
       "label": "費半",
-      "price": 10146.323,
-      "change_pct": -4.0
+      "price": 9692.161,
+      "change_pct": -7.8
     },
     "US_NASDAQ": {
       "label": "NASDAQ",
-      "price": 25136.273,
-      "change_pct": -1.2
+      "price": 24611.791,
+      "change_pct": -3.0
     },
     "US_SP500": {
       "label": "S&P500",
-      "price": 7561.67,
-      "change_pct": -0.8
+      "price": 7451.51,
+      "change_pct": -1.8
     },
     "US_DOW": {
       "label": "道瓊",
-      "price": 52347.55,
-      "change_pct": -0.2
+      "price": 51900.11,
+      "change_pct": -0.8
     },
     "VIX": {
       "label": "VIX",
-      "price": 19.3,
-      "change_pct": 3.2
+      "price": 21.21,
+      "change_pct": 10.0
     },
     "JP_NIKKEI": {
       "label": "日經225",
@@ -63,125 +64,125 @@
     },
     "HK_HSI": {
       "label": "恆生",
-      "price": 23741.37,
-      "change_pct": -1.2
+      "price": 23753.84,
+      "change_pct": -1.0
     },
     "US10Y": {
       "label": "美債10年殖利率",
-      "price": 5.154,
-      "change_pct": 1.0
+      "price": 5.141,
+      "change_pct": -0.2
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 88.9,
-      "change_pct": 0.4
+      "price": 86.42,
+      "change_pct": -2.4
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 96.05,
-      "change_pct": 0.2
+      "price": 93.36,
+      "change_pct": -2.6
     }
   },
   "active_news": [
     {
+      "title": "Why This 40-year Market Veteran Is Making a Lonely Bet on a 40% Stock-market Crash - and $500 Oil - Moomoo",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPaG1Rd0VqRUJVTDkxOURZNDJYQzRJY2hGM216cmNieklDNk5xb2FqWGJTS0ZWd21aMlZTUTYyMEVLSGk5U0NuYXR1NjBZVWpCdURwMV9laEdzTlZtVnBqU2RGcnE3YXJtazdxNVlTczJfNlg2ZllZckJfcnNOeXdEbDE0NWRaek05WmNYUmFwalB1cFBETmhVRHNlU3J4WE1t?oc=5",
+      "source": "Moomoo",
+      "published_at": "2026-11-16T16:44+08:00",
+      "importance": 5,
+      "risk_score": 4
+    },
+    {
+      "title": "黃仁勳閃辭掀海嘯！ 台股狂瀉2000點 楊金龍：短期亂流 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi1AJBVV95cUxObjhOOXpiaHBfT1d0bkhjdlBQNVBhNG9aX3Y2Wm1tRklmaEtlRnM0Q21IYi02aEEzd0d2UDVhRXZCQzMtc001dDlsUjhfMWRpSy0zSmdtVTR1ZktaUkhvV0lpZWFrWTdlTEFCV1VnbDN3cHBNdVZfX29VM3Z5RnJNTkNFNFhQM0Ryb1pzMWlaZlRGeFRWa1hfXzNiYUlqSTdja2tZRzlBYTFNUW1zVGpldTF6eGFyVktpTTlIaFQwSmN2OG9GN3JLbm5VNWJjcXVLZFdpTFhlQkM0RFJkMk45VmR5eHo3aWQ3Z0lwLTJFVXJtY0w0a2V6RFR5QWN6WHptMjRscDhudHlsUXQta3FfUWRoMW1yZW9pclBDcUZhZTkwVGRtd2hZVmVCN2xqcmVlcGJVWWRWUUpBekstOXZqX0RHdE9CWS1mTlYyNjZ0U2xqR3lt?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-16T12:24+08:00",
+      "importance": 5,
+      "risk_score": 4
+    },
+    {
       "title": "台股重挫 2,635.04 點史上第二大跌點，台積電跌 135 元 - TechNews 科技新報",
       "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNeGcyMzZyT0VzT1NhX3ltWmt2ak5qQ1YydUhNZkxMbHhFYVB5OUVkRjlfWlFHazdadGJwUzZkRXY3VEM0ME90TDhjOGo5R2dlN3ZFUm5Zci1FS181WDN2RGRtZWVOTER1VjZva0wwNzB4WkxybDZmRDhaZmoyU0JDY0hCZzJweTFJa05kSl81LXJ0MkFPVVNOdDBIQ1Joenh2aXB2UlJoQ29tbTNBU1FtQ1VQZFlEc0JYMTFZbWI1SFk3YWVQSWNFNzhn?oc=5",
       "source": "TechNews 科技新報",
-      "published_at": "2026-11-16T14:37+08:00",
+      "published_at": "2026-11-17T00:42+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "史上第2慘！台股重挫2635點 輝達概念股一排全跌停 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMivgJBVV95cUxQcEViSXN4TE9uWlgyVk01MzVXcW83UjFCc1BUd2UxV2Q2TEFrZ0F6NnZSMi1qYWQ5ckk2TGRlQ3JMMHlzYS1NQ3FscmNSMFhnOTdyTFZ4NzNMa2NEOUx6dFQwcHNsaDVlLWNZUVdpZlhtZjRsLW1yMU40MktNdHVNWG00dU9TUGNmQW8tQmt3NjlqUnlITklHYnN0RmI0T1VqUWhvdjBrd2NwdVdGRjdaTEdYUE1FbzdmYkV5aUlselloRjRMS0psWkloMmlOWmhjSnNFOHdJTF9ObFBST0ZiWGdBUkhvaEhkakdMS3N0RmV6dU15V0xsSkVXekFNUzF4QWVnUUItUHlmVjA5WDV5YmE3bTJyWFMtR1prVlRCUkdjRXpmSmViZHhFYW94NnhLTWtnRW1taHM4SG1WakE?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-16T14:26+08:00",
+      "title": "Taiwan Semiconductor Manufacturing Co Ltd(TSM)股票11月16日開盤下跌4.21%：投資者必看的核心資訊 - TradingKey",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxObjZDSWhPTENoRDF1SjRONXJaU3p5TkxMQTNJSUktamxxODdyQVB1Vy1oUjNPdjFPNFVnNnIxblhVX0gzTzg5a3hBZHQ5U3M4Zm91N0ZmM3dEY2RqZkdlRGhkV1ljSWlReVlmX0VobkNTcklLaUI5RU1VNDF6OGkxUmpPTGJ5a2lMNWVwOEktcHdVeVQw?oc=5",
+      "source": "TradingKey",
+      "published_at": "2026-11-16T22:49+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "台股暴跌2635點寫史上第二大跌點！台積電挫逾5%、台達電鎖跌停 上市櫃170檔個股慘亮綠燈 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiggRBVV95cUxQandGdlJFM3Z0ZGg0VU81RlAxQ3Ytc3JuRDhnczFST0twcFRheFJFUFNqREFibFo0OFUzbC1qQ2hDTmZULUc5R1JhcnBFNWd1YjJJb19rWEVvOEhtMU5mTTlJb09IbFdIeVcxbjVQb0tIM010TFBZYUNQb1pyYWJNbnNueEdlN2RBMm9INHZ0LVRhcTZwSmI5SU5pQXFfSmN0MGg2WFI3YThzWTVBM09QbjBmdzVwQTJlMUtwZk95RFJSVldWUUV5ZmE0cy0wUXNyRTZWOTllNzQ0NThvd1lFVmlaRi1GNlk0bzNtQlFoemdtaUZua3J4eHdoMk5WWWMtMmM4cUZYVEZIVDlZOTRSS082NjViTllnY1JqVWRuTjI0a0JKUjhmVmVHbGdZazYwQXdFb2VkOEZxcExGbFBaN1AwLTlGQjItWHNGeFhDMGF3THZ6TVM4NmZoSnlyWkJ0RmdEUEtacTZrazNqUHFucE5MbUhoM3JCWV81WEtCc3Y0WjFrODRFU0hNYTAzU2tnamQ2SzRPSGZwa2FjbTR1aVktODB1VkMwLUt6WUJPX3Jib1FsOWhNX2pyTTlQbHlwblRyVWRTdWtrQ0x6MmRDT0o1ZGJYSkR0VHBEeUc3X2NCS0pHcWlpMGhfcWhycUlDaDlFMlJZUU9yRVI3bzVxeXJ3?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-16T14:05+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "史上第二慘！台股終場崩跌2635點「失守4萬2」 台積電收2215元 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi3AJBVV95cUxOV3NKM1BKa3hWdmFHbmxDcXkzVi1RUXF0ZkRiZmEwdVRSUTVRejNZTC1PN0VwWFF1d213TUhlekZxMlBuLThWR2JWclhZVFM0YXBlSzZLWkZId2xibTZKYXZWYXJ2OU55WDNIT0tBeHRRUVh3U09OY2h6YkY4TmdlTkRBd1pxQmljSXZUSDNFM0JuTldNUVNaZmszTEFtdXNjbE52MldhR3BFdDJaZ2Ixb0FQdFZoUjZkWkllcUcxUW5jem5GZFdpaWlCT0JaX3lyZllWQ09aY0kzMjFQYXNQa3JFeHNQcGFVSDhwYTA4OFRxWG5adVBzOVhfajRubFlTd2NkQ0FnUWxYRTdOU25QUUZ0WmJ1aW9EdWZranVGUjl5M25ENlNaWEYxdUpLNFg1SnJwN1JqUTMzQ1prcXB2OGozZ3ZFa0ZzaGJOWV9TZ3A2LU1WZmpEdF8xb3k?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-16T14:00+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Dow Jones Top Energy Headlines at 12 AM ET: Global Oil Market Set to Return to Surplus as Gulf Exports Recover, IEA Says | Crude ... - Moomoo",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNakRlX1dZaEhhb0JFVmZtNkdXU01xTTJWVVMxTDBIYklWVmhSa0dZTVlxQUl3bENaWjJuSE85QUdnbWJCWDl6UXR3cFhfcjE5LVJIYWpjNGplVzczandCdjR2U19HZVJBMzVlS2lZR2s4SGgzYlpZZ3k0Vm5KcmdscS1iODJFdFJBcEw3UGg0NjNfQTdBamFPdm9wRWtvbmM?oc=5",
+      "title": "Dow Jones Top Energy Headlines at 4 AM ET: Global Oil Market Set to Return to Surplus as Gulf Exports Recover, IEA Says | Crude ... - Moomoo",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPWlA5NmZnejdJRS1Wdlc4QVM2elNDMElrSXdZTjlpWHdhNHVpenZRekozcjhMLWZ1THdzSS1BY0F1aFpfaVlfRk55d2F4TTZnRXhwNktfc05TNFBoaEdTME9VZ3N3T0ZNZWhkMWRlZWhxeC0zOHNwb2xabXg3SHpxZFgtakx6emtzSk5pc2ViLVBTemZDUGZpWkUyejdZdw?oc=5",
       "source": "Moomoo",
-      "published_at": "2026-11-16T13:58+08:00",
+      "published_at": "2026-11-16T21:41+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "2330 台積電 - 大不了年底股票歸零- 股市爆料同學會 - CMoney",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9vbnBYd1dyNDlLczg0cjdkMF9IbEFWWWFrRXd6NlNJYWN1RG9TWVp6NWhhUDcxT1d5a3B6Q2pFam55TG5nTnNPQ2FQMml5WURKMHd4X1NZalU?oc=5",
-      "source": "CMoney",
-      "published_at": "2026-11-16T13:50+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股狂瀉2635點！17檔千金股跌停亮燈 股王信驊一張蒸發120萬元 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiiANBVV95cUxOSnd1VmVIZm55S1hSOHpLVHBUd003WWt4WXVzMXprWVAxWFVwYlhCWXh1WnFrRGR5SUdBVFkzMHpkSVFLcXZoRUVpVm1pcHRhaEtuLXBxek1SQ2QyNjdtd29Ybms5bFgycVNwRDM5a2U4Q0NCcVF2MFRzLWg5eXRPdndsTXBReG5PWWRTQkFhdk5YRUd3WVVtcWtWaTB1azlzeVc3TlFqemRTMHUzR1N2ZlFjQVNudjhZRUlQX1NZS1VkN242b2szd2F2Q19HVHZmVS1CemZ6UVg4VzhvN1Z5UC1hS29oOS1sV0hkZ0JvOERMTzhUZHNBTHQ0ZkdTdE80X1oyOXRzZ0dSbmJacDMxclAxcW5YNHZvVVN6alhTNU5mWWhWeWM1bHJGU2ZYX0syNUU3WEllRVp0X3oybDMzcGRzVTBGSldlc0RNS05iUFczaDM1ampwSHJYa1d5YVI1UC1lakNzaVFrNWRWYlRnZGQ4anIyNUpsZzl1SVFnTlhZUDRnR19xbg?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-16T13:46+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "輝達經理涉走私晶片遭訴！傳公司求助台積電吃閉門羹 美調查Megaspeed則因「一通電話」喊卡 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi-ANBVV95cUxNWDgxZFNGMEFOMkQtYTlfRHZlVWphN29lYkx1UTZmZzdaaTd4eGNoNEdUOFpQWUY4clpYUE83M3ktV1VNWTYtVkxhbFVDRFdYa05XdWpLdXJqa2h5VEZNTzVXTzBQSkowN01hdVRLV3ZZdXJHWXU3RDBuNC1uT2JDTUdISV9EaEM4RWN6Y19oVmJvOHE4ckhEa3dBNklLcVRsaFYydmRzOUZkazBKRGVQX2hWVXRfTDk2WDNpcDRDcnZCeEpGUll3RlU4X0pqeHktX0lrb2NaS1ZESDNlNVBrWUw1RmN3UklYZ1h4cGh2MDdOZjhFQ0oxbWh2WnJ2NVZWOXZtUEJxNjNDQmVuaTRwbURvVFdIN1lwTUJ5SGRpTzRheENMODRJTjFxTGUyZFRVYmZWZkw1YWIxc2gxUzB5SDFuY2lDV1U2QlpHMEcwcTVaaDg1UjVGSjhSQ2tmWmxKWU5uU2lKR2J1NjhxOXl4U2dXVlZubk9zQndDOXREWG1Hamdsalc2ZDIzdkFsUjNndDZXdXpIY2lQbHh3YXctcjFJODJEYXU1X3BfYlV2MGpLR0lnbXVpQ19LOGJPa0JTRk1yVk1hbVhxUm1VNEFncUsyZEwxVWdZYnB0R04yaW5vRWY3ckpmNmhQNlJYZlprSjlWRy00bk8?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-16T13:25+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股狂瀉逾2200點 外資落跑還是內資倒貨？ 專家看匯市抓真兇 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMigwNBVV95cUxPMXVvQ1V1QjJfSXhNamdaUkZHU0JxazlTQ0t3c0htZTc5bVRkNVZkVzBDMlhieko4WkN6M2N6cHo5UmJrNktESU1OVU9HQ0tuMkJoQU8zd05pTkRNblNWdzhTcFVzMkVyU1AwX0JBWDZxa3RfMDFiOVladS1pYmt1Vk1JZHdlZW5qRUJZUDM1Mnc0ajBaQ3cxdzVhc1g4QXlqZGVTSXFHaUMyVzlXSDUwWWtZb2M2YW1MX2swNS1qOVZjR09zWVJpSkJtaDNUSVczV2lHdkU2RlJENE1KZW5oTzBlSnBQUHI2SExMSUhVWng5SktPR0pZRVN5ZzhHNXVDOW1XVVM4aTZLRGJGRGJnLTVFaEc1b0VLZ18wekVxZVJyeGgzVFQ4SUNMRUhSbWE2bXhycXlsR2xvTzc3ZUdNQk5QNHBKZ0twSU55THM2WktaWlZjWVpUbmhqOGZvcE42Z1pzQklndGZweFRPVFBrMFR6bEZ2X2Foa1Y1RmZIa1ZBSUk?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-16T13:07+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股重挫2059點失守42K！五大權值股無一倖免 台積電大跌90元、台達電打入跌停板 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiyANBVV95cUxOekJoLXNUNkhMamFDcFZRTjFlZ1pTWW0wRGZvSnlEanZkR1QxcUlZeXRUUDZtWWgxczBsQm5YUDhUQW5NdVlNRFdqY2FVdjJ0bEVzZTNtZlZDT2k2VWs3RmRxYk5UdTlkN2xESDJBQXpvM1FFN1ZRalp2VUE0U0tZUmU4Q3hfOHg5bXRGcUFGWkRLbmFRREUyRzNNelFSSnlKaGl4N1RsZExmcGNYRFRWTHFWUzVwRkdaWTdCV1dUZk1kdmgyc0Q1SUFpY1RkUzhSTFJFSFIyTEl0R1NEcWtLWGtFa0xOMmU0VncwZTEtdGFJQUxQUTRqVHFXM19sQlVaMGVIdTQ1UkozbEdZanJTXzI0cm9IcWJwZ1UzVWs0QlV1aVhSSEh6Q3VuX3hsV3M2UExGM3NqU29WRVVoUm01akVaRjdnMi1kWFNjMTNXSS16cW8wWVg4djR2ZUdUVnk1aUwyczNqSjZ5dFRSYXpiM2xtQTBubzAza3V0Wm5wMTctWmdsZ2N4MkJKb3ZGdllJXy1DbWd2c3lyWklBX19OT1ZHQTdsSmxjOE9xTC1ObmdseGtZZi1KZ3VuVTJuMWpURmhhLXA2WGQ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-16T12:25+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "【Hot台股】大盤跌逾2千點止不住？網哀「持股都變聖誕樹」 分析師勸先觀望 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi4gNBVV95cUxOeGJ6WGFRX25USTUzcEpXOXlQcVhCbWdGdFRtb0VoRjZKMFk1NlVkWG8xX0VySUQxMlBLZks2MzV4RkJWSkI5MC16NTU0ZXBmTWtmdzdRWTI1bUctRHIzQWxleXdPOEsxdVpEV0x2bTRTRkFlaDMyemhINFFnU2tYWERZaXpYU0F6NFJoSXJkZ1pjcHdyUHJGZTlGTmprbDV3SEdVOEVwUFdBSnlUYkxSbFRNbWR1MlhFZFQ1UXdrd3o2bV9aXzBiMG52STlseklnUlQwNFg2YXRCZXBmdkJHZ00zR2sxVkNfbXdaLUxvSlk3ZlNycUJvUE5oeVBUaGxYSU9mUXBlUFdBdGpnUkN2eUVQcWRGa3JyZGVvTjR5UDJ2SlNhNVFyblJJbmVCYkRmNXJmbGNWODNSdnVndzFyaWVCV0xlZEdNRHRNNmJyQkpFYnA3YjNZOTFmNWt3Wm0wbWthNXAxNndLc2tBMmpsVS1pZ0JrQWZrczJjSWYwUlYzTTMtemtxakVyQ1JvdGo1eFlveXY0TExrVWVOeXRPSWhPek1LWnlhSVpleTNJRzd5Nmd6MVBGcWJjaGphejFhRWJac0NrRWtreGxFNWVrc2JGY3pHbUxDTXN0dERkc2xUZw?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-16T12:12+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Hong Kong Stock Midday Review | All three major indices rose, with the Hang Seng Index up 0.84%; many tech stocks advanced, with Meituan gaining over 3% and Tencent rising nearly 2%; biotechnology stocks weakened, with CanSino Biologics falling mor - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNWl81bEZfdF9ha1I2aE9kUy1ROGp2cGxfUkRUUDRTaXI3RzhndHBsMC1lakU0UGZWamZyY1E0Z200aDJXeTc3WjNEeWxFTnpjTkZCa09vTmZfOGhUREpFZEpkcVk1a1E3Uzl2dDVpeWs2RWRCcUxQYXlBSnh3bXd5YlNfNFduVVVmMFRSeHZGem1QWDBKaUdXMmNaN1g2RHZMeUhN?oc=5",
+      "title": "NVIDIA (NVDA.US) perpetual contracts surge to $5 billion; Wall Street giants join forces in lawsuit to block the move - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPWENEWWtfb0dJZHFVM0NmaWc2MmdSM3lHMFlWekNENEUyRjNDbWh2d25mUG5ZekFBQmhiSl9nbGdXSW9QZWNsVVNILU04RmhXNGJuTzRjaUJ0MmcwOG51WUxpbFNOcWNDVmFlSUZTS0FoT0wzaHU1SGFDMjR1M2FBcWFGQkN1SUpxRHd5VnpJUzJVZ01rVkw0NnVSdVdsUDJSWGZEUUlUbERLRkU?oc=5",
       "source": "富途牛牛",
-      "published_at": "2026-11-16T12:11+08:00",
+      "published_at": "2026-11-16T21:22+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Three Questions for Anyone Considering the Nvidia CEO Job - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOSDdvY3Y5VVB5aE5LTC14MENYWk04ZExqTnhhbThSV2liOUs4QTktYnhITE9ZM2F6cGdhbTBaTVpBS3ZpbjNyVkFJT2kxWlZScEpmLXRKRE9ibHY0U0VPVUU3RTduekY5WmlTdFcybXFKNDZNeEt2WER2ME1vSEpIZWh0dlpJbHBja1VWRkJBajItRU8teFZkdUxlU3pId3JITGc?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-16T20:40+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "China Resources Beer (Holdings) Stock Rallies 3.6% in Hong Kong - Moomoo",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPdkE5RGo3bzdiVEN1bnNCbl8yOGJoQk90bkxsbm9RckxZeEd4R0dyNzJkdzR2YkY5VkZBR0dRVHlCeTU4Vnp3TVJGMzE5UGRBTXpFWktJZGZRLWpNZWROVF84RDRteF9zWDNBZHZQUmxlRWt0N3B3aFRzdzl2MTZHdlM0ZE12UnFFZnVBZlkwTEVYOG5Cb0haY0pxRjU2QWRFcEd6Q09kdw?oc=5",
+      "source": "Moomoo",
+      "published_at": "2026-11-16T19:39+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Goldman Sachs' 2027 Global Equity Market Outlook: AI Capital Expenditure Peaks, Earnings Growth Slows, Cloud Giants Become \"Defensive Assets\" - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPUTFtN2R1SFFhQlFWUHduaVp5ZHhIOFZkU1dNMzFVczVad3lES3gzazFrckU0WDNmbU1zUVVkZUlqZ2llbDU4eV9jTjZ2NkMxei1UWlducUJpUFdjeWdkeWFuN2N4MHVCNnFfNVRNa29KOURlWXVRSmtoNmVfbXJpSWlRekhJRFlJWG1iN2RScndvRkxJYWVGM1YxMnhCN1RBU0cxYldzYmpKaXZjT2RNcjZlWQ?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-16T19:22+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股大跌2635點 證交所：國際AI投資前景正向 臺灣產業成長動能延續 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMinwNBVV95cUxPZFRmUU9jcUxPTlZta2Z6YTM4Y3ZkaHhMejBFeFhXRkZHTk9MRXNibkZWYVpPeHhWSTJDY0RJd0xnVW40dzlTRVpHQ3dxOC1HamJ3VUg2MGxxYk4waFZTbXZoUWNMNTMyUm05eWVReU9DWTI4VHFJSXJpMHU2SGV2ZmdCenFiNy1FOXhmR1d2VzZ2ZkpMNVF5OFhCV3BvS0dxeHQ3aXpVc1ppa2FVT0ZIQldQQXFyU0llTjV6Q2FpR0tPa1ZkT3NzR0lPSm1LeC12ZW5LRVVMNF9iUVgwMzROUm5hczczM2lxdWlmRmc5dGhqdHlHeTdmTHJ6VWVGOWY0S25HX3VoWDJCMklfbXBfOThvM0NDTjBHUC16VUMteEctVXhlSWVMeUZnUVJUZ3ZXc3JfWlpQY2xicXJWLVJZdjh2dXVaT0ZUUFh1Q0VhNGhoN2pUWTltWk9ieGN2b1NmdnZ3YzN2bklWWXhZLVo5dnR2eEJwejNoMlhjaG5CdU5QekowTEwxQjhOWWxtaS1CU2dTdlVVdVNHWDJnRVlR?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-16T17:40+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股重挫2635點想抄底？元大投信：過去20年99%股票輸0050 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi2wJBVV95cUxQZWxWMnEzQkVlU05rWHgzdkhlRkl6WndvdWY1T0RLbDdvbTdFNzRfTHlzMmJPYi1haGUwS09fTThwZE5Ra2tUdFY4cTZ4TTdyNmZQX0c0QzJnNlBlc3FDWVdmU052c0tlQ0lsOVNQaHhIc3gxMHA0N0FYX2ZsN2ZUZkRsaGpWSE5HZHpBYmFXbXBKdUJzWTZjZTlsVU1GWjdGUmNkcUlLVEhwNXlwMGRpOGRpYjBzSENPTDluUUljbG13clpvOERDT3FOLWNPMW8tb1E3X1czcXd5N05BOXVVR2JUNGZtaTRJNkw0ZWRZdTNQcnlvS1ZQd056VzNLTjlEb0R6NW1seXFCTF9BVW9mOUlGdTBWMWNwSjBKZmpndHpGd0xWOHJuU3JVbFAtdm9HRk15RXl1SzFOcFRpWGdzbVk0VE9NcjJiNGw0czh2ODEzOU95Uk9BT2dIcw?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-16T16:28+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "semiconductor and gold stocks declined, with Tianshu Zixin falling more than 11% and Zhaojin Mining down 4% - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNTVhkYnpUZTJkUnhCb1FFbHB1Wmd0Y3R0cHRJbU1VeWlSZ1dtSTJtSUw4Sk9fa21fakpkc2dSWUdEZTJGazV0NTBRMHZfa2xtMEtCTlB2c0l0amZHUUNDTGtCNG8wdVNzNjZEeHZWbVpUOWVYZkd0SnZLaF9iRV9CejhxQUlVWnF5UUF6RmxZVDNHQV9JcWhFZXJlNDNuR3RW?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-16T16:25+08:00",
       "importance": 2,
       "risk_score": 0
     }
   ],
   "oil_watch": [],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-11-16T15:41:40+08:00",
-  "checked_at": "2026-11-16T15:41:40+08:00"
+  "updated_at": "2026-11-17T01:26:19+08:00",
+  "checked_at": "2026-11-17T01:26:19+08:00"
 }
