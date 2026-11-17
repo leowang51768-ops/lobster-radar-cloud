@@ -1,61 +1,61 @@
 {
   "schema": 1,
   "risk_level": "red",
-  "risk_score": 11,
+  "risk_score": 10,
   "risk_reasons": [
     "費半明顯下跌",
     "NASDAQ明顯下跌",
-    "日經明顯下跌",
     "韓股明顯下跌",
-    "台股明顯下跌"
+    "台股明顯下跌",
+    "出現重大風險新聞"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 -7.8%｜NASDAQ -3.0%｜日經225 -2.4%｜KOSPI -4.5%｜台股加權 -6.0%｜恆生 -1.1%",
-    "⚠ 全球市場風險｜美債10Y 5.14%｜VIX 21.2｜WTI原油 86.42美元 -2.4%（高於常態，觀察）｜布蘭特原油 93.36美元 -2.6%（高於常態，觀察）",
+    "⚠ 全球市場風險｜費半 -8.5%｜NASDAQ -3.4%｜日經225 -1.1%｜KOSPI -5.4%｜台股加權 -6.0%｜恆生 -1.1%",
+    "⚠ 全球市場風險｜美債10Y 5.12%｜VIX 22.9｜WTI原油 85.39美元 -0.4%（高於常態，觀察）｜布蘭特原油 92.11美元 -0.4%（高於常態，觀察）",
     "⚠ 全球市場風險｜Why This 40-year Market Veteran Is Making a Lonely Bet on a 40% Stock-market Crash - and $500 O",
     "⚠ 全球市場風險｜黃仁勳閃辭掀海嘯！ 台股狂瀉2000點 楊金龍：短期亂流",
+    "⚠ 全球市場風險｜US Equity Markets End Lower Amid Sell-Off in Mega-Cap Chipmakers After Commerce Department's Pl",
     "⚠ 全球市場風險｜台股重挫 2,635.04 點史上第二大跌點，台積電跌 135 元",
-    "⚠ 全球市場風險｜Taiwan Semiconductor Manufacturing Co Ltd(TSM)股票11月16日開盤下跌4.21%：投資者必看的核心資訊",
-    "⚠ 全球市場風險｜Dow Jones Top Energy Headlines at 4 AM ET: Global Oil Market Set to Return to Surplus as Gulf E",
-    "⚠ 全球市場風險｜NVIDIA (NVDA.US) perpetual contracts surge to $5 billion; Wall Street giants join forces in law",
-    "⚠ 全球市場風險｜Three Questions for Anyone Considering the Nvidia CEO Job",
-    "⚠ 全球市場風險｜China Resources Beer (Holdings) Stock Rallies 3.6% in Hong Kong"
+    "⚠ 全球市場風險｜US Market Close: Chip Sector Slashed; NVIDIA Drops Over 4%; Nasdaq Plunges Approximately 2.5%",
+    "⚠ 全球市場風險｜Alibaba recorded a net outflow of HKD 646 million via the Stock Connect.",
+    "⚠ 全球市場風險｜新明中國(02699.HK)：林霆獲委任為獨立非執行董事",
+    "⚠ 全球市場風險｜Taiwan Semiconductor Manufacturing Co Ltd(TSM)股票11月16日開盤下跌4.21%：投資者必看的核心資訊"
   ],
   "markets": {
     "US_SOX": {
       "label": "費半",
-      "price": 9692.161,
-      "change_pct": -7.8
+      "price": 9610.652,
+      "change_pct": -8.6
     },
     "US_NASDAQ": {
       "label": "NASDAQ",
-      "price": 24611.791,
-      "change_pct": -3.0
+      "price": 24509.758,
+      "change_pct": -3.4
     },
     "US_SP500": {
       "label": "S&P500",
-      "price": 7451.51,
-      "change_pct": -1.8
+      "price": 7416.59,
+      "change_pct": -2.4
     },
     "US_DOW": {
       "label": "道瓊",
-      "price": 51900.11,
-      "change_pct": -0.8
+      "price": 51608.17,
+      "change_pct": -1.4
     },
     "VIX": {
       "label": "VIX",
-      "price": 21.21,
-      "change_pct": 10.0
+      "price": 22.91,
+      "change_pct": 18.6
     },
     "JP_NIKKEI": {
       "label": "日經225",
-      "price": 59662.02,
-      "change_pct": -2.4
+      "price": 59026.07,
+      "change_pct": -1.0
     },
     "KR_KOSPI": {
       "label": "KOSPI",
-      "price": 5100.5,
-      "change_pct": -4.6
+      "price": 5002.74,
+      "change_pct": -5.4
     },
     "TW_TAIEX": {
       "label": "台股加權",
@@ -69,18 +69,18 @@
     },
     "US10Y": {
       "label": "美債10年殖利率",
-      "price": 5.141,
-      "change_pct": -0.2
+      "price": 5.121,
+      "change_pct": -0.6
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 86.42,
-      "change_pct": -2.4
+      "price": 85.39,
+      "change_pct": -0.4
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 93.36,
-      "change_pct": -2.6
+      "price": 92.11,
+      "change_pct": -0.4
     }
   },
   "active_news": [
@@ -101,10 +101,42 @@
       "risk_score": 4
     },
     {
+      "title": "US Equity Markets End Lower Amid Sell-Off in Mega-Cap Chipmakers After Commerce Department's Planned Restrictions - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPS1M2NWo0dXItd3dGMUFKNUJmUk95RWtHaGRicVhzUWdGdlVRMnVGSXpoVncyUlJNX3d1TnRnME9rOHhGS1NlS29zbEt0UWU4X2E0bjk5RWdwU3B6ZlpIU0NxMEoyWFdKS3I2N2pndTF2bjVaRmFGSjg1dC1vR051dVVUczdaNno5ejFMVk5uUHdoZC0zWWtz?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-17T05:58+08:00",
+      "importance": 4,
+      "risk_score": 2
+    },
+    {
       "title": "台股重挫 2,635.04 點史上第二大跌點，台積電跌 135 元 - TechNews 科技新報",
       "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNeGcyMzZyT0VzT1NhX3ltWmt2ak5qQ1YydUhNZkxMbHhFYVB5OUVkRjlfWlFHazdadGJwUzZkRXY3VEM0ME90TDhjOGo5R2dlN3ZFUm5Zci1FS181WDN2RGRtZWVOTER1VjZva0wwNzB4WkxybDZmRDhaZmoyU0JDY0hCZzJweTFJa05kSl81LXJ0MkFPVVNOdDBIQ1Joenh2aXB2UlJoQ29tbTNBU1FtQ1VQZFlEc0JYMTFZbWI1SFk3YWVQSWNFNzhn?oc=5",
       "source": "TechNews 科技新報",
-      "published_at": "2026-11-17T00:42+08:00",
+      "published_at": "2026-11-17T08:45+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "US Market Close: Chip Sector Slashed; NVIDIA Drops Over 4%; Nasdaq Plunges Approximately 2.5% - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPZHpuTzZMN2F2Qkx2LWo0dFZCeFFYeDRId3ZNQ1RVcVVRNEgzWkhGQWVraFVjM1dITkh2NHdrU3ZHRVlSaGxHT3d2ajhMaS16WWR3Ujlydk55UEFPZUhNYmRSQXptOE5TZWc3eFBJYk5SMDloM0VLR09kcnQ1d2dlNFNDd0E4UDIwM0VBN1NTNEl3aHlaSmpOdlVMY0VNQ2M?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-17T06:13+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Alibaba recorded a net outflow of HKD 646 million via the Stock Connect. - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNd2p3RUVZMmkzQUZJLU1xLTVtY2VMZUNIN21MTHBsU3hxRUxPb1VwMldmcmt3VGZqa2Rhc2VVOHo1M0tnVXJ0YUtwMVgtSGFZbjJfTE1XOFIyazlYT084STNYYWV5Ung0YS1lVDRWSGU3ZXFoWU1SWHhzU2ZybjJRdEd5SUxZZndzSTNiNXJzY0Z0cWhjVkZsdEY2RVc?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-17T01:42+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "新明中國(02699.HK)：林霆獲委任為獨立非執行董事 - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9PbTMwTjUyQy1PeUU3YWxZSUdsbTA2bl9LMXljb1NqQUVuc3A3dnZseklBd2p6cGlOaGpUVDdXbThzTFNwX1pqZTN4ZUZUMnBPQ09jUVBCcFRQNl9IT3htemhxbElsMGtJMTJ3?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-11-16T22:57+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -113,6 +145,14 @@
       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxObjZDSWhPTENoRDF1SjRONXJaU3p5TkxMQTNJSUktamxxODdyQVB1Vy1oUjNPdjFPNFVnNnIxblhVX0gzTzg5a3hBZHQ5U3M4Zm91N0ZmM3dEY2RqZkdlRGhkV1ljSWlReVlmX0VobkNTcklLaUI5RU1VNDF6OGkxUmpPTGJ5a2lMNWVwOEktcHdVeVQw?oc=5",
       "source": "TradingKey",
       "published_at": "2026-11-16T22:49+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Hong Kong Stock Market Watch: Chizicheng Technology (09911) surges over 4% in afternoon session; monthly active users for its overseas short drama business exceed 150 million; institutions bullish on volume growth following Playlet integration. - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPR04zUUlWLXRzMzdjZmNLZTNYcXFESlhNM2Z3dXpCRnRDSEgwbWYwWkZuX0dXWjBLV05WSWgwd3g0ZVA5VXpZMzRSYU9nZFNRT21Ma1RZR19laEdkS01RbXhuXzAtdWUwWWR5M0VPM3htTHI1ajkxMkNCZHdiWE0zc0p1X3NfT0FsT09vVWtKbHhfdFlSVVZhS0xoXzItcXo3QUo0OVlKQ1F2ZUYzQ19ZLQ?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-16T21:56+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -133,56 +173,16 @@
       "risk_score": 0
     },
     {
-      "title": "Three Questions for Anyone Considering the Nvidia CEO Job - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOSDdvY3Y5VVB5aE5LTC14MENYWk04ZExqTnhhbThSV2liOUs4QTktYnhITE9ZM2F6cGdhbTBaTVpBS3ZpbjNyVkFJT2kxWlZScEpmLXRKRE9ibHY0U0VPVUU3RTduekY5WmlTdFcybXFKNDZNeEt2WER2ME1vSEpIZWh0dlpJbHBja1VWRkJBajItRU8teFZkdUxlU3pId3JITGc?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-16T20:40+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
       "title": "China Resources Beer (Holdings) Stock Rallies 3.6% in Hong Kong - Moomoo",
       "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPdkE5RGo3bzdiVEN1bnNCbl8yOGJoQk90bkxsbm9RckxZeEd4R0dyNzJkdzR2YkY5VkZBR0dRVHlCeTU4Vnp3TVJGMzE5UGRBTXpFWktJZGZRLWpNZWROVF84RDRteF9zWDNBZHZQUmxlRWt0N3B3aFRzdzl2MTZHdlM0ZE12UnFFZnVBZlkwTEVYOG5Cb0haY0pxRjU2QWRFcEd6Q09kdw?oc=5",
       "source": "Moomoo",
       "published_at": "2026-11-16T19:39+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "Goldman Sachs' 2027 Global Equity Market Outlook: AI Capital Expenditure Peaks, Earnings Growth Slows, Cloud Giants Become \"Defensive Assets\" - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPUTFtN2R1SFFhQlFWUHduaVp5ZHhIOFZkU1dNMzFVczVad3lES3gzazFrckU0WDNmbU1zUVVkZUlqZ2llbDU4eV9jTjZ2NkMxei1UWlducUJpUFdjeWdkeWFuN2N4MHVCNnFfNVRNa29KOURlWXVRSmtoNmVfbXJpSWlRekhJRFlJWG1iN2RScndvRkxJYWVGM1YxMnhCN1RBU0cxYldzYmpKaXZjT2RNcjZlWQ?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-16T19:22+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股大跌2635點 證交所：國際AI投資前景正向 臺灣產業成長動能延續 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMinwNBVV95cUxPZFRmUU9jcUxPTlZta2Z6YTM4Y3ZkaHhMejBFeFhXRkZHTk9MRXNibkZWYVpPeHhWSTJDY0RJd0xnVW40dzlTRVpHQ3dxOC1HamJ3VUg2MGxxYk4waFZTbXZoUWNMNTMyUm05eWVReU9DWTI4VHFJSXJpMHU2SGV2ZmdCenFiNy1FOXhmR1d2VzZ2ZkpMNVF5OFhCV3BvS0dxeHQ3aXpVc1ppa2FVT0ZIQldQQXFyU0llTjV6Q2FpR0tPa1ZkT3NzR0lPSm1LeC12ZW5LRVVMNF9iUVgwMzROUm5hczczM2lxdWlmRmc5dGhqdHlHeTdmTHJ6VWVGOWY0S25HX3VoWDJCMklfbXBfOThvM0NDTjBHUC16VUMteEctVXhlSWVMeUZnUVJUZ3ZXc3JfWlpQY2xicXJWLVJZdjh2dXVaT0ZUUFh1Q0VhNGhoN2pUWTltWk9ieGN2b1NmdnZ3YzN2bklWWXhZLVo5dnR2eEJwejNoMlhjaG5CdU5QekowTEwxQjhOWWxtaS1CU2dTdlVVdVNHWDJnRVlR?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-16T17:40+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股重挫2635點想抄底？元大投信：過去20年99%股票輸0050 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi2wJBVV95cUxQZWxWMnEzQkVlU05rWHgzdkhlRkl6WndvdWY1T0RLbDdvbTdFNzRfTHlzMmJPYi1haGUwS09fTThwZE5Ra2tUdFY4cTZ4TTdyNmZQX0c0QzJnNlBlc3FDWVdmU052c0tlQ0lsOVNQaHhIc3gxMHA0N0FYX2ZsN2ZUZkRsaGpWSE5HZHpBYmFXbXBKdUJzWTZjZTlsVU1GWjdGUmNkcUlLVEhwNXlwMGRpOGRpYjBzSENPTDluUUljbG13clpvOERDT3FOLWNPMW8tb1E3X1czcXd5N05BOXVVR2JUNGZtaTRJNkw0ZWRZdTNQcnlvS1ZQd056VzNLTjlEb0R6NW1seXFCTF9BVW9mOUlGdTBWMWNwSjBKZmpndHpGd0xWOHJuU3JVbFAtdm9HRk15RXl1SzFOcFRpWGdzbVk0VE9NcjJiNGw0czh2ODEzOU95Uk9BT2dIcw?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-16T16:28+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "semiconductor and gold stocks declined, with Tianshu Zixin falling more than 11% and Zhaojin Mining down 4% - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNTVhkYnpUZTJkUnhCb1FFbHB1Wmd0Y3R0cHRJbU1VeWlSZ1dtSTJtSUw4Sk9fa21fakpkc2dSWUdEZTJGazV0NTBRMHZfa2xtMEtCTlB2c0l0amZHUUNDTGtCNG8wdVNzNjZEeHZWbVpUOWVYZkd0SnZLaF9iRV9CejhxQUlVWnF5UUF6RmxZVDNHQV9JcWhFZXJlNDNuR3RW?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-16T16:25+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "oil_watch": [],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-11-17T01:26:19+08:00",
-  "checked_at": "2026-11-17T01:26:19+08:00"
+  "updated_at": "2026-11-17T08:54:52+08:00",
+  "checked_at": "2026-11-17T08:54:52+08:00"
 }
