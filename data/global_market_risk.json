@@ -1,58 +1,57 @@
 {
   "schema": 1,
   "risk_level": "red",
-  "risk_score": 4,
+  "risk_score": 3,
   "risk_reasons": [
-    "費半明顯下跌",
-    "NASDAQ明顯下跌"
+    "出現重大風險新聞"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 -5.0%｜NASDAQ -3.2%｜日經225 +0.4%｜KOSPI -0.8%｜台股加權 +0.3%｜恆生 -2.0%",
-    "⚠ 全球市場風險｜美債10Y 5.10%｜VIX 25.5｜WTI原油 84.69美元 -1.5%（高於常態，觀察）｜布蘭特原油 92.51美元 -0.7%（高於常態，觀察）",
+    "⚠ 全球市場風險｜費半 +0.2%｜NASDAQ -0.5%｜日經225 +0.3%｜KOSPI -0.7%｜台股加權 +0.3%｜恆生 -1.9%",
+    "⚠ 全球市場風險｜美債10Y 5.09%｜VIX 24.5｜WTI原油 83.33美元 -3.1%（高於常態，觀察）｜布蘭特原油 89.51美元 -3.9%（高於常態，觀察）",
+    "⚠ 全球市場風險｜油價觀察｜US-Iran Exchanges Continue, Tanker Attacked in Strait of Hormuz: Crude Oil Close",
+    "⚠ 全球市場風險｜1天9起韭菜翻車！千金股創意、華通、欣興全中槍 遭違約交割破4.26億",
+    "⚠ 全球市場風險｜股市新手誤買整張0050 急求救：會違約交割嗎？",
+    "⚠ 全球市場風險｜銷歐鋼品面臨20.7％關稅 中鋼：稅率拍板後客戶下單積極",
     "⚠ 全球市場風險｜黃仁勳發聲了！輝達財報優於預期、盤後強漲4% 美股三大指數收黑、台積電ADR同步下挫",
-    "⚠ 全球市場風險｜#IXIC NASDAQ指數 - Asian markets mostly decline after Wall Street losses as AI stocks swing - 股市爆",
-    "⚠ 全球市場風險｜台積電米玉傑：半導體創新不能單打獨鬥 攜手科林研發加速AI世代技術開發",
-    "⚠ 全球市場風險｜面板雙虎反彈無力！友達群創開高走低一度跌逾3% 分析師：可分批布局",
-    "⚠ 全球市場風險｜台股狂瀉3,500點還沒完！陳嘉偉突喊「主跌段才開始」 PCB、散熱股再陷殺盤",
-    "⚠ 全球市場風險｜沒有黃仁勳的輝達：擴大與台積電及AI供應鏈合作承諾！ Vera Rubin已於Q3量產",
-    "⚠ 全球市場風險｜台股一個月打八五折！剩2檔主動債券ETF沒破發 00987D最抗跌",
-    "⚠ 全球市場風險｜黃仁勳「跌落神壇」衝擊台股！謝金河曝「下個地雷區」"
+    "⚠ 全球市場風險｜Advanced Micro Devices(AMD) Stock Price Today | Quotes & News",
+    "⚠ 全球市場風險｜[Hong Kong Stocks] Hang Seng Index closes down 213 points; JD.com falls 7% after earnings relea",
+    "⚠ 全球市場風險｜Anthropic IPO何時上市？ANT發行價、購買方式、台股概念股一次看"
   ],
   "markets": {
     "US_SOX": {
       "label": "費半",
-      "price": 9642.878,
-      "change_pct": -5.0
+      "price": 9631.347,
+      "change_pct": 0.2
     },
     "US_NASDAQ": {
       "label": "NASDAQ",
-      "price": 24328.383,
-      "change_pct": -3.2
+      "price": 24384.963,
+      "change_pct": -0.6
     },
     "US_SP500": {
       "label": "S&P500",
-      "price": 7340.53,
-      "change_pct": -3.0
+      "price": 7323.55,
+      "change_pct": -1.2
     },
     "US_DOW": {
       "label": "道瓊",
-      "price": 50759.42,
-      "change_pct": -3.0
+      "price": 50271.08,
+      "change_pct": -2.6
     },
     "VIX": {
       "label": "VIX",
-      "price": 25.46,
-      "change_pct": 11.2
+      "price": 24.46,
+      "change_pct": -4.0
     },
     "JP_NIKKEI": {
       "label": "日經225",
-      "price": 59098.2,
-      "change_pct": 0.4
+      "price": 59024.28,
+      "change_pct": 0.2
     },
     "KR_KOSPI": {
       "label": "KOSPI",
-      "price": 5059.25,
-      "change_pct": -0.8
+      "price": 5067.44,
+      "change_pct": -0.6
     },
     "TW_TAIEX": {
       "label": "台股加權",
@@ -61,26 +60,50 @@
     },
     "HK_HSI": {
       "label": "恆生",
-      "price": 23272.59,
+      "price": 23294.75,
       "change_pct": -2.0
     },
     "US10Y": {
       "label": "美債10年殖利率",
-      "price": 5.103,
-      "change_pct": -0.4
+      "price": 5.091,
+      "change_pct": -0.2
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 84.69,
-      "change_pct": -1.6
+      "price": 83.33,
+      "change_pct": -3.2
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 92.51,
-      "change_pct": -0.6
+      "price": 89.51,
+      "change_pct": -4.0
     }
   },
   "active_news": [
+    {
+      "title": "1天9起韭菜翻車！千金股創意、華通、欣興全中槍 遭違約交割破4.26億 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiswNBVV95cUxOWGRzaUhObnFYbWJpUjNiME13aGF4bDRNZVdxSzlid2VUdHFKUmNOYTFlc1NiQ25xTWtiV1lwLVdlOEppdlF5SE9KYUdjckNKOVMxUzZTcTF0dFpMTjQ2Yng4VnB2TDlaZGZRY0lUSDVXNzRoeGgxd0Q5Q0RFRHJrWE5ManZla1YxazhRdUFlcjRXU25KcG1xWTdGOHdIVVVZMEJHWHZhQVVOMWJwVzJuTWFJZFBXZXBILXRyMkdTcXg4VlNpTzhZaWF4N1VORW1ody04OG83VW1TOTlIcUdPeE9WQTRJX1FSTkNRWUVPY1NDd0JQdWEwYUViN1ptcVI4aFYxREcwY2s1elQxc3MyUzhzN2VtLVVraTN5Znc4WFgyR01KUXRCZ1VIUGxaTlRjLVJITWduX1NIQlJsNW0tSW1od3FhSVNYZTA1VS0wbXVRRy1GaENwMGI1QmR4dWxRLUREM1Z2VmhFMjhBMzc0MjlPcWNCRWFKU3MyeGNmQlZSaTVsOHljSkVIVUxGNm42OTFWcGFoTFkzdTZpVDlFaGtlVERvekJxeVRQQTdqcDcxVkE?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-18T18:30+08:00",
+      "importance": 5,
+      "risk_score": 4
+    },
+    {
+      "title": "股市新手誤買整張0050 急求救：會違約交割嗎？ - 自由時報",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE02T3p0bmxXTU45STVuVUtIWEFXd3NOV3NRM1F2SmlKcDVrLTJLZ3ZPbDdCQzVNbkk2d0NJT1JpLWtLTjE0SjRVcXotdVNXc2JnTllBd1BEb1M?oc=5",
+      "source": "自由時報",
+      "published_at": "2026-11-18T16:53+08:00",
+      "importance": 5,
+      "risk_score": 4
+    },
+    {
+      "title": "銷歐鋼品面臨20.7％關稅 中鋼：稅率拍板後客戶下單積極 - 自由時報",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5aczRGeUd4V3Q5RjhlQkh2SlJzc2owMDZ4V3hXd2NPbHptRzFHWnp2QUhKa00yUTJaZkxrOTFkZmxmX3pqeDlzUFlBcHlPUEtoWWhNUU45REM?oc=5",
+      "source": "自由時報",
+      "published_at": "2026-11-18T16:39+08:00",
+      "importance": 2,
+      "risk_score": 2
+    },
     {
       "title": "黃仁勳發聲了！輝達財報優於預期、盤後強漲4% 美股三大指數收黑、台積電ADR同步下挫 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMi8gNBVV95cUxPUUlMTWtuWFhadFlOMlctM1JkMDhRQzExOGYwYl8tWGg1ZkQ4N29DTUtZTW1rTlZCekotcS13Zks3Qmk1RTFrX3ctX2ZfYl9EaHpQRTRSUW5VS3lwT2dWeVJZOUlCamNKYlBGZ09Va0FweTVvQmd3RjZZbURDR3ktal9fTTNoem5sWnkyaXh3andmbEJtS0tFbTdqUFQ5VF9EMzY4TnVaQmR3LV94NFdMTEJScVB6dERIckdaQko1b3Z5NjBOcC1xMzVYN2luMU9mMXZ6YzQzNGp6bk1PS3pqaDgtTF9OYy1Xdnl3RUtPdmUya3BWOXB3REF4T0dCZkQxSGk4RGg4TVJNd0hIY3prMkxnQXhBWWNZeHFQMTZXa3BsQVZzbDhGOWZCaWlHamtGYU4wdEZIQ0JQWjFHVWVLT3k3X2JQd1A3aEx0RkYyTmtnUndGSk1DQWF0TDhPWG1jVjRvZThOcDhOV1RkZy1xTVZXaF80enVOcmt0eHZabkNaYzVyRGh5bU0tY0JpZUpQV3Z1U2tEb1VFUFIwMFkyenlPRjBYOHpHSnVLX1lDOGJ2bFZCTlg3RTBoTGtybnJmU1NaV0NVMDZzU2VFRjVrSDB0YlhQUXpXTktla3NYZnlSSGQ0eTc3R2dWcE1sUTY2UWc?oc=5",
@@ -90,82 +113,50 @@
       "risk_score": 0
     },
     {
-      "title": "#IXIC NASDAQ指數 - Asian markets mostly decline after Wall Street losses as AI stocks swing - 股市爆料同學會 - CMoney",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBpRkhMUzBXZEMtUW90Y2tlY3BKSGpQWnhzZU9OYlRjT2UyR21yYXZveVhFVkNWZUJqSHZXdjVCQmF0dEQzbThaek84eU5jVWcyeFdhWG1ZVGY?oc=5",
+      "title": "Advanced Micro Devices(AMD) Stock Price Today | Quotes & News - Moomoo",
+      "url": "https://news.google.com/rss/articles/CBMimwJBVV95cUxQWVhBbENyTUE4c2EyVDNPT25GWlg3NUgyR0pYN2lJN1dBWi14UTc5bm9KOEIzeGxTZDktbS15bkxVTXF2amNtdlNrZW84QktvcHFUS2gxWVRSU3dlcXk3Y3Y5YTdTMG5aVjBfZG45QUtWN0lJc0Zkc1czRFo1bGhidXVPakJTWjhKQ0JvY3FUS3pKa3dfc3dPVjI0WlF2VEJpWlhBWXFqbG1yMWdRWVFNWWFZY210ajdYRWR4cjNwS3FkVm1UVEFPeVJHTnFLVmFCRUlvMllXa2VCQjNCLVVyczlLUHVHU1FEXzB5dVZaNTlYVDh4X3lQQjZHRDh6OVBvY3A2RGM1YXNlWnF6UHpOX0JnNWtQcEpjZ2lF?oc=5",
+      "source": "Moomoo",
+      "published_at": "2026-11-18T20:18+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "[Hong Kong Stocks] Hang Seng Index closes down 213 points; JD.com falls 7% after earnings release; Lenovo rebounds 4.5%; Zhipu surges nearly 10% - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOekxnRndzaHhLTkpyNmZVa2VSazczclVKR0o2aWdULXgwaXdCTlU1cFhOdjNDOEtacUFLd2k4SS1HeXplVEljcjB3dWxRa3lmTmswdkhlNmdBd3pJcEpVd0tWd1VXTVZvZ1B6NllIUmg3V2k2NzVUaWk5Uy0zSXczUzM5OXZ6dGpkWFlzTGdUUVB5YkJRUllHdmFHV0tNYms?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-18T19:51+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Anthropic IPO何時上市？ANT發行價、購買方式、台股概念股一次看 - 商業周刊",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1weTNTVm9fSzdyX2h4UzdIckFhT0Z3b0F4cFRNeGFfS3JGM2J3Y05ZYW1RMTcweHptblhRWk1hMExTeWNkN1lVLWdoNXJJNHRXWnVjdXZkTnU5RUtOTTRFSlcwa2JwZw?oc=5",
+      "source": "商業周刊",
+      "published_at": "2026-11-18T18:08+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Stock market today: Dow, S&P 500, Nasdaq futures rise after Nvidia clears hurdle, Anthropic prepares to price its IPO - CMoney",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBRV09PbjJjeFFBZHR5amZCWlkxNlBtTHd0NmlOUW1hN3RSYjVBLVFzLWMzTG1ycVlpRlFxR1VaZEVOZFB4ejZpa0FuOURmVFFDckFTakcwVXo?oc=5",
       "source": "CMoney",
-      "published_at": "2026-11-18T12:37+08:00",
+      "published_at": "2026-11-18T17:37+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "台積電米玉傑：半導體創新不能單打獨鬥 攜手科林研發加速AI世代技術開發 - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9rRHlJRnIyWUlPbGdHalczUXhMU1laY3BtZzJqQ1R0RnNGaDk4UmkyLU1LWnhEblBKdmVkSVFVNXZzdjk5TUMwZm1hNXJtSkFfNV9ad3NBQkc?oc=5",
+      "title": "全球市值50大公司排名洗牌！台積電、輝達都被超車 「這家」穩坐龍頭 - 自由時報",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9TNjhqWmJYdWhZaThjOW8zOXlMYl8yQkI5WXFzOWd5UHkxdV80am5xZ0hOV3N6a0dvTjBUcGhKMk1zbVVyLW8xX3hFbnE5UmpqZDlFMEhYdXI?oc=5",
       "source": "自由時報",
-      "published_at": "2026-11-18T12:34+08:00",
+      "published_at": "2026-11-18T16:25+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "面板雙虎反彈無力！友達群創開高走低一度跌逾3% 分析師：可分批布局 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMixgNBVV95cUxNajdLbDR6bU1DWElnazlWS0hNTGNMNENtekFxUHRJR3hyUTBpcFcybk5SVVlmWkFibVJYcnBoRG12UVV5MEdWTDhENXV3NnJZZ21qdDRIVjRvSEhTX0l1U3FZWE9vREh6NGszcmp4VURhbnBzWnQ0a2lMZ3ZEdW10Q0Z1bzRjNmc4bWphRGdUVHFyaGphamxCNDFEa1FleXc1dkRySEVUZi1QOWVLdmZaWTNkWWZWNVBnUU1TbEdfdFp4NnotLU5QcFJGeG1sRi1xZmNUWnczQWc2cHlDanpmdENrTWM4a3QwMkdsQjJxS1Iydll6Ty1RQXdxT3hNUmE5U3JnTGZBcWVvNTNONXo4REFSZndTT1Rmd1FWSGlPY0VtTmhSTWJzdzF0SzJvU2JzRnQydWdZWHVfQWZzU0tmQkhVaGlNcWNNeUJTcnlaSkE0NERBbm05dldCR2dldW9hdkh1aGdnMUNwUjFzNTlOUW9Ma2FKdGVYbUJ2WGlRWXItSzVBMHNXWWhZbHVMem5VRkRsSzlnanhwWnJuaGdGdWVCZDZsUDkzR2xiOE5PcFBtSkJzMEZVRWN3NjFjWFZxRDRCdFhR?oc=5",
+      "title": "台股大洗盤市值型ETF也難逃！近半年僅6檔正報酬 009816逆勢突圍 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi_wJBVV95cUxQb05TbE5mN3VvaXJPUEVHa3JRTndXM1AwcUJBYnVKYUdsNDNobTE5WGJHSTNmejUwSVRDbEtUOHNzSzExZC0tdjE5WGZLMENlbjYwNmY4N0NYb3hRLWlYbm4zTi1taFdZN3hLMGF3Zk5PSDlZM3llNGlTQzhXeTFpcExZRE94LW0yUHE5Z0NZNk5Kc1RSUWdNdGUyd0Y0T1ZNUmxOY1FGNURYaWhpSkNxbmtMa2s2ODBncXpaRGU4VWhxV3NGam5sOXlxVzl6cUZaaE9WaERpeGxJTWRDOFdTSjV0OTF4OUVyTFM3WUZQT2dSVkN3X0RmOTJNdGVlbmVTNFc3VndPeElfZzBrRXF6dWUzTWdmNUZWVWtURlp3UVNXMWd1RzNORDBjR0RuX29qMEVFRXduWTRNWXB6OTQyWlpIYjMyN2VTS2pRT2dlVUJoaWpnMUxSU19DUEFScW52dnYwV2NvT056RXQyNUhUV2FoeXZiNXpMeU8xbGptbw?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-11-18T12:18+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股狂瀉3,500點還沒完！陳嘉偉突喊「主跌段才開始」 PCB、散熱股再陷殺盤 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMizgJBVV95cUxQRndzeWVZUl9RNHhtQ09qRFE2bnI1alE4bG03TmJYUDVSWjc1cmlRY0ctcVE0UnNiQkgtcFRERXpwMGkwYm85dnJQYnQ4WVV4cEJIQ1BHc20wbnloR25Wa0tnVFlyTDNzaFpnR1lMemRRU0RKR29Dd1ExQ2pJc215SkJ6ZndVZ1c2RmxDZjhMZ1VaTUxMM1MxYnpxNEp1ZGNhQU1wbDRqbXg3UTF3VHZqc1piXy1pdHJGTTVNbFR0UzJIWHVRZndfU1RPc2tCMnVCVml0RWFCbW5NMElFajBsR20yNDhsaF93Y0lVejd6MWxiQ1M3M1BwZW83cE50d1pZNzZxRmVMOGVGSXFOeWFyUjF1VXpFeDREY3JhVTBJdHZDUThoV1NLb25rS0tPdnM2U0xVTEFKSkFpVTZiQkNtcFV3MWZDTFNIQVQ2X0lR?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-18T11:44+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "沒有黃仁勳的輝達：擴大與台積電及AI供應鏈合作承諾！ Vera Rubin已於Q3量產 - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE14M2FaWGNndHNkZnU4bW5RbXBpLUVOVE5Qd0hEZExlam9vRGpCWF9paXVBcV9NY1VPRGpYQTIxaUM3RnlXamxFV2x4eUNHUWEzcWVfRUZHdHE?oc=5",
-      "source": "自由時報",
-      "published_at": "2026-11-18T11:39+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股一個月打八五折！剩2檔主動債券ETF沒破發 00987D最抗跌 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi3AJBVV95cUxOMFhtaVU0dHROX25NZHIzRmJBVG1hQ0prS0JfSEJnaGpYbGItRlR1LW01cW5pNF9jZlpTdmZGUTBCV09NVkRhOUFTc2xVaVJkVmtJRkJoQWxmeW04VXJqWkdJQjR3T2JmQWN2WmZmbVVZblZaNG5zTWc0NmtPbFVNSzduWng1bW5sRmNROFlnaVlLdF9ZdVM4NUhCQ0VpWUZBdGkweUk5cFVZWERFdC1TaFI1VXVCbVBzQmJvdjFDSk42UXpXMVZ6aFpSUnFRXzN4OW5Qa1BfLUdFUjVLSGxUTzF4OERidnFpOC1sNWFYMEhfcHljbjVXY2tmeXh6M01FN2QzdXNTLVk5SEotZGRndktUdWdQZGxfbXNOMnoyZ091SVRHRUs2VVhzQmQzOW1HR0lBckhzZmtrYS1GNjRmUWJTc2lGYWo5dHJkWE05VFV2dnBBenRKMXVkcXg?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-18T11:24+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "黃仁勳「跌落神壇」衝擊台股！謝金河曝「下個地雷區」 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi0AJBVV95cUxPM29ETERfZGVRTTE3S0pFUTBWNzJrUThveEsxc2lCT0FsR0NfVmdCWUxIQ1hkaW5ySW1hX1lqUU1BUTIzNHFzX3NwcUkxQngyZm9BRTRJTWhTOFJLa19QY1RmUlBIOWl5MlQ4X19GLVlxTS1MUXZla2gtNFoyUFotbFVnWGtKZE92STVqbHJjMFpqSkZiQW1ncHJSYm1BSklUaDl3SjlkQ19Ja0Z4T1RlemlSNUZZc0oxTjZ5cFNyWk15a3FOY2wyQ0lITXViSmpxSmlRTmdWZG1rcE1zb1QwVFI0Q29jRG1jaHA2Y1hrYmVZRWdPTVhYUHpWYTZ6S3JJV0xuNWE5WnBpZHlvRnprbHZWTVV6c3V3c0NkLXVnU1VCU21TblM4UnBJSDBycWUyN2h2SzNlbnRaUjNwb0wzallWM0l1WUQ2cUdUZnl5U2s?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-18T11:23+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "輝達財報炸裂也救不了台股！營收年增103%、Q4喊1,300億美元 台積電ADR卻慘摔3.68% - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiqgNBVV95cUxQQ2ttZ2pMUnZaTGVvejltUTlBRmZhV0RqYU1kTG1ocm55eGpTR3ZEcmZsWTFieHd6ZS1hUXVnMDRtaGlxbjBhdC1FWG9peVFtR0NfY1ROaW9kU1duNG1QWk9IRG1zSzBqeHZoYVhsb0MzVmpvVGtyMHN1UnBzbjlrNWdhaXBYaHhOWlFnMWNMZFZmZzFnd196ekJZc3JrdlJFLTFTWEk3M2tpc0ZITEpoTWlJNFBfVnlHRzVtQ21GTUsxZ1lGelozRWNQMlBMX3IxSllBV1pWT19NYTR6dFZsd1Boelp3emdPWmw5OE9fS1k0Z092aGNOaXNtdi10UEtBRENaNUFQbVFBbmJWclJzeGFHX2dhZlptaGxGbGptdi1kaWljSllhdFNrYkV3bkFiSFRDLXdjREFGWVVBTTRZYkdtNDlvSVM2VFlJTWN0aVdtTkRWZlR1MU9taVBGVkYteDNtRGp4dEpyZmpJRnBlNVJGejdVcF9ONC10bmxSWjlnenJfRndUU1hVa1F0MDJpTFBzTkI3M1FDZ3FPTUpNMF9UVVlaQ1paWWc?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-18T11:21+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台灣沒有萬元股了！信驊一度殺到8915元、高價股集體跳水 網見慘況嘆：萬軍覆沒 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMingNBVV95cUxQR2w0eEo0VFRTTHhvelVMR0c3ajdqa29PaDg5b3pTdU9QX3dlZzhETDlvZ1ZycURlSTBROGQyQV9VelU3eHAzblhFdTZwSWdwSmlpcFVEX1Ffb2xoWW5LRmVBR3BmLVQxWEp0OEc5N0NqdVN5NDdwR0thTmZ2TktFU2pCN0RtQ2tvdWplME1XZUl4NkhPcndpMndEOXRlMmlWRW4yU0hwM0xQUWRpVGFvc1JoSW9HakNBWi1GaXE3WUFxTTBGMFZOLU53ZUdKMXVtbVNKZEJPdnE4NTRoZzhVQlZWVlZjZ2VkR0FndTZvZmEwYmxweGpvckN0d0dXaVFMa1FibTdOWU1pOGxVSlFBbTl3VFpHUkZzRWJpZDl4VlBrOEtsbVpGX25xMVM0dmI2bEVPWkk4TENaakJ0TThXT3dFNTVCVm16VGpJbUs2YXFIMW5SV0VOYnhDVTdsVW5uMTNFbW00bWwxQzByeVFKbzMxNjNGeGJDNDNjTnNRVFdyZGxNRGlLblJONDR1MlpmXzdRVldlQTViN0dUTGc?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-18T11:19+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "焦點股》0050：期指結算日台股震盪 紅翻黑 - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5KYnctYnJXeXBWS2d3NVc2ellnLUh3aWlPemJUSFFMeWRxc0d6VjByWllUQ0pSaERQX0x6TVE1UlhuVlU3WEV2YlBIZ1VFWGFtVkg4NGszeUg?oc=5",
-      "source": "自由時報",
-      "published_at": "2026-11-18T10:38+08:00",
+      "published_at": "2026-11-18T16:16+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -173,13 +164,28 @@
       "title": "輝達擴產點名6家台廠！台積電鴻海領軍 景碩載板衝3.5倍以上 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMijANBVV95cUxNT1p2YVk4eFR5QzF0UDlvUDVnNGo4ZnV0eDg5cFh3bUwzTnJ5YVlWazJfb2V6emxoOERhREVmek5xVm5vUDNrenlkbkZvZmw4QlZwZkxPYks3dmUxZUxINUs1V19qM2ZWU1c4cGR0MHp4dnB1RVRjSjZyNWR6Ty04alJZRjliemZ6NVFxUndzV1VOX1hUMGFmUUY5VnVtNTdpU0N6aEE3cHV4aUhrZ0QyVkZRZWxRdHNLTGdxOHNYTFdQUlV1Z2tLTk55dGt2WHl5endzSFJLaFpvUTZfOHl5ZUxHTnBnTEZ3YVhwelFRcGxzcUo2SXNPRDFod0d3R3hlSEJqY0hBelhtXzdfYV92UDVKRzNJaHlzSjVkem9vVm9jWlRpNC0xXzRxQWJQRFlLelhOcFRVUHV3SHhaVVhzdmVfRWJiNnlybjFzVVZGa0NFdGNNNzFuZUU2T1BfSk5jemwzdkFNNS1mTjBwQzBWNzJaaVBpSVNxRS1sVEtrdGYwcU9MQkswWS1KSWM?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-11-18T10:14+08:00",
+      "published_at": "2026-11-18T16:13+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股尾盤急拉翻紅！ 網見外資操作嘆：鐵了心要走 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMizgJBVV95cUxOeVBKQkVVbktCYWpVUVRNNjZhNk9FT2ZoaFR5RUxSQXhkQi1uU0pkUk1wS0RVeHZpNEVZZ2taNkNCOGJnRy1vWG1CdGxVOWlMeU1hVUhOeXlFSkV4eUlZQk82TV9Ha0k2cnBkNkl3Z3A5cFhnczAxZk4xMGk3N0J4c1I2RWFMX3JNX01JLWt0cXVkUUdrcm1iZDUwdnAxbHNWM19sVS1VVmpYNVBKSllVOVZ1QzZTZDR4eVVLUDR5UFFyTDFqa21wTEFPQW1ybWpWUFQyLXhNRzJVQUxqNEN1RERVSGdEaHU0ZTVkRmhBSlNGaDVFY2NNVmZOSHdWRnpOX2kxMzBWUks4OVhGdHdWdnRaRFcydHppZWUtM2xJNUhtNWRLTnYzUEJWblNUQ3JNN3JOQnZWdkNBMzBlRkYwN2o0LVFuN3RuOUh0QmtB?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-18T16:01+08:00",
       "importance": 2,
       "risk_score": 0
     }
   ],
-  "oil_watch": [],
+  "oil_watch": [
+    {
+      "title": "US-Iran Exchanges Continue, Tanker Attacked in Strait of Hormuz: Crude Oil Closes Higher - VOCO News",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1DVXhidDZfeFRMNEJBTTZMZ0F3R3dnSE5wN2Q4NFlWejhueHB2M3BCbzFGTjJiRllCeDZyTjY5S3ZOVHkxNVQtUXZMeFRyV3VGTUFhamRvVEQ3M2pyMnhZZzFqcUFhTlJvcEZVOUtlRURKRTIyaDgwd2x5NA?oc=5",
+      "source": "VOCO News",
+      "published_at": "2026-11-18T09:24+08:00"
+    }
+  ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-11-18T14:10:05+08:00",
-  "checked_at": "2026-11-18T14:10:05+08:00"
+  "updated_at": "2026-11-18T23:32:52+08:00",
+  "checked_at": "2026-11-18T23:32:52+08:00"
 }
