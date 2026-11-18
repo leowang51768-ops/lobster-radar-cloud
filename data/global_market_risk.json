@@ -6,42 +6,42 @@
     "出現重大風險新聞"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 +0.2%｜NASDAQ -0.5%｜日經225 +0.3%｜KOSPI -0.7%｜台股加權 +0.3%｜恆生 -1.9%",
-    "⚠ 全球市場風險｜美債10Y 5.09%｜VIX 24.5｜WTI原油 83.33美元 -3.1%（高於常態，觀察）｜布蘭特原油 89.51美元 -3.9%（高於常態，觀察）",
+    "⚠ 全球市場風險｜費半 +0.4%｜NASDAQ -0.3%｜日經225 +0.3%｜KOSPI -0.7%｜台股加權 +0.3%｜恆生 -1.9%",
+    "⚠ 全球市場風險｜美債10Y 5.07%｜VIX 24.6｜WTI原油 81.89美元 -4.8%（高於常態，觀察）｜布蘭特原油 88.68美元 -4.8%（高於常態，觀察）",
+    "⚠ 全球市場風險｜油價觀察｜原油價格反彈無力，供應過剩風險上升，未來繼續下跌？",
     "⚠ 全球市場風險｜油價觀察｜US-Iran Exchanges Continue, Tanker Attacked in Strait of Hormuz: Crude Oil Close",
     "⚠ 全球市場風險｜1天9起韭菜翻車！千金股創意、華通、欣興全中槍 遭違約交割破4.26億",
-    "⚠ 全球市場風險｜股市新手誤買整張0050 急求救：會違約交割嗎？",
-    "⚠ 全球市場風險｜銷歐鋼品面臨20.7％關稅 中鋼：稅率拍板後客戶下單積極",
     "⚠ 全球市場風險｜黃仁勳發聲了！輝達財報優於預期、盤後強漲4% 美股三大指數收黑、台積電ADR同步下挫",
-    "⚠ 全球市場風險｜Advanced Micro Devices(AMD) Stock Price Today | Quotes & News",
+    "⚠ 全球市場風險｜無畏台股震盪！股票ETF 逆勢吸金4,500億",
+    "⚠ 全球市場風險｜CIFI HOLD GP(00884) Stock Price Today | Quotes & News",
     "⚠ 全球市場風險｜[Hong Kong Stocks] Hang Seng Index closes down 213 points; JD.com falls 7% after earnings relea",
-    "⚠ 全球市場風險｜Anthropic IPO何時上市？ANT發行價、購買方式、台股概念股一次看"
+    "⚠ 全球市場風險｜台股狂瀉3,500點還沒完！陳嘉偉突喊「主跌段才開始」 PCB、散熱股再陷殺盤"
   ],
   "markets": {
     "US_SOX": {
       "label": "費半",
-      "price": 9631.347,
-      "change_pct": 0.2
+      "price": 9652.797,
+      "change_pct": 0.4
     },
     "US_NASDAQ": {
       "label": "NASDAQ",
-      "price": 24384.963,
-      "change_pct": -0.6
+      "price": 24429.885,
+      "change_pct": -0.4
     },
     "US_SP500": {
       "label": "S&P500",
-      "price": 7323.55,
+      "price": 7323.63,
       "change_pct": -1.2
     },
     "US_DOW": {
       "label": "道瓊",
-      "price": 50271.08,
-      "change_pct": -2.6
+      "price": 50198.17,
+      "change_pct": -2.8
     },
     "VIX": {
       "label": "VIX",
-      "price": 24.46,
-      "change_pct": -4.0
+      "price": 24.56,
+      "change_pct": -3.6
     },
     "JP_NIKKEI": {
       "label": "日經225",
@@ -65,18 +65,18 @@
     },
     "US10Y": {
       "label": "美債10年殖利率",
-      "price": 5.091,
-      "change_pct": -0.2
+      "price": 5.066,
+      "change_pct": -0.8
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 83.33,
-      "change_pct": -3.2
+      "price": 81.89,
+      "change_pct": -4.8
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 89.51,
-      "change_pct": -4.0
+      "price": 88.68,
+      "change_pct": -4.8
     }
   },
   "active_news": [
@@ -89,22 +89,6 @@
       "risk_score": 4
     },
     {
-      "title": "股市新手誤買整張0050 急求救：會違約交割嗎？ - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE02T3p0bmxXTU45STVuVUtIWEFXd3NOV3NRM1F2SmlKcDVrLTJLZ3ZPbDdCQzVNbkk2d0NJT1JpLWtLTjE0SjRVcXotdVNXc2JnTllBd1BEb1M?oc=5",
-      "source": "自由時報",
-      "published_at": "2026-11-18T16:53+08:00",
-      "importance": 5,
-      "risk_score": 4
-    },
-    {
-      "title": "銷歐鋼品面臨20.7％關稅 中鋼：稅率拍板後客戶下單積極 - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5aczRGeUd4V3Q5RjhlQkh2SlJzc2owMDZ4V3hXd2NPbHptRzFHWnp2QUhKa00yUTJaZkxrOTFkZmxmX3pqeDlzUFlBcHlPUEtoWWhNUU45REM?oc=5",
-      "source": "自由時報",
-      "published_at": "2026-11-18T16:39+08:00",
-      "importance": 2,
-      "risk_score": 2
-    },
-    {
       "title": "黃仁勳發聲了！輝達財報優於預期、盤後強漲4% 美股三大指數收黑、台積電ADR同步下挫 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMi8gNBVV95cUxPUUlMTWtuWFhadFlOMlctM1JkMDhRQzExOGYwYl8tWGg1ZkQ4N29DTUtZTW1rTlZCekotcS13Zks3Qmk1RTFrX3ctX2ZfYl9EaHpQRTRSUW5VS3lwT2dWeVJZOUlCamNKYlBGZ09Va0FweTVvQmd3RjZZbURDR3ktal9fTTNoem5sWnkyaXh3andmbEJtS0tFbTdqUFQ5VF9EMzY4TnVaQmR3LV94NFdMTEJScVB6dERIckdaQko1b3Z5NjBOcC1xMzVYN2luMU9mMXZ6YzQzNGp6bk1PS3pqaDgtTF9OYy1Xdnl3RUtPdmUya3BWOXB3REF4T0dCZkQxSGk4RGg4TVJNd0hIY3prMkxnQXhBWWNZeHFQMTZXa3BsQVZzbDhGOWZCaWlHamtGYU4wdEZIQ0JQWjFHVWVLT3k3X2JQd1A3aEx0RkYyTmtnUndGSk1DQWF0TDhPWG1jVjRvZThOcDhOV1RkZy1xTVZXaF80enVOcmt0eHZabkNaYzVyRGh5bU0tY0JpZUpQV3Z1U2tEb1VFUFIwMFkyenlPRjBYOHpHSnVLX1lDOGJ2bFZCTlg3RTBoTGtybnJmU1NaV0NVMDZzU2VFRjVrSDB0YlhQUXpXTktla3NYZnlSSGQ0eTc3R2dWcE1sUTY2UWc?oc=5",
       "source": "Yahoo股市",
@@ -113,10 +97,18 @@
       "risk_score": 0
     },
     {
-      "title": "Advanced Micro Devices(AMD) Stock Price Today | Quotes & News - Moomoo",
-      "url": "https://news.google.com/rss/articles/CBMimwJBVV95cUxQWVhBbENyTUE4c2EyVDNPT25GWlg3NUgyR0pYN2lJN1dBWi14UTc5bm9KOEIzeGxTZDktbS15bkxVTXF2amNtdlNrZW84QktvcHFUS2gxWVRSU3dlcXk3Y3Y5YTdTMG5aVjBfZG45QUtWN0lJc0Zkc1czRFo1bGhidXVPakJTWjhKQ0JvY3FUS3pKa3dfc3dPVjI0WlF2VEJpWlhBWXFqbG1yMWdRWVFNWWFZY210ajdYRWR4cjNwS3FkVm1UVEFPeVJHTnFLVmFCRUlvMllXa2VCQjNCLVVyczlLUHVHU1FEXzB5dVZaNTlYVDh4X3lQQjZHRDh6OVBvY3A2RGM1YXNlWnF6UHpOX0JnNWtQcEpjZ2lF?oc=5",
+      "title": "無畏台股震盪！股票ETF 逆勢吸金4,500億 - 工商時報",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5VWUhOSks5TkF5dEVRMmV4S3paZ0h6cE1FWHVfREtsS3E1Z3pnT0txQ3RRaEhHLXA1Q3ZZY3Myb2pGMlFwRlliTXpUMnl4aEg2Qm5SRGVmUVlBc0hBQWJF?oc=5",
+      "source": "工商時報",
+      "published_at": "2026-11-19T03:00+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "CIFI HOLD GP(00884) Stock Price Today | Quotes & News - Moomoo",
+      "url": "https://news.google.com/rss/articles/CBMioAJBVV95cUxNUVpraEVnOWczdi1GZExqdkJwa2lHOFhPTXlZcWNpRUtfLW5kdlI3dWZNcXVtT2szU2xzTzBKSEY0dWxCRlFmR084eUw2LTlJY0pLYWx4dzJJN0hBV3l5Ukd1aHQzelZsMWFCRER4YTVMRzRxb0VxT19xdERtVmJmNlptUHBQejd6RklKSm1LOFlFZER0U3FsRXRsZFVEYVpYdU9fN2NlZnZ4RmNnaTRreXo5MnhZVlMzQ25aTWFSRkRHU29nTGJZNmtzOTJPU1E3YWtHLU9WcW5FUkRiOVpydEc1ZENnRkNzektPU05VZmxGSWdhZVRHTEVWRmVGOGZpVnNoTURUcm01S2VsNFN4aVNaUUo4dHhPU19zYl9MQ2k?oc=5",
       "source": "Moomoo",
-      "published_at": "2026-11-18T20:18+08:00",
+      "published_at": "2026-11-18T22:57+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -129,9 +121,17 @@
       "risk_score": 0
     },
     {
-      "title": "Anthropic IPO何時上市？ANT發行價、購買方式、台股概念股一次看 - 商業周刊",
+      "title": "台股狂瀉3,500點還沒完！陳嘉偉突喊「主跌段才開始」 PCB、散熱股再陷殺盤 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMizgJBVV95cUxQRndzeWVZUl9RNHhtQ09qRFE2bnI1alE4bG03TmJYUDVSWjc1cmlRY0ctcVE0UnNiQkgtcFRERXpwMGkwYm85dnJQYnQ4WVV4cEJIQ1BHc20wbnloR25Wa0tnVFlyTDNzaFpnR1lMemRRU0RKR29Dd1ExQ2pJc215SkJ6ZndVZ1c2RmxDZjhMZ1VaTUxMM1MxYnpxNEp1ZGNhQU1wbDRqbXg3UTF3VHZqc1piXy1pdHJGTTVNbFR0UzJIWHVRZndfU1RPc2tCMnVCVml0RWFCbW5NMElFajBsR20yNDhsaF93Y0lVejd6MWxiQ1M3M1BwZW83cE50d1pZNzZxRmVMOGVGSXFOeWFyUjF1VXpFeDREY3JhVTBJdHZDUThoV1NLb25rS0tPdnM2U0xVTEFKSkFpVTZiQkNtcFV3MWZDTFNIQVQ2X0lR?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-18T18:26+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Anthropic IPO何時上市？ANT發行價、購買方式、台股概念股一次看 - 商周",
       "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1weTNTVm9fSzdyX2h4UzdIckFhT0Z3b0F4cFRNeGFfS3JGM2J3Y05ZYW1RMTcweHptblhRWk1hMExTeWNkN1lVLWdoNXJJNHRXWnVjdXZkTnU5RUtOTTRFSlcwa2JwZw?oc=5",
-      "source": "商業周刊",
+      "source": "商周",
       "published_at": "2026-11-18T18:08+08:00",
       "importance": 2,
       "risk_score": 0
@@ -145,10 +145,10 @@
       "risk_score": 0
     },
     {
-      "title": "全球市值50大公司排名洗牌！台積電、輝達都被超車 「這家」穩坐龍頭 - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9TNjhqWmJYdWhZaThjOW8zOXlMYl8yQkI5WXFzOWd5UHkxdV80am5xZ0hOV3N6a0dvTjBUcGhKMk1zbVVyLW8xX3hFbnE5UmpqZDlFMEhYdXI?oc=5",
-      "source": "自由時報",
-      "published_at": "2026-11-18T16:25+08:00",
+      "title": "中國波頓(03318.HK)11月18日耗資144.31萬港元回購47.8萬股 - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFA0cjUxdHZYckxEOGRTSmlCZHlfcVNncVR0WlNZRFI3SFVOVWUtZ3VST0RWZDJ2QVFFM1hwcm1ud3lSZFF0ekx1cGJvZmRLYmJzaW40eUNubUpxbFJMSGtSYjQxTlBjenZhTVU4?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-11-18T17:21+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -179,6 +179,12 @@
   ],
   "oil_watch": [
     {
+      "title": "原油價格反彈無力，供應過剩風險上升，未來繼續下跌？ - Mitrade",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE94bDFIQTJkYlV3M0ZsVy1DalpnM1BRSzcxZXM2MDJSdWFtZGczU3ZrRk9WZmMxeDdhS0dadWNGSXRoNGd0MHB6S3pFeDQyWkxrUkZWTXIxZnk1d3c4RnRFX2FDWDEyN3NabmM0M01aVmF0ckhDZURROWRR?oc=5",
+      "source": "Mitrade",
+      "published_at": "2026-11-18T17:26+08:00"
+    },
+    {
       "title": "US-Iran Exchanges Continue, Tanker Attacked in Strait of Hormuz: Crude Oil Closes Higher - VOCO News",
       "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1DVXhidDZfeFRMNEJBTTZMZ0F3R3dnSE5wN2Q4NFlWejhueHB2M3BCbzFGTjJiRllCeDZyTjY5S3ZOVHkxNVQtUXZMeFRyV3VGTUFhamRvVEQ3M2pyMnhZZzFqcUFhTlJvcEZVOUtlRURKRTIyaDgwd2x5NA?oc=5",
       "source": "VOCO News",
@@ -186,6 +192,6 @@
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-11-18T23:32:52+08:00",
-  "checked_at": "2026-11-18T23:32:52+08:00"
+  "updated_at": "2026-11-19T06:40:31+08:00",
+  "checked_at": "2026-11-19T06:40:31+08:00"
 }
