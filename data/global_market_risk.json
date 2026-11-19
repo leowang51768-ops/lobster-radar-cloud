@@ -7,42 +7,34 @@
     "港股明顯下跌"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 +0.4%｜NASDAQ -0.3%｜日經225 +0.7%｜KOSPI +3.4%｜台股加權 -4.4%｜恆生 -2.8%",
-    "⚠ 全球市場風險｜美債10Y 5.07%｜VIX 22.0｜WTI原油 82.49美元 -0.9%（高於常態，觀察）｜布蘭特原油 89.52美元 -2.6%（高於常態，觀察）",
-    "⚠ 全球市場風險｜British Pound picks up as an improved market mood halts the US Dollar rally",
-    "⚠ 全球市場風險｜台股創收盤史上第7大跌點失守年線 謝金河：台灣相對有底氣",
-    "⚠ 全球市場風險｜台股盤中跌破年線狂瀉1900點 專家點出台灣5優勢",
-    "⚠ 全球市場風險｜Dow Jones futures rise ahead of Anthropic IPO market debut",
-    "⚠ 全球市場風險｜金管會祭第二波限空令！網酸「跌完才出手」股民怨聲四起",
-    "⚠ 全球市場風險｜華新60周年曾投資聯電、台北101 焦佑倫回憶:錯過台積電創辦",
-    "⚠ 全球市場風險｜新一波限空令來了！台股3天已崩跌5248點 金管會出手",
-    "⚠ 全球市場風險｜250億元抄底買盤流入主動式台股ETF！ 00406A、00981A成吸金主力"
+    "⚠ 全球市場風險｜費半 -2.1%｜NASDAQ -1.7%｜日經225 +0.7%｜KOSPI +3.4%｜台股加權 -4.4%｜恆生 -2.8%",
+    "⚠ 全球市場風險｜美債10Y 5.05%｜VIX 28.0｜WTI原油 82.87美元 -0.5%（高於常態，觀察）｜布蘭特原油 89.64美元 -2.5%（高於常態，觀察）"
   ],
   "markets": {
     "US_SOX": {
       "label": "費半",
-      "price": 9652.797,
-      "change_pct": 0.4
+      "price": 9444.557,
+      "change_pct": -2.0
     },
     "US_NASDAQ": {
       "label": "NASDAQ",
-      "price": 24429.885,
-      "change_pct": -0.4
+      "price": 23911.742,
+      "change_pct": -1.8
     },
     "US_SP500": {
       "label": "S&P500",
-      "price": 7323.63,
-      "change_pct": -1.2
+      "price": 7184.21,
+      "change_pct": -2.2
     },
     "US_DOW": {
       "label": "道瓊",
-      "price": 50198.17,
-      "change_pct": -2.8
+      "price": 49166.57,
+      "change_pct": -3.2
     },
     "VIX": {
       "label": "VIX",
-      "price": 22.01,
-      "change_pct": -10.4
+      "price": 28.02,
+      "change_pct": 14.0
     },
     "JP_NIKKEI": {
       "label": "日經225",
@@ -66,120 +58,23 @@
     },
     "US10Y": {
       "label": "美債10年殖利率",
-      "price": 5.066,
-      "change_pct": -0.8
+      "price": 5.052,
+      "change_pct": -0.2
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 82.49,
-      "change_pct": -1.0
+      "price": 82.87,
+      "change_pct": -0.4
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 89.52,
+      "price": 89.64,
       "change_pct": -2.6
     }
   },
-  "active_news": [
-    {
-      "title": "British Pound picks up as an improved market mood halts the US Dollar rally - tmgm.com",
-      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNZ1dvWjY1MkUxb3QyaE9xbk5FZTA2RHNPMThVa2ljUVdaT3ZCcXNza20yTEtQTlFuRy1tOVRkeGJ2WndpQ2tma0VZQWJTSU5tUWVrbUwxMnZZN2dydnVRaHo0Ykc0WlRSb0stTzNiUEVsTHhSYngtdGR1ZVRZQzllTWdYanllck14NmRsQ29WU0NwNk9jQ0tqUHdseVlCYnBpcm1HOW9XMGVMV2VrMzlUZkxMZW5EWDIxZGxGbW9ia1VWZ0g3OFgxSnR5bkh5bmFNWUVIaEVBY2NQb0xxaGJB?oc=5",
-      "source": "tmgm.com",
-      "published_at": "2026-11-19T19:27+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股創收盤史上第7大跌點失守年線 謝金河：台灣相對有底氣 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiiwNBVV95cUxPU1hXanVWZVBaa0tGQWJFUURFNnpPbWVYeEtPcVV5ZEdNNUJ4WXNpWEdaUlN6RUFaX1dRNXdwS0phRFVkV1dPbDJLekgtdnF0MGlEQjVIbjY3R3FCRTZmNjJPLTJNNlB5OGR0UG1sR1dremloMkp4Wmd0aWtDa2hrQnlGclRmYVVPVjkybkhVMFFUVU9ob1dKcm9oU0hEdks1NUNOc3hUNGl1UEdOaGNJWE4xeVNBNnRBM2RqWWtMSm12VjhzeXRQWXlOOHRjVWUtcWFJaUh5ZG5Xb3RlU3otMWZib2prdFdTSmxVRGRqcFl1YVNsTzg5MTZNaFM0RW9feVFveFBadEFySkVRR2I3Yk92QzVSVzhOcEc5Nm1POVRmQXVFdE9Zb25Wc21SeW5uM1Z2YlNCcFk1em9OUVRSeFJnVXRzQmtXUWdabm9qal9GSl9YQ1ZxaFN2d3N5blF6Q3RVYVNNa1pOYTRaM1BSMEhNcDdiSHkyWmE0OHctT3BpYkRTbm9fWDB6QQ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-19T17:43+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股盤中跌破年線狂瀉1900點 專家點出台灣5優勢 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMixwJBVV95cUxNc19PbE5GZGxXeDlRa3E1bnNUTnpfZEM4SFRqUVN6QjlGM0sxRkE3X21OeUV5eWtLdGVtUkxWaFRwWlZueE5NS3BNWXdrYWdheWhoQWQxSzVVY3NJUDl2S0xQQmE4M1QwVVhiMEoxbGhNcS1kanRKNElWQ0x4SHJzTFpTVW9FcHh6dGI3eENmdWpfcXpNelQ5RUtzOG9XNThzSzdlTkxQM0ZGOC0xdU91YlJLVmVnMjM5a2lVTlVhSTVSOW9LOC1TcEdOQnpDQUE4Z0h1Yk9Nek5Vb3BHMk16UE1vaktsNllwMjh1S3c0MnBkWTQ2TEJJZE50THBVNko2QkxzaG5RR1N4aHRYY2dKcXlOUlBsREJxbXFzMHRCcWNPT2xfREZXaWZrRGxSOUhnT1FXWFdhZEpNaFpUdnZGUUt3N3JfX00?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-19T17:37+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Dow Jones futures rise ahead of Anthropic IPO market debut - tmgm.com",
-      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPcW9pMnpnYjR4czJfN0lIQlpxNnByN2NJU091ck1lME9kVXZDSl9TeUNNTDJHVXZvRGM3dTBsVlBGSjJBSzhwenEwS0lhc2dWU0lkZXdEOVZZckxickY4U2k2dEM1OERfbW1ocVhlc00zZTQzVWp5eTF1TUUyQ05KUDdIeDRfRnlvYjREVnlUbzV1em5nVGk0UFlnYmNGOFlONkdNNUdSb0NCUHRzSUlHZlhEaHZMa2N0TzRNYTk1cWV5VGxCS1hYUg?oc=5",
-      "source": "tmgm.com",
-      "published_at": "2026-11-19T17:29+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "金管會祭第二波限空令！網酸「跌完才出手」股民怨聲四起 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMikwNBVV95cUxPU2MyRGl3V3pSeUJYV1JjV3Nub3FWZC1Ed3RXOHJJSDJrOVZjaTFZYWVsYXJjaDJfMmFmTGNKSjZMVWJNSHJUaGRwZmRwTklZN2IxenA4ZjVYZGh1N2xGNl9sazFLazY0VXRFZ2htWUZUSWxqUTNfcjBmakNQaFBwYmxIMm9aaWcwNkRTRG5xTjJWdnUtM2Y2Wm9UUVhNRFQxbkUtV3BORGgySzJxYmVzZXlyQVdLTjF5em45a3QyamNUSmtJNXhHTFVrbkQ4MEhBYW9CbEFrNElIZDR3eXBTYk42V0xhV3B5NDZMcUM1MjJBN296TjdvUWpXY3ZXX0x6UU1xaU03Zi1udzZ1OGd2R3pQam9KYlZhaXJRTEdBaTdYRHNnazB0Y1ZMVWZnQmhqRzdyZ0ExRzdyeHU3UXNrbHU0VnI4U0xIQVFVRlR1dDJldG5VaFlxSnJEZzZWSzJMQmFkd3g1djVmMXpnZDVHMVY4Tm1oT3VBRUViemt1bWU5clh5SUlHTjV2TWw5cjZoLUln?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-19T15:51+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "華新60周年曾投資聯電、台北101 焦佑倫回憶:錯過台積電創辦 - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFA1QW1iVnZGWHl5YkVKdm85T2tSWTlRa0NxS20talFnSWRlaThFZGpOWGdfTkViM00xRy03WnFsSlFOWVUxXzBsdTdTUzRuVnA0S1ZOQ21peEM?oc=5",
-      "source": "自由時報",
-      "published_at": "2026-11-19T15:49+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "新一波限空令來了！台股3天已崩跌5248點 金管會出手 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiygJBVV95cUxPSGdnV2RXYmlDbS1mZ2NjLVFTVFlzNUtSRzNGMVFvUW1vbERiMW5wamhsZ2UzTmRscVpwdVJSdVFUQmM3UEhCSWthSVgxQ2c4UkVJTjNZQUFXOXZDeGNVUEFBV2pVak5Ya2JBT1hUMTVLWXZsZk4zV2M1RnFKYjJTSFV5V1NhTjl6SVUwSW5jbjhQN3h3N1lnM2xfN29ta25nUFhSQlJjWGFYNHlKMHFtako4R0s4X3NLVzVWRXpUOWtoZTJkVktOX1YyMGdxS2NmTGNkNnRMazFTQ2xLZFdWd0lLeFE0SHpyUGNER2ZuVFlscF9MVmR5aFFvMkRERUk1bkQ5NkU1eGIteEo0R29CUVdOdTVlTS1FOGxwSkl6cmdfWEVDcUp6WVU3cTdWbVdUaGo0Sm9RSUNkVGtldy1WZGdldmdhY0VBT3c?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-19T14:48+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "250億元抄底買盤流入主動式台股ETF！ 00406A、00981A成吸金主力 - ETtoday財經雲",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE85XzNwV0lLY0ZJQXdRNUNwWElkalh4b1FjczhLazJBUDFvNnJWcmFpVnN3NW9uTFk0ZlZ0QzZHc1ZUZVAzbzVHZGVwdm1GQlZEZ1HSAVBBVV95cUxOVHNIUlZSMFJnNlQwTl84TW5mTE5KaW5uWkZhbVk5Z3l0czdWeGlkZjhXVlp6bjl1Ul9pLVZaSDhJMS1Pc0VJcUVYdHhxS0ZOcA?oc=5",
-      "source": "ETtoday財經雲",
-      "published_at": "2026-11-19T14:40+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "加大力道救市！金管會限空令祭第二箭 禁止平盤下放空 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi_AJBVV95cUxPaWhVakc5Qzc1dlViazREZG5GRW9YYWtxZ0V6MjdHamtXVmhwbXVZYlFQRnRma3RnYVIxOEpycm9lS21QY2h2LVkxRDM3dGV4QTJxUkotT2FNY3NuUVphZ2RDY3d5anl1RmdybXIwZGNsbjNTLVU4QkJ4VlM5Q2oyZjZoTDBwZFQ0V00yQ2FiazRnNnhSWjhrdHB0dGxOMmpiSXVPUjVtNWNXenBQVHhMTVRMMERPMzg5ZExTcWo1aVo4NDBmYk5zS0UyYjBYeENQeEc3MVVGeGNJV3hpRFhCVEZmR2Zsb3IybGVFd29pZXVsOGtBZUZoUlFMWnlXU25YX1ZQcFYxWHFSSXNBeHctczRCZEZLNDFxMEZFaHdISlZ6OHlTOF9HN3dpR0pfeGtNdVg4RUw3Wm9vT2dKbFRyUk01ZUtrTFV3YTM5Qk1SeUFOYjhOUmVNV3k2dUhpd1FVdG9RaE5tajdRWWJqbnkzOFpZb0xjUnBsaC1VOA?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-19T14:40+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股摔破年線！金管會出手了 再祭限空5措施 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMitwJBVV95cUxOeklqV21jUnllbVhoSGd5S3BEdkJsYVlWcnVHeFhVOHE0cWNsQmVDN2VGYkNFcVZfcnNpQzhXbVllZ2N6TmdTYU5NTlFUeEdlTGNHLU5DUXJyUkNsUnZyUzZ2N0podHRva3luRDE1VU80bG9RMEk2enFVT2twOXJWMDBSSlFsOFM1QUZvbWpZRi1tV1RKNUd2QmpQdDM0WWhpMDBwWXpQc1BuSHlwSmVRS3dtMGdpMUdKYlFjWG5jZ0dkeHc5V0tSTVpHQXdkM3BQRWtydV9TSHBPNVN1MzhaaEpQa1RuaVlGMHR4WnB6RlplTEJ1VERlWXk1V05panhWYjZndjZTal9BaVA1MHhGVnJCRTcwSWhvZTNhWDVsa1ZoRm9GaE5hT2xtX2s5UHAyaWxUUlFQQQ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-19T14:34+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股收盤跌1768點「史上第7大」！市值蒸發逾5兆元 等於少掉1家鴻海 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiqgNBVV95cUxOZktXNGltR3pXX3J2eVU3LW1YSmI1Y1pUZ1FnX1I1dmdKaFBYY0FKa05UMF9kU0ZLRmJOc3RTbkxjazl5SHFBWTdWdFNqOTdPbXdxX3lhY2tWa245bUlVQVdvRXdwOXI1OURUdE1GX2ZTMkdqc3VER05hemtWYmJkQzFRNndURnBMVFUtNTZuc0pDZmhXZVJmeVNwbGd3MDRXdmJnUHo3aVE4U1Jyc3E2Sm80d3c0bG5RdjdBQ293Qm9CdTM1MzQ0eloxb2RrcnNUMXNqczY4SU1xVnF6b2F4b0dxS18xWWVnYmhiT29ubmgxTkhxTU9WVzl0bV9sYUtDeXQyeGlnbzZFQ2UtdkZ6cmZvUUtPZmNBY192TE9qMy10a0M3REZDV0lla09RbURSZW1RMHhGb3k5LXpWOXE2VXRfWmVpSnhYTmdkWWxUdWMzTXgzMHZXRUM3VkRUWTlmT1B2TFhxTDlVUGEwV1RNR3luWW5vc0J1Ul9veDh6TkpqbDZkN213ajFIMl9JMFVsdUEtS1VWS0x5b3FKUVhLaWNkYnVFbnBGZkE?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-19T14:23+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "創意連吞4根跌停一度「失守后座」 一張蒸發264.5萬元 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi3wJBVV95cUxPVjZpMW5Yb1BXeHZVQnE5TzM4MHRob2kxQ2RsVXloSEVEWVczemRqUy11VTZYNVp6Um94aXF3Q213bWFkbWF3cmpuaVVEeFBxWUZKS2luSXdZOFlHS3BjRnVHY2RIbWlscTZMVkh2T3RYOEVvbDBwajlwQU0tZk5yS2pyVE9nSDNfcXhzRmNXaHRxSTBXbGRIM0I0VzBSVWRIMG9wT0EySjI4TTlHYTY0eEJzazgzX19LLTFCUnFoR2gwdHUzN1dGWmNDR1dRQmFiaE9HdUM2bl9iSnZPa29lOUJ6UFVHSWJILTNUX2FIYndRUWdQeG1MR1d2UlRSN05qOWU2MUtMSjhZX2l0c2VzZnducUhHZGNuVjFsbTJQRS01Uk5KMkdLTkVTMVhjY2V5ZUZWTHZVb2FOMzJCeG5Zem8zc3J0cEw5ZUFHQzQ5UGJoYnRvT3F6MG5XZTNDNmc?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-19T14:11+08:00",
-      "importance": 2,
-      "risk_score": 0
-    }
-  ],
+  "active_news": [],
   "oil_watch": [],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-11-19T20:14:18+08:00",
-  "checked_at": "2026-11-19T20:14:18+08:00"
+  "updated_at": "2026-11-20T04:37:05+08:00",
+  "checked_at": "2026-11-20T04:37:05+08:00"
 }
