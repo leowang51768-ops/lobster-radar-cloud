@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "risk_level": "red",
-  "risk_score": 11,
+  "risk_score": 14,
   "risk_reasons": [
     "費半明顯下跌",
     "NASDAQ明顯下跌",
@@ -10,42 +10,42 @@
     "台股明顯下跌"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 -10.8%｜NASDAQ -5.8%｜日經225 -5.1%｜KOSPI -3.9%｜台股加權 -6.2%｜恆生 -3.8%",
-    "⚠ 全球市場風險｜美債10Y 4.94%｜VIX 32.1｜WTI原油 82.57美元 -0.8%（高於常態，觀察）｜布蘭特原油 89.19美元 -3.0%（高於常態，觀察）",
+    "⚠ 全球市場風險｜費半 -12.9%｜NASDAQ -7.4%｜日經225 -5.1%｜KOSPI -3.9%｜台股加權 -6.2%｜恆生 -3.8%",
+    "⚠ 全球市場風險｜美債10Y 4.91%｜VIX 35.9｜WTI原油 83.62美元 +0.5%（高於常態，觀察）｜布蘭特原油 89.87美元 -2.3%（高於常態，觀察）",
+    "⚠ 全球市場風險｜Citi Warns a Key Stock-market Signal Is Close to Flashing Red",
+    "⚠ 全球市場風險｜台股又有違約交割！單日1.29億元「大戶翻車」 上市櫃今年已爆45起",
     "⚠ 全球市場風險｜Equities: Global stocks slide as tech losses spread - Danske Bank",
-    "⚠ 全球市場風險｜台股狂瀉1,768點！金管會急祭第二波限空令 1,028檔股票遭限制、台積電驚險躲過",
-    "⚠ 全球市場風險｜Taiwan Semiconductor Manufacturing Co Ltd(TSM)股票11月20日開盤下跌4.38%：真相來了",
-    "⚠ 全球市場風險｜台股暴跌最怕不是融資斷頭！投資達人曝「四貸同堂」恐升級：連質押都追繳",
-    "⚠ 全球市場風險｜Taiwan Semiconductor (TSM) Stock Price Quote & News",
-    "⚠ 全球市場風險｜限空令、護盤仍難擋跌勢 台股跌2393點史上第三大",
-    "⚠ 全球市場風險｜台股跌跌不休 林修銘信心喊話：基本面穩健、AI中長期仍看俏",
-    "⚠ 全球市場風險｜本週台股市值蒸發 25 兆元，全球排名退居第七大股市"
+    "⚠ 全球市場風險｜CIFI HOLD GP(00884) Stock Price Today | Quotes & News",
+    "⚠ 全球市場風險｜Anthropic IPO fails to calm AI jitters as tech stocks fall further",
+    "⚠ 全球市場風險｜Hong Kong Stock Market Close | Hang Seng TECH Index Plunges 6.5% in a Week; NVIDIA's Sudden Lea",
+    "⚠ 全球市場風險｜Capital Flows | Southbound capital surges into Hong Kong stocks with HK$11.812 billion, adding ",
+    "⚠ 全球市場風險｜Taiwan Semiconductor Manufacturing Co Ltd(TSM)股票11月20日開盤下跌4.38%：真相來了"
   ],
   "markets": {
     "US_SOX": {
       "label": "費半",
-      "price": 8609.48,
-      "change_pct": -10.8
+      "price": 8408.591,
+      "change_pct": -12.8
     },
     "US_NASDAQ": {
       "label": "NASDAQ",
-      "price": 23012.379,
-      "change_pct": -5.8
+      "price": 22617.732,
+      "change_pct": -7.4
     },
     "US_SP500": {
       "label": "S&P500",
-      "price": 7015.41,
-      "change_pct": -4.2
+      "price": 6910.39,
+      "change_pct": -5.6
     },
     "US_DOW": {
       "label": "道瓊",
-      "price": 48718.82,
-      "change_pct": -3.0
+      "price": 48147.33,
+      "change_pct": -4.0
     },
     "VIX": {
       "label": "VIX",
-      "price": 32.15,
-      "change_pct": 13.0
+      "price": 35.89,
+      "change_pct": 26.2
     },
     "JP_NIKKEI": {
       "label": "日經225",
@@ -69,21 +69,37 @@
     },
     "US10Y": {
       "label": "美債10年殖利率",
-      "price": 4.938,
-      "change_pct": -2.2
+      "price": 4.912,
+      "change_pct": -2.8
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 82.57,
-      "change_pct": -0.8
+      "price": 83.62,
+      "change_pct": 0.4
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 89.19,
-      "change_pct": -3.0
+      "price": 89.87,
+      "change_pct": -2.2
     }
   },
   "active_news": [
+    {
+      "title": "Citi Warns a Key Stock-market Signal Is Close to Flashing Red - Moomoo",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNVWhUWHFJWmVJdnFiWURWQVR4U3lTR1k1cldnMmZxdmhYVG1XdzQyT0dOTGFNVThKQjFjNjUtMVo1bkJSWWZERWU0bWdackpfRTE5dm9BcWp2bDJObkUtcG9jZkZKR0l6SVhpU3ZzWE8wdmY1Z2tjYTJTTGh1Tmh3UVBxSjJYR2NMLXBjVkpCcVQ4MUNlTWRmYy1lSkNBQQ?oc=5",
+      "source": "Moomoo",
+      "published_at": "2026-11-21T03:13+08:00",
+      "importance": 5,
+      "risk_score": 4
+    },
+    {
+      "title": "台股又有違約交割！單日1.29億元「大戶翻車」 上市櫃今年已爆45起 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMihwNBVV95cUxNZFRBdUZmMFNPVTF2a01MamcwbDU2R3FLMmdqdklKVzltbUlHMGlWclpvd0d4SEgxVXBhS3k1dk5fN093NURYOWQwR3g3RkFVbXBPdWZiTk1vYnNPdE1sc2trLTgxNTRPLUFBRDhjYUdTZldBY01ZOTdkVGVEanJEU2JSeTBwMDJYODBjSnlaVm5FZGZmOUF2X2F0eU1fZlQzTXZuZG8weTVDbzN1bEthSERYaHlKOVM4M0EtcmRCSzR6dm1qUU5lbGlfbDJYVjRNU0NPc1d5RWdSaXZpMzUyRzZ4RWp1dlJ3Rko3RzBydjRWUEFfdDdPUHhncEd1UUZUQTBUd2V6LVpkS0RDQjZzY1BqT2d2V3JLczFTOGtHQ2ZhRkl3alMtYWtiQm5vaXlPVng5Tllsc0g4alFfZmgtM0dJNEhQSlBqY3FnR3VIRThiRjhlWFpKZVVXazFNMjFiYlUyZ1E4bEVhQWZNY05tYnUtVjVfWnR0VlMzZWVJSVJlanZxdjlr?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-20T07:40+08:00",
+      "importance": 5,
+      "risk_score": 4
+    },
     {
       "title": "Equities: Global stocks slide as tech losses spread - Danske Bank - tmgm.com",
       "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNMHpCejBHQ2NhaXNkdVFZb09rRW9DTm90QmN0R0dldGFnRWFuRWdUcHdCVDNUWE4zb0UzblBOZzVnOUE2T0lwVXViUTQwcV9PZlo5bFdQVjMyM3pKT2RpTjBWT1JJYTRGQVdhWDBDOW5SMkxGS1NkTGg4RXdnX3BpTEtPeHlWMU9KMU5MM1ZlRHk3RDluelV1UkF3b2wxU2hjS0tqX3hYU09pRUV4NzJ6cUFocUNXWHhiQUhhandrX05rNkpVaF9lUWxWWTZrZw?oc=5",
@@ -93,12 +109,36 @@
       "risk_score": 2
     },
     {
-      "title": "台股狂瀉1,768點！金管會急祭第二波限空令 1,028檔股票遭限制、台積電驚險躲過 - 台灣好新聞",
-      "url": "https://news.google.com/rss/articles/CBMi2ANBVV95cUxOVGNoSU5uTnJITVZxYlZtN2M0ZVQ4ZWFuRm5fcXVQTFoxSElSamljV0h6eURtbHVtQXRSSUV1RWxFN0xkeVE4WG9fNmRublRrQkF0VDdTZm5BamNUUjdvckpKZklnUTkzVGpiZWUtR3RwU1FUOHRTdjVhVklxVGJzckQ3UmNWUkZNZlVVODg1SUp0bTEzbzdQTzhLOFRBY1BaaHlJeURZT29kdkRfbGI1V0syeHBKSTRhRGhXdWpjNldoMXkyZnB1VF9KUGhXeTUwOGN6M0QzS0VqYUJ1UWlwaWJUc0Q2cUhna2VwQ2tJNEZXY0NiSzFFMTdNUWxzZWFjTUxCRzJXbnBCMDAyZm1lS3AtZl9sdHpnNUV0TG9OODY5bmNPcWw4VWFBcWlrWTdVM2d3aWF5UUl0RTZqV21jdFZVaGNrcnltck5VN3JNTTF0bkNLaEVNNEc4Yl84WDIzZXZmeVc2VGMxT2pnZkdWTU5NNzBJM0V6eFRQOE9xTDB3UU5nM0M4QTZ2dHdIaEU0eGJZcGVBS2JBQ3JEdUI2SFZ2Qko3czFFTDNucnBtWFpFeFUwQl8zOC1QZHIzVUNqMDBHLXZYUTBRdXp4OHhnNlF6NU8wemNB?oc=5",
-      "source": "台灣好新聞",
-      "published_at": "2026-11-20T09:31+08:00",
-      "importance": 4,
-      "risk_score": 2
+      "title": "CIFI HOLD GP(00884) Stock Price Today | Quotes & News - Moomoo",
+      "url": "https://news.google.com/rss/articles/CBMioAJBVV95cUxQc2RibnZQRGU4azJFYmNSN2N5aHRqMmJ6VXZxUlBqdUJXODBIR0UzTjlMUDBRbnpIZkh0aHBLQUxsUU9YaGxaallvVVVzVDM4RFhRVWFNb0xKcHhGc2lUZzc3RGxvaThXZUduMWo5azByVjIxMl84Yk1wa050VkxfOHhKM1VUVWl1c0w3SElESjgxdVRYQ1JobkI4Zkw5TVJTcGx3c1d2VEZMUzdYd3JKdFRnRUJFV2QwU2JnbGVpQkpua2tKTGs5ZzZEa3FOTlFta2RDdmxDdElLVGp0X2JWUkxhWTBJSlJDbTVzX3hJWF9SOUpNaVh5cDNBbWtENGlBakY3QkNCUzRlRGQ0VVRmNXVsQnI3V3RqbUh5LXZEQjA?oc=5",
+      "source": "Moomoo",
+      "published_at": "2026-11-21T03:13+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Anthropic IPO fails to calm AI jitters as tech stocks fall further - Macau Business",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQeUlWNGRHOEozX3JNMVVQMTdiTmQ4bHJsQkNPV05fbU5zYXNQNVY3d1NST084LXpqelh0Mlo0empMZlRJZmtkRUFlYVBwQVJoSWpJcWljUjhBTHFiWlJwN0U0QzV1aDBXVFZ1N1VhNmNBRndISHd3aFZSd3kzcFB1YWd1bTBWS2tEOUZqRy1NSVpRcjNBd3ZndA?oc=5",
+      "source": "Macau Business",
+      "published_at": "2026-11-21T02:34+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Hong Kong Stock Market Close | Hang Seng TECH Index Plunges 6.5% in a Week; NVIDIA's Sudden Leadership Change Severely Impacts AI Computing Power Supply Chain - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNcERjXzV2amJzLTBGUWwtMHJUaXJXQUo0eDRXcWVmNm9PbnZ3QTViRVF1NERiMnBNRWlfakY0RnFTQkZ4dnVqWWNhSl96YjB1VHNDTmJ1NTloYjZlb1JrRWFDdlpXLUpEWnlBbnZHdlhYcndEaVp5Z2h2VTRUNWl6NHBZOXRqR0x3MjVsQ1JqOFdsTUZNQUkwMkNtM0hOZFhKYVE?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-21T02:07+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Capital Flows | Southbound capital surges into Hong Kong stocks with HK$11.812 billion, adding to Tencent positions for six consecutive days - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQVGdnNTJPbDA4T3BVNUNTeVJBTW5OS09vbk9QT1hWa3dwdDdJOXFERHl5ODdTZDlkeExKUktlSUIxcElUVHpvNEE0cEVHSzZWS3pkX3U1b19NdG5JbmlUQzZjczNjeENRdDJtbUdfTThkbTRoZl9mSkNIRTJ2UDRUUFVXZmd0cTRudXZ5SzZDWHQwVlpjaTJaaFZaNTJHMmtaVnpoLWkzMEVId00zU1E?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-21T01:51+08:00",
+      "importance": 2,
+      "risk_score": 0
     },
     {
       "title": "Taiwan Semiconductor Manufacturing Co Ltd(TSM)股票11月20日開盤下跌4.38%：真相來了 - TradingKey",
@@ -117,72 +157,32 @@
       "risk_score": 0
     },
     {
-      "title": "Taiwan Semiconductor (TSM) Stock Price Quote & News - Moomoo",
-      "url": "https://news.google.com/rss/articles/CBMiuAJBVV95cUxQUERvQ0J5bnI5Y1MxTlBpU282Q3FlMDV5TnFuXzZkZWh2d1ZzMlQ3YVFlT2RCZVJaaWs3VWxQZU9sRUNFeTU1Z0VvbXhWcl8xcWw1RnBvQVhncGpSRTF6ZzhEcjJNNmdTRmYxWlVHZktHWFdSb3JIVGlScVNZTV9ET0IzY1NJNlJGQl93bVNnOV91ZjRCRzFBNTBJTnk1a0I4QTFYb3dIWk1UdElLRGFsbFo0M29xSWFiVlNuMC1KdVNSbUFPaEVmc3FQdUYwV2tOVDhZZTRyZUFnZzU1dm1hVmdoUzhrMU9EeXJLNUd5NzB3WEZMOHdRLUZpTS1NTllHM2pnd0JnM0JkQVhOaG55U0VIX1lqLXZUWVZDVW5KbnlVR0RmVDdieC1HcVFJbGtlTFRNV2hpRDQ?oc=5",
-      "source": "Moomoo",
-      "published_at": "2026-11-20T21:06+08:00",
+      "title": "Stocks slide as huge Anthropic IPO unable to calm AI fears - Macau Business",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQaFBLVVpQWFZVWkVEM2FMQ3piSDZMMmJ2MndXaWUzSktKY2czU1FtRUxHem5tbEh1cWVPMHA3YkhFTGtpZWpkYmFNc0lTUkc5QkQ5Mk5ON1BTYjEyTHA1ZVZYcUZLTF9FSHFJMGQ2UWk3LTNPa05zbnk4SXdQQ19CS3JBOWYyRDUxa1lSdUxn?oc=5",
+      "source": "Macau Business",
+      "published_at": "2026-11-20T20:50+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "限空令、護盤仍難擋跌勢 台股跌2393點史上第三大 - 公視新聞",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBsZXF3QS1FUDUzakdlSVBhTE01OHFOQ3hWczQzVVZMbEFPVV9GbV8yMHI4c1Y1U1BZSlRqQWpTYjRmaFJSSWRzNlYycW5CM1k?oc=5",
-      "source": "公視新聞",
-      "published_at": "2026-11-20T19:02+08:00",
+      "title": "China's Shaanxi Province Seeks Hong Kong Investment to Boost Industry and Technology - 全球企業動態 - Quamnet",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE54dVVBdGFWRjMydmNHLWFRZTVmVmw5cWExMnp3Vkl1U2tpamg4YVlrR3hqdjdvMUNjblpzZXl3aG5OSEsyS1dWTFQ4bGdpSHM0ZHBUak8zUTBXaEVoN1Fj?oc=5",
+      "source": "Quamnet",
+      "published_at": "2026-11-20T20:00+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "台股跌跌不休 林修銘信心喊話：基本面穩健、AI中長期仍看俏 - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBfMnE1aGx0ZEJBNHlEM0RfelplRHNrQXVQNXVLekloQzQ2MG1zVU9CLXdyblhpa0Y2TWFOSGkwVWs3N1VOb1F4cXJtcThYWnZiXzZpSnc5ZndaakRJOW9lU3pWdHB2Zw?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-11-20T18:59+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "本週台股市值蒸發 25 兆元，全球排名退居第七大股市 - TechNews 科技新報",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOZEpUejRyamc3aEVrVkRiVUItMWRKT0w5MWJBNE9YTWtKM0pIQlBxLUNmMmVKNWJsY1htb2xoazNwRElyZXRHSVh5TTljU3IzcnhGNnNkaGY3NGdTUlhQM3hkclV1YVEzbG9DZ29LUlFSN2huTjZHa0pVazVvRDM4d3FXQ01udExCeUJzSmw5eHRYaEw2bDBSNWM4SEkwaFk4MXhWWG1LTHM?oc=5",
-      "source": "TechNews 科技新報",
-      "published_at": "2026-11-20T18:42+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "中國新消費集團(08275.HK)：中期淨虧損約100萬港元 - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5YdzJQNkZMTXN1S2tsMG54cGFKdmhCcUdjUUgxZGJhQXc4aHctZXpKNmVkVHdnd2VYZ3JnXzlCcm83cUdHNE5QQ1Q2RThxS2lUcFQzZWw2cnozcXJTVzFlbktqeW1zT1RKZXdR?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-11-20T18:07+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "[Hong Kong Stocks] Hang Seng Index Falls 430 Points to 18-Month Low; Weekly Decline of 5.2%. Alibaba Rises Against the Trend, NetEase Plunges 17.6%, Kuaishou Hits New Lows - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPdmREdXBVMTcxT0NnbE1GTGZsOTNHaGtoeUJjSWQzS1lzQ3V6WlMyZ3dtZzE0RWVpcHFqUG93ZlBXTnM2R2UxOENLRGFtbTBJOFVwdm50Q3pJSlZZLUhmTk91R3hNZ2ZOaGxudEphelByUzQ3NF9jcWV0TUxCNzNJSGM0bFBPNXhTcXZTZ2VCeDg5TzZXYjBjQzdpTQ?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-20T17:46+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Capitulation selling has arrived; how far are AI tech stocks from bottoming out? - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPaVo2VTVMR0s4bVc3VFZsV1lsd0tiVEV6QUxsY2NoeTl1RGtxWHdlUlhKcm1KdVNUUmY2WndoRTQ5cDRzRzk0UHlyWW9acWxRZWREYkNHaGtJaXJGLWpPZ214SS1EOWhHeTUxYVlZWlQxU1lsbmxQcDFhR3JodEVUazVuX3RFZ1NfSmVFYjZHUThEZW42dnViQ2dfdFZNWURmM2FONQ?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-20T17:12+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股暴跌1萬4千點股民哀號！祝文宇6月就示警「像賭場好可怕」 股民嘆：現在才知房地產的好 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMilARBVV95cUxPUnNOUm4zRTlJUjVFNDlxV19sSU8tekJqVWhFLWdaOWR0ZkxHbUYzeEtuWHFjazNHbHJOaHlqcFhlZnF0ZndFQUNYR2VxVE1wcVloR3FLM1p6dnI1V0h2ZUl2VHVrVHExUEZVT3Z5VXZ6SXlXLVJOWWNVOTJpWXZuck55WEJRclBkdWNET0xCNWFpWVNzcEUzM2V1V3dUR19Kc0ppNkVXUEozRkJxbVVqdURwRUo3dmVlZ1NidnJfa0R6b1pidi1aNmotZmFOazVhMHhNQ3dRaGNQNlhheTNqakh6eGVpTkVRaU9JWVhBZEJxSG1VYWN1aDkxSnN1dHBVS0lTNGZWa040T2lLSHRkd3JxZ1RuN0VyTW9RMTRKQTY3WnVyLVJncVgxU0xnMVZNZTVxbGg1VC1uMmdnV0tVWWN6MnBhUnZyYUE2OHM0NTgydDluWXJ0VGNFMzRZRUNCWEpVa21vYzdOS3FiRnU5NlZ3NG40WEx1ZURha1RXdW1oRzF3MGNMVFJEbnlMSHF2d2pzc0Z2dm92bFJNSGxxREZFdWRTbFNxdVAwb09iVHJNRjJLSFpKeHhERUVVbVBhcGQyWXRsVTZlQTQ4dnV5eEd2eVJ1NV9PUEN4YVRNbktIc2txMTNqQm1xNXlPMGVVWk4wRzlNMUU2Vm9BdVc2SURFQldwdFlKaTlzaVpJa3BkS3Zv?oc=5",
+      "title": "台股本週跌7641點史上最慘！證交所3度信心喊話 股民噓「麵已經臭酸」再聽2字嘆：涼了 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi0ANBVV95cUxORi1RWUVhYTBhcUt5dzFzckhuUHNnWFNDZXl5UUZ4V3dvYkk2TnZJZ0R5QTFtYkpqamRfUmxrVXhzVS1yWE9fTXNYODJmWFM5ZEFEQndUdF9IcVhuSHU5eU80aFlMOWtDUWhvUW1fVjRJYUh5RF9OWGg1WHBNeGoyR0htODFvUVpCaTBKcmVxMkpheS1zenJQclhDWHotazNIWFBlZGI1bmE5UUx4Wll2QVE3VWNnSkgxVUpRU0U1MUxySzAweE9VS3UyWXRvUmoybDN4ajRmZXlac1ZxMWxkRlRpNjkxNFRJWFBZQjhlRWFGaEh4YVNnbExFbHJwa2hWNXdVc1FzOXNVTnZ0MWNfVkZ0bDRkeXBweVYwMlJvOTdvVzFCWEhKY3ZkUjdXNDBXVXRFblB2V3hDZHdBMjItTmZLOWhrODFTZVgyMWdHeTE3SkM3TWNSQ3dCMGo1elR2MnZ0UExGQWdSSFgxaklGVW52U2MtUndvMkdfaTVwR3c0dFh4Uk9pVDdzS0NSU3p1cm5haU1JR01nV3hEazhnNlIySnFGc3hUb0w0cS0tems4RloweXIyT3NfYkNSMW1XQ3lmUlZzNTktajNIWnlNNA?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-11-20T17:08+08:00",
+      "published_at": "2026-11-20T18:45+08:00",
       "importance": 2,
       "risk_score": 0
     }
   ],
   "oil_watch": [],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-11-21T01:47:45+08:00",
-  "checked_at": "2026-11-21T01:47:45+08:00"
+  "updated_at": "2026-11-21T07:23:38+08:00",
+  "checked_at": "2026-11-21T07:23:38+08:00"
 }
