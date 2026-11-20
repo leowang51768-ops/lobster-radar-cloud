@@ -1,24 +1,25 @@
 {
   "schema": 1,
   "risk_level": "red",
-  "risk_score": 5,
+  "risk_score": 8,
   "risk_reasons": [
     "日經明顯下跌",
     "韓股明顯下跌",
     "台股明顯下跌",
-    "港股明顯下跌"
+    "港股明顯下跌",
+    "出現重大風險新聞"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 -2.3%｜NASDAQ -1.9%｜日經225 -4.2%｜KOSPI -2.5%｜台股加權 -4.3%｜恆生 -3.1%",
-    "⚠ 全球市場風險｜美債10Y 5.05%｜VIX 28.4｜WTI原油 82.87美元 -0.5%（高於常態，觀察）｜布蘭特原油 89.92美元 -2.2%（高於常態，觀察）",
+    "⚠ 全球市場風險｜費半 -2.3%｜NASDAQ -1.9%｜日經225 -5.1%｜KOSPI -3.9%｜台股加權 -6.2%｜恆生 -3.8%",
+    "⚠ 全球市場風險｜美債10Y 5.05%｜VIX 28.8｜WTI原油 81.50美元 -2.1%（高於常態，觀察）｜布蘭特原油 88.44美元 -3.9%（高於常態，觀察）",
     "⚠ 全球市場風險｜油價觀察｜WTI原油走勢：多頭節節敗退、油價逼近80，惟中東局勢升級風險或正加劇！",
-    "⚠ 全球市場風險｜台股遭空襲！股王信驊等20檔千金股慘吞跌停 千元俱樂部僅剩30檔",
-    "⚠ 全球市場風險｜中國波頓(03318.HK)11月19日耗資88.18萬港元回購29萬股",
-    "⚠ 全球市場風險｜Top 20 by trading volume | Anthropic rose 17% on its debut, with a market cap of $1.27 trillion",
-    "⚠ 全球市場風險｜Super Hi International Holding(HDL) Stock Price Today | Quotes & News",
-    "⚠ 全球市場風險｜台積電發重訊！豪砸近160億元入股Anthropic、取得逾602萬股 持股比例約0.03%",
-    "⚠ 全球市場風險｜Anthropic上市！ANT股票怎麼買？發行價83美元、台股概念股一次看",
-    "⚠ 全球市場風險｜津上機牀中國(01651.HK)11月19日耗資1038.6萬港元回購33萬股"
+    "⚠ 全球市場風險｜台股慘跌想起「2008金融海嘯」網求問逃生術！過來人揭殘酷現實",
+    "⚠ 全球市場風險｜台股又有違約交割！單日1.29億元「大戶翻車」 上市櫃今年已爆45起",
+    "⚠ 全球市場風險｜Equities: Global stocks slide as tech losses spread - Danske Bank",
+    "⚠ 全球市場風險｜台股狂瀉1,768點！金管會急祭第二波限空令 1,028檔股票遭限制、台積電驚險躲過",
+    "⚠ 全球市場風險｜台股空襲警報／大盤崩、融資追繳還沒完！股票質押、期貨恐一起出事 學者示警連環爆",
+    "⚠ 全球市場風險｜台股跌2353點「史上第三大」！市值蒸發超過7兆元 等於跌掉聯發科+台達電",
+    "⚠ 全球市場風險｜台股遭空襲！股王信驊等23檔千金股慘吞跌停 千元俱樂部僅剩30檔"
   ],
   "markets": {
     "US_SOX": {
@@ -43,28 +44,28 @@
     },
     "VIX": {
       "label": "VIX",
-      "price": 28.44,
-      "change_pct": 15.8
+      "price": 28.79,
+      "change_pct": 1.2
     },
     "JP_NIKKEI": {
       "label": "日經225",
-      "price": 56937.93,
-      "change_pct": -4.2
+      "price": 56436.65,
+      "change_pct": -5.0
     },
     "KR_KOSPI": {
       "label": "KOSPI",
-      "price": 4940.84,
-      "change_pct": -2.4
+      "price": 4869.96,
+      "change_pct": -4.0
     },
     "TW_TAIEX": {
       "label": "台股加權",
-      "price": 36761.17,
-      "change_pct": -4.4
+      "price": 36033.29,
+      "change_pct": -6.2
     },
     "HK_HSI": {
       "label": "恆生",
-      "price": 22566.03,
-      "change_pct": -3.2
+      "price": 22410.8,
+      "change_pct": -3.8
     },
     "US10Y": {
       "label": "美債10年殖利率",
@@ -73,109 +74,109 @@
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 82.87,
-      "change_pct": -0.4
+      "price": 81.5,
+      "change_pct": -2.0
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 89.92,
-      "change_pct": -2.2
+      "price": 88.44,
+      "change_pct": -3.8
     }
   },
   "active_news": [
     {
-      "title": "台股遭空襲！股王信驊等20檔千金股慘吞跌停 千元俱樂部僅剩30檔 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMipgNBVV95cUxNNjVhT1Z1N1F4YlAwbmdaRjJlMmZOanhrT2x0MXhNZHQwZHZ3eWlRaWMycUNVZW04YkNPWEJrckN2Zm9yMXVpS2VfR1Iyai1VNC1ZRW5xWDNOUmZ4eThjZVVzOHF6UllqQmVicXZPQ3EtYzVSVWRCTFZ4Q05RMTNwcG1uem0wZ044MW83cGZnZEhmQldiUmNlUkdGU1pXV0pSWmotdlV3eWNKTDFnRzFCUWoyVmpmR0NyRWtBaGhZWXpMc1JrMGRKMWpnQnpxMG5JVjA3VDhhV25hZkVoMWgzcG9CTDhnWDZKdG5Oakh5NGhWQ2MwU3pqdEVxYkVvYTZabnZyNVJEMVRxNU1kVzVadnRsODR2X2U5TTI1WXJ6blRzMnNlT2JNQUNVWUo5a2FOdU8tRVpmOWZtQjNqcjNZVGVIQ21sX1VJS3ZZRENLNmlabGU5dTRmeUR5REtsTEg1bUVKMXE2YU9UVE9PbGxVZU9BUnVSNGxzeXphSUtPSkhOQ2J6bDhKdWZtOW41bC1HZkNkZ2pPZFN0RkxMZmFtZlJxU3Nhdw?oc=5",
+      "title": "台股慘跌想起「2008金融海嘯」網求問逃生術！過來人揭殘酷現實 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi1AJBVV95cUxNYlJvVEp3eXVZakNSZ3NxcFEtalNZYXhURzRvU2tuRmpZbndCVmZaRGNqaVdIbGdPNWdNZHJLZU9hTTdCV2FfTURyS0VMRTh0MGRINkpNZFAzYldFVmlURWdLOFA1d0Zuc0ZGOVJwMXU1dzI2LVR0emZOdV9QYjFGa2xCZWVyUlZoeFJMMWMxYTFodkMwVnE1M3BaY2dnZ1puU2dabDc2dDRoMlZfbldwMldXR3hhbXFzUTAxYkpRZ3doUE9ycDdoRDRtbTJ3Tkx3OTVNT2tNRjhGZFREbHRRMDNuTnRxYllBX1M0cXl0bVpPclFmeXVROUxQbkc0RlRzcGQxazBiUXZETmVJVUVwbjdjNXVONVNlZkYydW5uSGpCTVJ0ZVNiTHJyeDlTTGZtNmhiLWlCc1o2cjVoRnVHNUR4YlZGRzJnRnJ6eGVwWUw4Qmxa?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-11-20T09:50+08:00",
-      "importance": 2,
-      "risk_score": 0
+      "published_at": "2026-11-20T14:38+08:00",
+      "importance": 5,
+      "risk_score": 4
     },
     {
-      "title": "中國波頓(03318.HK)11月19日耗資88.18萬港元回購29萬股 - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5vcUYyTmhua2d5dzJDSGtDajJsMDgzVmhGMUZlN01hQWlWdl9NblgycndUNHBWRWdQZFhXQnZDb0lsckhPeXNFT2lwbnc3NVpvTzF0Ul83bkV2bzkySkRGQ1ZjbTBqU25jQjNz?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-11-20T07:06+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Top 20 by trading volume | Anthropic rose 17% on its debut, with a market cap of $1.27 trillion; AMD plunged 8%, as Hunterbrook shorted it over alleged circular trading; SpaceX issued $32 billion in bonds to purchase NVIDIA chips - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNX05xejFOVEtSVUx6NFdWdV9fLTZ5Q3ZTLWFZdGJ2Ynl5OEZqX3RxSFlpa3dKUTZrMTRlUC1HRWtDdnQySVNsSGhWbGFYdzF6VWNMTmltY0ZTRk5rbEd2YVExblY0NXBFRjdrUFNxUWRSQzFQUk42bW9Ud180X21FaDA5NTdmeXR5VXZTNU1uT0p5YkJlRXhR?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-20T05:22+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Super Hi International Holding(HDL) Stock Price Today | Quotes & News - Moomoo",
-      "url": "https://news.google.com/rss/articles/CBMingJBVV95cUxOblBocWNLYXpSa05MS1IyNUxFRzlVVnc1b0VSSlU4LVRGd09OckxubGdpMG5mTjRSV0xsQzZiaXF5a2tBd2xicEdxa3Axc2w4VWNtUzZpVWNDSlpkdC1yZVk4QmowZlRFeHRjb0dCd3F0SDFqa1lxSmdXMUlOZnQyMTM0eUM1bGhrTFlvN1QydTRwQkh0TmtUZWtSX241dWtZVnliN2pEa2stajJDODE3bzBXQTcxbVpDanQ1Nk4zdkxfVTZZVGVHUVpLVFJsM0FXVG9LUEFKRFhQTjVVdFktWVFLV2NUWFhVR0xMSW5PSG5DWmhycVBMSEgzU3BkdVVWcXlhVGNramx0Q01xNEl3T01TaXk5YjdVQm9iSlpB?oc=5",
-      "source": "Moomoo",
-      "published_at": "2026-11-20T03:43+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台積電發重訊！豪砸近160億元入股Anthropic、取得逾602萬股 持股比例約0.03% - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMijANBVV95cUxPTWMwTWQ2R2ZVQ3NPU2l1bGxHT0MwZWYza3J3Y3dIdHUwVmVldUp6Rnc0VzRGbC1uV1RMbTVodEhSTl9mV2ZmZnFEdlcxYVhyeGpoX2VhWHRfbTMtOVN1Z3ZTSVB4eHFNczFrOHpma1NCc0xYV0hqV1N4aWd1WVpuQW9DajB4aDBRU3VTVWU3VGpZZ0VOYks5YTJaTU80Z0drNFdJbHUzS2NKQnR5TG5jM0xEZEZEYlJ0ZTVmS1JHd0Z4NjJ0T2ZiaHlLVFdkckljbURSb3FmWVZudmpCUzRmSmVmRDIzRVl1Y0NlRk0wdk9tWjlFMXBxVmJ3Q3hCU2ViU25kZGVTdTFmQXRxS0VKakdQaU9nV0Vjb0R4ck1uY1NCLVVaVFBwT1BjNHlHeUh6WFJ1aGdmSmtPRkx2b05KS2p0ZzFqcHlHdzhiSllCQk5UOURVRkctNUtyNzQyTXdpTkZwM0dsZUtaTm81RlZjXzZBaWdYRnVqamhhNHVGYm9LVV9kTFNlZkotdlI?oc=5",
+      "title": "台股又有違約交割！單日1.29億元「大戶翻車」 上市櫃今年已爆45起 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMihwNBVV95cUxNZFRBdUZmMFNPVTF2a01MamcwbDU2R3FLMmdqdklKVzltbUlHMGlWclpvd0d4SEgxVXBhS3k1dk5fN093NURYOWQwR3g3RkFVbXBPdWZiTk1vYnNPdE1sc2trLTgxNTRPLUFBRDhjYUdTZldBY01ZOTdkVGVEanJEU2JSeTBwMDJYODBjSnlaVm5FZGZmOUF2X2F0eU1fZlQzTXZuZG8weTVDbzN1bEthSERYaHlKOVM4M0EtcmRCSzR6dm1qUU5lbGlfbDJYVjRNU0NPc1d5RWdSaXZpMzUyRzZ4RWp1dlJ3Rko3RzBydjRWUEFfdDdPUHhncEd1UUZUQTBUd2V6LVpkS0RDQjZzY1BqT2d2V3JLczFTOGtHQ2ZhRkl3alMtYWtiQm5vaXlPVng5Tllsc0g4alFfZmgtM0dJNEhQSlBqY3FnR3VIRThiRjhlWFpKZVVXazFNMjFiYlUyZ1E4bEVhQWZNY05tYnUtVjVfWnR0VlMzZWVJSVJlanZxdjlr?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-11-19T22:40+08:00",
+      "published_at": "2026-11-20T07:40+08:00",
+      "importance": 5,
+      "risk_score": 4
+    },
+    {
+      "title": "Equities: Global stocks slide as tech losses spread - Danske Bank - tmgm.com",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNMHpCejBHQ2NhaXNkdVFZb09rRW9DTm90QmN0R0dldGFnRWFuRWdUcHdCVDNUWE4zb0UzblBOZzVnOUE2T0lwVXViUTQwcV9PZlo5bFdQVjMyM3pKT2RpTjBWT1JJYTRGQVdhWDBDOW5SMkxGS1NkTGg4RXdnX3BpTEtPeHlWMU9KMU5MM1ZlRHk3RDluelV1UkF3b2wxU2hjS0tqX3hYU09pRUV4NzJ6cUFocUNXWHhiQUhhandrX05rNkpVaF9lUWxWWTZrZw?oc=5",
+      "source": "tmgm.com",
+      "published_at": "2026-11-20T15:52+08:00",
+      "importance": 4,
+      "risk_score": 2
+    },
+    {
+      "title": "台股狂瀉1,768點！金管會急祭第二波限空令 1,028檔股票遭限制、台積電驚險躲過 - 台灣好新聞",
+      "url": "https://news.google.com/rss/articles/CBMi2ANBVV95cUxOVGNoSU5uTnJITVZxYlZtN2M0ZVQ4ZWFuRm5fcXVQTFoxSElSamljV0h6eURtbHVtQXRSSUV1RWxFN0xkeVE4WG9fNmRublRrQkF0VDdTZm5BamNUUjdvckpKZklnUTkzVGpiZWUtR3RwU1FUOHRTdjVhVklxVGJzckQ3UmNWUkZNZlVVODg1SUp0bTEzbzdQTzhLOFRBY1BaaHlJeURZT29kdkRfbGI1V0syeHBKSTRhRGhXdWpjNldoMXkyZnB1VF9KUGhXeTUwOGN6M0QzS0VqYUJ1UWlwaWJUc0Q2cUhna2VwQ2tJNEZXY0NiSzFFMTdNUWxzZWFjTUxCRzJXbnBCMDAyZm1lS3AtZl9sdHpnNUV0TG9OODY5bmNPcWw4VWFBcWlrWTdVM2d3aWF5UUl0RTZqV21jdFZVaGNrcnltck5VN3JNTTF0bkNLaEVNNEc4Yl84WDIzZXZmeVc2VGMxT2pnZkdWTU5NNzBJM0V6eFRQOE9xTDB3UU5nM0M4QTZ2dHdIaEU0eGJZcGVBS2JBQ3JEdUI2SFZ2Qko3czFFTDNucnBtWFpFeFUwQl8zOC1QZHIzVUNqMDBHLXZYUTBRdXp4OHhnNlF6NU8wemNB?oc=5",
+      "source": "台灣好新聞",
+      "published_at": "2026-11-20T09:31+08:00",
+      "importance": 4,
+      "risk_score": 2
+    },
+    {
+      "title": "台股空襲警報／大盤崩、融資追繳還沒完！股票質押、期貨恐一起出事 學者示警連環爆 - Yahoo新聞",
+      "url": "https://news.google.com/rss/articles/CBMi7AJBVV95cUxNckRJSjRVREJqYmZNUGhaWkNLQkt5X0IyWmlORHlaTHl4am9qeXFjaF9sS3hpWWJwSjU0SU9zX3V3RmRtd2hJZXpLTm5kWFBXcGRzRGk1dGlfWXQtcWN6N21iSDJkQ2pLdThMLVJWUi04UTR2ZExqMGk3NGFzdXJncEMxTHAxeHhvaHJFblJfdml5VUhRaW9FTGxiQzAwTUVZWWhnTmNDLU5ua1VYV29NT0laME1XUVlzS2dEdDlnOGViX2dVb2t4Y2NybWZ0cGdlVmgxdHdKRnRRZlJTVWR3Q19UWUlDalBRYUVZclkzWmw4UC04ZEpYbnl4RjJEY1JjUFhFSlVyQ20yWHNORGhKZjBFbExjNmtBX25uRFo5RW1KRV91M2VkQWxWQl80SHhzQVpLZWZrNEJvQTlNeTZvNHk0QkttazBoeGhER1pfTTlCeTVGRmo2c1RXbE9IWGdzRWk2Q0hvLWlwbkpG?oc=5",
+      "source": "Yahoo新聞",
+      "published_at": "2026-11-20T15:48+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "Anthropic上市！ANT股票怎麼買？發行價83美元、台股概念股一次看 - 商業周刊",
+      "title": "台股跌2353點「史上第三大」！市值蒸發超過7兆元 等於跌掉聯發科+台達電 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiywNBVV95cUxOeHJIUWlnMG5vWHgyQllmb202OHNsUl84N0x0MzBwNnZTY0RneE5IZ0JyQkVPS0pxNXQ1VHNMemh5TVUxMjZRZkdkOHVsanJGV2tKMDcyVVVqTEh1N2lpb1pHTGtlemJvbnY2eURBTS1NY2k0U3dTc1o4VC1EUVpKSV9FREFObEhWX1d4aWppN3VPa09Eb3Bpd3h0UWNMTjZybmJFa2xVVUJTLUZLVFVxejBfWmNKM3RDWW9sM0kwbWx6SmJZZDdsM0syZkRyWXppb3NxWk1mdUxuRGV0NVBLclhfcHNNaGwydjIwbnNhb0RfdXdUM05pbDZWTDhDYkRoOUVSSGlKa255dldZZklaby0tRU9XS3NadFpQUWVDSGxoOUJIc3pTeTVCYXlEbm5qYXRwTVFZc0ExRExRNi1ZZGtaemw2Ty1PdUYzemowek8ydHhyOWhKTjFOMy1iSW5lVG10LWExNFNDN2hCa3U4WS1UbWJWTTRld25YT05wS2xoZ0FTcWtBTDdvRmh4NWpWckpFZWR1UVJaOUg0SlZpTFoxa0VBMkQ5ak1zbzdPTTZqRG13UVl1WktRcWhsVVZDQ3ZEUEVUSlhCYk0?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-20T15:17+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股遭空襲！股王信驊等23檔千金股慘吞跌停 千元俱樂部僅剩30檔 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMipgNBVV95cUxPcV9NZUU0ckhWOVlmWGkxcGNyQXh0VEtpMGUyaC1ob3dlajBuNXdJMGJVWXZzRm5LSklsdmVUanZMc0hYSVhxaTN0dnFEdGlDV3ZXTVFMdGRRc2JocE5kY1BUbmRkMlFoSUZqYjVjWmJLa1BlWERhWU1zNVVwbHZ2MDJoNXdGaE1IQnFKV3otamVhdWJVYnVmRlkxQUVZakluVENFc05aMDJHQWVKME5JQXhfOVphT08ydExWWTZLXzJVNDhUaXZPR0E5MDJWWnBBUmNTc1E1VFRJdkdxTTVJdkVQOWVYVHoxTWV3Q2dpX2c0a1BMbUI0cDlsckZ6QmE2RUx1TWhjbURzd0s5ME1tcmNDQzQtbHVVMmJLUmdzT3dQcXBiQXBWNXhDSGdHQzRuRDc3TTY3N1hib1hLSF84aExZT0otS0wzR2UzRllzd1lFWHMtbWFvWnJrZHk1VzRIRy1mYkFFTzdTbFltWm9MSFNTYVoyemJrcUViRVVLcVA3T2ZONzdLRWYyRjlQdHJCZWZTeGYwQnBMMTl4NzhoaC1KeEdlZw?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-20T14:51+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Anthropic上市！ANT股價、購買方式、台股概念股一次看 - 商業周刊",
       "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1weTNTVm9fSzdyX2h4UzdIckFhT0Z3b0F4cFRNeGFfS3JGM2J3Y05ZYW1RMTcweHptblhRWk1hMExTeWNkN1lVLWdoNXJJNHRXWnVjdXZkTnU5RUtOTTRFSlcwa2JwZw?oc=5",
       "source": "商業周刊",
-      "published_at": "2026-11-19T22:08+08:00",
+      "published_at": "2026-11-20T14:46+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "津上機牀中國(01651.HK)11月19日耗資1038.6萬港元回購33萬股 - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5Eb0JLX09qUmFBazk0SDJNM1UzMUJzekJJMUdjT2RfbzJpMXNfMU5lVFJrWDYxc1NoejZNSUF4eHNMVVVuSjAzQktTUjFYR295aG9JQmExMFFYbUxYZUtZbzBXcjFJXzU5eXlv?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-11-19T20:24+08:00",
+      "title": "Short-selling volumes for both Tencent and Lenovo Group surged by over 300%! Multiple bearish factors are converging to weigh on Hong Kong stocks. - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQOVN3WUsyT3VmM0k3NkI0dWZrQ0VpcXgzYk02X1ZaMWhNd2VBRHB0MEJlQ1FMTkFQVnBKQ1VRd3oyOHd6TEdqdzVnX2RWSXAtazJIUWxRZFBpaEMzUUhzQTNyVUhEdUF1RXFIeUhVZHBfSFRkUXhDbHNfa2pJdnFGV2RaZjVxck94NkpSVC1XNWF2c1M2SVphamtuOWg0a093MGxUcEhXeVg?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-20T13:05+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "British Pound picks up as an improved market mood halts the US Dollar rally - tmgm.com",
-      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNZ1dvWjY1MkUxb3QyaE9xbk5FZTA2RHNPMThVa2ljUVdaT3ZCcXNza20yTEtQTlFuRy1tOVRkeGJ2WndpQ2tma0VZQWJTSU5tUWVrbUwxMnZZN2dydnVRaHo0Ykc0WlRSb0stTzNiUEVsTHhSYngtdGR1ZVRZQzllTWdYanllck14NmRsQ29WU0NwNk9jQ0tqUHdseVlCYnBpcm1HOW9XMGVMV2VrMzlUZkxMZW5EWDIxZGxGbW9ia1VWZ0g3OFgxSnR5bkh5bmFNWUVIaEVBY2NQb0xxaGJB?oc=5",
-      "source": "tmgm.com",
-      "published_at": "2026-11-19T19:27+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股創收盤史上第7大跌點失守年線 謝金河：台灣相對有底氣 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiiwNBVV95cUxPU1hXanVWZVBaa0tGQWJFUURFNnpPbWVYeEtPcVV5ZEdNNUJ4WXNpWEdaUlN6RUFaX1dRNXdwS0phRFVkV1dPbDJLekgtdnF0MGlEQjVIbjY3R3FCRTZmNjJPLTJNNlB5OGR0UG1sR1dremloMkp4Wmd0aWtDa2hrQnlGclRmYVVPVjkybkhVMFFUVU9ob1dKcm9oU0hEdks1NUNOc3hUNGl1UEdOaGNJWE4xeVNBNnRBM2RqWWtMSm12VjhzeXRQWXlOOHRjVWUtcWFJaUh5ZG5Xb3RlU3otMWZib2prdFdTSmxVRGRqcFl1YVNsTzg5MTZNaFM0RW9feVFveFBadEFySkVRR2I3Yk92QzVSVzhOcEc5Nm1POVRmQXVFdE9Zb25Wc21SeW5uM1Z2YlNCcFk1em9OUVRSeFJnVXRzQmtXUWdabm9qal9GSl9YQ1ZxaFN2d3N5blF6Q3RVYVNNa1pOYTRaM1BSMEhNcDdiSHkyWmE0OHctT3BpYkRTbm9fWDB6QQ?oc=5",
+      "title": "台股跳水重挫非泡沫！ 總經專家喊「先忍3個月」：行情會捲土重來 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMijANBVV95cUxQTTFHOGpJUDdoMXhqT3lTdS1kOGFzR3hJNUwwQUV6TmNidTBBdGUzTU9mdjYyeG1TVnJaT09VVlF6b05BaTEwODNMZDVBQzctT2pEUUJ3dHI1TW1BSk95cEJ0ZE84WnBvcnZQYTZGaU9JdERCMmRwTlVNMFNuUy1Oc1BoUkh2QlhtajZOVUJVRUF0cWVjekswY0FtVnpDT3Y5WG9JamVidFZXNW9rZnhsYU0zWHczZDJHR0NzcEEwU1ZXZ3pmWU1oV3ZLVE5MTHVsTkJsVHduTlhHVXFIb05vWFNPdHlZQXFJb0h3TThpWGRjbUh0RW41Tm1hYlE4SkJ6YzIzYkNFZXc0UEFKZWp0VzMzdk9TWUhYRzMyeHpicjVIc2hVT0xjbm9OUlo4RERKQ3lQQWhTN2h1VnVaQ0M2MVJUb1hoWENSODhpV2hadEQ4cmFudnJMNS1zQ3lfQjZYeU55allsZmpLYmYxOHRwNFVPSFpSNndHRW9RZGxxcEhUSU00VnNtN0RmNno?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-11-19T17:43+08:00",
+      "published_at": "2026-11-20T12:47+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "Dow Jones futures rise ahead of Anthropic IPO market debut - tmgm.com",
-      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPcW9pMnpnYjR4czJfN0lIQlpxNnByN2NJU091ck1lME9kVXZDSl9TeUNNTDJHVXZvRGM3dTBsVlBGSjJBSzhwenEwS0lhc2dWU0lkZXdEOVZZckxickY4U2k2dEM1OERfbW1ocVhlc00zZTQzVWp5eTF1TUUyQ05KUDdIeDRfRnlvYjREVnlUbzV1em5nVGk0UFlnYmNGOFlONkdNNUdSb0NCUHRzSUlHZlhEaHZMa2N0TzRNYTk1cWV5VGxCS1hYUg?oc=5",
-      "source": "tmgm.com",
-      "published_at": "2026-11-19T17:29+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股摔破年線！金管會出手了 再祭限空5措施 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMitwJBVV95cUxOeklqV21jUnllbVhoSGd5S3BEdkJsYVlWcnVHeFhVOHE0cWNsQmVDN2VGYkNFcVZfcnNpQzhXbVllZ2N6TmdTYU5NTlFUeEdlTGNHLU5DUXJyUkNsUnZyUzZ2N0podHRva3luRDE1VU80bG9RMEk2enFVT2twOXJWMDBSSlFsOFM1QUZvbWpZRi1tV1RKNUd2QmpQdDM0WWhpMDBwWXpQc1BuSHlwSmVRS3dtMGdpMUdKYlFjWG5jZ0dkeHc5V0tSTVpHQXdkM3BQRWtydV9TSHBPNVN1MzhaaEpQa1RuaVlGMHR4WnB6RlplTEJ1VERlWXk1V05panhWYjZndjZTal9BaVA1MHhGVnJCRTcwSWhvZTNhWDVsa1ZoRm9GaE5hT2xtX2s5UHAyaWxUUlFQQQ?oc=5",
+      "title": "台股狂殺1927點閃現35K！「這兩檔」暴跌10%噴破200萬 0050死守85元轟59萬張 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi9wJBVV95cUxQZURHY3MtdzVEc3pyS0c1Mk5ycUxaTHFiVUU3QXl0UXktbDQyTkFSaDBPMmRHdHgyaTROQVpqRHcwWWY2TkxOZ21yZFBhR0VvSUdsdUp3STRrb01QYUZ3RTVVdjhFV3ZmZDZHY1I3SWgzbHlUTVNfNGo4WnJlaGM0dTBzcmRCckF1blJhS1QtdWtvbC1IS3RyZlNLMHN6U2RWVkdPZHdUVjEza1dsR1ZLeGM3dW55TXpEQldLdGVPSzNTVTNoV3hvbHpnT3FCT3VRcS1CLTBHWVlEdWZDTTBKLUY0ZTgxcGxuYUFpNmVsX3lwbXdrR2VjdV9pQmpZNHUxbTBFcEl6SURFcXpNTVdlR2RzUXUxbkFKbWhTR2N5ckl4aGV4LVpqVlUydDQ1eUV2V2FkWmZfVlVNX0s4VUtGRFViQXYtMHE0bkEyQWxzTzFXV3ZlM0t5VTJIVFpCbl9ZNUlkNDRwTXBzUDZoV0g0SDY4ME1SSFU?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-11-19T17:24+08:00",
+      "published_at": "2026-11-20T12:26+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "台積電以每股83美元取得逾600萬Anthropic股票 持股比例0.03% - Yahoo新聞",
-      "url": "https://news.google.com/rss/articles/CBMi3gJBVV95cUxQekNhRnhIbzVDTWRyNzhPNS1hUU1pWWs1ZUxHbklGSTdPY05qOHNLSTNsSWdOVi0wM1ZJOW1sVm1Fbnk3ZFRZNTM2dWdxZHg1cWFidVRkSkd4Vk9DckFjbmlqMlZ1Ri14ZmlRR0hFSFltQXRPQjc3d2JDQ2VKZjFRc1ZCU3M0SHlpcXhhQ243VDlXSmhBakFTam1DVU1pOTZoTXh3MC1xdTgwdnNhN2xfZk82RlNEalhXZWVSZ3Q4VU16dzdvWkZQS2lKNnZ3bmlFM0Y3M0NlMHRNeHB0WlByVGJWcDllajJDTUpBVzJjd0lWQ01rblg4RlhEOW1PSm1TNUdiT2VETmhkTVV6dS15VU4xRTM1WWNQN1hnYWZnZjFUUjNYZE0xdGEwRW84N2JrdFVkem5KUWJVbkdiemZNX0lNbWxyOHpuZ0NmRXdVeHdScEp3WEdFQUc4aEJxQQ?oc=5",
-      "source": "Yahoo新聞",
-      "published_at": "2026-11-19T17:19+08:00",
+      "title": "國安基金傳已出手？ 台股一度摔破36000 網憂：進場送頭 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiywJBVV95cUxOWDNJdFFfaFdNb1JrbkZ4dW96SHBlSktKajMxU1dreXEwSTBfMzR6dmlLc2pMelhianluNndZNjBDbkF4VUltVC1qOUJEZlluWEtGUGJXQkliTmhMZFg1SlI3YlBuQ0JkMjN4NDBrYmVGUmYzVkRxZ1lqMVMwTG9GcnNuTGxiVVV1RTA0bWhVWXFNRjUyZzY4T1RoS2JwcDNGS1pmRXhINEZZem50QmpQd1lKbFB4c1FxOG9WaS1FejdncUdnRkVKUjZTNy1LQkQ3Wl8tQl9zWEg3LTVqY3ZwZkdUUmptSF9mQ1U1VUc0emZaSWktcW4ycjduSDhkRDRuTjVwWFJsX3dSU0taeWRGZWNMQ0ZCNjZ3NVRBMlZlMXJXZk0tbG5KSFdOTkVVMHBIYmluaUN3cGxIZDR6T29YOEdQWlVkS2JDU1kw?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-20T12:14+08:00",
       "importance": 2,
       "risk_score": 0
     }
@@ -189,6 +190,6 @@
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-11-20T09:52:47+08:00",
-  "checked_at": "2026-11-20T09:52:47+08:00"
+  "updated_at": "2026-11-20T17:14:44+08:00",
+  "checked_at": "2026-11-20T17:14:44+08:00"
 }
