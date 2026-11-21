@@ -13,13 +13,13 @@
     "⚠ 全球市場風險｜費半 -12.9%｜NASDAQ -7.4%｜日經225 -5.1%｜KOSPI -3.9%｜台股加權 -6.2%｜恆生 -3.8%",
     "⚠ 全球市場風險｜美債10Y 4.91%｜VIX 35.9｜WTI原油 83.62美元 +0.5%（高於常態，觀察）｜布蘭特原油 89.87美元 -2.3%（高於常態，觀察）",
     "⚠ 全球市場風險｜Citi Warns a Key Stock-market Signal Is Close to Flashing Red",
-    "⚠ 全球市場風險｜台股又有違約交割！單日1.29億元「大戶翻車」 上市櫃今年已爆45起",
     "⚠ 全球市場風險｜Equities: Global stocks slide as tech losses spread - Danske Bank",
-    "⚠ 全球市場風險｜CIFI HOLD GP(00884) Stock Price Today | Quotes & News",
-    "⚠ 全球市場風險｜Anthropic IPO fails to calm AI jitters as tech stocks fall further",
-    "⚠ 全球市場風險｜Hong Kong Stock Market Close | Hang Seng TECH Index Plunges 6.5% in a Week; NVIDIA's Sudden Lea",
-    "⚠ 全球市場風險｜Capital Flows | Southbound capital surges into Hong Kong stocks with HK$11.812 billion, adding ",
-    "⚠ 全球市場風險｜Taiwan Semiconductor Manufacturing Co Ltd(TSM)股票11月20日開盤下跌4.38%：真相來了"
+    "⚠ 全球市場風險｜台股單周重挫7641點！上市櫃市值蒸發逾27兆元 全球市值排名退居第7",
+    "⚠ 全球市場風險｜台股何時反彈？經濟學家揭「這時間最難熬」：行情會捲土重來",
+    "⚠ 全球市場風險｜Global Forex and Fixed Income Roundup: Market Talk",
+    "⚠ 全球市場風險｜AI殺盤引爆恐慌！費半血崩10% 台指期夜盤狂殺1881點",
+    "⚠ 全球市場風險｜〈美股盤後〉美股大屠殺！AI殺盤全面失控道瓊標普陷修正區費半瀉逾10% 輝達、美光暴跌約14%",
+    "⚠ 全球市場風險｜CIFI HOLD GP(00884) Stock Price Today | Quotes & News"
   ],
   "markets": {
     "US_SOX": {
@@ -45,7 +45,7 @@
     "VIX": {
       "label": "VIX",
       "price": 35.89,
-      "change_pct": 26.2
+      "change_pct": 46.2
     },
     "JP_NIKKEI": {
       "label": "日經225",
@@ -93,14 +93,6 @@
       "risk_score": 4
     },
     {
-      "title": "台股又有違約交割！單日1.29億元「大戶翻車」 上市櫃今年已爆45起 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMihwNBVV95cUxNZFRBdUZmMFNPVTF2a01MamcwbDU2R3FLMmdqdklKVzltbUlHMGlWclpvd0d4SEgxVXBhS3k1dk5fN093NURYOWQwR3g3RkFVbXBPdWZiTk1vYnNPdE1sc2trLTgxNTRPLUFBRDhjYUdTZldBY01ZOTdkVGVEanJEU2JSeTBwMDJYODBjSnlaVm5FZGZmOUF2X2F0eU1fZlQzTXZuZG8weTVDbzN1bEthSERYaHlKOVM4M0EtcmRCSzR6dm1qUU5lbGlfbDJYVjRNU0NPc1d5RWdSaXZpMzUyRzZ4RWp1dlJ3Rko3RzBydjRWUEFfdDdPUHhncEd1UUZUQTBUd2V6LVpkS0RDQjZzY1BqT2d2V3JLczFTOGtHQ2ZhRkl3alMtYWtiQm5vaXlPVng5Tllsc0g4alFfZmgtM0dJNEhQSlBqY3FnR3VIRThiRjhlWFpKZVVXazFNMjFiYlUyZ1E4bEVhQWZNY05tYnUtVjVfWnR0VlMzZWVJSVJlanZxdjlr?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-20T07:40+08:00",
-      "importance": 5,
-      "risk_score": 4
-    },
-    {
       "title": "Equities: Global stocks slide as tech losses spread - Danske Bank - tmgm.com",
       "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNMHpCejBHQ2NhaXNkdVFZb09rRW9DTm90QmN0R0dldGFnRWFuRWdUcHdCVDNUWE4zb0UzblBOZzVnOUE2T0lwVXViUTQwcV9PZlo5bFdQVjMyM3pKT2RpTjBWT1JJYTRGQVdhWDBDOW5SMkxGS1NkTGg4RXdnX3BpTEtPeHlWMU9KMU5MM1ZlRHk3RDluelV1UkF3b2wxU2hjS0tqX3hYU09pRUV4NzJ6cUFocUNXWHhiQUhhandrX05rNkpVaF9lUWxWWTZrZw?oc=5",
       "source": "tmgm.com",
@@ -109,18 +101,50 @@
       "risk_score": 2
     },
     {
-      "title": "CIFI HOLD GP(00884) Stock Price Today | Quotes & News - Moomoo",
-      "url": "https://news.google.com/rss/articles/CBMioAJBVV95cUxQc2RibnZQRGU4azJFYmNSN2N5aHRqMmJ6VXZxUlBqdUJXODBIR0UzTjlMUDBRbnpIZkh0aHBLQUxsUU9YaGxaallvVVVzVDM4RFhRVWFNb0xKcHhGc2lUZzc3RGxvaThXZUduMWo5azByVjIxMl84Yk1wa050VkxfOHhKM1VUVWl1c0w3SElESjgxdVRYQ1JobkI4Zkw5TVJTcGx3c1d2VEZMUzdYd3JKdFRnRUJFV2QwU2JnbGVpQkpua2tKTGs5ZzZEa3FOTlFta2RDdmxDdElLVGp0X2JWUkxhWTBJSlJDbTVzX3hJWF9SOUpNaVh5cDNBbWtENGlBakY3QkNCUzRlRGQ0VVRmNXVsQnI3V3RqbUh5LXZEQjA?oc=5",
-      "source": "Moomoo",
-      "published_at": "2026-11-21T03:13+08:00",
+      "title": "台股單周重挫7641點！上市櫃市值蒸發逾27兆元 全球市值排名退居第7 - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE51OEh6OGRLdUhlclJKUGctaW42VVZEbjZEa0ZnaE5oMTdJY0kxQldTcjNjRDdpaVM3VVBIRWtGeUx1TmRYTEpDOFBBRW5BT1ZaZXd4T3dzYmhqcWVSWFJidlItekc?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-11-21T11:00+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "Anthropic IPO fails to calm AI jitters as tech stocks fall further - Macau Business",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQeUlWNGRHOEozX3JNMVVQMTdiTmQ4bHJsQkNPV05fbU5zYXNQNVY3d1NST084LXpqelh0Mlo0empMZlRJZmtkRUFlYVBwQVJoSWpJcWljUjhBTHFiWlJwN0U0QzV1aDBXVFZ1N1VhNmNBRndISHd3aFZSd3kzcFB1YWd1bTBWS2tEOUZqRy1NSVpRcjNBd3ZndA?oc=5",
-      "source": "Macau Business",
-      "published_at": "2026-11-21T02:34+08:00",
+      "title": "台股何時反彈？經濟學家揭「這時間最難熬」：行情會捲土重來 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi_wJBVV95cUxQanZweWZjRmg5NEZvOTFVUDBiSmUyMW9kWURzMmhjSmRXVlJHRzVkRGQ2T3FicU01eUQyczFHeGV5a0JzUmFWSmp3M0hCLU1oS01TbmtXMFM5R1RrUFQ3b09kT2V6MWllUXZjd0RKLXlHTy1lZW1mSlMyWjl3RngyWVFYeTNKdmFEbE5iVElyczUwRnpnbWNucEY3aHJOZVFlaTVKNUFNVDVUYkdTXzZUZkVKa1BYQXBPY1Q1OEdKZmFyNmdUdG0waWRRWWI3aXN3YmlQaUtrUWQ0SndFZ3AzemdCaktJazZUYmlWemJ2Mnp6WFp0LXBaTUE5SktwMjFScTJqbE5ndVpEaXlEZ1dlWkVCUTlOclZGUm1fWGtWbjF1NjBWdFJQbDljaEloNlJibGZqT0N5ZGdMb1BPLWp2bVptbnNmV0FEczM5YklHaDRCaXQtQlZWZzhpbzFyX2p4SGRwV2MzNmhwcmtaQ2RfTUFoZ3ppeTVzSXhEWXBvdw?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-21T07:58+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Global Forex and Fixed Income Roundup: Market Talk - Moomoo",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOUnpTVHhtZFlwemt3VTM2YVZrU05ZaGloYlU2YVRnSHh2NWlhQ19VMGx4VC1CWUM1RmZLWFhTUG1RUmJVemN5cy1Xa2g1c1U1bUtQVG15aVpJaThIM0M3a0VVQWhyMnp3LWtzZ3NiaFBHQmF1OWRmeFZVd0V5WmpaQ2dHVHZlelN5ZEgzdEh6LVVpX2JPNXV5blNyZzZDMTQ?oc=5",
+      "source": "Moomoo",
+      "published_at": "2026-11-21T06:51+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "AI殺盤引爆恐慌！費半血崩10% 台指期夜盤狂殺1881點 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiwAJBVV95cUxPbzhSMFNtcGFxdmFhR1ozU25lT1B3aHJLOExnUGtrVU5MNExlN2VEbG1fX2tmNFFNRmdXRFlEcDZsNEJLbTB0XzNnRENuNk1lYnY5YWF3YTZvWEVzdVI1c2psdmRvQkd0NTAxd2ZqQko1WVc2ekJ0NHMzS3ZfNjQxbnZoMHh1cFBrX20zMzhHcktOYm8yQXhRci13TUMxQWZ4dE11bGVweV9mT2tsZlhYYTR0ZnBxMnhULTdKY2R2NzVjaXFuTFNlYXMxYXRIbnd5LVh5dWdmRllRVDR3YjVCR3U0QmlWTHp5eXZyRlhrd1hIRVlxZGRNQy1ha1NIMHJIYWlwcXBfbXNiQUhRQXJWMHlXejhmWkFxWVRRdHJudXZqTkJwelNkbnZkb1NKT296QmsteGxRVVZsVGFRdVc2eA?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-21T06:47+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "〈美股盤後〉美股大屠殺！AI殺盤全面失控道瓊標普陷修正區費半瀉逾10% 輝達、美光暴跌約14% - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiqgNBVV95cUxQcFJ0amM3TWx1VUFJWXdnZHhKaWlZb1J5MjlUOVQ3SzdRdE1GcHd5Z3dUVjVhRDBhalIwZDRkWlhoYjdZZEFTRlhocERRX1pISEU2NDc5VGczTmVXVGRXNEJQY3g2c3kzeVlCR3RrczBGSFM5U1VBMEJpMkpPYmtDQm1IT1VHMDMycE5XbGQ0RC1pc2t4djQ3UW1adnB5a2J1U2pIRVgxZmNuOUFJRHo5NDBiRGEzdkRFclplUEVaYU13aU4zVW9tQ1ZzQmVBNEFtWngxbExzTng4N3l1ZFQ5Y2ZGRkZwLW1kODZXeGl5emhSUlFtQW1DQ1I5S2lrdzY2REJtZW5BOXN1X0xuUEVqTVVZLUlJQldEc2RHX1BxdklQWmJqeklOQ1ZIX2t4RlRodEZwWVZ3X3dQTTc0MlNic3kzV1ZZVWZXUXY3MHM1Ui1wazN2UWRmb2hHeG9NcXhybGFySE5lZmsyQlpDZ3gtMWRmZWdYUl9MdVp5TnRTZGlMN0NuU094bkhnYngyUFRVakJsQXRheld3V0pSSlJNOWZZQTU1VHFtUXc?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-21T05:49+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "CIFI HOLD GP(00884) Stock Price Today | Quotes & News - Moomoo",
+      "url": "https://news.google.com/rss/articles/CBMioAJBVV95cUxQc2RibnZQRGU4azJFYmNSN2N5aHRqMmJ6VXZxUlBqdUJXODBIR0UzTjlMUDBRbnpIZkh0aHBLQUxsUU9YaGxaallvVVVzVDM4RFhRVWFNb0xKcHhGc2lUZzc3RGxvaThXZUduMWo5azByVjIxMl84Yk1wa050VkxfOHhKM1VUVWl1c0w3SElESjgxdVRYQ1JobkI4Zkw5TVJTcGx3c1d2VEZMUzdYd3JKdFRnRUJFV2QwU2JnbGVpQkpua2tKTGs5ZzZEa3FOTlFta2RDdmxDdElLVGp0X2JWUkxhWTBJSlJDbTVzX3hJWF9SOUpNaVh5cDNBbWtENGlBakY3QkNCUzRlRGQ0VVRmNXVsQnI3V3RqbUh5LXZEQjA?oc=5",
+      "source": "Moomoo",
+      "published_at": "2026-11-21T03:13+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -149,40 +173,16 @@
       "risk_score": 0
     },
     {
-      "title": "台股暴跌最怕不是融資斷頭！投資達人曝「四貸同堂」恐升級：連質押都追繳 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiyANBVV95cUxQVGhHb0IzWF9DQTdoS3VzalM2MlJTVDFSM1JUaG56MG5rWC1oSllPNm05SWVJSDRHallqZ2Vid0x1WnpqVkRJNjBwazBNY1NBM3V1MDFEMXJ4dm54eGZYSjFGbWZwZTFvUzMxZHQ2MWVtcUVOQkNmeVlCX21aVTRXY3RGRUxjcTE5S211TU9veGNTSnNuOVVNdVNwXzctZmVwQlNwQ3hFSC1zUmJTbzhBWGNFZThmYzRPY1pTVjkzcktHaWFBV1ZQb3pHQWFVSnlPSjBOeWZuejR6Z3hPdVR4YUN1M0llT2JoUVB2cnF0UlZDUXhYczJUUFJpOTJkek5HUjdCUTFxTFNuZm5GbUR1cS1fXy1HN1Nrd0szcU5YblRhV3Y2OGF4OE9mLXNjc2MxbkNlLXJCZm9rYW9vU1h0YjkwRk5fQ2NLODNheUhXV0VZS0pDNU1kUVhGQ0dobnBzSFk0T2pfZW5WTzA1RmFQSjU0LTh3YzRnN25mWUY1ekZCVUJPdGdHZzA1SU9TRU9CVmVBMGNMdUJVOFBodmNJd0QtZTB1TVpocU0yVHI2NF9lNlF1Sm15OHJFLVhTMHJQLTRTNWxsWFc?oc=5",
+      "title": "台股單週挫17%創35年最慘 哲哲喊「1121多頭歸隊」曝原因 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMizwJBVV95cUxPdDZuQm15elYtbzdfWGlweUdYXy1xa0NBeG1vQkozVDNLR3lYY1d4MUN6ZkhObzIzTElPc0xGQUR6OVZ2b29HeDZ1d2VDcGRBTHpQTHdhcjVRZGdfR3Z5T2owWkFtanVmOWlkd1JQc3BlNVVOQTJzbzRGOEVZRzhiUTU5dGNXa0gxLXFqWEYzOEd0Y3NLS3Z1eENwUk1WbU9vMU1KNDRmSEptUTdJMC1rcTh4czN6WDVJcHhSb1g3cllfZVJEVXNkUV9Hdzl3ZVFYZlFYMmpQOVpVX2h2eGhiZ285SlBaSTZLZTlnZWpTN2QzQUt5Wm9mTExmU2pXNHZoUGtDeVNhTFRuRUI0dUJTNFdqakhBSzFGZjZVd01pR21BSk1RWE5PNmVJV1Bkcy1XbGl6OUdRZWlreXJ1bDNTaGNETDhGLUJYak5BWHRUNA?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-11-20T21:15+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Stocks slide as huge Anthropic IPO unable to calm AI fears - Macau Business",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQaFBLVVpQWFZVWkVEM2FMQ3piSDZMMmJ2MndXaWUzSktKY2czU1FtRUxHem5tbEh1cWVPMHA3YkhFTGtpZWpkYmFNc0lTUkc5QkQ5Mk5ON1BTYjEyTHA1ZVZYcUZLTF9FSHFJMGQ2UWk3LTNPa05zbnk4SXdQQ19CS3JBOWYyRDUxa1lSdUxn?oc=5",
-      "source": "Macau Business",
-      "published_at": "2026-11-20T20:50+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "China's Shaanxi Province Seeks Hong Kong Investment to Boost Industry and Technology - 全球企業動態 - Quamnet",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE54dVVBdGFWRjMydmNHLWFRZTVmVmw5cWExMnp3Vkl1U2tpamg4YVlrR3hqdjdvMUNjblpzZXl3aG5OSEsyS1dWTFQ4bGdpSHM0ZHBUak8zUTBXaEVoN1Fj?oc=5",
-      "source": "Quamnet",
-      "published_at": "2026-11-20T20:00+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股本週跌7641點史上最慘！證交所3度信心喊話 股民噓「麵已經臭酸」再聽2字嘆：涼了 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi0ANBVV95cUxORi1RWUVhYTBhcUt5dzFzckhuUHNnWFNDZXl5UUZ4V3dvYkk2TnZJZ0R5QTFtYkpqamRfUmxrVXhzVS1yWE9fTXNYODJmWFM5ZEFEQndUdF9IcVhuSHU5eU80aFlMOWtDUWhvUW1fVjRJYUh5RF9OWGg1WHBNeGoyR0htODFvUVpCaTBKcmVxMkpheS1zenJQclhDWHotazNIWFBlZGI1bmE5UUx4Wll2QVE3VWNnSkgxVUpRU0U1MUxySzAweE9VS3UyWXRvUmoybDN4ajRmZXlac1ZxMWxkRlRpNjkxNFRJWFBZQjhlRWFGaEh4YVNnbExFbHJwa2hWNXdVc1FzOXNVTnZ0MWNfVkZ0bDRkeXBweVYwMlJvOTdvVzFCWEhKY3ZkUjdXNDBXVXRFblB2V3hDZHdBMjItTmZLOWhrODFTZVgyMWdHeTE3SkM3TWNSQ3dCMGo1elR2MnZ0UExGQWdSSFgxaklGVW52U2MtUndvMkdfaTVwR3c0dFh4Uk9pVDdzS0NSU3p1cm5haU1JR01nV3hEazhnNlIySnFGc3hUb0w0cS0tems4RloweXIyT3NfYkNSMW1XQ3lmUlZzNTktajNIWnlNNA?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-20T18:45+08:00",
+      "published_at": "2026-11-20T21:23+08:00",
       "importance": 2,
       "risk_score": 0
     }
   ],
   "oil_watch": [],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-11-21T07:23:38+08:00",
-  "checked_at": "2026-11-21T07:23:38+08:00"
+  "updated_at": "2026-11-21T12:04:07+08:00",
+  "checked_at": "2026-11-21T12:04:07+08:00"
 }
