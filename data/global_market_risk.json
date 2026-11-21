@@ -14,12 +14,12 @@
     "⚠ 全球市場風險｜美債10Y 4.91%｜VIX 35.9｜WTI原油 83.41美元 +0.2%（高於常態，觀察）｜布蘭特原油 89.95美元 -2.2%（高於常態，觀察）",
     "⚠ 全球市場風險｜台灣擴大股票放空限制措施 台股因人工智能擔憂遭遇重挫",
     "⚠ 全球市場風險｜Gold Weekly Review: AI Stock Crash Combined with Rate Hike Expectations Sends Gold Prices Plung",
+    "⚠ 全球市場風險｜《TAIPEI TIMES》 FSC announces measures after stock market losses",
+    "⚠ 全球市場風險｜Global X Semiconductor ETF (SEMI) Stock Price | Quotes & News",
+    "⚠ 全球市場風險｜台股跌到股民心慌！國安基金假日罕見發聲 喊話投資人保持信心",
+    "⚠ 全球市場風險｜G-dragon Kpop boss hails robotic entertainment with China-Korea collab",
     "⚠ 全球市場風險｜CIFI HOLD GP(00884) Stock Price Today | Quotes & News",
-    "⚠ 全球市場風險｜台股重挫！國安基金證實「已進場護盤」 喊話投資人「保持信心」",
-    "⚠ 全球市場風險｜台股震盪加劇！金管會祭5大穩市措施11／23起全面禁平盤下放空| 財經",
-    "⚠ 全球市場風險｜台股恐慌性拋售！專家點「止跌2關鍵」：未來4個月仍難熬",
-    "⚠ 全球市場風險｜全面禁止平盤下放空！台股一周慘跌17.5% 金管會再祭5招護盤「最低融券保證金上調至150%」",
-    "⚠ 全球市場風險｜台股禁空令來了！金管會宣布祭出5大招護盤"
+    "⚠ 全球市場風險｜台股重挫！國安基金證實「已進場護盤」 喊話投資人「保持信心」"
   ],
   "markets": {
     "US_SOX": {
@@ -101,6 +101,38 @@
       "risk_score": 2
     },
     {
+      "title": "《TAIPEI TIMES》 FSC announces measures after stock market losses - 自由時報",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE96WHJSem9VOGtpbnhfLTlTcC1rdExNdGJNZ0dKbHlQdmVySkVnNkp4RVdWZ21DU0NwNkpxdjlRR1NZRFhLem4tUnZhU0FmR29uY2h2X21RUU9NeEY2MExYY0Z6Q3o4d9IBa0FVX3lxTE0wWGNXOVpySDhHN3g2ODUzYlNLUng1amFGQjhZejJrSjhrb2dUTVR3VENQV1pnQ285MXdNQ3lQSVgzVG9ydUd3YVRyUDVnRmNiMjRsUGFWWGlJQnp4eHNCMGJJRkhJdU5hc3ln?oc=5",
+      "source": "自由時報",
+      "published_at": "2026-11-22T03:00+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Global X Semiconductor ETF (SEMI) Stock Price | Quotes & News - Moomoo",
+      "url": "https://news.google.com/rss/articles/CBMingJBVV95cUxPVDFFTHA3d3Z3cXhLLS1KOU5vM3FLb05NUGdlVzM1cG0zMlV0dVcxQTFVRklYNGdjWXB0LTAwLVRwOUx4VlZjQU9OZWpnYjJ6MkpERU9fbVpWem16TEJQSFhQeDdVcWpoSEFOUjFzcEh4U1h4Q2JGaHNKdldOUkQ2b3l4U2I4S2pNMDMtaDJCbUN2aVQwTUJTZlMzYWRtZld1d0t5WHQ5MlRmblc4NlI2SmdJSmFxcVFnc1c0OTlhOEhQRkt2RXF2dVZfbG5sbUNaa1ZWa0tpNUx0XzJHMnZHTTR4ME85cnBZRTdnZkprTUlBSXQtQkQxZ0ZXQUJldlFpQnU5aEc5Z2pfZDlPSnFEc3FGejB3VzlyZmJ2M21n?oc=5",
+      "source": "Moomoo",
+      "published_at": "2026-11-22T00:30+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股跌到股民心慌！國安基金假日罕見發聲 喊話投資人保持信心 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiogNBVV95cUxPRjEyLWdqY0V6YkJoZ2M4dzdDYW0yTHJoOS1xaEFCOXROYkJVSW9pVGZIQ2dUalI1M2J5U0FoTTBzUEI1My01SFhMcHpDUEp5Mng4YXpOTzNvZmpNZXlnZEVnYm9obkpyRGFUaGFncXhDSkt2blJQbkcwX2l2SWp2akM3elJkWDNmTXVzSjBqM2VOcjAxSHE1VkEwRjhKWF9zNTljR2YtcWxoMGpzRlFWcHc2cTdHTVdMZFhBTXdVUWRuZDVyYU1QN0hRbXBNZWh6X0NEcGJBWWVVQTJXMFZSTGVucHc4NVZqZDVrWi0xUDVBSjdzU3pKY1k0a1YzWkJpM0NraWJ2Qkk5NnlLaGNEUzJzb3haMEplQU5leU1JOEUyZmI5UElKWXBDOU5lbXh6U0VjX2hGcF8zZFVaMU1LX0NWbGtZalpvdmhXMHF3Szd2NkdZVUxRenI5VUxkY3I0UlNJT1FrUV9EUU5Sd2Z1MDBHN3hNdzVKbHBlby1hU2ZOU0k4cFMxXzJ5SkFIZXBvMWVDVVdOWTRwdHFfbFh5azVR?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-21T22:15+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "G-dragon Kpop boss hails robotic entertainment with China-Korea collab - TVB",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQV1pObWNCcG5Ta1ZTcnFRRUhremZDY2FZcjNIU3RXSkhsU2kwM090WDY1dDYyUTZxUXpmOXRjNW9EMENkbS1iLVU4WmJfdVFHNFd0NDRkMDk3OUFrZ2FLNGZtTmV5aXh0WGQ5eEpwYV9WVWwzODBuTnZBOFQzZWJ4NFJwYjBOQzRTeGJfVXo2YU9lU0k4NnBR?oc=5",
+      "source": "TVB",
+      "published_at": "2026-11-21T20:03+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
       "title": "CIFI HOLD GP(00884) Stock Price Today | Quotes & News - Moomoo",
       "url": "https://news.google.com/rss/articles/CBMioAJBVV95cUxQV1FfR214Ukp5dFdDbVNYNDRxNG1ua2NZSnRhWjZpUTRlRHp2OVAzdFNERkVfSmJZRUdqSXhzSDZNZ3VBTm56UURWYVZGUGJaQlluRXJMaW5nZHh3Z2d6endrZERqUzFXaHNIMTE3dEtNT3BPU29USDQwQXNybmY5bF9NdXdhbGxDekt5MGM2dmJRNWNOZThpVm92UkVvWXhGQ1ZjbS02ZFJ1RXA4NzN2cUJBQm13eFFaV0hSWGVodWhLYk03THlrTXRhMWZJcDdQV1Utb3RsZHh5M0FPU1gxQ3RxcHhqT1hiR0dKY0o1VVZnY0Z4czNncGZoQms2M1VWSC00YWRYVkNJN09EcTVZRE43UGY1ZVg0RHE3RDBfV3U?oc=5",
       "source": "Moomoo",
@@ -117,18 +149,18 @@
       "risk_score": 0
     },
     {
-      "title": "台股震盪加劇！金管會祭5大穩市措施11／23起全面禁平盤下放空| 財經 - Newtalk新聞",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE53eXdLQlh2OUlIbUpyWjNCUkdfdHc5Ny1MQjRDdVNFZzhPYnplLTlkbnp6SndMdTEtdFA3U2NmOEFObHN4aHh4dkl4bHA2UURWOVVKQS1MR1Blb2c?oc=5",
-      "source": "Newtalk新聞",
-      "published_at": "2026-11-21T18:13+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
       "title": "台股恐慌性拋售！專家點「止跌2關鍵」：未來4個月仍難熬 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMi3gJBVV95cUxPbElBV3JCeHpQVjhxVXpvLXFRajVkaTl5N0ZXWmV1eFF0Y212cWIzNEJFZVljcm1ZV3dld3M3cGdrSHFHM0ZuREQtV19fUWR5amxwRTFYNDlLbVdTeXRUS0gwSG9EUkRuMzQzSVFsZGZxZ1U5ZnE0cVlkVXIzaGdoczdGY2x5TklRZ243ZERtTDhtV3ZCWXZ3NFJHN3p2U05qRGRERXVObXJXR0hlRXIydDM2cEp0MW9fUENveTJRY3V2R09iTVlaMUlzV01VS1FuNm5iWURyUC12NUlSNVFXa0llWnZJd2MzcEVlTXQ1cWhCUTdKYjQtNVUxM3ZIbVpXbHE1YWk2OV9FWnBoWUNkdW83Tk9jOWpZV1dPbExuUGtlUXNkWW5uYzFMeDRXTkJMY0JubEFPcHlyLXlqNGt4YnItdnpTejBPZFd3Y050WVFQSkpxVldMUklnMzJOZw?oc=5",
       "source": "Yahoo股市",
       "published_at": "2026-11-21T17:03+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股暴跌忍痛停損！他砍光持股認賠928萬 網曝慘況：今年獲利全吐還倒賠 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMivwNBVV95cUxPUUpyRFNaU1hZU281SXB3TWpnWkpZN29vN0JmcFRJN3hwOHFtaDM2Zzd1XzFuMDRVLUNnZmR1ckJuaXZBUXlKVEdvb3BJOEtrLTVGSVhXbG5zdHpBZ1FwOE9KejNWREtKZ1FXRF9fV3hZTms3RlNmZWRpck9lRjdiVmtKaXVrWnY3cDBOanJZVTJZM2xkMDlYMHF6S2lTeC1vX2JvLUhPck1vYkFrN0hDblE2MlVVX1JlcWQ5OHRfMy1qODhwalNtODk0VjV4b0tWeW9pbVE0TlNWb01yRUdsSkU4Ym9kZThyamFRTjRTOXFEcWRxTkgzQURuWGtfcnY0OVo0OTcweGdQSDlhXzFCSXdPQjl1ZVJjRHVxb3BxSjd0dnUxYXdpSUluRS1FRmtoem1oRlRpd1daTkxqUHJ6dXJ0dldObUwwN2d3eHBfX0Q2X2g3Tk5BWjFtOFZha2FpSjZKTTl4b0V6ZU1fYkhBckJBTWhnTC10VFVudnlIMWZ1SUJWZE9kdjNOTnRvUEc4LV9McE9zeHRKZW90Q2JuNlFVTy1ucThTSUNxUXFmRi1Ub0VQRTAtYTBJVE1zWEU?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-21T16:48+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -141,48 +173,16 @@
       "risk_score": 0
     },
     {
-      "title": "台股禁空令來了！金管會宣布祭出5大招護盤 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMitgJBVV95cUxPMXhSVHFKNTVwLWRsUHVNR3I0X01WcUNhSGczeXVFNzRLMXNQSllFWWtkcjE2RFdtN3hIeWM2N2liUGtDSFRSTjNsanNTZDhVcEY4OGNLMnk1RkladmV0aUZaejFWUjJyUGZCUTlFc2gzWGpyZEZpLXhCQ2hLdnZlcjktYkpRNUN3RHNoWFRnaTlicUxIekZUYjB0T3dvbU5aUlc4TkJSU3NUV05DRWY4NzhtSFFjeVAxNlo3ZU56NFVxVmpUZzU0ckRLT3JKSWRZa1NNZTJvSU5GZDhFTkhhLWE4SVM1S1hFZFZtYXEtREFHQ1BpR1dicENXTU4tbXBrT2tQX19tQ1JTY0Z2ZzNzeXloVmdqN0MwVmdRelFjWjMwQU5USE5NY2JKNjJTcU9hNC1CRm9n?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-21T16:22+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
       "title": "金管會限空令第三箭！全面禁止平盤下放空 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMivwJBVV95cUxNY2I5NnlrUFhtcmJRejlYTUZWTlY1d04yZDl6cmJzbkhHWDdGZUppVmdGQ1pGOGxBRm1adFRxWmF3QUt6NmQ3eVJobmh0aTRKYm9wdnhyWDZyQ3pfY0J1NzBNMm50OHp5T3ZZajRUYW5ZSHp1TDIzMHFKcm1qZmdJSXF0SzFNeUpnTXBVS2hHSkZoVTNFZjdRazlreVdZS1l3S3dISk1jQ2tPQUlpMTBFa2o1NkxSSVdhSXJDbDI1VDRGSmNPRVExU1h6dlZlUDdORmZQWmlaMFN6VkM5MUg2bDJZbWhFZUd4R3BMVVozRGpUaFk3NGtaaE1qSVhhZzlqOEE1V1hoazYxVF9rYmdSRGs0c0VVZjZTakVrczl6TUFBQkZtVjdtYVdOeHRIYlJfYjlzR0oxeFhNOTR3TTZZ?oc=5",
       "source": "Yahoo股市",
       "published_at": "2026-11-21T16:09+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "台股連日暴跌企業訂單受衝擊？經濟部：目前未見影響 - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5HTGctVEtOMnQ3blRveGVJZDhQdFdlOG1kbWhaellHc1Q3cVo2bm5ndXFyWG95cXE3YWtfelNIWEdEMHAzb201Q1FIY3ZNYmptZ3NXRHduOVQ?oc=5",
-      "source": "自由時報",
-      "published_at": "2026-11-21T16:06+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "金管會再出手！全面禁止平盤下放空 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMivwJBVV95cUxQV3RZbXNGSGFrUGVYZ0R5N3UweXh3bmlfeGNyS2RDcXV3UGdBeUU4U1I4V3V1MVhMZG5jcGdFOW1xSDFQUk4zbHhBa1FrT0Qyd2RPeGhTMjNRS0thaXdiVmEtQTQ0ZXpNeTdWeGdoQXJBLVJRMmMtempOSGtvSEF2UU5MV3dXTlBWSXZBYS1sZ2JBRXJsa3RsYXlUU0xPekVRNVlVMFVCd3BhTC1rdFc5WjR2NThtMVY5WXpHcjBwdmx0eUp5bGtITTk4X2xoNlJmZ3RPak0wLV8wTVhiLWhJQ3k0R01YaENKTUMzM01zVFV5M0FmOTMxT2NBUTdIZk9ndHdiVlVaN3p2VTI4cDY0aUxEYk1VVnlGY2x6eU9EQkM1Z0FwajJTS1dCMHktREw2TThYNmpRVGk3amktVkhR?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-21T15:46+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "金管會再祭第3波限空令！ 23日起全面禁止平盤下放空 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi3AJBVV95cUxOZkJ0UV9GSnJSUjdlWlIzQzBubFdPNEQ0OVB0dXRQQzBYWmZPZUdFOWZFc3lQU1FFOVdrQndnNEZzN0o1azVEVFRxUVFZTnM3dTI2YThJbVllUVEyRWJ0eTFLQ3J6YzNzSHVEa05BbjZORWlLaXZlVUx5S3UwZkw2ZWdrdzllU0l4dklPaFRpM1puU3FOVFg3ZnUzS0dlSjRSOHBhTDNpdXBtWXN3bkxIWmozZWwwWDRUd1lWZy1sZTlxZVR3M1ZKcVpXRWV5UFV3V3VRSXd4LW8ybGlkMEVaZnVQV1Q3TDM0Mm9wOFd6UmFuYVNLeV9SQjFmNzg5UktOLVJWRjZETW5WcnhXMEdKb2Y2UkszZ3p0Rmd0UnhMNENXVDBrcGlRNUZSMHMyakxXNHhDUkxJSk9oUEZPYlJBcG44N2pqaFhTaGRHdHh5UEZuRTZ3amYwSDN3SGg?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-21T15:42+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "oil_watch": [],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-11-21T20:27:43+08:00",
-  "checked_at": "2026-11-21T20:27:43+08:00"
+  "updated_at": "2026-11-22T03:36:39+08:00",
+  "checked_at": "2026-11-22T03:36:39+08:00"
 }
