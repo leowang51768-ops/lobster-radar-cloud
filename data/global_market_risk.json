@@ -11,13 +11,13 @@
   ],
   "ticker": [
     "⚠ 全球市場風險｜費半 -12.9%｜NASDAQ -7.4%｜日經225 -5.1%｜KOSPI -3.9%｜台股加權 -6.2%｜恆生 -3.8%",
-    "⚠ 全球市場風險｜美債10Y 4.91%｜VIX 35.9｜WTI原油 83.41美元 -0.7%（高於常態，觀察）｜布蘭特原油 89.95美元 -2.8%（高於常態，觀察）",
+    "⚠ 全球市場風險｜美債10Y 4.91%｜VIX 35.9｜WTI原油 82.91美元 -1.3%（高於常態，觀察）｜布蘭特原油 89.31美元 -3.5%（高於常態，觀察）",
     "⚠ 全球市場風險｜油價觀察｜〈能源盤後〉胡塞武裝威脅攻擊沙國紅海港口！油價尾盤反彈仍難扭轉跌勢 Brent、WTI連3週收黑",
-    "⚠ 全球市場風險｜Taiwan Banks' Overseas Earnings Hit NT$811.8 Billion, a Record High for the Period — Hong Kong ",
-    "⚠ 全球市場風險｜週一開盤健策、聯亞與訊芯-KY 等十檔接近處置股門檻，台股流動性拉警報",
+    "⚠ 全球市場風險｜殺盤風暴1／台股崩、散戶該逃還是撿便宜？莊文宗：滿手股票別亂砍、有現金也別急買",
+    "⚠ 全球市場風險｜國安基金︰全力穩台股 籲保持信心",
+    "⚠ 全球市場風險｜〈財經週報-台股熱點〉油價降、AI貨運旺 航空股營運看俏",
+    "⚠ 全球市場風險｜週一開盤健策、高力與訊芯-KY 等十檔接近處置股門檻，台股流動性拉警報",
     "⚠ 全球市場風險｜〈台股風向球〉連環套賣壓需時間換空間 長期投資人心態先穩住",
-    "⚠ 全球市場風險｜台股暴跌「哪些股票有望率先反彈」？專家點名15檔 這些AI股都入列",
-    "⚠ 全球市場風險｜台股連日重挫 卓揆23日將與工商團體座談",
     "⚠ 全球市場風險｜台股重挫他狂買！財經作家連砸308萬買這2檔ETF 霸氣喊「大不了套牢」",
     "⚠ 全球市場風險｜A 安捷倫 - A battered stock market looks for the bottom: What to watch this week - 股市爆料同學會"
   ],
@@ -74,26 +74,42 @@
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 83.41,
-      "change_pct": -0.6
+      "price": 82.91,
+      "change_pct": -1.2
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 89.95,
-      "change_pct": -2.8
+      "price": 89.31,
+      "change_pct": -3.6
     }
   },
   "active_news": [
     {
-      "title": "Taiwan Banks' Overseas Earnings Hit NT$811.8 Billion, a Record High for the Period — Hong Kong Remains Top Moneymaker with NT$34.73 Billion - VOCO News",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBVWnBjY0Y3OHp3SWtDci12RGZZclRiN2Jtc2NlYXVFTDd6Vnk3VHd0NzJ2dGhkYXNRV1lFczE1SlVWT2dKNllhTmVzbG1EUXEtM2tkUTZjZTlzV0p1Y25qSS1za09BS1E1eTlUUW1vaUdfbzdLSkRCR2l6SQ?oc=5",
-      "source": "VOCO News",
-      "published_at": "2026-11-22T19:06+08:00",
-      "importance": 4,
-      "risk_score": 2
+      "title": "殺盤風暴1／台股崩、散戶該逃還是撿便宜？莊文宗：滿手股票別亂砍、有現金也別急買 - Yahoo新聞",
+      "url": "https://news.google.com/rss/articles/CBMikgNBVV95cUxNZlFrMl9DcklqNktTYXRPUFU0R2IwUzFZU2hJLWhBOE85QkVnakJXeXo1aC1Cb3BYdnVZaDJRQUVJeXRKbGN0OTVJSm1MaVJKVjdFMFVod1ZobWtVcnhiVXl4Y3pvVDlZeW51Uzk4UTVzdHJaNzAtNzdmYTR6UkJBX0RwYko5cUNGOU5IZHU4ZEVtMHVXeFYzZkllWllGNXpUSFRESG5vUkNxMzYtNlVwS1Y4Zk1yZzZBZFJ5Rl9YYk42SDJwTm1kS1hvaVR0TjVTa0VtWk5aZ2tFOV9pVzd1Z1dkNmdvOUFiVTZRWFRYNWZSQnVZSm55X3BfVFVvS3duXzdZd2p4SXh1OUhOZ1BPbXhYdE8tb3VacWdLX2V5QlFsOW5ITFI4dEtYamhseWhsTm9YTHRFZEpDdkctcWRzR2tCLU1kRk4zT2ZydmhhS0Z4VzVKNEVpUGRCeXF6RjdZY2dvM2dSdk5EejlaUGtMUlcwVXpEYVlyem5YellmQ3BZZGhEbnZBNHBnYU5yNnMxQVE?oc=5",
+      "source": "Yahoo新聞",
+      "published_at": "2026-11-23T07:00+08:00",
+      "importance": 2,
+      "risk_score": 0
     },
     {
-      "title": "週一開盤健策、聯亞與訊芯-KY 等十檔接近處置股門檻，台股流動性拉警報 - 鏈新聞 ABMedia",
+      "title": "國安基金︰全力穩台股 籲保持信心 - 自由時報",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFA1UWJ3Ym5rY0RiTmNuWFhwOTB1dGJYOU1rSlhmc1drcDhrdFBuSVRfQ1NXbEhfbzF2MUhqUm4zUXVRZG83aWR3YXNzV1czQnViX0Y5MXpvMmY?oc=5",
+      "source": "自由時報",
+      "published_at": "2026-11-23T05:30+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "〈財經週報-台股熱點〉油價降、AI貨運旺 航空股營運看俏 - 自由時報",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5yZnRfQlAtU0JNLW8wZWhDUGVkV3BpZVoyYWNieUFaRy1qVjlZeklnaWtCZVlEUEI2M0FjaUc5ZmlZSHlqamZobHRUdk5uQzB6MU91blF4cGo?oc=5",
+      "source": "自由時報",
+      "published_at": "2026-11-23T05:30+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "週一開盤健策、高力與訊芯-KY 等十檔接近處置股門檻，台股流動性拉警報 - 鏈新聞 ABMedia",
       "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBybWtCZmVGcTNWbmhFQlFDU2VRLV9ZaThXY0YtTzczWUsxVDBVcUlJdmtLdVFpNTNvQ2hVTlo2X19lN0xXSGNTSWVoUjVGRnRmVk5FdzJLVUxNMzM5aEE?oc=5",
       "source": "鏈新聞 ABMedia",
       "published_at": "2026-11-23T00:21+08:00",
@@ -101,26 +117,10 @@
       "risk_score": 0
     },
     {
-      "title": "〈台股風向球〉連環套賣壓需時間換空間 長期投資人心態先穩住 - Yahoo 財經",
-      "url": "https://news.google.com/rss/articles/CBMimANBVV95cUxPLUh3RGVkc2FDZzR6STJYNXkyeHNnOWlEZlRQcWJydDdQUzRkSTFPU01qLURfdkJRMXp5NWc4OXF1dFRNVVBqSHBqOWVqRmIyaWJHQS1rbzR4NjY0VVdFQ0tCRGhNWmZ5YTNnQUNCWTF0SFZ3VzZlQ3paR2NnNDhWR1pxdXpDTnhxbE1icGx2NVdfOXJQeDMzZmNCd1BjSFJVX3VWSWdQY2lnS0FOdFBNNXhYZDl0SzNFSU9KT3FUc25uYkFvR01WTTZkX0pyOGNFblRVdXgxODh6ZEU0dmtIbDZsTndIYVlRd3A1ZS1zQ0p4bTVoMURSS2h6RXl4UUhaNU01N3FvQlg3WE5UcXUyWUVvQ2pyMGQzcEFLQTVtVWpfc3h4RHgtT2xNZUVVamVNVXI4VUI5a2liR3Y3QzVYZE8xMWxRM0F6WUMyWjlVVktuQ3huT0dsZER1OTlTcjk0bDlMQlR4VkZiRDhhZmNJODZNQTNtaGhqazZlekNNbFdtaDk0b0Z1OVFmZG5fbUZyR0JwYXFfb2o?oc=5",
-      "source": "Yahoo 財經",
+      "title": "〈台股風向球〉連環套賣壓需時間換空間 長期投資人心態先穩住 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMilgNBVV95cUxOTE0xb2ZiZFFNS3gyWGlneDBINTlrSGdHSVp0T0dOOFJDbGg4N1dLcWxsaTZnZURlQlExamFDRXBGeFRfaVFac2pnZkVfMHlNOVVwWV9jRlFNVzluU3hZdG1YTU9JRkNMZTBQd1JnNmJrVmNsanBZT1JEdGlQb0UxdF9hMzJmTzdyOVBrZ2ExQzR4Sm1vSHNXMHNKRU91RE5PeWRuT29pRWdWX2tZcjFnVnQ2cGZ1QUxLYnRqeENwZjZLajBSdUt3S0t3UDR1SjRjWUx0Tjh6TkdsRkZKVnNwZGYzOUFjYk5DWl9pUE5veVhfWThjdkMteE16MWtkczEyQUJ0eTFLcVlTRFlFcjg1eFJOeHVpMHRTcHA2UHRvWlcxZ2RhZ2I5X2Y4Tm9IZi1ZMWc2TWszM1BRRk9obU9UVktTZGlWTnVxSW40U0I1SU90ME9KdzF1YXhmWUl5SUlsc1F2RGh0dTIzcnNRckdNZ3pMRGRpVlVocGgtWF9Ya3VKRTM0aS1valFzZlZ6bllmVll6c1JR?oc=5",
+      "source": "Yahoo股市",
       "published_at": "2026-11-22T23:34+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股暴跌「哪些股票有望率先反彈」？專家點名15檔 這些AI股都入列 - Yahoo新聞",
-      "url": "https://news.google.com/rss/articles/CBMiiANBVV95cUxPZWtkVWJSWTV3eDM4VXZicnpjX3JMUnZINjd2MWlJeDFfWnVTa25Oa19BOEFnYlViQjlOWXZxdGRrNktXck5PVWh2R0l5YUl0SEpwSzExeVJ6Z2dYSWJsNGJvUklxWW9nNF84QTZaM1ViMUVuYU95M1NpaTlQVHYzSHRnSFNyTzQtUXFfUUNaZUZYdklVem01Wk9PbURnS2l3MTRTYndBZHRNNU96Q2stNEdSdW9TZDd3YUlJNExDaTk2X0kyc2lYOWpkcjRVNGhWdjNvUndJWDAtWjlSQzFmZ2dJaW1GZHdJZ0dKQklYdHY5QVYxdG8xRWs3bEt3WUt5Y0k4U0tpNS0tVDBOVElKdVVWa0kwTlNIa1dzMXFyM0xlYTRrcUZWN3ZibTdEQTVMZTlZT0xuTlJ1Z1F1dHM1d3hKM0MxdVN1TmRPNExCN0JSRXFkdDFtQW00NzVGSUtuVTRUVVAxb2lDb0NOZk9QZDgzYWNfVHEyZkttU1dRcjFEbGRpc3hPTg?oc=5",
-      "source": "Yahoo新聞",
-      "published_at": "2026-11-22T22:34+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股連日重挫 卓揆23日將與工商團體座談 - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9US1A2eW05ZkduR2kydHlwU1BhUWVnTkZJaHJvYjNJbzFYMXJfWnZXOHFrck5VVTFMODlVMWRVSWJ3RmZyNjBhQ1pGUFBJekhGWGxZazFnbVg?oc=5",
-      "source": "自由時報",
-      "published_at": "2026-11-22T20:35+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -149,14 +149,6 @@
       "risk_score": 0
     },
     {
-      "title": "10月就出清大立光躲過股災！《戲說台灣》男星秀戰績「14戰全勝」爽賺332萬 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiogNBVV95cUxOTUJDcUhMdXJ3ZmhQaEJXRGdBbC1RWTZjVmh2NUZJQnFydndhVElyS29Wc0ZnX2xsS0I3UVVkQTBkSURNUjFiN1RSc2dseUhFWllmbFFhVnUwV3VPUkJIMTJOcHBiVVBiRkNGSWtzdEVDZjY4UXczUGN4WlpFdGtGN3pTOUNocEJpNk8zUExSTlNkT3VDMjc3eHM2enhsS0NRQ3V1aTJRRVgzZVEtcUYwN25rd1R2WWtDZXVuMzZ5RWQ4ZUplUkpvSWFtM2t0OGZ5NUdnSFJlcXJILUdfdmhILWVQU3NXZFkyczFmZmotMDlzaENDemkzVjlJckhISElnY3JlMHhkbENQbFhyd2JvZVFqbGdySnIwd0M1UEw0OTB4cF9QQUdlQ2gwSG5kaVU2cllqSlRLYkhTTE1kNy1qVzczTUs1YUZvVVFtQlB3a014M3pOeVlVMENoeTdkZTVPYWR5MVE4Uy02bkFodVdmcUhsaTRwM29EYzZ2d2ltdmpsa0duUlhVTXdXUVRzeXBrQm85STMza2h5RFVRdDg3d0ln?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-22T16:48+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
       "title": "台股暴跌ETF兩樣情！「這檔」報酬超車0050 - Yahoo股市",
       "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxQN1NjdHdUaDF1c3dKcWZMMXNGVUJRV09iT21uWEtaOE84OWJvM2FmeDVyTFdMeDg0a013NFNoSnVieUFTd2trOTRJbnY0eUQwZWNrM3V2YlFVTGhMeXNrTzg1YTVUeXZrWG5ueU80R05EejRZMVhBVXIwXzJIRnMwZnRrMk1oT3ZPSTBfcDJZRDZpdUhadTYzNk9SelN0Rks4SmdRZWQ0WVJUNVZsTno5N29yZTNmZG5WbUpRcURBV2oxV1pQLVNtSFJSWHBPd0N2RXFLRklYUktvSVB4aXp1aGRtR1d5RUVQbE1ZVE1zVnVmVmp5aVg1T0hpdXBmb0RRYUlj?oc=5",
       "source": "Yahoo股市",
@@ -179,6 +171,14 @@
       "published_at": "2026-11-22T16:10+08:00",
       "importance": 2,
       "risk_score": 0
+    },
+    {
+      "title": "沒收到驗證碼錢卻飛了！4銀行爆存款遭盜轉56萬 金管會揭調查結果 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMipgNBVV95cUxPOFlhXzU1R0J4UjU1Y2lILWliMDBjbVBFUGVlbzBtckN0enNoaHRQMzNLU2tvZjhSRjlBMFkyU25lN25YcHo2R3lWOWZzUm9JeWlXZVR1NlMybF90SlctUzVSLVI0WUR0SmIzTDh1WTJmMWlYSEVpZFFCZF9sMHp4SFdZb2NYX1BXbjhZTW1ZelJoRDVSdklZU3gwUndkLTVPLXFXby1aOTh5Z0Q2RDJoQXp3dkFuN2QxVzJCVU1RdlR1VFZVRDhEcDJxbkVtbUtUcGJWQ0FjSmhucmtCY0JhbXJsbmVFN2dteGFlRTh2ZzVTNmJ5U2piM0FvYWsxbTZiT1NkS1RCaklPejV4dTR0Mm5sS09wYmZqVjNfUF96cl9reGFITGx0T1h2Q2ZzYURvbWVEemVXb19HWFlYWXhfZi1NV1ZzQUVBN094LVRwY3F5ei1CTzVRUFo3aDNidHhCWnRGNmNvQjNvLXVpTjhQR2gtVUpyVG1hLWRhLXFKNEM3cG9Selp6ZUd2X3E5TWdxSEFuaUViTFQ1Q3RvaVdHZjdiX3ZvUQ?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-22T15:50+08:00",
+      "importance": 2,
+      "risk_score": 0
     }
   ],
   "oil_watch": [
@@ -190,6 +190,6 @@
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-11-23T02:42:01+08:00",
-  "checked_at": "2026-11-23T02:42:01+08:00"
+  "updated_at": "2026-11-23T07:49:17+08:00",
+  "checked_at": "2026-11-23T07:49:17+08:00"
 }
