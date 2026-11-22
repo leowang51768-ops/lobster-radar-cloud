@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "risk_level": "red",
-  "risk_score": 14,
+  "risk_score": 11,
   "risk_reasons": [
     "費半明顯下跌",
     "NASDAQ明顯下跌",
@@ -12,14 +12,14 @@
   "ticker": [
     "⚠ 全球市場風險｜費半 -12.9%｜NASDAQ -7.4%｜日經225 -5.1%｜KOSPI -3.9%｜台股加權 -6.2%｜恆生 -3.8%",
     "⚠ 全球市場風險｜美債10Y 4.91%｜VIX 35.9｜WTI原油 83.41美元 +0.2%（高於常態，觀察）｜布蘭特原油 89.95美元 -2.2%（高於常態，觀察）",
-    "⚠ 全球市場風險｜AI拋售潮讓台灣緊急採取措施穩定晶片股比重高的市場",
     "⚠ 全球市場風險｜台灣擴大股票放空限制措施 台股因人工智能擔憂遭遇重挫",
-    "⚠ 全球市場風險｜Gold Weekly Review: AI Stock Crash Combined with Rate Hike Expectations Sends Gold Prices Plung",
-    "⚠ 全球市場風險｜SoftBank’s $1 Trillion Moonshot: Masayoshi Son Reportedly Explored Acquiring HBM Leader SK Hyni",
-    "⚠ 全球市場風險｜金管會祭限空令3.0等5大措施 穩定股市 明起平盤以下禁放空",
-    "⚠ 全球市場風險｜卓揆4裁示 穩定台股挺產業",
+    "⚠ 全球市場風險｜AI基本面護體、評價面回歸合理 台股修正後浮現中長線買點",
+    "⚠ 全球市場風險｜台股血崩法人急逃命！台積電遭砍314億、0050爆30萬張賣單 阮慕驊揭「資金急撤真相」",
+    "⚠ 全球市場風險｜台股慘崩、避風港是它？「台灣紡織龍頭」訂單看到明年、現金殖利率近5% 明年EPS估26.29元",
     "⚠ 全球市場風險｜《TAIPEI TIMES》 FSC announces measures after stock market losses",
-    "⚠ 全球市場風險｜Global X Semiconductor ETF (SEMI) Stock Price | Quotes & News"
+    "⚠ 全球市場風險｜Global X Semiconductor ETF (SEMI) Stock Price | Quotes & News",
+    "⚠ 全球市場風險｜台股跌到股民心慌！國安基金假日罕見發聲 喊話投資人保持信心",
+    "⚠ 全球市場風險｜G-dragon Kpop boss hails robotic entertainment with China-Korea collab"
   ],
   "markets": {
     "US_SOX": {
@@ -85,14 +85,6 @@
   },
   "active_news": [
     {
-      "title": "AI拋售潮讓台灣緊急採取措施穩定晶片股比重高的市場 - Business Insider Taiwan",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFAtcnRXbnd5TmtCZS04NEdndGo4cXhmdTlzdDJFWXEtVkFvOE5Pb0pZZWtyT0E3UnNYOHVQUWxCS3p1YVFBLUFXdFNUYjBvS0dzMHduWXViVQ?oc=5",
-      "source": "Business Insider Taiwan",
-      "published_at": "2026-11-22T06:02+08:00",
-      "importance": 5,
-      "risk_score": 4
-    },
-    {
       "title": "台灣擴大股票放空限制措施 台股因人工智能擔憂遭遇重挫 - Yahoo 財經",
       "url": "https://news.google.com/rss/articles/CBMiiwNBVV95cUxNbTV0SnU5UTFCQWNIMVAxRVV1d2pBWE96NTFJNWVCZzFUT1JkQ1FHSkU4c1dmY0hjNFRoVm90ME9RT3p1WHpJR1I0UzJFTC1qM1dBUFZKYUd4aVhYU25Fbm9FNkliNUdDOVhLM1NrNmJNa3VyV1FzY1cwSEhVM2ZLMU5vcTh6RXk1TkVjamJDaDFteVdpU3lPQUpyYklTbHNuOWJDZ0pEWG1DNDVlZlBzZkhRN1I5UjNMZzJzUnFIRUF2ci14Z3RMd2RfamNHb0Z3ZS00QVR0YW1nN3JjUVBuSTBvb0UxM3VzaGh4VWdtTmozdXFycGNVQXctUHJiN1R3UVZqTktPc1JoQjNfUHk0djVOR2hhQ05UQTFjcGlKSmV4dWR3T2s0QXgyUFJRZm5fQXVvcTVYd0ZFZkd6VURTVk9EMDdKc1NxOGdtbGZwQ0s5UDRqQXlQdzN3cndNX1c3N2ZJZUhFTHlkUDhqQ01sYWNpZGVCRzZRbFJpTlNaWlc1Rm8tdktyTzk5bw?oc=5",
       "source": "Yahoo 財經",
@@ -101,34 +93,26 @@
       "risk_score": 2
     },
     {
-      "title": "Gold Weekly Review: AI Stock Crash Combined with Rate Hike Expectations Sends Gold Prices Plunging Nearly 9% in a Week, Marking Largest Drop in Eight Months! Hits 14-Month Low - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNd3J6UEVtS040R0twSFU5WG1JVlFOOVVRM2JGdUhIMUlsd21JZE1JMklWTDhpUEUtNzZjbEhOQm5BU2ZZS09lOWs5eVNldTM3NkRmWThONjR3MXVzQWl1NnFCYXEzUndidWd4M05zWm9JM1ZiZ1A5eWcxOEtubGdLVmVwbDRkQ210WlJGNThrUGVwWnFKODdLQU9TcXRQZ3c1V0E?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-21T09:41+08:00",
-      "importance": 4,
-      "risk_score": 2
-    },
-    {
-      "title": "SoftBank’s $1 Trillion Moonshot: Masayoshi Son Reportedly Explored Acquiring HBM Leader SK Hynix with Massive Premium - Mashdigi",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNVGROMEVLcF9YWmVQUWI0MFQxQzBiVVlMYjhGZzBLaHc0bW9xZmdjZHdyaHpicEp5MGhjVm9ScVRsUTRDdTZLMlYxZTl2Z2dzNFRQSzFHaWMxYUNicHFEMkl0UnBaUG9RdHI1QjcyajJIZEFsazhuMXpLY3lhLVNocy13X0c?oc=5",
-      "source": "Mashdigi",
-      "published_at": "2026-11-22T00:00+08:00",
-      "importance": 2,
-      "risk_score": 2
-    },
-    {
-      "title": "金管會祭限空令3.0等5大措施 穩定股市 明起平盤以下禁放空 - 自由財經",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE13c0tYcHJRaUZWVEVTUUZheWZWQ0o3UGFFNDZJMjhIVkx0Nm5MSHM5dlpwTERheFNWMlpVbE1FQWc1WDA2b1RmVjRNM01zYnp2LUN5eEdB0gFbQVVfeXFMTlJGY3NGeUVVOUdCdXV3WnNmMW83NDhNNnBFVUc3b2ZsNmk4VWhjTG0tMXAxd3Q2STlIS2p3VXh4WUFXMHNCVEowZ3pUS21oYi1KUlVBSmpIN3JYaw?oc=5",
-      "source": "自由財經",
-      "published_at": "2026-11-22T05:30+08:00",
+      "title": "AI基本面護體、評價面回歸合理 台股修正後浮現中長線買點 - 自由時報",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9WTXlFZzhCbTBiSGxUd0xwSjFhS0FoR29VRmp1MEdJaV9ZZEpWN1JESlFYMnNvOTJlbTFpSkgwVDdTa0ptbDRDWmxDbVA2amNIREtfVE1TTWQ?oc=5",
+      "source": "自由時報",
+      "published_at": "2026-11-22T11:30+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "卓揆4裁示 穩定台股挺產業 - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5leDZlTWp4c1hHbVV3R25xNEdNOUNxU2dSamJJbUlPSERwQW1FQjZzUkxiSlNkdkNWTGxvX1hic0poZ0ZrdkNkcjJjVnlBMVR1cEtHVFh2YVA?oc=5",
-      "source": "自由時報",
-      "published_at": "2026-11-22T05:30+08:00",
+      "title": "台股血崩法人急逃命！台積電遭砍314億、0050爆30萬張賣單 阮慕驊揭「資金急撤真相」 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi1ANBVV95cUxPa3g4NnM2YmU5ZUotdnUtTlZDWmVUdFpLcFdsZjlNWkxyTEtQUGdhZkhlUzZKb3ZoOW9hUV9neXlUNmpCcUdIS0pyWXdhNEdxdkV4UEF3MTZtcnphRzlzdU5od2JSangyUTlJV3FSeEhmS3RvWU91Xy05c3VMY202OHhueDFVa21sbGJDTkxsYXQ2Qk9yd0pqd0pHSjhnZ0ItamtQczMzallVNDNTSEJnTWRwMzh4eFhqcWVGS3NxVnQ4RGRNTk1vSnhGellOYlN3eDNPQ0Zsb2ZnUGlvQ1dZSzlqbFBWbUc5TTRVMkY2Y0lfSVBLUEUxNlpaREZob2x4RC1GSDU1RXVnMnRkVUkwakNvMGFfdFZZdnMtZUM0NllobGlXUDFDTlVWNmlQOXNWU3puVEhiN0M1ZHRYeW1TR2VGbFF3T0x1TnhzRUIxUXNtSEdtQklMbTNVYm1fVXBaVl9May1nU3VqUFBEd1FTYklBdnlNaHlDVDczalB2X0Z1MWhZdmFQT1NqN1NmZ0djQkJ6MXcwbWpOYmp4VmtrdXVXVkJldW1hc2lIUG42VkpqQ2ozR2VmUDhiM2VkNXk1ZWdIY0hQeFRrbUx0Z2h1cWtIMGw?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-22T09:19+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股慘崩、避風港是它？「台灣紡織龍頭」訂單看到明年、現金殖利率近5% 明年EPS估26.29元 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMipgNBVV95cUxNTGw5NXVqYVBkckF0QlBVdjJOaGdUVFczWU52U1JkSElTNWk2U0Z6SjBzWmpTOWp6V2VfSG9FeWY2MUk5WXRPd2tfdktvQkpEZHZUVWdUNmV4bWNReE9IaUFOd01vV3ZLTlhUaG1CS05tRV9nbFd2ZzBrWlVPdkpPOVp5X2lVVG5LeHFNTjdSeXcxak9xRUM3MHh1allfVC1PcDNBR09tTW85WW9QLW0wbnVpTUw1aXhXOFpiekZQa09VYm5uTHhRMlozNTEzSVJlU1A2VGdRam5EcDY4VGZnTEpvZnVQajlyRUJJUkc1NkRvUVIxYTFXdkJOd0N0NXlYX0hIbi1qOU1VQXcwVWxXWFpvd3JoRUtRS25IZHhwbGN2Q1hJYlFNYmxOcEFfNkM1UXJSMnpBN2xQbUc0TS1yV3JwcDNLZFV2bFNlQmNJYTNZRGxrMGY1aEVKeXBpY2FLMTBQZVRXclVSYVFfaGdYeEtKOE5RU0RwQmxuSFluUmZjT01VSGdyeUFfMnNscE4wczIwWnNfWFRoMjVtZkxhYVBLZlhpdw?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-22T08:24+08:00",
       "importance": 2,
       "risk_score": 0
     },
@@ -179,10 +163,26 @@
       "published_at": "2026-11-21T18:23+08:00",
       "importance": 2,
       "risk_score": 0
+    },
+    {
+      "title": "台股恐慌性拋售！專家點「止跌2關鍵」：未來4個月仍難熬 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi3gJBVV95cUxPbElBV3JCeHpQVjhxVXpvLXFRajVkaTl5N0ZXWmV1eFF0Y212cWIzNEJFZVljcm1ZV3dld3M3cGdrSHFHM0ZuREQtV19fUWR5amxwRTFYNDlLbVdTeXRUS0gwSG9EUkRuMzQzSVFsZGZxZ1U5ZnE0cVlkVXIzaGdoczdGY2x5TklRZ243ZERtTDhtV3ZCWXZ3NFJHN3p2U05qRGRERXVObXJXR0hlRXIydDM2cEp0MW9fUENveTJRY3V2R09iTVlaMUlzV01VS1FuNm5iWURyUC12NUlSNVFXa0llWnZJd2MzcEVlTXQ1cWhCUTdKYjQtNVUxM3ZIbVpXbHE1YWk2OV9FWnBoWUNkdW83Tk9jOWpZV1dPbExuUGtlUXNkWW5uYzFMeDRXTkJMY0JubEFPcHlyLXlqNGt4YnItdnpTejBPZFd3Y050WVFQSkpxVldMUklnMzJOZw?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-21T17:03+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "金管會限空令第三箭！全面禁止平盤下放空 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMivwJBVV95cUxNY2I5NnlrUFhtcmJRejlYTUZWTlY1d04yZDl6cmJzbkhHWDdGZUppVmdGQ1pGOGxBRm1adFRxWmF3QUt6NmQ3eVJobmh0aTRKYm9wdnhyWDZyQ3pfY0J1NzBNMm50OHp5T3ZZajRUYW5ZSHp1TDIzMHFKcm1qZmdJSXF0SzFNeUpnTXBVS2hHSkZoVTNFZjdRazlreVdZS1l3S3dISk1jQ2tPQUlpMTBFa2o1NkxSSVdhSXJDbDI1VDRGSmNPRVExU1h6dlZlUDdORmZQWmlaMFN6VkM5MUg2bDJZbWhFZUd4R3BMVVozRGpUaFk3NGtaaE1qSVhhZzlqOEE1V1hoazYxVF9rYmdSRGs0c0VVZjZTakVrczl6TUFBQkZtVjdtYVdOeHRIYlJfYjlzR0oxeFhNOTR3TTZZ?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-21T16:09+08:00",
+      "importance": 2,
+      "risk_score": 0
     }
   ],
   "oil_watch": [],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-11-22T07:54:45+08:00",
-  "checked_at": "2026-11-22T07:54:45+08:00"
+  "updated_at": "2026-11-22T11:33:43+08:00",
+  "checked_at": "2026-11-22T11:33:43+08:00"
 }
