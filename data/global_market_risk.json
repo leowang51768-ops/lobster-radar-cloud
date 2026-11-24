@@ -6,42 +6,42 @@
     "出現重大風險新聞"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 +1.8%｜NASDAQ +0.9%｜日經225 +3.9%｜KOSPI +2.8%｜台股加權 +9.0%｜恆生 -0.8%",
-    "⚠ 全球市場風險｜美債10Y 4.92%｜VIX 29.1｜WTI原油 79.98美元 -0.2%（常態參考區）｜布蘭特原油 86.89美元 -2.8%（高於常態，觀察）",
+    "⚠ 全球市場風險｜費半 +5.0%｜NASDAQ +4.9%｜日經225 +3.9%｜KOSPI +2.8%｜台股加權 +9.0%｜恆生 -0.8%",
+    "⚠ 全球市場風險｜美債10Y 4.90%｜VIX 26.4｜WTI原油 81.45美元 +1.6%（高於常態，觀察）｜布蘭特原油 88.31美元 -1.2%（高於常態，觀察）",
     "⚠ 全球市場風險｜油價觀察｜〈能源盤後〉 原油重挫逾3%！Brent、WTI齊創近三個月新低 利比亞復產加劇供應過剩疑慮",
     "⚠ 全球市場風險｜Southbound Capital Flow | Southbound capital recorded net purchases of HK$6.203 billion; accumu",
-    "⚠ 全球市場風險｜最慘輸家！台股暴漲前1400戶融資遭斷頭 分析師：這三類人最傷",
-    "⚠ 全球市場風險｜吳東亮建議放寬處置股票 金管會：周五開會4方向討論",
-    "⚠ 全球市場風險｜中國波頓(03318.HK)11月24日耗資22.13萬港元回購7.4萬股",
-    "⚠ 全球市場風險｜黃仁勳回鍋引爆亞股慶祝行情！台股飆9%韓股漲近7% 台灣被點名最大贏家",
-    "⚠ 全球市場風險｜Global X Semiconductor ETF (SEMI) Stock Price | Quotes & News",
-    "⚠ 全球市場風險｜Woodside Energy Group Ltd(WDS) Stock Price Today | Quotes & News"
+    "⚠ 全球市場風險｜Taiwan Semiconductor Manufacturing Co Ltd(TSM)股票11月24日開盤下跌3.19%：真相來了",
+    "⚠ 全球市場風險｜【台股收市】台灣加權指數狂升8.99%，半導體股領漲，逾千隻股份造好 作者 Investing.com - Investing.com 香港",
+    "⚠ 全球市場風險｜Nasdaq futures fall 2%; NVIDIA drops 6% in pre-market trading",
+    "⚠ 全球市場風險｜中國心連心化肥(01866.HK)11月24日耗資788.4萬港元回購87.2萬股",
+    "⚠ 全球市場風險｜派格生物醫藥-B(02565.HK)就申請建議實行H股全流通向中國證監會備案",
+    "⚠ 全球市場風險｜中國科教產業(01756.HK)盈警：預計年度淨虧損2.5億元至3.5億元"
   ],
   "markets": {
     "US_SOX": {
       "label": "費半",
-      "price": 9588.05,
-      "change_pct": 1.8
+      "price": 8832.501,
+      "change_pct": 5.0
     },
     "US_NASDAQ": {
       "label": "NASDAQ",
-      "price": 24089.559,
-      "change_pct": 0.8
+      "price": 23733.535,
+      "change_pct": 5.0
     },
     "US_SP500": {
       "label": "S&P500",
-      "price": 7237.17,
-      "change_pct": 0.8
+      "price": 7201.09,
+      "change_pct": 4.2
     },
     "US_DOW": {
       "label": "道瓊",
-      "price": 49595.31,
-      "change_pct": 1.0
+      "price": 50018.7,
+      "change_pct": 3.8
     },
     "VIX": {
       "label": "VIX",
-      "price": 29.07,
-      "change_pct": 9.2
+      "price": 26.41,
+      "change_pct": -0.8
     },
     "JP_NIKKEI": {
       "label": "日經225",
@@ -65,18 +65,18 @@
     },
     "US10Y": {
       "label": "美債10年殖利率",
-      "price": 4.918,
-      "change_pct": 0.2
+      "price": 4.904,
+      "change_pct": -0.2
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 79.98,
-      "change_pct": -0.2
+      "price": 81.45,
+      "change_pct": 1.6
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 86.89,
-      "change_pct": -2.8
+      "price": 88.31,
+      "change_pct": -1.2
     }
   },
   "active_news": [
@@ -87,6 +87,62 @@
       "published_at": "2026-11-24T17:43+08:00",
       "importance": 5,
       "risk_score": 4
+    },
+    {
+      "title": "Taiwan Semiconductor Manufacturing Co Ltd(TSM)股票11月24日開盤下跌3.19%：真相來了 - TradingKey",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQUHRJeGpHQzRYOTlPUGRON1ZjN0JqbFJ3QkFFZkpUTjBDYno1cFFMU04wakRYTkpNbk9HMC1uVGh0emktWXZyZ3JLUnpBM1hrZWdVeUdWZGF4dUdBSlBGNVNEYjdjbkZ6Rk1YaEMtUWxHcXQ3Ym8zRHJiYXNOZDFLa1NMY1hRTkRzTS1IbjZDSnczTk1G?oc=5",
+      "source": "TradingKey",
+      "published_at": "2026-11-24T22:50+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "【台股收市】台灣加權指數狂升8.99%，半導體股領漲，逾千隻股份造好 作者 Investing.com - Investing.com 香港 - 股市報價& 財經新聞",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5uWXJEelRSaTdoMXQ5MFdmVGdaWC1RMzRUQTUtTXJFWEhiRHVHdUU5ZUNMOXB1QzdEVEhUdmdOcHIxcDBjUDVVSjE2bXUzZGhBQ1NKVHI0aHF0T0x2OVB6dG84bVNJeFMxUkJDREE2NmY?oc=5",
+      "source": "Investing.com 香港 - 股市報價& 財經新聞",
+      "published_at": "2026-11-24T22:29+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Nasdaq futures fall 2%; NVIDIA drops 6% in pre-market trading - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNQkRYM2czSFg4N1dxOWxxR3JqUDVhWVlpUUNKai1qclFKSnZZWnB4LWd2dmNVYjVfeHV5MXo4ZW44TEI3bFBzckFsSl83VE1BV2owbTJoaFhrSERCaTA3eVZsc3FNbjIzTVNGakRlTDNkYV9vWF93cG5JbFlMVWNLd0FNS2ZIVkw2Ui1LcTJxOU5HUzIwSjF0Wg?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-24T19:47+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "中國心連心化肥(01866.HK)11月24日耗資788.4萬港元回購87.2萬股 - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFB1WVRZWmRkdjRQaUZMR0oyNjZNcVI3UmVxN25ZNGd3TXk0d3dVNDBfZTFVTDBwdmJ1UUIwOEFnT2dHckwwczMyMUFScnRSMWpGenVQT2NyUGhLdF85cHJZcEIzLVZtRFpOSU5n?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-11-24T19:30+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "派格生物醫藥-B(02565.HK)就申請建議實行H股全流通向中國證監會備案 - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5ZOVNvT210cXdQc0dob09VcXZGdDc0V0pOejFFN2xxSy10Z0JSc3BtYWhGWHB2MkNSR3lKU2FDR3BSWi1aYlYtSEU2ZEp0SUdGVFZpdW9ublQtVDhDUGtwVXNhWkhkeEhXNzVB?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-11-24T19:12+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "中國科教產業(01756.HK)盈警：預計年度淨虧損2.5億元至3.5億元 - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE55Q3I5cWwzYzh5Rmg2N3JHWjBhTmxxdlVnYWNUemhwLVdncmxBNkwxZnZJYlFVYUZzSEpiVHJaWEUtVllIMm4yRkdGWXVoTWU4QXRycU9JQ3F0eVhWVnA2TXpLc3p4YmhObkhJ?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-11-24T18:17+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "津上機牀中國(01651.HK)11月24日耗資581萬港元回購18萬股 - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBSOHpPOVlXZXVlTEhaQ1RxeWsxSVltclFmbUZjajF4YWN4dXpZczFxdXlfLUJGajBRT0V1YnBpbnViTTMzNU9PSXd5NTAzRy1RUGpsanpod2FVWjVRUm9YOTY3ZjRSTHk0LVAw?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-11-24T18:11+08:00",
+      "importance": 2,
+      "risk_score": 0
     },
     {
       "title": "最慘輸家！台股暴漲前1400戶融資遭斷頭 分析師：這三類人最傷 - Yahoo股市",
@@ -105,74 +161,18 @@
       "risk_score": 0
     },
     {
-      "title": "中國波頓(03318.HK)11月24日耗資22.13萬港元回購7.4萬股 - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1ncFphcUd5UnZNUzVzZkM0bTNVUUFjWWZBWlZRNUJKVHpxNFpFRFRHdy01bkVXVlJYV0V1S0dDekM5TlU4Z29LbklQZDlxWXJqR2xLaTRNcU4zMkxEQ29jQnV5Ui11TEpsaHZB?oc=5",
+      "title": "中國旺旺(00151.HK)11月24日耗資495.4萬港元回購210萬股 - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5nRWJ5aDFrQnBnWkY0N3Y4MUZ2dlpjNlYwOW1ZTWkwX2E3SUwwcGF3SUVBcjJscUl0RTlhS05mZFRGR095dHVDbG5haW03WWVEV25KTmhEQU9rVWtqUWlkcUdnOGZmTUplZU9N?oc=5",
       "source": "TradingView",
-      "published_at": "2026-11-24T17:19+08:00",
+      "published_at": "2026-11-24T17:41+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "黃仁勳回鍋引爆亞股慶祝行情！台股飆9%韓股漲近7% 台灣被點名最大贏家 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMivgNBVV95cUxPVnFfZjNRbnJ4MU1nWWlDXzlxVEQwYS1fLUlpcjJSX2d2MTU0TFExY25LM1NVN1B2d196YWVHX2FEUXlNdGJTcE9rQUZ4RnJ6YUxHVGFQNWdXd01QUFc2RUMxLS15elhRa3VfMGhsMnY0THRTZ1BKRVEzREZnWE9OZkZBTkFQeUVqVzZibFFTS2E0Y0xSdHY5ckoxR0lnRFBFanJsSExYZmdBb3hVM0VRd0hiVXc4U0NWWWtqTENxWFg5NWhGWUZhWkJNVWJzTHFVUGRVUTlLZlVsX1BmTHdkemplU3lCNGIxSXRpRlZTSEY4MnJFN1V0Um5DN0lpamNZeWZZVGw0X1l3dDA2Y01uN3RZeUdMSmoxUnpOa3ZTaVQ2N2NwMElta25LLXZqWVloUXFib1QxLWpnUUNicWRrREF2WG5TeVpGMERGY05xZjlpbTFMOWFpS1liaG5yTGl6bXJQRGNIUjRndjlCa0o4cVdZQV96MkQ0WEl4NTVkR0hObEMxaVhkV0hHNEthYzVUYUx4LVN6aDlqWm5UVVdpcUNEbllXU0pESW5xTFY5bGY3MG5nb1BMQkhiMWtNUQ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-24T16:37+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Global X Semiconductor ETF (SEMI) Stock Price | Quotes & News - Moomoo",
-      "url": "https://news.google.com/rss/articles/CBMingJBVV95cUxPMTFVbzBDQjk1dUdmbE5NTl9HMm01ektXT1pHWTFqaV9LLVFXdlB2dHFCdW0yVnBrUDVQUU1SM1F3eW5pWl85VzNMMlFrVmlmT3d1OTRQenNrcEFBQTFUM0FTdmlLeEtfY0sxR240Qi1VV3FXTG91VzR5QVl4OW1fN2hUZk1xa2dTM3RLNnl4Ri1ncWlWMnB5UjZYdXZxcVpEWFQtNjBvbVBrY2Vid2NrTHhyTFQ5ZXF1a3VJUnVIX1p0bXdrUi0yR0RRMXBubnR3THpBS2FCM2xINkZPZzRHRTFkc0k3dlJOMXk5ZFFCdnktTzNmNy00LVdFeTZtQzAtNHV6WWVodkxiZlptcURTN1p2dG1vZzcxa2d6QUdR?oc=5",
-      "source": "Moomoo",
-      "published_at": "2026-11-24T16:34+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Woodside Energy Group Ltd(WDS) Stock Price Today | Quotes & News - Moomoo",
-      "url": "https://news.google.com/rss/articles/CBMiogJBVV95cUxNQ1dpYzVxd0ZPQm5jbm5qQUlWZl9JVEh1N3U3V3llVUdfUGJOQ29HUU14aGlFRmd4NzRJMWM5bWNNZXdJM3Bpc3Fyb19lTG8xMjFyZEVZRlJBakZhaVBPbE5pNXZEMnJsYWtvdzhmdGZvMDJzSjY1aVFQckx5RHdNOWlLMFM1RDRlWjFwWkRVeW5vdEYzeWNHa2VRUXA1ZDN6WkxDcV9DMHJ0eTVoRllTVjViWjVpaUJqUHZfZ0N6aGd4X3R1eWdQbF9DNGEzdHloMkJ0UU9MOC1wUTNoeVhLdUtSdFcyNl96YmpuUzhoMENVQm5pdno1dnBkVThpdk1tNHMyck03eTlYdlVNSTB0RGVhRi1IVVVXa3pOOUNpdTZDZw?oc=5",
-      "source": "Moomoo",
-      "published_at": "2026-11-24T16:34+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "法新社直擊台灣股民心態！黃仁勳回鍋台股大漲 「老黃事件」竟成抄底契機 - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9QZVJBQVBQclBlYzVwWDg4d2E5UHJ2Z1gwNHZ1VTZIS1JTcTJkQ1JHdERJM3hacWVNc3huTG1LdmZKajJwTFVTMkUzSk1TbHk0c3NHM0dKMno?oc=5",
-      "source": "自由時報",
-      "published_at": "2026-11-24T16:21+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Forex Today: Global stocks rally led by tech shares, US Dollar stabilizes at 20-month highs - tmgm.com",
-      "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPbGlWWW5CLTBzaE00eWUxNGEyakNPa1FLV3dvYWtmSmNvUG1jX0NURDR2c1hqY3pwYWcwMTlEME56Um93eVZINkhqWHpPN0MtTTVVelhHMDZrc0VJdllQT3o2VktBQUJwNGxpcllvVWdmb0NuTlNvQjRRZ0V0OWFramNKZS1Nc20wNERmSm5BQXlJbkw4VExja1BXRXAyNGNRZ0FPdTlOWnlwU0hPSVZtNkMwRkNLRHJVQkg2cDlCbEo5cjU2QjdmMFgyMVJXOUxwNVd1SWlPSzBKZ3d1NzN3LVFVeWVqaGRPREh0Nk0tbEFyQQ?oc=5",
-      "source": "tmgm.com",
-      "published_at": "2026-11-24T15:43+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Summary of HK Stock Ratings: Tianfeng Securities Maintains Buy Rating on Lenovo Group - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNaE5IbnpKTjVSeEpXcUV0UU50WWlYbWRSYV9HSDNFWUsyQnQxYTZPc21vUXZhX0tWQU1tU284Mnd0RWJEZFBSRVRjOGxOUlNVNmxweFFMVjF2RDVkNFdOVGdEOXB2R24zQkxSUEZnNmpQOTlxVWMyTEFLWnZzMHNzZENMRHBCMExORlNCMEtPNGV0Sm5vSUREWXo0dEFBcWNNTElmWnhaRkU3UEVYZFJRMw?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-24T15:10+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "AI investment sentiment rebounds; emerging market equities post largest gain since July - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOUXlDYU9DbUFwc0FXSkpsS0MyTWJPci11RlpSYkEzUER4OC1ZMm1TcUVfb3ZVaXU0WVBpX1ZwdDRDZnE3NlpVNFhWNWw0UjhBbXBNWUNlTEhIbGY3ZlJkSXpqdUhFU3VjVjJyU2lOV2dNbnZJYnhDaUpoUW1SMkpNTzg5Vlk1TGZlc282UTFEbnFFSWRnYVJzV2NnNUFCbFoyeGRFS01RVUExVUt1c3lvYUFzYTlYZVVKb2c?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-24T14:55+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "中國華君創歷史新低 - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1zUmtqd1JKVU93TnR5c1pCd285VV93RERqaE0yZXRjMXFOeTZrZWF3MVVMOU4xU2Y4NkxrZjY2RDY1eXVvYk82cnNUMzR1eE8tUDBNVzZCNWFUTlViZjF0Sk10QUlFR0tkelo4?oc=5",
+      "title": "中國澱粉(03838.HK)11月24日耗資12萬港元回購64萬股 - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFB2VjZpS2dZUFBfbldtY1RHd05VQU4ycmlYVnd2X2FKU2R3dlZfY0JxNzRpcGpEanRoa2VtbDFUSlJsd2paYUlrd2xZekJCRm03dVh0VmpDaUlJeGRnWHZhZHV6R2l0ejJNbzJN?oc=5",
       "source": "TradingView",
-      "published_at": "2026-11-24T14:42+08:00",
+      "published_at": "2026-11-24T17:28+08:00",
       "importance": 2,
       "risk_score": 0
     }
@@ -186,6 +186,6 @@
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-11-24T19:38:34+08:00",
-  "checked_at": "2026-11-24T19:38:34+08:00"
+  "updated_at": "2026-11-25T05:29:21+08:00",
+  "checked_at": "2026-11-25T05:29:21+08:00"
 }
