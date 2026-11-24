@@ -1,86 +1,82 @@
 {
   "schema": 1,
   "risk_level": "red",
-  "risk_score": 9,
+  "risk_score": 3,
   "risk_reasons": [
-    "費半明顯下跌",
-    "NASDAQ明顯下跌",
-    "日經明顯下跌",
-    "韓股明顯下跌",
     "出現重大風險新聞"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 -12.9%｜NASDAQ -7.4%｜日經225 -5.1%｜KOSPI -8.4%｜台股加權 +2.2%｜恆生 -2.0%",
-    "⚠ 全球市場風險｜美債10Y 4.98%｜VIX 27.9｜WTI原油 81.89美元 -1.8%（高於常態，觀察）｜布蘭特原油 88.14美元 -2.0%（高於常態，觀察）",
+    "⚠ 全球市場風險｜費半 +1.8%｜NASDAQ +0.9%｜日經225 +4.4%｜KOSPI +3.8%｜台股加權 +9.1%｜恆生 +1.0%",
+    "⚠ 全球市場風險｜美債10Y 4.92%｜VIX 26.6｜WTI原油 79.98美元 -0.2%（常態參考區）｜布蘭特原油 86.39美元 -0.3%（高於常態，觀察）",
+    "⚠ 全球市場風險｜油價觀察｜〈能源盤後〉 原油重挫逾3%！Brent、WTI齊創近三個月新低 利比亞復產加劇供應過剩疑慮",
     "⚠ 全球市場風險｜Hong Kong Stocks Midday Review | All three major indices declined, with the tech index down 1.0",
-    "⚠ 全球市場風險｜TSIA侯永清喊話AI大趨勢不變 「未見客戶砍單或調整出貨」",
     "⚠ 全球市場風險｜SoftBank’s $1 Trillion Moonshot: Masayoshi Son Reportedly Explored Acquiring HBM Leader SK Hyni",
-    "⚠ 全球市場風險｜台股重挫、股債可能同跌 施羅德 2027 十大預測：配置要跨出股債",
-    "⚠ 全球市場風險｜Kinwong Electronic (03228.HK) saw an increase of 193,500 H-shares held by SCHRODER INTERNATIONA",
-    "⚠ 全球市場風險｜Taiwan shares rebound to close up at 36,811 points",
-    "⚠ 全球市場風險｜Taiwan launches first next-gen trial network platform ahead of era of 6G",
-    "⚠ 全球市場風險｜台股重挫是短期波動 劉揚偉：相信黃仁勳打造AI產業眼光"
+    "⚠ 全球市場風險｜Jensen Huang's Return Ignites Market: Asia-Pacific Tech Stocks Rally Together, South Korean Sha",
+    "⚠ 全球市場風險｜巴逆逆才認賠39％出清股票！黃仁勳當晚就回歸　網驚：讚嘆台股媽祖婆 | 財經 | CTWANT",
+    "⚠ 全球市場風險｜US stock indices rebound as Nvidia reinstates Jensen Huang",
+    "⚠ 全球市場風險｜限空令3.0+國安基金發威 台股大漲778點",
+    "⚠ 全球市場風險｜Gold reclaims $3,650 as Nvidia news sparks rally ahead of US PCE"
   ],
   "markets": {
     "US_SOX": {
       "label": "費半",
-      "price": 8408.591,
-      "change_pct": -12.8
+      "price": 9588.05,
+      "change_pct": 1.8
     },
     "US_NASDAQ": {
       "label": "NASDAQ",
-      "price": 22617.732,
-      "change_pct": -7.4
+      "price": 24089.559,
+      "change_pct": 0.8
     },
     "US_SP500": {
       "label": "S&P500",
-      "price": 6910.39,
-      "change_pct": -5.6
+      "price": 7237.17,
+      "change_pct": 0.8
     },
     "US_DOW": {
       "label": "道瓊",
-      "price": 48147.33,
-      "change_pct": -4.0
+      "price": 49595.31,
+      "change_pct": 1.0
     },
     "VIX": {
       "label": "VIX",
-      "price": 27.88,
-      "change_pct": -22.4
+      "price": 26.62,
+      "change_pct": -25.8
     },
     "JP_NIKKEI": {
       "label": "日經225",
-      "price": 56436.65,
-      "change_pct": -5.0
+      "price": 58927.06,
+      "change_pct": 4.4
     },
     "KR_KOSPI": {
       "label": "KOSPI",
-      "price": 4708.54,
-      "change_pct": -8.4
+      "price": 5052.73,
+      "change_pct": 3.8
     },
     "TW_TAIEX": {
       "label": "台股加權",
-      "price": 36811.89,
-      "change_pct": 2.2
+      "price": 40160.85,
+      "change_pct": 9.0
     },
     "HK_HSI": {
       "label": "恆生",
-      "price": 22383.74,
-      "change_pct": -2.0
+      "price": 22627.29,
+      "change_pct": 1.0
     },
     "US10Y": {
       "label": "美債10年殖利率",
-      "price": 4.982,
-      "change_pct": 1.4
+      "price": 4.918,
+      "change_pct": 0.2
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 81.89,
-      "change_pct": -1.8
+      "price": 79.98,
+      "change_pct": -0.2
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 88.14,
-      "change_pct": -2.0
+      "price": 86.39,
+      "change_pct": -0.4
     }
   },
   "active_news": [
@@ -93,14 +89,6 @@
       "risk_score": 4
     },
     {
-      "title": "TSIA侯永清喊話AI大趨勢不變 「未見客戶砍單或調整出貨」 - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE11Q08yY29YVmNJaG9WYjBpYkJvNWRvNEtXd1Bzd0VaY3h0WkN0ZWZGeHpjdTgwMTBrTThramYwWEF5ckJyWE9UZVlQT1V0Zmg4WFNwMTBMZ0w?oc=5",
-      "source": "自由時報",
-      "published_at": "2026-11-23T18:21+08:00",
-      "importance": 2,
-      "risk_score": 2
-    },
-    {
       "title": "SoftBank’s $1 Trillion Moonshot: Masayoshi Son Reportedly Explored Acquiring HBM Leader SK Hynix with Massive Premium - Mashdigi",
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNVGROMEVLcF9YWmVQUWI0MFQxQzBiVVlMYjhGZzBLaHc0bW9xZmdjZHdyaHpicEp5MGhjVm9ScVRsUTRDdTZLMlYxZTl2Z2dzNFRQSzFHaWMxYUNicHFEMkl0UnBaUG9RdHI1QjcyajJIZEFsazhuMXpLY3lhLVNocy13X0c?oc=5",
       "source": "Mashdigi",
@@ -109,80 +97,95 @@
       "risk_score": 2
     },
     {
-      "title": "台股重挫、股債可能同跌 施羅德 2027 十大預測：配置要跨出股債 - Business Insider Taiwan",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5lOXZpcDAxOHZyRUpfbGppY1BGUGtqMHYzdGJxcTRPcEp0Ym9kbzFTYUtxQWN3aHdfbHZpa2JYZGI5dU1na0w4OUxrVUQyUnNyLTM3UG9wSQ?oc=5",
-      "source": "Business Insider Taiwan",
-      "published_at": "2026-11-23T22:16+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Kinwong Electronic (03228.HK) saw an increase of 193,500 H-shares held by SCHRODER INTERNATIONAL SELECTION FUND - CHINA A, valued at approximately HK$8.8633 million. - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNQ1VRVW9IYUg3XzJpbkRBZ1RmR21SR29UMlBaSmdUTXFWNFNVUVJiRDNzX0ZGLUxYNFlPaWZ3MHhobmV6TzNsOXRmQW16NVl4NDJMMUhpbEdCeG45cExoWXhHd3RQV0ZNZWV6OVplMFRzWk1jeldsWFRkd3gybl9xX1U4XzA1U29TelRvbzFDd2hJWE9KbXItbUZ0aVBIMTA?oc=5",
+      "title": "Jensen Huang's Return Ignites Market: Asia-Pacific Tech Stocks Rally Together, South Korean Shares Trigger Circuit Breakers - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOVlk1bFlwQkFfSEtvYzlZTno5ZUQxSmx0anBGbUJpaGRDV2lYZFB1eWJzTDhkRlhkano0QlRIc3hwYWlfRUl5dmZLSW1qRE9EX2RHQnRLVFlGTGpqdEpqLXVHbVNtZWt1MXFudTUzRnFWM2Z0OGhKQlVvclIydDRMN0tNd0hmZ3dqRzJqVjFaTVdzV0tLNk9oaFRVaGM4ZkVqVkNneUFZNA?oc=5",
       "source": "富途牛牛",
-      "published_at": "2026-11-23T21:43+08:00",
+      "published_at": "2026-11-24T09:34+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "Taiwan shares rebound to close up at 36,811 points - Formosa News",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9CSWl0ajNkUVVTTGk4TlNQSHVGRDd5bzhZNS1vN3NOaWJZR2NXeGRnM1lwWnpzeUlqNXRyWUk4eE55WEhMUlpGSzRRTWJQaGpTYVpRaVdxUHhUTFdI?oc=5",
-      "source": "Formosa News",
-      "published_at": "2026-11-23T21:17+08:00",
+      "title": "巴逆逆才認賠39％出清股票！黃仁勳當晚就回歸　網驚：讚嘆台股媽祖婆 | 財經 | CTWANT - CTWANT",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5fblEzZmQxM3ZoY200REZjOEo5UGhoY1FwUFptNHpBY1llS0hFNERFOTlrQU5QREZVSWpNTmpodEd3VDlHWGg0S3FFaVh3OTDSAVRBVV95cUxQV0poNjdqWm9Vd09IU1h5LWpVYjdnNzZzcXE2Y0tWT05UUTRvYlFnSjJaUkl6VWVxbERxeEdEZjNEaFo0YWJZRjlqcDRHb2tlVUwyUks?oc=5",
+      "source": "CTWANT",
+      "published_at": "2026-11-24T08:29+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "Taiwan launches first next-gen trial network platform ahead of era of 6G - Formosa News",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9FbWlIbXp3WHRFMmJfMlptaERQUlRjYmd0ZHNiOXdmUEJMZS1LaE5DeG85b0UtZHRKYmNGdE9pQTF0Z0VQV09uYmFSTDBfMkREZ0JuR2ZqNHBxcnNT?oc=5",
-      "source": "Formosa News",
-      "published_at": "2026-11-23T21:02+08:00",
+      "title": "US stock indices rebound as Nvidia reinstates Jensen Huang - tmgm.com",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPbXg0MDFSRFhWZ0VCbzJGYU9wcFBGaXlDb1VRaXRMR19COUQ1UDJtY2puRy1TZER3RVBsRHE0QVZNS2NRRldsNWZyUm1CRi1VUnZxeXQ3WXQ5Um5TMDI0SExtNXJWd2h4dG92QzBKMmJvTVNTaGpsUlJUNm9IY1pOeFBqdEJYRU0xRUgtS2JwdFNLamRFTDJpblFBWHoxazV6OTh6NHZmMUFJUkZOTktfV0NPanRZdFh5bzdNczNLbnZZZURDdVRPQw?oc=5",
+      "source": "tmgm.com",
+      "published_at": "2026-11-24T06:06+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "台股重挫是短期波動 劉揚偉：相信黃仁勳打造AI產業眼光 - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1HUWJPRWtlSlRWVDh6a29INmZ2UWxoM2hVQkhjLWZRMF9LNURmNEt4SDJyWGxVUnJEQ1lGNG56dlpFZU5FN1I4MkVQa28wZ0NXT3NpQzhEYk0?oc=5",
+      "title": "限空令3.0+國安基金發威 台股大漲778點 - 自由時報",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE01TU95OXZTTnRyTFBFRzF6bW81Sm1ZUVR1NVhaNVE3Sk5FS1R2N1I5blMwdEpHVk45UXFLZW1yb1owUzlfLXlNT1ZEZ1FwckVVTVBMLWdDd1U?oc=5",
       "source": "自由時報",
-      "published_at": "2026-11-23T18:47+08:00",
+      "published_at": "2026-11-24T05:30+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "台股近期震盪 經長：台灣基本面非常好、今年經濟成長率估破12％ - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFB3cXZQMXljc0ZlajFkZk1vV29yMHJVdWxCYXgyTXBUSE9NQ2pWOHVhWWNKczFVVGRYazRLYUZiT3RJMk43cDFxejdiRVpQWGQyQWhWM1NSZ0c?oc=5",
-      "source": "自由時報",
-      "published_at": "2026-11-23T17:56+08:00",
+      "title": "Gold reclaims $3,650 as Nvidia news sparks rally ahead of US PCE - tmgm.com",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQMzg1MEtpR19tNFpON3VaaFZ4bTB4cGRHaE52YUszRnI0SGE5OXhLS21aVzBOQWkxVURkS21jT2JEcDhVaVF0M3pDQVh6b2o4WVdDSUNUZDFxSDZhMjNvaGVxVHNDeVBwbHdYWkE2ZnlPSU8wSk5XLTJIREVFTG5rQWswWXVRbTlWcmZPcUN0RnVobE0yQUJQSzBoNjdCaTg5N2J4MFQyRF9ad0xGdVk2a0x0dmtQWGhlODBqSVhDYmJCNG1hbS1BR1lINHRoRDA?oc=5",
+      "source": "tmgm.com",
+      "published_at": "2026-11-24T03:38+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "卓榮泰喊擬擴大國安基金規模！台指期夜盤翻紅漲逾500點、台積電ADR盤前飆8% - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiwwNBVV95cUxONm5GUEJKWjhRQ1ZVdHhGdk9LZ0FMdUl4bkxwellUeldIcXZjTHY4RDhDVGRhdi1uLTB5cnV0QTVYNnRXeHpOeDhIRVZFRDM2TWtXTzd2NTdPMUxIa0pxR1E2T19HODlrRnJ3YXJyZjJBS0xYdjZUVnJRVU5lRkF4bXpGbG9QejBqb1hpVDRrb1dVODhGelEtT08xaGdhMnUwelByMmNyaHA1OTZUWFVjSEFPZ2U0dDhGd0Y3OWpoUThRNHJuUmRqZTZhQTd6aDlpZG5jNlFxLWFfQUNpOVVGOW9mS1ZnSUl6X2tZVkJoQmllWGN5Yk5fRm12N2FMTGpPUUM3a2FwYnZwTmo5Z1N3YkFvM0Y4bDZINDhvQUlLeW5PTDFRcjI2SHpwSXFlMkVZdTJKV201cUV4TGduM2p0N01qWWxUUkpnMW5DeEZEcGxNbWFmZnliQ1IzTkRTOFBxQ1VkUDNHZHlMOW1nVXBvZExja05TWjlEMUd6UWJLTmwtcm4tVkExSGhmNndYcnBfZm9GVXkxQm1faDl6VXBERV9QcFh3alpvbXV0dmxhNVFNcUZPaVh1RGJ2bDlLTk5BTGJz?oc=5",
+      "title": "CIFI HOLD GP(00884) Stock Price Today | Quotes & News - Moomoo",
+      "url": "https://news.google.com/rss/articles/CBMioAJBVV95cUxOYWZrT3NxeHktdUJGQnZVZ2NIalRCZUdfeU55aTlBWTQzdmxad1BKZU9FbS02TEVLZEtpT0l3YUtERzAtR0ZNakwzOHFRNWEtRDQ0RS01dlNYVk55dEg4eE1NS21xWnVyMHE2dG1Md1ZZNUU1ZE55ZzcycERkWGcyR0ZtN1BZMWVvQWpiYm5wdFZjSlNWQ0l0V3FqWVpOOXRPdUxtLTBtRXRMXzhPUG1WZUc2cVE2dWhBMlBnLW5iSU1DUTFxdHVtbk5hQ256dmJjRk9lU3hCam5qcHlIYjdzM0dhTUp6WW83X2dTVm11bnlhdFVJaVMzSFlqWWZ4OUV0cFdydjZmamxHeVMwZC1hUkZQX3hYTHZ3NmgxcmtpYlc?oc=5",
+      "source": "Moomoo",
+      "published_at": "2026-11-24T03:24+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台指數漲停！阮慕驊激動發文「外資被幹掉700億」 網友開嗨：台股漲三天慶祝 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiwANBVV95cUxPenVzdXpPU04ySnBua211QTlmME5SSDRFNFVNbk9raDdSVEc4S2xyQTRIY21vRG9iLThMdHJHZFA3QklET01qeHRMMlVoTXpIR3Rubi1taUI3OGxJTkJReUNuc1NhYmJyWTIycl9sNnpfdERvWjFhcUJBMHF0TnBBd3hpNTFFUU9nZUVZNmFhQTFKMXBxVUN1SkFGN3JsVTBXMzNhSFR3RFZ4dlBIamNXTFkyVWhoS1ZmZE5WOEl4WWl3NVcxZkc2T3JXNkoxX2JiSjhBUDJVV2tSTnhSYzhvVUozSjNpaUQwWHc0enI2R0FMbl9XSGoyazBoVWtPX0FYLWgzZjdNSEJ6N1dOSUN2Q3VUb0N5OE8wM3VrNFhSdjVVeldHbmRPZmxvSlNBd1VEV1AtM2dfVkZVMXJfOUptaDBOeFhSLWFpTDdTNjdWZjdYZWFYLUc5NTRua0NTNFdDRi1rSlozc0h0Y1dpZTA1cENqZUJjcnNhclBGYUwtRUQ3R3UwS2NocnVqVURReXd4UGt5dEV0c0FaMlQ1ckU1eGMwNjBBT24wUjU0R1N5b19tVGkxcXROTzgteHFTcDZO?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-11-23T17:52+08:00",
+      "published_at": "2026-11-23T23:20+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "Overbought conditions triggered a rebound! Pre-market U.S. tech stocks rallied across the board, with NVIDIA surging nearly 10% and Anthropic rising more than 5%; Nasdaq futures gained nearly 4%. - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOZXhsYTVYVDlsU0w1bk1rcGFWODBHcnhZbUY0RjlnOXZVNjhoR3BEamFwS0w3eFRkeEdHYWFqVmFFUTE1UEo3MGJoZ2hrNmJFZWNPQjZuZGJfZUtBcWtGdU4tb1BZeExVRDhQeVhxWjU5ZDN5d3pkWmd2aG1lbVpHdTBoNkd5TVpQcXJTOEVMSVlNRTlpRTJna01FYUF1MWV0SWpOLVBwX21IME1u?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-23T17:40+08:00",
+      "title": "Taiwan Semiconductor Manufacturing Co Ltd(TSM)股票11月23日盤中上漲15.94%：關鍵驅動因素揭曉 - TradingKey",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNY3hlLUZYZUM3Rl92SGhKbkZlNVpkWWszZXc2cUhQbXV3ZGtqZnVpRFMzSzJpLW5GTE9hVDR5SV9pb085bHh6ZVZHTXlPSjctNER2Yzc1d1h2ejVMaTBUemdocUQ5X09IM2xLQ3V2T3M5dlROV0FSamZRcTVqX2JwSWRsdWgzdW1rNEZlZHFic2tPRnFj?oc=5",
+      "source": "TradingKey",
+      "published_at": "2026-11-23T23:17+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "#IXIC NASDAQ指數 - Stock market today: Dow, S&P 500, Nasdaq futures surge amid relief rally - 股市爆料同學會 - CMoney",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE45TXljSnRRX2ppOUs4bENwUzBBMHNwbEZKTzM1V1o0YWIyeWpaX01INWtqZXBhaEJmN2wwTDhNN0hwYmRoOHp5RmxRVXQ1ckhLYS1CVEdDYzg?oc=5",
-      "source": "CMoney",
-      "published_at": "2026-11-23T17:38+08:00",
+      "title": "黃仁勳復職輝達「台灣神人14小時前神預言」！連時間全命中 事後再爆1大事 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMivwNBVV95cUxPbzBGUlY3RHlSaFpEcU9acVVaVFhXSHVRVlZwN2JYWFUtTUhNcUt1ckxKckVCRzg5WGlQTGRhd0hMa0wtbWJqMWg5RU50Mm4yOWFaZmR2dDZ2Ui11N1J3NTNTd19YeFpxajV6ZzJrQmMyWVYxQVBIcUNzUlVNOEZCUDJtTjFZYUxsYzRYZ1BrdUlHNnlCcUNSdWxpTk1mM1doQm12YTA0RVRfeS1NM3pveXpIWEhhVFZXWVZ6RXNNTUJsVEFvbnhTVWF0cDV6SHhwYjZuZnpILTVHMDhBbGJTT0N2ay00QkkzTFdMSjNtQ1lQWi1YdE9FVUZLSXJ2SnBYRWRkSmJGNUVyRW1tU3hPVFZELW5TQXgtQVJpWVljU2c5RUE2cW1DYVdKeDdObzgtYm8zU0JRT0tQTkFXd1JTYi1abU5FSUVHZkthcThOb1o2blZOMG9MTnk4aUFvM1F1Y0RGVDJvUjZPVDRnYURJaTFiZHB1b05hVGE0SnRrTW9SSF9vbmdKTUxYZkdXV2JGam1KZ0x0X1dOVnFVSndiWVRDLWUtVTVvRGJ1dXFXMzBWbUJqTF8zUFQ1TGpjYVk?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-23T23:17+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "快訊／黃仁勳歸來救市！美股開盤全面噴發 輝達飆32%、台積電ADR爆漲20% - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMilgNBVV95cUxOREM5eENUbVlHc3ZjMDE5MXVMaXBiUno5WDd0ekJwTUQyb3NVR3FXeFhtSnJvalN0V1FsVTl3MjFNRnhONklPTEVuOFNPRldVbElzU1JyeXo4OTRkTjNJaFFFNWI0d1Z0Zi1WeW43emhneG9qdkpyRTdwczhkMGdkZFo5QjZNai1SUXgyRTU0eHNON1JMNERESDR6Q1UyVFFDVDhFT28xMkVkb0tNMVh2SDRxUjJGbUtrUVRPTEdqTFVOQ1YtSWJ6c291UmQ3TGprb0twdDlva0xBTmtJeG5GNm92T2RaZ0lWQzJ4dDFKVlpidGtXZFo0YTNYTkFWV0RzalVhdXVsOXhkeHhIQmtBck02TFdyWS1BNUx1ZDhBTW85ODBVVG5kaENHU2IxVlVrcGU4Ym5BX0E3S0xlY2FZZ3RDZEJteno3UmtYT25ndVpwdmZtVjQ3UE1QemV6NHNNdlV4OFZ3R0NWYl9ieDVZSmRrVFQ0WHYxWWZubG9mTnAzQXdyZnJNMm1pR01ZU0M1dVE4a3dR?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-23T22:50+08:00",
       "importance": 2,
       "risk_score": 0
     }
   ],
-  "oil_watch": [],
+  "oil_watch": [
+    {
+      "title": "〈能源盤後〉 原油重挫逾3%！Brent、WTI齊創近三個月新低 利比亞復產加劇供應過剩疑慮 - 鉅亨網",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9pUWVfelJVcnNfUGczMkZXNG5uMkJnc1d4MG5FT2NzZHI5aGRoRXRTVXRJdEtUWnlMVDVMSE9jZXFjNFRJU3BjLUZ1QQ?oc=5",
+      "source": "鉅亨網",
+      "published_at": "2026-11-24T05:31+08:00"
+    }
+  ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-11-23T22:22:29+08:00",
-  "checked_at": "2026-11-23T22:22:29+08:00"
+  "updated_at": "2026-11-24T09:45:04+08:00",
+  "checked_at": "2026-11-24T09:45:04+08:00"
 }
