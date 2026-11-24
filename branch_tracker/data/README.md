@@ -1,18 +1,18 @@
-# 分點追蹤稽核｜2026-11-10
+# 分點追蹤稽核｜2026-11-23
 
-資料日期：**2026-11-10**。報告產生時間：2026-11-11T04:34:50+08:00（台灣時間）。請先核對資料日期；舊日期的報告不代表今天採集成功。
+資料日期：**2026-11-23**。報告產生時間：2026-11-25T00:28:03+08:00（台灣時間）。請先核對資料日期；舊日期的報告不代表今天採集成功。
 
 ## 今天是否收齊
 
 | 項目 | 實際結果 |
 | --- | --- |
-| 當日排行股票 | 251／253檔 |
-| 當日排行筆數 | 7,528筆 |
+| 當日排行股票 | 0／262檔 |
+| 當日排行筆數 | 0筆 |
 | 完整採集交易日 | 0 |
-| 歷史明細累積 | 517,586筆 |
-| 曾成功補抓的股票／分點組合 | 8632／9781組；其餘仍待補抓 |
-| 仍留有補抓錯誤的組合 | 30 |
-| 資料庫容量 | 98.58 MiB |
+| 歷史明細累積 | 521,306筆 |
+| 曾成功補抓的股票／分點組合 | 8694／9781組；其餘仍待補抓 |
+| 仍留有補抓錯誤的組合 | 88 |
+| 資料庫容量 | 99.34 MiB |
 
 排行完整不等於歷史完整；只取得買超／賣超各前15名，未上榜不代表沒有交易。歷史回填不能算成當時已知訊號。
 
@@ -23,15 +23,15 @@
 | 資料庫結構 | ok |
 | 163檔覆蓋及排行筆數與狀態報告一致 | 未通過 |
 | 買進－賣出與淨買超不符（允許2張四捨五入差） | 0筆 |
-| 當日排行缺有效官方收盤價或成交量 | 2638筆 |
+| 當日排行缺有效官方收盤價或成交量 | 0筆 |
 
 ## 股價驗證到期狀態
 
 | 觀察期間 | 已有後續股價 | 尚未到期或缺價格 |
 | --- | --- | --- |
-| 5個交易日 | 88,000筆 | 47,110筆 |
-| 10個交易日 | 68,456筆 | 66,654筆 |
-| 20個交易日 | 19,556筆 | 115,554筆 |
+| 5個交易日 | 107,560筆 | 27,550筆 |
+| 10個交易日 | 102,670筆 | 32,440筆 |
+| 20個交易日 | 63,566筆 | 71,544筆 |
 
 同一筆分點排行有3個觀察期間，不能當成3筆獨立成功交易。尚未到期不填零報酬；滿期後仍須看樣本數、失敗案例、同股同期基準及樣本外結果。
 
@@ -39,297 +39,295 @@
 
 | 股票 | 方向 | 分點 | 買進張 | 賣出張 | 淨買超張 | 成交量張 | 淨買超占比 | 收盤元 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 6531 | 買超榜 | 群益金鼎 | 1,204.00 | 7.00 | 1,197.00 | 5,507.63 | 21.73% | 730.00 |
-| 6531 | 買超榜 | 凱基 | 256.00 | 38.00 | 218.00 | 5,507.63 | 3.96% | 730.00 |
-| 6531 | 買超榜 | 台新 | 237.00 | 126.00 | 111.00 | 5,507.63 | 2.02% | 730.00 |
-| 6531 | 賣超榜 | 台灣摩根士丹利 | 74.00 | 565.00 | -491.00 | 5,507.63 | -8.91% | 730.00 |
-| 6531 | 賣超榜 | 凱基-台北 | 418.00 | 672.00 | -254.00 | 5,507.63 | -4.61% | 730.00 |
-| 6531 | 賣超榜 | 統一 | 46.00 | 156.00 | -110.00 | 5,507.63 | -2.00% | 730.00 |
 
 計算方式：淨買超占比＝淨買超張數÷當日成交量張數×100%。來源張數有四捨五入；官方原始成交量單位為股，先除以1000。
 
 抽樣來源（可人工比對日期、分點與買賣數量）：
-- [6531 群益金鼎](https://concords.moneydj.com/z/zc/zco/zco0/zco0.djhtm?a=6531&b=9100&BHID=9100)
-- [6531 凱基](https://concords.moneydj.com/z/zc/zco/zco0/zco0.djhtm?a=6531&b=9200&BHID=9200)
-- [6531 台新](https://concords.moneydj.com/z/zc/zco/zco0/zco0.djhtm?a=6531&b=0039004200300030&BHID=9B00)
-- [6531 台灣摩根士丹利](https://concords.moneydj.com/z/zc/zco/zco0/zco0.djhtm?a=6531&b=1470&BHID=1470)
-- [6531 凱基-台北](https://concords.moneydj.com/z/zc/zco/zco0/zco0.djhtm?a=6531&b=9268&BHID=9200)
-- [6531 統一](https://concords.moneydj.com/z/zc/zco/zco0/zco0.djhtm?a=6531&b=5850&BHID=5850)
+
 
 ## 補抓錯誤與待處理項目
 
 | 股票 | 分點 | 最後嘗試日期 | 錯誤 |
 | --- | --- | --- | --- |
-| 6548 | 元大-南屯 | 2026-10-27 | History date or numeric mismatch |
-| 6584 | 統一 | 2026-10-27 | History date or numeric mismatch |
-| 6640 | 兆豐-鹿港 | 2026-10-27 | History date or numeric mismatch |
-| 6640 | 玉山-信義 | 2026-10-27 | History date or numeric mismatch |
-| 6640 | 群益金鼎-永和 | 2026-10-27 | History date or numeric mismatch |
-| 6643 | 永豐金-敦南 | 2026-10-27 | History date or numeric mismatch |
-| 6667 | 元大-成功 | 2026-10-27 | History date or numeric mismatch |
-| 6684 | 新光 | 2026-10-27 | History date or numeric mismatch |
-| 6684 | 元大-雙和 | 2026-10-27 | History date or numeric mismatch |
-| 6690 | 元大-彰興 | 2026-10-27 | History date or numeric mismatch |
+| 3515 | 凱基-站前 | 2026-11-23 | History date or numeric mismatch |
+| 3526 | 群益金鼎-內湖 | 2026-11-23 | History date or numeric mismatch |
+| 3526 | 富邦-台中 | 2026-11-23 | History date or numeric mismatch |
+| 3526 | 群益金鼎 | 2026-11-23 | History date or numeric mismatch |
+| 3526 | 凱基 | 2026-11-23 | History date or numeric mismatch |
+| 3529 | 永豐金-匯立 | 2026-11-23 | History date or numeric mismatch |
+| 3529 | 合庫證券 | 2026-11-23 | History date or numeric mismatch |
+| 3529 | 統一 | 2026-11-23 | History date or numeric mismatch |
+| 3532 | 第一金 | 2026-11-23 | History date or numeric mismatch |
+| 3532 | 群益金鼎 | 2026-11-23 | History date or numeric mismatch |
 
-共30組保留錯誤，上表最多顯示10組。錯誤可能是先前嘗試留下的，修正後尚待輪到重抓；不得當成零交易。
+共88組保留錯誤，上表最多顯示10組。錯誤可能是先前嘗試留下的，修正後尚待輪到重抓；不得當成零交易。
 
 ## 163檔逐檔稽核
 
 | 股票 | 採集狀態 | 當日筆數 | 缺漏原因 |
 | --- | --- | --- | --- |
-| 1101 | ok | 30 | — |
-| 1102 | ok | 30 | — |
-| 1104 | ok | 30 | — |
+| 1101 | failed | 0 | Source date missing or stale |
+| 1102 | failed | 0 | Source date missing or stale |
+| 1104 | failed | 0 | Source date missing or stale |
 | 11044 | failed | 0 | Source date missing or stale |
-| 1210 | ok | 30 | — |
-| 1216 | ok | 30 | — |
-| 1229 | ok | 30 | — |
-| 1301 | ok | 30 | — |
-| 1303 | ok | 30 | — |
-| 1326 | ok | 30 | — |
-| 1402 | ok | 30 | — |
-| 1476 | ok | 30 | — |
-| 1477 | ok | 30 | — |
-| 1503 | ok | 30 | — |
-| 1504 | ok | 30 | — |
-| 1513 | ok | 30 | — |
-| 1514 | ok | 30 | — |
-| 1519 | ok | 30 | — |
-| 1560 | ok | 30 | — |
-| 1590 | ok | 30 | — |
-| 1605 | ok | 30 | — |
-| 1608 | ok | 30 | — |
-| 1609 | ok | 30 | — |
-| 1717 | ok | 30 | — |
-| 1736 | ok | 30 | — |
-| 1773 | ok | 30 | — |
-| 1802 | ok | 30 | — |
-| 1809 | ok | 30 | — |
-| 1810 | ok | 30 | — |
-| 1904 | ok | 30 | — |
-| 1905 | ok | 30 | — |
-| 1907 | ok | 30 | — |
-| 2002 | ok | 30 | — |
-| 2006 | ok | 30 | — |
-| 2027 | ok | 30 | — |
-| 2059 | ok | 30 | — |
-| 2101 | ok | 30 | — |
-| 2103 | ok | 30 | — |
-| 2105 | ok | 30 | — |
-| 2106 | ok | 30 | — |
-| 2206 | ok | 30 | — |
-| 2207 | ok | 30 | — |
-| 2258 | ok | 30 | — |
-| 2301 | ok | 30 | — |
-| 2303 | ok | 30 | — |
-| 2308 | ok | 30 | — |
-| 2312 | ok | 30 | — |
-| 2313 | ok | 30 | — |
-| 2317 | ok | 30 | — |
-| 2324 | ok | 30 | — |
-| 2330 | ok | 30 | — |
-| 2344 | ok | 30 | — |
-| 2345 | ok | 30 | — |
-| 2347 | ok | 30 | — |
-| 2355 | ok | 30 | — |
-| 2356 | ok | 30 | — |
-| 2357 | ok | 30 | — |
-| 2359 | ok | 30 | — |
-| 2360 | ok | 30 | — |
-| 2368 | ok | 30 | — |
-| 2369 | ok | 30 | — |
-| 2376 | ok | 30 | — |
-| 2377 | ok | 30 | — |
-| 2379 | ok | 30 | — |
-| 2382 | ok | 30 | — |
-| 2383 | ok | 30 | — |
-| 2385 | ok | 30 | — |
-| 2388 | ok | 30 | — |
-| 2395 | ok | 30 | — |
-| 2404 | ok | 30 | — |
-| 2408 | ok | 30 | — |
-| 2409 | ok | 30 | — |
-| 2412 | ok | 30 | — |
-| 2421 | ok | 30 | — |
-| 2441 | ok | 30 | — |
-| 2449 | ok | 30 | — |
-| 2454 | ok | 30 | — |
-| 2467 | ok | 30 | — |
-| 2480 | ok | 30 | — |
-| 2542 | ok | 30 | — |
-| 2597 | ok | 30 | — |
-| 2603 | ok | 30 | — |
-| 2610 | ok | 30 | — |
-| 2615 | ok | 30 | — |
-| 2618 | ok | 30 | — |
-| 2704 | ok | 30 | — |
-| 2707 | ok | 30 | — |
-| 2727 | ok | 30 | — |
-| 2881 | ok | 30 | — |
-| 2882 | ok | 30 | — |
-| 2891 | ok | 30 | — |
-| 2903 | ok | 30 | — |
-| 2912 | ok | 30 | — |
-| 2915 | ok | 30 | — |
-| 3006 | ok | 30 | — |
-| 3008 | ok | 30 | — |
-| 3013 | ok | 30 | — |
-| 3014 | ok | 30 | — |
-| 3015 | ok | 30 | — |
-| 3017 | ok | 30 | — |
-| 3029 | ok | 30 | — |
-| 3032 | ok | 30 | — |
-| 3035 | ok | 30 | — |
-| 3036 | ok | 30 | — |
-| 3037 | ok | 30 | — |
-| 3044 | ok | 30 | — |
-| 3045 | ok | 30 | — |
-| 3047 | ok | 30 | — |
-| 3071 | ok | 30 | — |
-| 3078 | ok | 30 | — |
-| 3081 | ok | 30 | — |
-| 3086 | ok | 30 | — |
-| 3131 | ok | 30 | — |
-| 3163 | ok | 30 | — |
-| 3189 | ok | 30 | — |
-| 3217 | ok | 30 | — |
-| 3231 | ok | 30 | — |
-| 3260 | ok | 30 | — |
-| 3289 | ok | 30 | — |
-| 3293 | ok | 30 | — |
-| 3324 | ok | 30 | — |
-| 3325 | ok | 30 | — |
-| 3338 | ok | 30 | — |
-| 3363 | ok | 30 | — |
-| 3374 | ok | 30 | — |
-| 3380 | ok | 30 | — |
-| 3406 | ok | 30 | — |
-| 3443 | ok | 30 | — |
-| 3481 | ok | 30 | — |
-| 3483 | ok | 30 | — |
-| 3515 | ok | 30 | — |
-| 3526 | ok | 30 | — |
-| 3529 | ok | 30 | — |
-| 3532 | ok | 30 | — |
-| 3533 | ok | 30 | — |
-| 3540 | ok | 30 | — |
-| 3580 | ok | 30 | — |
-| 3583 | ok | 30 | — |
-| 3587 | ok | 30 | — |
-| 3605 | ok | 30 | — |
-| 3653 | ok | 30 | — |
+| 1210 | failed | 0 | Source date missing or stale |
+| 1216 | failed | 0 | Source date missing or stale |
+| 1229 | failed | 0 | Source date missing or stale |
+| 1301 | failed | 0 | Source date missing or stale |
+| 1303 | failed | 0 | Source date missing or stale |
+| 1326 | failed | 0 | Source date missing or stale |
+| 1402 | failed | 0 | Source date missing or stale |
+| 1409 | failed | 0 | Source date missing or stale |
+| 1476 | failed | 0 | Source date missing or stale |
+| 1477 | failed | 0 | Source date missing or stale |
+| 1503 | failed | 0 | Source date missing or stale |
+| 1504 | failed | 0 | Source date missing or stale |
+| 1513 | failed | 0 | Source date missing or stale |
+| 1514 | failed | 0 | Source date missing or stale |
+| 1519 | failed | 0 | Source date missing or stale |
+| 1560 | failed | 0 | Source date missing or stale |
+| 1590 | failed | 0 | Source date missing or stale |
+| 1605 | failed | 0 | Source date missing or stale |
+| 1608 | failed | 0 | Source date missing or stale |
+| 1609 | failed | 0 | Source date missing or stale |
+| 1717 | failed | 0 | Source date missing or stale |
+| 1736 | failed | 0 | Source date missing or stale |
+| 1773 | failed | 0 | Source date missing or stale |
+| 1802 | failed | 0 | Source date missing or stale |
+| 1809 | failed | 0 | Source date missing or stale |
+| 1810 | failed | 0 | Source date missing or stale |
+| 1904 | failed | 0 | Source date missing or stale |
+| 1905 | failed | 0 | Source date missing or stale |
+| 1907 | failed | 0 | Source date missing or stale |
+| 2002 | failed | 0 | Source date missing or stale |
+| 2006 | failed | 0 | Source date missing or stale |
+| 2027 | failed | 0 | Source date missing or stale |
+| 2049 | failed | 0 | Source date missing or stale |
+| 2059 | failed | 0 | Source date missing or stale |
+| 2101 | failed | 0 | Source date missing or stale |
+| 2103 | failed | 0 | Source date missing or stale |
+| 2105 | failed | 0 | Source date missing or stale |
+| 2106 | failed | 0 | Source date missing or stale |
+| 2206 | failed | 0 | Source date missing or stale |
+| 2207 | failed | 0 | Source date missing or stale |
+| 2258 | failed | 0 | Source date missing or stale |
+| 2301 | failed | 0 | Source date missing or stale |
+| 2303 | failed | 0 | Source date missing or stale |
+| 2308 | failed | 0 | Source date missing or stale |
+| 2312 | failed | 0 | Source date missing or stale |
+| 2313 | failed | 0 | Source date missing or stale |
+| 2317 | failed | 0 | Source date missing or stale |
+| 2324 | failed | 0 | Source date missing or stale |
+| 2327 | failed | 0 | Source date missing or stale |
+| 2330 | failed | 0 | Source date missing or stale |
+| 2344 | failed | 0 | Source date missing or stale |
+| 2345 | failed | 0 | Source date missing or stale |
+| 2347 | failed | 0 | Source date missing or stale |
+| 2355 | failed | 0 | Source date missing or stale |
+| 2356 | failed | 0 | Source date missing or stale |
+| 2357 | failed | 0 | Source date missing or stale |
+| 2359 | failed | 0 | Source date missing or stale |
+| 2360 | failed | 0 | Source date missing or stale |
+| 2368 | failed | 0 | Source date missing or stale |
+| 2369 | failed | 0 | Source date missing or stale |
+| 2376 | failed | 0 | Source date missing or stale |
+| 2377 | failed | 0 | Source date missing or stale |
+| 2379 | failed | 0 | Source date missing or stale |
+| 2382 | failed | 0 | Source date missing or stale |
+| 2383 | failed | 0 | Source date missing or stale |
+| 2385 | failed | 0 | Source date missing or stale |
+| 2388 | failed | 0 | Source date missing or stale |
+| 2395 | failed | 0 | Source date missing or stale |
+| 2404 | failed | 0 | Source date missing or stale |
+| 2408 | failed | 0 | Source date missing or stale |
+| 2409 | failed | 0 | Source date missing or stale |
+| 2412 | failed | 0 | Source date missing or stale |
+| 2421 | failed | 0 | Source date missing or stale |
+| 2441 | failed | 0 | Source date missing or stale |
+| 2449 | failed | 0 | Source date missing or stale |
+| 2454 | failed | 0 | Source date missing or stale |
+| 2464 | failed | 0 | Source date missing or stale |
+| 2467 | failed | 0 | Source date missing or stale |
+| 2474 | failed | 0 | Source date missing or stale |
+| 2480 | failed | 0 | Source date missing or stale |
+| 2542 | failed | 0 | Source date missing or stale |
+| 2597 | failed | 0 | Source date missing or stale |
+| 2603 | failed | 0 | Source date missing or stale |
+| 2610 | failed | 0 | Source date missing or stale |
+| 2615 | failed | 0 | Source date missing or stale |
+| 2618 | failed | 0 | Source date missing or stale |
+| 2704 | failed | 0 | Source date missing or stale |
+| 2707 | failed | 0 | Source date missing or stale |
+| 2727 | failed | 0 | Source date missing or stale |
+| 2881 | failed | 0 | Source date missing or stale |
+| 2882 | failed | 0 | Source date missing or stale |
+| 2891 | failed | 0 | Source date missing or stale |
+| 2903 | failed | 0 | Source date missing or stale |
+| 2912 | failed | 0 | Source date missing or stale |
+| 2915 | failed | 0 | Source date missing or stale |
+| 3006 | failed | 0 | Source date missing or stale |
+| 3008 | failed | 0 | Source date missing or stale |
+| 3013 | failed | 0 | Source date missing or stale |
+| 3014 | failed | 0 | Source date missing or stale |
+| 3015 | failed | 0 | Source date missing or stale |
+| 3017 | failed | 0 | Source date missing or stale |
+| 3029 | failed | 0 | Source date missing or stale |
+| 3032 | failed | 0 | Source date missing or stale |
+| 3035 | failed | 0 | Source date missing or stale |
+| 3036 | failed | 0 | Source date missing or stale |
+| 3037 | failed | 0 | Source date missing or stale |
+| 3044 | failed | 0 | Source date missing or stale |
+| 3045 | failed | 0 | Source date missing or stale |
+| 3047 | failed | 0 | Source date missing or stale |
+| 3071 | failed | 0 | Source date missing or stale |
+| 3078 | failed | 0 | Source date missing or stale |
+| 3081 | failed | 0 | Source date missing or stale |
+| 3086 | failed | 0 | Source date missing or stale |
+| 3105 | failed | 0 | Source date missing or stale |
+| 3131 | failed | 0 | Source date missing or stale |
+| 3163 | failed | 0 | Source date missing or stale |
+| 3189 | failed | 0 | Source date missing or stale |
+| 3217 | failed | 0 | Source date missing or stale |
+| 3231 | failed | 0 | Source date missing or stale |
+| 3234 | failed | 0 | Source date missing or stale |
+| 3260 | failed | 0 | Source date missing or stale |
+| 3289 | failed | 0 | Source date missing or stale |
+| 3293 | failed | 0 | Source date missing or stale |
+| 3324 | failed | 0 | Source date missing or stale |
+| 3325 | failed | 0 | Source date missing or stale |
+| 3338 | failed | 0 | Source date missing or stale |
+| 3363 | failed | 0 | Source date missing or stale |
+| 3374 | failed | 0 | Source date missing or stale |
+| 3380 | failed | 0 | Source date missing or stale |
+| 3406 | failed | 0 | Source date missing or stale |
+| 3443 | failed | 0 | Source date missing or stale |
+| 3481 | failed | 0 | Source date missing or stale |
+| 3483 | failed | 0 | Source date missing or stale |
+| 3515 | failed | 0 | Source date missing or stale |
+| 3526 | failed | 0 | Source date missing or stale |
+| 3529 | failed | 0 | Source date missing or stale |
+| 3532 | failed | 0 | Source date missing or stale |
+| 3533 | failed | 0 | Source date missing or stale |
+| 3540 | failed | 0 | Source date missing or stale |
+| 3580 | failed | 0 | Source date missing or stale |
+| 3583 | failed | 0 | Source date missing or stale |
+| 3587 | failed | 0 | Source date missing or stale |
+| 3605 | failed | 0 | Source date missing or stale |
+| 3653 | failed | 0 | Source date missing or stale |
 | 3660 | failed | 0 | Source date missing or stale |
-| 3661 | ok | 30 | — |
-| 3665 | ok | 30 | — |
-| 3680 | ok | 30 | — |
-| 3689 | ok | 30 | — |
-| 3693 | ok | 30 | — |
-| 3702 | ok | 30 | — |
-| 3706 | ok | 30 | — |
-| 3711 | ok | 30 | — |
-| 3715 | ok | 30 | — |
-| 4566 | ok | 30 | — |
-| 4585 | ok | 30 | — |
-| 4763 | ok | 30 | — |
-| 4903 | ok | 30 | — |
-| 4908 | ok | 30 | — |
-| 4938 | ok | 30 | — |
-| 4958 | ok | 30 | — |
-| 4966 | ok | 30 | — |
-| 4967 | ok | 30 | — |
-| 4977 | ok | 30 | — |
-| 4979 | ok | 30 | — |
-| 4989 | ok | 30 | — |
-| 5269 | ok | 30 | — |
-| 5274 | ok | 30 | — |
-| 5289 | ok | 30 | — |
-| 5347 | ok | 30 | — |
-| 5426 | ok | 30 | — |
-| 5443 | ok | 30 | — |
-| 5469 | ok | 30 | — |
-| 5478 | ok | 30 | — |
-| 5522 | ok | 30 | — |
-| 5536 | ok | 30 | — |
-| 5871 | ok | 30 | — |
-| 5880 | ok | 30 | — |
-| 5903 | ok | 30 | — |
-| 5904 | ok | 30 | — |
-| 6117 | ok | 30 | — |
-| 6125 | ok | 30 | — |
-| 6139 | ok | 30 | — |
-| 6166 | ok | 30 | — |
-| 6182 | ok | 30 | — |
-| 6187 | ok | 30 | — |
-| 6191 | ok | 30 | — |
-| 6196 | ok | 30 | — |
-| 6203 | ok | 30 | — |
-| 6214 | ok | 30 | — |
-| 6215 | ok | 30 | — |
-| 6223 | ok | 30 | — |
-| 6230 | ok | 30 | — |
-| 6239 | ok | 30 | — |
-| 6257 | ok | 30 | — |
-| 6269 | ok | 30 | — |
-| 6274 | ok | 30 | — |
-| 6275 | ok | 30 | — |
-| 6282 | ok | 30 | — |
-| 6290 | ok | 30 | — |
-| 6412 | ok | 30 | — |
-| 6414 | ok | 30 | — |
-| 6426 | ok | 30 | — |
-| 6442 | ok | 30 | — |
-| 6446 | ok | 30 | — |
-| 6462 | ok | 30 | — |
-| 6485 | ok | 30 | — |
-| 6488 | ok | 30 | — |
-| 6505 | ok | 30 | — |
-| 6510 | ok | 30 | — |
-| 6515 | ok | 30 | — |
-| 6530 | ok | 30 | — |
-| 6531 | ok | 30 | — |
-| 6533 | ok | 30 | — |
-| 6548 | ok | 30 | — |
-| 6584 | ok | 30 | — |
-| 6640 | ok | 30 | — |
-| 6643 | ok | 30 | — |
-| 6667 | ok | 30 | — |
-| 6669 | ok | 30 | — |
-| 6684 | ok | 30 | — |
-| 6690 | ok | 30 | — |
-| 6770 | ok | 30 | — |
-| 6788 | ok | 30 | — |
-| 6789 | ok | 30 | — |
-| 6805 | ok | 30 | — |
-| 6829 | ok | 30 | — |
-| 6830 | ok | 30 | — |
-| 6919 | ok | 30 | — |
-| 6933 | ok | 30 | — |
-| 7556 | ok | 30 | — |
-| 7714 | ok | 30 | — |
-| 7765 | ok | 30 | — |
-| 7799 | ok | 30 | — |
-| 7805 | ok | 30 | — |
-| 8028 | ok | 30 | — |
-| 8039 | ok | 30 | — |
-| 8046 | ok | 30 | — |
-| 8064 | ok | 30 | — |
-| 8103 | ok | 30 | — |
-| 8110 | ok | 30 | — |
-| 8150 | ok | 30 | — |
-| 8210 | ok | 30 | — |
-| 8227 | ok | 30 | — |
-| 8299 | ok | 30 | — |
-| 8358 | ok | 30 | — |
-| 8454 | ok | 30 | — |
-| 8464 | ok | 30 | — |
-| 8926 | ok | 30 | — |
-| 8932 | ok | 30 | — |
-| 8996 | ok | 30 | — |
-| 9904 | ok | 30 | — |
-| 9910 | ok | 30 | — |
-| 9917 | ok | 30 | — |
-| 9937 | ok | 28 | — |
-| 9945 | ok | 30 | — |
+| 3661 | failed | 0 | Source date missing or stale |
+| 3665 | failed | 0 | Source date missing or stale |
+| 3680 | failed | 0 | Source date missing or stale |
+| 3689 | failed | 0 | Source date missing or stale |
+| 3693 | failed | 0 | Source date missing or stale |
+| 3702 | failed | 0 | Source date missing or stale |
+| 3706 | failed | 0 | Source date missing or stale |
+| 3711 | failed | 0 | Source date missing or stale |
+| 3715 | failed | 0 | Source date missing or stale |
+| 4566 | failed | 0 | Source date missing or stale |
+| 4585 | failed | 0 | Source date missing or stale |
+| 4763 | failed | 0 | Source date missing or stale |
+| 4903 | failed | 0 | Source date missing or stale |
+| 4908 | failed | 0 | Source date missing or stale |
+| 4938 | failed | 0 | Source date missing or stale |
+| 4958 | failed | 0 | Source date missing or stale |
+| 4966 | failed | 0 | Source date missing or stale |
+| 4967 | failed | 0 | Source date missing or stale |
+| 4977 | failed | 0 | Source date missing or stale |
+| 4979 | failed | 0 | Source date missing or stale |
+| 4989 | failed | 0 | Source date missing or stale |
+| 5269 | failed | 0 | Source date missing or stale |
+| 5274 | failed | 0 | Source date missing or stale |
+| 5289 | failed | 0 | Source date missing or stale |
+| 5347 | failed | 0 | Source date missing or stale |
+| 5426 | failed | 0 | Source date missing or stale |
+| 5434 | failed | 0 | Source date missing or stale |
+| 5443 | failed | 0 | Source date missing or stale |
+| 5469 | failed | 0 | Source date missing or stale |
+| 5475 | failed | 0 | Source date missing or stale |
+| 5478 | failed | 0 | Source date missing or stale |
+| 5522 | failed | 0 | Source date missing or stale |
+| 5536 | failed | 0 | Source date missing or stale |
+| 5871 | failed | 0 | Source date missing or stale |
+| 5880 | failed | 0 | Source date missing or stale |
+| 5903 | failed | 0 | Source date missing or stale |
+| 5904 | failed | 0 | Source date missing or stale |
+| 6117 | failed | 0 | Source date missing or stale |
+| 6125 | failed | 0 | Source date missing or stale |
+| 6139 | failed | 0 | Source date missing or stale |
+| 6166 | failed | 0 | Source date missing or stale |
+| 6182 | failed | 0 | Source date missing or stale |
+| 6187 | failed | 0 | Source date missing or stale |
+| 6191 | failed | 0 | Source date missing or stale |
+| 6196 | failed | 0 | Source date missing or stale |
+| 6203 | failed | 0 | Source date missing or stale |
+| 6214 | failed | 0 | Source date missing or stale |
+| 6215 | failed | 0 | Source date missing or stale |
+| 6223 | failed | 0 | Source date missing or stale |
+| 6230 | failed | 0 | Source date missing or stale |
+| 6239 | failed | 0 | Source date missing or stale |
+| 6257 | failed | 0 | Source date missing or stale |
+| 6269 | failed | 0 | Source date missing or stale |
+| 6274 | failed | 0 | Source date missing or stale |
+| 6275 | failed | 0 | Source date missing or stale |
+| 6282 | failed | 0 | Source date missing or stale |
+| 6290 | failed | 0 | Source date missing or stale |
+| 6412 | failed | 0 | Source date missing or stale |
+| 6414 | failed | 0 | Source date missing or stale |
+| 6426 | failed | 0 | Source date missing or stale |
+| 6442 | failed | 0 | Source date missing or stale |
+| 6446 | failed | 0 | Source date missing or stale |
+| 6462 | failed | 0 | Source date missing or stale |
+| 6485 | failed | 0 | Source date missing or stale |
+| 6488 | failed | 0 | The read operation timed out |
+| 6505 | failed | 0 | Source date missing or stale |
+| 6510 | failed | 0 | Source date missing or stale |
+| 6515 | failed | 0 | Source date missing or stale |
+| 6530 | failed | 0 | Source date missing or stale |
+| 6531 | failed | 0 | Source date missing or stale |
+| 6533 | failed | 0 | Source date missing or stale |
+| 6548 | failed | 0 | Source date missing or stale |
+| 6584 | failed | 0 | Source date missing or stale |
+| 6640 | failed | 0 | Source date missing or stale |
+| 6643 | failed | 0 | Source date missing or stale |
+| 6667 | failed | 0 | Source date missing or stale |
+| 6669 | failed | 0 | Source date missing or stale |
+| 6684 | failed | 0 | Source date missing or stale |
+| 6690 | failed | 0 | Source date missing or stale |
+| 6770 | failed | 0 | Source date missing or stale |
+| 6788 | failed | 0 | Source date missing or stale |
+| 6789 | failed | 0 | Source date missing or stale |
+| 6805 | failed | 0 | Source date missing or stale |
+| 6829 | failed | 0 | Source date missing or stale |
+| 6830 | failed | 0 | Source date missing or stale |
+| 6919 | failed | 0 | Source date missing or stale |
+| 6933 | failed | 0 | Source date missing or stale |
+| 7556 | failed | 0 | Source date missing or stale |
+| 7714 | failed | 0 | Source date missing or stale |
+| 7765 | failed | 0 | Source date missing or stale |
+| 7799 | failed | 0 | Source date missing or stale |
+| 7805 | failed | 0 | Source date missing or stale |
+| 8028 | failed | 0 | Source date missing or stale |
+| 8039 | failed | 0 | Source date missing or stale |
+| 8046 | failed | 0 | Source date missing or stale |
+| 8064 | failed | 0 | Source date missing or stale |
+| 8103 | failed | 0 | Source date missing or stale |
+| 8110 | failed | 0 | Source date missing or stale |
+| 8150 | failed | 0 | Source date missing or stale |
+| 8210 | failed | 0 | Source date missing or stale |
+| 8227 | failed | 0 | Source date missing or stale |
+| 8299 | failed | 0 | Source date missing or stale |
+| 8358 | failed | 0 | Source date missing or stale |
+| 8454 | failed | 0 | Source date missing or stale |
+| 8464 | failed | 0 | Source date missing or stale |
+| 8926 | failed | 0 | Source date missing or stale |
+| 8932 | failed | 0 | Source date missing or stale |
+| 8996 | failed | 0 | Source date missing or stale |
+| 9904 | failed | 0 | Source date missing or stale |
+| 9910 | failed | 0 | Source date missing or stale |
+| 9917 | failed | 0 | Source date missing or stale |
+| 9937 | failed | 0 | Source date missing or stale |
+| 9945 | failed | 0 | Source date missing or stale |
 
 [查看原始覆蓋表](coverage.csv) · [採集狀態](status.json) · [股價驗證狀態](relationship_status.json) · [執行紀錄](https://github.com/leowang51768-ops/lobster-radar-cloud/actions)
 

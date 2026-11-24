@@ -1,21 +1,21 @@
 {
-  "date": "2026-11-10",
+  "date": "2026-11-23",
   "mode": "collection_only",
-  "expected_stocks": 253,
+  "expected_stocks": 262,
   "fixed_stocks": 163,
-  "supplemental_stocks": 90,
-  "covered_stocks": 251,
+  "supplemental_stocks": 99,
+  "covered_stocks": 0,
   "coverage_complete": false,
   "status": "partial",
   "source_blocked": false,
   "ranking_limit_per_side": 15,
   "history_target_top_per_side": 3,
-  "history_requests_succeeded": 120,
+  "history_requests_succeeded": 62,
   "observed_collection_days": 22,
   "complete_collection_days": 0,
   "counts": {
     "ranking": 135110,
-    "history": 517586,
+    "history": 521306,
     "queue": 9781
   },
   "review_stage": "資料累積中",
@@ -28,20 +28,1610 @@
     "排行榜與逐日歷史分開保存，不互相覆蓋"
   ],
   "missing_stocks": [
-    "11044",
-    "3660"
+    "2330",
+    "6488",
+    "3532",
+    "6182",
+    "2303",
+    "5347",
+    "6770",
+    "3661",
+    "3443",
+    "3529",
+    "3035",
+    "6643",
+    "6533",
+    "6531",
+    "8227",
+    "6462",
+    "6684",
+    "2388",
+    "5274",
+    "5269",
+    "4966",
+    "8299",
+    "2454",
+    "2379",
+    "2408",
+    "2344",
+    "6485",
+    "4967",
+    "3260",
+    "3006",
+    "3014",
+    "3374",
+    "6789",
+    "3711",
+    "2449",
+    "6239",
+    "6257",
+    "2441",
+    "3289",
+    "3587",
+    "6830",
+    "8150",
+    "8110",
+    "2369",
+    "3131",
+    "3583",
+    "6187",
+    "2467",
+    "6640",
+    "5443",
+    "1560",
+    "8028",
+    "3580",
+    "8064",
+    "6139",
+    "2404",
+    "5536",
+    "6196",
+    "6667",
+    "6829",
+    "6223",
+    "6515",
+    "6510",
+    "3680",
+    "7556",
+    "6788",
+    "3689",
+    "3081",
+    "4979",
+    "4977",
+    "4908",
+    "3363",
+    "3163",
+    "6442",
+    "2360",
+    "2345",
+    "3380",
+    "4903",
+    "6530",
+    "3047",
+    "6426",
+    "3017",
+    "3324",
+    "3653",
+    "2421",
+    "8996",
+    "6805",
+    "3483",
+    "3338",
+    "6125",
+    "6230",
+    "3071",
+    "6275",
+    "4566",
+    "1773",
+    "2308",
+    "2301",
+    "2385",
+    "6412",
+    "1519",
+    "1503",
+    "1513",
+    "1514",
+    "6282",
+    "3015",
+    "3032",
+    "3078",
+    "6203",
+    "3540",
+    "2383",
+    "8358",
+    "6274",
+    "3037",
+    "2368",
+    "8046",
+    "3189",
+    "3044",
+    "2313",
+    "4958",
+    "3715",
+    "5469",
+    "6191",
+    "2355",
+    "4989",
+    "6269",
+    "2059",
+    "6584",
+    "8210",
+    "3013",
+    "3665",
+    "3533",
+    "3693",
+    "6290",
+    "3217",
+    "6117",
+    "3325",
+    "5426",
+    "8103",
+    "3605",
+    "3526",
+    "3008",
+    "3406",
+    "2382",
+    "6669",
+    "3231",
+    "2317",
+    "2356",
+    "4938",
+    "2376",
+    "2357",
+    "2377",
+    "3515",
+    "3706",
+    "6933",
+    "2395",
+    "6414",
+    "6166",
+    "5289",
+    "2359",
+    "4585",
+    "6215",
+    "2324",
+    "2312",
+    "1101",
+    "1102",
+    "1104",
+    "1210",
+    "1216",
+    "1229",
+    "1301",
+    "1303",
+    "1326",
+    "1402",
+    "1409",
+    "1476",
+    "1477",
+    "1504",
+    "1590",
+    "1605",
+    "1608",
+    "1609",
+    "1717",
+    "1736",
+    "1802",
+    "1809",
+    "1810",
+    "1904",
+    "1905",
+    "1907",
+    "2002",
+    "2006",
+    "2027",
+    "2049",
+    "2101",
+    "2103",
+    "2105",
+    "2106",
+    "2206",
+    "2207",
+    "2258",
+    "2327",
+    "2347",
+    "2409",
+    "2412",
+    "2464",
+    "2474",
+    "2480",
+    "2542",
+    "2597",
+    "2603",
+    "2610",
+    "2615",
+    "2618",
+    "2704",
+    "2707",
+    "2727",
+    "2881",
+    "2882",
+    "2891",
+    "2903",
+    "2912",
+    "2915",
+    "3029",
+    "3036",
+    "3045",
+    "3086",
+    "3105",
+    "3234",
+    "3293",
+    "3481",
+    "3660",
+    "3702",
+    "4763",
+    "5434",
+    "5475",
+    "5478",
+    "5522",
+    "5871",
+    "5880",
+    "5903",
+    "5904",
+    "6214",
+    "6446",
+    "6505",
+    "6548",
+    "6690",
+    "6919",
+    "7714",
+    "7765",
+    "7799",
+    "7805",
+    "8039",
+    "8454",
+    "8464",
+    "8926",
+    "8932",
+    "9904",
+    "9910",
+    "9917",
+    "9937",
+    "9945",
+    "11044"
   ],
   "errors": [
+    {
+      "code": "1101",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "1102",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "1104",
+      "error": "Source date missing or stale"
+    },
     {
       "code": "11044",
       "error": "Source date missing or stale"
     },
     {
+      "code": "1210",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "1216",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "1229",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "1301",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "1303",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "1326",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "1402",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "1409",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "1476",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "1477",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "1503",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "1504",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "1513",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "1514",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "1519",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "1560",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "1590",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "1605",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "1608",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "1609",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "1717",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "1736",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "1773",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "1802",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "1809",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "1810",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "1904",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "1905",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "1907",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2002",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2006",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2027",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2049",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2059",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2101",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2103",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2105",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2106",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2206",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2207",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2258",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2301",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2303",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2308",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2312",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2313",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2317",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2324",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2327",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2330",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2344",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2345",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2347",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2355",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2356",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2357",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2359",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2360",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2368",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2369",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2376",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2377",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2379",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2382",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2383",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2385",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2388",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2395",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2404",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2408",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2409",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2412",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2421",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2441",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2449",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2454",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2464",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2467",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2474",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2480",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2542",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2597",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2603",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2610",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2615",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2618",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2704",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2707",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2727",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2881",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2882",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2891",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2903",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2912",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "2915",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3006",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3008",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3013",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3014",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3015",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3017",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3029",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3032",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3035",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3036",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3037",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3044",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3045",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3047",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3071",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3078",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3081",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3086",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3105",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3131",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3163",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3189",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3217",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3231",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3234",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3260",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3289",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3293",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3324",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3325",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3338",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3363",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3374",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3380",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3406",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3443",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3481",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3483",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3515",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3526",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3529",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3532",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3533",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3540",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3580",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3583",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3587",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3605",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3653",
+      "error": "Source date missing or stale"
+    },
+    {
       "code": "3660",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3661",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3665",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3680",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3689",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3693",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3702",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3706",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3711",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "3715",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "4566",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "4585",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "4763",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "4903",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "4908",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "4938",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "4958",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "4966",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "4967",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "4977",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "4979",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "4989",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "5269",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "5274",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "5289",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "5347",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "5426",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "5434",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "5443",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "5469",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "5475",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "5478",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "5522",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "5536",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "5871",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "5880",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "5903",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "5904",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6117",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6125",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6139",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6166",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6182",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6187",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6191",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6196",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6203",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6214",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6215",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6223",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6230",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6239",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6257",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6269",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6274",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6275",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6282",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6290",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6412",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6414",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6426",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6442",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6446",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6462",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6485",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6488",
+      "error": "The read operation timed out"
+    },
+    {
+      "code": "6505",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6510",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6515",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6530",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6531",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6533",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6548",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6584",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6640",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6643",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6667",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6669",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6684",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6690",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6770",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6788",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6789",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6805",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6829",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6830",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6919",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "6933",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "7556",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "7714",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "7765",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "7799",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "7805",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "8028",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "8039",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "8046",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "8064",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "8103",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "8110",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "8150",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "8210",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "8227",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "8299",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "8358",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "8454",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "8464",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "8926",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "8932",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "8996",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "9904",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "9910",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "9917",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "9937",
+      "error": "Source date missing or stale"
+    },
+    {
+      "code": "9945",
       "error": "Source date missing or stale"
     }
   ],
   "history_errors": [
+    {
+      "code": "3515",
+      "branch": "0039003200300046",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3526",
+      "branch": "0039003100380064",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3526",
+      "branch": "003900360035004b",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3526",
+      "branch": "9100",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3526",
+      "branch": "9200",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3529",
+      "branch": "0039004100380031",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3529",
+      "branch": "1020",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3529",
+      "branch": "5850",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3532",
+      "branch": "5380",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3532",
+      "branch": "9100",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3532",
+      "branch": "9300",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3533",
+      "branch": "6160",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3533",
+      "branch": "9300",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3540",
+      "branch": "0039003600320044",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3540",
+      "branch": "2180",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3540",
+      "branch": "8884",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3540",
+      "branch": "9892",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3580",
+      "branch": "0039003100330049",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3587",
+      "branch": "0039003800390061",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3587",
+      "branch": "0039004100390057",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3605",
+      "branch": "9205",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3653",
+      "branch": "003700370039005a",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3653",
+      "branch": "9216",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3661",
+      "branch": "0035003300380044",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3661",
+      "branch": "0039003200300046",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3661",
+      "branch": "0039004100390032",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3661",
+      "branch": "0039004200310067",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3661",
+      "branch": "9658",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3665",
+      "branch": "5380",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3680",
+      "branch": "8840",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3680",
+      "branch": "8846",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3680",
+      "branch": "9352",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3689",
+      "branch": "0039003800310055",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3689",
+      "branch": "0039003800310065",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3689",
+      "branch": "0039004100390058",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3689",
+      "branch": "9186",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3689",
+      "branch": "9875",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3693",
+      "branch": "0039004200320072",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3693",
+      "branch": "9100",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3693",
+      "branch": "9655",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3702",
+      "branch": "1020",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3702",
+      "branch": "1360",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3702",
+      "branch": "1560",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3702",
+      "branch": "1590",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3702",
+      "branch": "8580",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3702",
+      "branch": "9100",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3702",
+      "branch": "9308",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3702",
+      "branch": "9831",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3706",
+      "branch": "003900410039004b",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3706",
+      "branch": "0039004200320053",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3706",
+      "branch": "0039004200320055",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "3706",
+      "branch": "0039004200320067",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "4566",
+      "branch": "0037003000300072",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "4566",
+      "branch": "003900380039004c",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "4585",
+      "branch": "003600310036004b",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "4585",
+      "branch": "7790",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "4585",
+      "branch": "8882",
+      "error": "History date or numeric mismatch"
+    },
+    {
+      "code": "4585",
+      "branch": "9239",
+      "error": "History date or numeric mismatch"
+    },
     {
       "code": "6548",
       "branch": "9853",
@@ -51,149 +1641,9 @@
       "code": "6584",
       "branch": "5850",
       "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "6640",
-      "branch": "0037003000300066",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "6640",
-      "branch": "0038003800340043",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "6640",
-      "branch": "003900310038004a",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "6643",
-      "branch": "0039004100380046",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "6667",
-      "branch": "003900380039004c",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "6684",
-      "branch": "8560",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "6684",
-      "branch": "9874",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "6690",
-      "branch": "0039003800310047",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "6690",
-      "branch": "0039004100300030",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "6690",
-      "branch": "1440",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "6690",
-      "branch": "8440",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "6690",
-      "branch": "9268",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "6789",
-      "branch": "0035003300380045",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "6789",
-      "branch": "8840",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "6829",
-      "branch": "8880",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "6830",
-      "branch": "0039004100390058",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "6919",
-      "branch": "0039004100380046",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "6919",
-      "branch": "1470",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "6919",
-      "branch": "1480",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "6919",
-      "branch": "9268",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "6919",
-      "branch": "9359",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "6919",
-      "branch": "9676",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "6933",
-      "branch": "0039003800310061",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "6933",
-      "branch": "0039003800390055",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "6933",
-      "branch": "5850",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "7714",
-      "branch": "1470",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "7714",
-      "branch": "8440",
-      "error": "History date or numeric mismatch"
-    },
-    {
-      "code": "7765",
-      "branch": "0035003800350045",
-      "error": "History date or numeric mismatch"
     }
   ],
-  "history_pairs_ever_fetched": 8632,
+  "history_pairs_ever_fetched": 8694,
   "history_coverage_complete": false,
   "history_coverage_note": "按個股實際交易日缺口排序補抓；來源每頁最多60筆，較早缺口仍保留待補，缺筆不當零交易",
   "history_retry_policy": {
@@ -201,8 +1651,8 @@
     "retry_delay_seconds": 900,
     "source_history_row_limit": 60
   },
-  "history_attempts_today": 360,
+  "history_attempts_today": 120,
   "ranking_coverage_complete": false,
-  "errors_total": 30,
-  "database_bytes": 103366656
+  "errors_total": 88,
+  "database_bytes": 104165376
 }
