@@ -1341,6 +1341,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-11-25T13:40:49+08:00",
       "reason": "manual_add"
+    },
+    "6117": {
+      "code": "6117",
+      "name": "迎廣",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-11-25T13:41:08+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
