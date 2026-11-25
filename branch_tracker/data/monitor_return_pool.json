@@ -139,7 +139,8 @@
       "last_signal_id": "2026-10-14|2368",
       "reason": "pattern_invalid",
       "permanent": true,
-      "continue_branch_tracking": true
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-11-25T13:41:10+08:00"
     },
     "4977": {
       "code": "4977",
@@ -1348,6 +1349,14 @@
       "permanent": true,
       "continue_branch_tracking": true,
       "manual_added_at": "2026-11-25T13:41:08+08:00",
+      "reason": "manual_add"
+    },
+    "4967": {
+      "code": "4967",
+      "name": "十銓",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-11-25T13:41:33+08:00",
       "reason": "manual_add"
     }
   },
