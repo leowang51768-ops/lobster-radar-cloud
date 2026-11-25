@@ -1140,6 +1140,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-11-25T13:35:52+08:00",
       "reason": "manual_add"
+    },
+    "2324": {
+      "code": "2324",
+      "name": "仁寶",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-11-25T13:36:08+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
