@@ -1473,6 +1473,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-11-25T18:00:57+08:00",
       "reason": "manual_add"
+    },
+    "6166": {
+      "code": "6166",
+      "name": "凌華",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-11-25T18:01:26+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
