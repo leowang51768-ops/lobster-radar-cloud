@@ -1325,6 +1325,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-11-25T13:40:34+08:00",
       "reason": "manual_add"
+    },
+    "3325": {
+      "code": "3325",
+      "name": "旭品",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-11-25T13:40:41+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
