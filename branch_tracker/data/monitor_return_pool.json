@@ -68,7 +68,8 @@
       "last_signal_id": "2026-10-07|4989",
       "reason": "pattern_invalid",
       "permanent": true,
-      "continue_branch_tracking": true
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-11-25T13:39:00+08:00"
     },
     "5443": {
       "code": "5443",
