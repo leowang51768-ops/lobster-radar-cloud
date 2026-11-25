@@ -1067,6 +1067,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-11-25T13:32:20+08:00",
       "reason": "manual_add"
+    },
+    "2359": {
+      "code": "2359",
+      "name": "所羅門",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-11-25T13:32:33+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
