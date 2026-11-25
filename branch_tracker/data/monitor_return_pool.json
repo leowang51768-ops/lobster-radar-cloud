@@ -1075,6 +1075,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-11-25T13:32:33+08:00",
       "reason": "manual_add"
+    },
+    "2369": {
+      "code": "2369",
+      "name": "菱生",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-11-25T13:32:42+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
