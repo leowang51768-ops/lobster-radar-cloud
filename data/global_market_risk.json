@@ -1,17 +1,17 @@
 {
   "schema": 1,
   "risk_level": "red",
-  "risk_score": 11,
+  "risk_score": 9,
   "risk_reasons": [
     "費半明顯下跌",
     "NASDAQ明顯下跌",
     "日經明顯下跌",
     "台股明顯下跌",
-    "VIX進入高檔"
+    "多則市場負面消息同時發酵"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 -14.8%｜NASDAQ -6.0%｜日經225 -2.8%｜KOSPI -0.2%｜台股加權 -4.8%｜恆生 -1.9%",
-    "⚠ 全球市場風險｜美債10Y 4.83%｜VIX 31.7｜WTI原油 82.75美元 +0.8%（高於常態，觀察）｜布蘭特原油 89.52美元 -2.1%（高於常態，觀察）",
+    "⚠ 全球市場風險｜費半 -8.5%｜NASDAQ -2.1%｜日經225 -2.8%｜KOSPI -0.2%｜台股加權 -4.8%｜恆生 -1.9%",
+    "⚠ 全球市場風險｜美債10Y 4.85%｜VIX 28.3｜WTI原油 83.85美元 +2.2%（高於常態，觀察）｜布蘭特原油 90.45美元 -1.0%（高於常態，觀察）",
     "⚠ 全球市場風險｜油價觀察｜〈能源盤後〉荷姆茲海峽3艘船遇襲 原油漲逾2% 但供應過剩仍壓頂",
     "⚠ 全球市場風險｜油價觀察｜荷姆茲海峽再傳船隻遇襲！國際油價洗三溫暖 急拉反彈大漲逾2%",
     "⚠ 全球市場風險｜台股「只紅一天」川普關稅砍出史上第六慘！賣壓籠罩全市場資安概念逆勢撐出一點紅｜Yahoo財經掃描",
@@ -24,28 +24,28 @@
   "markets": {
     "US_SOX": {
       "label": "費半",
-      "price": 8165.275,
-      "change_pct": -14.8
+      "price": 8774.862,
+      "change_pct": -8.4
     },
     "US_NASDAQ": {
       "label": "NASDAQ",
-      "price": 22645.322,
-      "change_pct": -6.0
+      "price": 23585.803,
+      "change_pct": -2.0
     },
     "US_SP500": {
       "label": "S&P500",
-      "price": 6972.27,
-      "change_pct": -3.6
+      "price": 7182.78,
+      "change_pct": -0.8
     },
     "US_DOW": {
       "label": "道瓊",
-      "price": 48917.0,
-      "change_pct": -1.4
+      "price": 50182.95,
+      "change_pct": 1.2
     },
     "VIX": {
       "label": "VIX",
-      "price": 31.72,
-      "change_pct": 20.4
+      "price": 28.29,
+      "change_pct": 7.4
     },
     "JP_NIKKEI": {
       "label": "日經225",
@@ -69,18 +69,18 @@
     },
     "US10Y": {
       "label": "美債10年殖利率",
-      "price": 4.828,
-      "change_pct": -1.6
+      "price": 4.848,
+      "change_pct": -1.2
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 82.75,
-      "change_pct": 0.8
+      "price": 83.85,
+      "change_pct": 2.2
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 89.52,
-      "change_pct": -2.0
+      "price": 90.45,
+      "change_pct": -1.0
     }
   },
   "active_news": [
@@ -157,26 +157,26 @@
       "risk_score": 2
     },
     {
-      "title": "Analyst: Jensen Huang's return to Nvidia proves his irreplaceability - TVB",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOOVJfUnJRbExYTnhONnpVMVFFYXdpX1ZoZHNvS3h5akthY2hGZlM4WTRqaHJtR2t5amdhOXNPZWxQRFJYb0IyRTJQWE11NnhDbU5OTmRQR1FjZDFWaHkyTGZhRlN5Ti1iRVN5Q00tQnpzdEtyYUZCcVJhTHRXNGhqeFFQalZCNEtXRlR6Wno1U2FHZXpi?oc=5",
-      "source": "TVB",
-      "published_at": "2026-11-25T20:55+08:00",
+      "title": "China Life Insurance(601628) Stock Price Today | Quotes & News - Moomoo",
+      "url": "https://news.google.com/rss/articles/CBMixgJBVV95cUxNZDJpVHpoZVhudFlKY084U2piaEhoX1Y4TWNWa2lYMnB2V09rbFliMG12elBqSWFMaTJkRGQ5ekZGVEZEQnI4NmRDMmVIdm5ER3REM19fZUVSY3k0ajBPSVlJMzJ1UGotaVBESHFtQ3dkZHFXR1hnN3NiNjlSbXFHLS1wcHh4REZhaXFMeGlRb2lGWnFtM2p3aUZ1NjRYbkdOS3BOTDVZcE5KZTdUVlZWTk5fVEFudHJMeDRDcDZTR0NkOHRFVnRQTXlDT2ZIU1ltMVB5Uk9FbmFMbDl2RXRXVUFuS0RHRUYyY2ZvVWJWNl9PenNQWUFadXhyUmtwdTR4ODJMbHU5R19BeVBRR1JEaktScl8zbUw4aDVwcXlqQWRNZTBLb1dkQ1ZqMW5LZTd1UUtsUnN2eE1FOWVJNUUwTWlubVNqUQ?oc=5",
+      "source": "Moomoo",
+      "published_at": "2026-11-26T04:35+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "拿台灣做實驗？爆索羅斯放空台積電4000萬美金謝寒冰起底沈伯洋補助風波：政治版黃琪| 張庭維 | 新聞 - 風傳媒",
-      "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBxOVpvd29GaDR6dnA5SmhBTS1KVnMyVV9qcU0zbU1USVlWQmtQQktOSlktYk9LdlpwNGhKTWdlcExHcnl5YXpsYVRfemRmdw?oc=5",
-      "source": "風傳媒",
-      "published_at": "2026-11-25T20:01+08:00",
+      "title": "Dow Jones(BK20782) Stock Price Today | Quotes & News - Moomoo",
+      "url": "https://news.google.com/rss/articles/CBMirwJBVV95cUxQLTVNV1M2NXpPTWY3Nk1GOGV1LXNNMmtsWENNZFJWQVRNNUdyOWFKNE5rWWszNHBPcld1d0VxQUdoNzk3LTlxWXBkbnUxcExuV1hBbHVCQlI0X1dQM2gzUno5NU5nQUkwdk9EcGM4VlV6UFB6aUZuaUVyYXRQUWRiZ0NtSDJja3g4YzZTODk2Rk1LaXRnWXh6NzRqY3JCLTNkaG9qZFZ4N0xmWjN1aFozdnJUUHYtRjBQV2NFdUpqdk9hU3ZOZnNISVpYN3RkOEFvOVFYdmN3WkZqbWE4Zk9pTGxpSGpDRjZ0dVVtanpHRFRUZUtvNWZkQ3c5VTRnaERibXA1T2V1R0tVY09EeE5kTXJnc1VUeTlxRzVkNGg2RDVYSllNeXgyY0N6ZGhmcUU?oc=5",
+      "source": "Moomoo",
+      "published_at": "2026-11-26T03:11+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "Zhitong Active Trades via Stock Connect (Hong Kong) | November 25 - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNZEtmYXlta3BoZFZkTmpTT28yU0JTUnRfZDBSbGJIMDE5TDhfYTY4S0NOTXRjWVBtc0dTSDFSZ3NBVGxYR1lXMFBMYVZYWjU2OXBuRXVpWUFwWjM3UUpweHgzTjM0c1ZZWXBpWlVaZzJqTEtEeHlXZVpnb0JpZzFkd3VQQWo1ZUUtNFZ5bTRhQlEtTmdDSWFwOVZfOFZzX0s0ZDcyWlJ1dw?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-25T19:00+08:00",
+      "title": "中國澱粉(03838.HK)11月25日耗資19.03萬港元回購101萬股 - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5NOXpVV3VSQ05scmFlOXhsTmFEdE1yc2w1MndidVlFeEdqaFl2SkRTMTFrVnQySVI1Zk5QRWhRNU1yRkdQa0VKWU9kUVg2T0ZZSHYwRk10WUpXc05zeUFxY1loOF9YVDZQa1VB?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-11-26T02:05+08:00",
       "importance": 2,
       "risk_score": 0
     }
@@ -195,13 +195,13 @@
       "published_at": "2026-11-25T09:54+08:00"
     },
     {
-      "title": "布蘭特原油價格92.32美元：胡塞武裝聲稱襲擊煉油廠 OPEC+會議前 - FinanceFeeds",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBKcGZEQk1Dcl9UOEY1MzUzYVVmUXFLNkhMczNyRVNfaFNQSEZYQ0xIb1RSQ29uNnZlTV9TZlpaTEpOR0JsSzY4M0JLaExDcjJ0U2Fpd2dVNExuZ3N3YWZnelZIMGhpbHFzeDhWV1c0SHZjOHVQYVhpYw?oc=5",
-      "source": "FinanceFeeds",
-      "published_at": "2026-11-25T01:25+08:00"
+      "title": "霍爾木茲海峽油輪遇襲運量驟降四成 國際油價盤中微漲守住89美元 - LIFE 生活網",
+      "url": "https://news.google.com/rss/articles/CBMijwNBVV95cUxOQzQ0NnhuX2JZMUEzeHdBbXlKeVM0a0tXcjFWTDh0bkk5c2M4RTBCRE5RNU1oVFdMc3hNZF9Mck44M2xna1ZfalhWX2ZBSDBzN0RwUWQtSVh0N3d0eVRrWnViNnc3N3cyLTZqRm9rNjBwZTVTT0ZOTER4cE5FeTBCb3hxZWVpQnE0ZTNDa2w2WlFnampCdF9xQ1RfcHJqUElwRldkM2ZBQ3MyRWpFSG9CR0VaM0JGYWlJbnhoeXRGdE51bmVrLVFyV2xsY2VSVFpyeWJPSzVaa2c2ZXBISDJtY2tlZGJrMmU5XzRiYjZKMi1fM3lkSWNnRVJncXNQZ3U0cWE3YkNmVXNOM3RyeFN1bnFLMjRIbXlmYkZxYlZsS2kxLWg1UDM2QV9TMDM0SWRLMmJLZmJ1NW9MMnBiU2xXa2N6RGpnMHF2X2g4LVowNS1ibmkyM2RWMmJMYkdJbmUxcEE3Ynpla2x0WUZPaENBbFFlN0c5c0R1aEVKS2VGdHZBZTVkY01BWHRjelRNN1k?oc=5",
+      "source": "LIFE 生活網",
+      "published_at": "2026-11-25T08:20+08:00"
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-11-25T22:45:22+08:00",
-  "checked_at": "2026-11-25T22:45:22+08:00"
+  "updated_at": "2026-11-26T07:20:19+08:00",
+  "checked_at": "2026-11-26T07:20:19+08:00"
 }
