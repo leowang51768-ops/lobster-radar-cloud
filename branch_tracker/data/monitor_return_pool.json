@@ -1091,6 +1091,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-11-25T13:33:01+08:00",
       "reason": "manual_add"
+    },
+    "2395": {
+      "code": "2395",
+      "name": "研華",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-11-25T13:33:12+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
