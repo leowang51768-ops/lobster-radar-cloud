@@ -1399,6 +1399,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-11-25T13:42:57+08:00",
       "reason": "manual_add"
+    },
+    "8227": {
+      "code": "8227",
+      "name": "巨有科技",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-11-25T13:43:05+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
