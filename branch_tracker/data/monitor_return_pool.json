@@ -1497,6 +1497,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-11-25T18:02:13+08:00",
       "reason": "manual_add"
+    },
+    "6684": {
+      "code": "6684",
+      "name": "安格",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-11-25T18:02:36+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
