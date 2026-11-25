@@ -1115,6 +1115,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-11-25T13:33:43+08:00",
       "reason": "manual_add"
+    },
+    "3013": {
+      "code": "3013",
+      "name": "晟銘電",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-11-25T13:35:07+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
