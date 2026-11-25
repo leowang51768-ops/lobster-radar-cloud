@@ -1244,6 +1244,22 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-11-25T13:38:05+08:00",
       "reason": "manual_add"
+    },
+    "2308": {
+      "code": "2308",
+      "name": "台達電",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-11-25T13:38:09+08:00",
+      "reason": "manual_add"
+    },
+    "6125": {
+      "code": "6125",
+      "name": "廣運",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-11-25T13:38:23+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
