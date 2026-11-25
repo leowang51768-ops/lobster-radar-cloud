@@ -1180,6 +1180,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-11-25T13:36:46+08:00",
       "reason": "manual_add"
+    },
+    "3260": {
+      "code": "3260",
+      "name": "威剛",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-11-25T13:36:57+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
