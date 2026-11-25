@@ -158,7 +158,8 @@
       "last_signal_id": "2026-10-14|2312",
       "reason": "pattern_invalid",
       "permanent": true,
-      "continue_branch_tracking": true
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-11-25T13:35:59+08:00"
     },
     "3580": {
       "code": "3580",
