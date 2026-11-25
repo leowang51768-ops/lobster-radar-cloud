@@ -1051,6 +1051,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-11-25T13:32:01+08:00",
       "reason": "manual_add"
+    },
+    "2059": {
+      "code": "2059",
+      "name": "川湖",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-11-25T13:32:05+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
