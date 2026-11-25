@@ -1269,6 +1269,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-11-25T13:38:43+08:00",
       "reason": "manual_add"
+    },
+    "2357": {
+      "code": "2357",
+      "name": "華碩",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-11-25T13:39:09+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
