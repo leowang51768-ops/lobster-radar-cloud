@@ -1465,6 +1465,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-11-25T17:59:19+08:00",
       "reason": "manual_add"
+    },
+    "6412": {
+      "code": "6412",
+      "name": "群電",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-11-25T18:00:57+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
