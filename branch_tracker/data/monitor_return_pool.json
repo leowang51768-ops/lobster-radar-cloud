@@ -1456,6 +1456,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-11-25T17:58:39+08:00",
       "reason": "manual_add"
+    },
+    "6215": {
+      "code": "6215",
+      "name": "和椿",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-11-25T17:59:19+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
