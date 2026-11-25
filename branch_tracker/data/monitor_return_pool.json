@@ -1423,6 +1423,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-11-25T17:54:56+08:00",
       "reason": "manual_add"
+    },
+    "6667": {
+      "code": "6667",
+      "name": "信紘科",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-11-25T17:55:24+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
