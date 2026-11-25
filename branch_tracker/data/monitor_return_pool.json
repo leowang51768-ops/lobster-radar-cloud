@@ -1439,6 +1439,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-11-25T17:55:54+08:00",
       "reason": "manual_add"
+    },
+    "6282": {
+      "code": "6282",
+      "name": "康舒",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-11-25T17:57:02+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
