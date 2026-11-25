@@ -1,21 +1,23 @@
 {
   "schema": 1,
   "risk_level": "red",
-  "risk_score": 3,
+  "risk_score": 6,
   "risk_reasons": [
+    "日經明顯下跌",
+    "台股明顯下跌",
     "出現重大風險新聞"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 +5.0%｜NASDAQ +4.9%｜日經225 +3.9%｜KOSPI +2.8%｜台股加權 +9.0%｜恆生 -0.8%",
-    "⚠ 全球市場風險｜美債10Y 4.90%｜VIX 26.4｜WTI原油 81.45美元 +1.6%（高於常態，觀察）｜布蘭特原油 88.31美元 -1.2%（高於常態，觀察）",
-    "⚠ 全球市場風險｜油價觀察｜〈能源盤後〉 原油重挫逾3%！Brent、WTI齊創近三個月新低 利比亞復產加劇供應過剩疑慮",
+    "⚠ 全球市場風險｜費半 +5.0%｜NASDAQ +4.9%｜日經225 -2.7%｜KOSPI +0.3%｜台股加權 -4.5%｜恆生 -0.5%",
+    "⚠ 全球市場風險｜美債10Y 4.90%｜VIX 26.4｜WTI原油 80.79美元 +0.8%（高於常態，觀察）｜布蘭特原油 87.53美元 -2.1%（高於常態，觀察）",
+    "⚠ 全球市場風險｜油價觀察｜荷姆茲海峽再傳船隻遇襲！國際油價洗三溫暖 急拉反彈大漲逾2%",
+    "⚠ 全球市場風險｜油價觀察｜霍爾木茲海峽油輪遇襲運量驟降四成 國際油價盤中微漲守住89美元",
     "⚠ 全球市場風險｜Southbound Capital Flow | Southbound capital recorded net purchases of HK$6.203 billion; accumu",
-    "⚠ 全球市場風險｜Taiwan Semiconductor Manufacturing Co Ltd(TSM)股票11月24日開盤下跌3.19%：真相來了",
-    "⚠ 全球市場風險｜【台股收市】台灣加權指數狂升8.99%，半導體股領漲，逾千隻股份造好 作者 Investing.com - Investing.com 香港",
-    "⚠ 全球市場風險｜Nasdaq futures fall 2%; NVIDIA drops 6% in pre-market trading",
-    "⚠ 全球市場風險｜中國心連心化肥(01866.HK)11月24日耗資788.4萬港元回購87.2萬股",
-    "⚠ 全球市場風險｜派格生物醫藥-B(02565.HK)就申請建議實行H股全流通向中國證監會備案",
-    "⚠ 全球市場風險｜中國科教產業(01756.HK)盈警：預計年度淨虧損2.5億元至3.5億元"
+    "⚠ 全球市場風險｜川普再控台灣偷晶片！放話2年後要課200%關稅 曝台積電擬赴德州設廠",
+    "⚠ 全球市場風險｜【Yahoo早盤】川普將祭新關稅！台股重挫逾2800點失守3萬8 分析師郭憲政：拉回找買點",
+    "⚠ 全球市場風險｜台股跌盤中跌逾2400點「史上第六大」！川普揮關稅大刀 昨漲幅快吐光",
+    "⚠ 全球市場風險｜Hong Kong Stock Midday Review | All three major indices rose, with the tech index up 0.20%; int",
+    "⚠ 全球市場風險｜Hong Kong-listed restaurant stocks lead gains; institutions highlight the dividend appeal of un"
   ],
   "markets": {
     "US_SOX": {
@@ -40,28 +42,28 @@
     },
     "VIX": {
       "label": "VIX",
-      "price": 26.41,
-      "change_pct": -0.8
+      "price": 26.36,
+      "change_pct": -1.0
     },
     "JP_NIKKEI": {
       "label": "日經225",
-      "price": 58644.63,
-      "change_pct": 4.0
+      "price": 57062.06,
+      "change_pct": -2.8
     },
     "KR_KOSPI": {
       "label": "KOSPI",
-      "price": 5006.03,
-      "change_pct": 2.8
+      "price": 4721.56,
+      "change_pct": 0.2
     },
     "TW_TAIEX": {
       "label": "台股加權",
-      "price": 40122.35,
-      "change_pct": 9.0
+      "price": 38335.61,
+      "change_pct": -4.4
     },
     "HK_HSI": {
       "label": "恆生",
-      "price": 22219.65,
-      "change_pct": -0.8
+      "price": 22265.68,
+      "change_pct": -0.6
     },
     "US10Y": {
       "label": "美債10年殖利率",
@@ -70,13 +72,13 @@
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 81.45,
-      "change_pct": 1.6
+      "price": 80.79,
+      "change_pct": 0.8
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 88.31,
-      "change_pct": -1.2
+      "price": 87.53,
+      "change_pct": -2.0
     }
   },
   "active_news": [
@@ -87,6 +89,78 @@
       "published_at": "2026-11-24T17:43+08:00",
       "importance": 5,
       "risk_score": 4
+    },
+    {
+      "title": "川普再控台灣偷晶片！放話2年後要課200%關稅 曝台積電擬赴德州設廠 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiqANBVV95cUxOU0s1MWlCYlhfaG5UcnFTdGU3MWRPWk9wOWQ3MmFXdmhHazZOejlVa21RNlQxMV93ZmhzOXJHaDFWemhHcUZHUXhhdGRONnpuS1FzOHVHRWJIXzlIQm52QVE2Y0lOYlZNSkxNNkFIQmZXbnYtRTNzOWhZdVhFNENfU21UV183dDRzZDNYd2NZdVVVUDk5TVBXMVQ2RjdVNlVmek41YUt5OG9mbmZZc25zamJvTVdUYXg5d3lMcUZuYmZwYkxWQXJHd2tlVm15M1hqd2pWNmhoRzZfYl9vWTJ6NXF0ZGE4ZEZXUkJSQUkwRHNOMVNfVzBLMEF6OFdrc3IxVzZPbGdLOTY1SE1iZzM5bTg0THBiZXBmUU5IdDBjWVd5amtNX2V5aHFDdjJ6R2djV2Uwb3VhZm0tRTBWRWthTUwtTmw3S1R6OGc3eEVSdDdiLUNWOG1SUDhLZUYtN09QM0xieHpJcU8xcGJrN2QyZFpWdVdJb2x0Q1A0N1ZoZFE2NFBPOGpYTXZrLWxGU05fUUFMdElKUVFrd0hRLUg0X2hkbGJtR2hU?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-25T11:19+08:00",
+      "importance": 5,
+      "risk_score": 2
+    },
+    {
+      "title": "【Yahoo早盤】川普將祭新關稅！台股重挫逾2800點失守3萬8 分析師郭憲政：拉回找買點 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi9wNBVV95cUxQbkpLZHNzWHJ5LWFtVENCdEFUb0RaVVd1bC1MZHNzSDlSYjNvZ1FqTjlSOUZwMjlHS3U4LTdtTHBFUHcwWTNQMTRyRUlvMjZfdTVXVWtJN3NHXzBRblZHcjNVa1NhZ1p4RU9ZdGZNdlNKTmpxeUh4c3NVa3FtenRIb2lQQW9Rd0tIVjdjNGQxYll0Y0o2azVUQUt1R3lZbEZmdGFTSlR2OGk1aS1DSGM1dmlETGZXYkJCWElnTVBjWl9yMzB2b0VzN3JEMDBQYVpENm5MT2w2d0dqV3hKS1pJaXJlSDJuNzk3STdqQkUwblN3X2gwM0NrN1VuVW9FNzBmbGtmTWlPVnh3U1BMRWNKYks3Y2Vxc3pLbkhFS0hlWXBoLWtMNlZLaVFIdFJJNEt3eFNPTkFfWXBRSmVzZk96SFpUUFl2TXI3WFZKcjV1REZrVlF5VTJVSzZrMlhVajZWa3dJSXJuSHVLYzdsOUtVS2NyV0xWaGhuVVhmeG9xaktRU1VWc2JXOFkxRFZBUkV3N0h0NjFVR1JuM1d6NjlsaVV4aDlEUHMzbEpuclAtUHRVNElIVGl3TEJEZ0E2Snd2RkZXZ3NjaWVCTzBIb0xQc0ZTSXZPb2VXemxlQkhBVUZiVHF2QVcxdkpqYlVnX25iZ2dtOUtKQQ?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-25T10:13+08:00",
+      "importance": 5,
+      "risk_score": 2
+    },
+    {
+      "title": "台股跌盤中跌逾2400點「史上第六大」！川普揮關稅大刀 昨漲幅快吐光 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMivgNBVV95cUxOam5xdWN2T01oeHp0WmNnaDkxRW5vUWJxZmIxYzhDS19BVW56SzZ2WFN6ejEweUJRanI5WnFnc3Z1MmxseDRzZC1qeWF1Qzh3R0Ftb2Y5S2JGS3FjSHRLUFJhbG1HenAwcmg5RExwTFRsMWE2dmE3TW9Kd1FsM0VEaHNVUndlbmRValpFZ0RkVlNhZFdyUHgtYWxkc19rdkFVSjRkVFF1RkthQ2pvNmdvWnhHMzZYdmJacjZGaDBUdGg0d3lWcXhlTGVMM0UzQUpIWlZaZWFYOG9EMGpUNV9xald6SVkzOElUeWZXUF90TGZJTUExa01uQzNSWmNvbXFYeDU2LWdWWFlFSTVHNGJRdVFVcDNzdmoyNnZZRk1GYXNvTmRIX29sR1RXckFUMTBlekhZTU9rem1pWTJNNUJpYjJXRWJhc3BqX2l2Tkt0c1VuTFhvOERSaEtDeUJDTkg3TVF2OXItS2s5WUx0bW9POWFUcWV1cC14WGZ0cWN2VHFrc2dtc0prUmFTbGs3OVhmdWhJTWh6ZHBURXZKNHVXV21wTVAtOUU0V0pDbUJ4bzNoNkRaRXp3WnhXOE1jZw?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-25T09:58+08:00",
+      "importance": 5,
+      "risk_score": 2
+    },
+    {
+      "title": "Hong Kong Stock Midday Review | All three major indices rose, with the tech index up 0.20%; internet and catering stocks performed strongly, with Bilibili gaining over 9% and Haidilao rising more than 4%; semiconductor and optical communications stocks mo - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOajhWdnRGeHktSWJWakQ3Y1FaMGJZZXM4b0JPUV9ISDJwMzJEQUJlQ3J3U0gyb1haSnRFQ2x2TWVlSGx0ZHNibDRzbnFJMF9PRW5MZkJ2RXNWRmFoU2dmTjJheE1XZ1FWbGRNM0FOWVRjUURhNjhJTVpUVEVlSmlUZk83c3V4N1A4cGJsaUVCb0hHbDhRbWc2b1FsXzN2QjEwNkxn?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-25T12:19+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Hong Kong-listed restaurant stocks lead gains; institutions highlight the dividend appeal of undervalued sector leaders. - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNeHc4RWRMRktfdlJ6MU91V05IcktFTmJwaXY5dGtBRFhmZWpiTmhhQVZmdkZuNGlRak9aRzdSZ2pmTlZSbVlTR1VUYV81OWVKSE5oVXpaOF8zN1hnWlg3YWYzWEdjUDVRYlROcXVsUHg1dmFPQV96ZzY3Qk1aZkw5RVZBbU5RdmxSaUI0amttcEFZRWhEWC05NUpvWm1qV096SnBjSHpPUGZzWTc5TnhUU0hyU0RfUQ?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-25T11:50+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "打回原形？台股再挫3400點 聯發科、聯電摔跌停 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMisAJBVV95cUxOczhoTjhUUzNNNndFVldmMWhUMTlBNnNPbWxBMnJ5QXZ3RExHMklWemVRTm1USGxMVk14alduSVhRTzNpQzI0MGUtY3VXQUsydUkzcU9hUkNrOEhvVVJZb3JXeVJHN1FZWTBIMGY5TmJSUnFPRzRMcXRnblB6N3NZeDM0YUY2MXlfRFZsbklCaF96LXExNTVGOUQ4Qmpld3R2Skp4WGQyWF9BWFJDV3VIaHoxSlg2Y19aWXR0Yk9Va2pFZC1hYnYyNmJFWGl1T3J2WHIyOHFkRU1jVFpydDY5bDVhYXFQVGNpWU9ZLXlVcWllR3ZtVnJhOXl3anZwU2lYdU95aUEzUGxqMU41ZV9tQ1d2YkxzZEUxaGNwTG5wU0tvVFpXR1hCVjdwWkVGVkJV?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-25T11:04+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股重摔3440點！創意、聯發科15檔千金股跌停 股后川湖苦撐平盤之上 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMitANBVV95cUxOYlkzNzE0aDNkTVJBSWxPUFdVdmQzeER4Q2xvQTJucWFMSEwzdFNOczJPLUppd2dXdFlzVkI4ZVpJeElTbVRNdERuWmwydl9nQTRlMGdJOURxRVhBWlJVRGtoREFFX1hXWlF1ZjJrZ2dtWUdrT3RWenRYY0U2SEpVYnVZUUpzNTdvQjVIcVBCTVphUlVEcU5CWEpwMDktbE5HZC01OTVjVldYOWhpR1hPb2dlTDdsZ09tbElxOE5BSzZuMmlNT3h3YlFWRlZ3SnJTNmhpekVQSm1JeUh0SDBCd1BxTl9vam55SnIxUnAyQzFZUjJMREtyS2JUZGNBMG01Z2FoNGlUZ3FfY014QmNlcXVlb0NKY1NCWlZYd0ZVZkpORlNfWVZmLVQ3Y0FiZnhVRURWdjdZWWZGclhmdGZoZ2lyb0RuUm1mWmFvM3BfaWFkd3JFczcxZGM5QmZQNWdNVGdTdVNvWUJWOWozcl9IbE52dTJUMTE2UTNUZEZFRDRvM1diV0pOM0dRS3ZvOHNvN1RJOTdFay1CLU1UYWdOYnlRdy1EUlp0MzBPVGJvYjhmRDNG?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-25T10:54+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "台股狂飆3,310點創歷史紀錄！621檔股票漲停、成交金額卻創今年新低 無量上漲藏什麼警訊？ - 理財周刊",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9feHJ6QTM0Tmc2X0lTQ2U2bGxNVUdvcUh4Z1Myakp1VU1OT29wQkpHbjB3cVIzZThBMHV5RWhzY0kxQnQ0M21LdDJ3c1R5cTY0d0UzeFVOVTlRVFBOeGoya2ZNU2o4SGNJTXBOTWpUZw?oc=5",
+      "source": "理財周刊",
+      "published_at": "2026-11-25T09:13+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Woodside Energy Group Ltd(WDS) Stock Price Today | Quotes & News - Moomoo",
+      "url": "https://news.google.com/rss/articles/CBMimwJBVV95cUxPRFR6aDJMWEwwbzlBdzFBaWF2b1R2RFVJc01JR2F1ZVpDNFIydjBSbEpsclNWcnkyTF81b3ZKZEVJb19vQ3VkQmZ4Q0dscVFDQ1ZybFc1WjQxN1RZaEZsMHN3ajEtTl9mbkJnQmtfRmVudnhmQUZWT3NpYkFubUhYX0NWY0t5VVdOSTd5SXhXS3llQ1pLZzhUSmpBcTRFcHlEZVl6VmhOdGkwSEFZTHpJcUVmem5HaWVaQV91ZjFmRnl6ZkVZVzFBbGFEM0RBUVpKOEprTTVMYjRwY3JwNWNjS284SjdBeHdIZXVpYVNCUFRIY2FoRjV2a3VLcWJaUjl1b29STVZfU3ZHOGJhQzJoNTVtYTRlUUJ4N2pJ?oc=5",
+      "source": "Moomoo",
+      "published_at": "2026-11-25T05:33+08:00",
+      "importance": 2,
+      "risk_score": 0
     },
     {
       "title": "Taiwan Semiconductor Manufacturing Co Ltd(TSM)股票11月24日開盤下跌3.19%：真相來了 - TradingKey",
@@ -103,89 +177,29 @@
       "published_at": "2026-11-24T22:29+08:00",
       "importance": 2,
       "risk_score": 0
-    },
-    {
-      "title": "Nasdaq futures fall 2%; NVIDIA drops 6% in pre-market trading - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNQkRYM2czSFg4N1dxOWxxR3JqUDVhWVlpUUNKai1qclFKSnZZWnB4LWd2dmNVYjVfeHV5MXo4ZW44TEI3bFBzckFsSl83VE1BV2owbTJoaFhrSERCaTA3eVZsc3FNbjIzTVNGakRlTDNkYV9vWF93cG5JbFlMVWNLd0FNS2ZIVkw2Ui1LcTJxOU5HUzIwSjF0Wg?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-24T19:47+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "中國心連心化肥(01866.HK)11月24日耗資788.4萬港元回購87.2萬股 - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFB1WVRZWmRkdjRQaUZMR0oyNjZNcVI3UmVxN25ZNGd3TXk0d3dVNDBfZTFVTDBwdmJ1UUIwOEFnT2dHckwwczMyMUFScnRSMWpGenVQT2NyUGhLdF85cHJZcEIzLVZtRFpOSU5n?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-11-24T19:30+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "派格生物醫藥-B(02565.HK)就申請建議實行H股全流通向中國證監會備案 - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5ZOVNvT210cXdQc0dob09VcXZGdDc0V0pOejFFN2xxSy10Z0JSc3BtYWhGWHB2MkNSR3lKU2FDR3BSWi1aYlYtSEU2ZEp0SUdGVFZpdW9ublQtVDhDUGtwVXNhWkhkeEhXNzVB?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-11-24T19:12+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "中國科教產業(01756.HK)盈警：預計年度淨虧損2.5億元至3.5億元 - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE55Q3I5cWwzYzh5Rmg2N3JHWjBhTmxxdlVnYWNUemhwLVdncmxBNkwxZnZJYlFVYUZzSEpiVHJaWEUtVllIMm4yRkdGWXVoTWU4QXRycU9JQ3F0eVhWVnA2TXpLc3p4YmhObkhJ?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-11-24T18:17+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "津上機牀中國(01651.HK)11月24日耗資581萬港元回購18萬股 - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBSOHpPOVlXZXVlTEhaQ1RxeWsxSVltclFmbUZjajF4YWN4dXpZczFxdXlfLUJGajBRT0V1YnBpbnViTTMzNU9PSXd5NTAzRy1RUGpsanpod2FVWjVRUm9YOTY3ZjRSTHk0LVAw?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-11-24T18:11+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "最慘輸家！台股暴漲前1400戶融資遭斷頭 分析師：這三類人最傷 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMimgNBVV95cUxPdlRXLVlZMmdxWTRNSkFwUUdNLVVvYUpENktDVjlTNTVseU13ZTkyaTBtZHNldTQxdWs4WnRHTm9Gb1pXVXkxTDVNWGVJWWlORzZIbEFSenNxdlFRdjJGRnZEOUZqTHNLbmZqcVhLRkFKS1NGV05nVTAxazdRamw4a19qNUJWMENkVFNzeUZmdERTanVua2xQSWVKLUltVC1nQktTMmVZb3BOOUxRNW9zZ2lRY0ZwT3JJc1VPeHc1bE0tMi1NT3ZZZ3BpMUxwV3NPM2o0Vl9MMFZXMVlCcUlKYWlUYVZFdTF4OWY1Ynh1ZFR1Y1pIckZzNW9EbU9LRTRLdlNPTE5iN0VLR1VSZlNzTEFmSW1iSGtNcGl0R2pPemxFY3RaOFVLdFo2YzE1cjFCLVpIcjdtSldXMXU5SEdVdVF0dDhoWHZpSVU4UWgxTVp0RnBqYlhTWGdJNjZWS2hWd243NmphZGI1R3JtZTQ1TUZKRGJ3MGhMX1lyb3Btcl9FYVA0ZjFqYkxhSm55RXdTb1M3Zk5MU0p1QQ?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-24T17:55+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "吳東亮建議放寬處置股票 金管會：周五開會4方向討論 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi8gJBVV95cUxPbDByd0V6ZzZPeVluR09QT1U3blQxXy1PUm9nb3dXVVBGN3ZTdDk3Tmtyd3YxMWZ6bm5uamNDMFhrQWFzZDJMNnFOd1I5QWpEYjY5d1VtQ0E2NXZ1WUFJY1QweHhDSk4zOUp4b19MbkhPZUpSS2lIZkxNRkY5MXZuQkczWEtnbXZ0dHpZVnNvQlF6NU1tdmdNUi0zUUROZUtEYVJPNTN3NVdrRXIzc1lyU3Zla3V5M2RMWnQzWEJTZndPdkFxNXpzX21RMjAzY0FsVVlhdWxKanI0MDR6RTVhRUN1VGZMNUNzVHQ3ekM3UzhlU0Q0MzZCcS05ME5NZVBYM1VObnYzWHRJaEMzTkpTX2x6TjFzYXlscnlFaGQwb2s1SjBOT051Vy1aT0g2WDJON2dTdHZzZkxZVWpyZk9fVjBfU2ZCVUpwNEZ6SWpzUkwtZTRQc2stZDZfbzZnRDBBVkJpU2R5RUNCckVIS3dSaW5R?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-24T17:43+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "中國旺旺(00151.HK)11月24日耗資495.4萬港元回購210萬股 - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5nRWJ5aDFrQnBnWkY0N3Y4MUZ2dlpjNlYwOW1ZTWkwX2E3SUwwcGF3SUVBcjJscUl0RTlhS05mZFRGR095dHVDbG5haW03WWVEV25KTmhEQU9rVWtqUWlkcUdnOGZmTUplZU9N?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-11-24T17:41+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "中國澱粉(03838.HK)11月24日耗資12萬港元回購64萬股 - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFB2VjZpS2dZUFBfbldtY1RHd05VQU4ycmlYVnd2X2FKU2R3dlZfY0JxNzRpcGpEanRoa2VtbDFUSlJsd2paYUlrd2xZekJCRm03dVh0VmpDaUlJeGRnWHZhZHV6R2l0ejJNbzJN?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-11-24T17:28+08:00",
-      "importance": 2,
-      "risk_score": 0
     }
   ],
   "oil_watch": [
     {
-      "title": "〈能源盤後〉 原油重挫逾3%！Brent、WTI齊創近三個月新低 利比亞復產加劇供應過剩疑慮 - 鉅亨網",
-      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9pUWVfelJVcnNfUGczMkZXNG5uMkJnc1d4MG5FT2NzZHI5aGRoRXRTVXRJdEtUWnlMVDVMSE9jZXFjNFRJU3BjLUZ1QQ?oc=5",
-      "source": "鉅亨網",
-      "published_at": "2026-11-24T05:31+08:00"
+      "title": "荷姆茲海峽再傳船隻遇襲！國際油價洗三溫暖 急拉反彈大漲逾2% - TVBS新聞",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5pY1Mwd21iclEza2pjLTlvRVduX2cyTnZZeDV5OGtkOHVodGtpWlNHemZIeFFKOU9OelZ3UTVQNDFLRkJma0lsbmpWY3VydG8?oc=5",
+      "source": "TVBS新聞",
+      "published_at": "2026-11-25T09:54+08:00"
+    },
+    {
+      "title": "霍爾木茲海峽油輪遇襲運量驟降四成 國際油價盤中微漲守住89美元 - LIFE 生活網",
+      "url": "https://news.google.com/rss/articles/CBMijwNBVV95cUxOQzQ0NnhuX2JZMUEzeHdBbXlKeVM0a0tXcjFWTDh0bkk5c2M4RTBCRE5RNU1oVFdMc3hNZF9Mck44M2xna1ZfalhWX2ZBSDBzN0RwUWQtSVh0N3d0eVRrWnViNnc3N3cyLTZqRm9rNjBwZTVTT0ZOTER4cE5FeTBCb3hxZWVpQnE0ZTNDa2w2WlFnampCdF9xQ1RfcHJqUElwRldkM2ZBQ3MyRWpFSG9CR0VaM0JGYWlJbnhoeXRGdE51bmVrLVFyV2xsY2VSVFpyeWJPSzVaa2c2ZXBISDJtY2tlZGJrMmU5XzRiYjZKMi1fM3lkSWNnRVJncXNQZ3U0cWE3YkNmVXNOM3RyeFN1bnFLMjRIbXlmYkZxYlZsS2kxLWg1UDM2QV9TMDM0SWRLMmJLZmJ1NW9MMnBiU2xXa2N6RGpnMHF2X2g4LVowNS1ibmkyM2RWMmJMYkdJbmUxcEE3Ynpla2x0WUZPaENBbFFlN0c5c0R1aEVKS2VGdHZBZTVkY01BWHRjelRNN1k?oc=5",
+      "source": "LIFE 生活網",
+      "published_at": "2026-11-25T08:20+08:00"
+    },
+    {
+      "title": "布蘭特原油價格92.32美元：胡塞武裝聲稱襲擊煉油廠 OPEC+會議前 - FinanceFeeds",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBKcGZEQk1Dcl9UOEY1MzUzYVVmUXFLNkhMczNyRVNfaFNQSEZYQ0xIb1RSQ29uNnZlTV9TZlpaTEpOR0JsSzY4M0JLaExDcjJ0U2Fpd2dVNExuZ3N3YWZnelZIMGhpbHFzeDhWV1c0SHZjOHVQYVhpYw?oc=5",
+      "source": "FinanceFeeds",
+      "published_at": "2026-11-25T01:25+08:00"
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-11-25T05:29:21+08:00",
-  "checked_at": "2026-11-25T05:29:21+08:00"
+  "updated_at": "2026-11-25T12:28:08+08:00",
+  "checked_at": "2026-11-25T12:28:08+08:00"
 }
