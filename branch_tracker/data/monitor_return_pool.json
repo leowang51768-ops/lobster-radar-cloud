@@ -1367,6 +1367,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-11-25T13:42:02+08:00",
       "reason": "manual_add"
+    },
+    "3605": {
+      "code": "3605",
+      "name": "宏致",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-11-25T13:42:11+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
