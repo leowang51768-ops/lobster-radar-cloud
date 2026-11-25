@@ -1448,6 +1448,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-11-25T17:57:02+08:00",
       "reason": "manual_add"
+    },
+    "6426": {
+      "code": "6426",
+      "name": "統新",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-11-25T17:58:39+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
