@@ -79,7 +79,8 @@
       "last_signal_id": "2026-10-12|5443",
       "reason": "pattern_invalid",
       "permanent": true,
-      "continue_branch_tracking": true
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-11-25T18:00:26+08:00"
     },
     "3706": {
       "code": "3706",
