@@ -8,7 +8,8 @@
       "last_signal_id": "2026-09-30|6770",
       "reason": "pattern_invalid",
       "permanent": true,
-      "continue_branch_tracking": true
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-11-25T18:05:26+08:00"
     },
     "6488": {
       "code": "6488",
