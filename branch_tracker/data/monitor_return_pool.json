@@ -1391,6 +1391,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-11-25T13:42:45+08:00",
       "reason": "manual_add"
+    },
+    "8996": {
+      "code": "8996",
+      "name": "高力",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-11-25T13:42:57+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
