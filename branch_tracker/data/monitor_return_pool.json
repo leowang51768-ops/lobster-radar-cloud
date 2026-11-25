@@ -1099,6 +1099,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-11-25T13:33:12+08:00",
       "reason": "manual_add"
+    },
+    "2388": {
+      "code": "2388",
+      "name": "威盛",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-11-25T13:33:21+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
