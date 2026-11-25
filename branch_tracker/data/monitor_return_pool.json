@@ -1123,6 +1123,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-11-25T13:35:07+08:00",
       "reason": "manual_add"
+    },
+    "3032": {
+      "code": "3032",
+      "name": "偉訓",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-11-25T13:35:32+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
