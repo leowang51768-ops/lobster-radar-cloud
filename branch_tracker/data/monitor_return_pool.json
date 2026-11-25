@@ -1375,6 +1375,22 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-11-25T13:42:11+08:00",
       "reason": "manual_add"
+    },
+    "6643": {
+      "code": "6643",
+      "name": "M31",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-11-25T13:42:37+08:00",
+      "reason": "manual_add"
+    },
+    "6805": {
+      "code": "6805",
+      "name": "富士達",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-11-25T13:42:45+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
