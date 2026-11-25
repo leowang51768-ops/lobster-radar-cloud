@@ -150,7 +150,8 @@
       "last_signal_id": "2026-10-14|4977",
       "reason": "pattern_invalid",
       "permanent": true,
-      "continue_branch_tracking": true
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-11-25T13:41:44+08:00"
     },
     "2312": {
       "code": "2312",
