@@ -1148,6 +1148,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-11-25T13:36:08+08:00",
       "reason": "manual_add"
+    },
+    "2464": {
+      "code": "2464",
+      "name": "盟立",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-11-25T13:36:16+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
