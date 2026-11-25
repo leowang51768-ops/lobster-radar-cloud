@@ -3,20 +3,52 @@ import argparse
 import json
 import math
 import os
+import re
 import sqlite3
+import sys
 from pathlib import Path
 
 from stock_universe import STOCKS_TO_TRACK
 from scan_trade_date import resolve_trade_date
 
 
+def fixed_price_universe():
+    return {
+        ticker.split('.')[0]: '上櫃' if ticker.endswith('.TWO') else '上市'
+        for ticker in STOCKS_TO_TRACK
+    }
+
+
+def daily_price_universe():
+    """Add the permanent watchlist for the official price workflow."""
+    expected = fixed_price_universe()
+    path = Path(__file__).parent / 'branch_tracker' / 'data' / 'extra_universe.json'
+    with path.open(encoding='utf-8-sig') as source:
+        payload = json.load(source)
+    if not isinstance(payload, dict) or not isinstance(payload.get('stocks'), dict):
+        raise ValueError(f'Invalid permanent watchlist: {path}')
+
+    unsupported = []
+    for code in payload['stocks']:
+        if code in expected:
+            continue
+        if not re.fullmatch(r'[1-9][0-9]{3}', code) or code.startswith('91'):
+            unsupported.append(code)
+            continue
+        # The cloud list has bare codes; the official quote supplies the market.
+        expected[code] = None
+    if unsupported:
+        print('PRICE_UNSUPPORTED_CODES', json.dumps(sorted(unsupported)), file=sys.stderr)
+    return expected
+
+
 def requested_date():
     return resolve_trade_date(explicit=os.environ.get('TRADE_DATE'))
 
 
-def assess_rows(rows, trade_date):
-    expected = {ticker.split('.')[0]: '上櫃' if ticker.endswith('.TWO') else '上市'
-                for ticker in STOCKS_TO_TRACK}
+def assess_rows(rows, trade_date, expected=None):
+    if expected is None:
+        expected = fixed_price_universe()
     valid = set()
     invalid = set()
     valid_rows = []
@@ -24,7 +56,10 @@ def assess_rows(rows, trade_date):
         day, market, code, name, *values = row
         if code not in expected:
             continue
-        usable = (day == trade_date and market == expected[code] and len(values) == 6)
+        expected_market = expected[code]
+        usable = (day == trade_date and market in ('上市', '上櫃')
+                  and (expected_market is None or market == expected_market)
+                  and len(values) == 6)
         try:
             numbers = [float(v) for v in values]
             usable = usable and all(math.isfinite(v) for v in numbers)
@@ -51,24 +86,28 @@ def assess_rows(rows, trade_date):
     return report, valid_rows
 
 
-def validate_rows(rows, trade_date, require_all=True):
-    report, valid_rows = assess_rows(rows, trade_date)
+def check_report(report, require_all):
     if report['usable'] <= 0:
         raise RuntimeError(json.dumps({'error': 'PRICE_SOURCE_EMPTY', **report}, ensure_ascii=False))
     if require_all and (report['missing_codes'] or report['invalid_codes']):
         raise RuntimeError(json.dumps({'error': 'PRICE_SOURCE_INCOMPLETE', **report}, ensure_ascii=False))
+
+
+def validate_rows(rows, trade_date, require_all=True):
+    report, _ = assess_rows(rows, trade_date)
+    check_report(report, require_all)
     return trade_date
 
 
-def validate_database(db, trade_date=None, require_all=True):
+def validate_database(db, trade_date=None, require_all=True, expected=None):
     day = trade_date or requested_date()
     with sqlite3.connect(Path(db).resolve().as_uri() + '?mode=ro', uri=True) as con:
         rows = con.execute(
             'SELECT date,market,stock_id,stock_name,open,high,low,close,volume,turnover '
             'FROM prices WHERE date=?', (day,)
         ).fetchall()
-    report, _ = assess_rows(rows, day)
-    validate_rows(rows, day, require_all=require_all)
+    report, _ = assess_rows(rows, day, expected=expected)
+    check_report(report, require_all)
     return report
 
 
@@ -109,5 +148,6 @@ if __name__ == '__main__':
     report = validate_database(
         Path(__file__).with_name('lobster_tw_6m_prices.sqlite'),
         require_all=not args.allow_partial,
+        expected=daily_price_universe(),
     )
     print('PRICE_INTEGRITY_OK', json.dumps(report, ensure_ascii=False))

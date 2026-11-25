@@ -7,8 +7,7 @@ import requests
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
-from price_integrity import assess_rows
-from stock_universe import AI_STOCK_CODES, AI_STOCK_COUNT
+from price_integrity import assess_rows, daily_price_universe
 
 DB=Path(__file__).with_name('lobster_tw_6m_prices.sqlite')
 parser=argparse.ArgumentParser()
@@ -72,12 +71,11 @@ def parse(data,market):
     return []
 
 ymd=day.strftime('%Y%m%d')
+expected=daily_price_universe()
 tw=parse(get(f'https://www.twse.com.tw/rwd/zh/afterTrading/MI_INDEX?date={ymd}&type=ALLBUT0999&response=json'),'上市')
 otc=parse(get(f"https://www.tpex.org.tw/www/zh-tw/afterTrading/dailyQuotes?date={day.strftime('%Y/%m/%d')}&id=&response=json"),'上櫃')
 if not tw or not otc: raise SystemExit(f'Not committed: official data incomplete for {day}; TWSE={len(tw)}, TPEx={len(otc)}')
-tw=[row for row in tw if row[2] in AI_STOCK_CODES]
-otc=[row for row in otc if row[2] in AI_STOCK_CODES]
-report, valid_rows = assess_rows(tw + otc, day.isoformat())
+report, valid_rows = assess_rows(tw + otc, day.isoformat(), expected=expected)
 if report['usable'] <= 0:
     raise SystemExit(f'Not committed: no usable tracked prices for {day}')
 present={row[2] for row in valid_rows}
@@ -102,7 +100,7 @@ finally:
     con.close()
 
 print(json.dumps({'date':day.isoformat(),'twse_rows':len(tw),'tpex_rows':len(otc),
-                  'tracked_universe':AI_STOCK_COUNT,'present_universe':len(present),
+                  'tracked_universe':len(expected),'present_universe':len(present),
                   'retention_cutoff':cutoff,'deleted_old_rows':deleted,
                   'missing_codes':report['missing_codes'],'invalid_codes':report['invalid_codes'],
                   'mode':'partial-safe official update; missing stocks quarantined; no stale fallback'},ensure_ascii=False))
