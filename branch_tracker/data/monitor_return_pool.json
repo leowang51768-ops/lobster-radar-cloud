@@ -1505,6 +1505,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-11-25T18:02:36+08:00",
       "reason": "manual_add"
+    },
+    "6530": {
+      "code": "6530",
+      "name": "創威",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-11-25T18:02:58+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
