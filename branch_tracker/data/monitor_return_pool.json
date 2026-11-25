@@ -239,7 +239,7 @@
     },
     "1802": {
       "code": "1802",
-      "name": "1802",
+      "name": "台玻",
       "permanent": true,
       "continue_branch_tracking": true,
       "manual_added_at": "2026-10-19T14:18:17+08:00",
@@ -1171,6 +1171,14 @@
       "permanent": true,
       "continue_branch_tracking": true,
       "manual_added_at": "2026-11-25T13:36:36+08:00",
+      "reason": "manual_add"
+    },
+    "3234": {
+      "code": "3234",
+      "name": "光環",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-11-25T13:36:46+08:00",
       "reason": "manual_add"
     }
   },
