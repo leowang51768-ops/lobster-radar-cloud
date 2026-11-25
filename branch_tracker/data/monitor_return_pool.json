@@ -1309,6 +1309,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-11-25T13:39:46+08:00",
       "reason": "manual_add"
+    },
+    "3035": {
+      "code": "3035",
+      "name": "智原",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-11-25T13:40:20+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
