@@ -1521,6 +1521,14 @@
       "continue_branch_tracking": true,
       "manual_added_at": "2026-11-25T18:03:52+08:00",
       "reason": "manual_add"
+    },
+    "8064": {
+      "code": "8064",
+      "name": "東捷",
+      "permanent": true,
+      "continue_branch_tracking": true,
+      "manual_added_at": "2026-11-25T18:04:17+08:00",
+      "reason": "manual_add"
     }
   },
   "version": 241,
