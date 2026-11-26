@@ -1,23 +1,22 @@
 {
   "schema": 1,
   "risk_level": "red",
-  "risk_score": 9,
+  "risk_score": 7,
   "risk_reasons": [
     "費半明顯下跌",
     "NASDAQ明顯下跌",
-    "日經明顯下跌",
-    "台股明顯下跌",
+    "韓股明顯下跌",
     "多則市場負面消息同時發酵"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 -8.5%｜NASDAQ -2.1%｜日經225 -2.8%｜KOSPI -0.2%｜台股加權 -4.8%｜恆生 -1.9%",
-    "⚠ 全球市場風險｜美債10Y 4.85%｜VIX 28.3｜WTI原油 83.85美元 +2.2%（高於常態，觀察）｜布蘭特原油 90.45美元 -1.0%（高於常態，觀察）",
-    "⚠ 全球市場風險｜油價觀察｜〈能源盤後〉荷姆茲海峽3艘船遇襲 原油漲逾2% 但供應過剩仍壓頂",
-    "⚠ 全球市場風險｜油價觀察｜荷姆茲海峽再傳船隻遇襲！國際油價洗三溫暖 急拉反彈大漲逾2%",
-    "⚠ 全球市場風險｜台股「只紅一天」川普關稅砍出史上第六慘！賣壓籠罩全市場資安概念逆勢撐出一點紅｜Yahoo財經掃描",
-    "⚠ 全球市場風險｜川普再控台灣偷晶片！放話2年後要課200%關稅 曝台積電擬赴德州設廠",
-    "⚠ 全球市場風險｜川普再揮關稅大刀！台股盤中暴跌3440點「史上第2大」 80檔個股慘崩跌停板",
-    "⚠ 全球市場風險｜〈台股開盤〉川普再揮關稅大刀 台股一度跌逾2000點失守4萬關回測5日線",
+    "⚠ 全球市場風險｜費半 -8.5%｜NASDAQ -2.1%｜日經225 +1.5%｜KOSPI -4.5%｜台股加權 +3.0%｜恆生 +0.7%",
+    "⚠ 全球市場風險｜美債10Y 4.85%｜VIX 28.3｜WTI原油 84.39美元 +2.9%（高於常態，觀察）｜布蘭特原油 91.12美元 -0.3%（高於常態，觀察）",
+    "⚠ 全球市場風險｜油價觀察｜WTI rises above $83.50 on Middle East refinery attack",
+    "⚠ 全球市場風險｜川普關稅嚇不倒「護國神山」！台積電力守10日線 分析師：利空淡化了",
+    "⚠ 全球市場風險｜川普關稅嚇不倒「護國神山」！台積電驚險翻紅站上10日線 專家：利空淡化了",
+    "⚠ 全球市場風險｜301關稅台灣取得相對優惠稅率 台股開高走高盤中漲逾1200點",
+    "⚠ 全球市場風險｜美國為何擬對台加關稅？USTR列9項理由 半導體、電子業遭點名",
+    "⚠ 全球市場風險｜Ping An Bank(000001) Stock Price Today | Quotes & News",
     "⚠ 全球市場風險｜Capital Flows | Southbound capital recorded net purchases of HK$6.434 billion in Hong Kong stoc",
     "⚠ 全球市場風險｜At 9:30 p.m. tonight, the Fed's \"preferred\" inflation gauge, the PCE, is set to be released! Wi"
   ],
@@ -49,23 +48,23 @@
     },
     "JP_NIKKEI": {
       "label": "日經225",
-      "price": 57011.62,
-      "change_pct": -2.8
+      "price": 57857.4,
+      "change_pct": 1.4
     },
     "KR_KOSPI": {
       "label": "KOSPI",
-      "price": 4697.51,
-      "change_pct": -0.2
+      "price": 4780.39,
+      "change_pct": -4.6
     },
     "TW_TAIEX": {
       "label": "台股加權",
-      "price": 38195.43,
-      "change_pct": -4.8
+      "price": 39337.29,
+      "change_pct": 3.0
     },
     "HK_HSI": {
       "label": "恆生",
-      "price": 21966.01,
-      "change_pct": -1.8
+      "price": 22373.81,
+      "change_pct": 0.6
     },
     "US10Y": {
       "label": "美債10年殖利率",
@@ -74,46 +73,54 @@
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 83.85,
-      "change_pct": 2.2
+      "price": 84.39,
+      "change_pct": 2.8
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 90.45,
-      "change_pct": -1.0
+      "price": 91.12,
+      "change_pct": -0.4
     }
   },
   "active_news": [
     {
-      "title": "台股「只紅一天」川普關稅砍出史上第六慘！賣壓籠罩全市場資安概念逆勢撐出一點紅｜Yahoo財經掃描 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi5wRBVV95cUxPUnNnSEhxXzVLcEtIcy1rdHM3RnNQMXotNGc5bWIyZmFSd3kxRG1tSmdaRUR3VUVObnJ1TERtc2ZuX0x6SjN6R2FnQlJZLU5aVGowbDNLUW9FQnRkX3dkS2l4N1FSS3BUSG9scVFCTTB0S3hoOENCNkJ4VEp5NGlZZVp3OXZ4X3VUV1gzbVlCN1pGSkYtck1yYzdEaWtVb2NRS1daZFBfU09JV3FYQ1RwN1J2WlRZVHl3R3kzNGNBQ3ZDZW5GTEEtZ2dIRGg3UWJiNW5zaURZZC03WHRDbThIaENaUnYxeERHOUNBRUhMV0JGOE9lOERCcEkzam5nZnU5Nk9sRlpSNFNUb0o1cXY3RGItbi1ObnVfQzM3Z3ZDSXNUMTJVU0NkNXIzVVU3MEs2OTNaYWZLbG5adzZvbmYyVVFXSmdLNUVtb2w4TjdLS1ZaWEgxLU14RXY4MU9obU5oM3BsSUo3OG1CX3NtNzdaaXNwZnNDNElHTFM4bDVFcVduczRmdlJ0Wk9obl9vQ2U5bE9IQlRZdGJ5V0ZtVUFnNjhkQ1EtUHpWR0UtX2RsdnJKOGdnRnlaa2dOMzBuandaT2NWSUJNY0VRRUN6dE1mTDVETEZ4c3lOWXRLbVdZYVFObkhtWm82ektZNDlqb1JTU0lKbHd5UjVBdF8tUWo1NkFhMjc5Z3J4ZFVqakpmZnAyWllDLUJNSUtNU0Z0WVRORjJWb0dVYWpjZHFfZVlVV2QyTFZmbW5PV05WUGdyRTFfVmpRZy1UZ2VUeTlXQTg2NV93LUh3eXdMU2ZhN2RDUjJSSnRwTFE?oc=5",
+      "title": "川普關稅嚇不倒「護國神山」！台積電力守10日線 分析師：利空淡化了 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMixwNBVV95cUxOTXVlazlWM2lQOHQzTjZrWHFzaUtaeE52REZRanB5VklzMHNsZ0JJLTVKR2JESXFQa3gzRXRIUHkyU2kzUl9mN050TjBRZ1BrMG5OWlRZZERaZndKaGhwLURwb3FJcllrVkNuMXRqTFprZUhGUzRreFUxQnhQVVMtd29QY3hrZlNCUG5jXzI4RXhDOUlZYjE5M1dyZzdCc1pFUmxwWjRpZUh5SUNuRHFueHZRS0lKUDJmVmQ2Ymt0Q2NJcTNvSjdQcXFuRnBFNHN5aVJfSjJmS29GU2s4cTFEMUpSWnI2RmZ5MHp3Q0pOajZ1U3pyOGc4MTFRbkdMbWZjOG95a2lVNWR3ejBpeDJrNktVTnpuWFJMT3Uxa01CN2xwNWowR0p5OVFLT2pwT081dzJITXp1Tnl3VXExOTJESHZRb195RHRIbHdLUTFuQUJNQVFVZHF4V1JzSW01MWlza1hjdmJvSWRVbGFlOXBxLUwyaVJZcVpydzZyN2JkVFNDSk9uWXdDRjJGN0FaVXVfcW85QVl0cDBmR3A3THA2dG4xdW41dEYtWEZBX1pQM1lwMXJ5djhDOUNOcENhT1FaZ0twOGZpcw?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-11-25T17:10+08:00",
+      "published_at": "2026-11-26T10:02+08:00",
       "importance": 5,
       "risk_score": 2
     },
     {
-      "title": "川普再控台灣偷晶片！放話2年後要課200%關稅 曝台積電擬赴德州設廠 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiqANBVV95cUxOU0s1MWlCYlhfaG5UcnFTdGU3MWRPWk9wOWQ3MmFXdmhHazZOejlVa21RNlQxMV93ZmhzOXJHaDFWemhHcUZHUXhhdGRONnpuS1FzOHVHRWJIXzlIQm52QVE2Y0lOYlZNSkxNNkFIQmZXbnYtRTNzOWhZdVhFNENfU21UV183dDRzZDNYd2NZdVVVUDk5TVBXMVQ2RjdVNlVmek41YUt5OG9mbmZZc25zamJvTVdUYXg5d3lMcUZuYmZwYkxWQXJHd2tlVm15M1hqd2pWNmhoRzZfYl9vWTJ6NXF0ZGE4ZEZXUkJSQUkwRHNOMVNfVzBLMEF6OFdrc3IxVzZPbGdLOTY1SE1iZzM5bTg0THBiZXBmUU5IdDBjWVd5amtNX2V5aHFDdjJ6R2djV2Uwb3VhZm0tRTBWRWthTUwtTmw3S1R6OGc3eEVSdDdiLUNWOG1SUDhLZUYtN09QM0xieHpJcU8xcGJrN2QyZFpWdVdJb2x0Q1A0N1ZoZFE2NFBPOGpYTXZrLWxGU05fUUFMdElKUVFrd0hRLUg0X2hkbGJtR2hU?oc=5",
+      "title": "川普關稅嚇不倒「護國神山」！台積電驚險翻紅站上10日線 專家：利空淡化了 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi6wNBVV95cUxOX2pBenkzLWEzYUtoT2Y1TGVWeEtqV2ktSE1kcW1rbjRHZ19nOE9ET2NLbWptc2JYeTdIVXk0ekN2NkhlMkZlTXdILWJTNWljX3pFQzdadWFHOUFHZXBYelNHYVRJeFp0d2VaVmZLTk1BbGhtMnY3LVFmMEozSl9SU0dGR3ZnQjBuRkNIcXJpZnFETEVGeWgzalBWb0RPRk1WcHNuYjJJeU56ZEdyWG9UZmFKbG01WWFkazNLbnFMX19fLV8yMjRtTWcydVV1bzlmdnduY3d3Y2pfYmdnaHJfdmpSYlV4aHRLUUNIZ3lDM1JyMXlLU29FbWdCOTVrcnk0S2g3Wkp3ZUNxSTJFSVd3d29icFg1VE51SElrYU9ORDBXbHdkOHFkaENKYjBfX1lzQzVqSGtnS3k2cWtibWR3emU3b3VDcWE5cXdheDhpaF8tNUFaX0g5TTFkR05DZk1HVHcwRWdHZTVsMVEwckw5dDRDSDR3RUszRzR5UmtSV3AzS2JIMHcxZWtzUXBXQVBsc3kyVnJJQWJUT2p2MTdPbXhialZrQmdBdmllRDVHeWxPdE50Ul9pUDE4WlMySGJ5WEh5VUlra0pfV1BSN251MGZjTVRMZXFSWjFlRFYwQ041RTVhZXVsb0F5aw?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-11-25T11:19+08:00",
+      "published_at": "2026-11-26T09:22+08:00",
       "importance": 5,
       "risk_score": 2
     },
     {
-      "title": "川普再揮關稅大刀！台股盤中暴跌3440點「史上第2大」 80檔個股慘崩跌停板 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMirANBVV95cUxPMmlXdkxMSFJJSTlwak9DcHBic29sWFlHMU5pVjBpMlR6NVJRWUJ1MjUyNFNVUHBoYUlJX3N4ZUl2WWZZN2xnTkJ4ZS1jdUJHSzZOMTF2VmQ4amlkNWRrcnN2dG9GV1JsUXNKSnRwWHJ2cVg0UnY4aXJqNllYY1dQbno4U28wX21ncGFURlpPZEotNk5MRHY2RXRWM2ZaWXpWWUpGeGZ2ckNmNGhoUjlFbXVxbU96bmpyX0lQNHNwMkpxZ1ZtNUZjbGVMcVJtcmJqZUEwYVpDLXBLVXh3OW9rc21MNk9jQUxyMjJsUUMyLUI5RVVRSDlMWml2LXlFX1h6V18wd19vSV96OHZHUU9tcVQtenF0V283dUtiNEZYQ3lGd0lRd2R2NnNCUTBvZXg2SDRKdXkzOG81empUNWNORS13VGQ1eWZKQ0xpZnpkbE9yYWJZTmdhUWxPZm04WnBra3g1QnJkRWg5RDU0aE5oZm5kQURMeTQyVkt4SzVjSTVFN0hOaktEdzY2clg4cGFERGVJQk5vbHMwX3NnRlVMMkhzSWFtWmUzQVpSSQ?oc=5",
+      "title": "301關稅台灣取得相對優惠稅率 台股開高走高盤中漲逾1200點 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi-gJBVV95cUxPY1p6SEZkT3I2VTBORE1xandaYkxNVksyX1BvYnd4eTdKQm5XeFp0eV9BTG5oSm8zLUFzQlZia3c0Z3YwQUdaRnlnUTI2V29NdWFIYnRyeWVHZGkwMm1yWWNtMC1iQUtKbVRIeGxKbVU5Sng4ck1QSWhwX3EwOENYN3N3REpYQ3p1U2NzSFE4N0FRVFJaV3NPeHQ5Q003NlM0ekVaTGg4SjJPdVFlN0lLMllxTEc0bWJCRVhxdVl0d0RMcVlDYW0yRWhxbVh0WlFGSHlGdVozNEJXUkFSakFoV1Z4NkZ2Z0ljb3VCcXlMOUE3bXRVTzY1SEgxU2NvYm4wTjJBQWQzV1pyMXc2ellyRndnczFTMmNFTk5aeHZZQmtvSGV1a0tVeDdZbVllWWFReTlsQ0I4MnJtdVZadXVjVmtWampwX05qMW04T05sb01nMHJ5UG8yRmFuLTF2QmhiMVpyempUM3VoV2JwZjBVako5Q1E2NDhFZkE?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-11-25T10:34+08:00",
-      "importance": 5,
+      "published_at": "2026-11-26T09:43+08:00",
+      "importance": 4,
       "risk_score": 2
     },
     {
-      "title": "〈台股開盤〉川普再揮關稅大刀 台股一度跌逾2000點失守4萬關回測5日線 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMinwNBVV95cUxNTGQxMVowYW03R0gtWFo0eUlGV1hpRFVPUUZMTU53UktoVjU5aTBMTFVWWHlMeEt0S2lCY0JBcjBGdzAxakRrUXNmN2xTWmlwX3RlWURITXJiQXM4SGd4NWxoVVMzLXdTd0Z4a3QwcmFpY3FUMmNnN2Z2Q25za3hBdWE4U0FpdkplWmVqTGpiNjllWjFHWGhiQXdzRmE1N1Y3cmRzRFE1NWJZcmpubzBwNF9hRnNZYkZ4V2pOZHZkTDgtT3pud3MyZ0p4UHhSbDV4aGZJeVN2WmRwWmQ2Z00yRlA3SjBWMnlmTkwwMm5nN25yRHhzOGZwT3RKNS1vc0EtTEdRbXVpVFJONjNlUkMzY0FTM1JoRWkzSUlqSHJVZnRRcS1UOHNQLXR5SlZWRWpQYjY5ZTJ4MkFYYUV1MmRXVTJuWXo1WEF4MDVBSnY3eGxwVHJ5WnF5Nk1rR21pMkY0SUFqbk5FM29aTlhJbzhYUng1ZjR0S21tWmlPaUpyYVB2MVlic1FaWkNKYjVYTnJ0Nkh0TnQtZmhfQW51ZFlz?oc=5",
+      "title": "美國為何擬對台加關稅？USTR列9項理由 半導體、電子業遭點名 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi-gJBVV95cUxNTmZOOFVmUlFBWEZYbHBYbkJNOFVxV0R4dVdseTBCMm1zSlJyWUtjNi13SUtuVmtmakd1cUNrLW5UNUxQNmp2QzdXa0ppRGtsRFZWU2FoS0E1eV9kZDM1aFZ2M20zdkRYYllYZTM4ck9uUUZMUHc2YnhHN1lMcmlNVzRBdVM1Y3pZNXRvc09QQVozejlSUkxnWWk1R0VGVFdyV2dMQ2RFaFhlU0NVTGV2Z0NNVzR4Y1pXR3BaRGJFWTZMdFhYNHpycG1zZWM1LUFXLWpESHZSdWdBSHhDZ3g3anR4eElyUHdFUWgxNVF2cmh6dzlWRXRNd0U1SVdqdDdMVEUzMTBmQU5HSjFrUU9PdWRmVDJfUGJkUTlpN1Y3Nkl1TXVkbTA1NHdBVXpreFByN2VXN29HZ09pTl9YQU52UkVBUVZrU2I4amo5MzRkNTl5U3pFaW40UmNQenpIRllLQnBoREZHSE9qa1pxaDgtU2Fld3pKQTVRZ3c?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-11-25T10:19+08:00",
-      "importance": 5,
+      "published_at": "2026-11-26T04:16+08:00",
+      "importance": 4,
+      "risk_score": 2
+    },
+    {
+      "title": "Ping An Bank(000001) Stock Price Today | Quotes & News - Moomoo",
+      "url": "https://news.google.com/rss/articles/CBMiowJBVV95cUxON09vT19yb1FUZElkNjljaW5SbjV4VWRia2hOYS1FTVNIQ2djcEhVRUpPa3pfYVM2N1NMRFZPSWNTUHhMTDJiZUZFQndXZmh3SUtOTXVMalBodG8yaFJlc1l2eTh5OUozbEpTRjQxMXU1QTVhcVEzcHh4d2VabmU2VDVpZ01yVnFaRi1idmpSMVhtZDJ4SW1nNjRENmIxZnhPbTNDemdYN2EwdjFTazJndVQwcXd3N1QyYWpqa056M3Bud251OHBjbXBKYUNLREFGNzZfVWd4VWFfSUYteDdPbjFpaUhPelFUcktqRklXY2dZNXpKWkI3dGc1bUJ0RXJXdm1NMG11U2hnbkJsVE9FZ252eEx1dEF5Q1FxcVljeVdwdmc?oc=5",
+      "source": "Moomoo",
+      "published_at": "2026-11-25T21:28+08:00",
+      "importance": 4,
       "risk_score": 2
     },
     {
@@ -133,18 +140,10 @@
       "risk_score": 2
     },
     {
-      "title": "Asian stocks decline amid AI trade worries and fresh US tariff jitters - tmgm.com",
-      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNQlRYREdVUWxmY085T0d5dEhFNWM5ZUFnREZNTlBSaVBfZS02a1VlTDRrSVVkWjBtclNvbS1aeExzVFUwVkUwaVBYV2NwdllBNFRHNGZtWTVMbWpsODB4SFpkb05Fck01U1RENzVwVjZmOHktM2NUUS1zYkRaZkV1eWtyT29TUDZ5VFZ2d0Z4NE1lMmM4Q3VSU2szSkppU3haN1hLVG44SlZTMjBXRk9DTm0wZl8tVlBlM2haTWlvQTBTM2luVGItMlBBNm8zc2EzZmJkQ21LY3I?oc=5",
-      "source": "tmgm.com",
-      "published_at": "2026-11-25T12:45+08:00",
-      "importance": 4,
-      "risk_score": 2
-    },
-    {
-      "title": "Wall Street is positioning itself for a hedge: the Fed could \"overshoot\" with rate hikes! - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNaGZUeXY3czUwYWVsN1pHa0lHa0ptR1FtR3ROd2VBU3FpWlBEWnZlUGc1MG83cFJjOWIxTFpqNEs5YUdtRjY0S0xYVWtyX0J6NXpOYktUWFdQZHJMMkV5bVRoWUhjUlFGb1hPRWNpYkc2dXV3b0lJeEZFcV8yTE5nM2VGellwd3FZTFlWazVnR21falloT3Atd2pYcnM?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-25T10:31+08:00",
+      "title": "Markets snap two-day losing streak with sharp gap-up; Banks, IT lead recovery - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPTW1aS0gyM2RXaEl5al9oWjFHOXRQNkRxckM4NjN1WnN3Sm12bzVUaW9XbnNXMEhFQ0Y3S3I5VXlibDRtWVdmZXVqUnNHdFhJVkVMTkJTNlhPdEhNQ2FjVU9TWU9MY1BnM3RwOFpYNG5uVWhpQWNSYjZRV3l2TjNJNjNHazFTaFItYVZzSWlBaEZ4RG91NVFheHRQemVRSFNTRDVfYnhtblpmcXNZdldRRndUVm1RSC1XMG13SG1LZExUTUVGMExjSk9FTQ?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-11-25T13:17+08:00",
       "importance": 4,
       "risk_score": 2
     },
@@ -157,51 +156,39 @@
       "risk_score": 2
     },
     {
-      "title": "China Life Insurance(601628) Stock Price Today | Quotes & News - Moomoo",
-      "url": "https://news.google.com/rss/articles/CBMixgJBVV95cUxNZDJpVHpoZVhudFlKY084U2piaEhoX1Y4TWNWa2lYMnB2V09rbFliMG12elBqSWFMaTJkRGQ5ekZGVEZEQnI4NmRDMmVIdm5ER3REM19fZUVSY3k0ajBPSVlJMzJ1UGotaVBESHFtQ3dkZHFXR1hnN3NiNjlSbXFHLS1wcHh4REZhaXFMeGlRb2lGWnFtM2p3aUZ1NjRYbkdOS3BOTDVZcE5KZTdUVlZWTk5fVEFudHJMeDRDcDZTR0NkOHRFVnRQTXlDT2ZIU1ltMVB5Uk9FbmFMbDl2RXRXVUFuS0RHRUYyY2ZvVWJWNl9PenNQWUFadXhyUmtwdTR4ODJMbHU5R19BeVBRR1JEaktScl8zbUw4aDVwcXlqQWRNZTBLb1dkQ1ZqMW5LZTd1UUtsUnN2eE1FOWVJNUUwTWlubVNqUQ?oc=5",
-      "source": "Moomoo",
-      "published_at": "2026-11-26T04:35+08:00",
+      "title": "才剛嗆聲「台灣偷晶片」！川普12/4將赴台積電美國廠動土典禮 白宮證實行程 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiwANBVV95cUxNM2Vqbnh3WWFtUXNGN1VNMlNveFZDSnhnUHh6LVl4MFdDVUlXZ2RxZmdLV2trMzZWYkMzbmlMaHZmcDJ4QWNtV2dEUHBmQjhBSmVJalRvLXhpLVN4QWpramdzbnNSMHBhLTNlSHBfU3JrcEVMMWtpbmJJM2dEaWwxa0l2SjVLRUROOXN5WHpfbU5kR1RETXpab0IwZnlLMEduMVJVeGRDQnI2bTBCSGpBenctQklQMnMyZm52SG1jRE1Zb0YwVHJEN3ZqSjR0ZXBmc1pqc3RLX0hpakZkc3RhZUoxM2xqdDM1NU1vS2x5Ym52V3ZNZ2psTGxQRDdDRmZzYVdqWVVoN1JNS0ozZV9rWTFlZ3JKRGlhWUxfUHRiSUUtUi1FZkp1dnBDZEV6Qlhab3N6eGtUVGR2eTh0WXFFOG4xT0VVdXRJT05pX21pR1UxcE1zR2dkTEVZNS05QXFLUGduOENueDZrSmV4Skx2RENZSjRoREpTZzZPR3Y5TldhNklsdkJOVkV0ODctVk9qQi04T1h2alh1eklaRHIzZ1MtWEE4NUZJS2hzSGxMZUlSOFRmdUNYR091em50WVZD?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-26T12:09+08:00",
+      "importance": 3,
+      "risk_score": 0
+    },
+    {
+      "title": "台積電擬加碼226億美元在德州設廠 鄭麗君：協助爭取豁免清單 - 自由時報",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5QQmJEVVJWTlR6Rk1wNTN4NkRvNkNnWUlnR3p0cHU2TDhFR3Zla3JIaHE3dUV0VXVfQXpfYm5yM2xoTWoyWHNDeFYwdTFNQUZKbzExRHJtVXg?oc=5",
+      "source": "自由時報",
+      "published_at": "2026-11-26T11:55+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "Dow Jones(BK20782) Stock Price Today | Quotes & News - Moomoo",
-      "url": "https://news.google.com/rss/articles/CBMirwJBVV95cUxQLTVNV1M2NXpPTWY3Nk1GOGV1LXNNMmtsWENNZFJWQVRNNUdyOWFKNE5rWWszNHBPcld1d0VxQUdoNzk3LTlxWXBkbnUxcExuV1hBbHVCQlI0X1dQM2gzUno5NU5nQUkwdk9EcGM4VlV6UFB6aUZuaUVyYXRQUWRiZ0NtSDJja3g4YzZTODk2Rk1LaXRnWXh6NzRqY3JCLTNkaG9qZFZ4N0xmWjN1aFozdnJUUHYtRjBQV2NFdUpqdk9hU3ZOZnNISVpYN3RkOEFvOVFYdmN3WkZqbWE4Zk9pTGxpSGpDRjZ0dVVtanpHRFRUZUtvNWZkQ3c5VTRnaERibXA1T2V1R0tVY09EeE5kTXJnc1VUeTlxRzVkNGg2RDVYSllNeXgyY0N6ZGhmcUU?oc=5",
-      "source": "Moomoo",
-      "published_at": "2026-11-26T03:11+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "中國澱粉(03838.HK)11月25日耗資19.03萬港元回購101萬股 - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5NOXpVV3VSQ05scmFlOXhsTmFEdE1yc2w1MndidVlFeEdqaFl2SkRTMTFrVnQySVI1Zk5QRWhRNU1yRkdQa0VKWU9kUVg2T0ZZSHYwRk10WUpXc05zeUFxY1loOF9YVDZQa1VB?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-11-26T02:05+08:00",
+      "title": "Upgrade Hong Kong stocks to overweight! Goldman Sachs: Valuations and positions are at low levels; three main themes are worth deploying. - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxON09oX0hDTksxZ1d1NE44dXYwUDJWN19EcE05aUpRX1RQRTRJd0F4cVpVcXA3UlZlZDhJRm5JTEV6Tk1LNnlDMUJjSDR6RmxsSjZoRWlZdGxzenJjdEs1WkJmUGwwaEtsSVRmNXozb092eGkybDFVQ0QwZnZCVmk3OUozZVRpLXphdTZnczRTYTJFSFJMRVV5b2NfTFFUTGJ2NWZ3RkNUQzZ4cUU1MHZJ?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-26T11:15+08:00",
       "importance": 2,
       "risk_score": 0
     }
   ],
   "oil_watch": [
     {
-      "title": "〈能源盤後〉荷姆茲海峽3艘船遇襲 原油漲逾2% 但供應過剩仍壓頂 - 鉅亨網",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5aUzh6Wk5BUTMyNDNGUUpobmRnVGpFQTBGT1dSckZocWhRZ0lBeUlaQkQ2Qm1zT0xMVkZVeVJ2b0hZdktjTVlSNlpnZzlEWm8?oc=5",
-      "source": "鉅亨網",
-      "published_at": "2026-11-25T08:01+08:00"
-    },
-    {
-      "title": "荷姆茲海峽再傳船隻遇襲！國際油價洗三溫暖 急拉反彈大漲逾2% - TVBS新聞",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5pY1Mwd21iclEza2pjLTlvRVduX2cyTnZZeDV5OGtkOHVodGtpWlNHemZIeFFKOU9OelZ3UTVQNDFLRkJma0lsbmpWY3VydG8?oc=5",
-      "source": "TVBS新聞",
-      "published_at": "2026-11-25T09:54+08:00"
-    },
-    {
-      "title": "霍爾木茲海峽油輪遇襲運量驟降四成 國際油價盤中微漲守住89美元 - LIFE 生活網",
-      "url": "https://news.google.com/rss/articles/CBMijwNBVV95cUxOQzQ0NnhuX2JZMUEzeHdBbXlKeVM0a0tXcjFWTDh0bkk5c2M4RTBCRE5RNU1oVFdMc3hNZF9Mck44M2xna1ZfalhWX2ZBSDBzN0RwUWQtSVh0N3d0eVRrWnViNnc3N3cyLTZqRm9rNjBwZTVTT0ZOTER4cE5FeTBCb3hxZWVpQnE0ZTNDa2w2WlFnampCdF9xQ1RfcHJqUElwRldkM2ZBQ3MyRWpFSG9CR0VaM0JGYWlJbnhoeXRGdE51bmVrLVFyV2xsY2VSVFpyeWJPSzVaa2c2ZXBISDJtY2tlZGJrMmU5XzRiYjZKMi1fM3lkSWNnRVJncXNQZ3U0cWE3YkNmVXNOM3RyeFN1bnFLMjRIbXlmYkZxYlZsS2kxLWg1UDM2QV9TMDM0SWRLMmJLZmJ1NW9MMnBiU2xXa2N6RGpnMHF2X2g4LVowNS1ibmkyM2RWMmJMYkdJbmUxcEE3Ynpla2x0WUZPaENBbFFlN0c5c0R1aEVKS2VGdHZBZTVkY01BWHRjelRNN1k?oc=5",
-      "source": "LIFE 生活網",
-      "published_at": "2026-11-25T08:20+08:00"
+      "title": "WTI rises above $83.50 on Middle East refinery attack - tmgm.com",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOejJXNW50cUdKTXROdGJuTjBPWnlnZXJrM1k5RnJnNVpNWEVQWm9wSWY0VWtiZ3kyRlljZ0JZczhTTXNTNHA1ZDZkQlE5Z095bUJFYlJid09yckpEanY0d2d0b2pmNDVlaHVXQ0RRM0VfNjNkVlNjUkVKdk1JVUZneVNac25CNGQ3Rnd3bksyZkhNQmVUTnhoMlpQanR6NWlpUVhrQ1hkZHl1YWN0bnNJcmZkZXdvLUlTVDB1LV9yWQ?oc=5",
+      "source": "tmgm.com",
+      "published_at": "2026-11-26T08:48+08:00"
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-11-26T07:20:19+08:00",
-  "checked_at": "2026-11-26T07:20:19+08:00"
+  "updated_at": "2026-11-26T13:10:02+08:00",
+  "checked_at": "2026-11-26T13:10:02+08:00"
 }
