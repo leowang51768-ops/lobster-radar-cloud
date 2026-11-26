@@ -1,24 +1,24 @@
 {
   "schema": 1,
   "risk_level": "red",
-  "risk_score": 7,
+  "risk_score": 8,
   "risk_reasons": [
     "費半明顯下跌",
     "NASDAQ明顯下跌",
     "韓股明顯下跌",
-    "多則市場負面消息同時發酵"
+    "出現重大風險新聞"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 -8.5%｜NASDAQ -2.1%｜日經225 +1.5%｜KOSPI -4.5%｜台股加權 +3.0%｜恆生 +0.7%",
-    "⚠ 全球市場風險｜美債10Y 4.85%｜VIX 28.3｜WTI原油 84.39美元 +2.9%（高於常態，觀察）｜布蘭特原油 91.12美元 -0.3%（高於常態，觀察）",
+    "⚠ 全球市場風險｜費半 -8.5%｜NASDAQ -2.1%｜日經225 +0.9%｜KOSPI -5.9%｜台股加權 +2.5%｜恆生 +0.0%",
+    "⚠ 全球市場風險｜美債10Y 4.85%｜VIX 26.9｜WTI原油 84.69美元 +3.2%（高於常態，觀察）｜布蘭特原油 91.48美元 +0.1%（高於常態，觀察）",
     "⚠ 全球市場風險｜油價觀察｜WTI rises above $83.50 on Middle East refinery attack",
-    "⚠ 全球市場風險｜川普關稅嚇不倒「護國神山」！台積電力守10日線 分析師：利空淡化了",
-    "⚠ 全球市場風險｜川普關稅嚇不倒「護國神山」！台積電驚險翻紅站上10日線 專家：利空淡化了",
+    "⚠ 全球市場風險｜00981A漲停也能出事？驚爆1.03億違約交割 網猜：放空被軋到鎖死",
     "⚠ 全球市場風險｜301關稅台灣取得相對優惠稅率 台股開高走高盤中漲逾1200點",
-    "⚠ 全球市場風險｜美國為何擬對台加關稅？USTR列9項理由 半導體、電子業遭點名",
-    "⚠ 全球市場風險｜Ping An Bank(000001) Stock Price Today | Quotes & News",
-    "⚠ 全球市場風險｜Capital Flows | Southbound capital recorded net purchases of HK$6.434 billion in Hong Kong stoc",
-    "⚠ 全球市場風險｜At 9:30 p.m. tonight, the Fed's \"preferred\" inflation gauge, the PCE, is set to be released! Wi"
+    "⚠ 全球市場風險｜才剛嗆聲「台灣偷晶片」！川普12/4將赴台積電美國廠動土典禮 白宮證實行程",
+    "⚠ 全球市場風險｜U.S. stock index futures point to a higher open on \"Black Friday\"—has the market bottomed out?",
+    "⚠ 全球市場風險｜中國心連心化肥(01866.HK)11月26日耗資248.24萬港元回購27萬股",
+    "⚠ 全球市場風險｜Futures Point to Black Friday Gains for Wall Street as Global Markets Welcome U.S. Resilience.",
+    "⚠ 全球市場風險｜Semiconductor Manufacturing International Stock Advances 1.3% in Hong Kong"
   ],
   "markets": {
     "US_SOX": {
@@ -43,28 +43,28 @@
     },
     "VIX": {
       "label": "VIX",
-      "price": 28.29,
-      "change_pct": 7.4
+      "price": 26.91,
+      "change_pct": -4.8
     },
     "JP_NIKKEI": {
       "label": "日經225",
-      "price": 57857.4,
-      "change_pct": 1.4
+      "price": 57499.16,
+      "change_pct": 0.8
     },
     "KR_KOSPI": {
       "label": "KOSPI",
-      "price": 4780.39,
-      "change_pct": -4.6
+      "price": 4711.21,
+      "change_pct": -5.8
     },
     "TW_TAIEX": {
       "label": "台股加權",
-      "price": 39337.29,
-      "change_pct": 3.0
+      "price": 39151.81,
+      "change_pct": 2.4
     },
     "HK_HSI": {
       "label": "恆生",
-      "price": 22373.81,
-      "change_pct": 0.6
+      "price": 22226.88,
+      "change_pct": 0.0
     },
     "US10Y": {
       "label": "美債10年殖利率",
@@ -73,31 +73,23 @@
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 84.39,
-      "change_pct": 2.8
+      "price": 84.69,
+      "change_pct": 3.2
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 91.12,
-      "change_pct": -0.4
+      "price": 91.48,
+      "change_pct": 0.0
     }
   },
   "active_news": [
     {
-      "title": "川普關稅嚇不倒「護國神山」！台積電力守10日線 分析師：利空淡化了 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMixwNBVV95cUxOTXVlazlWM2lQOHQzTjZrWHFzaUtaeE52REZRanB5VklzMHNsZ0JJLTVKR2JESXFQa3gzRXRIUHkyU2kzUl9mN050TjBRZ1BrMG5OWlRZZERaZndKaGhwLURwb3FJcllrVkNuMXRqTFprZUhGUzRreFUxQnhQVVMtd29QY3hrZlNCUG5jXzI4RXhDOUlZYjE5M1dyZzdCc1pFUmxwWjRpZUh5SUNuRHFueHZRS0lKUDJmVmQ2Ymt0Q2NJcTNvSjdQcXFuRnBFNHN5aVJfSjJmS29GU2s4cTFEMUpSWnI2RmZ5MHp3Q0pOajZ1U3pyOGc4MTFRbkdMbWZjOG95a2lVNWR3ejBpeDJrNktVTnpuWFJMT3Uxa01CN2xwNWowR0p5OVFLT2pwT081dzJITXp1Tnl3VXExOTJESHZRb195RHRIbHdLUTFuQUJNQVFVZHF4V1JzSW01MWlza1hjdmJvSWRVbGFlOXBxLUwyaVJZcVpydzZyN2JkVFNDSk9uWXdDRjJGN0FaVXVfcW85QVl0cDBmR3A3THA2dG4xdW41dEYtWEZBX1pQM1lwMXJ5djhDOUNOcENhT1FaZ0twOGZpcw?oc=5",
+      "title": "00981A漲停也能出事？驚爆1.03億違約交割 網猜：放空被軋到鎖死 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiiANBVV95cUxQUUpEQlM0VFpXZjVnbGV5dnBmQ0hzdWhBRlRQNExYNk1kY3dmb05NWEtNQVVOSnpuUUlEcWw4QjBCZi15ZEVUanZPQmVZSUlTM1BiVm9oY29uQVdvNHA1emgxU182T2x4aEYzY0tlYUM4US1aWmxWdTdpQXU2T010OVVfYU9sNVYtblZoWnNLWGtrbUItZE1NNW9BdE1TQ1RsT3hoNmxUR1NhYzVQM1JJNGJMakM1UzJ3U25PdmRCelV4OHFoNUpEQ0Yta3hDSEtUcXVNNi11QUUxNHp2SUJqX1BTbGJreFFRand1SS1YTGwzMWxCVWNhcFZ5ekVFUXdhWlFaZ005MDl6V3haNXc4cU45NEMxaUdZMlhpdGU0MDIwNzg4Mk1VRExvRXhReXphRjB1SHN3U2pIdXpIb1NtemxqbjNBZE8yWlpEVlpmcXhreTlHZERkSnhSRHMzQ2dnVWpKRmc4N2NTSkJ4VUJ6cXhDbFZPVV9QSGt4UzM4MHdDZUNpcmJxeg?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-11-26T10:02+08:00",
+      "published_at": "2026-11-26T20:02+08:00",
       "importance": 5,
-      "risk_score": 2
-    },
-    {
-      "title": "川普關稅嚇不倒「護國神山」！台積電驚險翻紅站上10日線 專家：利空淡化了 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi6wNBVV95cUxOX2pBenkzLWEzYUtoT2Y1TGVWeEtqV2ktSE1kcW1rbjRHZ19nOE9ET2NLbWptc2JYeTdIVXk0ekN2NkhlMkZlTXdILWJTNWljX3pFQzdadWFHOUFHZXBYelNHYVRJeFp0d2VaVmZLTk1BbGhtMnY3LVFmMEozSl9SU0dGR3ZnQjBuRkNIcXJpZnFETEVGeWgzalBWb0RPRk1WcHNuYjJJeU56ZEdyWG9UZmFKbG01WWFkazNLbnFMX19fLV8yMjRtTWcydVV1bzlmdnduY3d3Y2pfYmdnaHJfdmpSYlV4aHRLUUNIZ3lDM1JyMXlLU29FbWdCOTVrcnk0S2g3Wkp3ZUNxSTJFSVd3d29icFg1VE51SElrYU9ORDBXbHdkOHFkaENKYjBfX1lzQzVqSGtnS3k2cWtibWR3emU3b3VDcWE5cXdheDhpaF8tNUFaX0g5TTFkR05DZk1HVHcwRWdHZTVsMVEwckw5dDRDSDR3RUszRzR5UmtSV3AzS2JIMHcxZWtzUXBXQVBsc3kyVnJJQWJUT2p2MTdPbXhialZrQmdBdmllRDVHeWxPdE50Ul9pUDE4WlMySGJ5WEh5VUlra0pfV1BSN251MGZjTVRMZXFSWjFlRFYwQ041RTVhZXVsb0F5aw?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-26T09:22+08:00",
-      "importance": 5,
-      "risk_score": 2
+      "risk_score": 4
     },
     {
       "title": "301關稅台灣取得相對優惠稅率 台股開高走高盤中漲逾1200點 - Yahoo股市",
@@ -105,54 +97,6 @@
       "source": "Yahoo股市",
       "published_at": "2026-11-26T09:43+08:00",
       "importance": 4,
-      "risk_score": 2
-    },
-    {
-      "title": "美國為何擬對台加關稅？USTR列9項理由 半導體、電子業遭點名 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMi-gJBVV95cUxNTmZOOFVmUlFBWEZYbHBYbkJNOFVxV0R4dVdseTBCMm1zSlJyWUtjNi13SUtuVmtmakd1cUNrLW5UNUxQNmp2QzdXa0ppRGtsRFZWU2FoS0E1eV9kZDM1aFZ2M20zdkRYYllYZTM4ck9uUUZMUHc2YnhHN1lMcmlNVzRBdVM1Y3pZNXRvc09QQVozejlSUkxnWWk1R0VGVFdyV2dMQ2RFaFhlU0NVTGV2Z0NNVzR4Y1pXR3BaRGJFWTZMdFhYNHpycG1zZWM1LUFXLWpESHZSdWdBSHhDZ3g3anR4eElyUHdFUWgxNVF2cmh6dzlWRXRNd0U1SVdqdDdMVEUzMTBmQU5HSjFrUU9PdWRmVDJfUGJkUTlpN1Y3Nkl1TXVkbTA1NHdBVXpreFByN2VXN29HZ09pTl9YQU52UkVBUVZrU2I4amo5MzRkNTl5U3pFaW40UmNQenpIRllLQnBoREZHSE9qa1pxaDgtU2Fld3pKQTVRZ3c?oc=5",
-      "source": "Yahoo股市",
-      "published_at": "2026-11-26T04:16+08:00",
-      "importance": 4,
-      "risk_score": 2
-    },
-    {
-      "title": "Ping An Bank(000001) Stock Price Today | Quotes & News - Moomoo",
-      "url": "https://news.google.com/rss/articles/CBMiowJBVV95cUxON09vT19yb1FUZElkNjljaW5SbjV4VWRia2hOYS1FTVNIQ2djcEhVRUpPa3pfYVM2N1NMRFZPSWNTUHhMTDJiZUZFQndXZmh3SUtOTXVMalBodG8yaFJlc1l2eTh5OUozbEpTRjQxMXU1QTVhcVEzcHh4d2VabmU2VDVpZ01yVnFaRi1idmpSMVhtZDJ4SW1nNjRENmIxZnhPbTNDemdYN2EwdjFTazJndVQwcXd3N1QyYWpqa056M3Bud251OHBjbXBKYUNLREFGNzZfVWd4VWFfSUYteDdPbjFpaUhPelFUcktqRklXY2dZNXpKWkI3dGc1bUJ0RXJXdm1NMG11U2hnbkJsVE9FZ252eEx1dEF5Q1FxcVljeVdwdmc?oc=5",
-      "source": "Moomoo",
-      "published_at": "2026-11-25T21:28+08:00",
-      "importance": 4,
-      "risk_score": 2
-    },
-    {
-      "title": "Capital Flows | Southbound capital recorded net purchases of HK$6.434 billion in Hong Kong stocks, while reducing holdings in Xiaomi and China Construction Bank against the trend - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNV1h5S1ltY0Q3emZ2TFA3ZkYxTDY2Q2t0SF9RX2piWmFld3RTOVB4Rk85NEtRWncyXzhJa1FsdkxJLWtiamhBX1NEaThUQW5OSkJYdUhDektxMjhhTEpHYkhYYzJndzhnMkNmVzJ2c2RQRXk5UDRBcU9XR2FYNy15bUJYQVBRS2UtdFVYRzk0cUktMGdLZ2V4N3pWYTBhRTR0OTN6Z0U4eG9RUQ?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-25T18:19+08:00",
-      "importance": 4,
-      "risk_score": 2
-    },
-    {
-      "title": "At 9:30 p.m. tonight, the Fed's \"preferred\" inflation gauge, the PCE, is set to be released! Will it officially pave the way for rate hikes in 2027? - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOUERYOGl5S3BNUnpyU3A5MU5NOW5FSldnZHo3X3o2M1ByNXFrMDVWcW1mdWF0YXRWSlVMNndLRDdicW00amdxaUtvX2IxeTNUTEt2Zy1lRXhfY1VjaTlYM3E1VlIwNFBON255elRfR2lRXzNsLTI1c0RjLUtKU2pXUWMtU2hYeFY0YTJlN3FfdDdPajJ2Q0E?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-25T13:39+08:00",
-      "importance": 4,
-      "risk_score": 2
-    },
-    {
-      "title": "Markets snap two-day losing streak with sharp gap-up; Banks, IT lead recovery - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPTW1aS0gyM2RXaEl5al9oWjFHOXRQNkRxckM4NjN1WnN3Sm12bzVUaW9XbnNXMEhFQ0Y3S3I5VXlibDRtWVdmZXVqUnNHdFhJVkVMTkJTNlhPdEhNQ2FjVU9TWU9MY1BnM3RwOFpYNG5uVWhpQWNSYjZRV3l2TjNJNjNHazFTaFItYVZzSWlBaEZ4RG91NVFheHRQemVRSFNTRDVfYnhtblpmcXNZdldRRndUVm1RSC1XMG13SG1LZExUTUVGMExjSk9FTQ?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-11-25T13:17+08:00",
-      "importance": 4,
-      "risk_score": 2
-    },
-    {
-      "title": "Among the most bullish on Wall Street! Deutsche Bank: Earnings growth coupled with economic recovery could push the S&P 500 to 9,000 points by the end of next year. - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQV3lBZ09VNHo3VlhMN0thZlFlUWRIbmFUX3ZjR1BrVjBFaWhEZkhTS2o1bmk5LWE4ZElaWGxrWmQ4eXVjcFRDWlY4SGtubncyRXItSTJ0SnpCMVBzVkhWb2tuY1JOd2M3WUxLYnNpeWgtUnoyS2hldDVsQ0wxYkxObU1renJURXRYcUhmVVdXeVNaczZma2RLcmFGV1BXWWNxX0ZLZUpR?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-25T22:26+08:00",
-      "importance": 2,
       "risk_score": 2
     },
     {
@@ -164,18 +108,74 @@
       "risk_score": 0
     },
     {
-      "title": "台積電擬加碼226億美元在德州設廠 鄭麗君：協助爭取豁免清單 - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5QQmJEVVJWTlR6Rk1wNTN4NkRvNkNnWUlnR3p0cHU2TDhFR3Zla3JIaHE3dUV0VXVfQXpfYm5yM2xoTWoyWHNDeFYwdTFNQUZKbzExRHJtVXg?oc=5",
-      "source": "自由時報",
-      "published_at": "2026-11-26T11:55+08:00",
+      "title": "U.S. stock index futures point to a higher open on \"Black Friday\"—has the market bottomed out? - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPRzZweDZWdzV4ZnNabk9XVGQ5c21aREtFbEVEUzIwUHI1ZEMteloweDkyYkVaSURLUHplVGE0THc1NGlYVkxBSndHY0pYN3R4NERNTDgxRG16Qy02a0M5dVlRVTRQMGxjbnIzaUNmT3hYSEJqNXJLQkZzcEVhVHY2NFJwczU5cXg0VTNHRmVicW8tN2d0UEE?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-26T20:34+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "Upgrade Hong Kong stocks to overweight! Goldman Sachs: Valuations and positions are at low levels; three main themes are worth deploying. - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxON09oX0hDTksxZ1d1NE44dXYwUDJWN19EcE05aUpRX1RQRTRJd0F4cVpVcXA3UlZlZDhJRm5JTEV6Tk1LNnlDMUJjSDR6RmxsSjZoRWlZdGxzenJjdEs1WkJmUGwwaEtsSVRmNXozb092eGkybDFVQ0QwZnZCVmk3OUozZVRpLXphdTZnczRTYTJFSFJMRVV5b2NfTFFUTGJ2NWZ3RkNUQzZ4cUU1MHZJ?oc=5",
+      "title": "中國心連心化肥(01866.HK)11月26日耗資248.24萬港元回購27萬股 - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE00YkJydHFQWGVWTTZoRVFGaVAwWlFKRDFBRlYzQWk3QWVFLUxCSVNOeXRnNWdfMl9kVzhwQlJhYTlLN2hpOHNXci1MZVMwRjJYX2hOdWhhRlh1UzhYamxpZ3N2VkRpRVpTNl8w?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-11-26T19:27+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Futures Point to Black Friday Gains for Wall Street as Global Markets Welcome U.S. Resilience. - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOdGFpVHFOeXZIN2NBYWdZSUtfaVpuNmNWQzEycVRmZ3VTemVBRy04WmprUmx1NkM5RzdoYXQ5VlF1dk1lbVVYLTh5MFFDaXNBQU15OFdaMG9RbXpxR3NqbGZVWjZRR3d0U1d3dXFkTDJPMFF4NzFpYnBZWklmUDZvX0NxcHljTTRzcEdESXp0ZUJwSWFkWmY1VE01TzZuZw?oc=5",
       "source": "富途牛牛",
-      "published_at": "2026-11-26T11:15+08:00",
+      "published_at": "2026-11-26T18:50+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Semiconductor Manufacturing International Stock Advances 1.3% in Hong Kong - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNYzQ3LXJfY3NEUXVZSTA3WTFxQTVOV004WkZid2ktV19GTlpOVnkwYjFiWDQyMHpKWFVnelRLQUJCNUdmM1BYSGpSVjM2NEtURUp0c2ZNY01VSDM4bHB5azNPa0FBcmktcWp1T3hWTTdpWjNsSkM0TVJHNTVsMHdCS0JGQUJPMEhiNVJoV3lMbWJYQklYVy03NTZLbTFXZ0VpVXVWOHhpVTFDV0diVmpkQVlIaXNxSVk?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-26T18:40+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "中國澱粉(03838.HK)11月26日耗資25.99萬港元回購136.5萬股 - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE8wbTRWTmhWd3V2UmF6a0RubXZfSG9GUElMY2VXMHk2aHRyekw2UmVYaVZta3ZjZWlaYW5NQ0EycjFkUlNVaEh2MHZ5V1UxMVZ2eDBvcGIyVFZvUUxBN2VmRHNLNFJINHo3T0xv?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-11-26T18:21+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "中國科技產業集團(08111.HK)盈喜：預期中期純利約65.5萬元 - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5ON0VrOUJpLVk1YVVMNkg5cTNSM3V3T1NFeE1TZHNiaTRDZFBEUy1xRmMzQjFrMllBSjVtazF1LXJBMjd6dHgtM0ppMi1VMFFDWFN6RFNsYWkzZFFPXzljQmxURW9haXY4SXZz?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-11-26T17:56+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "微軟大當機.台積電鴻海遭駭 台灣下半年資安事件暴增近3倍 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiiwNBVV95cUxNYjJicGhhR0NOVVZ1ODNyS1NwRzE5YVBGSWdRQjFzdW9pdElzS3BrZjlVaWtObzBkbHB5VlY2SkNOV3cxd0wyOWRTNlZNSkItVDFFTWF6bkZ3Skx1UFRUTWc0MkxmbG5GQXRneFpvdThMeTZmZTQxZElTdDBySTVTNkE3QS1UbEUxQ21aSExwdXNLZm1LY0lITmt6RzVFMUFlR2QyWGthbFVKLWNFUHNtLVNvSWZlbXk3djd0UHZTNFo5UmVLcVdMQ2ljeHlZeGx4Mm50cW5fNXgtOGZIUGxrOGRCZzRyZGF3MncwU3gxcHlWOXVISWkzcFh0VVllQ2diaFF3TzdnOEc2cjh3Q2x4UmVtR2JKSjZFa0NLN2MxbGlkVzd2Q2RlQ1pJZTV6VVlxSkxTenBWejR2N1dIX05Kdmp1Mi0zMmlVTDZ2N0c1RWNmVmI4c2xxSUVxV1I0M1ZLMGhwLXRCVTBQczRnRHgwdm9ja3RoQ3pGVU81YUJwbnRUM05TTTRGVW1JNA?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-26T17:46+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "CNOOC Stock Rallies 3.3% in Hong Kong - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNdjNzWEU3LTd4S3dib085d0JyRG8zWS1KZ0ZVa3MwNTByN01WblMwcWFxamhMdjNMY2hOd3Nnb2gwTTFPbVVCa0FWTnVzS2FheXc4dmpTTTJCeldwS0l4Y1BnRExOMmZLRHI4ZjNDVFhZUlplVjBuTXV4bWdLWGNaQkNjR3h0dw?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-26T17:28+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "中國波頓(03318.HK)11月26日耗資11.88萬港元回購4萬股 - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9EanhjTUdFQUtZc0p1Y05XWGs4T2p1dE9pX190YVJtTjFjMTNsS1lsUUZGZVk1SVdBaDZOX2t5UzBTTVROVzBsQjdtSWgzeW5IOFFvSm5PLUQxbFFycFhGTE1zUWtYUFNDX01z?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-11-26T17:17+08:00",
       "importance": 2,
       "risk_score": 0
     }
@@ -189,6 +189,6 @@
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-11-26T13:10:02+08:00",
-  "checked_at": "2026-11-26T13:10:02+08:00"
+  "updated_at": "2026-11-26T23:04:54+08:00",
+  "checked_at": "2026-11-26T23:04:54+08:00"
 }
