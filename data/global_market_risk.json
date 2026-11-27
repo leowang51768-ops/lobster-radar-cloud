@@ -6,42 +6,42 @@
     "出現重大風險新聞"
   ],
   "ticker": [
-    "⚠ 全球市場風險｜費半 +1.1%｜NASDAQ +0.5%｜日經225 +2.1%｜KOSPI +4.6%｜台股加權 +0.4%｜恆生 +3.3%",
-    "⚠ 全球市場風險｜美債10Y 4.90%｜VIX 27.4｜WTI原油 83.64美元 -0.1%（高於常態，觀察）｜布蘭特原油 90.83美元 -4.0%（高於常態，觀察）",
-    "⚠ 全球市場風險｜油價觀察｜中東局勢升級，WTI原油價格4連漲重回86美元！反彈趨勢能否持續？",
+    "⚠ 全球市場風險｜費半 +4.0%｜NASDAQ +1.7%｜日經225 +2.1%｜KOSPI +4.6%｜台股加權 +0.4%｜恆生 +3.3%",
+    "⚠ 全球市場風險｜美債10Y 4.94%｜VIX 23.8｜WTI原油 83.08美元 -0.7%（高於常態，觀察）｜布蘭特原油 90.84美元 -4.0%（高於常態，觀察）",
+    "⚠ 全球市場風險｜油價觀察｜WTI advances further beyond $85.00, over one-week top amid renewed supply disrup",
     "⚠ 全球市場風險｜油價觀察｜WTI O'il flits with the $85.00 as tensions in the Middle East threaten supply",
-    "⚠ 全球市場風險｜Is the U.S. stock market crash the Federal Reserve’s fault? Former Goldman Sachs strategist urg",
+    "⚠ 全球市場風險｜The Warnings Behind This Week's Stock-market Rally",
     "⚠ 全球市場風險｜The tide in U.S. AI stocks is turning: Software > Hardware?",
     "⚠ 全球市場風險｜Goldman Sachs warns that the sell-off is not over: Global equities could face another $100 bill",
-    "⚠ 全球市場風險｜Dow Jones Top Financial Services Headlines at 12 AM ET: BOE Warns Scale and Breadth Of AI Finan",
-    "⚠ 全球市場風險｜Equities: Tech and China support global rally – Deutsche Bank",
-    "⚠ 全球市場風險｜Trump Says Wall Street’s ‘Pretty Big Dips’ on Wednesday Before Recovery Left Him ‘A Little Conc"
+    "⚠ 全球市場風險｜川普關稅引共和黨內反彈！擬對台灣等14經濟體加徵關稅 國會醞釀反制",
+    "⚠ 全球市場風險｜第一金法說2》估聯準會12月、明年3月各升息1碼 台灣央行按兵不動...「這情況」才跟進",
+    "⚠ 全球市場風險｜Equities: Tech and China support global rally – Deutsche Bank"
   ],
   "markets": {
     "US_SOX": {
       "label": "費半",
-      "price": 8928.767,
-      "change_pct": 1.0
+      "price": 9186.706,
+      "change_pct": 4.0
     },
     "US_NASDAQ": {
       "label": "NASDAQ",
-      "price": 23839.354,
-      "change_pct": 0.4
+      "price": 24129.5,
+      "change_pct": 1.6
     },
     "US_SP500": {
       "label": "S&P500",
-      "price": 7241.97,
-      "change_pct": 0.6
+      "price": 7297.49,
+      "change_pct": 1.4
     },
     "US_DOW": {
       "label": "道瓊",
-      "price": 50562.64,
-      "change_pct": 1.0
+      "price": 50774.94,
+      "change_pct": 1.6
     },
     "VIX": {
       "label": "VIX",
-      "price": 27.35,
-      "change_pct": 2.0
+      "price": 23.81,
+      "change_pct": -11.2
     },
     "JP_NIKKEI": {
       "label": "日經225",
@@ -65,27 +65,27 @@
     },
     "US10Y": {
       "label": "美債10年殖利率",
-      "price": 4.896,
-      "change_pct": -0.2
+      "price": 4.936,
+      "change_pct": 1.8
     },
     "WTI_OIL": {
       "label": "WTI原油",
-      "price": 83.64,
-      "change_pct": 0.0
+      "price": 83.08,
+      "change_pct": -0.8
     },
     "BRENT_OIL": {
       "label": "布蘭特原油",
-      "price": 90.83,
+      "price": 90.84,
       "change_pct": -4.0
     }
   },
   "active_news": [
     {
-      "title": "Is the U.S. stock market crash the Federal Reserve’s fault? Former Goldman Sachs strategist urges prompt dovish signals - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNQUpmUGREQTVQaXREVVg1SE9TaHZ2STg5dTNtNkJwNmxtT3Bac2plLURmanNVMTNoUWV3WWg1bDNRYk1zZnJxVWVzTmYzOWJHd1lub0xMRVNMSjFnTENkQlZTdEF5bFBIQlJmU0ZqZ2pDNEFhc2xuLW1SOUFVZU1uRmlncUFnZ2E0dVhkc0o2ZmN0bzcxRFZhUQ?oc=5",
+      "title": "The Warnings Behind This Week's Stock-market Rally - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQMjRGb2d3cU9BeVM1M3RmTkNTOVd5UDJhVXdXYXpzWTNsMzFPeGJlV1FScWFuU3Rqbi00azVtclM1VlA0a2pOWVEyVGpkTGZ4NmQ3Q29zVTNjd2pCdER6WDEySUNQVWxvMkFwQTd3YUs5Wm1fVEwta01FLUtGQjJMdDR4SU1FdjJUdzFEMDJqWWhKZHlJeGJiRw?oc=5",
       "source": "富途牛牛",
-      "published_at": "2026-11-27T17:35+08:00",
-      "importance": 6,
+      "published_at": "2026-11-28T02:48+08:00",
+      "importance": 5,
       "risk_score": 4
     },
     {
@@ -105,12 +105,20 @@
       "risk_score": 4
     },
     {
-      "title": "Dow Jones Top Financial Services Headlines at 12 AM ET: BOE Warns Scale and Breadth Of AI Financing Poses Threat to Financial Stability | Capital ... - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQU1hXX0lWMWE3R05aSEtVQWtQcEFpRHJYQklMa0tWRmNQeE5UVTNoaTRCWC01SHVFcFR3NEJLZmd1dDZxWEVqNEt4SEJYbldGc253MlZkV2hER1RJWkNkRzVuVXppcEpXdWhyT2t2MGMxLXpYOGVhVTBsZEtqX3pDZmxsalBlbU9HZkUtUVdwamktOVlQZFk4Y1piWE9FZw?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-27T17:26+08:00",
-      "importance": 3,
-      "risk_score": 4
+      "title": "川普關稅引共和黨內反彈！擬對台灣等14經濟體加徵關稅 國會醞釀反制 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMivANBVV95cUxPR0t2b0huMWpUMW0zMzM3ZDloSURDZGdZbjBVS0U3VnhVMkdydnZEaW4wMUxQU1R6UWpNdGRFczRONXFLNGJNemUwVEpxX3FlTnlpVkZqWWlHM3ZfUXFQcFZFU0FRWEZEZWVTcnN0ZnM1anhVbnBpREtaT284UHZaUUM3a3hLZF9yTWdZRkJuckl1NDhWTURPU1E3bU1mV2FoMzVsNEJTeklhUFRWRzQ4a01hcFBYRFlmRU1yYlhxek5yRklHaTBoT1RjdGVRSWNIZ1BXM05aMVJYWlQtY1BhcE41Y1UzNXN1MWRuYjB4Y2dXMFVqTmNxWU1NRFdweFhBRjUxNFpZb3MxSjYyTHJ3eVptR2doX1dZa0pWN2ZBckx0cXhEa3RlamkwZ0ZMRmlESUxfTFpfbTNiRFpzc3kyaVRMM1JvNHBWUFBRenQ1UXM1T3BfNUU0VFk0aDNyTW9uMlY5OG5xTV9qQ2pkdVdsa0I2d3Q0UHNQNnoxNmFoaW02UlM1ZVJ4ME1YdWtMTnB1akJZTU8xZGxfYlhzdk10R3RZTGZlUXd2T19waGUwNWxxdnlKMGNYTlp2REI?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-27T22:20+08:00",
+      "importance": 5,
+      "risk_score": 2
+    },
+    {
+      "title": "第一金法說2》估聯準會12月、明年3月各升息1碼 台灣央行按兵不動...「這情況」才跟進 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMihwRBVV95cUxNRzRmdkRsSGJTZ2M4OFMzaHM4cHJCVmkyQlFvQWg5WG9MSHhnRWVlU1BaR1RhRTRJTnZibVA5OGRMSVNwU3VIOVFZV0dyM1lYS2VXaXJmU1dWVHdlcmxwNTNqLV9LdUVlS1FNejc5ajUxVGJsMGx5SWZlc0M0RzFxUm01NmhnWjdSVUJGcnJUN3B2WHVkVXV1akpEcnVDS3VtcFJ4WWluLWhBU0ZmT1RWRXZreEZLbkVZbHBaVWFjQWhkNHNhU0pWT2g0eC1HOXM3eFk4MEkzMGtFNjVKZ2M4dndXaWlyV084WHludWNxYlVRSXVCTkU2Slduc1JHdHFnVnAtdlVIZTZoZExpX2J0a2hsbUJwVWxiY2JVejlscDdYak9DN0xCUm1pRFJ4NjNBWUUzU0xrRk1YZGVXRHFJR1I0ZVg4bW91ZDhhSXlIVjZyZjNCMnFSbDRtUGlSXzVGUDhIM3NPMEo1RnFrVFVoeUdYby1NdEpfRmFCV2NGaEFLX014d0ZwR2dfV2JUS0w2Rmhub1ZhejV2Q2VxTUwzT01KbzdOVFBzaXg5QjEwbVNXamFHZ3RSNlhpNGU3NzlBVUZIN283V1pxVW10d2dJZncxT3kwTGtkNW1DencyNDlkNjBHQ2l4bFFsWk43UzBsVUJaWThMcW1RRHBPbnFzT0Z5QUFMMlk?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-27T17:41+08:00",
+      "importance": 4,
+      "risk_score": 2
     },
     {
       "title": "Equities: Tech and China support global rally – Deutsche Bank - tmgm.com",
@@ -129,75 +137,61 @@
       "risk_score": 0
     },
     {
-      "title": "Stock Futures Rise as Wall Street Heads for Weekly Gains - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPWlA4LU1CSWh3aU9mckxnNzJ4Y3BMTl9zM3plVVV2SVZNcW0yQUxsbE9qUlRDWElVdHJ0QjFBek5hTmVGaVNqQzFZUVE2Z1BwNzN1TzVybU8tOXhtb2N5eGZOV0t6V2k3VHpuV3p6SlE5UnZWdWRLNnBpR3hhUlRISHY1WDBuVzY0eUNvOWxKVkktU2RVczk1OTB1S3llcXJQ?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-27T21:24+08:00",
+      "title": "Memory Price Surge Hammering Android While iPhone Defies Slump to Capture 57% US Market Share - Mashdigi",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQdUNiNk9RN2o3Vm1HQkp2ZUoya1ZMNnVxcHBVS0x0WE5EUlhDQS1PS0NMMXZtY2F4NWZ2dGI0VW1oeTVscEhSSDZlTDFWWlpGS2dEa3c4ZW1RczNOcmxpR3hjeGk1dDFnM3BscTVrWWRSMWhPemxFYTZfVV9acnZCRmVfb0tvS2trUXhTbw?oc=5",
+      "source": "Mashdigi",
+      "published_at": "2026-11-28T06:03+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "中國唐商(00674.HK)中期虧損約8490萬港元 - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5mS3B0ZTg2eHVSRFIxNzlUUnZhb2Z3YU9EbEhBNGRLWTJvWkNpeGF3RUl4ZWJoTWN1YWxkWlJrSXJVcDgxSjgxMjVrY0M5TEFJUU9PRFh4RWU3MF8wQ19OYkJmZFBWbmt4SUxF?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-11-27T20:50+08:00",
+      "title": "Taiwan Semiconductor Manufacturing Co Ltd(TSM)股票11月27日盤中上漲3.22%：真相來了 - TradingKey",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPNHhyWE51OEpBWm11UVNCLU91NWU3M3g1eWpFeFJvQldzM3hWSjhzQkhwRUdNOVd2a21DNU9INmNiSDFLQ3BkLWVyRXVjUnZsc0txNm02WUlleDVrMVM5NVNBc0dfamwyVkFxMGlFdzhaM1FWRWQtcmw4cmFRUGVCVzBvTUs5YjdHbGZjcERJVlVXMDZL?oc=5",
+      "source": "TradingKey",
+      "published_at": "2026-11-28T02:17+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "國泰台灣科技龍頭(00881) 成分股、配息、折溢價｜台股 ETF - 口袋證券",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBRSzREUk1YbTgxRk81b205LXFDZC1HU2M1VkVNWl9PcnQ0b1BuemV6VEN3Vm55X3liVEhrTlF5czRVMlRhUUJKcWhtSmRZemFqaTZtRThtVHdWRUZKOEVaUA?oc=5",
-      "source": "口袋證券",
-      "published_at": "2026-11-27T20:27+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "中國儒意(00136.HK)11月27日耗資4943.8萬港元回購4418.4萬股 - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5PREtBbl9DYnM2c0JSRHRPVDNvX1lzcUNUMmVrV3BCU1lxZEdveWhkV0NWNmRVWGZucURtbGlJdkQxVWVJN1NnckRldDdQZEItZWlfa2NOenZHWDFUejRfemdMRVFnSFo0MnF3?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-11-27T19:24+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "Dow Jones(BK20782) Stock Price Today | Quotes & News - Moomoo",
-      "url": "https://news.google.com/rss/articles/CBMirwJBVV95cUxOMTBVVy1FMkktTFh2OVktR3pBb1h6QVJvZTlpSzBsMkFPX2ZXN1pxVGdTdE1NUVlOZkRxdzUzZElOT2RJbjZtcGhKMWpIMy0zRWtkSGFvTkdvdlBkeGZpMUZWakktTlBHcjlMdm4wNE5WVzcwc0NlUmVZS09lNGhhZ1BWdFpVMDAyWU1LTGxWM29lSWYwNlFXc1ROQ0t5eTJUbEN2a3lYejNOb3pmOTVGQ3JGcEN3TnNFbjkwempWZy1aZVZYOGtLbUR2NnByS1dnMDVJV1ZCVFVPb1lPRmc5RktESHBfT0VNRTJGTFlwOWhQOEZxMmo2SGVWRHVMZDRhbl8zVTV5bllSeVVKS3l1YndiNFpXbUlpTktpRGhjYzk2SGFKV2txbUhKaldOVDA?oc=5",
+      "title": "Global X Semiconductor ETF (SEMI) Stock Price | Quotes & News - Moomoo",
+      "url": "https://news.google.com/rss/articles/CBMixwJBVV95cUxNT1pwUEVEbTJuOUFjNDhRdVJiUkVJOFc0Qzg5TTVNVDg4YWxuY04tOUM4SVE2MEZ6REYyb1Bpa0tlc01DSHF0OW9Sb2ZuVC1wQktvODJsLWhOdWV0cDJNam9xajhpQk5ZMWQ0c3NnTVNBTUFpT1JteVppaGFfcG0xOHl2QmxrTHpTcVRxeXNTbVN6NlpEdDRtWjdHenpTUk5pMVdtR3J1YjVhWWt1UThGcjhTZ0VOYlROZTdTdk5kN3lkVVg1RUlXM19EYlY1QnB6VXpoa1lkMktlN1RtZDlPam5xTElJb3U4OWJSNjNiMm9rWnNNSjlTenlrUDFLeE5xb0hWN25jbjRIQ3VkTFlCdkk0aWtnX0tOcEhmMWozWmdBdC0tZ2VoN0ZkNENpSjVsZUFBdF8wRVZ3X0NobW40dUp0RlBQVjg?oc=5",
       "source": "Moomoo",
-      "published_at": "2026-11-27T19:03+08:00",
+      "published_at": "2026-11-28T01:41+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "Global Energy Roundup: Market Talk - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQdE5rWlA2NmxNbHFUdEZRaU5KZV8yaVlzX3BtNFMydzZRcFRSMFBCczNWcmtLM1NfTWh6NUhxTmpLOTZPSjdrVE1vanVTTW5YbmRZempSWDJyZlI3aGhIdzVxMzBzdk5NS1JNZnBzUXhOaldZbE5jMzJldHVoZkdtSjd3?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-27T18:37+08:00",
+      "title": "黃仁勳重掌輝達執行長 台北101點燈相挺、供應鏈吞定心丸 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi9gJBVV95cUxPQjlHdml2MUE2WVJwZjI5dUQwMjNpbzRFVkhhOGtBdER6U3l1NjJmcU0xSTJaVzlpZ05DMTRPdDJsT0JyOGlGTFVtVC1rS1BzVlItcUYtN0JSSXR1MVVPMUR1TDV2YkZqWXI3bUtBR0dDN3RjMkh1TWVfNkJuNVg1VUZiSmpwTkRNckhLNURzUGthUFQ3ajRWa2haRExVcVdtZ0lnNXhtWTJ6TUdfZ0dfLTdhZ2pDUzllWDN6elFiN0NnRGdHMHZiU1Q1WUw2MUt1Ynl0cUN0djNtWDVZekZMSDBQTURuWnQ2WUJwdnd4azduM1hDTWlCWGNEeDdpUGhpUUl4VmtNODZqSG00MDRsdW9SRG9wYVhqejc2WkU1bTYtdUk0eC0xdU14ZG9IZHBlNkRrRFlWVUQ3NXlTT3M0ZTRTT3ZMb01SODBDb0VEbVR4RzFiSV80dkU1OFNzc25yVEFwUHlENkROeFV1ZElSQlN2NkZlUQ?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-27T22:49+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "Nasdaq opens 1.5% higher as US equities head for weekly gains despite volatility - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPVXJKREltMXhqUDNZd2daQVdjY05UU1pPWFhtbG1IZnBZYjdLUUxiTFZHYXZLNnFNMkJreFFuMTVweEVkcGUybWNMbHU1NHg2WmJPMk82RGR6LVZtRl92LVp0d1VUQUxnbEg4Q2RWUnFpbm5kTGduMUE2cnE0WGo5N1FjbVNKVzg1VFlDeDNROWpvVmtMQVVTTjk3Ums3dWt1SlQ3NUVGZVI1VWNkb2o5U0U3U0VLWVBZSGpMNVQxRXUwOHJOcjhNS01CWkh2MWZq?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-11-27T22:44+08:00",
       "importance": 2,
       "risk_score": 0
     }
   ],
   "oil_watch": [
     {
-      "title": "中東局勢升級，WTI原油價格4連漲重回86美元！反彈趨勢能否持續？ - Mitrade",
-      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5Gc3NfaUFQaEV1YmowNXYwTlhFNHZQZjg0WWpaeWxFcG92cV9lMnQ5bGZnUGV1WWRxQjhocUx1bk56dlVBeG1rU2pFMS1VYWpIcGJ6R1VNeVlzWE42TkQ3VWpqSWFLYl96WU4wMzBZaFp3TFFYd3NJUE1B?oc=5",
-      "source": "Mitrade",
-      "published_at": "2026-11-27T15:17+08:00"
+      "title": "WTI advances further beyond $85.00, over one-week top amid renewed supply disruption fears - tmgm.com",
+      "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPZHpqa0hJSDBsMHNuVjgxMkN4TXZrQWRjd0pGclB6dm1Lcm1qR2Q1N0JQV3VydTF1Rm5wcnB5bU1JYXhGVlhid3U3aVZBOTlTcTAzbjlCQTFBSVNJWm00YTFRVko1SFpoMy01dlNfODZXUi1kUjI1RXFabmhJS3dVN21OVFgwSzRVcExaN2JJa3VZeW9vNmdTZFAwOW96azNqM21NYk1Sa2ZkR1ZQS3NjSkVfNnFqRVM4RjdTME5xU2xTcHU5TEpzNVpOczRlMU44RGdvOHRvVlo1S3A3YnJhREtyRkVIWDRvNWNETWx2WQ?oc=5",
+      "source": "tmgm.com",
+      "published_at": "2026-11-27T10:43+08:00"
     },
     {
       "title": "WTI O'il flits with the $85.00 as tensions in the Middle East threaten supply - tmgm.com",
       "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPWUpCQVk4d2JiTGk2MHhiaENBZjByUG1QZWk2SS02dGhzU2NBcGw4Zk1PSVNSYm9Kd0M4Z3FaS0gyd2JBMlZSQWQ0OTFPbDNfTnVxemlJSU5sUF9NNUFCMWhteFBxTG5fMUlJVTVmaXFyUDl6NTZ2RnZFaHBpZmFvYXQ3b1A4OVlMN0xpeUdFV3QzTTF3RVJfcHVaeER3c2xMcElTR2FXTEM5cnNGSWZHTjV3X1pqU2JqT0ZRQUdCNmVMYXEyUG1VTl95aUxkbnp4T2tFZXhBdlc1dnNYTXc?oc=5",
       "source": "tmgm.com",
       "published_at": "2026-11-27T19:43+08:00"
-    },
-    {
-      "title": "WTI advances further beyond $85.00, over one-week top amid renewed supply disruption fears - tmgm.com",
-      "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPZHpqa0hJSDBsMHNuVjgxMkN4TXZrQWRjd0pGclB6dm1Lcm1qR2Q1N0JQV3VydTF1Rm5wcnB5bU1JYXhGVlhid3U3aVZBOTlTcTAzbjlCQTFBSVNJWm00YTFRVko1SFpoMy01dlNfODZXUi1kUjI1RXFabmhJS3dVN21OVFgwSzRVcExaN2JJa3VZeW9vNmdTZFAwOW96azNqM21NYk1Sa2ZkR1ZQS3NjSkVfNnFqRVM4RjdTME5xU2xTcHU5TEpzNVpOczRlMU44RGdvOHRvVlo1S3A3YnJhREtyRkVIWDRvNWNETWx2WQ?oc=5",
-      "source": "tmgm.com",
-      "published_at": "2026-11-27T10:43+08:00"
     }
   ],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-11-27T23:17:36+08:00",
-  "checked_at": "2026-11-27T23:17:36+08:00"
+  "updated_at": "2026-11-28T07:29:29+08:00",
+  "checked_at": "2026-11-28T07:29:29+08:00"
 }
