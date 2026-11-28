@@ -8,14 +8,14 @@
   "ticker": [
     "⚠ 全球市場風險｜費半 +4.0%｜NASDAQ +1.7%｜日經225 +2.1%｜KOSPI +4.6%｜台股加權 +0.4%｜恆生 +3.3%",
     "⚠ 全球市場風險｜美債10Y 4.94%｜VIX 23.8｜WTI原油 83.08美元 -0.7%（高於常態，觀察）｜布蘭特原油 90.84美元 -4.0%（高於常態，觀察）",
-    "⚠ 全球市場風險｜油價觀察｜WTI O'il flits with the $85.00 as tensions in the Middle East threaten supply",
-    "⚠ 全球市場風險｜The Warnings Behind This Week's Stock-market Rally",
+    "⚠ 全球市場風險｜JD.com Stocks Climb 4.34% as Beijing Presses Listed Firms to Reward Shareholders",
     "⚠ 全球市場風險｜Goldman Sachs warns that the sell-off is not over: Global equities could face another $100 bill",
-    "⚠ 全球市場風險｜第一金法說2》估聯準會12月、明年3月各升息1碼 台灣央行按兵不動...「這情況」才跟進",
-    "⚠ 全球市場風險｜Trump Says Wall Street’s ‘Pretty Big Dips’ on Wednesday Before Recovery Left Him ‘A Little Conc",
-    "⚠ 全球市場風險｜台股漲幅全球NO.1！網「1問題」曝散戶真實處境",
-    "⚠ 全球市場風險｜台股尾盤強彈156點由黑翻紅！國家隊注資「這兩檔」捲3萬張 再撒1.4億元搶進009816",
-    "⚠ 全球市場風險｜國泰台灣科技龍頭(00881) 成分股、配息、折溢價｜台股 ETF"
+    "⚠ 全球市場風險｜川普關稅引共和黨內反彈！擬對台灣等14經濟體加徵關稅 國會醞釀反制",
+    "⚠ 全球市場風險｜台積電除息倒數聯準會12月9日決議升息市場押99%機率再升一碼AI供應鏈雙法說！台達電和廣達12月9日同日出招中油油價連11周凍漲｜投資早知道",
+    "⚠ 全球市場風險｜瑞銀稱美國出口管制衝擊有限！看好AI晶片供應鏈：台積電、鴻海等6檔獲買進評級",
+    "⚠ 全球市場風險｜The global semiconductor equipment industry faces a critical test! Bernstein: The U.S. new expo",
+    "⚠ 全球市場風險｜晶圓代工都中刀！外資減碼「這2檔」8萬張 連殺台積電9週捲走7182億元",
+    "⚠ 全球市場風險｜台灣水泥斥資1.62億美元造新船 大舉擴增散裝航運船隊"
   ],
   "markets": {
     "US_SOX": {
@@ -35,7 +35,7 @@
     },
     "US_DOW": {
       "label": "道瓊",
-      "price": 50774.9,
+      "price": 50774.94,
       "change_pct": 1.6
     },
     "VIX": {
@@ -81,10 +81,10 @@
   },
   "active_news": [
     {
-      "title": "The Warnings Behind This Week's Stock-market Rally - 富途牛牛",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQMjRGb2d3cU9BeVM1M3RmTkNTOVd5UDJhVXdXYXpzWTNsMzFPeGJlV1FScWFuU3Rqbi00azVtclM1VlA0a2pOWVEyVGpkTGZ4NmQ3Q29zVTNjd2pCdER6WDEySUNQVWxvMkFwQTd3YUs5Wm1fVEwta01FLUtGQjJMdDR4SU1FdjJUdzFEMDJqWWhKZHlJeGJiRw?oc=5",
-      "source": "富途牛牛",
-      "published_at": "2026-11-28T02:48+08:00",
+      "title": "JD.com Stocks Climb 4.34% as Beijing Presses Listed Firms to Reward Shareholders - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPQzI0aHZUTWk1bFlNNTNqUjVMd1ZBeGJ6aURnckxQYnY0ZTU1SWt1ckd0NDRmTTh0bWdhVDJUV3IxWEJwVVRRXzgzWUtoWGFzT1VyZC1RSG5DTGRVRXhTQzZRNjRsTENLRi1pdkJxVEFVZDFyOW1iZzJFdDQtbW1NN01kRXVaZmpsY1hXOXpaampEYmFhVHZDZmlLb3VvdG9wcWJERl9mNXlqUDR3eEpfSG84NEZIZ3VxLVBaX3c0aEE1TlgtVjJZdE9NcjlybjBHODlqcg?oc=5",
+      "source": "TradingView",
+      "published_at": "2026-11-28T02:07+08:00",
       "importance": 5,
       "risk_score": 4
     },
@@ -97,95 +97,88 @@
       "risk_score": 4
     },
     {
-      "title": "第一金法說2》估聯準會12月、明年3月各升息1碼 台灣央行按兵不動...「這情況」才跟進 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMihwRBVV95cUxNRzRmdkRsSGJTZ2M4OFMzaHM4cHJCVmkyQlFvQWg5WG9MSHhnRWVlU1BaR1RhRTRJTnZibVA5OGRMSVNwU3VIOVFZV0dyM1lYS2VXaXJmU1dWVHdlcmxwNTNqLV9LdUVlS1FNejc5ajUxVGJsMGx5SWZlc0M0RzFxUm01NmhnWjdSVUJGcnJUN3B2WHVkVXV1akpEcnVDS3VtcFJ4WWluLWhBU0ZmT1RWRXZreEZLbkVZbHBaVWFjQWhkNHNhU0pWT2g0eC1HOXM3eFk4MEkzMGtFNjVKZ2M4dndXaWlyV084WHludWNxYlVRSXVCTkU2Slduc1JHdHFnVnAtdlVIZTZoZExpX2J0a2hsbUJwVWxiY2JVejlscDdYak9DN0xCUm1pRFJ4NjNBWUUzU0xrRk1YZGVXRHFJR1I0ZVg4bW91ZDhhSXlIVjZyZjNCMnFSbDRtUGlSXzVGUDhIM3NPMEo1RnFrVFVoeUdYby1NdEpfRmFCV2NGaEFLX014d0ZwR2dfV2JUS0w2Rmhub1ZhejV2Q2VxTUwzT01KbzdOVFBzaXg5QjEwbVNXamFHZ3RSNlhpNGU3NzlBVUZIN283V1pxVW10d2dJZncxT3kwTGtkNW1DencyNDlkNjBHQ2l4bFFsWk43UzBsVUJaWThMcW1RRHBPbnFzT0Z5QUFMMlk?oc=5",
+      "title": "川普關稅引共和黨內反彈！擬對台灣等14經濟體加徵關稅 國會醞釀反制 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMivANBVV95cUxPR0t2b0huMWpUMW0zMzM3ZDloSURDZGdZbjBVS0U3VnhVMkdydnZEaW4wMUxQU1R6UWpNdGRFczRONXFLNGJNemUwVEpxX3FlTnlpVkZqWWlHM3ZfUXFQcFZFU0FRWEZEZWVTcnN0ZnM1anhVbnBpREtaT284UHZaUUM3a3hLZF9yTWdZRkJuckl1NDhWTURPU1E3bU1mV2FoMzVsNEJTeklhUFRWRzQ4a01hcFBYRFlmRU1yYlhxek5yRklHaTBoT1RjdGVRSWNIZ1BXM05aMVJYWlQtY1BhcE41Y1UzNXN1MWRuYjB4Y2dXMFVqTmNxWU1NRFdweFhBRjUxNFpZb3MxSjYyTHJ3eVptR2doX1dZa0pWN2ZBckx0cXhEa3RlamkwZ0ZMRmlESUxfTFpfbTNiRFpzc3kyaVRMM1JvNHBWUFBRenQ1UXM1T3BfNUU0VFk0aDNyTW9uMlY5OG5xTV9qQ2pkdVdsa0I2d3Q0UHNQNnoxNmFoaW02UlM1ZVJ4ME1YdWtMTnB1akJZTU8xZGxfYlhzdk10R3RZTGZlUXd2T19waGUwNWxxdnlKMGNYTlp2REI?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-11-27T17:41+08:00",
+      "published_at": "2026-11-27T22:20+08:00",
+      "importance": 5,
+      "risk_score": 2
+    },
+    {
+      "title": "台積電除息倒數聯準會12月9日決議升息市場押99%機率再升一碼AI供應鏈雙法說！台達電和廣達12月9日同日出招中油油價連11周凍漲｜投資早知道 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiqAZBVV95cUxPeU5EeTc5TWtUbENsOUFjVWJGb3BFTWtoeVNzZXBIejZiNkV2b0tRUDh5RjFlTmhveHhpU3lIaGhSbllHc1VhdFg0RVlONElvZ0VUWU5mYmdtUkVISHByNjZsaXZnUGhDaEEtVExQdV83WXhiODFvblZ3dUNSTjc3MGJqSjhCWjBBUXVPTzJ3aThxcGRYN2pXY0NyajB6ZGc1cV9FSVROWnR6dVRUa05rbGo3OVFCTVVGVF9LVkI5bDE0UWhDQk1yMkRZb1FfYXplQzR6aGtjM1FpVmxwRzZ5RGdWRTIzcmhkeFhfVXdBNnZ2VWdFbUJMZ1dVMXNNMFl2Tmtod2VEU3lGajhscDljLXhWQjMzeFhxYUJxV2JHX0F1WkdQZDMyQkNOakxZMklDSXdZSllaUHZVRThiaXd3UUtHbEpCWUZFazRXUWJ5SlJEQ29ZZWowa1dfc3BUa3ZOYkRZS2htbXR4WHcyUEFubUhibEp6U1BCTkFUVl9wbEpRSWdlaDA3bGNpTzBFekthMmQtRExoYkU5M3Zmc0VyREU2c1NnWTdCNEFXR1pxN192Vi1WT3lzMkVSUmJwSm10VVV4VElRQ3BORmptcVhVNW9vcGVEanU3QlFfb3l4TzRoWDNMV001cWRYU0Q3ODNrSUFELVNOQTVOZGJBZGRncG9KbHlfMGFhYVctSThTcm9nTUZ3am9mRGFpYnpoaFZVTWNaWU1MNFpLakxlS0pLdktFRDBDaGlGX2loVHRBNVV3c1RJa1pfQnYzdHBET3ZPVXVSTS1SbWhMNkJ6TnMzenVJbDhfQUZlbUc4ckE2ek16ekg2ZC1HRTZyR25fb0ctMElSR2hwbXVEUHJlcURlem9pTWxwTl9lUWpuSUhBNzFyaEhRX1ZNY0sycW5makpKa0E2ZzAxcEtXN0d6N3JvemxJTl9vLWtpdEhydnVJdWxRSFMzeGJaWXdURnAtZW5mNUEwYnpBWnpBcmNBWVdCN3gzOVhZTFZWRzB2Yk5hR0xaVFRxLTNUbHR5U2h4VlFUaEJEcTVTdjVnUThlRmFfWk5HdWI0MU5s?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-28T19:52+08:00",
       "importance": 4,
       "risk_score": 2
     },
     {
-      "title": "Trump Says Wall Street’s ‘Pretty Big Dips’ on Wednesday Before Recovery Left Him ‘A Little Concerned,’ Credits Jensen Huang’s Return to Nvidia for Boosting Market Confidence - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMiygJBVV95cUxPRWVUWnJhTHBJQXF0WURqMnNzWUFSZUkyWVhxR1dyeGlCQV9IRVVWTmpod3FCVmN4OHJuMjZlakY4alZBWElDYW4xY0pzUC1XUGhucHBCa3ZVcnRDQmJUN0p2aEVOZVdyZnJqcktyaFJOcTdDQWpSeTNrOS1mZnBPWmNaWWtKS3dBSmRGaktWd05QLUoxY1pveHNEQ3lPOWR2UUplampUczRKMlljMHZPX2huZkYtb3NmS3ZmTmoyeE1MYXdCOVV0UjhaN1V0VnRkY2ZTVzgxV25lUGJ5Vl9pc1p0LW1WQWxLNko3YXlrdXJQamh0TVpsS3VMWUVxYlN6cmxnQzVYTzZCdDZqUTVPWWhDa0pNSEIwVF9YQk1BTnVtQXZrZ29ZZGotemtJTHFES09PdGZZOVhCczV0QXBveXJqU0hUVmRBLUE?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-11-27T17:01+08:00",
-      "importance": 3,
-      "risk_score": 0
-    },
-    {
-      "title": "台股漲幅全球NO.1！網「1問題」曝散戶真實處境 - 自由時報",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBPcWhFYWFIVmdzWXV0anc1UGdSQnFfUWJNUnI3eFd4VnIyMjdtV2gzNTFPNWFPWlc4aUVUS0VVYndQRGJIUHhiVHB2bmFRT3BoWC1fMW9QQXg?oc=5",
-      "source": "自由時報",
-      "published_at": "2026-11-28T11:21+08:00",
-      "importance": 2,
-      "risk_score": 0
-    },
-    {
-      "title": "台股尾盤強彈156點由黑翻紅！國家隊注資「這兩檔」捲3萬張 再撒1.4億元搶進009816 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMihwNBVV95cUxPSkZPRVRHT3NwLUoyaXhoN0tnQnpwS0ZxTVNKdUhKQ0pxZkNjY2NXWmNQYnFmWGhHMElvUWxCak93bmlpYWlzZGdIdzBJOUpFdEdSMnlieGZTV1RDQ21qeWhWZ2tfdko2V2U0NXdNSTM5RlR5bVZQVmt0WHItX1BFT2hydzlkMEFUQ3ZRWWpIYk43ckR5OTlFN185aVM5Y0JtQkZrUnZTZG9tekVOZFJrN3FUd3hIOGItcUgtU0JPVjVQX0w4OHZqZFoyTC1VZzhjakNFUXVqbE9sRGtzNWw4cTk2Y3R2bjByZzZMSGxaWndyLTZUbTFDdE53bWduV29jZzVuOWd4M095MjlWMUlkWF9JVlFFNzdwRi02TUZJRmhQVDM2by1hODJxNm5XY3RMVkVHWndiblVqMERJbTByLV9ZRkVlSEk3X1dqWVR2STJQZUtfM0o0UVMxcTJvVllwTGpMTWJWa3l1YV9BbWNUZ1JMZy1hdXhJdy1laGVMbjE5SFp5REkw?oc=5",
+      "title": "瑞銀稱美國出口管制衝擊有限！看好AI晶片供應鏈：台積電、鴻海等6檔獲買進評級 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi4wNBVV95cUxOc0h2a3BURkFpOHZ1dXVSSnNYM3JuYkgtUktFNkcwa2JiNFRwejVJazhhUTI2M1k0blppZGFEWDZ1c0JnU0VmMkxhR2VjdkZMOEJyTkdEY29CVHh6MlpFY09sRWpxSTg1NkpjMmxtNGJnWWxzSHNXOGNFN0J4RkM5MEhVTFNQLWhTc0dLbXNQQlRRUzFKNUsxenNHLUpZajJ2T01OQVdGTEZIVXhKZ3B6SzNUSXcwbGR1STlMYXQ4RWZjcXFtWmtGNW5kNmNlYkJ3cDZKdlJaak5ORGtWTjl0NXNpSFh5THZDc1F1OWtoNVQtM3FvN1o0cGRuS3BJbDhsSThuQmcxOFRLVlFEMUhkcEJZQzl6YlBEN1BudTV1UER2dWVadXNlSE1UN1NBQ1o4V0lzaDFVOUUyUlZwaGd4VHROM2VzZktoVC1jRU5NQlUyU0JaU1U3N0dwWnp3U0tIX0p3bnJHdC1IVDNiWVYxLXhUMENMcXJsXzlONkRIOEl0SThlcGw3V3BpVVNWT05GQVdrS1UzaTBWRFJlU1NmZWQydnpEUENISXhyS2phdVVJNFlzc2JabWNzYzBBdld2aGpxYVpSSDBtWG9fLUIteHpFNkZPalNoVGFwb09TR2dXbnM?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-11-28T10:54+08:00",
-      "importance": 2,
-      "risk_score": 0
+      "published_at": "2026-11-28T18:10+08:00",
+      "importance": 4,
+      "risk_score": 2
     },
     {
-      "title": "國泰台灣科技龍頭(00881) 成分股、配息、折溢價｜台股 ETF - 口袋證券",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBRSzREUk1YbTgxRk81b205LXFDZC1HU2M1VkVNWl9PcnQ0b1BuemV6VEN3Vm55X3liVEhrTlF5czRVMlRhUUJKcWhtSmRZemFqaTZtRThtVHdWRUZKOEVaUA?oc=5",
-      "source": "口袋證券",
-      "published_at": "2026-11-28T08:52+08:00",
-      "importance": 2,
-      "risk_score": 0
+      "title": "The global semiconductor equipment industry faces a critical test! Bernstein: The U.S. new export control bill could trigger sector-wide volatility, and next week is a key observation window. - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQYUhuOHFrdFlSUGdIQTF1eXo5M1lFbloxTEc1RVdWVlNwTkFQTHhiOTdzaXlDdW5rSk5KMTkxWHVRSU1zUTlKaUpZOWlfTzFGMDRNdGZUVml6Rzl6dFg0THhnM2FNNWZLNW9tQkNnRW13Y2NVbEROOGR1am1CNjhXcXo5V3d1VkgwZTduOFdEVnhOTnQ3d2tsZGRsRUZJak9xVnlLZmM5dE5kQjNGXzdISVdxcjV6WmU4YWc?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-27T23:00+08:00",
+      "importance": 4,
+      "risk_score": 2
     },
     {
-      "title": "黃仁勳投票日回台灣？同款座機「28日清晨抵台」 - Yahoo股市",
-      "url": "https://news.google.com/rss/articles/CBMiuAJBVV95cUxNczh0dUVCTkJjYWFESkNqWFBROWw4ekItMlczSDM2cXN6QnpQRGFjWDVEN2FvTEs5REo3YzNPQi1aWkNfa3J3SGJpaEtxdndCQ1ROS3NuSF95OHRnN1dRSEVBS0ZTdERha0J0cTRLLXdQRU4yWjMwTEFia1psSHJBZDF4LXRNb1Q2UUljaXp2VUlCYjVSOVltNG5hTVV6X09qSUlOZHpsWk9VaEZtYlREMEMxb0xuQ3pzUkdGSzVwS1kxUGNRSElWcHpTOUd0V25YLURvVjBpMDlSdEphajRHbEFmUzA2WFhtYWNpVlBXQVFPejBJalgyZUxVc3VfTVozX2QwSW5IS1FoRHNTMVlsRm1FemlwSFVNVmY1ejB6NGNtV3lPRUwwNmt3VHRFaVZXaEQ4NEtzQUg?oc=5",
+      "title": "晶圓代工都中刀！外資減碼「這2檔」8萬張 連殺台積電9週捲走7182億元 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMilgNBVV95cUxPUkpJbGpTVDBqU3JPM3MxOVdiTFczQVhXYUZhZXFQQTlPd0tHQzhRV0pxRGVHNGFoOFFNX2g1ekZQam95LVZaNzFxdXVOVGlqb2piQlBxOV9WWjNfOHIyTlhQcmgwU0FIN0hNZlhxaGNLMVFrQUFuMEJxQUhjMmROdXk0MmMxVlMzd2lsMXVSQ1ZoMkVZeWJHTkhxdGJXYzl4THQ3cl8zX0Q2NnBQVTFFQnExaDFmOXhOS3JvV1hBWk5BMjFFV1ZveEFUQnhQcmI0dGFWVXpHUDA0bmJuVVN1dm5RcDlkbEx6T0l0NjAwSnhfczltTHYtd1cta3YyS1Yyc1ZJMWItWGV3Y2drME1VR0Nfb0VBVzhrOG5vV3gtOTdzZWpNSjY0dEpMdTJ6SklHMXpNRHJhdDh4Q1ZhWkl1aVR6MV96b2lfQjRQUEdsNmk4NDZJcGl5dWIyZnQ5eE9lTmZuXzNlcEN1TVNXaDFncGVQeFJzVUNQY2pEUm9BREdLVUNfUzlYV1BTelVydXY0YjRJSC13?oc=5",
       "source": "Yahoo股市",
-      "published_at": "2026-11-28T06:26+08:00",
+      "published_at": "2026-11-28T20:00+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "Memory Price Surge Hammering Android While iPhone Defies Slump to Capture 57% US Market Share - Mashdigi",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQdUNiNk9RN2o3Vm1HQkp2ZUoya1ZMNnVxcHBVS0x0WE5EUlhDQS1PS0NMMXZtY2F4NWZ2dGI0VW1oeTVscEhSSDZlTDFWWlpGS2dEa3c4ZW1RczNOcmxpR3hjeGk1dDFnM3BscTVrWWRSMWhPemxFYTZfVV9acnZCRmVfb0tvS2trUXhTbw?oc=5",
-      "source": "Mashdigi",
-      "published_at": "2026-11-28T06:03+08:00",
+      "title": "台灣水泥斥資1.62億美元造新船 大舉擴增散裝航運船隊 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi6gJBVV95cUxQeDRiU29LSG4tUUk1VmhqbjlzUEt6M19uaGViZElHR1dET01hVGl5UWY2eWt5eHl6YVI5SWJOb2Ntc0JZOUpoX2dLclFrc1Ayc0tMVXh1cXBPSUI0MEJGY0tmcmpPc2JDRmRaay1XSDVzZHFHUTVlbXExblc1eV9IekJaa08yVWhWc05IMUczYTMtX1o5OFlTWWZPQm1tcXVqRGNqS1FQMTZaWks1UWZJd2dNZ29KMW4zZHI4Z3IxekFsd1JBZzZjS2swVWg5dkw1aVNNQWMyempZSDNzYnJUUmh1RUgxQ3pXbGRwZlhIcHM3RUY2ZGl1SGxGQ1VnbHlFLUdXNnM2ZG55OWVLMTlDWlNCSVA5dlFLbzFYRl9Gam1HUG1ZdjVyNTFjMUh4UVIzU3FWMFRaMTJQZzlNNGswN3NuUzFCQXBzMkJ0MjNCdUFvcGtUdTZ1bFE0NGNWWUU1QzQxbXNxSk8wUQ?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-28T18:52+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "Volatile stock market confronts jobs data, rate view as next tests - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPWi1mM0ppYWgtREtRV1E0VGdRM3hVcllwN3hySmxmbURad0ZTZE95U2lSUDV6QzJ5RmhxX2ltTFpkMG5qT21DTENnZDBVTG5xYmJ2ZEpPXzBCLU1hOW44TGNYNEM0NENVOE5IbGR0OWhKRXJmUmIweVhPLWFORk5icmhnY044Ri1fbkY3M1cyZ0pzaEJqdGI1YWFYTzBnX2Z5WXU1YkJBOTJLSzlDY3JBS2FvS3ZRbWk0UXFBWHlaS0pDSmEyUzRZTHJzcEQ2ZGc?oc=5",
-      "source": "TradingView",
-      "published_at": "2026-11-28T02:18+08:00",
+      "title": "40%! U.S. household equity exposure hits record high as investors continue aggressive buying amid AI stock plunge - 富途牛牛",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPcm94LXhLUG9FSnpzVTlkSmNIS1FVdkRKNExqeWc4RVNibFZPcmp4MFpwbHBpbXJ2UWx6M3pJUXdkMldxNGVJY1M3aHU0V1pqeGRKVFFsRWREcVBvZncxN3ZlOURqNHhla1dudDJMTV9QcGNub1cyUVJXZU5yczVNQzd5R1VKRGV5X3hmQ2lYcklHNkxvaVdMOGYxNUR4TzFnemMxaWc2aw?oc=5",
+      "source": "富途牛牛",
+      "published_at": "2026-11-28T17:55+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "Taiwan Semiconductor Manufacturing Co Ltd(TSM)股票11月27日盤中上漲3.22%：真相來了 - TradingKey",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPNHhyWE51OEpBWm11UVNCLU91NWU3M3g1eWpFeFJvQldzM3hWSjhzQkhwRUdNOVd2a21DNU9INmNiSDFLQ3BkLWVyRXVjUnZsc0txNm02WUlleDVrMVM5NVNBc0dfamwyVkFxMGlFdzhaM1FWRWQtcmw4cmFRUGVCVzBvTUs5YjdHbGZjcERJVlVXMDZL?oc=5",
-      "source": "TradingKey",
-      "published_at": "2026-11-28T02:17+08:00",
+      "title": "台股收紅也擋不住！台指期夜盤突殺逾800點 分析師點名「這些AI股」準備接棒 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMiwwNBVV95cUxOOVJhVjlTYTRhQi10TzFIM2NkZnl3S1otTzlVMGpGNkZmamZTZmJ0cXU3MHhlWHF3NmE4bE9nMFZnOGwxQUR6bGZWcnNYTDZDQlpPYXRFWjdIcW5JVlJTOWJOWmFjbHNHUXN4WmdEeS1nZng1WmxLXzFLdk1PUkV2Y05Ja05Fdmt1cTl0YXlSQ1JnaDlNRlZfdkYxZEdxNDBMZVFYZU5GSjJJMVN1WHZONnBpODBUTG85dkowWVYyN2U4TjljNWhNa1JGRUxGSlhGRDVscUpqM1JmQjVsNEVnWmZ4dXhBTUZpVDF4YkpJUTJES3c2Y0wxWHpaTmhMTTFTenM2UmlFZnFLN3hEV1RqbDlUUC14bTNBQ2FFdG1YRHByYUJ0d3R0MUw4bC1iNWdZMDh6dVAzOHQtdEh0OHlZY2s5aXFuMzVuaWlmRFFmZm9RbmdFYUh4RThUQXhtT1pMRWw5UzhBOGljazFoUlFXSnlVdGNyZGRmVk9ucGxFeEdDMHJmSEJJWnlTaDRRVFByUzdFYjNveDFzWHlVaF9ZaVFjdURYYUpINEJQZFRkUnI2WFNfUjN3VklmdG1jWXBOWGMw?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-28T17:40+08:00",
       "importance": 2,
       "risk_score": 0
     },
     {
-      "title": "Global X Semiconductor ETF (SEMI) Stock Price | Quotes & News - Moomoo",
-      "url": "https://news.google.com/rss/articles/CBMixwJBVV95cUxNT1pwUEVEbTJuOUFjNDhRdVJiUkVJOFc0Qzg5TTVNVDg4YWxuY04tOUM4SVE2MEZ6REYyb1Bpa0tlc01DSHF0OW9Sb2ZuVC1wQktvODJsLWhOdWV0cDJNam9xajhpQk5ZMWQ0c3NnTVNBTUFpT1JteVppaGFfcG0xOHl2QmxrTHpTcVRxeXNTbVN6NlpEdDRtWjdHenpTUk5pMVdtR3J1YjVhWWt1UThGcjhTZ0VOYlROZTdTdk5kN3lkVVg1RUlXM19EYlY1QnB6VXpoa1lkMktlN1RtZDlPam5xTElJb3U4OWJSNjNiMm9rWnNNSjlTenlrUDFLeE5xb0hWN25jbjRIQ3VkTFlCdkk0aWtnX0tOcEhmMWozWmdBdC0tZ2VoN0ZkNENpSjVsZUFBdF8wRVZ3X0NobW40dUp0RlBQVjg?oc=5",
-      "source": "Moomoo",
-      "published_at": "2026-11-28T01:41+08:00",
+      "title": "美股黑色星期五收紅 半導體與AI設備股走勢分歧 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMizwJBVV95cUxPWWtDYl85dmZSN1FDMlNSSFhvLTEtdGFMYWtXNVlGbXRDZVQ5RG1MbUY4bW1aRmlnOXJPRlZhMzVQTzlnaWQtQ2ZieHRZREdwNmpRWUc5SlNkT0tiNjRCQndiNUIxNWFsNUZxdW9hbDdxRlpFYVI1M19HUVRSbENhV1kwalpHTmRod29zdXV6QWQxMVRIZ21MbVpiYWtncFhIQUhHWGg4V1Z1dmI5Z0xzXzN2c05WNG84ckxNS0MtX1ZscnF4aGU3cjFnblByd2NRd19RVlNIcGhMb004MUk2aUxVaWw4Q0dfcXFuT3dMR0o0WWM3RjZKSW5jZ3RGWEF0djY0Xy1aY3dRTHRZVE5rMVpJQ1J6Y3BfMWVCMExhTEtkNXlTeGxBZ0JpejdZNjRKcXQtQmtPSzlqTV9zNkR4Y3A5cXNJcHFlcGtzVW4zaw?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-28T17:33+08:00",
+      "importance": 2,
+      "risk_score": 0
+    },
+    {
+      "title": "野村重申「這幾檔」台股「買入」評級！看好2027年AI伺服器市場、上調營收預估 - Yahoo股市",
+      "url": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxQRDdfZjFhTXdDX1lOaGFLSVlDemlfdUJYSGcyUDBRSFRuUGdSZ251TG5xZThwaDBhN0g4cFZlV19FM3JVVTgwZGxVMS10QnFNMzgyVHp1elVpMWZNUE1CMHlZMHV0TWVoX01YZk11UlYyQ0dmbFl3aWloRXFnd1RwR3ZpZ3M5cHpZUTVtT0pIdlp6a0l2end3aERFNzREMGIyMExfVjl5c2kxWnVfVHRUdU1xMVlRUHZqRmR0OGhhRVZxNXEtM2JjT2xFY2xTZnNEc3pRc3hWeXJCblVSV1B2cENXTXluY0NnaTJlRkFBVWRpWmJpT3Q0cXppajE?oc=5",
+      "source": "Yahoo股市",
+      "published_at": "2026-11-28T17:10+08:00",
       "importance": 2,
       "risk_score": 0
     }
   ],
-  "oil_watch": [
-    {
-      "title": "WTI O'il flits with the $85.00 as tensions in the Middle East threaten supply - tmgm.com",
-      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPWUpCQVk4d2JiTGk2MHhiaENBZjByUG1QZWk2SS02dGhzU2NBcGw4Zk1PSVNSYm9Kd0M4Z3FaS0gyd2JBMlZSQWQ0OTFPbDNfTnVxemlJSU5sUF9NNUFCMWhteFBxTG5fMUlJVTVmaXFyUDl6NTZ2RnZFaHBpZmFvYXQ3b1A4OVlMN0xpeUdFV3QzTTF3RVJfcHVaeER3c2xMcElTR2FXTEM5cnNGSWZHTjV3X1pqU2JqT0ZRQUdCNmVMYXEyUG1VTl95aUxkbnp4T2tFZXhBdlc1dnNYTXc?oc=5",
-      "source": "tmgm.com",
-      "published_at": "2026-11-27T19:43+08:00"
-    }
-  ],
+  "oil_watch": [],
   "source_note": "全球市場風險新聞台：僅保留目前仍具市場影響力的消息；舊聞/低影響消息不保留。",
-  "updated_at": "2026-11-28T12:51:52+08:00",
-  "checked_at": "2026-11-28T12:51:52+08:00"
+  "updated_at": "2026-11-28T21:42:32+08:00",
+  "checked_at": "2026-11-28T21:42:32+08:00"
 }
